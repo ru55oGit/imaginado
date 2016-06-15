@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Imaginados</string>
+    <string name="title_activity_select_images">SelectImages</string>
+    <string name="title_activity_guess_image">GuessImageActivity</string>
+</resources>
