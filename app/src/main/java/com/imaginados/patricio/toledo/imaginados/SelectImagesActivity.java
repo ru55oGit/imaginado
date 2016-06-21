@@ -1,7 +1,9 @@
 package com.imaginados.patricio.toledo.imaginados;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +11,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class SelectImagesActivity extends AppCompatActivity {
@@ -164,57 +172,33 @@ public class SelectImagesActivity extends AppCompatActivity {
         }
     }
 
-    private String getWord (String mode, String level) {
+    public String AssetJSONFile (String filename, Context context) throws IOException {
+        InputStream file = getAssets().open(filename);
+        byte[] formArray = new byte[file.available()];
+        file.read(formArray);
+        file.close();
+
+        return new String(formArray);
+    }
+
+    private String getWord (String categoria, String level) {
         String word = "";
-        ArrayList<String> adivinanzas = new ArrayList<String>();
-        ArrayList<String> escudos = new ArrayList<String>();
-        ArrayList<String> marcas = new ArrayList<String>();
-        ArrayList<String> peliculas = new ArrayList<String>();
-        ArrayList<String> personajes = new ArrayList<String>();
-        ArrayList<String> banderas = new ArrayList<String>();
+        try {
+            //obtengo el archivo
+            String jsonLocation = AssetJSONFile("data.json", getBaseContext());
+            JSONObject jsonobject = new JSONObject(jsonLocation);
+            //obtengo el array de niveles
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");
+            //obtengo el nivel
+            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
+            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
+            word = nivel.getString(categoria);
 
-        if (mode.equals("adivinanzas")) {
-            adivinanzas.add("0");
-            adivinanzas.add("limonada");
-            adivinanzas.add("berenjena");
-            word = adivinanzas.get(Integer.parseInt(level));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-
-        if (mode.equals("escudos")) {
-            escudos.add("0");
-            escudos.add("river plate");
-            escudos.add("valencia");
-            word = escudos.get(Integer.parseInt(level));
-        }
-
-        if (mode.equals("marcas")) {
-            marcas.add("0");
-            marcas.add("audi");
-            marcas.add("bridgestone");
-            word = marcas.get(Integer.parseInt(level));
-        }
-
-        if (mode.equals("peliculas")) {
-            peliculas.add("0");
-            peliculas.add("101 dalmatas");
-            peliculas.add("300");
-            word = peliculas.get(Integer.parseInt(level));
-        }
-
-        if (mode.equals("personajes")) {
-            personajes.add("0");
-            personajes.add("astro");
-            personajes.add("aquaman");
-            word = personajes.get(Integer.parseInt(level));
-        }
-
-        if (mode.equals("banderas")) {
-            banderas.add("0");
-            banderas.add("argentina");
-            banderas.add("ghana");
-            word = banderas.get(Integer.parseInt(level));
-        }
-
         return word;
     }
 }
