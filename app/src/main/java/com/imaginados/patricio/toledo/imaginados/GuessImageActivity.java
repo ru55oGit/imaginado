@@ -1,5 +1,6 @@
 package com.imaginados.patricio.toledo.imaginados;
 
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,7 +24,7 @@ import org.w3c.dom.Text;
 
 import java.util.concurrent.TimeUnit;
 
-public class GuessImageActivity extends AppCompatActivity {
+public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
     private RelativeLayout frameLayout;
     private ImageView imageToGuess;
     // Counters variables
@@ -40,7 +41,6 @@ public class GuessImageActivity extends AppCompatActivity {
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,8 +123,10 @@ public class GuessImageActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            finish();
-            return true;
+            BackDialog bd = new BackDialog();
+            bd.show(getFragmentManager(), "finnish");
+            timer.cancel();
+            return false;
         }
 
         LinearLayout ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
@@ -174,8 +176,8 @@ public class GuessImageActivity extends AppCompatActivity {
 
             finish();
 
-            Intent intent = new Intent(GuessImageActivity.this, SelectImagesActivity.class);
-            startActivity(intent);
+            /*Intent intent = new Intent(GuessImageActivity.this, SelectImagesActivity.class);
+            startActivity(intent);*/
         }
         return true;
     }
@@ -218,8 +220,8 @@ public class GuessImageActivity extends AppCompatActivity {
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (aciertos != word.replaceAll(" ","").length()){
-                    if(!("Se te acabo el tiempo").equals(counter.getText())) {
+                if (aciertos != word.replaceAll(" ", "").length()) {
+                    if (!("Se te acabo el tiempo").equals(counter.getText())) {
                         InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
@@ -252,5 +254,20 @@ public class GuessImageActivity extends AppCompatActivity {
                 editor.commit();
             }
         }.start();
+    }
+    // en el back abro un popup, en el aceptar termino el activity
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        finish();
+    }
+    // en el back abro un popup, en el cancelar sigo con el timer
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        // obtengo la cantidad de segundos restantes y los convierto en milisegundos
+        String tiempo[] = ((String)this.counter.getText()).split(":");
+        Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+        Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
+        milisegundos = minutos + segundos;
+        timer(milisegundos);
     }
 }

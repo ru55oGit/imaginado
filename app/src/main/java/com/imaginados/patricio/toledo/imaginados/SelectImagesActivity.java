@@ -49,7 +49,6 @@ public class SelectImagesActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        System.gc();
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
         level = settings.getString("level", "1");
 
