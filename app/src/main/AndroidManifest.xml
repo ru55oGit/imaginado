@@ -8,25 +8,40 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-                  android:screenOrientation="portrait">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SelectImagesActivity"
             android:label="@string/title_activity_select_images"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".GuessImageActivity"
             android:label="@string/title_activity_guess_image"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
             android:windowSoftInputMode="stateVisible|adjustResize"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ObtainSecondsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".PlayForSecondsActivity"
+            android:label="@string/title_activity_play_for_seconds"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

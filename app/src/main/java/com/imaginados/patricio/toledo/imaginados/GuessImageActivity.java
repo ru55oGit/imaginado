@@ -41,19 +41,24 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
+    InputMethodManager inputMethodManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guess_image);
 
-
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
+        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         milisegundos = settings.getInt("time", 30000);
-        milisegundos = milisegundos <= 1000? 30000 : milisegundos;
         timer(milisegundos);
 
         // traigo el Nivel
@@ -116,6 +121,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.commit();
         }
 
+        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+
         finish();
     }
 
@@ -156,8 +163,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             // paro el reloj
             timer.cancel();
             // Cierro el teclado
-            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 1);
+            inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
             Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
@@ -174,10 +180,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
             editor.commit();
 
-            finish();
 
-            /*Intent intent = new Intent(GuessImageActivity.this, SelectImagesActivity.class);
-            startActivity(intent);*/
+            Intent intent = new Intent(GuessImageActivity.this, SelectImagesActivity.class);
+            startActivity(intent);
+            this.finish();
         }
         return true;
     }
@@ -207,7 +213,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             level = ((Integer)(Integer.parseInt(level) + 1)).toString();
             editor.putString("level", level);
             editor.commit();
-            sts.replace(0, 5, "000000");
+            sts = new StringBuilder("000000");
         }
 
         return sts.toString();
@@ -222,7 +228,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (aciertos != word.replaceAll(" ", "").length()) {
                     if (!("Se te acabo el tiempo").equals(counter.getText())) {
-                        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
                 }
@@ -245,7 +250,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 // Cuando el reloj llega a cero, se cambia el mensaje
                 counter.setText("Se te acabo el tiempo");
                 // Cierro el teclado cuando me quedo sin tiempo
-                InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 
                 SharedPreferences settings = getSharedPreferences("Status", 0);

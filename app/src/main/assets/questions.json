@@ -1,0 +1,44 @@
+{
+  "preguntas": [
+    {
+      "pregunta": "¿de que color es el caballo blanco de San Martin?",
+      "respuesta": "blanco"
+    },
+    {
+      "pregunta": "¿cual es la capital de Buenos Aires?",
+      "respuesta": "La Plata"
+    },
+    {
+      "pregunta": "¿de que nacionalidad es el futbolista Gary Linneker?",
+      "respuesta": "Irlandes"
+    },
+    {
+      "pregunta": "¿A qué país pertenece la isla de Tasmania?",
+      "respuesta": "Australia"
+    },
+    {
+      "pregunta": "¿(1 + 4) * (5) + 5?",
+      "respuesta": "30"
+    },
+    {
+      "pregunta": "¿Cuál es el código internacional para Cuba?",
+      "respuesta": "CU"
+    },
+    {
+      "pregunta": "¿Cuál es la capital del estado de Uruguay?",
+      "respuesta": "Montevideo"
+    },
+    {
+      "pregunta": "¿En qué país situarías la ciudad de Cali?",
+      "respuesta": "Colombia"
+    },
+    {
+      "pregunta": "¿Con cuántos países limita Argentina?",
+      "respuesta": "Cinco"
+    },
+    {
+      "pregunta": "¿Cuál es la capital de Suiza?",
+      "respuesta": "Berna"
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Imaginados</string>
+    <string name="app_name">Segundos para ganar</string>
     <string name="title_activity_select_images">SelectImages</string>
     <string name="title_activity_guess_image">GuessImageActivity</string>
     <string name="deseasalir">¿Seguro que desea salir?</string>
     <string name="aceptar">Aceptar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="title_activity_play_for_seconds">PlayForSecondsActivity</string>
 </resources>
