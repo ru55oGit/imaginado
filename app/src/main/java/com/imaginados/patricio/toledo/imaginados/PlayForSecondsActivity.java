@@ -1,5 +1,6 @@
 package com.imaginados.patricio.toledo.imaginados;
 
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-public class PlayForSecondsActivity extends AppCompatActivity {
+public class PlayForSecondsActivity extends AppCompatActivity implements BackDialog.BackDialogListener {
     private RelativeLayout frameLayout;
     private TextView preguntaView;
     private TextView transition;
@@ -190,7 +191,7 @@ public class PlayForSecondsActivity extends AppCompatActivity {
 
     private void showSecondsGained(int milis){
         counter.setText("Has ganado "+ (milisegundos/1000) + " segundos para seguir jugando");
-        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+        toggleKeyboardVisible(false);
 
         editor.putInt("time", milisegundos);
         editor.commit();
@@ -199,15 +200,14 @@ public class PlayForSecondsActivity extends AppCompatActivity {
     /*
     *  abre/cierra el teclado
     * */
-    private void toggleKeyboardVisible () {
+    private void toggleKeyboardVisible (final boolean flag) {
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (aciertos != respuesta.replaceAll(" ", "").length()) {
-                    if (!("Se te acabo el tiempo").equals(counter.getText())) {
-                        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                    }
+                if (flag) {
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 1);
+                } else {
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                 }
             }
         });
@@ -249,5 +249,21 @@ public class PlayForSecondsActivity extends AppCompatActivity {
                 }
             }
         }.start();
+    }
+
+    // en el back abro un popup, en el aceptar termino el activity
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        finish();
+    }
+    // en el back abro un popup, en el cancelar sigo con el timer
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        // obtengo la cantidad de segundos restantes y los convierto en milisegundos
+        String tiempo[] = ((String)this.counter.getText()).split(":");
+        Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+        Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
+        milisegundos = minutos + segundos;
+        timer(milisegundos);
     }
 }

@@ -112,13 +112,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (aciertos != word.length()) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
-            Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-            Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
-            milisegundos = minutos + segundos;
-            // guardo los segundos totales para ser usados en la proxima palabra
-            settings = getSharedPreferences("Status", 0);
-            editor.putInt("time", milisegundos);
-            editor.commit();
+            if (!(tiempo[0] instanceof String)) {
+                Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+                Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
+                milisegundos = minutos + segundos;
+                // guardo los segundos totales para ser usados en la proxima palabra
+                settings = getSharedPreferences("Status", 0);
+                editor.putInt("time", milisegundos);
+                editor.commit();
+            }
         }
 
         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
@@ -170,9 +172,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             Integer segundos = Integer.parseInt(tiempo[1])*1000;
             milisegundos = minutos + segundos;
             // a los segundos restantes, por haber acertado la palabra, le sumo tantos segundos como letras tenga la misma como bonus
-            milisegundos+= (word.replaceAll(" ","").length() + 1)* 1000;
+            milisegundos+= 5000;
             // muestro la cantidad de segundos obtenidos
-            Toast.makeText(getBaseContext(),"has ganado +"+word.replaceAll(" ","").length()+" segundos",Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(),"has ganado 5 segundos",Toast.LENGTH_LONG).show();
             // guardo los segundos totales para ser usados en la proxima palabra
             settings = getSharedPreferences("Status", 0);
 
