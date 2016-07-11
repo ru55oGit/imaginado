@@ -4,9 +4,8 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -19,9 +18,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
 import java.util.concurrent.TimeUnit;
 
 public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
@@ -38,6 +34,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private int aciertos = 0;
     private String uri;
     private String level;
+    private GradientDrawable gd;
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
@@ -57,6 +54,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     protected void onResume() {
         super.onResume();
+
+        gd = new GradientDrawable();
+        gd.setColor(Color.RED);
+        gd.setCornerRadius(10);
+        gd.setStroke(2, Color.WHITE);
 
         milisegundos = settings.getInt("time", 30000);
         timer(milisegundos);
@@ -92,6 +94,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 letter.setText("__");
                 letter.setAllCaps(true);
                 letter.setBackgroundResource(R.color.backLetters);
+                letter.setBackground(gd);
             }
 
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -150,6 +153,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
                 letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 letter.setBackgroundResource(R.color.backLetters);
+                letter.setBackground(gd);
 
                 LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                 marginLetters.setMargins(0, 0, 10, 0);

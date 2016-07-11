@@ -3,6 +3,7 @@ package com.imaginados.patricio.toledo.imaginados;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -48,6 +49,8 @@ public class SelectImagesActivity extends AppCompatActivity {
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
         TextView label = (TextView)findViewById(R.id.labelLevelText);
         label.setText("Nivel "+ level);
+        Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+        label.setTypeface(lobsterFont);
 
         imagen1 = (ImageView) findViewById(R.id.imgView1);
         imagen1.setImageResource(getSrcByLevel(level, "adivinanzas"));

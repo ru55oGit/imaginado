@@ -39,7 +39,6 @@
             android:name=".PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
-            android:launchMode="singleInstance"
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
