@@ -175,10 +175,15 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
            timer.cancel();
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
-            Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-            Integer segundos = Integer.parseInt(tiempo[1])*1000;
-            milisegundos+= segundos;
-            counter.setText("¡Has ganado "+segundos/1000+ " segundos!");
+            try {
+                Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+                Integer segundos = Integer.parseInt(tiempo[1])*1000;
+                milisegundos+= segundos;
+                counter.setText("¡Has ganado "+segundos/1000+ " segundos!");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
             questionsSum++;
             if (questionsSum <= 5){
                 timerTranstion(4000);
@@ -190,7 +195,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     }
 
     private void showSecondsGained(int milis){
-        counter.setText("Has ganado "+ (milisegundos/1000) + " segundos para seguir jugando");
+        counter.setText("Has acumulado "+ (milisegundos/1000) + " segundos.");
         toggleKeyboardVisible(false);
 
         editor.putInt("time", milisegundos);
@@ -261,9 +266,14 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     public void onDialogNegativeClick(DialogFragment dialog) {
         // obtengo la cantidad de segundos restantes y los convierto en milisegundos
         String tiempo[] = ((String)this.counter.getText()).split(":");
-        Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-        Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
-        milisegundos = minutos + segundos;
-        timer(milisegundos);
+
+        try {
+            Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+            Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
+            milisegundos = minutos + segundos;
+            timer(milisegundos);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
