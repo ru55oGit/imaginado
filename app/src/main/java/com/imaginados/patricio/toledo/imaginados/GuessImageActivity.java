@@ -115,7 +115,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (aciertos != word.length()) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
-            if (!(tiempo[0] instanceof String)) {
+            try {
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
                 milisegundos = minutos + segundos;
@@ -123,6 +123,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 settings = getSharedPreferences("Status", 0);
                 editor.putInt("time", milisegundos);
                 editor.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
 
