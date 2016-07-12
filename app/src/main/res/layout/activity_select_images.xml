@@ -40,42 +40,54 @@
             android:layout_height="155dp"
             android:id="@+id/imgView1"
             android:src="@drawable/generico"
-            android:layout_gravity="left|top" />
+            android:layout_gravity="left|top"
+            android:padding="3dp"
+            android:background="#e33b3b"/>
 
         <ImageView
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:id="@+id/imgView2"
             android:layout_gravity="right|top"
-            android:src="@drawable/generico"/>
+            android:src="@drawable/generico"
+            android:padding="3dp"
+            android:background="#e33b3b"/>
 
         <ImageView
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:id="@+id/imgView3"
             android:layout_gravity="left|center"
-            android:src="@drawable/generico"/>
+            android:src="@drawable/generico"
+            android:padding="3dp"
+            android:background="#e33b3b"/>
 
         <ImageView
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:id="@+id/imgView4"
             android:layout_gravity="right|center"
-            android:src="@drawable/generico"/>
+            android:src="@drawable/generico"
+            android:padding="3dp"
+            android:background="#e33b3b"/>
 
         <ImageView
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:id="@+id/imgView5"
             android:layout_gravity="left|bottom"
-            android:src="@drawable/generico"/>
+            android:src="@drawable/generico"
+            android:padding="3dp"
+            android:background="#e33b3b"/>
 
         <ImageView
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:id="@+id/imgView6"
             android:layout_gravity="right|bottom"
-            android:src="@drawable/generico"/>
+            android:src="@drawable/generico"
+            android:padding="3dp"
+            android:background="#e33b3b"/>
 
     </FrameLayout>
 </RelativeLayout>

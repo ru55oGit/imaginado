@@ -56,9 +56,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         super.onResume();
 
         gd = new GradientDrawable();
-        gd.setColor(Color.RED);
+        gd.setColor(Color.WHITE);
         gd.setCornerRadius(10);
-        gd.setStroke(2, Color.WHITE);
+        gd.setStroke(6, Color.BLACK);
 
         milisegundos = settings.getInt("time", 30000);
         timer(milisegundos);

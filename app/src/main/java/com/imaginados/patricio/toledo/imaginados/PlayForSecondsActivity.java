@@ -3,6 +3,8 @@ package com.imaginados.patricio.toledo.imaginados;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -47,7 +49,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private LinearLayout ll;
     private int gainedTime = 0;
     private int questionsSum = 0;
+    private GradientDrawable gd;
     InputMethodManager inputMethodManager;
+
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
@@ -82,6 +86,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         transition = (TextView) findViewById(R.id.transition);
         transition.setText("");
 
+        gd = new GradientDrawable();
+        gd.setColor(Color.WHITE);
+        gd.setCornerRadius(10);
+        gd.setStroke(6, Color.BLACK);
+
         timer(11000);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
@@ -93,6 +102,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 letter.setText("__");
                 letter.setAllCaps(true);
                 letter.setBackgroundResource(R.color.backLetters);
+                letter.setBackground(gd);
             }
 
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -159,6 +169,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
                 letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 letter.setBackgroundResource(R.color.backLetters);
+                letter.setBackground(gd);
 
                 LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                 marginLetters.setMargins(0, 0, 10, 0);
@@ -196,7 +207,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
     private void showSecondsGained(int milis){
         counter.setText("Has acumulado "+ (milisegundos/1000) + " segundos.");
-        toggleKeyboardVisible(false);
+        toggleKeyboardVisible(true);
 
         editor.putInt("time", milisegundos);
         editor.commit();
