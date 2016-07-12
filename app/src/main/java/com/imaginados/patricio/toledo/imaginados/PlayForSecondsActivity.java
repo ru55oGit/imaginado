@@ -71,21 +71,28 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     @Override
     protected void onResume() {
         super.onResume();
-        pregResp = getQuestion();
         aciertos = 0;
-        pregunta = (pregResp.get(0));
-        respuesta = (pregResp.get(1));
+        // Obtengo el par Pregunta/Respuesta
+        pregResp = getQuestion();
+        // Obtengo la pregunta
+        pregunta = pregResp.get(0);
+        // Obtengo la respuesta
+        respuesta = pregResp.get(1);
+        // Instancio el reloj
         counter = (TextView) findViewById(R.id.counterText);
+        // Instancio el contenedor de las letras
         firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
+        // Limpio todas las letras para la proxima pregunta
         firstLine.removeAllViews();
 
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
-
+        // Instancio y seteo la pregunta
         preguntaView = (TextView) findViewById(R.id.question);
         preguntaView.setText(pregunta);
+        // Instancio y limpio el reloj de transicion
         transition = (TextView) findViewById(R.id.transition);
         transition.setText("");
-
+        // Border radius para las letras
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
         gd.setCornerRadius(10);
@@ -234,10 +241,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             @Override
             public void onTick(long millisUntilFinished) {
                 transition.setText(""+String.format(FORMAT_TRANSITION,TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+                transition.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFinish() {
+                transition.setVisibility(View.INVISIBLE);
                 onResume();
             }
         }.start();

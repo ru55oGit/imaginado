@@ -35,7 +35,7 @@
         android:layout_gravity="center"
         android:layout_below="@+id/counterText"
         android:layout_centerHorizontal="true"
-        android:background="#000000"
+        android:background="@color/backLetters"
         android:padding="3dp"/>
 
     <LinearLayout
