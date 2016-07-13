@@ -20,6 +20,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.imaginados.patricio.toledo.imaginados.pojo.Question;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,15 +36,14 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private RelativeLayout frameLayout;
     private TextView preguntaView;
     private TextView transition;
-    private String pregunta;
-    private String respuesta;
     private int dim;
     private CountDownTimer timer;
     private TextView counter;
     private static final String FORMAT = "%02d:%02d";
     private static final String FORMAT_TRANSITION = "%02d";
     private int milisegundos = 0;
-    private ArrayList<String> pregResp;
+    private ArrayList<Question> pregResp;
+    private Question question;
     private int aciertos;
     private TextView letter;
     private LinearLayout firstLine;
@@ -66,18 +67,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
+        pregResp = getQuestion ();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         aciertos = 0;
-        // Obtengo el par Pregunta/Respuesta
-        pregResp = getQuestion();
-        // Obtengo la pregunta
-        pregunta = pregResp.get(0);
-        // Obtengo la respuesta
-        respuesta = pregResp.get(1);
         // Instancio el reloj
         counter = (TextView) findViewById(R.id.counterText);
         // Instancio el contenedor de las letras
@@ -85,10 +81,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         // Limpio todas las letras para la proxima pregunta
         firstLine.removeAllViews();
 
+        question = pregResp.get((int)(Math.random() * pregResp.size()));
+
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         // Instancio y seteo la pregunta
         preguntaView = (TextView) findViewById(R.id.question);
-        preguntaView.setText(pregunta);
+        preguntaView.setText(question.getPregunta());
         // Instancio y limpio el reloj de transicion
         transition = (TextView) findViewById(R.id.transition);
         transition.setText("");
@@ -101,9 +99,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         timer(11000);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
-        for (int i = 0; i < respuesta.length(); i++) {
+        for (int i = 0; i < question.getRespuesta().length(); i++) {
             letter = new TextView(this);
-            if (Character.isWhitespace(respuesta.charAt(i))) {
+            if (Character.isWhitespace(question.getRespuesta().charAt(i))) {
                 letter.setText("  ");
             } else {
                 letter.setText("__");
@@ -132,26 +130,26 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         return new String(formArray);
     }
 
-    private ArrayList<String> getQuestion () {
-        ArrayList<String> pregunta = new ArrayList<String>();
+    private ArrayList<Question> getQuestion () {
+        ArrayList<Question> preguntaList = new ArrayList<Question>();
         try {
             //obtengo el archivo
             String jsonLocation = AssetJSONFile("questions.json", getBaseContext());
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de preguntas
             JSONArray jarray = (JSONArray) jsonobject.getJSONArray("preguntas");
-            //obtengo la pregunta y respuesta aleatoriamente
-            JSONObject jpregunta = (JSONObject)jarray.get((int)(Math.random() * jarray.length()));
-            //obtengo la pregunta
-            pregunta.add(jpregunta.getString("pregunta"));
-            //obtengo la respuesta
-            pregunta.add(jpregunta.getString("respuesta"));
+            for (int i=0; i<jarray.length();i++) {
+                Question question = new Question();
+                question.setPregunta(((JSONObject)jarray.get(i)).getString("pregunta"));
+                question.setRespuesta(((JSONObject) jarray.get(i)).getString("respuesta"));
+                preguntaList.add(question);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return pregunta;
+        return preguntaList;
     }
 
     // maneja la presion de las teclas
@@ -167,9 +165,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
         ll.getChildCount();
         // por cada letra ingresada, evaluo en toda la palabra
-        for (int i = 0; i < respuesta.length(); i++) {
+        for (int i = 0; i < question.getRespuesta().length(); i++) {
             // si el caracter ingresado coincide con la posicion[i] de la palabra && no fue previamente adivinado
-            if (Character.toUpperCase(respuesta.charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__")) {
+            if (Character.toUpperCase(question.getRespuesta().charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__")) {
                 letter = new TextView(this);
                 Character letra = (char) event.getDisplayLabel();
                 letter.setText(letra.toString());
@@ -188,7 +186,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             }
         }
         // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
-        if (aciertos == respuesta.replaceAll(" ", "").length()) {
+        if (aciertos == question.getRespuesta().replaceAll(" ", "").length()) {
             // paro el reloj
            timer.cancel();
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
@@ -197,7 +195,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = Integer.parseInt(tiempo[1])*1000;
                 milisegundos+= segundos;
-                counter.setText("¡Has ganado "+segundos/1000+ " segundos!");
             } catch (Exception e) {
                 e.printStackTrace();
             }
