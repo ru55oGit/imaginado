@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -67,6 +68,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         level = settings.getString("level","1");
 
         counter = (TextView) findViewById(R.id.counterText);
+        Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+        counter.setTypeface(lobsterFont);
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
 
         toggleKeyboardVisible();
