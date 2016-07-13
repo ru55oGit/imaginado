@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/counterText"
         android:textStyle="bold"
-        android:text="00:00"
+        android:text="00:10"
         android:textSize="@dimen/clock_size"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"

@@ -68,11 +68,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
         pregResp = getQuestion ();
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        timerTranstion(4000);
         aciertos = 0;
         // Instancio el reloj
         counter = (TextView) findViewById(R.id.counterText);
@@ -96,7 +98,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         gd.setCornerRadius(10);
         gd.setStroke(6, Color.BLACK);
 
-        timer(11000);
+        //timer(11000);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
         for (int i = 0; i < question.getRespuesta().length(); i++) {
@@ -201,7 +203,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
             questionsSum++;
             if (questionsSum <= 5){
-                timerTranstion(4000);
+                //timerTranstion(4000);
+                onResume();
             } else {
                 showSecondsGained(milisegundos);
             }
@@ -240,11 +243,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 transition.setText(""+String.format(FORMAT_TRANSITION,TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
                 transition.setVisibility(View.VISIBLE);
             }
-
             @Override
             public void onFinish() {
                 transition.setVisibility(View.INVISIBLE);
-                onResume();
+                //onResume();
+                timer(11000);
             }
         }.start();
     }
@@ -265,7 +268,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 // Cuando el reloj llega a cero, se cambia el mensaje
                 if (questionsSum <= 5) {
                     counter.setText("No sumaste segundos");
-                    timerTranstion(4000);
+                    //timerTranstion(4000);
+                    onResume();
                 } else {
                     showSecondsGained(milliseconds);
                 }
