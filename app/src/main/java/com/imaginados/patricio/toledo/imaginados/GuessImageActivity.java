@@ -59,7 +59,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
         gd.setCornerRadius(10);
-        gd.setStroke(6, Color.RED);
+        gd.setStroke(6, Color.BLACK);
 
         milisegundos = settings.getInt("time", 30000);
         timer(milisegundos);
@@ -96,7 +96,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } else {
                 letter.setText("__");
                 letter.setAllCaps(true);
-                letter.setBackgroundResource(R.color.backLetters);
+                letter.setBackgroundResource(R.color.bordersandtitles);
                 letter.setBackground(gd);
             }
 
@@ -140,9 +140,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            BackDialog bd = new BackDialog();
-            bd.show(getFragmentManager(), "finnish");
-            timer.cancel();
+            if (!"se te acabo el tiempo".equalsIgnoreCase(counter.getText().toString())) {
+                BackDialog bd = new BackDialog();
+                bd.show(getFragmentManager(), "finnish");
+                timer.cancel();
+            } else {
+                finish();
+            }
             return false;
         }
 
@@ -157,7 +161,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 letter.setText(letra.toString());
                 letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
                 letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                letter.setBackgroundResource(R.color.backLetters);
+                letter.setBackgroundResource(R.color.bordersandtitles);
                 letter.setBackground(gd);
 
                 LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);

@@ -213,11 +213,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     }
 
     private void showSecondsGained(int milis){
-        counter.setText("Has acumulado "+ (milisegundos/1000) + " segundos.");
-        toggleKeyboardVisible(true);
-
+        //counter.setText("Has acumulado "+ (milisegundos/1000) + " segundos.");
+        //toggleKeyboardVisible(true);
         editor.putInt("time", milisegundos);
         editor.commit();
+        finish();
     }
 
     /*
@@ -227,6 +227,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                 if (flag) {
                     inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 1);
                 } else {
@@ -242,10 +243,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             public void onTick(long millisUntilFinished) {
                 transition.setText(""+String.format(FORMAT_TRANSITION,TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
                 transition.setVisibility(View.VISIBLE);
+                toggleKeyboardVisible(false);
             }
             @Override
             public void onFinish() {
                 transition.setVisibility(View.INVISIBLE);
+                toggleKeyboardVisible(true);
                 //onResume();
                 timer(11000);
             }

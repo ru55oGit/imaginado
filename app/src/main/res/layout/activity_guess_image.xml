@@ -21,7 +21,7 @@
         android:textSize="@dimen/clock_size"
         android:layout_alignParentTop="true"
         android:background="@drawable/borders"
-        android:textColor="@color/backLetters"
+        android:textColor="@color/bordersandtitles"
         android:paddingBottom="3dp"
         android:paddingTop="3dp"
         android:paddingLeft="6dp"
@@ -36,7 +36,7 @@
         android:layout_gravity="center"
         android:layout_below="@+id/counterText"
         android:layout_centerHorizontal="true"
-        android:background="@color/backLetters"
+        android:background="@color/bordersandtitles"
         android:padding="3dp"/>
 
     <LinearLayout
