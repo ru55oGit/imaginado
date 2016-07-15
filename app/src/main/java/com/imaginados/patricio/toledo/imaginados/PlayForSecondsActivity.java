@@ -68,7 +68,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
         pregResp = getQuestion ();
-
     }
 
     @Override

@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class ObtainSecondsActivity extends AppCompatActivity {
     private Button participar;
     private Button comprar;
+    private Button volverajugar;
     private TextView mensaje;
     private int milisegundos;
     private SharedPreferences settings;
@@ -31,13 +32,24 @@ public class ObtainSecondsActivity extends AppCompatActivity {
         milisegundos = settings.getInt("time", 30000);
 
         mensaje = (TextView) findViewById(R.id.mensaje);
+        volverajugar = (Button) findViewById(R.id.volverajugar);
         participar = (Button) findViewById(R.id.participar);
         comprar = (Button) findViewById(R.id.comprar);
 
         if (milisegundos > 0) {
             mensaje.setVisibility(View.VISIBLE);
+            volverajugar.setVisibility(View.VISIBLE);
+            mensaje.setText("Has ganado "+milisegundos/1000+" segundos para seguir jugando.");
             participar.setVisibility(View.INVISIBLE);
             comprar.setVisibility(View.INVISIBLE);
+            volverajugar.setOnClickListener(new View.OnClickListener(){
+               @Override
+               public void onClick(View v){
+                   Intent intent = new Intent(ObtainSecondsActivity.this, SelectImagesActivity.class);
+                   startActivity(intent);
+               }
+            });
+
         } else {
             participar.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -49,7 +61,7 @@ public class ObtainSecondsActivity extends AppCompatActivity {
             comprar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getBaseContext(),"Muy pronto podras comprar segundos",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
                 }
             });
         }
