@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="backLetters">#e33b3b</color>
     <color name="guessed">#0DE22F</color>
-    <color name="background">#d7716d</color>
-    <color name="bordersandtitles">#766565</color>
-    <color name="fontcolor">#cb4e48</color>
+    <color name="primaryColor">#d7716d</color>
+    <color name="secondaryColor">#cb4e48</color>
+    <color name="thirdColor">#f3d4b8</color>
 </resources>

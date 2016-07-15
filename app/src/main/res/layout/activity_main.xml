@@ -7,20 +7,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/primaryColor"
     tools:context="com.imaginados.patricio.toledo.imaginados.MainActivity">
 
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jugar"
         android:id="@+id/play"
         android:layout_marginBottom="132dp"
-        android:textSize="50sp"
-        android:textColor="@color/fontcolor"
-        android:textAllCaps="false"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/background"
+        android:background="@drawable/play"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

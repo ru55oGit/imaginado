@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/background"
+    android:background="@color/primaryColor"
     tools:context="com.imaginados.patricio.toledo.imaginados.ObtainSecondsActivity">
     <TextView
         android:layout_width="match_parent"
@@ -17,11 +17,11 @@
         android:visibility="invisible"
         android:id="@+id/mensaje"/>
 
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Volver a Jugar"
         android:id="@+id/volverajugar"
+        android:background="@drawable/play"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="93dp"
@@ -30,19 +30,27 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Participar"
         android:id="@+id/participar"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="93dp" />
+        android:background="@drawable/ganar"
+        android:layout_marginTop="50dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comprar"
-        android:id="@+id/comprar"
-        android:layout_marginBottom="123dp"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/obtener"
+        android:background="@drawable/obtener"
+        android:layout_marginBottom="50dp"
         android:layout_alignEnd="@+id/participar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comprar"
+        android:background="@drawable/comprar"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"/>
+
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.imaginados.patricio.toledo.imaginados;
 
+import android.app.ActionBar;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
@@ -7,12 +8,14 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -46,6 +49,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guess_image);
 
+        // If the Android version is lower than Jellybean, use this call to hide
+        // the status bar.
+        if (Build.VERSION.SDK_INT < 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        } else {
+            View decorView = getWindow().getDecorView();
+            // Hide the status bar.
+            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+            decorView.setSystemUiVisibility(uiOptions);
+            // Remember that you should never show the action bar if the
+            // status bar is hidden, so hide that too if necessary.
+            ActionBar actionBar = getActionBar();
+            if (actionBar != null)
+                actionBar.hide();
+        }
+
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
@@ -59,7 +79,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
         gd.setCornerRadius(10);
-        gd.setStroke(6, Color.BLACK);
+        gd.setStroke(6, getResources().getColor(R.color.secondaryColor));
 
         milisegundos = settings.getInt("time", 30000);
         timer(milisegundos);
@@ -96,7 +116,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } else {
                 letter.setText("__");
                 letter.setAllCaps(true);
-                letter.setBackgroundResource(R.color.bordersandtitles);
+                letter.setBackgroundResource(R.color.primaryColor);
                 letter.setBackground(gd);
             }
 
@@ -161,7 +181,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 letter.setText(letra.toString());
                 letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
                 letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                letter.setBackgroundResource(R.color.bordersandtitles);
+                letter.setBackgroundResource(R.color.primaryColor);
                 letter.setBackground(gd);
 
                 LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);

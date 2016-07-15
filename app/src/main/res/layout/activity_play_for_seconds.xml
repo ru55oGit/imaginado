@@ -10,7 +10,7 @@
     android:id="@+id/frameCounter"
     tools:context=".PlayForSecondsActivity"
     android:gravity="top"
-    android:background="@color/background"
+    android:background="@color/primaryColor"
     android:textAlignment="center">
 
     <TextView

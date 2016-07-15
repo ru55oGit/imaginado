@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/background"
+    android:background="@color/primaryColor"
     tools:context="com.imaginados.patricio.toledo.imaginados.SelectImagesActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,17 +15,21 @@
         android:id="@+id/linearLayout"
         android:gravity="center_horizontal|top"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
         android:foregroundGravity="top">
-
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
+            android:background="@drawable/level"/>
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:id="@+id/labelLevelText"
             android:textStyle="bold"
-            android:text="Nivel"
             android:textSize="@dimen/label_size"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/bordersandtitles" />
+            android:background="@drawable/circle"
+            android:textAlignment="center"
+            android:textColor="@color/secondaryColor" />
     </LinearLayout>
 
     <FrameLayout
@@ -43,8 +47,8 @@
             android:id="@+id/imgView1"
             android:src="@drawable/generico"
             android:layout_gravity="left|top"
-            android:padding="3dp"
-            android:background="@color/bordersandtitles"/>
+            android:padding="5dp"
+            android:background="@color/secondaryColor"/>
 
         <ImageView
             android:layout_width="155dp"
@@ -52,8 +56,8 @@
             android:id="@+id/imgView2"
             android:layout_gravity="right|top"
             android:src="@drawable/generico"
-            android:padding="3dp"
-            android:background="@color/bordersandtitles"/>
+            android:padding="7dp"
+            android:background="@color/secondaryColor"/>
 
         <ImageView
             android:layout_width="155dp"
@@ -61,8 +65,8 @@
             android:id="@+id/imgView3"
             android:layout_gravity="left|center"
             android:src="@drawable/generico"
-            android:padding="3dp"
-            android:background="@color/bordersandtitles"/>
+            android:padding="5dp"
+            android:background="@color/secondaryColor"/>
 
         <ImageView
             android:layout_width="155dp"
@@ -70,8 +74,8 @@
             android:id="@+id/imgView4"
             android:layout_gravity="right|center"
             android:src="@drawable/generico"
-            android:padding="3dp"
-            android:background="@color/bordersandtitles"/>
+            android:padding="5dp"
+            android:background="@color/secondaryColor"/>
 
         <ImageView
             android:layout_width="155dp"
@@ -79,8 +83,8 @@
             android:id="@+id/imgView5"
             android:layout_gravity="left|bottom"
             android:src="@drawable/generico"
-            android:padding="3dp"
-            android:background="@color/bordersandtitles"/>
+            android:padding="5dp"
+            android:background="@color/secondaryColor"/>
 
         <ImageView
             android:layout_width="155dp"
@@ -88,8 +92,8 @@
             android:id="@+id/imgView6"
             android:layout_gravity="right|bottom"
             android:src="@drawable/generico"
-            android:padding="3dp"
-            android:background="@color/bordersandtitles"/>
+            android:padding="5dp"
+            android:background="@color/secondaryColor"/>
 
     </FrameLayout>
 </RelativeLayout>

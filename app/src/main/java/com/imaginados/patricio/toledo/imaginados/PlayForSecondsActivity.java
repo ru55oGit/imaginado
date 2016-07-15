@@ -1,10 +1,12 @@
 package com.imaginados.patricio.toledo.imaginados;
 
+import android.app.ActionBar;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -61,6 +64,22 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_for_seconds);
+        // If the Android version is lower than Jellybean, use this call to hide
+        // the status bar.
+        if (Build.VERSION.SDK_INT < 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        } else {
+            View decorView = getWindow().getDecorView();
+            // Hide the status bar.
+            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+            decorView.setSystemUiVisibility(uiOptions);
+            // Remember that you should never show the action bar if the
+            // status bar is hidden, so hide that too if necessary.
+            ActionBar actionBar = getActionBar();
+            if (actionBar != null)
+                actionBar.hide();
+        }
 
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
@@ -211,7 +230,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         return true;
     }
 
-    private void showSecondsGained(int milis){
+    private void showSecondsGained(int milis) {
         //counter.setText("Has acumulado "+ (milisegundos/1000) + " segundos.");
         //toggleKeyboardVisible(true);
         editor.putInt("time", milisegundos);
