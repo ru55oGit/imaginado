@@ -56,7 +56,7 @@
             android:id="@+id/imgView2"
             android:layout_gravity="right|top"
             android:src="@drawable/generico"
-            android:padding="7dp"
+            android:padding="5dp"
             android:background="@color/secondaryColor"/>
 
         <ImageView
