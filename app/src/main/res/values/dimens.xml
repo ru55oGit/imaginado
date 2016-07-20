@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="clock_size">35dp</dimen>
-    <dimen name="transition_size">100dp</dimen>
+    <dimen name="transition_size">50dp</dimen>
     <dimen name="margin_clock">20dp</dimen>
     <dimen name="guessimage_size">200dp</dimen>
     <dimen name="bg_letter_size">23dp</dimen>

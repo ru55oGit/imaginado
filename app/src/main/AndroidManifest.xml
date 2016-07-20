@@ -31,7 +31,7 @@
             android:label="@string/title_activity_guess_image"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
-            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:windowSoftInputMode="stateVisible"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".ObtainSecondsActivity"
@@ -42,7 +42,7 @@
             android:name=".PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:windowSoftInputMode="stateVisible"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

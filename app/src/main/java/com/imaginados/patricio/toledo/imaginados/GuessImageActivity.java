@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -27,6 +28,7 @@ import java.util.concurrent.TimeUnit;
 public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
     private RelativeLayout frameLayout;
     private ImageView imageToGuess;
+    private ImageView sinTiempo;
     // Counters variables
     private CountDownTimer timer;
     private TextView counter;
@@ -104,6 +106,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // obtengo la palabra que se va adivinar
         word = extras.getString("word");
 
+        // titulo sin tiempos
+        sinTiempo = (ImageView) findViewById(R.id.sintiempo);
+
         LinearLayout firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
         LinearLayout secondLine = (LinearLayout)findViewById(R.id.wordContainerSecond);
         LinearLayout thirdLine = (LinearLayout)findViewById(R.id.wordContainerThird);
@@ -135,7 +140,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onStop() {
         super.onStop();
 
-        if (aciertos != word.length()) {
+        if (aciertos != word.length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
             try {
@@ -160,7 +165,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (!"se te acabo el tiempo".equalsIgnoreCase(counter.getText().toString())) {
+            if (!"00:00".equalsIgnoreCase(counter.getText().toString())) {
                 BackDialog bd = new BackDialog();
                 bd.show(getFragmentManager(), "finnish");
                 timer.cancel();
@@ -262,7 +267,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
                 if (aciertos != word.replaceAll(" ", "").length()) {
-                    if (!("Se te acabo el tiempo").equals(counter.getText())) {
+                    if (!("00:00").equals(counter.getText())) {
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
                 }
@@ -283,7 +288,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
             public void onFinish() {
                 // Cuando el reloj llega a cero, se cambia el mensaje
-                counter.setText("Se te acabo el tiempo");
+                sinTiempo.setVisibility(View.VISIBLE);
+                counter.setText("00:00");
+                counter.setVisibility(View.INVISIBLE);
                 // Cierro el teclado cuando me quedo sin tiempo
                 inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 
