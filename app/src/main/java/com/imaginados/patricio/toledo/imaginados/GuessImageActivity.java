@@ -79,7 +79,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
         gd.setCornerRadius(10);
-        gd.setStroke(6, getResources().getColor(R.color.secondaryColor));
+        gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
         milisegundos = settings.getInt("time", 30000);
         timer(milisegundos);
@@ -122,7 +122,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
-            letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int)getResources().getDimension(R.dimen.letter_size));
+            letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins(0, 0, 10, 0);
             letter.setLayoutParams(marginLetters);

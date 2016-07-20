@@ -8,9 +8,9 @@
     <dimen name="margin_clock">20dp</dimen>
     <dimen name="guessimage_size">200dp</dimen>
     <dimen name="bg_letter_size">23dp</dimen>
-    <dimen name="letter_size">5dp</dimen>
+    <dimen name="letter_size">5sp</dimen>
     <dimen name="label_size" >50dp</dimen>
-    <dimen name="question_letter_size">23dp</dimen>
     <dimen name="border_letters_guess">6px</dimen>
+    <dimen name="question_letter_size">23dp</dimen>
 </resources>
 
