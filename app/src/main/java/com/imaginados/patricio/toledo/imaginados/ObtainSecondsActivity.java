@@ -3,6 +3,7 @@ package com.imaginados.patricio.toledo.imaginados;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
@@ -64,6 +65,8 @@ public class ObtainSecondsActivity extends AppCompatActivity {
             mensaje.setVisibility(View.VISIBLE);
             volverajugar.setVisibility(View.VISIBLE);
             mensaje.setText("Has ganado " + milisegundos / 1000 + " segundos para seguir jugando.");
+            Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+            mensaje.setTypeface(lobsterFont);
             participar.setVisibility(View.INVISIBLE);
             obtener.setVisibility(View.INVISIBLE);
             comprar.setVisibility(View.INVISIBLE);

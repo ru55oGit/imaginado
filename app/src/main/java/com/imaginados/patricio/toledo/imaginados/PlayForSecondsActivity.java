@@ -5,6 +5,7 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -39,6 +41,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private RelativeLayout frameLayout;
     private TextView preguntaView;
     private TextView transition;
+    private ImageView nosumaste;
     private int dim;
     private CountDownTimer timer;
     private TextView counter;
@@ -96,6 +99,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         aciertos = 0;
         // Instancio el reloj
         counter = (TextView) findViewById(R.id.counterText);
+        Typeface digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+        counter.setTypeface(digifont);
         // Instancio el contenedor de las letras
         firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
         // Limpio todas las letras para la proxima pregunta
@@ -107,14 +112,19 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         // Instancio y seteo la pregunta
         preguntaView = (TextView) findViewById(R.id.question);
         preguntaView.setText(question.getPregunta());
+        Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+        preguntaView.setTypeface(lobsterFont);
+
         // Instancio y limpio el reloj de transicion
         transition = (TextView) findViewById(R.id.transition);
-        transition.setText("");
+
+        nosumaste = (ImageView) findViewById(R.id.nosumaste);
+
         // Border radius para las letras
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
         gd.setCornerRadius(10);
-        gd.setStroke(6, Color.BLACK);
+        gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
         //timer(11000);
 
@@ -132,7 +142,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
-            letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int)getResources().getDimension(R.dimen.letter_size));
+            letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins(0, 0, 10, 0);
             letter.setLayoutParams(marginLetters);
@@ -261,11 +271,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             public void onTick(long millisUntilFinished) {
                 transition.setText(""+String.format(FORMAT_TRANSITION,TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
                 transition.setVisibility(View.VISIBLE);
+                firstLine.setVisibility(View.INVISIBLE);
                 toggleKeyboardVisible(false);
             }
             @Override
             public void onFinish() {
                 transition.setVisibility(View.INVISIBLE);
+                firstLine.setVisibility(View.VISIBLE);
                 toggleKeyboardVisible(true);
                 //onResume();
                 timer(11000);
@@ -283,12 +295,15 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 counter.setText(""+String.format(FORMAT,
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
                         TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+                nosumaste.setVisibility(View.INVISIBLE);
+                counter.setVisibility(View.VISIBLE);
             }
             public void onFinish() {
                 questionsSum++;
                 // Cuando el reloj llega a cero, se cambia el mensaje
                 if (questionsSum <= 5) {
-                    counter.setText("No sumaste segundos");
+                    counter.setVisibility(View.INVISIBLE);
+                    nosumaste.setVisibility(View.VISIBLE);
                     //timerTranstion(4000);
                     onResume();
                 } else {

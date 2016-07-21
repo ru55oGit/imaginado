@@ -10,22 +10,32 @@
     android:id="@+id/frameCounter"
     tools:context=".PlayForSecondsActivity"
     android:gravity="top"
-    android:background="@color/primaryColor"
+    android:background="@drawable/tile"
     android:textAlignment="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nosumaste"
+        android:id="@+id/nosumaste"
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/counterText"
-        android:textStyle="bold"
         android:text="00:10"
-        android:textSize="@dimen/clock_size"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:gravity="top"
-        android:textAlignment="center"
         android:background="@drawable/borders"
-        android:layout_marginBottom="15dp" />
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/margin_clock"
+        android:textSize="@dimen/clock_size"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/secondaryColor"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:layout_centerHorizontal="true" />
 
     <FrameLayout
         android:layout_width="fill_parent"
@@ -59,21 +69,21 @@
         android:id="@+id/wordContainerFirst"
         android:layout_below="@+id/frameLayout"
         android:layout_marginTop="20dp"
-        android:layout_alignParentStart="true"></LinearLayout>
-
+        android:layout_alignParentStart="true">
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/transition"
-        android:background="@color/backLetters"
-        android:textColor="#ffffff"
+        android:textColor="@color/secondaryColor"
+        android:shadowColor="@color/thirdColor"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
         android:textSize="@dimen/transition_size"
-        android:layout_gravity="center"
-        android:visibility="invisible"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/frameLayout"
-        android:layout_marginEnd="41dp" />
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignStart="@+id/counterText"
+        android:layout_toStartOf="@+id/counterText"
+        android:layout_alignEnd="@+id/counterText" />
 
 </RelativeLayout>

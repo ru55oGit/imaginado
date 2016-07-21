@@ -13,19 +13,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/borders"
-        android:padding="60dp"
         android:visibility="invisible"
-        android:id="@+id/mensaje"/>
+        android:textSize="40dp"
+        android:id="@+id/mensaje"
+        android:layout_above="@+id/obtener"
+        android:paddingLeft="15dp"
+        android:paddingTop="35dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="35dp"
+        android:textAlignment="center" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/volverajugar"
         android:background="@drawable/play"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="93dp"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        android:layout_above="@+id/comprar"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -40,7 +45,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/obtener"
         android:background="@drawable/obtener"
-        android:layout_below="@+id/volverajugar"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
