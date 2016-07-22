@@ -33,12 +33,225 @@
       "respuesta": "Colombia"
     },
     {
+      "pregunta": "¿Cómo se llama el protagonista de la saga Indiana Jones?",
+      "respuesta": "Harrison Ford"
+    },
+    {
       "pregunta": "¿Con cuántos países limita Argentina?",
-      "respuesta": "Cinco"
+      "respuesta": "5"
+    },
+    {
+      "pregunta": "¿En qué mes cae el día de San Valentín?",
+      "respuesta": "Febrero"
+    },
+    {
+      "pregunta": "¿Cómo se llamaba el personaje que interpretaba Al Pacino en \"Scarface\"?",
+      "respuesta": "Tony Montana"
+    },
+    {
+      "pregunta": "¿Cuanto es la mitad de dos, mas dos?",
+      "respuesta": "3"
     },
     {
       "pregunta": "¿Cuál es la capital de Suiza?",
       "respuesta": "Berna"
+    },
+    {
+      "pregunta": "¿Con cuántos países limita Argentina?",
+      "respuesta": "5"
+    },
+    {
+      "pregunta": "¿Cómo se llama el ayudante de Iron Man?",
+      "respuesta": "Jarvis"
+    },
+    {
+      "pregunta": "¿A quien se queria comer Alf?",
+      "respuesta": "Al gato"
+    },
+    {
+      "pregunta": "¿Cómo se llamaba el primer gato de Los Simpsons?",
+      "respuesta": "Bola de nieve"
+    },
+    {
+      "pregunta": " ¿Cuál es la nacionalidad de la cantante Shakira?",
+      "respuesta": "Colombiana"
+    },
+    {
+      "pregunta": "¿Quién se hizo famoso,gracias a su frase \"que hay de nuevo viejo\"?",
+      "respuesta": "Bugs bunny"
+    },{
+      "pregunta": "¿Cómo se llama la princesa de Disney conocida como \"La Sirenita\"?",
+      "respuesta": "Ariel"
+    },
+    {
+      "pregunta": "¿Cómo se llama el primer hijo de Goku de Dragon Ball?",
+      "respuesta": "Gohan"
+    },
+    {
+      "pregunta": "¿Cómo se llama el pájaro símbolo de los Juegos del Hambre?",
+      "respuesta": "Sinsajo"
+    },
+    {
+      "pregunta": "¿Cómo se llama el payaso de 'Los Simpson'?",
+      "respuesta": "Krusty"
+    },
+    {
+      "pregunta": "¿Cómo se llama el robot alcohólico de la serie 'Futurama'?",
+      "respuesta": "Bender"
+    },
+    {
+      "pregunta": "¿Qué Beatle fue asesinado por un fan?",
+      "respuesta": "John Lennon"
+    },
+    {
+      "pregunta": "¿Qué personaje de Disney perdió su zapato de cristal ?",
+      "respuesta": "Cenicienta"
+    },
+    {
+      "pregunta": "¿Cuál es la capital de Luxemburgo?",
+      "respuesta": "Luxemburgo"
+    },
+    {
+      "pregunta": "¿De que tiene forma Italia?",
+      "respuesta": "Bota"
+    },
+    {
+      "pregunta": "¿Cuántas estrellas tiene la bandera de China?",
+      "respuesta": "5"
+    },
+    {
+      "pregunta": "¿Cuál es la capital de Belice ?",
+      "respuesta": "Belmopan"
+    },
+    {
+      "pregunta": "¿Cuál es la capital de Ecuador?",
+      "respuesta": "Quito"
+    }
+    ,{
+      "pregunta": "¿Cúal es la capital de Alemania?",
+      "respuesta": "Berlin"
+    }
+    ,{
+      "pregunta": "¿En qué continente está la India?",
+      "respuesta": "Asia"
+    }
+    ,{
+      "pregunta": "¿Cuál es la capital de Argelia?",
+      "respuesta": "Argel"
+    }
+    ,{
+      "pregunta": "¿A qué país pertenece la Isla de Pascua?",
+      "respuesta": "Chile"
+    }
+    ,{
+      "pregunta": "¿En qué continente/s se encuentra Turquía?",
+      "respuesta": "Asia y Europa"
+    }
+    ,{
+      "pregunta": "¿En qué país está Ushuaia, la ciudad más al sur del mundo?",
+      "respuesta": "Argentina"
+    }
+    ,{
+      "pregunta": "¿De que color es la última cinta en las artes marciales ?",
+      "respuesta": "Negra"
+    }
+    ,{
+      "pregunta": "¿A qué jugador de fútbol le apodan ‘El Apache’?",
+      "respuesta": "Carlos Tevez"
+    }
+    ,{
+      "pregunta": "¿Cuántos cuadros tiene un tablero de ajedres?",
+      "respuesta": "64"
+    }
+    ,{
+      "pregunta": "¿Cómo se llama el estadio del F.C. Barcelona?",
+      "respuesta": "Camp Nou"
+    }
+    ,{
+      "pregunta": "¿Quién ganó el mundial de fútbol del año 2002?",
+      "respuesta": "Brasil"
+    }
+    ,{
+      "pregunta": "¿De qué color es el cero en el cilindro de la ruleta?",
+      "respuesta": "Verde"
+    }
+    ,{
+      "pregunta": "¿Como se denomina la primer leche materna?",
+      "respuesta": "calostro"
+    }
+    ,{
+      "pregunta": "¿Cuántas caras tiene un icosaedro?",
+      "respuesta": "20"
+    }
+    ,{
+      "pregunta": "¿Qué órgano del cuerpo humano produce la bilis?",
+      "respuesta": "Higado"
+    }
+    ,
+    {
+      "pregunta": "¿Quién es el autor de “El retrato de Dorian Gray”?",
+      "respuesta": "Oscar Wilde"
+    }
+    ,{
+      "pregunta": "¿Qué odia Mafalda?",
+      "respuesta": "La sopa"
+    }
+    ,{
+      "pregunta": "¿Quién pintó La Capilla Sixtina?",
+      "respuesta": "Miguel Angel"
+    }
+    ,{
+      "pregunta": "¿Qué famosa artista estaba casada con su colega, Diego Rivera?",
+      "respuesta": "Frida Kahlo"
+    }
+    ,{
+      "pregunta": "¿Quén es el autor de \"El amor en los tiempos de cólera\"?",
+      "respuesta": "Garcia Marquez"
+    }
+    ,{
+      "pregunta": "¿De qué país es el panda el animal nacional ? ",
+      "respuesta": "China"
+    }
+    ,{
+      "pregunta": "¿Cuál es el hueso más pequeño del cuerpo?",
+      "respuesta": "El estribo"
+    }
+    ,{
+      "pregunta": "¿En que país quedan las líneas de Nazca?",
+      "respuesta": "Peru"
+    }
+    ,{
+      "pregunta": "¿Cuántas cavidades estomacales tiene una vaca?",
+      "respuesta": "4"
+    }
+    ,{
+      "pregunta": "¿Cómo se mide la fuerza del viento en el mar?",
+      "respuesta": "Nudos"
+    }
+    ,{
+      "pregunta": "¿Cuál es la fórmula química del agua?",
+      "respuesta": "H2O"
+    }
+    ,{
+      "pregunta": " ¿Cuál es el símbolo del Sodio?",
+      "respuesta": "NA"
+    }
+    ,{
+      "pregunta": "¿Qué metal es líquido a temperatura ambiente?",
+      "respuesta": "Mercurio"
+    }
+   ,{
+      "pregunta": "¿Miedo a qué produce la hemofobia?",
+      "respuesta": "La sangre"
+    }
+    ,{
+      "pregunta": "¿Cómo se llamaba el papá de Simba en la película El Rey León?",
+      "respuesta": "Mufasa"
+    }
+    ,{
+      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
+      "respuesta": "Leonardo"
     }
   ]
 }
+

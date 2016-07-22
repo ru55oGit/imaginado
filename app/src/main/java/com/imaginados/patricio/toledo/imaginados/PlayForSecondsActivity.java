@@ -123,7 +123,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         // Border radius para las letras
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
-        gd.setCornerRadius(10);
+        gd.setCornerRadius((int)getResources().getDimension(R.dimen.border_radius));
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
         //timer(11000);
@@ -132,7 +132,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         for (int i = 0; i < question.getRespuesta().length(); i++) {
             letter = new TextView(this);
             if (Character.isWhitespace(question.getRespuesta().charAt(i))) {
-                letter.setText("  ");
+                letter.setText(" ");
             } else {
                 letter.setText("__");
                 letter.setAllCaps(true);
@@ -144,7 +144,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
             letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-            marginLetters.setMargins(0, 0, 10, 0);
+            marginLetters.setMargins(0, 0, (int)getResources().getDimension(R.dimen.border_radius), 0);
             letter.setLayoutParams(marginLetters);
 
             firstLine.addView(letter);
@@ -207,7 +207,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 letter.setBackground(gd);
 
                 LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                marginLetters.setMargins(0, 0, 10, 0);
+                marginLetters.setMargins(0, 0, (int)getResources().getDimension(R.dimen.border_radius), 0);
                 letter.setLayoutParams(marginLetters);
                 ll.removeViewAt(i);
                 ll.addView(letter, i);
