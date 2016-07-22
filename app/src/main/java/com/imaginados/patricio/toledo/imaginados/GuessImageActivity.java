@@ -46,9 +46,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private GradientDrawable gd;
     private Typeface digifont;
     private Typeface lobsterFont;
-    SharedPreferences settings;
-    SharedPreferences.Editor editor;
-    InputMethodManager inputMethodManager;
+    private Toast toast;
+    private SharedPreferences settings;
+    private SharedPreferences.Editor editor;
+    private InputMethodManager inputMethodManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,6 +145,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     protected void onStop() {
         super.onStop();
+        if (toast != null) {
+            toast.cancel();
+        }
 
         if (aciertos != word.length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
@@ -169,6 +173,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     // maneja la presion de las teclas
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
+        if (toast != null){
+            toast.cancel();
+        }
+
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (!"00:00".equalsIgnoreCase(counter.getText().toString())) {
                 BackDialog bd = new BackDialog();
@@ -224,7 +232,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             text.setText("Fallaste. -1 Segundo");
             text.setTypeface(lobsterFont);
 
-            Toast toast = new Toast(getApplicationContext());
+            toast = new Toast(getApplicationContext());
             toast.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
             toast.setDuration(Toast.LENGTH_SHORT);
             toast.setView(layout);
