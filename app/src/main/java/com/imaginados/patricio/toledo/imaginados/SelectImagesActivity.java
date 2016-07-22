@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -21,16 +23,18 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class SelectImagesActivity extends AppCompatActivity {
-    ImageView imagen1;
-    ImageView imagen2;
-    ImageView imagen3;
-    ImageView imagen4;
-    ImageView imagen5;
-    ImageView imagen6;
-    SharedPreferences settings;
-    StringBuilder statusOfLevel;
-    String level;
+    private ImageView imagen1;
+    private ImageView imagen2;
+    private ImageView imagen3;
+    private ImageView imagen4;
+    private ImageView imagen5;
+    private ImageView imagen6;
+    private SharedPreferences settings;
+    private StringBuilder statusOfLevel;
+    private String level;
     private int milisegundos;
+    private InputMethodManager inputMethodManager;
+    private RelativeLayout frameLayout;
 
 
     @Override
@@ -56,11 +60,14 @@ public class SelectImagesActivity extends AppCompatActivity {
         }
 
         settings = getSharedPreferences("Status", 0);
+        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        frameLayout = (RelativeLayout) findViewById(R.id.selectLayout);
+        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
         level = settings.getString("level", "1");

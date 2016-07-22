@@ -14,8 +14,11 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
@@ -41,7 +44,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private String uri;
     private String level;
     private GradientDrawable gd;
-
+    private Typeface digifont;
+    private Typeface lobsterFont;
     SharedPreferences settings;
     SharedPreferences.Editor editor;
     InputMethodManager inputMethodManager;
@@ -50,6 +54,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guess_image);
+        digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
 
         // If the Android version is lower than Jellybean, use this call to hide
         // the status bar.
@@ -90,8 +96,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         level = settings.getString("level","1");
 
         counter = (TextView) findViewById(R.id.counterText);
-        Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
-        counter.setTypeface(lobsterFont);
+        counter.setTypeface(digifont);
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
 
         toggleKeyboardVisible();
@@ -211,6 +216,19 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             Integer segundos = Integer.parseInt(tiempo[1])*1000-1000;
             milisegundos = minutos + segundos;
             timer(milisegundos);
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.toast_layout,
+                    (ViewGroup) findViewById(R.id.toast_layout_root));
+
+            TextView text = (TextView) layout.findViewById(R.id.text);
+            text.setText("Fallaste. -1 Segundo");
+            text.setTypeface(lobsterFont);
+
+            Toast toast = new Toast(getApplicationContext());
+            toast.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
+            toast.setDuration(Toast.LENGTH_SHORT);
+            toast.setView(layout);
+            toast.show();
         }
         // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
         if (aciertos == word.replaceAll(" ", "").length()) {
