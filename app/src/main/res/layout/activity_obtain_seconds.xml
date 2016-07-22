@@ -12,15 +12,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/borders"
         android:visibility="invisible"
         android:textSize="40dp"
         android:id="@+id/mensaje"
         android:layout_above="@+id/obtener"
-        android:paddingLeft="15dp"
-        android:paddingTop="35dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="35dp"
+        android:textColor="@color/secondaryColor"
+        android:shadowColor="@color/thirdColor"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
         android:textAlignment="center" />
 
     <ImageView

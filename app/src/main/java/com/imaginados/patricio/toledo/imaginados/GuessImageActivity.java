@@ -198,6 +198,20 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 aciertos++;
             }
         }
+        int errores = 0;
+        for (int i = 0;i < word.length(); i++) {
+            if (Character.toUpperCase(word.charAt(i))!=event.getDisplayLabel()) {
+                errores++;
+            }
+        }
+        if (errores == word.length()) {
+            timer.cancel();
+            String tiempo[] = ((String)this.counter.getText()).split(":");
+            Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+            Integer segundos = Integer.parseInt(tiempo[1])*1000-1000;
+            milisegundos = minutos + segundos;
+            timer(milisegundos);
+        }
         // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
         if (aciertos == word.replaceAll(" ", "").length()) {
             // paro el reloj
