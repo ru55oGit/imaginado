@@ -42,6 +42,14 @@ public class SelectImagesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_images);
 
+        settings = getSharedPreferences("Status", 0);
+        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         // If the Android version is lower than Jellybean, use this call to hide
         // the status bar.
         if (Build.VERSION.SDK_INT < 16) {
@@ -59,13 +67,6 @@ public class SelectImagesActivity extends AppCompatActivity {
                 actionBar.hide();
         }
 
-        settings = getSharedPreferences("Status", 0);
-        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
         frameLayout = (RelativeLayout) findViewById(R.id.selectLayout);
         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 

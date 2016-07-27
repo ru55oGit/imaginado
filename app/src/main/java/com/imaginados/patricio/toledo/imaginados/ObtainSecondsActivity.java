@@ -29,6 +29,13 @@ public class ObtainSecondsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_obtain_seconds);
 
+        settings = getSharedPreferences("Status", 0);
+    }
+
+    @Override
+    protected void onResume () {
+        super.onResume();
+
         // If the Android version is lower than Jellybean, use this call to hide
         // the status bar.
         if (Build.VERSION.SDK_INT < 16) {
@@ -45,14 +52,7 @@ public class ObtainSecondsActivity extends AppCompatActivity {
             if (actionBar != null)
                 actionBar.hide();
         }
-
-        settings = getSharedPreferences("Status", 0);
-    }
-
-    @Override
-    protected void onResume () {
-        super.onResume();
-
+        
         milisegundos = settings.getInt("time", 30000);
 
         mensaje = (TextView) findViewById(R.id.mensaje);
