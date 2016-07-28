@@ -44,15 +44,19 @@ public class ObtainSecondsActivity extends AppCompatActivity {
         } else {
             View decorView = getWindow().getDecorView();
             // Hide the status bar.
-            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-            decorView.setSystemUiVisibility(uiOptions);
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE);
             // Remember that you should never show the action bar if the
             // status bar is hidden, so hide that too if necessary.
             ActionBar actionBar = getActionBar();
             if (actionBar != null)
                 actionBar.hide();
         }
-        
+
         milisegundos = settings.getInt("time", 30000);
 
         mensaje = (TextView) findViewById(R.id.mensaje);

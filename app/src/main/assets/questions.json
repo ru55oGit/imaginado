@@ -9,8 +9,8 @@
       "respuesta": "La Plata"
     },
     {
-      "pregunta": "¿de que nacionalidad es el futbolista Gary Linneker?",
-      "respuesta": "Irlandes"
+      "pregunta": "¿de que nacionalidad es el futbolista Cristiano Ronaldo?",
+      "respuesta": "Portugues"
     },
     {
       "pregunta": "¿A qué país pertenece la isla de Tasmania?",
@@ -25,7 +25,7 @@
       "respuesta": "CU"
     },
     {
-      "pregunta": "¿Cuál es la capital del estado de Uruguay?",
+      "pregunta": "¿Cuál es la capital de Uruguay?",
       "respuesta": "Montevideo"
     },
     {
@@ -37,8 +37,8 @@
       "respuesta": "Harrison Ford"
     },
     {
-      "pregunta": "¿Con cuántos países limita Argentina?",
-      "respuesta": "5"
+      "pregunta": "¿Cuál es el nombre de pila del padre de Milhouse de los Simpsons?",
+      "respuesta": "Kirk"
     },
     {
       "pregunta": "¿En qué mes cae el día de San Valentín?",
@@ -49,8 +49,8 @@
       "respuesta": "Tony Montana"
     },
     {
-      "pregunta": "¿Cuanto es la mitad de dos, mas dos?",
-      "respuesta": "3"
+      "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
+      "respuesta": "45"
     },
     {
       "pregunta": "¿Cuál es la capital de Suiza?",
@@ -61,7 +61,7 @@
       "respuesta": "5"
     },
     {
-      "pregunta": "¿Cómo se llama el ayudante de Iron Man?",
+      "pregunta": "¿Cómo se llama el ayudante virtual de Iron Man?",
       "respuesta": "Jarvis"
     },
     {
@@ -104,7 +104,7 @@
       "respuesta": "John Lennon"
     },
     {
-      "pregunta": "¿Qué personaje de Disney perdió su zapato de cristal ?",
+      "pregunta": "¿Qué personaje de Disney perdió su zapato de cristal?",
       "respuesta": "Cenicienta"
     },
     {
@@ -148,7 +148,7 @@
       "respuesta": "Asia y Europa"
     }
     ,{
-      "pregunta": "¿En qué país está Ushuaia, la ciudad más al sur del mundo?",
+      "pregunta": "¿En qué país está Ushuaia, la ciudad más austral del mundo?",
       "respuesta": "Argentina"
     }
     ,{
@@ -277,75 +277,75 @@
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Qué famosa marca deportiva tiene como slogan 'Just do it'?",
+      "respuesta": "Nike"
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Qué instrumento musical tiene nombre y forma geométricos?",
+      "respuesta": "El triangulo"
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Qué órgano segrega la hormona insulina?",
+      "respuesta": "el pancreas"
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": " ¿En qué árbol crecen los dátiles?",
+      "respuesta": "la palmera"
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Qué tienen las ranas en la boca que no tienen los sapos?",
+      "respuesta": "Dientes"
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Cuál es el ojo defectuoso de Popeye?",
+      "respuesta": "derecho"
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Quién le disparó al Sr. Burns?",
+      "respuesta": "Maggie"
     }    ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "Cuál es el segundo nombre de Homero Simpson",
+      "respuesta": "jay"
     }
   ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Cuál es el pueblo vecino y enemigo de Springfield?",
+      "respuesta": "Shelbyville"
     }  ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Cuál es el apellido de soltera de Marge Simpson?",
+      "respuesta": "Bouvier"
     }  ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Cuál es el planeta más cercano al sol?",
+      "respuesta": "Mercurio"
     }  ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Cuál es el planeta más grande de nuestro sistema solar?",
+      "respuesta": "Jupiter"
     }  ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Cuál es el satélite natural de la tierra?",
+      "respuesta": "la luna"
     }  ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Qué planeta demora 284 años terrestres en dar una vuelta alrededor del sol?",
+      "respuesta": "pluton"
     }  ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Cuál es el planeta más caluroso del sistema solar?",
+      "respuesta": "Venus"
     }  ,
     {
-      "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
-      "respuesta": "Leonardo"
+      "pregunta": "¿Qué continente tiene el área de clima cálido o desértico más extenso de todos?",
+      "respuesta": "Africa"
     }  ,
     {
       "pregunta": "¿Qué tortuga llevaba el pañuelo azul en 'Las tortugas ninja'?",
