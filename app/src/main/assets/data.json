@@ -27,8 +27,8 @@
       "escudos": "napoli",
       "marcas": "chrome",
       "peliculas": "anaconda",
-      "personajes": "el inspector ardilla",
-      "banderas": "arabia saudita"
+      "personajes": "el inspector|ardilla",
+      "banderas": "arabia|saudita"
     },{
       "adivinanzas": "quincena",
       "escudos": "bayer munich",
@@ -46,15 +46,15 @@
     },{
       "adivinanzas": "estomago",
       "escudos": "cruz azul",
-      "marcas": "mercedes benz",
-      "peliculas": "liberen a willy",
+      "marcas": "mercedes|benz",
+      "peliculas": "liberen|a willy",
       "personajes": "sabiondo",
       "banderas": "mexico"
     },{
       "adivinanzas": "tesoro",
       "escudos": "once caldas",
       "marcas": "levis",
-      "peliculas": "los cazafantasmas",
+      "peliculas": "los|cazafantasmas",
       "personajes": "heidi",
       "banderas": "peru"
     },{

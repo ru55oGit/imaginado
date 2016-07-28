@@ -129,7 +129,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             TextView letter = new TextView(this);
             if (Character.isWhitespace(word.charAt(i))) {
                 letter.setText("  ");
-            } else {
+            } else if ('|' != word.charAt(i)){
                 letter.setText("__");
                 letter.setAllCaps(true);
                 letter.setBackgroundResource(R.color.primaryColor);
@@ -142,8 +142,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins(0, 0, 10, 0);
             letter.setLayoutParams(marginLetters);
+            if (word.indexOf("|") > 0) {
+                if (i < word.indexOf("|")) {
+                    firstLine.addView(letter);
+                } else {
+                    secondLine.addView(letter);
+                }
+            } else {
+                firstLine.addView(letter);
+            }
 
-            firstLine.addView(letter);
         }
     }
 
@@ -194,27 +202,55 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         LinearLayout ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
-        ll.getChildCount();
+        LinearLayout ll2 = (LinearLayout) findViewById(R.id.wordContainerSecond);
+
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < word.length(); i++) {
-            // si el caracter ingresado coincide con la posicion[i] de la palabra && no fue previamente adivinado
-            if (Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__")) {
-                TextView letter = new TextView(this);
-                Character letra = (char) event.getDisplayLabel();
-                letter.setText(letra.toString());
-                letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
-                letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                letter.setBackgroundResource(R.color.primaryColor);
-                letter.setBackground(gd);
+            if (word.indexOf("|") < 0) {
+                // si el caracter ingresado coincide con la posicion[i] de la palabra && no fue previamente adivinado
+                if (Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__")) {
+                    TextView letter = new TextView(this);
+                    Character letra = (char) event.getDisplayLabel();
+                    letter.setText(letra.toString());
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setBackgroundResource(R.color.primaryColor);
+                    letter.setBackground(gd);
 
-                LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                marginLetters.setMargins(0, 0, 10, 0);
-                letter.setLayoutParams(marginLetters);
-                ll.removeViewAt(i);
-                ll.addView(letter, i);
+                    LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
+                    marginLetters.setMargins(0, 0, 10, 0);
+                    letter.setLayoutParams(marginLetters);
+                    ll.removeViewAt(i);
+                    ll.addView(letter, i);
 
-                aciertos++;
+                    aciertos++;
+                }
+            } else if ('|' != word.charAt(i)) {
+                if (i < word.indexOf("|") &&Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__") ||
+                        i > word.indexOf("|") && Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll2.getChildAt(i -(word.indexOf("|")))).getText().equals("__")) {
+                    TextView letter = new TextView(this);
+                    Character letra = (char) event.getDisplayLabel();
+                    letter.setText(letra.toString());
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setBackgroundResource(R.color.primaryColor);
+                    letter.setBackground(gd);
+
+                    LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
+                    marginLetters.setMargins(0, 0, 10, 0);
+                    letter.setLayoutParams(marginLetters);
+                    if (i < word.indexOf("|")) {
+                        ll.removeViewAt(i);
+                        ll.addView(letter, i);
+                    } else {
+                        ll2.removeViewAt(i -word.indexOf("|"));
+                        ll2.addView(letter, i -word.indexOf("|"));
+                    }
+                    aciertos++;
+                }
             }
+
+
         }
         int errores = 0;
         for (int i = 0;i < word.length(); i++) {
@@ -243,8 +279,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             toast.setView(layout);
             toast.show();
         }
+
         // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
-        if (aciertos == word.replaceAll(" ", "").length()) {
+        if (aciertos == word.replaceAll(" ", "").replaceAll("\\|","").length()) {
             // paro el reloj
             timer.cancel();
             // Cierro el teclado
