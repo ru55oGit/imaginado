@@ -1,15 +1,15 @@
 {
   "preguntas": [
     {
-      "pregunta": "¿de que color es el caballo blanco de San Martin?",
+      "pregunta": "¿De que color es el caballo blanco de San Martin?",
       "respuesta": "blanco"
     },
     {
-      "pregunta": "¿cual es la capital de Buenos Aires?",
+      "pregunta": "¿Cuál es la capital de Buenos Aires?",
       "respuesta": "La Plata"
     },
     {
-      "pregunta": "¿de que nacionalidad es el futbolista Cristiano Ronaldo?",
+      "pregunta": "¿De que nacionalidad es el futbolista Cristiano Ronaldo?",
       "respuesta": "Portugues"
     },
     {
@@ -262,7 +262,7 @@
     }
   ,
     {
-      "pregunta": "¿La primera selección en ganar un Mundial fue...?",
+      "pregunta": "¿La primera selección de fútbol en ganar un mundial fue...?",
       "respuesta": "Uruguay"
     }
   ,
@@ -311,7 +311,7 @@
       "respuesta": "Maggie"
     }    ,
     {
-      "pregunta": "Cuál es el segundo nombre de Homero Simpson",
+      "pregunta": "¿Cuál es el segundo nombre de Homero Simpson?",
       "respuesta": "jay"
     }
   ,

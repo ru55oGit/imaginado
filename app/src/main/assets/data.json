@@ -83,11 +83,11 @@
       "escudos": "roma",
       "marcas": "claro",
       "peliculas": "megamente",
-      "personajes": "speedy gonzalez",
+      "personajes": "speedy|gonzalez",
       "banderas": "portugal"
     },{
       "adivinanzas": "pepino",
-      "escudos": "borussia dortmund",
+      "escudos": "borussia|dortmund",
       "marcas": "chevrolet",
       "peliculas": "memento",
       "personajes": "scooby doo",

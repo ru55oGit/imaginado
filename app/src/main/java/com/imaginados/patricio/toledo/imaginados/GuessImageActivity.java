@@ -128,7 +128,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         for (int i = 0; i < word.length(); i++) {
             TextView letter = new TextView(this);
             if (Character.isWhitespace(word.charAt(i))) {
-                letter.setText("  ");
+                letter.setText(" ");
             } else if ('|' != word.charAt(i)){
                 letter.setText("__");
                 letter.setAllCaps(true);
@@ -142,11 +142,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins(0, 0, 10, 0);
             letter.setLayoutParams(marginLetters);
+            // uso el pipe para mandar al segundo renglon palabras cuando
+            // la cantidad de las mismas superan el ancho de la pantalla
             if (word.indexOf("|") > 0) {
                 if (i < word.indexOf("|")) {
                     firstLine.addView(letter);
                 } else {
-                    secondLine.addView(letter);
+                    if (i > word.indexOf("|")) {
+                        secondLine.addView(letter);
+                    }
                 }
             } else {
                 firstLine.addView(letter);
@@ -206,6 +210,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < word.length(); i++) {
+            // si viene un pipe, es que las palabras estan divididas en 2 renglones
             if (word.indexOf("|") < 0) {
                 // si el caracter ingresado coincide con la posicion[i] de la palabra && no fue previamente adivinado
                 if (Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__")) {
@@ -226,8 +231,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     aciertos++;
                 }
             } else if ('|' != word.charAt(i)) {
-                if (i < word.indexOf("|") &&Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__") ||
-                        i > word.indexOf("|") && Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll2.getChildAt(i -(word.indexOf("|")))).getText().equals("__")) {
+                // si las letras evaluadas estan antes que el pipe, evaluo en el primer renglon...si estan despues evaluo en el segundo
+                if (i < word.indexOf("|") && Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__") ||
+                        i > word.indexOf("|") && Character.toUpperCase(word.charAt(i)) == event.getDisplayLabel() && ((TextView) ll2.getChildAt(i -(word.indexOf("|")+1))).getText().equals("__")) {
                     TextView letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
@@ -243,8 +249,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         ll.removeViewAt(i);
                         ll.addView(letter, i);
                     } else {
-                        ll2.removeViewAt(i -word.indexOf("|"));
-                        ll2.addView(letter, i -word.indexOf("|"));
+                        ll2.removeViewAt(i - (word.indexOf("|")+1));
+                        ll2.addView(letter, i - (word.indexOf("|")+1));
                     }
                     aciertos++;
                 }
@@ -258,8 +264,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 errores++;
             }
         }
+        // si ingreso un caracter que no esta en la/s palabra/s
         if (errores == word.length()) {
+            // paro el reloj
             timer.cancel();
+            // obtengo los segundos que habia y le resto 1 segundo
             String tiempo[] = ((String)this.counter.getText()).split(":");
             Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
             Integer segundos = Integer.parseInt(tiempo[1])*1000-1000;
