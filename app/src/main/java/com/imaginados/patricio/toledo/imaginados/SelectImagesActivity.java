@@ -29,10 +29,10 @@ public class SelectImagesActivity extends AppCompatActivity {
     private ImageView imagen4;
     private ImageView imagen5;
     private ImageView imagen6;
-    private SharedPreferences settings;
     private StringBuilder statusOfLevel;
     private String level;
     private int milisegundos;
+    private SharedPreferences settings;
     private InputMethodManager inputMethodManager;
     private RelativeLayout frameLayout;
 

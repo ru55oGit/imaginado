@@ -2,6 +2,7 @@ package com.imaginados.patricio.toledo.imaginados;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView play;
+    private SharedPreferences settings;
+    private String level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +22,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         play = (ImageView) findViewById(R.id.play);
+        settings = getSharedPreferences("Status", 0);
+        level = settings.getString("level", "1");
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SelectImagesActivity.class);
-                startActivity(intent);
+                if ("1".equals(level)){
+                    Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(MainActivity.this, SelectImagesActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

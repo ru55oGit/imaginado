@@ -18,32 +18,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SelectImagesActivity"
             android:label="@string/title_activity_select_images"
-            android:screenOrientation="portrait"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".GuessImageActivity"
             android:label="@string/title_activity_guess_image"
-            android:screenOrientation="portrait"
             android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustNothing|stateVisible"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".ObtainSecondsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing|stateVisible" />
+        <activity
+            android:name=".ObtainSecondsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustNothing|stateVisible"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing|stateVisible" />
+        <activity
+            android:name=".TutorialActivity"
+            android:label="@string/title_activity_tutorial"></activity>
     </application>
 
 </manifest>
