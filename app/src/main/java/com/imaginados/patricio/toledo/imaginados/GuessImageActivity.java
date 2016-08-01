@@ -50,6 +50,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
     private InputMethodManager inputMethodManager;
+    private ImageView sharewsap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,18 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        sharewsap = (ImageView) findViewById(R.id.sharewsap);
+        sharewsap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
     }
 
     @Override
@@ -312,9 +325,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.commit();
 
 
-            Intent intent = new Intent(GuessImageActivity.this, SelectImagesActivity.class);
-            startActivity(intent);
-            this.finish();
+            //Intent intent = new Intent(GuessImageActivity.this, SelectImagesActivity.class);
+            //startActivity(intent);
+            //this.finish();
         }
         return true;
     }

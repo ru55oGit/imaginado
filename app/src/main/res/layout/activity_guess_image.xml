@@ -67,10 +67,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageToGuess"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/fab_margin"
         android:gravity="center_horizontal"
-        android:id="@+id/wordContainerThird"></LinearLayout>
+        android:id="@+id/wordContainerThird"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="71dp">
+        <ImageView
+            android:id="@+id/sharewsap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whatsappicon"/>
+    </LinearLayout>
 
 </RelativeLayout>
