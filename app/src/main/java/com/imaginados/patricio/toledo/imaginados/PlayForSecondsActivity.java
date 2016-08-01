@@ -100,7 +100,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 actionBar.hide();
         }
 
-        timerTranstion(4000);
+        timerTranstion(6000);
         aciertos = 0;
         // Instancio el reloj
         counter = (TextView) findViewById(R.id.counterText);
