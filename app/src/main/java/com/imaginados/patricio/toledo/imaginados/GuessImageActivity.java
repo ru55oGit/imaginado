@@ -95,7 +95,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setCornerRadius((int)getResources().getDimension(R.dimen.border_radius));
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
-        milisegundos = settings.getInt("time", 30000);
+        milisegundos = settings.getInt("time", 60000);
         timer(milisegundos);
 
         // traigo el Nivel
@@ -301,9 +301,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             Integer segundos = Integer.parseInt(tiempo[1])*1000;
             milisegundos = minutos + segundos;
             // a los segundos restantes, por haber acertado la palabra, le sumo tantos segundos como letras tenga la misma como bonus
-            milisegundos+= 5000;
+            milisegundos+= 10000;
             // muestro la cantidad de segundos obtenidos
-            Toast.makeText(getBaseContext(),"has ganado 5 segundos",Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(),"has ganado 10 segundos",Toast.LENGTH_LONG).show();
             // guardo los segundos totales para ser usados en la proxima palabra
             settings = getSharedPreferences("Status", 0);
 

@@ -76,7 +76,7 @@ public class SelectImagesActivity extends AppCompatActivity {
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
         level = settings.getString("level", "1");
-        milisegundos = settings.getInt("time", 30000);
+        milisegundos = settings.getInt("time", 60000);
 
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
         TextView label = (TextView)findViewById(R.id.labelLevelText);
