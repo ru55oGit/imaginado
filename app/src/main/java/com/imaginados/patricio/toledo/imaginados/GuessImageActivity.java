@@ -51,6 +51,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private SharedPreferences.Editor editor;
     private InputMethodManager inputMethodManager;
     private ImageView sharewsap;
+    private ImageView volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +133,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         // titulo sin tiempos
         sinTiempo = (ImageView) findViewById(R.id.sintiempo);
+
+        // volver
+        volver = (ImageView) findViewById(R.id.volver);
+
+        volver.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         LinearLayout firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
         LinearLayout secondLine = (LinearLayout)findViewById(R.id.wordContainerSecond);
