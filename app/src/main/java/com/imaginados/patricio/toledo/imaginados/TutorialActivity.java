@@ -147,7 +147,7 @@ public class TutorialActivity extends Activity {
             switch (position) {
                 case 0:
                     Toast.makeText(getBaseContext(),"1",Toast.LENGTH_LONG).show();
-                    return "SECTION 1";
+                    return " 1";
                 case 1:
                     Toast.makeText(getBaseContext(),"2",Toast.LENGTH_LONG).show();
                     return "SECTION 2";
