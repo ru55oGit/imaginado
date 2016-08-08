@@ -52,6 +52,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private InputMethodManager inputMethodManager;
     private ImageView sharewsap;
     private ImageView volver;
+    private Boolean timerFlag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +65,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        timerFlag = true;
 
+        // seteo el tiempo que tengo para jugar en el reloj
+        milisegundos = settings.getInt("time", 60000);
+        counter = (TextView) findViewById(R.id.counterText);
+        counter.setTypeface(digifont);
+        counter.setText(""+String.format(FORMAT,
+                TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
+                TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
+
+        // share wsap
         sharewsap = (ImageView) findViewById(R.id.sharewsap);
         sharewsap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,20 +114,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             if (actionBar != null)
                 actionBar.hide();
         }
-
+        // border radius
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
         gd.setCornerRadius((int)getResources().getDimension(R.dimen.border_radius));
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
-        milisegundos = settings.getInt("time", 60000);
-        timer(milisegundos);
-
         // traigo el Nivel
         level = settings.getString("level","1");
 
-        counter = (TextView) findViewById(R.id.counterText);
-        counter.setTypeface(digifont);
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
 
         toggleKeyboardVisible();
@@ -186,6 +192,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     protected void onStop() {
         super.onStop();
+        // cancelo el custom toast cdo salgo
         if (toast != null) {
             toast.cancel();
         }
@@ -214,6 +221,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     // maneja la presion de las teclas
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
+        // arranco el timer cuando arriesga la primer tecla
+        if (timerFlag) {
+            milisegundos = settings.getInt("time", 60000);
+            timer(milisegundos);
+            timerFlag = false;
+        }
+
+
         if (toast != null){
             toast.cancel();
         }
