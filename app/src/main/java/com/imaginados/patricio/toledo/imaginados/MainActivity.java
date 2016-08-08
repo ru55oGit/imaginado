@@ -28,16 +28,10 @@ public class MainActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if ("1".equals(level)){
-                    Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
-                    startActivity(intent);
-                } else {
-                    Intent intent = new Intent(MainActivity.this, SelectImagesActivity.class);
-                    startActivity(intent);
-                }
+            Intent intent = new Intent(MainActivity.this, SelectImagesActivity.class);
+            startActivity(intent);
             }
         });
-
     }
 
     @Override

@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
@@ -42,6 +43,13 @@ public class SelectImagesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_images);
 
+        imagen1 = (ImageView) findViewById(R.id.imgView1);
+        imagen2 = (ImageView) findViewById(R.id.imgView2);
+        imagen3 = (ImageView) findViewById(R.id.imgView3);
+        imagen4 = (ImageView) findViewById(R.id.imgView4);
+        imagen5 = (ImageView) findViewById(R.id.imgView5);
+        imagen6 = (ImageView) findViewById(R.id.imgView6);
+
         settings = getSharedPreferences("Status", 0);
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
     }
@@ -75,6 +83,15 @@ public class SelectImagesActivity extends AppCompatActivity {
         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
+        if (("000000").equals(statusOfLevel.toString())) {
+            imagen1.setImageResource(getResources().getIdentifier("acertijos", "drawable", getPackageName()));
+            imagen2.setImageResource(getResources().getIdentifier("escudosfutbol", "drawable", getPackageName()));
+            imagen3.setImageResource(getResources().getIdentifier("logos", "drawable", getPackageName()));
+            imagen4.setImageResource(getResources().getIdentifier("iconospeliculas", "drawable", getPackageName()));
+            imagen5.setImageResource(getResources().getIdentifier("personajesanimados", "drawable", getPackageName()));
+            imagen6.setImageResource(getResources().getIdentifier("paises", "drawable", getPackageName()));
+        }
+
         level = settings.getString("level", "1");
         milisegundos = settings.getInt("time", 60000);
 
@@ -83,9 +100,6 @@ public class SelectImagesActivity extends AppCompatActivity {
         label.setText(level);
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         label.setTypeface(lobsterFont);
-
-        imagen1 = (ImageView) findViewById(R.id.imgView1);
-        imagen1.setImageResource(getSrcByLevel(level, "adivinanzas"));
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
         if (statusOfLevel.charAt(0) == '1'){
@@ -110,9 +124,6 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        imagen2 = (ImageView) findViewById(R.id.imgView2);
-        imagen2.setImageResource(getSrcByLevel(level, "escudos"));
-
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
         if (statusOfLevel.charAt(1) == '1') {
             imagen2.setAlpha(0.35f);
@@ -136,9 +147,6 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        imagen3 = (ImageView) findViewById(R.id.imgView3);
-        imagen3.setImageResource(getSrcByLevel(level, "marcas"));
-
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
         if (statusOfLevel.charAt(2) == '1') {
             imagen3.setAlpha(0.35f);
@@ -161,8 +169,6 @@ public class SelectImagesActivity extends AppCompatActivity {
                 }
             });
         }
-        imagen4 = (ImageView) findViewById(R.id.imgView4);
-        imagen4.setImageResource(getSrcByLevel(level, "peliculas"));
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
         if (statusOfLevel.charAt(3) == '1') {
@@ -187,9 +193,6 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        imagen5 = (ImageView) findViewById(R.id.imgView5);
-        imagen5.setImageResource(getSrcByLevel(level, "personajes"));
-
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
         if (statusOfLevel.charAt(4) == '1') {
             imagen5.setAlpha(0.35f);
@@ -213,10 +216,6 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-
-        imagen6 = (ImageView) findViewById(R.id.imgView6);
-        imagen6.setImageResource(getSrcByLevel(level, "banderas"));
-
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
         if (statusOfLevel.charAt(5) == '1') {
             imagen6.setAlpha(0.35f);
@@ -239,6 +238,33 @@ public class SelectImagesActivity extends AppCompatActivity {
                 }
             });
         }
+
+        new CountDownTimer(8000, 1000) {
+            public void onTick(long millis) {
+                switch ((int) millis/1000){
+                    case 1:
+                        imagen6.setImageResource(getSrcByLevel(level, "banderas"));
+                        break;
+                    case 2:
+                        imagen5.setImageResource(getSrcByLevel(level, "personajes"));
+                        break;
+                    case 3:
+                        imagen4.setImageResource(getSrcByLevel(level, "peliculas"));
+                        break;
+                    case 4:
+                        imagen3.setImageResource(getSrcByLevel(level, "marcas"));
+                        break;
+                    case 5:
+                        imagen2.setImageResource(getSrcByLevel(level, "escudos"));
+                        break;
+                    case 6:
+                        imagen1.setImageResource(getSrcByLevel(level, "adivinanzas"));
+                        break;
+                }
+            }
+            public void onFinish() {
+            }
+        }.start();
     }
 
     private int getSrcByLevel (String level, String category) {

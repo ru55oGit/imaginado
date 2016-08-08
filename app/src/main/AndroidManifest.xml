@@ -41,9 +41,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustNothing|stateVisible" />
-        <activity
-            android:name=".TutorialActivity"
-            android:label="@string/title_activity_tutorial" />
     </application>
 
 </manifest>
