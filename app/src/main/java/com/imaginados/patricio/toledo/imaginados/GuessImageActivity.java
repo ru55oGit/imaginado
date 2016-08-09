@@ -310,7 +310,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             // obtengo los segundos que habia y le resto 1 segundo
             String tiempo[] = ((String)this.counter.getText()).split(":");
             Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-            Integer segundos = Integer.parseInt(tiempo[1])*1000-1000;
+            Integer segundos = Integer.parseInt(tiempo[1])*1000-2000;
             milisegundos = minutos + segundos;
             timer(milisegundos);
             LayoutInflater inflater = getLayoutInflater();
@@ -318,7 +318,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("Fallaste. -1 Segundo");
+            text.setText("Fallaste. -2 Segundos");
             text.setTypeface(lobsterFont);
 
             toast = new Toast(getApplicationContext());
