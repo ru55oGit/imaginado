@@ -1,14 +1,17 @@
 package com.imaginados.patricio.toledo.imaginados;
 
 import android.app.ActionBar;
+import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.media.Image;
+import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -21,8 +24,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +40,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private ImageView sinTiempo;
     // Counters variables
     private CountDownTimer timer;
+    private Boolean timerFlag;
+    private CountDownTimer showSoftKey;
     private TextView counter;
     private static final String FORMAT = "%02d:%02d";
     private int milisegundos;
@@ -52,7 +60,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private InputMethodManager inputMethodManager;
     private ImageView sharewsap;
     private ImageView volver;
-    private Boolean timerFlag;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +100,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     protected void onResume() {
         super.onResume();
-
         // If the Android version is lower than Jellybean, use this call to hide
         // the status bar.
         if (Build.VERSION.SDK_INT < 16) {
@@ -114,18 +121,18 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             if (actionBar != null)
                 actionBar.hide();
         }
+
+        frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
+        toggleKeyboardVisible();
+
         // border radius
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
-        gd.setCornerRadius((int)getResources().getDimension(R.dimen.border_radius));
+        gd.setCornerRadius((int) getResources().getDimension(R.dimen.border_radius));
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
         // traigo el Nivel
         level = settings.getString("level","1");
-
-        frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
-
-        toggleKeyboardVisible();
 
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
@@ -165,7 +172,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 letter.setBackgroundResource(R.color.primaryColor);
                 letter.setBackground(gd);
             }
-
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
             letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
@@ -185,7 +191,19 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } else {
                 firstLine.addView(letter);
             }
+        }
+        // si no hay segundos, abro el popup sin tiempo
+        if (milisegundos == 0) {
+            customDialog();
+        } else {
+            showSoftKey = new CountDownTimer(700, 1000) {
+                public void onTick(long millisUntilFinished) {
 
+                }
+                public void onFinish() {
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                }
+            }.start();
         }
     }
 
@@ -212,7 +230,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 e.printStackTrace();
             }
         }
-
         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 
         finish();
@@ -428,6 +445,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putInt("time", 0);
                 editor.commit();
+                customDialog();
             }
         }.start();
     }
@@ -445,5 +463,45 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
         milisegundos = minutos + segundos;
         timer(milisegundos);
+    }
+
+    private void customDialog(){
+        // custom dialog
+        final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
+
+        ImageView ganar = (ImageView) dialogCustom.findViewById(R.id.ganarSegundos);
+        ImageView comprar = (ImageView) dialogCustom.findViewById(R.id.comprarSegundos);
+        ganar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GuessImageActivity.this, PlayForSecondsActivity.class);
+                startActivity(intent);
+            }
+        });
+        comprar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(R.id.dialogButtonOK);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogCustom.dismiss();
+                sinTiempo.setVisibility(View.VISIBLE);
+                counter.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
+            public void onDismiss(final DialogInterface dialog) {
+                // Cierro el teclado cuando me quedo sin tiempo
+                inputMethodManager.hideSoftInputFromWindow(frameLayout.getWindowToken(), 0);
+            }
+        });
+        dialogCustom.show();
     }
 }

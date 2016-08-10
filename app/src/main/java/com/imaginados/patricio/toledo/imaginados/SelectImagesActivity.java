@@ -32,7 +32,6 @@ public class SelectImagesActivity extends AppCompatActivity {
     private ImageView imagen6;
     private StringBuilder statusOfLevel;
     private String level;
-    private int milisegundos;
     private SharedPreferences settings;
     private InputMethodManager inputMethodManager;
     private RelativeLayout frameLayout;
@@ -93,7 +92,6 @@ public class SelectImagesActivity extends AppCompatActivity {
         }
 
         level = settings.getString("level", "1");
-        milisegundos = settings.getInt("time", 60000);
 
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
         TextView label = (TextView)findViewById(R.id.labelLevelText);
@@ -111,14 +109,9 @@ public class SelectImagesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     imagen1.setDrawingCacheEnabled(true);
-                    Intent intent;
-                    if (milisegundos > 0) {
-                        intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                        intent.putExtra("src", "adivinanzas" + level);
-                        intent.putExtra("word", getWord("adivinanzas", level));
-                    } else {
-                        intent = new Intent(SelectImagesActivity.this, ObtainSecondsActivity.class);
-                    }
+                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                    intent.putExtra("src", "adivinanzas" + level);
+                    intent.putExtra("word", getWord("adivinanzas", level));
                     startActivity(intent);
                 }
             });
@@ -134,14 +127,9 @@ public class SelectImagesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     imagen2.setDrawingCacheEnabled(true);
-                    Intent intent;
-                    if (milisegundos > 0) {
-                        intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                        intent.putExtra("src", "escudos"+level);
-                        intent.putExtra("word", getWord("escudos", level));
-                    } else {
-                        intent = new Intent(SelectImagesActivity.this, ObtainSecondsActivity.class);
-                    }
+                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                    intent.putExtra("src", "escudos"+level);
+                    intent.putExtra("word", getWord("escudos", level));
                     startActivity(intent);
                 }
             });
@@ -157,14 +145,9 @@ public class SelectImagesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     imagen3.setDrawingCacheEnabled(true);
-                    Intent intent;
-                    if (milisegundos > 0) {
-                        intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                        intent.putExtra("src", "marcas"+ level);
-                        intent.putExtra("word", getWord("marcas", level));
-                    } else {
-                        intent = new Intent(SelectImagesActivity.this, ObtainSecondsActivity.class);
-                    }
+                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                    intent.putExtra("src", "marcas"+ level);
+                    intent.putExtra("word", getWord("marcas", level));
                     startActivity(intent);
                 }
             });
@@ -180,14 +163,9 @@ public class SelectImagesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     imagen4.setDrawingCacheEnabled(true);
-                    Intent intent;
-                    if (milisegundos > 0) {
-                        intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                        intent.putExtra("src", "peliculas"+ level);
-                        intent.putExtra("word", getWord("peliculas", level));
-                    } else {
-                        intent = new Intent(SelectImagesActivity.this, ObtainSecondsActivity.class);
-                    }
+                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                    intent.putExtra("src", "peliculas"+ level);
+                    intent.putExtra("word", getWord("peliculas", level));
                     startActivity(intent);
                 }
             });
@@ -203,14 +181,9 @@ public class SelectImagesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     imagen5.setDrawingCacheEnabled(true);
-                    Intent intent;
-                    if (milisegundos > 0) {
-                        intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                        intent.putExtra("src", "personajes"+ level);
-                        intent.putExtra("word", getWord("personajes", level));
-                    } else {
-                        intent = new Intent(SelectImagesActivity.this, ObtainSecondsActivity.class);
-                    }
+                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                    intent.putExtra("src", "personajes"+ level);
+                    intent.putExtra("word", getWord("personajes", level));
                     startActivity(intent);
                 }
             });
@@ -226,14 +199,9 @@ public class SelectImagesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     imagen6.setDrawingCacheEnabled(true);
-                    Intent intent;
-                    if (milisegundos > 0) {
-                        intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                        intent.putExtra("src", "banderas"+ level);
-                        intent.putExtra("word", getWord("banderas", level));
-                    } else {
-                        intent = new Intent(SelectImagesActivity.this, ObtainSecondsActivity.class);
-                    }
+                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                    intent.putExtra("src", "banderas"+ level);
+                    intent.putExtra("word", getWord("banderas", level));
                     startActivity(intent);
                 }
             });

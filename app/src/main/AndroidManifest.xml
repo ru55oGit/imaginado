@@ -29,8 +29,8 @@
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustNothing|stateVisible" />
+            android:theme="@style/AppTheme.NoActionBar" />
+            <!--android:windowSoftInputMode="adjustNothing|stateVisible" -->
         <activity
             android:name=".ObtainSecondsActivity"
             android:screenOrientation="portrait"

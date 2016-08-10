@@ -72,13 +72,16 @@
         android:id="@+id/wordContainerThird"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="71dp">
-        <ImageView
-            android:id="@+id/sharewsap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/whatsappicon"/>
-    </LinearLayout>
+        android:layout_marginBottom="71dp"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/sharewsap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsappicon"
+        android:layout_above="@+id/volver"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
 
     <ImageView
         android:id="@+id/volver"
@@ -86,6 +89,6 @@
         android:layout_height="wrap_content"
         android:src="@drawable/volver"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/counterText" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
