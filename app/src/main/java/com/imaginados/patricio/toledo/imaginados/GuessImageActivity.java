@@ -10,8 +10,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
-import android.media.Image;
-import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -24,11 +22,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +41,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private TextView counter;
     private static final String FORMAT = "%02d:%02d";
     private int milisegundos;
+    private int secondsToSubtract;
 
     private String word;
     private int dim;
@@ -122,6 +119,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 actionBar.hide();
         }
 
+        secondsToSubtract = 0;
+
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         toggleKeyboardVisible();
 
@@ -196,6 +195,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (milisegundos == 0) {
             customDialog();
         } else {
+            // si hay segundos abro el teclado
             showSoftKey = new CountDownTimer(700, 1000) {
                 public void onTick(long millisUntilFinished) {
 
@@ -324,10 +324,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (errores == word.length()) {
             // paro el reloj
             timer.cancel();
+            // en el primer error le descuento 1 segundo, por cada error subsiguiente le descuento cantidad de errores x 1 seg
+            secondsToSubtract++;
             // obtengo los segundos que habia y le resto 1 segundo
             String tiempo[] = ((String)this.counter.getText()).split(":");
             Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-            Integer segundos = Integer.parseInt(tiempo[1])*1000-2000;
+            Integer segundos = Integer.parseInt(tiempo[1])*1000-secondsToSubtract*1000;
             milisegundos = minutos + segundos;
             timer(milisegundos);
             LayoutInflater inflater = getLayoutInflater();
@@ -335,7 +337,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("Fallaste. -2 Segundos");
+            text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
             text.setTypeface(lobsterFont);
 
             toast = new Toast(getApplicationContext());

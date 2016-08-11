@@ -30,7 +30,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-            <!--android:windowSoftInputMode="adjustNothing|stateVisible" -->
         <activity
             android:name=".ObtainSecondsActivity"
             android:screenOrientation="portrait"
