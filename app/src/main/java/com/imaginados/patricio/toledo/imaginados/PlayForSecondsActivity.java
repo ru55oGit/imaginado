@@ -53,7 +53,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private int aciertos;
     private TextView letter;
     private LinearLayout firstLine;
+    private LinearLayout secondLine;
     private LinearLayout ll;
+    private LinearLayout ll2;
     private int gainedTime = 0;
     private int questionsSum = 0;
     private GradientDrawable gd;
@@ -108,8 +110,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         counter.setTypeface(digifont);
         // Instancio el contenedor de las letras
         firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
+        secondLine = (LinearLayout) findViewById(R.id.wordContainerSecond);
         // Limpio todas las letras para la proxima pregunta
         firstLine.removeAllViews();
+        secondLine.removeAllViews();
 
         question = pregResp.get((int)(Math.random() * pregResp.size()));
 
@@ -152,7 +156,17 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             marginLetters.setMargins(0, 0, (int)getResources().getDimension(R.dimen.border_radius), 0);
             letter.setLayoutParams(marginLetters);
 
-            firstLine.addView(letter);
+            if (question.getRespuesta().indexOf("|") > 0) {
+                if (i < question.getRespuesta().indexOf("|")) {
+                    firstLine.addView(letter);
+                } else {
+                    if (i > question.getRespuesta().indexOf("|")) {
+                        secondLine.addView(letter);
+                    }
+                }
+            } else {
+                firstLine.addView(letter);
+            }
         }
     }
 
@@ -198,30 +212,57 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         }
 
         ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
-        ll.getChildCount();
+        ll2 = (LinearLayout) findViewById(R.id.wordContainerSecond);
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < question.getRespuesta().length(); i++) {
-            // si el caracter ingresado coincide con la posicion[i] de la palabra && no fue previamente adivinado
-            if (Character.toUpperCase(question.getRespuesta().charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__")) {
-                letter = new TextView(this);
-                Character letra = (char) event.getDisplayLabel();
-                letter.setText(letra.toString());
-                letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
-                letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                letter.setBackgroundResource(R.color.backLetters);
-                letter.setBackground(gd);
+            // si viene un pipe, es que las palabras estan divididas en 2 renglones
+            if (question.getRespuesta().indexOf("|") < 0) {
+                // si el caracter ingresado coincide con la posicion[i] de la palabra && no fue previamente adivinado
+                if (Character.toUpperCase(question.getRespuesta().charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__")) {
+                    letter = new TextView(this);
+                    Character letra = (char) event.getDisplayLabel();
+                    letter.setText(letra.toString());
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setBackgroundResource(R.color.backLetters);
+                    letter.setBackground(gd);
 
-                LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                marginLetters.setMargins(0, 0, (int)getResources().getDimension(R.dimen.border_radius), 0);
-                letter.setLayoutParams(marginLetters);
-                ll.removeViewAt(i);
-                ll.addView(letter, i);
+                    LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
+                    marginLetters.setMargins(0, 0, (int) getResources().getDimension(R.dimen.border_radius), 0);
+                    letter.setLayoutParams(marginLetters);
+                    ll.removeViewAt(i);
+                    ll.addView(letter, i);
 
-                aciertos++;
+                    aciertos++;
+                }
+            }  else if ('|' != question.getRespuesta().charAt(i)) {
+                // si las letras evaluadas estan antes que el pipe, evaluo en el primer renglon...si estan despues evaluo en el segundo
+                if (i < question.getRespuesta().indexOf("|") && Character.toUpperCase(question.getRespuesta().charAt(i)) == event.getDisplayLabel() && ((TextView) ll.getChildAt(i)).getText().equals("__") ||
+                        i > question.getRespuesta().indexOf("|") && Character.toUpperCase(question.getRespuesta().charAt(i)) == event.getDisplayLabel() && ((TextView) ll2.getChildAt(i -(question.getRespuesta().indexOf("|")+1))).getText().equals("__")) {
+                    TextView letter = new TextView(this);
+                    Character letra = (char) event.getDisplayLabel();
+                    letter.setText(letra.toString());
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setBackgroundResource(R.color.primaryColor);
+                    letter.setBackground(gd);
+
+                    LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
+                    marginLetters.setMargins(0, 0, 10, 0);
+                    letter.setLayoutParams(marginLetters);
+                    if (i < question.getRespuesta().indexOf("|")) {
+                        ll.removeViewAt(i);
+                        ll.addView(letter, i);
+                    } else {
+                        ll2.removeViewAt(i - (question.getRespuesta().indexOf("|")+1));
+                        ll2.addView(letter, i - (question.getRespuesta().indexOf("|")+1));
+                    }
+                    aciertos++;
+                }
             }
         }
         // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
-        if (aciertos == question.getRespuesta().replaceAll(" ", "").length()) {
+        if (aciertos == question.getRespuesta().replaceAll(" ", "").replaceAll("\\|","").length()) {
             // paro el reloj
            timer.cancel();
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
@@ -277,12 +318,14 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 transition.setText(""+String.format(FORMAT_TRANSITION,TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
                 transition.setVisibility(View.VISIBLE);
                 firstLine.setVisibility(View.INVISIBLE);
+                secondLine.setVisibility(View.INVISIBLE);
                 toggleKeyboardVisible(false);
             }
             @Override
             public void onFinish() {
                 transition.setVisibility(View.INVISIBLE);
                 firstLine.setVisibility(View.VISIBLE);
+                secondLine.setVisibility(View.VISIBLE);
                 toggleKeyboardVisible(true);
                 //onResume();
                 timer(11000);

@@ -34,7 +34,7 @@
     },
     {
       "pregunta": "¿Cómo se llama el protagonista de la saga Indiana Jones?",
-      "respuesta": "Harrison Ford"
+      "respuesta": "Harrison|Ford"
     },
     {
       "pregunta": "¿Cuál es el nombre de pila del padre de Milhouse de los Simpsons?",
@@ -46,7 +46,7 @@
     },
     {
       "pregunta": "¿Cómo se llamaba el personaje que interpretaba Al Pacino en \"Scarface\"?",
-      "respuesta": "Tony Montana"
+      "respuesta": "Tony|Montana"
     },
     {
       "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
@@ -70,7 +70,7 @@
     },
     {
       "pregunta": "¿Cómo se llamaba el primer gato de Los Simpsons?",
-      "respuesta": "Bola de nieve"
+      "respuesta": "Bola|de nieve"
     },
     {
       "pregunta": " ¿Cuál es la nacionalidad de la cantante Shakira?",
@@ -78,7 +78,7 @@
     },
     {
       "pregunta": "¿Quién se hizo famoso,gracias a su frase \"que hay de nuevo viejo\"?",
-      "respuesta": "Bugs bunny"
+      "respuesta": "Bugs|bunny"
     },{
       "pregunta": "¿Cómo se llama la princesa de Disney conocida como \"La Sirenita\"?",
       "respuesta": "Ariel"
@@ -101,7 +101,7 @@
     },
     {
       "pregunta": "¿Qué Beatle fue asesinado por un fan?",
-      "respuesta": "John Lennon"
+      "respuesta": "John|Lennon"
     },
     {
       "pregunta": "¿Qué personaje de Disney perdió su zapato de cristal?",
@@ -145,7 +145,7 @@
     }
     ,{
       "pregunta": "¿En qué continente/s se encuentra Turquía?",
-      "respuesta": "Asia y Europa"
+      "respuesta": "Asia y|Europa"
     }
     ,{
       "pregunta": "¿En qué país está Ushuaia, la ciudad más austral del mundo?",
@@ -206,7 +206,7 @@
     }
     ,{
       "pregunta": "¿Quén es el autor de \"El amor en los tiempos de cólera\"?",
-      "respuesta": "Garcia Marquez"
+      "respuesta": "Garcia|Marquez"
     }
     ,{
       "pregunta": "¿De qué país es el panda el animal nacional ? ",
