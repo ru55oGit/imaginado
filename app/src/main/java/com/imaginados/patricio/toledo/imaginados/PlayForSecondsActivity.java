@@ -41,6 +41,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private RelativeLayout frameLayout;
     private TextView preguntaView;
     private TextView transition;
+    private Boolean timerFlag;
     private ImageView nosumaste;
     private int dim;
     private CountDownTimer timer;
@@ -74,7 +75,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-
         pregResp = getQuestion ();
     }
 
@@ -101,13 +101,15 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             if (actionBar != null)
                 actionBar.hide();
         }
+        timerFlag = true;
 
-        timerTranstion(6000);
+        //timerTranstion(6000);
         aciertos = 0;
         // Instancio el reloj
         counter = (TextView) findViewById(R.id.counterText);
         Typeface digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
         counter.setTypeface(digifont);
+        counter.setText("00:10");
         // Instancio el contenedor de las letras
         firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
         secondLine = (LinearLayout) findViewById(R.id.wordContainerSecond);
@@ -125,7 +127,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         preguntaView.setTypeface(lobsterFont);
 
         // Instancio y limpio el reloj de transicion
-        transition = (TextView) findViewById(R.id.transition);
+        //transition = (TextView) findViewById(R.id.transition);
 
         nosumaste = (ImageView) findViewById(R.id.nosumaste);
 
@@ -204,6 +206,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     // maneja la presion de las teclas
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
+        if (timerFlag) {
+            timer(10000);
+            timerFlag = false;
+        }
+
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             BackDialog bd = new BackDialog();
             bd.show(getFragmentManager(), "finnish");
@@ -328,7 +335,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 secondLine.setVisibility(View.VISIBLE);
                 toggleKeyboardVisible(true);
                 //onResume();
-                timer(11000);
+                timer(10000);
             }
         }.start();
     }

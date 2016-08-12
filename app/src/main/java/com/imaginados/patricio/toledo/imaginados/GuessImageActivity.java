@@ -220,7 +220,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             String tiempo[] = ((String)this.counter.getText()).split(":");
             try {
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-                Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
+                Integer segundos = Integer.parseInt(tiempo[1]) * 1000;
                 milisegundos = minutos + segundos;
                 // guardo los segundos totales para ser usados en la proxima palabra
                 settings = getSharedPreferences("Status", 0);
