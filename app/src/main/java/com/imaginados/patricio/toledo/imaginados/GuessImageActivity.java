@@ -504,6 +504,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 inputMethodManager.hideSoftInputFromWindow(frameLayout.getWindowToken(), 0);
             }
         });
-        dialogCustom.show();
+        if (dialogCustom != null) {
+            dialogCustom.show();
+        }
     }
 }
