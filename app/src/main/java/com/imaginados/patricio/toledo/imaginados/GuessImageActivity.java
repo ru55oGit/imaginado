@@ -152,6 +152,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                if (timer != null) {
+                    timer.cancel();
+                }
                 finish();
             }
         });
@@ -214,7 +217,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (toast != null) {
             toast.cancel();
         }
-
+        if (timer != null) {
+            timer.cancel();
+        }
         if (aciertos != word.length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
