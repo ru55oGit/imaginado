@@ -14,77 +14,77 @@
       "marcas": "facebook",
       "peliculas": "los juegos|del hambre",
       "personajes": "vegeta",
-      "banderas": "ghana"
+      "banderas": "estados|unidos"
     },{
       "adivinanzas": "empanada",
       "escudos": "river plate",
       "marcas": "wordpress",
       "peliculas": "et",
       "personajes": "pikachu",
-      "banderas": "serbia"
+      "banderas": "china"
     },{
       "adivinanzas": "pinocho",
       "escudos": "valencia",
       "marcas": "twitter",
       "peliculas": "los gremlins",
       "personajes": "seiya",
-      "banderas": "arabia|saudita"
+      "banderas": "rusia"
     },{
       "adivinanzas": "quincena",
-      "escudos": "bayer munich",
+      "escudos": "bayer|munich",
       "marcas": "picasa",
       "peliculas": "capitan|america",
       "personajes": "jem",
-      "banderas": "guatemala"
+      "banderas": "alemania"
     },{
       "adivinanzas": "pantalon",
       "escudos": "roma",
       "marcas": "cartoon|network",
       "peliculas": "chucky",
       "personajes": "la pantera|rosa",
-      "banderas": "ecuador"
+      "banderas": "italia"
     },{
       "adivinanzas": "estomago",
       "escudos": "cruz azul",
       "marcas": "nickelodeon",
       "peliculas": "liberen|a willy",
       "personajes": "el inspector|gadget",
-      "banderas": "mexico"
+      "banderas": "francia"
     },{
       "adivinanzas": "tesoro",
       "escudos": "real madrid",
       "marcas": "apple",
       "peliculas": "matrix",
       "personajes": "la hormiga|atomica",
-      "banderas": "peru"
+      "banderas": "japon"
     },{
       "adivinanzas": "entretenido",
       "escudos": "racing club",
       "marcas": "amazon",
       "peliculas": "cars",
       "personajes": "gargamel",
-      "banderas": "croacia"
+      "banderas": "australia"
     },{
       "adivinanzas": "pantano",
       "escudos": "san pablo",
       "marcas": "whatsapp",
       "peliculas": "jumanji",
       "personajes": "el gallo|claudio",
-      "banderas": "el salvador"
+      "banderas": "corea|del sur"
     },{
       "adivinanzas": "sombrilla",
       "escudos": "gremio",
       "marcas": "mini cooper",
       "peliculas": "king kong",
       "personajes": "rayo de|plata",
-      "banderas": "bolivia"
+      "banderas": "hungria"
       },{
       "adivinanzas": "sorpresa",
       "escudos": "atletico|madrid",
       "marcas": "claro",
       "peliculas": "megamente",
       "personajes": "don gato",
-      "banderas": "portugal"
+      "banderas": "holanda"
     },{
       "adivinanzas": "pepino",
       "escudos": "borussia|dortmund",
@@ -98,166 +98,341 @@
       "marcas": "castrol",
       "peliculas": "marcianos|al ataque",
       "personajes": "astroboy",
-      "banderas": ""
+      "banderas": "nueva|zelanda"
     },{
       "adivinanzas": "conocimiento",
       "escudos": "manchester|city",
       "marcas": "kodak",
       "peliculas": "malefica",
       "personajes": "aquaman",
-      "banderas": ""
+      "banderas": "brasil"
     },{
       "adivinanzas": "revelar",
       "escudos": "colo colo",
       "marcas": "lacoste",
       "peliculas": "ratatouille",
       "personajes": "battlecat",
-      "banderas": ""
+      "banderas": "Kazajistan"
     },{
       "adivinanzas": "me chupa|un huevo",
       "escudos": "inter de|porto alegre",
       "marcas": "play|station",
       "peliculas": "robocop",
       "personajes": "benji price",
-      "banderas": ""
+      "banderas": "Corea|del Norte"
     },{
       "adivinanzas": "termometro",
       "escudos": "once caldas",
       "marcas": "peugeot",
       "peliculas": "el juego|del miedo",
       "personajes": "birdman",
-      "banderas": ""
+      "banderas": "kenia"
     },{
       "adivinanzas": "leer entre|lineas",
       "escudos": "manchester|united",
       "marcas": "mercedes|benz",
       "peliculas": "tonto y|retonto",
       "personajes": "bobby",
-      "banderas": ""
+      "banderas": "canada"
     },{
       "adivinanzas": "escama",
       "escudos": "cruzeiro",
       "marcas": "pepsi",
       "peliculas": "ouija",
       "personajes": "bugs bunny",
-      "banderas": ""
+      "banderas": "polonia"
     },{
       "adivinanzas": "entrenadora",
       "escudos": "atletico|nacional",
       "marcas": "adidas",
       "peliculas": "corto|circuito",
       "personajes": "cerebro",
-      "banderas": ""
+      "banderas": "colombia"
     },{
       "adivinanzas": "llave|inglesa",
       "escudos": "lazio",
       "marcas": "fisher price",
       "peliculas": "los pitufos",
       "personajes": "el inspector|ardilla",
-      "banderas": ""
+      "banderas": "cuba"
     },{
       "adivinanzas": "fe de|erratas",
       "escudos": "chelsea",
       "marcas": "ferrari",
       "peliculas": "rocky",
       "personajes": "el oso yogi",
-      "banderas": ""
+      "banderas": "suiza"
     },{
       "adivinanzas": "ingenio",
       "escudos": "wolfsburgo",
       "marcas": "lg",
       "peliculas": "scream",
       "personajes": "heidi",
-      "banderas": ""
+      "banderas": "belgica"
     },{
       "adivinanzas": "envido",
-      "escudos": "independiente santa fe",
+      "escudos": "san lorenzo|de almagro",
       "marcas": "nike",
       "peliculas": "quisiera|ser grande",
       "personajes": "garfield",
-      "banderas": ""
+      "banderas": "grecia"
     },{
       "adivinanzas": "real envido",
-      "escudos": "hamburgo",
+      "escudos": "flamengo",
       "marcas": "levis",
       "peliculas": "twister",
       "personajes": "freezer",
-      "banderas": ""
+      "banderas": "tailandia"
     },{
       "adivinanzas": "falta envido",
-      "escudos": "sevilla|futbol club",
+      "escudos": "hamburgo",
       "marcas": "volskwagen",
       "peliculas": "transformers",
       "personajes": "flash",
-      "banderas": ""
+      "banderas": "uzbekistan"
     },{
       "adivinanzas": "canal de|la mancha",
-      "escudos": "juventus",
+      "escudos": "sevilla",
       "marcas": "umbro",
       "peliculas": "milagro en|la calle 8",
       "personajes": "goku",
-      "banderas": ""
+      "banderas": "jamaica"
     },{
       "adivinanzas": "colaboracion",
-      "escudos": "Bayer Leverkusen",
+      "escudos": "juventus",
       "marcas": "coca cola",
       "peliculas": "jerry|maguire",
       "personajes": "ikki",
-      "banderas": ""
+      "banderas": "iran"
     },{
       "adivinanzas": "encubierto",
-      "escudos": "lanus",
+      "escudos": "arsenal",
       "marcas": "bacardi",
       "peliculas": "timon|y pumba",
       "personajes": "pitufo|goloso",
-      "banderas": ""
+      "banderas": "sudafrica"
     },{
       "adivinanzas": "enfadado",
-      "escudos": "osasuna",
+      "escudos": "Bayer|Leverkusen",
       "marcas": "motorola",
       "peliculas": "la bella|y la bestia",
       "personajes": "scooby doo",
-      "banderas": ""
+      "banderas": "suecia"
     },{
       "adivinanzas": "torre de|pizza",
-      "escudos": "america",
+      "escudos": "lanus",
       "marcas": "suzuki",
       "peliculas": "madagascar",
       "personajes": "bart|simpson",
-      "banderas": ""
+      "banderas": "ucrania"
     },{
       "adivinanzas": "leche|cortada",
-      "escudos": "internazionale",
+      "escudos": "osasuna",
       "marcas": "stella|artois",
       "peliculas": "300",
       "personajes": "principe|adam",
-      "banderas": ""
+      "banderas": "dinamarca"
     },{
-      "adivinanzas": "mas vale pajaro en|mano que 100 volando",
-      "escudos": "",
+      "adivinanzas": "emparedado",
+      "escudos": "america",
       "marcas": "shell",
       "peliculas": "christine",
-      "personajes": "",
-      "banderas": ""
+      "personajes": "ricky ricon",
+      "banderas": "bielorrusia"
     },{
-      "adivinanzas": "el triangulo|de las bermudas",
-      "escudos": "",
-      "marcas": "",
-      "peliculas": "gozdilla",
-      "personajes": "",
-      "banderas": ""
+      "adivinanzas": "el triangulo de|las bermudas",
+      "escudos": "inter|de milan",
+      "marcas": "seat",
+      "peliculas": "godzilla",
+      "personajes": "pepe le pew",
+      "banderas": "eslovenia"
     },{
-      "adivinanzas": "circulo polar|artico",
+      "adivinanzas": "circulo|polar artico",
       "escudos": "",
-      "marcas": "",
+      "marcas": "samsung",
       "peliculas": "hellboy",
+      "personajes": "papa|pitufo",
+      "banderas": "republica|checa"
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "monster vs aliens",
+      "personajes": "",
+      "banderas": "rumania"
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "barein"
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
       "personajes": "",
       "banderas": ""
     },{
       "adivinanzas": "",
       "escudos": "",
       "marcas": "",
-      "peliculas": "monster vs aliens",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": ""
+    },{
+      "adivinanzas": "",
+      "escudos": "",
+      "marcas": "",
+      "peliculas": "",
       "personajes": "",
       "banderas": ""
     },{

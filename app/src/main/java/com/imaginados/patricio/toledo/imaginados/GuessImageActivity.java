@@ -167,7 +167,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         for (int i = 0; i < word.length(); i++) {
             TextView letter = new TextView(this);
             if (Character.isWhitespace(word.charAt(i))) {
-                letter.setText(" ");
+                letter.setText("");
             } else if ('|' != word.charAt(i)){
                 letter.setText("__");
                 letter.setAllCaps(true);
