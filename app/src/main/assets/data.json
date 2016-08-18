@@ -240,7 +240,7 @@
       "personajes": "ricky ricon",
       "banderas": "bielorrusia"
     },{
-      "adivinanzas": "el triangulo de|las bermudas",
+      "adivinanzas": "triangulo de|las bermudas",
       "escudos": "inter|de milan",
       "marcas": "seat",
       "peliculas": "godzilla",
@@ -248,182 +248,287 @@
       "banderas": "eslovenia"
     },{
       "adivinanzas": "circulo|polar artico",
-      "escudos": "",
+      "escudos": "malaga",
       "marcas": "samsung",
       "peliculas": "hellboy",
       "personajes": "papa|pitufo",
       "banderas": "republica|checa"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "confirma",
+      "escudos": "liverpool",
       "marcas": "",
       "peliculas": "monster vs aliens",
       "personajes": "",
       "banderas": "rumania"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "todo sobre|ruedas",
+      "escudos": "Schalke 04",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
       "banderas": "barein"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "escalpelo",
+      "escudos": "torino",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "eslovaquia"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "bizcochuelo",
+      "escudos": "Everton",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "vietnam"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "florencia",
+      "escudos": "universidad|de chile",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "etiopia"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "aire|comprimido",
+      "escudos": "estudiantes|de la plata",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "bahamas"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "ascensor",
+      "escudos": "Sampdoria",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "fiyi"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "cantero",
+      "escudos": "velez|sarsfield",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "kosovo"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "soldado",
+      "escudos": "real betis",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "singapur"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "pancarta",
+      "escudos": "necaxa",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "marruecos"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "vino blanco",
+      "escudos": "west|bromwich",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "camerun"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "estetoscopio",
+      "escudos": "peruggia",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "escocia"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "jueves|santo",
+      "escudos": "villareal",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "chipre"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "cucharita",
+      "escudos": "Hertha|Berlin",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "india"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "mas vale tarde|que nunca",
+      "escudos": "rosario|central",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "panama"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "analfabeta",
+      "escudos": "santos",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "argelia"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "alfa romeo",
+      "escudos": "millonarios",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "paraguay"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "climatizado",
+      "escudos": "universidad|catolica",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "egipto"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "todo bajo|control",
+      "escudos": "fiorentina",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "costa rica"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "camaleon",
+      "escudos": "atlas",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "portugal"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "fuego|cruzado",
+      "escudos": "Tottenham|Hotspur",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "bolivia"
     },{
-      "adivinanzas": "",
-      "escudos": "",
+      "adivinanzas": "votar en|blanco",
+      "escudos": "palmeiras",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "el salvador"
     },{
       "adivinanzas": "",
-      "escudos": "",
+      "escudos": "Werder|Bremen",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "croacia"
     },{
       "adivinanzas": "",
-      "escudos": "",
+      "escudos": "bologna",
       "marcas": "",
       "peliculas": "",
       "personajes": "",
-      "banderas": ""
+      "banderas": "peru"
     },{
       "adivinanzas": "",
-      "escudos": "",
+      "escudos": "newcastle",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "mexico"
+    },{
+      "adivinanzas": "",
+      "escudos": "levante",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "ecuador"
+    },{
+      "adivinanzas": "",
+      "escudos": "palermo",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "guatemala"
+    },{
+      "adivinanzas": "",
+      "escudos": "tigre",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "arabia|saudita"
+    },{
+      "adivinanzas": "",
+      "escudos": "junior de|barranquilla",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "serbia"
+    },{
+      "adivinanzas": "",
+      "escudos": "corinthians",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "ghana"
+    },{
+      "adivinanzas": "",
+      "escudos": "fluminense",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "nigeria"
+    },{
+      "adivinanzas": "",
+      "escudos": "Newells|Old Boys",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "austria"
+    },{
+      "adivinanzas": "",
+      "escudos": "deportivo|cali",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "honduras"
+    },{
+      "adivinanzas": "",
+      "escudos": "west|ham",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "turquia"
+    },{
+      "adivinanzas": "",
+      "escudos": "monterrey",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "chile"
+    },{
+      "adivinanzas": "",
+      "escudos": "chievo|verona",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "irlanda"
+    },{
+      "adivinanzas": "",
+      "escudos": "aston villa",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "noruega"
+    },{
+      "adivinanzas": "",
+      "escudos": "empoli",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "israel"
+    },{
+      "adivinanzas": "",
+      "escudos": "vasco|da gama",
+      "marcas": "",
+      "peliculas": "",
+      "personajes": "",
+      "banderas": "bulgaria"
+    },{
+      "adivinanzas": "",
+      "escudos": "america|de cali",
       "marcas": "",
       "peliculas": "",
       "personajes": "",

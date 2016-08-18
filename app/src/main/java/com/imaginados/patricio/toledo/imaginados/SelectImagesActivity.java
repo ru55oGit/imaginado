@@ -33,7 +33,6 @@ public class SelectImagesActivity extends AppCompatActivity {
     private StringBuilder statusOfLevel;
     private String level;
     private SharedPreferences settings;
-    private InputMethodManager inputMethodManager;
     private RelativeLayout frameLayout;
 
 
@@ -50,7 +49,6 @@ public class SelectImagesActivity extends AppCompatActivity {
         imagen6 = (ImageView) findViewById(R.id.imgView6);
 
         settings = getSharedPreferences("Status", 0);
-        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
     }
 
     @Override
@@ -79,7 +77,6 @@ public class SelectImagesActivity extends AppCompatActivity {
         }
 
         frameLayout = (RelativeLayout) findViewById(R.id.selectLayout);
-        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
         if (("000000").equals(statusOfLevel.toString())) {
