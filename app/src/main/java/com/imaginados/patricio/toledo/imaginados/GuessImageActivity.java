@@ -420,7 +420,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (aciertos != word.replaceAll(" ", "").length()) {
+                if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
                     if (!("00:00").equals(counter.getText())) {
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
