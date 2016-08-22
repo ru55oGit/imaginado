@@ -168,14 +168,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             TextView letter = new TextView(this);
             if (Character.isWhitespace(word.charAt(i))) {
                 letter.setText("");
+                dim = (int) getResources().getDimension(R.dimen.letter_size_whitespace);
             } else if ('|' != word.charAt(i)){
                 letter.setText("__");
                 letter.setAllCaps(true);
                 letter.setBackgroundResource(R.color.primaryColor);
                 letter.setBackground(gd);
+                dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
             }
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-            dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
+
             letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins(0, 0, 10, 0);
@@ -220,7 +222,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (timer != null) {
             timer.cancel();
         }
-        if (aciertos != word.length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
+        if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
             try {
@@ -373,11 +375,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putInt("time", milisegundos);
             editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
             editor.commit();
-
-
-            //Intent intent = new Intent(GuessImageActivity.this, SelectImagesActivity.class);
-            //startActivity(intent);
-            //this.finish();
         }
         return true;
     }
