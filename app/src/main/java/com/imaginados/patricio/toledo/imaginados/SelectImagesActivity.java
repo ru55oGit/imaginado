@@ -34,6 +34,7 @@ public class SelectImagesActivity extends AppCompatActivity {
     private String level;
     private SharedPreferences settings;
     private RelativeLayout frameLayout;
+    private SharedPreferences.Editor editor;
 
 
     @Override
@@ -49,6 +50,7 @@ public class SelectImagesActivity extends AppCompatActivity {
         imagen6 = (ImageView) findViewById(R.id.imgView6);
 
         settings = getSharedPreferences("Status", 0);
+        editor = settings.edit();
     }
 
     @Override
@@ -93,6 +95,27 @@ public class SelectImagesActivity extends AppCompatActivity {
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
         TextView label = (TextView)findViewById(R.id.labelLevelText);
         label.setText(level);
+
+        // for testing
+        label.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                level = ((Integer)(Integer.parseInt(level) + 1)).toString();
+                editor.putString("level", level);
+                editor.commit();
+                ((TextView)v).setText(level);
+            }
+        });
+        ImageView levelImage = (ImageView)findViewById(R.id.level);
+        levelImage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                level = ((Integer)(Integer.parseInt(level) - 1)).toString();
+                editor.putString("level", level);
+                editor.commit();
+            }
+        });
+
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         label.setTypeface(lobsterFont);
 
