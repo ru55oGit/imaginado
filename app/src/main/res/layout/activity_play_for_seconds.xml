@@ -47,7 +47,8 @@
         android:minWidth="200dp"
         android:foreground="#dfd5d5"
         android:layout_below="@+id/counterText"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:padding="5dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -57,6 +58,13 @@
             android:textAlignment="center"
             android:textSize="@dimen/question_letter_size"
             android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_width="185dp"
+            android:layout_height="231dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center"
+            android:src="@drawable/messi"/>
 
     </FrameLayout>
 
