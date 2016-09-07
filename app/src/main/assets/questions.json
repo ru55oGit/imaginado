@@ -73,7 +73,7 @@
       "respuesta": "Bola|de nieve"
     },
     {
-      "pregunta": "¿ ¿Cuál es la nacionalidad de la cantante Shakira?",
+      "pregunta": "¿Cuál es la nacionalidad de la cantante Shakira?",
       "respuesta": "Colombiana"
     },
     {
@@ -233,7 +233,7 @@
       "respuesta": "H2O"
     },
     {
-      "pregunta": "¿ ¿Cuál es el símbolo del Sodio?",
+      "pregunta": "¿Cuál es el símbolo del Sodio?",
       "respuesta": "NA"
     },
     {
@@ -386,10 +386,10 @@
     },
     {
       "pregunta": "¿A qué película de Disney pertenece la canción “Un mundo ideal”?",
-      "respuesta": "Aladdín"
+      "respuesta": "Aladdin"
     },
     {
-      "pregunta": "¿ Qué animal es la mascota de Jazmín en Aladdin?",
+      "pregunta": "¿Qué animal es la mascota de Jazmín en Aladdin?",
       "respuesta": "Tigre"
     },
     {
@@ -1023,6 +1023,110 @@
     {
       "pregunta": "¿De qué país es capital Bagdad?",
       "respuesta": "irak"
+    },
+    {
+      "pregunta": "messi.jpg",
+      "respuesta": "lionel|messi"
+    },
+    {
+      "pregunta": "cristiano.jpg",
+      "respuesta": "cristiano|ronaldo"
+    },
+    {
+      "pregunta": "angelina.jpg",
+      "respuesta": "angelina|jolie"
+    },
+    {
+      "pregunta": "sandler.jpg",
+      "respuesta": "adam|sandler"
+    },
+    {
+      "pregunta": "jlopez.jpg",
+      "respuesta": "jennifer|lopez"
+    },
+    {
+      "pregunta": "perry.jpg",
+      "respuesta": "katy|perry"
+    },
+    {
+      "pregunta": "gaga.jpg",
+      "respuesta": "lady|gaga"
+    },
+    {
+      "pregunta": "rihanna.jpg",
+      "respuesta": "rihanna"
+    },
+    {
+      "pregunta": "downeyjr.jpg",
+      "respuesta": "robert|downey jr"
+    },
+    {
+      "pregunta": "wsmith.jpg",
+      "respuesta": "will|smith"
+    },
+    {
+      "pregunta": "dwayne.jpg",
+      "respuesta": "Dwayne|Johnson"
+    },
+    {
+      "pregunta": "nadal.jpg",
+      "respuesta": "rafa|nadal"
+    },
+    {
+      "pregunta": "dicaprio.jpg",
+      "respuesta": "leonardo|dicaprio"
+    },
+    {
+      "pregunta": "anniston.jpg",
+      "respuesta": "jennifer|aniston"
+    },
+    {
+      "pregunta": "stewart.jpg",
+      "respuesta": "kristen|stewart"
+    },
+    {
+      "pregunta": "bullock.jpg",
+      "respuesta": "sandra|bullock"
+    },
+    {
+      "pregunta": "jackman.jpg",
+      "respuesta": "hugh|jackman"
+    },
+    {
+      "pregunta": "cruise.jpg",
+      "respuesta": "tom|cruise"
+    },
+    {
+      "pregunta": "affleck.jpg",
+      "respuesta": "ben|affleck"
+    },
+    {
+      "pregunta": "mperry.jpg",
+      "respuesta": "matthew|perry"
+    },
+    {
+      "pregunta": "sheen.jpg",
+      "respuesta": "charlie|sheen"
+    },
+    {
+      "pregunta": "kutcher.jpg",
+      "respuesta": "ashton|kutcher"
+    },
+    {
+      "pregunta": "theron.jpg",
+      "respuesta": "Charlize|Theron"
+    },
+    {
+      "pregunta": "cooper.jpg",
+      "respuesta": "bradley|cooper"
+    },
+    {
+      "pregunta": "wahlberg.jpg",
+      "respuesta": "mark|wahlberg"
+    },
+    {
+      "pregunta": "hemsworth.jpg",
+      "respuesta": "chris|hemsworth"
     }
   ]
 }

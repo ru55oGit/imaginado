@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -40,6 +41,7 @@ import java.util.concurrent.TimeUnit;
 public class PlayForSecondsActivity extends AppCompatActivity implements BackDialog.BackDialogListener {
     private RelativeLayout frameLayout;
     private TextView preguntaView;
+    private ImageView imageForPlay;
     private TextView transition;
     private Boolean timerFlag;
     private ImageView nosumaste;
@@ -122,7 +124,16 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         // Instancio y seteo la pregunta
         preguntaView = (TextView) findViewById(R.id.question);
-        preguntaView.setText(question.getPregunta());
+        imageForPlay = (ImageView) findViewById(R.id.imageForPlay);
+        if (question.getPregunta().contains("jpg")) {
+            preguntaView.setVisibility(View.INVISIBLE);
+            imageForPlay.setVisibility(View.VISIBLE);
+            imageForPlay.setImageResource(getResources().getIdentifier(question.getPregunta().replace(".jpg", ""),"drawable",getPackageName()));
+        } else {
+            preguntaView.setVisibility(View.VISIBLE);
+            imageForPlay.setVisibility(View.INVISIBLE);
+            preguntaView.setText(question.getPregunta());
+        }
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         preguntaView.setTypeface(lobsterFont);
 
@@ -283,7 +294,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             }
 
             questionsSum++;
-            if (questionsSum <= 5){
+            if (questionsSum <= 25){
                 //timerTranstion(4000);
                 onResume();
             } else {

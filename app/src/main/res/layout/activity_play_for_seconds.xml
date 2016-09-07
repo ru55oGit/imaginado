@@ -60,11 +60,10 @@
             android:layout_gravity="center" />
 
         <ImageView
-            android:layout_width="185dp"
-            android:layout_height="231dp"
-            android:id="@+id/imageView"
-            android:layout_gravity="center"
-            android:src="@drawable/messi"/>
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageForPlay"
+            android:layout_gravity="center"/>
 
     </FrameLayout>
 
