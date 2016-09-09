@@ -1,6 +1,110 @@
 {
   "preguntas": [
     {
+      "pregunta": "messi.jpg",
+      "respuesta": "lionel|messi"
+    },
+    {
+    "pregunta": "cristiano.jpg",
+    "respuesta": "cristiano|ronaldo"
+    },
+    {
+    "pregunta": "angelina.jpg",
+    "respuesta": "angelina|jolie"
+    },
+    {
+    "pregunta": "sandler.jpg",
+    "respuesta": "adam|sandler"
+    },
+    {
+    "pregunta": "jlopez.jpg",
+    "respuesta": "jennifer|lopez"
+    },
+    {
+    "pregunta": "perry.jpg",
+    "respuesta": "katy|perry"
+    },
+    {
+    "pregunta": "gaga.jpg",
+    "respuesta": "lady|gaga"
+    },
+    {
+    "pregunta": "rihanna.jpg",
+    "respuesta": "rihanna"
+    },
+    {
+    "pregunta": "downeyjr.jpg",
+    "respuesta": "robert|downey jr"
+    },
+    {
+    "pregunta": "wsmith.jpg",
+    "respuesta": "will|smith"
+    },
+    {
+    "pregunta": "dwayne.jpg",
+    "respuesta": "Dwayne|Johnson"
+    },
+    {
+    "pregunta": "nadal.jpg",
+    "respuesta": "rafa|nadal"
+    },
+    {
+    "pregunta": "dicaprio.jpg",
+    "respuesta": "leonardo|dicaprio"
+    },
+    {
+    "pregunta": "anniston.jpg",
+    "respuesta": "jennifer|aniston"
+    },
+    {
+    "pregunta": "stewart.jpg",
+    "respuesta": "kristen|stewart"
+    },
+    {
+    "pregunta": "bullock.jpg",
+    "respuesta": "sandra|bullock"
+    },
+    {
+    "pregunta": "jackman.jpg",
+    "respuesta": "hugh|jackman"
+    },
+    {
+    "pregunta": "cruise.jpg",
+    "respuesta": "tom|cruise"
+    },
+    {
+    "pregunta": "affleck.jpg",
+    "respuesta": "ben|affleck"
+    },
+    {
+    "pregunta": "mperry.jpg",
+    "respuesta": "matthew|perry"
+    },
+    {
+    "pregunta": "sheen.jpg",
+    "respuesta": "charlie|sheen"
+    },
+    {
+    "pregunta": "kutcher.jpg",
+    "respuesta": "ashton|kutcher"
+    },
+    {
+    "pregunta": "theron.jpg",
+    "respuesta": "Charlize|Theron"
+    },
+    {
+    "pregunta": "cooper.jpg",
+    "respuesta": "bradley|cooper"
+    },
+    {
+    "pregunta": "wahlberg.jpg",
+    "respuesta": "mark|wahlberg"
+    },
+    {
+    "pregunta": "hemsworth.jpg",
+    "respuesta": "chris|hemsworth"
+    },
+    {
       "pregunta": "¿De que color es el caballo blanco de San Martin?",
       "respuesta": "blanco"
     },
@@ -911,11 +1015,7 @@
     {
       "pregunta": "¿Cuál era la única parte débil del cuerpo del héroe griego Aquiles?",
       "respuesta": "talon"
-    },
-    {
-      "pregunta": "¿Cómo se llaman dos ángulos que suman 90 grados?",
-      "respuesta": "suplementarios"
-    },
+    }0,
     {
       "pregunta": "¿Cómo se llama el fruto de la vid?",
       "respuesta": "uva"
@@ -1025,108 +1125,216 @@
       "respuesta": "irak"
     },
     {
-      "pregunta": "messi.jpg",
-      "respuesta": "lionel|messi"
+      "pregunta": "damon.jpg",
+      "respuesta": "matt|damon"
     },
     {
-      "pregunta": "cristiano.jpg",
-      "respuesta": "cristiano|ronaldo"
+      "pregunta": "lennon.jpg",
+      "respuesta": "john|lennon"
     },
     {
-      "pregunta": "angelina.jpg",
-      "respuesta": "angelina|jolie"
+      "pregunta": "maradona.jpg",
+      "respuesta": "diego|maradona"
     },
     {
-      "pregunta": "sandler.jpg",
-      "respuesta": "adam|sandler"
+      "pregunta": "djokovic.jpg",
+      "respuesta": "novak|djokovic"
     },
     {
-      "pregunta": "jlopez.jpg",
-      "respuesta": "jennifer|lopez"
+      "pregunta": "federer.jpg",
+      "respuesta": "roger|federer"
     },
     {
-      "pregunta": "perry.jpg",
-      "respuesta": "katy|perry"
+      "pregunta": "delpo.jpg",
+      "respuesta": "juan martin|del potro"
     },
     {
-      "pregunta": "gaga.jpg",
-      "respuesta": "lady|gaga"
+      "pregunta": "mjackson.jpg",
+      "respuesta": "michael|jackson"
     },
     {
-      "pregunta": "rihanna.jpg",
-      "respuesta": "rihanna"
+      "pregunta": "neymar.jpg",
+      "respuesta": "neymar jr"
     },
     {
-      "pregunta": "downeyjr.jpg",
-      "respuesta": "robert|downey jr"
+      "pregunta": "gibson.jpg",
+      "respuesta": "mel|gibson"
     },
     {
-      "pregunta": "wsmith.jpg",
-      "respuesta": "will|smith"
+      "pregunta": "steventyler.jpg",
+      "respuesta": "steven|tyler"
     },
     {
-      "pregunta": "dwayne.jpg",
-      "respuesta": "Dwayne|Johnson"
+      "pregunta": "livtyler.jpg",
+      "respuesta": "liv|tyler"
     },
     {
-      "pregunta": "nadal.jpg",
-      "respuesta": "rafa|nadal"
+      "pregunta": "salmahayek.jpg",
+      "respuesta": "salma|hayek"
     },
     {
-      "pregunta": "dicaprio.jpg",
-      "respuesta": "leonardo|dicaprio"
+      "pregunta": "reeves.jpg",
+      "respuesta": "keanu|reeves"
     },
     {
-      "pregunta": "anniston.jpg",
-      "respuesta": "jennifer|aniston"
+      "pregunta": "emmawatson.jpg",
+      "respuesta": "emma|watson"
     },
     {
-      "pregunta": "stewart.jpg",
-      "respuesta": "kristen|stewart"
+      "pregunta": "blakelively.jpg",
+      "respuesta": "blake|lively"
     },
     {
-      "pregunta": "bullock.jpg",
-      "respuesta": "sandra|bullock"
+      "pregunta": "scarlet.jpg",
+      "respuesta": "scarlet|johansson"
     },
     {
-      "pregunta": "jackman.jpg",
-      "respuesta": "hugh|jackman"
+      "pregunta": "statham.jpg",
+      "respuesta": "jason|statham"
     },
     {
-      "pregunta": "cruise.jpg",
-      "respuesta": "tom|cruise"
+      "pregunta": "blunt.jpg",
+      "respuesta": "emily|blunt"
     },
     {
-      "pregunta": "affleck.jpg",
-      "respuesta": "ben|affleck"
+      "pregunta": "deep.jpg",
+      "respuesta": "johnny|deep"
     },
     {
-      "pregunta": "mperry.jpg",
-      "respuesta": "matthew|perry"
+      "pregunta": "cdiaz.jpg",
+      "respuesta": "cameron|diaz"
     },
     {
-      "pregunta": "sheen.jpg",
-      "respuesta": "charlie|sheen"
+      "pregunta": "hamks.jpg",
+      "respuesta": "tom|hanks"
     },
     {
-      "pregunta": "kutcher.jpg",
-      "respuesta": "ashton|kutcher"
+      "pregunta": "mcadams.jpg",
+      "respuesta": "rachel|mcadams"
     },
     {
-      "pregunta": "theron.jpg",
-      "respuesta": "Charlize|Theron"
+      "pregunta": "pitt.jpg",
+      "respuesta": "brad|pitt"
     },
     {
-      "pregunta": "cooper.jpg",
-      "respuesta": "bradley|cooper"
+      "pregunta": "allen.jpg",
+      "respuesta": "woody|allen"
     },
     {
-      "pregunta": "wahlberg.jpg",
-      "respuesta": "mark|wahlberg"
+      "pregunta": "tyson.jpg",
+      "respuesta": "mike|tyson"
     },
     {
-      "pregunta": "hemsworth.jpg",
-      "respuesta": "chris|hemsworth"
+      "pregunta": "cage.jpg",
+      "respuesta": "nicolas|cage"
+    },
+    {
+      "pregunta": "aaronpaul.jpg",
+      "respuesta": "aaron|paul"
+    },
+    {
+      "pregunta": "ryangosling.jpg",
+      "respuesta": "ryan|gosling"
+    },
+    {
+      "pregunta": "christianbale.jpg",
+      "respuesta": "christian|bale"
+    },
+    {
+      "pregunta": "reynolds.jpg",
+      "respuesta": "ryan|reynolds"
+    },
+    {
+      "pregunta": "deniro.jpg",
+      "respuesta": "robert|de niro"
+    },
+    {
+      "pregunta": "tarantino.jpg",
+      "respuesta": "quentin|tarantino"
+    },
+    {
+      "pregunta": "denzel.jpg",
+      "respuesta": "denzel|washington"
+    },
+    {
+      "pregunta": "zacefron.jpg",
+      "respuesta": "zac|efron"
+    },
+    {
+      "pregunta": "stallone.jpg",
+      "respuesta": "sylvester|stallone"
+    },
+    {
+      "pregunta": "arnold.jpg",
+      "respuesta": "arnold|schwarzenegger"
+    },
+    {
+      "pregunta": "gere.jpg",
+      "respuesta": "richard|gere"
+    },
+    {
+      "pregunta": "willis.jpg",
+      "respuesta": "bruce|willis"
+    },
+    {
+      "pregunta": "axlrose.jpg",
+      "respuesta": "axl|rose"
+    },
+    {
+      "pregunta": "jagger.jpg",
+      "respuesta": "mick|jagger"
+    },
+    {
+      "pregunta": "shakira.jpg",
+      "respuesta": "shakira"
+    },
+    {
+      "pregunta": "presley.jpg",
+      "respuesta": "elvis|presley"
+    },
+    {
+      "pregunta": "bowie.jpg",
+      "respuesta": "david|bowie"
+    },
+    {
+      "pregunta": "rickymartin.jpg",
+      "respuesta": "ricky|martin"
+    },
+    {
+      "pregunta": "fredymercury.jpg",
+      "respuesta": "freddie|mercury"
+    },
+    {
+      "pregunta": "amy.jpg",
+      "respuesta": "amy|winehouse"
+    },
+    {
+      "pregunta": "billgates.jpg",
+      "respuesta": "bill|gates"
+    },
+    {
+      "pregunta": "muhammadali.jpg",
+      "respuesta": "muhammad|ali"
+    },
+    {
+      "pregunta": "gandi.jpg",
+      "respuesta": "mahatma|gandhi"
+    },
+    {
+      "pregunta": "einstein.jpg",
+      "respuesta": "albert|einstein"
+    },
+    {
+      "pregunta": "franciscoi.jpg",
+      "respuesta": "papa|francisco"
+    },
+    {
+      "pregunta": "evita.jpg",
+      "respuesta": "evita"
+    },
+    {
+      "pregunta": "jordan.jpg",
+      "respuesta": "michael|jordan"
     }
   ]
 }
