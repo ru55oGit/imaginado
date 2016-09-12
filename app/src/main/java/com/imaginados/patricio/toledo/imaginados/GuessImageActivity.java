@@ -115,7 +115,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     public String saveBitmap(Bitmap bitmap) {
-        File imagePath = new File(Environment.getExternalStorageDirectory() + "/screenshot.png");
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/sinsegundos.png");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
