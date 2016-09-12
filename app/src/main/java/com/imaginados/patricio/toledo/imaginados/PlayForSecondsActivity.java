@@ -77,7 +77,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        pregResp = getQuestion ();
+        pregResp = getQuestion();
     }
 
     @Override
