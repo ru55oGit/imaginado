@@ -866,7 +866,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el padre de Luke Skywalker en Star Wars?",
+      "pregunta": "¿Qué nombre adopta Anakin Skywalker cuando se convierte al lado oscuro?",
       "respuesta": "Darth|Vader"
     }
   ,
@@ -1802,7 +1802,7 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "hamks.jpg",
+      "pregunta": "hanks.jpg",
       "respuesta": "tom|hanks"
     }
   ,
@@ -4120,6 +4120,318 @@
       "title": "",
       "pregunta": "¿2 + 2 + 2 - 2 + 2 + 2 - 2 x 2?",
       "respuesta": "4"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas1.jpg",
+      "respuesta": "buenos|aires"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas2.jpg",
+      "respuesta": "washington"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas3.jpg",
+      "respuesta": "pekin"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas4.jpg",
+      "respuesta": "moscu"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas5.jpg",
+      "respuesta": "berlin"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas6.jpg",
+      "respuesta": "roma"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas7.jpg",
+      "respuesta": "paris"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas8.jpg",
+      "respuesta": "tokio"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas9.jpg",
+      "respuesta": "canberra"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas10.jpg",
+      "respuesta": "seul"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas11.jpg",
+      "respuesta": "budapest"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas12.jpg",
+      "respuesta": "amsterdam"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas13.jpg",
+      "respuesta": "montevideo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas14.jpg",
+      "respuesta": "Wellington"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas15.jpg",
+      "respuesta": "brasilia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas19.jpg",
+      "respuesta": "ottawa"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas20.jpg",
+      "respuesta": "varsovia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas21.jpg",
+      "respuesta": "bogota"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas22.jpg",
+      "respuesta": "la habana"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas23.jpg",
+      "respuesta": "berna"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas24.jpg",
+      "respuesta": "bruselas"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas25.jpg",
+      "respuesta": "atenas"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas26.jpg",
+      "respuesta": "bangkok"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas28.jpg",
+      "respuesta": "kingston"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas29.jpg",
+      "respuesta": "teheran"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas31.jpg",
+      "respuesta": "estocolmo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas32.jpg",
+      "respuesta": "kiev"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas33.jpg",
+      "respuesta": "copenhague"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas36.jpg",
+      "respuesta": "praga"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas37.jpg",
+      "respuesta": "bucarest"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas40.jpg",
+      "respuesta": "hanoi"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas42.jpg",
+      "respuesta": "nasau"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas46.jpg",
+      "respuesta": "rabat"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas47.jpg",
+      "respuesta": "yaunde"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas48.jpg",
+      "respuesta": "edimburgo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas49.jpg",
+      "respuesta": "nicosia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas50.jpg",
+      "respuesta": "Nueva|Delhi"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas51.jpg",
+      "respuesta": "panama"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas52.jpg",
+      "respuesta": "argel"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas53.jpg",
+      "respuesta": "asuncion"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas54.jpg",
+      "respuesta": "el cairo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas55.jpg",
+      "respuesta": "san jose"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas56.jpg",
+      "respuesta": "lisboa"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas74.jpg",
+      "respuesta": "jerusalen"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas58.jpg",
+      "respuesta": "san salvador"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas75.jpg",
+      "respuesta": "sofia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas70.jpg",
+      "respuesta": "ankara"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas71.jpg",
+      "respuesta": "santiago|de chile"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas72.jpg",
+      "respuesta": "dublin"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas73.jpg",
+      "respuesta": "oslo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas77.jpg",
+      "respuesta": "helsinki"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas68.jpg",
+      "respuesta": "viena"
     }
   ]
 }
