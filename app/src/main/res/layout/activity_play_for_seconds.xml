@@ -52,18 +52,26 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textAlignment="center"
+            android:textSize="@dimen/clock_size"
+            android:layout_gravity="center_horizontal|top"/>
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:id="@+id/imageForPlay"
+            android:layout_gravity="center_horizontal|bottom" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/question"
             android:layout_below="@+id/counterText"
             android:textAlignment="center"
             android:textSize="@dimen/question_letter_size"
             android:layout_gravity="center" />
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/imageForPlay"
-            android:layout_gravity="center"/>
 
     </FrameLayout>
 

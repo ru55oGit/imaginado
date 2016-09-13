@@ -6,6 +6,15 @@ package com.imaginados.patricio.toledo.imaginados.pojo;
 public class Question {
     private String pregunta;
     private String respuesta;
+    private String titulo;
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 
     public void setPregunta(String pregunta) {
         this.pregunta = pregunta;

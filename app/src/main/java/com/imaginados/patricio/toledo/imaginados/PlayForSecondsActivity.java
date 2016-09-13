@@ -41,6 +41,7 @@ import java.util.concurrent.TimeUnit;
 public class PlayForSecondsActivity extends AppCompatActivity implements BackDialog.BackDialogListener {
     private RelativeLayout frameLayout;
     private TextView preguntaView;
+    private TextView preguntaTitle;
     private ImageView imageForPlay;
     private TextView transition;
     private Boolean timerFlag;
@@ -123,7 +124,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         // Instancio y seteo la pregunta
+        preguntaTitle = (TextView) findViewById(R.id.title);
         preguntaView = (TextView) findViewById(R.id.question);
+        preguntaTitle.setText(question.getTitulo());
+
         imageForPlay = (ImageView) findViewById(R.id.imageForPlay);
         if (question.getPregunta().contains("jpg")) {
             preguntaView.setVisibility(View.INVISIBLE);
@@ -136,6 +140,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         }
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         preguntaView.setTypeface(lobsterFont);
+        preguntaTitle.setTypeface(lobsterFont);
 
         // Instancio y limpio el reloj de transicion
         //transition = (TextView) findViewById(R.id.transition);
@@ -204,6 +209,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 Question question = new Question();
                 question.setPregunta(((JSONObject)jarray.get(i)).getString("pregunta"));
                 question.setRespuesta(((JSONObject) jarray.get(i)).getString("respuesta"));
+                question.setTitulo(((JSONObject) jarray.get(i)).getString("title"));
                 preguntaList.add(question);
             }
         } catch (IOException e) {
