@@ -78,9 +78,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/whatsappicon"
-        android:layout_above="@+id/volver"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"/>
+        android:layout_above="@+id/wordContainerThird"
+        android:layout_alignEnd="@+id/volver" />
+
+    <ImageView
+        android:id="@+id/sharefacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebookicon"
+        android:layout_alignBottom="@+id/wordContainerThird"
+        android:layout_alignStart="@+id/volver" />
 
     <ImageView
         android:id="@+id/volver"

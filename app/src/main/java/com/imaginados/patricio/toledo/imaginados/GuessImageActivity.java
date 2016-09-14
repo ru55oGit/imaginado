@@ -2,12 +2,14 @@ package com.imaginados.patricio.toledo.imaginados;
 
 import android.Manifest;
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -17,6 +19,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
@@ -66,7 +69,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private SharedPreferences.Editor editor;
     private InputMethodManager inputMethodManager;
     private ImageView sharewsap;
+    private ImageView shareInstagram;
+    private ImageView shareFacebook;
     private ImageView volver;
+
+    private LinearLayout firstLine;
+    private LinearLayout secondLine;
 
     // Storage Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -74,6 +82,22 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
+
+    public static Boolean verifyStoragePermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+
+        return permission == PackageManager.PERMISSION_GRANTED;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,42 +125,50 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         sharewsap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (timer != null) {
+                    timer.cancel();
+                }
+
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                sharingIntent.setPackage("com.whatsapp");
+                sharingIntent.setType("image/*");
+                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                if (uri.contains("adivinanzas")) {
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  http://lapaginamillonaria.com");
+                } else if (uri.contains("banderas")) {
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  http://lapaginamillonaria.com");
+                } else if (uri.contains("escudos")) {
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  http://lapaginamillonaria.com");
+                } else if (uri.contains("marcas")) {
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... ehhh:  http://lapaginamillonaria.com");
+                } else if (uri.contains("peliculas")) {
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Qué pelicula, qué pelicula?:  http://lapaginamillonaria.com");
+                } else if (uri.contains("personajes")) {
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Ayyy.. cómo se llamaba?:  http://lapaginamillonaria.com");
+                }
+                startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+            }
+        });
+
+        shareFacebook = (ImageView) findViewById(R.id.sharefacebook);
+        shareFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (timer != null) {
+                    timer.cancel();
+                }
+
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                 Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
 
-                sharingIntent.setType("image/png");
+                sharingIntent.setType("image/*");
                 sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
                 startActivity(Intent.createChooser(sharingIntent, "Share image using"));
-                /*Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);*/
             }
         });
     }
 
-    public Bitmap takeScreenshot() {
-        View rootView = findViewById(android.R.id.content).getRootView();
-        rootView.setDrawingCacheEnabled(true);
-        return rootView.getDrawingCache();
-    }
-
-    public String saveBitmap(Bitmap bitmap) {
-        File imagePath = new File(Environment.getExternalStorageDirectory() + "/sinsegundos.png");
-        FileOutputStream fos;
-        try {
-            fos = new FileOutputStream(imagePath);
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
-            fos.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            Log.e("GREC", e.getMessage(), e);
-        } catch (IOException e) {
-            Log.e("GREC", e.getMessage(), e);
-        }
-        return imagePath.toString();
-    }
 
     @Override
     protected void onResume() {
@@ -203,8 +235,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        LinearLayout firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
-        LinearLayout secondLine = (LinearLayout)findViewById(R.id.wordContainerSecond);
+        firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
+        secondLine = (LinearLayout)findViewById(R.id.wordContainerSecond);
+        // Remuevo todas la letras porque se apendean cuando hago compartir y cancelo
+        firstLine.removeAllViews();
+        secondLine.removeAllViews();
+
+
         LinearLayout thirdLine = (LinearLayout)findViewById(R.id.wordContainerThird);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
@@ -438,10 +475,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             sts.replace(3,4,"1");
         }
         if(this.uri.contains("personajes")){
-            sts.replace(4,5,"1");
+            sts.replace(4, 5, "1");
         }
         if(this.uri.contains("banderas")){
-            sts.replace(5,6,"1");
+            sts.replace(5, 6, "1");
         }
         // si adivine todas las palabras, paso al siguiente nivel
         if ("111111".equals(sts.toString())) {
@@ -497,6 +534,29 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         }.start();
     }
+
+    public Bitmap takeScreenshot() {
+        View rootView = findViewById(android.R.id.content).getRootView();
+        rootView.setDrawingCacheEnabled(true);
+        return rootView.getDrawingCache();
+    }
+
+    public String saveBitmap(Bitmap bitmap) {
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/"+ Math.random()*100000 +"_sinsegundos.jpg");
+        FileOutputStream fos;
+        try {
+            fos = new FileOutputStream(imagePath);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            Log.e("GREC", e.getMessage(), e);
+        } catch (IOException e) {
+            Log.e("GREC", e.getMessage(), e);
+        }
+        return imagePath.toString();
+    }
+
     // en el back abro un popup, en el aceptar termino el activity
     @Override
     public void onDialogPositiveClick(DialogFragment dialog) {

@@ -1892,12 +1892,6 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "arnold.jpg",
-      "respuesta": "arnold|schwarzenegger"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
       "pregunta": "gere.jpg",
       "respuesta": "richard|gere"
     }
@@ -4100,14 +4094,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿3333 / 33 - 3?",
-      "respuesta": "98"
+      "pregunta": "¿3333 / 1111 - 3 + 1?",
+      "respuesta": "1"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿64 / 8 - 8?",
-      "respuesta": "0"
+      "pregunta": "¿64 / 8 - 8 + 64?",
+      "respuesta": "64"
     }
   ,
     {
