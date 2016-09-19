@@ -141,11 +141,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 } else if (uri.contains("escudos")) {
                     sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  http://lapaginamillonaria.com");
                 } else if (uri.contains("marcas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... ehhh:  http://lapaginamillonaria.com");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  http://lapaginamillonaria.com");
                 } else if (uri.contains("peliculas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Qué pelicula, qué pelicula?:  http://lapaginamillonaria.com");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  http://lapaginamillonaria.com");
                 } else if (uri.contains("personajes")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Ayyy.. cómo se llamaba?:  http://lapaginamillonaria.com");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  http://lapaginamillonaria.com");
                 }
                 startActivity(Intent.createChooser(sharingIntent, "Share image using"));
             }
