@@ -70,6 +70,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private InputMethodManager inputMethodManager;
     private ImageView sharewsap;
     private ImageView shareInstagram;
+    private ImageView shareTwitter;
     private ImageView shareFacebook;
     private ImageView volver;
 
@@ -120,53 +121,101 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
                 TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
+
+
         // share wsap
         sharewsap = (ImageView) findViewById(R.id.sharewsap);
         sharewsap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (timer != null) {
-                    timer.cancel();
-                }
+                if (verifyStoragePermissions(GuessImageActivity.this)) {
+                    if (timer != null) {
+                        timer.cancel();
+                    }
 
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                sharingIntent.setPackage("com.whatsapp");
-                sharingIntent.setType("image/*");
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                if (uri.contains("adivinanzas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  http://lapaginamillonaria.com");
-                } else if (uri.contains("banderas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  http://lapaginamillonaria.com");
-                } else if (uri.contains("escudos")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  http://lapaginamillonaria.com");
-                } else if (uri.contains("marcas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  http://lapaginamillonaria.com");
-                } else if (uri.contains("peliculas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  http://lapaginamillonaria.com");
-                } else if (uri.contains("personajes")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  http://lapaginamillonaria.com");
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                    sharingIntent.setPackage("com.whatsapp");
+                    sharingIntent.setType("image/*");
+                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+
+                    if (uri.contains("adivinanzas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("banderas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("escudos")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("marcas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("peliculas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("personajes")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  http://lapaginamillonaria.com");
+                    }
+
+                    startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                } else {
+
                 }
-                startActivity(Intent.createChooser(sharingIntent, "Share image using"));
             }
         });
 
         shareFacebook = (ImageView) findViewById(R.id.sharefacebook);
-        shareFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (timer != null) {
-                    timer.cancel();
+        if(isAppInstalled(getApplicationContext(), "com.facebook.katana")) {
+            shareFacebook.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (timer != null) {
+                        timer.cancel();
+                    }
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                    //sharingIntent.setPackage("com.facebook.katana");
+
+                    sharingIntent.setType("image/*");
+                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                    startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                 }
+            });
+        } else {
+            shareFacebook.setVisibility(View.INVISIBLE);
+        }
 
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+        shareTwitter = (ImageView) findViewById(R.id.sharetwitter);
+        if(isAppInstalled(getApplicationContext(), "com.twitter.android")) {
+            shareTwitter.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    String shareText = new String();
+                    sharingIntent.setPackage("com.twitter.android");
 
-                sharingIntent.setType("image/*");
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                startActivity(Intent.createChooser(sharingIntent, "Share image using"));
-            }
-        });
+                    if (uri.contains("adivinanzas")) {
+                        shareText = "Ayudame a resolver este acertijo";
+                    } else if (uri.contains("banderas")) {
+                        shareText = "No recuerdo de que país es esta bandera";
+                    } else if (uri.contains("escudos")) {
+                        shareText = "¿De qué equipo de fútbol es este escudo";
+                    } else if (uri.contains("marcas")) {
+                        shareText = "Este logo era de... mmmmm";
+                    } else if (uri.contains("peliculas")) {
+                        shareText = "¿Viste esta película? ¿Cuál es?";
+                    } else if (uri.contains("personajes")) {
+                        shareText = "¿ehhh... cómo se llamaba?";
+                    }
+
+
+                    String tweetUrl = "https://twitter.com/intent/tweet?text="+ shareText +"&url="
+                            + "https://www.google.com";
+                    Uri uri = Uri.parse(tweetUrl);
+                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                    startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                }
+            });
+        } else {
+            shareTwitter.setVisibility(View.INVISIBLE);
+        }
+
     }
 
 
@@ -612,6 +661,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         });
         if (dialogCustom != null) {
             dialogCustom.show();
+        }
+    }
+
+    public static boolean isAppInstalled(Context context, String packageName) {
+        try {
+            context.getPackageManager().getApplicationInfo(packageName, 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
         }
     }
 }

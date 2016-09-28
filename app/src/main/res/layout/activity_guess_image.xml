@@ -74,20 +74,28 @@
         android:layout_marginBottom="71dp"></LinearLayout>
 
     <ImageView
+        android:id="@+id/sharetwitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/twittericon"
+        android:layout_above="@+id/wordContainerThird"
+        android:layout_alignStart="@+id/imageToGuess" />
+
+    <ImageView
         android:id="@+id/sharewsap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/whatsappicon"
         android:layout_above="@+id/wordContainerThird"
-        android:layout_alignEnd="@+id/volver" />
+        android:layout_alignEnd="@+id/imageToGuess" />
 
     <ImageView
         android:id="@+id/sharefacebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/facebookicon"
-        android:layout_alignBottom="@+id/wordContainerThird"
-        android:layout_alignStart="@+id/volver" />
+        android:layout_above="@+id/wordContainerThird"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/volver"
