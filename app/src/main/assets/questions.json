@@ -1004,13 +1004,13 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el hueso que esta al lado del Radio?",
+      "pregunta": "Hueso que esta al lado del Radio",
       "respuesta": "Cubito"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Qué animal tiene 3 hileras de dientes en cada mandíbula?",
+      "pregunta": "Animal tiene 3 hileras de dientes en cada mandíbula",
       "respuesta": "tiburon"
     }
   ,
@@ -1040,7 +1040,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué metal es el que está dentro del termómetro?",
+      "pregunta": "Metal es el que está dentro del termómetro",
       "respuesta": "mercurio"
     }
   ,
@@ -1148,8 +1148,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué cosas del espacio tienen: cabeza, cabellera y cola?",
-      "respuesta": "cometas"
+      "pregunta": "Cuerpo celeste de núcleo poco denso que suele ir rodeado de un rastro luminoso a modo de cabellera y de una prolongación denominada cola",
+      "respuesta": "cometa"
     }
   ,
     {
@@ -1292,7 +1292,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué hueso del cuerpo humano tiene nombre de aparato eléctrico?",
+      "pregunta": "Hueso del cuerpo humano tiene nombre de aparato eléctrico",
       "respuesta": "radio"
     }
   ,
@@ -2552,19 +2552,19 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué instrumento musical tiene nombre y forma geométricos?",
+      "pregunta": "Instrumento musical tiene nombre y forma geométricos",
       "respuesta": "triangulo"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Qué órgano segrega la hormona insulina?",
+      "pregunta": "Organo segrega la hormona insulina",
       "respuesta": "pancreas"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿En qué árbol crecen los dátiles?",
+      "pregunta": "Arbol donde crecen los dátiles",
       "respuesta": "palmera"
     }
   ,
@@ -3488,7 +3488,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama la parte del cuerpo que se puede dilatar hasta siete veces su tamaño normal?",
+      "pregunta": "Parte del cuerpo que se puede dilatar hasta siete veces su tamaño normal",
       "respuesta": "pupila"
     }
   ,
@@ -3880,12 +3880,6 @@
       "title": "¿Quién es?",
       "pregunta": "stallone.jpg",
       "respuesta": "sylvester|stallone"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "arnold.jpg",
-      "respuesta": "arnold|schwarzenegger"
     }
   ,
     {
@@ -4426,6 +4420,892 @@
       "title": "¿Cuál es la capital?",
       "pregunta": "banderas68.jpg",
       "respuesta": "viena"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúal es la unidad de medida de los ángulos?",
+      "respuesta": "grado"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el saque que no se puede devolver en el tenis?",
+      "respuesta": "ace"
+    }  
+  ,
+    {
+      "title": "",
+      "pregunta": "Sinónimo de plegaria",
+      "respuesta": "rezo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denominan las personas que no creen en Dios?",
+      "respuesta": "ateas"
+    }  
+  ,
+    {
+      "title": "",
+      "pregunta": "Prefijo: contra",
+      "respuesta": "anti"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Poco común",
+      "respuesta": "raro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Taza grande sin asa",
+      "respuesta": "bol"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Sinónimo de vivienda",
+      "respuesta": "casa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Líquido amarillento que segregan los tejidos inflamados",
+      "respuesta": "pus"
+    }  
+  ,
+    {
+      "title": "",
+      "pregunta": "Sinónimo de venerada",
+      "respuesta": "adorada"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Símbolo del cobalto",
+      "respuesta": "co"
+    }  
+  ,
+    {
+      "title": "",
+      "pregunta": "Modo del verbo que indica realidad u objetividad y expresa acciones",
+      "respuesta": "indicativo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Reviente de golpe una cosa con estruendo",
+      "respuesta": "estalle"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Utensilio formado por una tela o laminilla agujereada para tamizar líquidos",
+      "respuesta": "colador"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Enredo de una obra dramática",
+      "respuesta": "trama"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Cincuenta y uno en numeración romana",
+      "respuesta": "li"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Espejo de agua con vegetación en el desierto",
+      "respuesta": "oasis"
+    }  
+  ,
+    {
+      "title": "",
+      "pregunta": "Preposición que indica carencia",
+      "respuesta": "sin"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Roturar la tierra",
+      "respuesta": "arar"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Sigla de Acido ribonucleico",
+      "respuesta": "ARN"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Barata, de poco precio",
+      "respuesta": "economica"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Planta de cuya raíz se extrae una harina con la que se elabaro la tapioca",
+      "respuesta": "mandioca"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Mamífero plantígrado",
+      "respuesta": "oso"
+    }  ,
+    {
+      "title": "",
+      "pregunta": "Relativos al riñon",
+      "respuesta": "renales"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Adjetivo que define a persona o cosa que por su rareza provoca risa",
+      "respuesta": "ridicula"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Calzado formal",
+      "respuesta": "zapato"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Sinónimo de afeitar",
+      "respuesta": "rasurar"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Estrella luminosa, centro de nuestro sistema planetario",
+      "respuesta": "sol"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Dar en el blanco",
+      "respuesta": "acertar"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Aleación de hierro y carbono, en diferentes proporciones, que adquiere con el temple gran dureza y elasticidad",
+      "respuesta": "acero"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Especie de enigma para entretenerse en adivinarlo",
+      "respuesta": "acertijo"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "De Persia o relativo a esta antigua nación de Asia, hoy Irán",
+      "respuesta": "persia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Constante, obstinado, que persevera",
+      "respuesta": "perseverante"
+    }  ,
+    {
+      "title": "",
+      "pregunta": "Ceremonia en la que una pareja contrae matrimonio",
+      "respuesta": "casamiento"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Caída, desde cierta altura, del agua de un río u otra corriente por un desnivel brusco del cauce",
+      "respuesta": "cascada"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Respecto de una persona, hijo o hija de su hermano o hermana",
+      "respuesta": "sobrino"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Que no está borracho",
+      "respuesta": "sobrio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Acto de velar a un difunto durante la noche",
+      "respuesta": "velatorio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Barco de vela",
+      "respuesta": "velero"
+    } 
+  ,
+    {
+      "title": "",
+      "pregunta": "Relación entre el espacio recorrido y el tiempo empleado en recorrerlo",
+      "respuesta": "velocidad"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Corriente, frecuente, admitido como normal por la mayoría",
+      "respuesta": "comun"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Hecho o dicho irracional u opuesto a la razón",
+      "respuesta": "absurdo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Que tiene sabor agrio",
+      "respuesta": "acido"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona que se dedica a la caza o es aficionada a ella",
+      "respuesta": "cazador"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Dícese del perro de caza",
+      "respuesta": "perdiguero"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Alimento que conserva sus propiedades solo durante un espacio de tiempo determinado",
+      "respuesta": "perecedero"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Que se rompe o quiebra con facilidad",
+      "respuesta": "fragil"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Sustancia mineral más o menos dura y compacta que no es terrosa ni de aspecto metálico",
+      "respuesta": "piedra"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Burla, dicho o hecho que se hace a alguien para reírse de él sin intención de molestarle",
+      "respuesta": "broma"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Expresión o manifestación contraria a lo que se sabe,se cree o se piensa",
+      "respuesta": "mentira"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Obra literaria en prosa, que narra sucesos total o parcialmente ficticios",
+      "respuesta": "novela"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Conjunto de hilos torcidos que forman un solo cuerpo más o menos grueso, largo y flexible",
+      "respuesta": "cuerda"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Propiedad o conjunto de propiedades inherentes a una persona o cosa que permiten apreciarla con respecto a las restantes de su especie",
+      "respuesta": "calidad"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Amabilidad, suavidad de carácter",
+      "respuesta": "bondad"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Establecimiento donde se imparte enseñanza, especialmente la obligatoria, colegio",
+      "respuesta": "escuela"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Discípulo respecto de su maestro, de la materia que está aprendiendo o de la escuela, clase, colegio o universidad donde estudia",
+      "respuesta": "alumno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Conjunto de hojas de papel manuscritas o impresas que, cosidas o encuadernadas, forman un volumen",
+      "respuesta": "libro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Saquito de tela cosido a una abertura en las prendas, destinado a guardar pequeños objetos",
+      "respuesta": "bolsillo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Objeto al que se atribuye virtud sobrenatural, generalmente para la suerte",
+      "respuesta": "amuleto"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Mercado extraordinario que tiene lugar en un sitio y unas fechas señaladas",
+      "respuesta": "feria"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona que hace por su cuenta objetos de uso doméstico imprimiéndoles un sello personal, a diferencia del obrero fabril",
+      "respuesta": "artesano"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona que se dedica profesionalmente al tapizado y otras tareas de decoración",
+      "respuesta": "tapicero"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona que fabrica o vende helados o tiene una heladería",
+      "respuesta": "heladero"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Cualquiera de las partes del cuerpo de un ser vivo que desempeñan una función diferenciada/Instrumento musical",
+      "respuesta": "organo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Órgano muscular hueco, impulsor de la circulación de la sangre en los vertebrados y otros animales",
+      "respuesta": "corazon"
+    }  ,
+    {
+      "title": "",
+      "pregunta": "En los aparatos telefónicos o receptores de sonido, parte o dispositivo que se aplica al oído para recibirlo",
+      "respuesta": "auricular"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Pieza con un hueco labrado en espiral que ajusta exactamente en el filete de un tornillo",
+      "respuesta": "tuerca"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Nombre común de la fase adulta de diversos insectos lepidópteros,con dos pares de alas membranosas,a menudo de colores vistosos",
+      "respuesta": "mariposa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Del mar o relativo a él",
+      "respuesta": "marino"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Ave galliforme de cresta roja y alta, pico corto, grueso y arqueado, y unas formaciones carnosas rojas colgantes bajo el pico",
+      "respuesta": "gallo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Grupo de jugadores que se colocan uno al lado del otro, delante de la portería, para defenderla del saque de una falta",
+      "respuesta": "barrera"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Cada una de las cuatro partes en que se divide el año",
+      "respuesta": "estacion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Calzoncillo similar a un pantalón corto",
+      "respuesta": "boxer"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Baliza flotante sujeta al fondo del mar, de un lago, etc., usada como señal",
+      "respuesta": "boya"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Deporte en que dos adversarios luchan con los puños enfundados en guantes especiales, para golpear al contrario por encima de la cintura",
+      "respuesta": "boxeo"
+    }  ,
+    {
+      "title": "",
+      "pregunta": "Líquido blanco que segregan las mamas de las hembras de los mamíferos y que sirve de alimento para sus crías",
+      "respuesta": "leche"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Bola hueca de metal con una ranura con trocitos de metal en su interior que la hacen sonar al moverla",
+      "respuesta": "cascabel"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Materia en combustión",
+      "respuesta": "fuego"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Pieza que cierra la parte superior de un objeto o recipiente",
+      "respuesta": "tapa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Cerradura suelta contenida en una caja de metal de la que se enganchan anillas o cadenas con las que se aseguran puertas, rejas u objetos con tapa",
+      "respuesta": "candado"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Deporte practicado entre dos equipos de once jugadores cada uno, que se disputan un balón con los pies y tratan de introducirlo en la portería contraria",
+      "respuesta": "futbol"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Cada una de las piezas duras que forman el esqueleto de los vertebrados",
+      "respuesta": "hueso"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona alojada en casa ajena, en un hospedaje o pensión",
+      "respuesta": "huesped"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona que se dedica profesionalmente a trabajar sumergido en el agua",
+      "respuesta": "buzo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Instrumento musical de cuerda compuesto por una caja de resonancia con forma de óvalo estrechado, con un agujero central, un mástil y seis cuerdas que se pulsan con los dedos de una mano, mientras que los de la otra las pisan en el mástil",
+      "respuesta": "guitarra"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Aparato destinado a registrar imágenes animadas para el cine, la televisión o el vídeo",
+      "respuesta": "camara"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Reptil escamoso de unos 30 cm de longitud, cola prensil y ojos de movimiento independiente cuya piel cambia de color para adaptarse al de los objetos que le rodean",
+      "respuesta": "camaleon"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Mueble para dormir o descansar, acondicionado con colchón, sábanas, mantas, almohada, etc",
+      "respuesta": "cama"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Prenda holgada que se usa al levantarse de la cama o para estar en casa",
+      "respuesta": "bata"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Vasija de cuello estrecho, que sirve para contener líquidos",
+      "respuesta": "botella"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Gorro de metal o plástico resistente que protege la cabeza",
+      "respuesta": "casco"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Pieza del ajedrez que es la única que salta sobre las demás",
+      "respuesta": "caballo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Parte posterior del pie humano",
+      "respuesta": "talon"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Zapato de madera de una pieza que usan en varios países los campesinos",
+      "respuesta": "zueco"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Monumento destinado al enterramiento de varias personas",
+      "respuesta": "panteon"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Pieza de metal acuñada,generalmente redonda,que sirve de medida común de cambio por su valor efectivo o atribuido",
+      "respuesta": "moneda"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Arma defensiva de metal, madera o cuero para cubrirse y resguardar el cuerpo, que se llevaba en el brazo",
+      "respuesta": "escudo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Dícese de la bebida compuesta por una mezcla de licores a los que se añaden otros ingredientes",
+      "respuesta": "coctel"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona que se dedica profesionalmente a preparar los alimentos",
+      "respuesta": "cocinero"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Estado gaseoso que adoptan los fluidos por la acción del calor",
+      "respuesta": "vapor"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Producto que en forma gaseosa se desprende de una combustión incompleta",
+      "respuesta": "humo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Apoyo cilíndrico y largo, que sirve para sostener techos o adornar edificios",
+      "respuesta": "columna"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Unidad microscópica esencial de los seres vivos",
+      "respuesta": "celula"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Pieza valiosa que rodea el cuello como adorno o como símbolo de distinción",
+      "respuesta": "collar"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Mamífero carnívoro doméstico de la familia de los cánidos",
+      "respuesta": "perro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Perro de tamaño medio y pelo corto de fondo blanco con pintas negras",
+      "respuesta": "dalmata"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Juego que se ejecuta en un tablero de 64 escaques con 12 piezas redondas por jugador",
+      "respuesta": "damas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Aro de ramas, flores, metal generalmente precioso, etc., que se coloca en la cabeza como premio, adorno o símbolo de dignidad",
+      "respuesta": "corona"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Fruto de planta tropical, carnoso, amarillento, muy fragante y terminado en una corona de hojas",
+      "respuesta": "anana"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Conjunto de personas reunidas para cantar, especialmente si lo hacen de una forma habitual o profesional",
+      "respuesta": "coro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Plataforma elevada en ciertos espectáculos públicos",
+      "respuesta": "tribuna"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Figura geométrica formada por tres rectas que se cortan mutuamente, formando tres ángulos",
+      "respuesta": "triangulo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Triángulo que tiene sus tres lados desiguales",
+      "respuesta": "escaleno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Pieza metálica larga y delgada, con cabeza y punta, que sirve para fijar o asegurar una cosa a otra",
+      "respuesta": "clavo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Corteza exterior de los huevos y de varias frutas",
+      "respuesta": "cascara"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Fruto comestible alargado y curvo, con una cáscara verde que amarillea cuando madura",
+      "respuesta": "banana"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Señal o rastro que deja en la tierra un cuerpo que pisa o se apoya",
+      "respuesta": "huella"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Persona que ha perdido a uno de sus padres o a ambos",
+      "respuesta": "huerfano"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Abertura en una prenda de vestir por la que asoma el cuello y parte del pecho o de la espalda",
+      "respuesta": "escote"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Arácnido con cuatro pares de patas y la parte posterior en forma de cola que acaba en un aguijón venenoso",
+      "respuesta": "escorpion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Vehículo blindado de combate,que se desplaza sobre dos cintas o cadenas articuladas que le permiten el acceso a todo tipo de terrenos",
+      "respuesta": "tanque"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Baile de origen argentino,de compás de cuatro por cuatro,que se baila por parejas",
+      "respuesta": "tango"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Recta que tiene un solo punto común con una curva o una superficie sin cortarla",
+      "respuesta": "tangente"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un pentágono?",
+      "respuesta": "5"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un hexágono?",
+      "respuesta": "6"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un heptágono?",
+      "respuesta": "7"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un octógono?",
+      "respuesta": "8"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un eneágono?",
+      "respuesta": "9"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un decágono?",
+      "respuesta": "10"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un endecágono?",
+      "respuesta": "11"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cúantos lados tiene un dodecágono?",
+      "respuesta": "12"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías el 'Cristo Redentor'?",
+      "respuesta": "Brasil"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'La torre Eiffel'?",
+      "respuesta": "Francia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'El Taj Mahal'?",
+      "respuesta": "India"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'Las ruinas del Machu Picchu'?",
+      "respuesta": "Peru"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'La torre de Pisa'?",
+      "respuesta": "Italia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'El Coliseo Romano'?",
+      "respuesta": "Italia"
+    },
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'Las pirámides de Chichén Itzá'?",
+      "respuesta": "Mexico"
+    },
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'El Kremlin, La Catedral de San Basilio y la Plaza Roja'?",
+      "respuesta": "Rusia"
+    },
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'El Palacio de Versalles'?",
+      "respuesta": "Francia"
+    },
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'El Golden Gate'?",
+      "respuesta": "Estados Unidos"
+    },
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'El Palacio Imperial de Kioto'?",
+      "respuesta": "Japon"
+    },
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'La Acrópolis de Atenas'?",
+      "respuesta": "Grecia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'La gran pirámide de Guiza'?",
+      "respuesta": "Egipto"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'Los Guerreros de Terracota'?",
+      "respuesta": "China"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'El Monte Rushmore'?",
+      "respuesta": "Estados Unidos"
+    } ,
+    {
+      "title": "",
+      "pregunta": "¿En dónde situarías 'La Capilla Sixtina'?",
+      "respuesta": "Ciudad del Vaticano"
+    } ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías el canal construido por el hombre para unir el Ocáno Pacífico con el Océano Atlántico?",
+      "respuesta": "Panama"
+    } ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país situarías 'La Opera de Sídney'?",
+      "respuesta": "Australia"
+    } ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país actual situarías 'Los antiguos Jardines Colgantes de Babilonia'?",
+      "respuesta": "Irak"
     }
   ]
 }

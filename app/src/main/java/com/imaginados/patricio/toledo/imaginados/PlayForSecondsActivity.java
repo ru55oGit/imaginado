@@ -120,7 +120,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         firstLine.removeAllViews();
         secondLine.removeAllViews();
 
-        question = pregResp.get((int)(Math.random() * pregResp.size()));
+        //int questionNumber = (int)(Math.random() * pregResp.size());
+        int questionNumber = (int) (pregResp.size() - Math.random() * pregResp.size());
+
+        question = pregResp.get(questionNumber);
 
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         // Instancio y seteo la pregunta
