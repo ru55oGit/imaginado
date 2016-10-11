@@ -36,6 +36,7 @@ import org.w3c.dom.Text;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 public class PlayForSecondsActivity extends AppCompatActivity implements BackDialog.BackDialogListener {
@@ -63,6 +64,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private int gainedTime = 0;
     private int questionsSum = 0;
     private GradientDrawable gd;
+    private ArrayList<Integer> random = new ArrayList<Integer>();
     InputMethodManager inputMethodManager;
 
 
@@ -79,6 +81,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         pregResp = getQuestion();
+        for (int i=0; i<pregResp.size();i++) {
+            random.add(i);
+        }
+        Collections.shuffle(random);
     }
 
     @Override
@@ -119,9 +125,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         // Limpio todas las letras para la proxima pregunta
         firstLine.removeAllViews();
         secondLine.removeAllViews();
-
-        //int questionNumber = (int)(Math.random() * pregResp.size());
-        int questionNumber = (int) (pregResp.size() - Math.random() * pregResp.size());
+        random.remove(random.size()-1);
+        int questionNumber = random.get(random.size()-1);
+        //int questionNumber = (int) (pregResp.size() - Math.random() * pregResp.size());
 
         question = pregResp.get(questionNumber);
 

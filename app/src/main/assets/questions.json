@@ -128,12 +128,6 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "livtyler.jpg",
-      "respuesta": "liv|tyler"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
       "pregunta": "salmahayek.jpg",
       "respuesta": "salma|hayek"
     }
@@ -2060,12 +2054,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se dice 'lo mismo' en latín?",
-      "respuesta": "idem"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué continente está el Himalaya?",
       "respuesta": "Asia"
     }
@@ -2398,12 +2386,6 @@
       "title": "¿Quién es?",
       "pregunta": "deniro.jpg",
       "respuesta": "robert|de niro"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "tarantino.jpg",
-      "respuesta": "quentin|tarantino"
     }
   ,
     {
@@ -4464,12 +4446,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué marca de calzoncillo usaba Martin Mc Fly en 'Volver al Futuro'?",
-      "respuesta": "Calvin|Klein"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué animal es Chatrán?",
       "respuesta": "gato"
     }
@@ -4770,7 +4746,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es la piedra más dura?",
+      "pregunta": "¿Cuál es la piedra preciosa más dura?",
       "respuesta": "diamante"
     }
   ,
@@ -4814,12 +4790,6 @@
       "title": "",
       "pregunta": "¿Cómo se llama a los animales que pueden vivir en la tierra y en el agua?",
       "respuesta": "anfibios"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué raza de perros tiene el mismo nombre que un estado mexicano?",
-      "respuesta": "chihuahua"
     }
   ,
     {
