@@ -14,32 +14,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿A qué país pertenece la isla de Tasmania?",
-      "respuesta": "Australia"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿(1 + 4) * (5) + 5?",
       "respuesta": "30"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el código internacional para Cuba?",
-      "respuesta": "CU"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál es la capital de Uruguay?",
       "respuesta": "Montevideo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántas monedas le pagaron a Judas por entregar a Cristo?",
-      "respuesta": "30"
     }
   ,
     {
@@ -52,12 +34,6 @@
       "title": "",
       "pregunta": "¿Cómo  se llama el agujero de los volcanes?",
       "respuesta": "crater"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué país es capital Bagdad?",
-      "respuesta": "irak"
     }
   ,
     {
@@ -243,12 +219,6 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "gandi.jpg",
-      "respuesta": "mahatma|gandhi"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
       "pregunta": "einstein.jpg",
       "respuesta": "albert|einstein"
     }
@@ -261,176 +231,14 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "evita.jpg",
-      "respuesta": "evita"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "jordan.jpg",
-      "respuesta": "michael|jordan"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
       "pregunta": "cristiano.jpg",
       "respuesta": "cristiano|ronaldo"
     }
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "angelina.jpg",
-      "respuesta": "angelina|jolie"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "sandler.jpg",
-      "respuesta": "adam|sandler"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "jlopez.jpg",
-      "respuesta": "jennifer|lopez"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "perry.jpg",
-      "respuesta": "katy|perry"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "gaga.jpg",
-      "respuesta": "lady|gaga"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "rihanna.jpg",
-      "respuesta": "rihanna"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "downeyjr.jpg",
-      "respuesta": "robert|downey jr"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "wsmith.jpg",
-      "respuesta": "will|smith"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "dwayne.jpg",
-      "respuesta": "Dwayne|Johnson"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "nadal.jpg",
-      "respuesta": "rafa|nadal"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
       "pregunta": "dicaprio.jpg",
       "respuesta": "leonardo|dicaprio"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "anniston.jpg",
-      "respuesta": "jennifer|aniston"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "stewart.jpg",
-      "respuesta": "kristen|stewart"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "bullock.jpg",
-      "respuesta": "sandra|bullock"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "jackman.jpg",
-      "respuesta": "hugh|jackman"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "cruise.jpg",
-      "respuesta": "tom|cruise"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "affleck.jpg",
-      "respuesta": "ben|affleck"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "mperry.jpg",
-      "respuesta": "matthew|perry"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "sheen.jpg",
-      "respuesta": "charlie|sheen"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "kutcher.jpg",
-      "respuesta": "ashton|kutcher"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "theron.jpg",
-      "respuesta": "Charlize|Theron"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "cooper.jpg",
-      "respuesta": "bradley|cooper"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "wahlberg.jpg",
-      "respuesta": "mark|wahlberg"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "hemsworth.jpg",
-      "respuesta": "chris|hemsworth"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De que color es el caballo blanco de San Martin?",
-      "respuesta": "blanco"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Buenos Aires?",
-      "respuesta": "La Plata"
     }
   ,
     {
@@ -447,224 +255,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿(1 + 4) * (5) + 5?",
-      "respuesta": "30"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál es el código internacional para Cuba?",
       "respuesta": "CU"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué país situarías la ciudad de Cali?",
-      "respuesta": "Colombia"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el protagonista de la saga Indiana Jones?",
-      "respuesta": "Harrison|Ford"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el nombre de pila del padre de Milhouse de los Simpsons?",
-      "respuesta": "Kirk"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué mes cae el día de San Valentín?",
-      "respuesta": "Febrero"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaba el personaje que interpretaba Al Pacino en \"Scarface\"?",
-      "respuesta": "Tony|Montana"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
-      "respuesta": "45"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Suiza?",
-      "respuesta": "Berna"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Con cuántos países limita Argentina?",
-      "respuesta": "5"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el ayudante virtual de Iron Man?",
-      "respuesta": "Jarvis"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué animal es la comida preferida de Alf?",
-      "respuesta": "gato"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaba el primer gato de Los Simpsons?",
-      "respuesta": "Bola|de nieve"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la nacionalidad de la cantante Shakira?",
-      "respuesta": "Colombiana"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Quién se hizo famoso,gracias a su frase \"que hay de nuevo viejo\"?",
-      "respuesta": "Bugs|bunny"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la princesa de Disney conocida como \"La Sirenita\"?",
-      "respuesta": "Ariel"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el primer hijo de Goku de Dragon Ball?",
-      "respuesta": "Gohan"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el pájaro símbolo de los Juegos del Hambre?",
-      "respuesta": "Sinsajo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el robot alcohólico de la serie 'Futurama'?",
-      "respuesta": "Bender"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué Beatle fue asesinado por un fan?",
-      "respuesta": "John|Lennon"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué personaje de Disney perdió su zapato de cristal?",
-      "respuesta": "Cenicienta"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Luxemburgo?",
-      "respuesta": "Luxemburgo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De que tiene forma Italia?",
-      "respuesta": "Bota"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántas estrellas tiene la bandera de China?",
-      "respuesta": "5"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Belice ?",
-      "respuesta": "Belmopan"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Ecuador?",
-      "respuesta": "Quito"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cúal es la capital de Alemania?",
-      "respuesta": "Berlin"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué continente está la India?",
-      "respuesta": "Asia"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Argelia?",
-      "respuesta": "Argel"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A qué país pertenece la Isla de Pascua?",
-      "respuesta": "Chile"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué continente/s se encuentra Turquía?",
-      "respuesta": "Asia y|Europa"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De que color es la última cinta en las artes marciales ?",
-      "respuesta": "Negra"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A qué jugador de fútbol le apodan ‘El Apache’?",
-      "respuesta": "Carlos|Tevez"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos cuadros tiene un tablero de ajedres?",
-      "respuesta": "64"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el estadio del F.C. Barcelona?",
-      "respuesta": "Camp Nou"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Quién ganó el mundial de fútbol del año 2002?",
-      "respuesta": "Brasil"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué color es el cero en el cilindro de la ruleta?",
-      "respuesta": "Verde"
     }
   ,
     {
@@ -813,50 +405,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Como se denomina la primer leche materna?",
-      "respuesta": "calostro"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántas caras tiene un icosaedro?",
-      "respuesta": "20"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué órgano del cuerpo humano produce la bilis?",
-      "respuesta": "Higado"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Quién es el autor de 'El retrato de Dorian Gray'?",
-      "respuesta": "Oscar|Wilde"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué odia Mafalda?",
       "respuesta": "La sopa"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Quién pintó La Capilla Sixtina?",
-      "respuesta": "Miguel|Angel"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué famosa artista estaba casada con su colega, Diego Rivera?",
       "respuesta": "Frida|Kahlo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el hueso más pequeño del cuerpo?",
-      "respuesta": "estribo"
     }
   ,
     {
@@ -885,38 +441,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿(6 x 7 + 3) / 9?",
-      "respuesta": "5"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿7 x 7 - 38?",
-      "respuesta": "11"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿La primera selección de fútbol en ganar un mundial fue...?",
-      "respuesta": "Uruguay"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué país se disputó el Mundial de 1962?",
-      "respuesta": "Chile"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En el mundial de que año debutó Maradona?",
       "respuesta": "82"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué famosa marca deportiva tiene como slogan 'Just do it'?",
-      "respuesta": "Nike"
     }
   ,
     {
@@ -939,42 +465,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué tienen las ranas en la boca que no tienen los sapos?",
-      "respuesta": "Dientes"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el ojo defectuoso de Popeye?",
-      "respuesta": "derecho"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Quién le disparó al Sr. Burns?",
-      "respuesta": "Maggie"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el segundo nombre de Homero Simpson?",
-      "respuesta": "jay"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el pueblo vecino y enemigo de Springfield?",
-      "respuesta": "Shelbyville"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el apellido de soltera de Marge Simpson?",
-      "respuesta": "Bouvier"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál es el planeta más grande de nuestro sistema solar?",
       "respuesta": "Jupiter"
     }
@@ -982,13 +472,7 @@
     {
       "title": "",
       "pregunta": "¿Cuál es el satélite natural de la tierra?",
-      "respuesta": "luna"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué planeta demora 284 años terrestres en dar una vuelta alrededor del sol?",
-      "respuesta": "pluton"
+      "respuesta": "la luna"
     }
   ,
     {
@@ -999,50 +483,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué continente tiene el área de clima cálido o desértico más extenso de todos?",
-      "respuesta": "Africa"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿5 x 5 + 5 - 5 / 5?",
-      "respuesta": "29"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿12 x 12?",
-      "respuesta": "144"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Como se llama el personaje de Leonardo Di Caprio en Titanic?",
-      "respuesta": "Jack|Dawson"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué tortuga llevaba el pañuelo naranja en 'Las tortugas ninja'?",
       "respuesta": "Michelangelo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué premiada serie de televisión tiene como protagonista a un publicista?",
-      "respuesta": "Mad Men"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Como se llamaba la protagonista femenina de la serie de televisión 'Scrubs'?",
-      "respuesta": "Elliot"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaba el personaje que interpretaba John Travolta en 'Grease'?",
-      "respuesta": "Danny Zuko"
     }
   ,
     {
@@ -1053,110 +495,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿En qué país nació la Bauhaus?",
-      "respuesta": "Alemania"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué director de cine norteamericano aterrorizó a los Estados Unidos con su adaptación radiofónica de 'La guerra de los mundos'?",
-      "respuesta": "Orson|Welles"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Quién es la mascota de SEGA?",
       "respuesta": "Sonic"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cual es el nombre de la acrtriz que interpreta a Bella en la saga 'Crepúsculo'?",
-      "respuesta": "Kristen|Stewart"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Como se llaman dos intimas amigas de la serie de televisión 'Gossip Girl' que siempre discuten y se traicionan?",
-      "respuesta": "Serena|y Blair"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué animal es la mascota de Jazmín en Aladdin?",
-      "respuesta": "Tigre"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A quién se considera el Rey del Pop?",
-      "respuesta": "Michael|Jackson"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué personaje del videojuego Mortal Kombat tiene poderes de hielo?",
-      "respuesta": "Sub Zero"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el pájaro símbolo de los Juegos del Hambre?",
-      "respuesta": "Sinsajo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué famosa película de Disney es el personaje Jafar ?",
-      "respuesta": "Aladdin"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál fue el primer festival de rock gratuito en durar más de 3 días en 1969?",
-      "respuesta": "Woodstock "
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué actor protagonizó la película 'Grease'?",
-      "respuesta": "John|Travolta"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A qué familia pertenece Dobby,el elfo doméstico en la historia de Harry Potter?",
-      "respuesta": "Malfoy"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué año se fundó The Walt Disney Company?",
-      "respuesta": "1923"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A que serie pertenecen los personajes Fass, Murdock, Hannibal y Baracus?",
-      "respuesta": "Brigada A"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Quien pregunta 'Que hay de nuevo viejo'?",
-      "respuesta": "Bugs Bunny"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En que ciudad vive el millonario Bruno Diaz?",
-      "respuesta": "Ciudad|Gotica"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaba el ayudante mudo del Zorro?",
-      "respuesta": "Bernardo"
     }
   ,
     {
@@ -1167,188 +507,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué animal es Chatrán?",
-      "respuesta": "gato"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué marca son los artefactos que usa el Coyote para tratar de detener al Correcaminos?",
-      "respuesta": "ACME"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el enemigo de Popeye?",
-      "respuesta": "Brutus"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el indio que era amigo del Llanero Solitario?",
-      "respuesta": "Toro"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el planeta del que vino ALF?",
-      "respuesta": "Melmac"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué guerra regresa el personaje de Rambo I?",
-      "respuesta": "Vietnam"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaba el Auto Fantástico?",
-      "respuesta": "Kidd"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué pelicula de Disney el protagonista es un osito de peluche?",
-      "respuesta": "Winnie|Pooh"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llama el padre de Luke Skywalker en Star Wars?",
       "respuesta": "Darth|Vader"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué marca es Cupido Motorizado?",
-      "respuesta": "Volkswagen"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la mala en 'La noche de las narice frías?",
-      "respuesta": "Cruela|de vil"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué famoso oso vive en el Parque Yelloestone?",
-      "respuesta": "Yogi"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué come popeye para tener mas fuerza?",
-      "respuesta": "Espinaca"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la bruja en la película de Disney 'La Bella Durmiente'?",
-      "respuesta": "Malefica"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la chica linda que conduce un auto en la carrera de 'Los autos locos'?",
-      "respuesta": "penelope|glamour"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué famosos dibujos animados creó Matt Groening?",
-      "respuesta": "Los Simpson"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué ciudad viven Los Simpsons?",
-      "respuesta": "Springfield"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la marca de la cerveza predilecta de Homero Simpson?",
-      "respuesta": "Duff"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el auto de Batman?",
-      "respuesta": "Batimovil"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el personaje de Harrison Ford en la saga de 'Star Wars'?",
-      "respuesta": "Han Solo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el gato de ALF?",
-      "respuesta": "Suertudo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el principal enemigo de He-man?",
-      "respuesta": "Skeletor"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué animal es Dumbo?",
-      "respuesta": "elefante"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la profesión de Indiana Jones?",
-      "respuesta": "Arqueologo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la rana de los Muppets?",
-      "respuesta": "Rene"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaban los pequeños seres del cine que se volvían malos si comían después de medianoche?",
-      "respuesta": "Gremlins"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué animales eran Bernardo y Bianca, en la película de Disney?",
-      "respuesta": "Ratones"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el chico que lee el cuento en la película 'La historia sin fin'?",
-      "respuesta": "Bastian"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Quiénes son Curly, Larry y Moe?",
-      "respuesta": "Los tres|chiflados"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos son los cazafantasmas?",
-      "respuesta": "4"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el aire en movimiento?",
-      "respuesta": "Viento"
     }
   ,
     {
@@ -1365,230 +525,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿De qué elemento está compuesto, en su mayor parte, el sol?",
-      "respuesta": "hidrogeno"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama un ángulo que mide 90º?",
-      "respuesta": "recto"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama a una manada de pavos?",
-      "respuesta": "pavada"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Forma de que figura geométrica tiene la muesca de la cabeza de los tornillos con cabeza Allen?",
-      "respuesta": "hexagono"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se denomina a un conjunto de pájaros?",
-      "respuesta": "bandada"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el ángulo que mide 180º?",
-      "respuesta": "llano"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué material esta compuesto el núcleo de la tierra?",
-      "respuesta": "hierro"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Con qué nombre se conoce comúnmente a la raza de perros dachshund?",
-      "respuesta": "salchicha"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué estan hechas las uñas?",
-      "respuesta": "calcio"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué órgano del cuerpo se almacena la orina?",
-      "respuesta": "vejiga"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué central nuclear soviética hubo un gran accidente en 1986?",
-      "respuesta": "chernobyl"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué ave tiene una bolsa debajo del pico donde guarda los pescados antes de comérselos?",
-      "respuesta": "pelicano"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En cuántas zonas horarias esta dividida la tierra?",
-      "respuesta": "24"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la punta de un cono?",
-      "respuesta": "apice"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos decímetros cúbicos tiene un litro?",
-      "respuesta": "1"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaba la perra astronauta que fue enviada al espacio en el Sputnik II?",
-      "respuesta": "Laika"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué cosas del espacio tienen: cabeza, cabellera y cola?",
-      "respuesta": "cometas"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué planeta está más alejado del sol?",
-      "respuesta": "neptuno"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama a los animales que pueden vivir en la tierra y en el agua?",
-      "respuesta": "anfibios"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué raza de perros tiene el mismo nombre que un estado mexicano?",
       "respuesta": "chihuahua"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos planetas hay entre el sol y la tierra?",
-      "respuesta": "2"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos vértices tiene un cubo?",
-      "respuesta": "8"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Si se corta un cuadrado por una de sus diagonales, que 2 figuras se obtienen?",
-      "respuesta": "triangulos"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De que color es el rubí?",
-      "respuesta": "rojo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos pulmones tiene un ser humano?",
-      "respuesta": "2"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué planeta del sistema solar comienza con una vocal?",
-      "respuesta": "urano"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De que preciado material estan hecho los colmillos de un elefante?",
-      "respuesta": "marfil"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la planta del café?",
-      "respuesta": "cafeto"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el ave que camina más rápido?",
-      "respuesta": "correcaminos"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué raza de perros toma su nombre de una ciudad china?",
-      "respuesta": "pequines"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué número esta rodeado por todos los demás en el teclado de un celular?",
-      "respuesta": "5"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué parte del cuerpo están el iris y la pupila?",
-      "respuesta": "ojo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se denomina la ciencia que estudia el cuerpo humano?",
-      "respuesta": "anatomia"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué parte del cuerpo te duele cuando te da otitis?",
-      "respuesta": "oidos"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Con qué se mueven las turbinas de una central hidroeléctrica?",
-      "respuesta": "agua"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué galaxia está nuestro Sistema Solar?",
-      "respuesta": "via lactea"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Que fase lunar viene después de la luna nueva?",
-      "respuesta": "cuarto|creciente"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué fruta inspiro a Newton a redactar la ley de la gravedad?",
-      "respuesta": "manzana"
     }
   ,
     {
@@ -1599,146 +537,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama cuando la luna se pone delante del Sol?",
-      "respuesta": "Eclipse|Solar"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llaman las partículas que transmiten la corriente eléctrica?",
-      "respuesta": "electrones"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Con qué sigla se denomina la agencia espacial norteamericana?",
-      "respuesta": "nasa"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A qué planeta se lo llama 'el planeta de los anillos'?",
-      "respuesta": "saturno"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama un conjunto de abejas?",
-      "respuesta": "enjambre"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el color del medio del arco iris?",
-      "respuesta": "verde"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos años se festejan en el sesquicentenario?",
-      "respuesta": "150"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué tipo de escritura usaban los egipcios?",
-      "respuesta": "jeroglifica"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué significa Foto en Griego?",
-      "respuesta": "luz"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué es lo opuesto a 'cóncavo'?",
-      "respuesta": "convexo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A qué número le tiene miedo una persona que padece 'Triscaidecafobia'?",
-      "respuesta": "13"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama a un conjunto de barcos que navegan juntos?",
-      "respuesta": "flota"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la segunda letra del alfabeto Griego?",
-      "respuesta": "beta"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la letra griega cuyo valor matemático es 3,1416?",
-      "respuesta": "PI"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el código formado por rayas y puntos?",
-      "respuesta": "morse"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué colecciona un filatelista?",
-      "respuesta": "estampillas"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la casa de hielo de los esquimales?",
-      "respuesta": "iglu"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué país se inventaron el papel y la tinta?",
-      "respuesta": "china"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De que carácteristica carece algo insípido?",
-      "respuesta": "sabor"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos meses no tienen la letra 'R' en su nombre?",
-      "respuesta": "4"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llaman las rueditas metálicas que usan los jinetes en las botas para hacer correr al caballo?",
-      "respuesta": "espuelas"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántas hojas tiene un libro de 300 páginas?",
-      "respuesta": "150"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál era el nombre del científico Einstein?",
       "respuesta": "Albert"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos eran los apóstoles?",
-      "respuesta": "12"
     }
   ,
     {
@@ -1749,20 +549,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿En qué calle de New York están la bolsa y los principales bancos?",
-      "respuesta": "wall street"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Quién era la novia de Romeo?",
       "respuesta": "Julieta"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué tenia Quasimodo en la espalda?",
-      "respuesta": "joroba"
     }
   ,
     {
@@ -1773,26 +561,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama a la milésima parte de un milímetro?",
-      "respuesta": "micron"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llama a la persona que puede escribir con cualquiera de las dos manos?",
       "respuesta": "ambidiestro"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué es lo contrario de 'nómade'?",
-      "respuesta": "sedentario"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué marca deportiva creó un señor llamado Adolf Dassler?",
-      "respuesta": "adidas"
     }
   ,
     {
@@ -1821,26 +591,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el fruto de la vid?",
-      "respuesta": "uva"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué continente está el Himalaya?",
       "respuesta": "Asia"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el país más austral de América del Norte?",
-      "respuesta": "Mexico"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Con cuántos países limita Ecuador?",
-      "respuesta": "2"
     }
   ,
     {
@@ -1851,32 +603,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué país europeo tiene su bandera igual a la de la Cruz Roja, pero con los colores invertidos?",
-      "respuesta": "suiza"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llaman las granjas colectivas israelíes?",
-      "respuesta": "kibutz"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaban los pilotos-suicidas japoneses?",
-      "respuesta": "kamikazes"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llamaban los soberanos en el Egipto antiguo?",
       "respuesta": "Faraones"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué país americano está más cerca de Europa?",
-      "respuesta": "canada"
     }
   ,
     {
@@ -1887,86 +615,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿En qué país nació el papa Juan Pablo II?",
-      "respuesta": "polonia"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué tipo de animal es un galápago?",
-      "respuesta": "tortuga"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué continente es originaria la arveja?",
-      "respuesta": "america"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Sobre qué ciudad fue lanzada la primera bomba atómica?",
-      "respuesta": "hiroshima"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué ciudad asesinaron a John F. Kennedy?",
-      "respuesta": "dallas"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la pendiente de una montaña?",
-      "respuesta": "ladera"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la isla mas grande del mundo?",
-      "respuesta": "groenlandia"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué punto cardinal marca siempre la aguja de la brújula?",
-      "respuesta": "norte"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál es la capital de Australia?",
       "respuesta": "Canberra"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Dónde queda las base norteamericana de Guantánamo?",
-      "respuesta": "cuba"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué siglo se produjo el descubrimiento de América?",
-      "respuesta": "xv"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuántas monedas le pagaron a Judas por entregar a Cristo?",
       "respuesta": "30"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué país viven los lusitanos?",
-      "respuesta": "portugal"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo  se llama el agujero de los volcanes?",
-      "respuesta": "crater"
     }
   ,
     {
@@ -2243,12 +899,6 @@
       "title": "¿Quién es?",
       "pregunta": "gandi.jpg",
       "respuesta": "mahatma|gandhi"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "einstein.jpg",
-      "respuesta": "albert|einstein"
     }
   ,
     {
@@ -3835,12 +2485,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué odia Mafalda?",
-      "respuesta": "La sopa"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Quién pintó La Capilla Sixtina?",
       "respuesta": "Miguel|Angel"
     }
@@ -3979,26 +2623,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el planeta más grande de nuestro sistema solar?",
-      "respuesta": "Jupiter"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el satélite natural de la tierra?",
-      "respuesta": "luna"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué planeta demora 284 años terrestres en dar una vuelta alrededor del sol?",
       "respuesta": "pluton"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el planeta más caluroso del sistema solar?",
-      "respuesta": "Venus"
     }
   ,
     {
@@ -4027,12 +2653,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué tortuga llevaba el pañuelo naranja en 'Las tortugas ninja'?",
-      "respuesta": "Michelangelo"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué premiada serie de televisión tiene como protagonista a un publicista?",
       "respuesta": "Mad Men"
     }
@@ -4045,38 +2665,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿En qué año se estrenó la película de Disney 'Pinocho'?",
-      "respuesta": "1940"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué país nació la Bauhaus?",
-      "respuesta": "Alemania"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué director de cine norteamericano aterrorizó a los Estados Unidos con su adaptación radiofónica de 'La guerra de los mundos'?",
       "respuesta": "Orson|Welles"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Quién es la mascota de SEGA?",
-      "respuesta": "Sonic"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cual es el nombre de la acrtriz que interpreta a Bella en la saga 'Crepúsculo'?",
       "respuesta": "Kristen|Stewart"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Como se llaman dos intimas amigas de la serie de televisión 'Gossip Girl' que siempre discuten y se traicionan?",
-      "respuesta": "Serena|y Blair"
     }
   ,
     {
@@ -4101,12 +2697,6 @@
       "title": "",
       "pregunta": "¿Qué personaje del videojuego Mortal Kombat tiene poderes de hielo?",
       "respuesta": "Sub Zero"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el pájaro símbolo de los Juegos del Hambre?",
-      "respuesta": "Sinsajo"
     }
   ,
     {
@@ -4765,20 +3355,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál era el nombre del científico Einstein?",
-      "respuesta": "Albert"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuántos eran los apóstoles?",
       "respuesta": "12"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuántos lados tiene un rombo?",
-      "respuesta": "4"
     }
   ,
     {
@@ -4789,32 +3367,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Quién era la novia de Romeo?",
-      "respuesta": "Julieta"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué tenia Quasimodo en la espalda?",
       "respuesta": "joroba"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama la embarcación típica de los canales de Venecia?",
-      "respuesta": "gondola"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llama a la milésima parte de un milímetro?",
       "respuesta": "micron"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama a la persona que puede escribir con cualquiera de las dos manos?",
-      "respuesta": "ambidiestro"
     }
   ,
     {
@@ -4831,30 +3391,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama la parte del cuerpo que se puede dilatar hasta siete veces su tamaño normal?",
-      "respuesta": "pupila"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llaman los números que se leen igual de atrás a adelante?",
-      "respuesta": "capicua"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la bebida alcohólica típica de México?",
-      "respuesta": "tequila"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál era la única parte débil del cuerpo del héroe griego Aquiles?",
-      "respuesta": "talon"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llama el fruto de la vid?",
       "respuesta": "uva"
     }
@@ -4867,12 +3403,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿En qué continente está el Himalaya?",
-      "respuesta": "Asia"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál es el país más austral de América del Norte?",
       "respuesta": "Mexico"
     }
@@ -4881,12 +3411,6 @@
       "title": "",
       "pregunta": "¿Con cuántos países limita Ecuador?",
       "respuesta": "2"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama la cordillera que separa Francia de España?",
-      "respuesta": "pirineos"
     }
   ,
     {
@@ -4909,20 +3433,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llamaban los soberanos en el Egipto antiguo?",
-      "respuesta": "Faraones"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué país americano está más cerca de Europa?",
       "respuesta": "canada"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A qué indígena peruano descuartizaron los españoles atándolo a cuatro caballos?",
-      "respuesta": "tupac amaru"
     }
   ,
     {
