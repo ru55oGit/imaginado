@@ -3418,7 +3418,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Cerradura suelta contenida en una caja de metal de la que se enganchan anillas o cadenas con las que se aseguran puertas, rejas u objetos con tapa",
+      "pregunta": "Cerradura contenida en una caja de metal de la que se enganchan cadenas con las que se aseguran puertas, rejas u objetos con tapa",
       "respuesta": "candado"
     }
   ,
@@ -3460,7 +3460,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Reptil escamoso de unos 30 cm de longitud, cola prensil y ojos de movimiento independiente cuya piel cambia de color para adaptarse al de los objetos que le rodean",
+      "pregunta": "Reptil escamoso de unos 30 cm de longitud, cola prensil cuya piel cambia de color para adaptarse al de los objetos que le rodean",
       "respuesta": "camaleon"
     }
   ,
@@ -3814,7 +3814,7 @@
     {
       "title": "",
       "pregunta": "¿En dónde situarías 'La Capilla Sixtina'?",
-      "respuesta": "Ciudad del Vaticano"
+      "respuesta": "Ciudad del|Vaticano"
     } ,
     {
       "title": "",
