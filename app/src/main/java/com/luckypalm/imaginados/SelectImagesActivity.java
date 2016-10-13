@@ -1,4 +1,4 @@
-package com.imaginados.patricio.toledo.imaginados;
+package com.luckypalm.imaginados;
 
 import android.app.ActionBar;
 import android.content.Context;
@@ -11,7 +11,6 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -40,14 +39,14 @@ public class SelectImagesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_images);
+        setContentView(com.luckypalm.imaginados.R.layout.activity_select_images);
 
-        imagen1 = (ImageView) findViewById(R.id.imgView1);
-        imagen2 = (ImageView) findViewById(R.id.imgView2);
-        imagen3 = (ImageView) findViewById(R.id.imgView3);
-        imagen4 = (ImageView) findViewById(R.id.imgView4);
-        imagen5 = (ImageView) findViewById(R.id.imgView5);
-        imagen6 = (ImageView) findViewById(R.id.imgView6);
+        imagen1 = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imgView1);
+        imagen2 = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imgView2);
+        imagen3 = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imgView3);
+        imagen4 = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imgView4);
+        imagen5 = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imgView5);
+        imagen6 = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imgView6);
 
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
@@ -78,7 +77,7 @@ public class SelectImagesActivity extends AppCompatActivity {
                 actionBar.hide();
         }
 
-        frameLayout = (RelativeLayout) findViewById(R.id.selectLayout);
+        frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.selectLayout);
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
         if (("000000").equals(statusOfLevel.toString())) {
@@ -93,7 +92,7 @@ public class SelectImagesActivity extends AppCompatActivity {
         level = settings.getString("level", "1");
 
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
-        TextView label = (TextView)findViewById(R.id.labelLevelText);
+        TextView label = (TextView)findViewById(com.luckypalm.imaginados.R.id.labelLevelText);
         label.setText(level);
 
         // for testing
@@ -106,7 +105,7 @@ public class SelectImagesActivity extends AppCompatActivity {
                 ((TextView)v).setText(level);
             }
         });
-        ImageView levelImage = (ImageView)findViewById(R.id.level);
+        ImageView levelImage = (ImageView)findViewById(com.luckypalm.imaginados.R.id.level);
         levelImage.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

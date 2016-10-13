@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.imaginados.patricio.toledo.imaginados">
+    package="com.luckypalm.imaginados">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
-            android:name=".MainActivity"
+            android:name="com.luckypalm.imaginados.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -25,23 +25,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SelectImagesActivity"
+            android:name="com.luckypalm.imaginados.SelectImagesActivity"
             android:label="@string/title_activity_select_images"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".GuessImageActivity"
+            android:name="com.luckypalm.imaginados.GuessImageActivity"
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ObtainSecondsActivity"
+            android:name="com.luckypalm.imaginados.ObtainSecondsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PlayForSecondsActivity"
+            android:name="com.luckypalm.imaginados.PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"

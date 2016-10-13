@@ -1,4 +1,4 @@
-package com.imaginados.patricio.toledo.imaginados;
+package com.luckypalm.imaginados;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -42,14 +42,14 @@ public class BackDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage(R.string.deseasalir)
-                .setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
+        builder.setMessage(com.luckypalm.imaginados.R.string.deseasalir)
+                .setPositiveButton(com.luckypalm.imaginados.R.string.aceptar, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Send the positive button event back to the host activity
                         mListener.onDialogPositiveClick(BackDialog.this);
                     }
                 })
-                .setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {
+                .setNegativeButton(com.luckypalm.imaginados.R.string.cancelar, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Send the negative button event back to the host activity
                         mListener.onDialogNegativeClick(BackDialog.this);

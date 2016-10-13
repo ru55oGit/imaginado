@@ -14,12 +14,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿De que nacionalidad es el futbolista Cristiano Ronaldo?",
-      "respuesta": "Portugues"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿A qué país pertenece la isla de Tasmania?",
       "respuesta": "Australia"
     }
@@ -72,18 +66,7 @@
       "respuesta": "matt|damon"
     }
   ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "lennon.jpg",
-      "respuesta": "john|lennon"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "maradona.jpg",
-      "respuesta": "diego|maradona"
-    }
-  ,
+
     {
       "title": "¿Quién es?",
       "pregunta": "djokovic.jpg",
@@ -94,12 +77,6 @@
       "title": "¿Quién es?",
       "pregunta": "federer.jpg",
       "respuesta": "roger|federer"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "delpo.jpg",
-      "respuesta": "juan martin|del potro"
     }
   ,
     {
@@ -166,84 +143,6 @@
       "title": "¿Quién es?",
       "pregunta": "blunt.jpg",
       "respuesta": "emily|blunt"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "deep.jpg",
-      "respuesta": "johnny|deep"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "cdiaz.jpg",
-      "respuesta": "cameron|diaz"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "hanks.jpg",
-      "respuesta": "tom|hanks"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "mcadams.jpg",
-      "respuesta": "rachel|mcadams"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "pitt.jpg",
-      "respuesta": "brad|pitt"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "allen.jpg",
-      "respuesta": "woody|allen"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "tyson.jpg",
-      "respuesta": "mike|tyson"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "cage.jpg",
-      "respuesta": "nicolas|cage"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "aaronpaul.jpg",
-      "respuesta": "aaron|paul"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "ryangosling.jpg",
-      "respuesta": "ryan|gosling"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "christianbale.jpg",
-      "respuesta": "christian|bale"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "reynolds.jpg",
-      "respuesta": "ryan|reynolds"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "deniro.jpg",
-      "respuesta": "robert|de niro"
     }
   ,
     {
@@ -560,12 +459,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es la capital de Uruguay?",
-      "respuesta": "Montevideo"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué país situarías la ciudad de Cali?",
       "respuesta": "Colombia"
     }
@@ -662,12 +555,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el payaso de 'Los Simpson'?",
-      "respuesta": "Krusty"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llama el robot alcohólico de la serie 'Futurama'?",
       "respuesta": "Bender"
     }
@@ -746,12 +633,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿En qué país está Ushuaia, la ciudad más austral del mundo?",
-      "respuesta": "Argentina"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿De que color es la última cinta en las artes marciales ?",
       "respuesta": "Negra"
     }
@@ -790,12 +671,6 @@
       "title": "¿Quién es?",
       "pregunta": "messi.jpg",
       "respuesta": "lionel|messi"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "cristiano.jpg",
-      "respuesta": "cristiano|ronaldo"
     }
   ,
     {
@@ -856,12 +731,6 @@
       "title": "¿Quién es?",
       "pregunta": "nadal.jpg",
       "respuesta": "rafa|nadal"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "dicaprio.jpg",
-      "respuesta": "leonardo|dicaprio"
     }
   ,
     {
@@ -986,26 +855,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Quén es el autor de \"El amor en los tiempos de cólera\"?",
-      "respuesta": "Garcia|Marquez"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué país es el panda el animal nacional ? ",
-      "respuesta": "China"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál es el hueso más pequeño del cuerpo?",
       "respuesta": "estribo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En que país quedan las líneas de Nazca?",
-      "respuesta": "Peru"
     }
   ,
     {
@@ -1016,32 +867,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se mide la fuerza del viento en el mar?",
-      "respuesta": "Nudos"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuál es la fórmula química del agua?",
       "respuesta": "H2O"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el símbolo del Sodio?",
-      "respuesta": "NA"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué metal es líquido a temperatura ambiente?",
       "respuesta": "Mercurio"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Miedo a qué produce la hemofobia?",
-      "respuesta": "sangre"
     }
   ,
     {
@@ -1138,12 +971,6 @@
       "title": "",
       "pregunta": "¿Cuál es el apellido de soltera de Marge Simpson?",
       "respuesta": "Bouvier"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es el planeta más cercano al sol?",
-      "respuesta": "Mercurio"
     }
   ,
     {
@@ -1252,12 +1079,6 @@
       "title": "",
       "pregunta": "¿Como se llaman dos intimas amigas de la serie de televisión 'Gossip Girl' que siempre discuten y se traicionan?",
       "respuesta": "Serena|y Blair"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A qué película de Disney pertenece la canción 'Un mundo ideal'?",
-      "respuesta": "Aladdin"
     }
   ,
     {
@@ -1538,38 +1359,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué animal tiene 3 hileras de dientes en cada mandíbula?",
-      "respuesta": "tiburon"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cúantos días duraba el año, según el calendario Azteca?",
-      "respuesta": "365"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llama el artefacto que se usa para ver la superficia del mar en un submarino?",
-      "respuesta": "periscopio"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se denomina una conjunto de cerdos?",
-      "respuesta": "Piara"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se denomina una conjunto de peces?",
       "respuesta": "Cardumen"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué metal es el que está dentro del termómetro?",
-      "respuesta": "mercurio"
     }
   ,
     {
@@ -1646,12 +1437,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es la piedra más dura?",
-      "respuesta": "diamante"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En cuántas zonas horarias esta dividida la tierra?",
       "respuesta": "24"
     }
@@ -1724,12 +1509,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el ave rosada que suele pararse en el agua poco profunda?",
-      "respuesta": "flamenco"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuántos pulmones tiene un ser humano?",
       "respuesta": "2"
     }
@@ -1774,12 +1553,6 @@
       "title": "",
       "pregunta": "¿En qué parte del cuerpo están el iris y la pupila?",
       "respuesta": "ojo"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿A quien se denomina como el padre del psicoanálisis?",
-      "respuesta": "sigmund|freud"
     }
   ,
     {
@@ -2204,12 +1977,6 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "damon.jpg",
-      "respuesta": "matt|damon"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
       "pregunta": "lennon.jpg",
       "respuesta": "john|lennon"
     }
@@ -2302,12 +2069,6 @@
       "title": "¿Quién es?",
       "pregunta": "statham.jpg",
       "respuesta": "jason|statham"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "blunt.jpg",
-      "respuesta": "emily|blunt"
     }
   ,
     {
@@ -3258,12 +3019,6 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Propiedad o conjunto de propiedades inherentes a una persona o cosa que permiten apreciarla con respecto a las restantes de su especie",
-      "respuesta": "calidad"
-    }
-  ,
-    {
-      "title": "Definición:",
       "pregunta": "Amabilidad, suavidad de carácter",
       "respuesta": "bondad"
     }
@@ -4092,12 +3847,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué famosa artista estaba casada con su colega, Diego Rivera?",
-      "respuesta": "Frida|Kahlo"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Quén es el autor de 'El amor en los tiempos de cólera'?",
       "respuesta": "Garcia|Marquez"
     }
@@ -4122,20 +3871,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuántas cavidades estomacales tiene una vaca?",
-      "respuesta": "4"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se mide la fuerza del viento en el mar?",
       "respuesta": "Nudos"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la fórmula química del agua?",
-      "respuesta": "H2O"
     }
   ,
     {
@@ -4146,20 +3883,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué metal es líquido a temperatura ambiente?",
-      "respuesta": "Mercurio"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Miedo a qué produce la hemofobia?",
       "respuesta": "sangre"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se llamaba el papá de Simba en la película El Rey León?",
-      "respuesta": "Mufasa"
     }
   ,
     {
@@ -4184,12 +3909,6 @@
       "title": "",
       "pregunta": "¿En qué país se disputó el Mundial de 1962?",
       "respuesta": "Chile"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En el mundial de que año debutó Maradona?",
-      "respuesta": "82"
     }
   ,
     {
@@ -4650,7 +4369,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el artefacto que se usa para ver la superficia del mar en un submarino?",
+      "pregunta": "¿Cómo se llama el artefacto que se usa para ver la superficie del mar en un submarino?",
       "respuesta": "periscopio"
     }
   ,
@@ -4658,12 +4377,6 @@
       "title": "",
       "pregunta": "¿Cómo se denomina una conjunto de cerdos?",
       "respuesta": "Piara"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cómo se denomina una conjunto de peces?",
-      "respuesta": "Cardumen"
     }
   ,
     {
@@ -5258,12 +4971,6 @@
       "title": "",
       "pregunta": "¿Qué punto cardinal marca siempre la aguja de la brújula?",
       "respuesta": "norte"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Australia?",
-      "respuesta": "Canberra"
     }
   ,
     {

@@ -1,10 +1,9 @@
-package com.imaginados.patricio.toledo.imaginados;
+package com.luckypalm.imaginados;
 
 import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +26,7 @@ public class ObtainSecondsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_obtain_seconds);
+        setContentView(com.luckypalm.imaginados.R.layout.activity_obtain_seconds);
 
         settings = getSharedPreferences("Status", 0);
     }
@@ -59,11 +58,11 @@ public class ObtainSecondsActivity extends AppCompatActivity {
 
         milisegundos = settings.getInt("time", 30000);
 
-        mensaje = (TextView) findViewById(R.id.mensaje);
-        volverajugar = (ImageView) findViewById(R.id.volverajugar);
-        obtener = (Button) findViewById(R.id.obtener);
-        participar = (Button) findViewById(R.id.participar);
-        comprar = (Button) findViewById(R.id.comprar);
+        mensaje = (TextView) findViewById(com.luckypalm.imaginados.R.id.mensaje);
+        volverajugar = (ImageView) findViewById(com.luckypalm.imaginados.R.id.volverajugar);
+        obtener = (Button) findViewById(com.luckypalm.imaginados.R.id.obtener);
+        participar = (Button) findViewById(com.luckypalm.imaginados.R.id.participar);
+        comprar = (Button) findViewById(com.luckypalm.imaginados.R.id.comprar);
 
         if (milisegundos > 0) {
             mensaje.setVisibility(View.VISIBLE);

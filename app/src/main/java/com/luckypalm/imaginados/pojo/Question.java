@@ -1,4 +1,4 @@
-package com.imaginados.patricio.toledo.imaginados.pojo;
+package com.luckypalm.imaginados.pojo;
 
 /**
  * Created by toledop on 13/07/2016.

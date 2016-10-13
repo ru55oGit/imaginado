@@ -1,4 +1,4 @@
-package com.imaginados.patricio.toledo.imaginados;
+package com.luckypalm.imaginados;
 
 import android.app.ActionBar;
 import android.app.DialogFragment;
@@ -7,14 +7,10 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
@@ -24,14 +20,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.imaginados.patricio.toledo.imaginados.pojo.Question;
+import com.luckypalm.imaginados.pojo.Question;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -74,7 +68,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play_for_seconds);
+        setContentView(com.luckypalm.imaginados.R.layout.activity_play_for_seconds);
 
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
@@ -115,13 +109,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         //timerTranstion(6000);
         aciertos = 0;
         // Instancio el reloj
-        counter = (TextView) findViewById(R.id.counterText);
+        counter = (TextView) findViewById(com.luckypalm.imaginados.R.id.counterText);
         Typeface digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
         counter.setTypeface(digifont);
         counter.setText("00:10");
         // Instancio el contenedor de las letras
-        firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
-        secondLine = (LinearLayout) findViewById(R.id.wordContainerSecond);
+        firstLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerFirst);
+        secondLine = (LinearLayout) findViewById(com.luckypalm.imaginados.R.id.wordContainerSecond);
         // Limpio todas las letras para la proxima pregunta
         firstLine.removeAllViews();
         secondLine.removeAllViews();
@@ -131,13 +125,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         question = pregResp.get(questionNumber);
 
-        frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
+        frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
         // Instancio y seteo la pregunta
-        preguntaTitle = (TextView) findViewById(R.id.title);
-        preguntaView = (TextView) findViewById(R.id.question);
+        preguntaTitle = (TextView) findViewById(com.luckypalm.imaginados.R.id.title);
+        preguntaView = (TextView) findViewById(com.luckypalm.imaginados.R.id.question);
         preguntaTitle.setText(question.getTitulo());
 
-        imageForPlay = (ImageView) findViewById(R.id.imageForPlay);
+        imageForPlay = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imageForPlay);
         if (question.getPregunta().contains("jpg")) {
             preguntaView.setVisibility(View.INVISIBLE);
             imageForPlay.setVisibility(View.VISIBLE);
@@ -154,13 +148,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         // Instancio y limpio el reloj de transicion
         //transition = (TextView) findViewById(R.id.transition);
 
-        nosumaste = (ImageView) findViewById(R.id.nosumaste);
+        nosumaste = (ImageView) findViewById(com.luckypalm.imaginados.R.id.nosumaste);
 
         // Border radius para las letras
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
-        gd.setCornerRadius((int)getResources().getDimension(R.dimen.border_radius));
-        gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
+        gd.setCornerRadius((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius));
+        gd.setStroke((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_letters_guess), getResources().getColor(com.luckypalm.imaginados.R.color.secondaryColor));
 
         //timer(11000);
 
@@ -172,15 +166,15 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             } else {
                 letter.setText("__");
                 letter.setAllCaps(true);
-                letter.setBackgroundResource(R.color.backLetters);
+                letter.setBackgroundResource(com.luckypalm.imaginados.R.color.backLetters);
                 letter.setBackground(gd);
             }
 
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-            dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
-            letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
+            dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.bg_letter_size);
+            letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-            marginLetters.setMargins(0, 0, (int)getResources().getDimension(R.dimen.border_radius), 0);
+            marginLetters.setMargins(0, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius), 0);
             letter.setLayoutParams(marginLetters);
 
             if (question.getRespuesta().indexOf("|") > 0) {
@@ -244,8 +238,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             return false;
         }
 
-        ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
-        ll2 = (LinearLayout) findViewById(R.id.wordContainerSecond);
+        ll = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerFirst);
+        ll2 = (LinearLayout) findViewById(com.luckypalm.imaginados.R.id.wordContainerSecond);
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < question.getRespuesta().length(); i++) {
             // si viene un pipe, es que las palabras estan divididas en 2 renglones
@@ -255,13 +249,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
                     letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    letter.setBackgroundResource(R.color.backLetters);
+                    letter.setBackgroundResource(com.luckypalm.imaginados.R.color.backLetters);
                     letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                    marginLetters.setMargins(0, 0, (int) getResources().getDimension(R.dimen.border_radius), 0);
+                    marginLetters.setMargins(0, 0, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius), 0);
                     letter.setLayoutParams(marginLetters);
                     ll.removeViewAt(i);
                     ll.addView(letter, i);
@@ -275,9 +269,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     TextView letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
                     letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    letter.setBackgroundResource(R.color.primaryColor);
+                    letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
                     letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);

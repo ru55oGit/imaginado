@@ -1,4 +1,4 @@
-package com.imaginados.patricio.toledo.imaginados;
+package com.luckypalm.imaginados;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.luckypalm.imaginados.R.layout.activity_main);
 
-        play = (ImageView) findViewById(R.id.play);
+        play = (ImageView) findViewById(com.luckypalm.imaginados.R.id.play);
         settings = getSharedPreferences("Status", 0);
         level = settings.getString("level", "1");
 

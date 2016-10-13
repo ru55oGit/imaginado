@@ -1,4 +1,4 @@
-package com.imaginados.patricio.toledo.imaginados;
+package com.luckypalm.imaginados;
 
 import android.Manifest;
 import android.app.ActionBar;
@@ -103,7 +103,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guess_image);
+        setContentView(com.luckypalm.imaginados.R.layout.activity_guess_image);
         digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
 
@@ -115,7 +115,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         // seteo el tiempo que tengo para jugar en el reloj
         milisegundos = settings.getInt("time", 60000);
-        counter = (TextView) findViewById(R.id.counterText);
+        counter = (TextView) findViewById(com.luckypalm.imaginados.R.id.counterText);
         counter.setTypeface(digifont);
         counter.setText(""+String.format(FORMAT,
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
@@ -124,7 +124,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
 
         // share wsap
-        sharewsap = (ImageView) findViewById(R.id.sharewsap);
+        sharewsap = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharewsap);
         sharewsap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -160,7 +160,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        shareFacebook = (ImageView) findViewById(R.id.sharefacebook);
+        shareFacebook = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharefacebook);
         if(isAppInstalled(getApplicationContext(), "com.facebook.katana")) {
             shareFacebook.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -181,7 +181,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             shareFacebook.setVisibility(View.INVISIBLE);
         }
 
-        shareTwitter = (ImageView) findViewById(R.id.sharetwitter);
+        shareTwitter = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharetwitter);
         if(isAppInstalled(getApplicationContext(), "com.twitter.android")) {
             shareTwitter.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -246,14 +246,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         secondsToSubtract = 0;
 
-        frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
+        frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
         toggleKeyboardVisible();
 
         // border radius
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
-        gd.setCornerRadius((int) getResources().getDimension(R.dimen.border_radius));
-        gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
+        gd.setCornerRadius((int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius));
+        gd.setStroke((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_letters_guess), getResources().getColor(com.luckypalm.imaginados.R.color.secondaryColor));
 
         // traigo el Nivel
         level = settings.getString("level","1");
@@ -263,16 +263,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         uri = extras.getString("src");
         int res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
-        imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
+        imageToGuess = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imageToGuess);
         imageToGuess.setImageResource(res);
         // obtengo la palabra que se va adivinar
         word = extras.getString("word");
 
         // titulo sin tiempos
-        sinTiempo = (ImageView) findViewById(R.id.sintiempo);
+        sinTiempo = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sintiempo);
 
         // volver
-        volver = (ImageView) findViewById(R.id.volver);
+        volver = (ImageView) findViewById(com.luckypalm.imaginados.R.id.volver);
 
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -284,31 +284,31 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
-        secondLine = (LinearLayout)findViewById(R.id.wordContainerSecond);
+        firstLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerFirst);
+        secondLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerSecond);
         // Remuevo todas la letras porque se apendean cuando hago compartir y cancelo
         firstLine.removeAllViews();
         secondLine.removeAllViews();
 
 
-        LinearLayout thirdLine = (LinearLayout)findViewById(R.id.wordContainerThird);
+        LinearLayout thirdLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerThird);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
         for (int i = 0; i < word.length(); i++) {
             TextView letter = new TextView(this);
             if (Character.isWhitespace(word.charAt(i))) {
                 letter.setText("");
-                dim = (int) getResources().getDimension(R.dimen.letter_size_whitespace);
+                dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size_whitespace);
             } else if ('|' != word.charAt(i)){
                 letter.setText("__");
                 letter.setAllCaps(true);
-                letter.setBackgroundResource(R.color.primaryColor);
+                letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
                 letter.setBackground(gd);
-                dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
+                dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.bg_letter_size);
             }
             letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
-            letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
+            letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins(0, 0, 10, 0);
             letter.setLayoutParams(marginLetters);
@@ -398,8 +398,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             return false;
         }
 
-        LinearLayout ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
-        LinearLayout ll2 = (LinearLayout) findViewById(R.id.wordContainerSecond);
+        LinearLayout ll = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerFirst);
+        LinearLayout ll2 = (LinearLayout) findViewById(com.luckypalm.imaginados.R.id.wordContainerSecond);
 
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < word.length(); i++) {
@@ -410,9 +410,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     TextView letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
                     letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    letter.setBackgroundResource(R.color.primaryColor);
+                    letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
                     letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
@@ -430,9 +430,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     TextView letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
                     letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    letter.setBackgroundResource(R.color.primaryColor);
+                    letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
                     letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
@@ -470,15 +470,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             milisegundos = minutos + segundos;
             timer(milisegundos);
             LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.toast_layout,
-                    (ViewGroup) findViewById(R.id.toast_layout_root));
+            View layout = inflater.inflate(com.luckypalm.imaginados.R.layout.toast_layout,
+                    (ViewGroup) findViewById(com.luckypalm.imaginados.R.id.toast_layout_root));
 
-            TextView text = (TextView) layout.findViewById(R.id.text);
+            TextView text = (TextView) layout.findViewById(com.luckypalm.imaginados.R.id.text);
             text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
             text.setTypeface(lobsterFont);
 
             toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
+            toast.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.top_toast));
             toast.setDuration(Toast.LENGTH_SHORT);
             toast.setView(layout);
             toast.show();
@@ -625,10 +625,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private void customDialog(){
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
-        dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
+        dialogCustom.setContentView(com.luckypalm.imaginados.R.layout.custom_dialog_withoutseconds);
 
-        ImageView ganar = (ImageView) dialogCustom.findViewById(R.id.ganarSegundos);
-        ImageView comprar = (ImageView) dialogCustom.findViewById(R.id.comprarSegundos);
+        ImageView ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.ganarSegundos);
+        ImageView comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.comprarSegundos);
         ganar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -643,7 +643,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(R.id.dialogButtonOK);
+        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.dialogButtonOK);
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
