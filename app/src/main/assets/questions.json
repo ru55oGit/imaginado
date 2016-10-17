@@ -20,12 +20,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es la capital de Uruguay?",
-      "respuesta": "Montevideo"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué país viven los lusitanos?",
       "respuesta": "portugal"
     }
@@ -615,20 +609,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es la capital de Australia?",
-      "respuesta": "Canberra"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cuántas monedas le pagaron a Judas por entregar a Cristo?",
       "respuesta": "30"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿De qué país es capital Bagdad?",
-      "respuesta": "irak"
     }
   ,
     {
@@ -707,12 +689,6 @@
       "title": "¿Quién es?",
       "pregunta": "emmawatson.jpg",
       "respuesta": "emma|watson"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
-      "pregunta": "blakelively.jpg",
-      "respuesta": "blake|lively"
     }
   ,
     {
@@ -1979,12 +1955,6 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Perro de tamaño medio y pelo corto de fondo blanco con pintas negras",
-      "respuesta": "dalmata"
-    }
-  ,
-    {
-      "title": "Definición:",
       "pregunta": "Juego de mesa conformado por un tablero dividido en 64 cuadrados y 12 piezas redondas por jugador",
       "respuesta": "damas"
     }
@@ -2251,12 +2221,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el nombre de pila del padre de Milhouse de los Simpsons?",
-      "respuesta": "Kirk"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué mes cae el día de San Valentín?",
       "respuesta": "Febrero"
     }
@@ -2271,12 +2235,6 @@
       "title": "",
       "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
       "respuesta": "45"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Suiza?",
-      "respuesta": "Berna"
     }
   ,
     {
@@ -2335,12 +2293,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el payaso de 'Los Simpson'?",
-      "respuesta": "Krusty"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llama el robot alcohólico de la serie 'Futurama'?",
       "respuesta": "Bender"
     }
@@ -2357,12 +2309,7 @@
       "respuesta": "Cenicienta"
     }
   ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Luxemburgo?",
-      "respuesta": "Luxemburgo"
-    }
-  ,
+
     {
       "title": "",
       "pregunta": "¿De que tiene forma Italia?",
@@ -2377,32 +2324,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es la capital de Belice ?",
-      "respuesta": "Belmopan"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Ecuador?",
-      "respuesta": "Quito"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cúal es la capital de Alemania?",
-      "respuesta": "Berlin"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué continente está la India?",
       "respuesta": "Asia"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Cuál es la capital de Argelia?",
-      "respuesta": "Argel"
     }
   ,
     {
@@ -2659,20 +2582,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llamaba el personaje que interpretaba John Travolta en 'Grease'?",
-      "respuesta": "Danny Zuko"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué director de cine norteamericano aterrorizó a los Estados Unidos con su adaptación radiofónica de 'La guerra de los mundos'?",
       "respuesta": "Orson|Welles"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Cual es el nombre de la acrtriz que interpreta a Bella en la saga 'Crepúsculo'?",
-      "respuesta": "Kristen|Stewart"
+      "pregunta": "¿Cual es el nombre del personaje que interpreta Kristen Stewart en la saga 'Crepúsculo'?",
+      "respuesta": "bella"
     }
   ,
     {
@@ -3157,12 +3074,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué raza de perros toma su nombre de una ciudad china?",
-      "respuesta": "pequines"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué número esta rodeado por todos los demás en el teclado de un celular?",
       "respuesta": "5"
     }
@@ -3518,11 +3429,6 @@
     },
     {
       "title": "Personaje Simpson",
-      "pregunta": ".jpg",
-      "respuesta": ""
-    },
-    {
-      "title": "Personaje Simpson",
       "pregunta": "ayudantedesanta.jpg",
       "respuesta": "ayudante|de santa"
     },
@@ -3710,11 +3616,6 @@
       "title": "Personaje Simpson",
       "pregunta": "luiggi.jpg",
       "respuesta": "luigi"
-    },
-    {
-      "title": "Personaje Simpson",
-      "pregunta": "magda.jpg",
-      "respuesta": "magda|flanders"
     },
     {
       "title": "Personaje Simpson",
