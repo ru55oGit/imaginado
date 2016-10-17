@@ -2223,7 +2223,7 @@
     } ,
     {
       "title": "",
-      "pregunta": "¿En qué país situarías el canal construido por el hombre para unir el Ocáno Pacífico con el Océano Atlántico?",
+      "pregunta": "¿En qué país situarías el canal construido por el hombre para unir el Océano Pacífico con el Océano Atlántico?",
       "respuesta": "Panama"
     } ,
     {
@@ -3495,6 +3495,342 @@
       "title": "",
       "pregunta": "¿En qué siglo se produjo el descubrimiento de América?",
       "respuesta": "xv"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "akira.jpg",
+      "respuesta": "akira"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "alcaldediamante.jpg",
+      "respuesta": "alcalde|diamante"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "apu.jpg",
+      "respuesta": "apu"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "artieziff.jpg",
+      "respuesta": "artie|ziff"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": ".jpg",
+      "respuesta": ""
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "ayudantedesanta.jpg",
+      "respuesta": "ayudante|de santa"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "blinky.jpg",
+      "respuesta": "blinky"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "barney.jpg",
+      "respuesta": "barney"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "carlcarlson.jpg",
+      "respuesta": "carl|carlson"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "cletus.jpg",
+      "respuesta": "cleto"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "daly.jpg",
+      "respuesta": "daly"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "discostu.jpg",
+      "respuesta": "disco|stu"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "drhibbert.jpg",
+      "respuesta": "dr hibbert"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "drmarvinmonroe.jpg",
+      "respuesta": "dr marvin|monroe"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "drnick.jpg",
+      "respuesta": "dr nick"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "duffman.jpg",
+      "respuesta": "duffman"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "ednakrabappel.jpg",
+      "respuesta": "edna|krabappel"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "enrique.jpg",
+      "respuesta": "enrique"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "flanders.jpg",
+      "respuesta": "flanders"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "frankgrimes.jpg",
+      "respuesta": "frank|grimes"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "funzo.jpg",
+      "respuesta": "funzo"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "gaspar.jpg",
+      "respuesta": "gaspar"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "gil.jpg",
+      "respuesta": "gil"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "hankscorpio.jpg",
+      "respuesta": "hank|scorpio"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "helenaalegria.jpg",
+      "respuesta": "helena|alegria"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "herbertpowell.jpg",
+      "respuesta": "herbert|powell"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "hombreabejorro.jpg",
+      "respuesta": "hombre|abejorro"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "inocenciadonoso.jpg",
+      "respuesta": "inocencia|donoso"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "jardinerowillie.jpg",
+      "respuesta": "el jardinero|willie"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "jefegorgor.jpg",
+      "respuesta": "jefe|gorgory"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "jeremias.jpg",
+      "respuesta": "jeremias|springfield"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "jessicaalegria.jpg",
+      "respuesta": "jessica|alegria"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "jimbojones.jpg",
+      "respuesta": "jimbo|jones"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "juantopo.jpg",
+      "respuesta": "juan|topo"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "kang.jpg",
+      "respuesta": "kang"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "kentbrockman.jpg",
+      "respuesta": "kent|brockman"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "kirkvanhouten.jpg",
+      "respuesta": "kirk|van houten"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "krusty.jpg",
+      "respuesta": "krusty"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "larryburns.jpg",
+      "respuesta": "larry|burns"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "lenny.jpg",
+      "respuesta": "lenny"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "lionelhutz.jpg",
+      "respuesta": "lionel|hutz"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "lou.jpg",
+      "respuesta": "lou"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "luiggi.jpg",
+      "respuesta": "luigi"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "magda.jpg",
+      "respuesta": "magda|flanders"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "manjula.jpg",
+      "respuesta": "manjula"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "margozavala.jpg",
+      "respuesta": "margo|zavala"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "martinprince.jpg",
+      "respuesta": "martin|prince"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "mcbain.jpg",
+      "respuesta": "mcbain"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "milhouse.jpg",
+      "respuesta": "milhouse"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "moe.jpg",
+      "respuesta": "moe"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "mojo.jpg",
+      "respuesta": "mojo"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "mrburns.jpg",
+      "respuesta": "montgomery|burns"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "mrchispa.jpg",
+      "respuesta": "mr chispa"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "nelson.jpg",
+      "respuesta": "nelson"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "otto.jpg",
+      "respuesta": "otto"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "patty.jpg",
+      "respuesta": "patty"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "poochie.jpg",
+      "respuesta": "poochie"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "proffrink.jpg",
+      "respuesta": "profesor|frink"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "rafagorgory.jpg",
+      "respuesta": "rafa|gorgory"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "selma.jpg",
+      "respuesta": "selma"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "seymourskinner.jpg",
+      "respuesta": "Seymour|Skinner"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "sherryterry.jpg",
+      "respuesta": "sherry|y terry"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "stampy.jpg",
+      "respuesta": "stampy"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "tenazas.jpg",
+      "respuesta": "tenazas"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "tomy.jpg",
+      "respuesta": "tomy"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "tonyelgordo.jpg",
+      "respuesta": "tony|el gordo"
+    },
+    {
+      "title": "Personaje Simpson",
+      "pregunta": "troymclure.jpg",
+      "respuesta": "troy|mclure"
     }
+
   ]
 }
