@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.imaginados.patricio.toledo.imaginados"
+        applicationId "com.luckypalm.imaginados"
         minSdkVersion 17
         targetSdkVersion 23
         versionCode 1

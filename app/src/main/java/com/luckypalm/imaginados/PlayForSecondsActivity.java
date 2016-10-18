@@ -79,6 +79,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             random.add(i);
         }
         Collections.shuffle(random);
+        Collections.shuffle(random);
     }
 
     @Override
