@@ -114,7 +114,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         timerFlag = true;
 
         // seteo el tiempo que tengo para jugar en el reloj
-        milisegundos = settings.getInt("time", 60000);
+        milisegundos = settings.getInt("time", 120000);
         counter = (TextView) findViewById(com.luckypalm.imaginados.R.id.counterText);
         counter.setTypeface(digifont);
         counter.setText(""+String.format(FORMAT,
@@ -161,25 +161,39 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         });
 
         shareFacebook = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharefacebook);
-        if(isAppInstalled(getApplicationContext(), "com.facebook.katana")) {
-            shareFacebook.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        shareFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if (timer != null) {
                         timer.cancel();
                     }
+
                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                     Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                    //sharingIntent.setPackage("com.facebook.katana");
-
                     sharingIntent.setType("image/*");
                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+
+                    if (uri.contains("adivinanzas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("banderas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("escudos")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("marcas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("peliculas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  http://lapaginamillonaria.com");
+                    } else if (uri.contains("personajes")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  http://lapaginamillonaria.com");
+                    }
+
                     startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                } else {
+
                 }
-            });
-        } else {
-            shareFacebook.setVisibility(View.INVISIBLE);
-        }
+            }
+        });
 
         shareTwitter = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharetwitter);
         if(isAppInstalled(getApplicationContext(), "com.twitter.android")) {
@@ -188,7 +202,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 public void onClick(View v) {
                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                     String shareText = new String();
-                    sharingIntent.setPackage("com.twitter.android");
+                    //sharingIntent.setPackage("com.twitter.android");
 
                     if (uri.contains("adivinanzas")) {
                         shareText = "Ayudame a resolver este acertijo";
