@@ -177,12 +177,6 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "bowie.jpg",
-      "respuesta": "david|bowie"
-    }
-  ,
-    {
-      "title": "¿Quién es?",
       "pregunta": "rickymartin.jpg",
       "respuesta": "ricky|martin"
     }
@@ -501,12 +495,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cómo se llama el padre de Luke Skywalker en Star Wars?",
-      "respuesta": "Darth|Vader"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cómo se llama el hueso que esta al lado del Radio?",
       "respuesta": "Cubito"
     }
@@ -717,7 +705,7 @@
   ,
     {
       "title": "¿Quién es?",
-      "pregunta": "hamks.jpg",
+      "pregunta": "hanks.jpg",
       "respuesta": "tom|hanks"
     }
   ,
@@ -1979,7 +1967,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Plataforma elevada en ciertos espectáculos públicos",
+      "pregunta": "Plataforma elevada en ciertos espectáculos públicos. Grada.",
       "respuesta": "tribuna"
     }
   ,
@@ -2650,12 +2638,6 @@
       "title": "",
       "pregunta": "¿A que serie pertenecen los personajes Fass, Murdock, Hannibal y Baracus?",
       "respuesta": "Brigada A"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Quien pregunta 'Que hay de nuevo viejo'?",
-      "respuesta": "Bugs Bunny"
     }
   ,
     {
@@ -3731,7 +3713,186 @@
       "title": "Personaje Simpson",
       "pregunta": "troymclure.jpg",
       "respuesta": "troy|mclure"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": ".jpg",
+      "respuesta": ""
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "agentecoulson.jpg",
+      "respuesta": "agente|coulson"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "antman.jpg",
+      "respuesta": "antman"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "antorchahumana.jpg",
+      "respuesta": "antorcha|humana"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "bestia.jpg",
+      "respuesta": "bestia"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "bishop.jpg",
+      "respuesta": "bishop"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "blackpanther.jpg",
+      "respuesta": "black|panther"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "blackwidow.jpg",
+      "respuesta": "black|widow"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "bucky.jpg",
+      "respuesta": "bucky"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "capitanamerica.jpg",
+      "respuesta": "capitan|america"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "charlesxavier.jpg",
+      "respuesta": "charles|xavier"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "coloso.jpg",
+      "respuesta": "coloso"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "cyclops.jpg",
+      "respuesta": "ciclope"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "daredevil.jpg",
+      "respuesta": "daredevil"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "deadpool.jpg",
+      "respuesta": "deadpool"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "electro.jpg",
+      "respuesta": "electro"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "falcon.jpg",
+      "respuesta": "falcon"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "groot.jpg",
+      "respuesta": "groot"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "hulk.jpg",
+      "respuesta": "hulk"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "iceman.jpg",
+      "respuesta": "iceman"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "ironman.jpg",
+      "respuesta": "ironman"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "loki.jpg",
+      "respuesta": "loki"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "magneto.jpg",
+      "respuesta": "magneto"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "mystique.jpg",
+      "respuesta": "mystique"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "nickfury.jpg",
+      "respuesta": "nick|fury"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "nigthcrawler.jpg",
+      "respuesta": "nigthcrawler"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "quicksilver.jpg",
+      "respuesta": "quicksilver"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "rocketracoon.jpg",
+      "respuesta": "rocket|racoon"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "silversurfer.jpg",
+      "respuesta": "silver|surfer"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "spiderman.jpg",
+      "respuesta": "spiderman"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "starlord.jpg",
+      "respuesta": "star|lord"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "storm.jpg",
+      "respuesta": "tormenta"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "thor.jpg",
+      "respuesta": "thor"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "ultron.jpg",
+      "respuesta": "ultron"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "vision.jpg",
+      "respuesta": "vision"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "wolverine.jpg",
+      "respuesta": "wolverine"
     }
-
   ]
 }
