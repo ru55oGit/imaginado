@@ -41,6 +41,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
@@ -140,17 +141,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
 
                     if (uri.contains("adivinanzas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
                     } else if (uri.contains("banderas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  https://goo.gl/OufAlF");
                     } else if (uri.contains("escudos")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  https://goo.gl/OufAlF");
                     } else if (uri.contains("marcas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  https://goo.gl/OufAlF");
                     } else if (uri.contains("peliculas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  https://goo.gl/OufAlF");
                     } else if (uri.contains("personajes")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  https://goo.gl/OufAlF");
                     }
 
                     startActivity(Intent.createChooser(sharingIntent, "Share image using"));
@@ -169,23 +170,24 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         timer.cancel();
                     }
 
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
                     Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                    sharingIntent.setType("image/*");
+                    sharingIntent.setType("*/*");
                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                    sharingIntent.setPackage("com.facebook.katana");
 
                     if (uri.contains("adivinanzas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
                     } else if (uri.contains("banderas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  https://goo.gl/OufAlF");
                     } else if (uri.contains("escudos")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  https://goo.gl/OufAlF");
                     } else if (uri.contains("marcas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  https://goo.gl/OufAlF");
                     } else if (uri.contains("peliculas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  https://goo.gl/OufAlF");
                     } else if (uri.contains("personajes")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  http://lapaginamillonaria.com");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  https://goo.gl/OufAlF");
                     }
 
                     startActivity(Intent.createChooser(sharingIntent, "Share image using"));
@@ -196,42 +198,35 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         });
 
         shareTwitter = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharetwitter);
-        if(isAppInstalled(getApplicationContext(), "com.twitter.android")) {
-            shareTwitter.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                    String shareText = new String();
-                    //sharingIntent.setPackage("com.twitter.android");
+        shareTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                String shareText = new String();
+                sharingIntent.setPackage("com.twitter.android");
 
-                    if (uri.contains("adivinanzas")) {
-                        shareText = "Ayudame a resolver este acertijo";
-                    } else if (uri.contains("banderas")) {
-                        shareText = "No recuerdo de que país es esta bandera";
-                    } else if (uri.contains("escudos")) {
-                        shareText = "¿De qué equipo de fútbol es este escudo";
-                    } else if (uri.contains("marcas")) {
-                        shareText = "Este logo era de... mmmmm";
-                    } else if (uri.contains("peliculas")) {
-                        shareText = "¿Viste esta película? ¿Cuál es?";
-                    } else if (uri.contains("personajes")) {
-                        shareText = "¿ehhh... cómo se llamaba?";
-                    }
-
-
-                    String tweetUrl = "https://twitter.com/intent/tweet?text="+ shareText +"&url="
-                            + "https://www.google.com";
-                    Uri uri = Uri.parse(tweetUrl);
-                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
-                    startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                if (uri.contains("adivinanzas")) {
+                    shareText = "Ayudame a resolver este acertijo";
+                } else if (uri.contains("banderas")) {
+                    shareText = "No recuerdo de que país es esta bandera";
+                } else if (uri.contains("escudos")) {
+                    shareText = "¿De qué equipo de fútbol es este escudo";
+                } else if (uri.contains("marcas")) {
+                    shareText = "Este logo era de... mmmmm";
+                } else if (uri.contains("peliculas")) {
+                    shareText = "¿Viste esta película? ¿Cuál es?";
+                } else if (uri.contains("personajes")) {
+                    shareText = "¿ehhh... cómo se llamaba?";
                 }
-            });
-        } else {
-            shareTwitter.setVisibility(View.INVISIBLE);
-        }
 
+                String tweetUrl = "https://twitter.com/intent/tweet?text="+ shareText +"&url="
+                        + "https://goo.gl/OufAlF";
+                Uri uri = Uri.parse(tweetUrl);
+                startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                //startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+            }
+        });
     }
-
 
     @Override
     protected void onResume() {
