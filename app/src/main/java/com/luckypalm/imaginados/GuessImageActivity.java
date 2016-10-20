@@ -37,6 +37,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
@@ -83,6 +86,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private LinearLayout firstLine;
     private LinearLayout secondLine;
 
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
+
+
     // Storage Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -110,6 +117,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.luckypalm.imaginados.R.layout.activity_guess_image);
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+
         digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
 
@@ -181,7 +194,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharedDescription = "Ayudame a resolver este acertijo";
                     } else if (uri.contains("banderas")) {
                         sharedDescription = "No recuerdo de que país es esta bandera";
-
                     } else if (uri.contains("escudos")) {
                         sharedDescription =  "¿De qué equipo de fútbol es este escudo?";
                     } else if (uri.contains("marcas")) {
@@ -200,12 +212,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             .setImageUrl(screenshotUri)
                             .build();
 
-                    ShareDialog.show(GuessImageActivity.this, shareLinkContent);
-
-
-
+                    shareDialog.show(GuessImageActivity.this, shareLinkContent);
                 }
-
             }
         });
 
