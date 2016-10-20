@@ -37,6 +37,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -170,30 +175,37 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         timer.cancel();
                     }
 
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
-                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                    sharingIntent.setType("*/*");
-                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                    sharingIntent.setPackage("com.facebook.katana");
+                    String sharedDescription = new String();
 
                     if (uri.contains("adivinanzas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
+                        sharedDescription = "Ayudame a resolver este acertijo";
                     } else if (uri.contains("banderas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  https://goo.gl/OufAlF");
+                        sharedDescription = "No recuerdo de que país es esta bandera";
+
                     } else if (uri.contains("escudos")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  https://goo.gl/OufAlF");
+                        sharedDescription =  "¿De qué equipo de fútbol es este escudo?";
                     } else if (uri.contains("marcas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  https://goo.gl/OufAlF");
+                        sharedDescription =  "Este logo era de... mmmmm";
                     } else if (uri.contains("peliculas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  https://goo.gl/OufAlF");
+                        sharedDescription =  "¿Viste esta película? ¿Cuál es?";
                     } else if (uri.contains("personajes")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  https://goo.gl/OufAlF");
+                        sharedDescription =  "¿ehhh... cómo se llamaba este personaje?";
                     }
 
-                    startActivity(Intent.createChooser(sharingIntent, "Share image using"));
-                } else {
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                    ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
+                            .setContentTitle("Imaginados")
+                            .setContentDescription(sharedDescription)
+                            .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
+                            .setImageUrl(screenshotUri)
+                            .build();
+
+                    ShareDialog.show(GuessImageActivity.this, shareLinkContent);
+
+
 
                 }
+
             }
         });
 

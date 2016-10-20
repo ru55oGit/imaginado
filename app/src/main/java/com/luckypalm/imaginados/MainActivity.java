@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView play;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.luckypalm.imaginados.R.layout.activity_main);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
 
         play = (ImageView) findViewById(com.luckypalm.imaginados.R.id.play);
         settings = getSharedPreferences("Status", 0);
