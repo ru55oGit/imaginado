@@ -463,7 +463,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
                     letter.setGravity(Gravity.CENTER_HORIZONTAL);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
-                    letter.setBackground(gd);
+                    if (Build.VERSION.SDK_INT > 15)
+                        letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                     marginLetters.setMargins(0, 0, 10, 0);
@@ -483,7 +484,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
                     letter.setGravity(Gravity.CENTER_HORIZONTAL);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
-                    letter.setBackground(gd);
+                    if (Build.VERSION.SDK_INT > 15)
+                        letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                     marginLetters.setMargins(0, 0, 10, 0);
@@ -678,7 +680,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         dialogCustom.setContentView(com.luckypalm.imaginados.R.layout.custom_dialog_withoutseconds);
 
         ImageView ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.ganarSegundos);
-        ImageView comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.comprarSegundos);
+        ImageView compartir = (ImageView) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.comprarSegundos);
         ganar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -686,7 +688,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 startActivity(intent);
             }
         });
-        comprar.setOnClickListener(new View.OnClickListener() {
+        compartir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
