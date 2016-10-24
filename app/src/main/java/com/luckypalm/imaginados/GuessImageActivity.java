@@ -37,9 +37,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.MessageDialog;
 import com.facebook.share.widget.ShareDialog;
 
 import java.io.File;
@@ -83,6 +85,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private LinearLayout firstLine;
     private LinearLayout secondLine;
 
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
+
     // Storage Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -110,6 +115,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.luckypalm.imaginados.R.layout.activity_guess_image);
+
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+
         digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
 
@@ -176,34 +185,39 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     }
 
                     String sharedDescription = new String();
+                    String sharedImage = new String();
 
                     if (uri.contains("adivinanzas")) {
                         sharedDescription = "Ayudame a resolver este acertijo";
+                        sharedImage = "https://lh3.googleusercontent.com/moMMSTbr5XwIDZLUE54ttInkjRdPV47yzjdV1wv6zFKAvZLDOTwkegQruLZI-6i1aeU=h900";
                     } else if (uri.contains("banderas")) {
                         sharedDescription = "No recuerdo de que país es esta bandera";
-
+                        sharedImage = "https://lh3.googleusercontent.com/WfCmVxD93WtUdXoJkseTlxiAIDWwIFncxW7w7YczvGGhPl9hXd3oXGLZDL5m5AX9ir-T=h900";
                     } else if (uri.contains("escudos")) {
                         sharedDescription =  "¿De qué equipo de fútbol es este escudo?";
+                        sharedImage = "https://lh3.googleusercontent.com/UkB7i-HW02E-SdQ7GIiVRmsP1j3BDNwavGOEZOkApwBSQ--SfDO77nqWL25rTOReH5R3=h900";
                     } else if (uri.contains("marcas")) {
                         sharedDescription =  "Este logo era de... mmmmm";
+                        sharedImage = "https://lh3.googleusercontent.com/UzbkxKXgbh6VMLJPOiGPD5lbdZzJT_W6YnDoqkjYELbpU8NAdWnRazePlq5-eJNAag=h900";
                     } else if (uri.contains("peliculas")) {
                         sharedDescription =  "¿Viste esta película? ¿Cuál es?";
+                        sharedImage = "https://lh3.googleusercontent.com/jyVxq8hW4_uIWBeDrfp5csrTHEW0hspMskCeX4QTJLR0VTlflw007imyvDacyf8Q3PPq=h900";
                     } else if (uri.contains("personajes")) {
                         sharedDescription =  "¿ehhh... cómo se llamaba este personaje?";
+                        sharedImage = "https://lh3.googleusercontent.com/8BcK8Ul1X926Pti1rGrGMoIVshOEQkiT6TZ9C6P_f2FsYmpNOaPLQo3npkchMgVHQH0=h900";
                     }
 
-                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                    ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
-                            .setContentTitle("Imaginados")
-                            .setContentDescription(sharedDescription)
-                            .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
-                            .setImageUrl(screenshotUri)
-                            .build();
+                    if (ShareDialog.canShow(ShareLinkContent.class)) {
+                        Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                        ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
+                                .setContentTitle("Imaginados")
+                                .setContentDescription(sharedDescription)
+                                .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
+                                .setImageUrl(Uri.parse(sharedImage))
+                                .build();
 
-                    ShareDialog.show(GuessImageActivity.this, shareLinkContent);
-
-
-
+                        shareDialog.show(shareLinkContent);
+                    }
                 }
 
             }
@@ -214,7 +228,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
                 String shareText = new String();
+                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
                 sharingIntent.setPackage("com.twitter.android");
 
                 if (uri.contains("adivinanzas")) {
@@ -238,6 +254,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 //startActivity(Intent.createChooser(sharingIntent, "Share image using"));
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

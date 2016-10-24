@@ -168,10 +168,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 letter.setText("__");
                 letter.setAllCaps(true);
                 letter.setBackgroundResource(com.luckypalm.imaginados.R.color.backLetters);
-                letter.setBackground(gd);
+                //letter.setBackground(gd);
             }
 
-            letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            //letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.bg_letter_size);
             letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
@@ -251,9 +251,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
-                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    //letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.backLetters);
-                    letter.setBackground(gd);
+                    //letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                     marginLetters.setMargins(0, 0, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius), 0);
@@ -271,9 +271,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
-                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    //letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
-                    letter.setBackground(gd);
+                    //letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                     marginLetters.setMargins(0, 0, 10, 0);

@@ -96,7 +96,7 @@ public class SelectImagesActivity extends AppCompatActivity {
         label.setText(level);
 
         // for testing
-        label.setOnClickListener(new View.OnClickListener(){
+        /*label.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 level = ((Integer)(Integer.parseInt(level) + 1)).toString();
@@ -113,7 +113,7 @@ public class SelectImagesActivity extends AppCompatActivity {
                 editor.putString("level", level);
                 editor.commit();
             }
-        });
+        });*/
 
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         label.setTypeface(lobsterFont);
