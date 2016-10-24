@@ -38,6 +38,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
@@ -116,6 +118,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         super.onCreate(savedInstanceState);
         setContentView(com.luckypalm.imaginados.R.layout.activity_guess_image);
 
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
 
@@ -167,7 +172,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     } else if (uri.contains("personajes")) {
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  https://goo.gl/OufAlF");
                     }
-
                     startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                 } else {
 
@@ -345,11 +349,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } else if ('|' != word.charAt(i)){
                 letter.setText("__");
                 letter.setAllCaps(true);
-                letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
-                letter.setBackground(gd);
+                if (Build.VERSION.SDK_INT > 16) {
+                    letter.setBackground(gd);
+                } else {
+                    //letter.setBackgroundResource();
+                }
                 dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.bg_letter_size);
             }
-            letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            letter.setGravity(Gravity.CENTER_HORIZONTAL);
 
             letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
@@ -454,7 +461,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
-                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setGravity(Gravity.CENTER_HORIZONTAL);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
                     letter.setBackground(gd);
 
@@ -474,7 +481,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
-                    letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setGravity(Gravity.CENTER_HORIZONTAL);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
                     letter.setBackground(gd);
 

@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -168,10 +169,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 letter.setText("__");
                 letter.setAllCaps(true);
                 letter.setBackgroundResource(com.luckypalm.imaginados.R.color.backLetters);
-                //letter.setBackground(gd);
+                if  (Build.VERSION.SDK_INT > 15 ) {
+                    letter.setBackground(gd);
+                }
             }
 
-            //letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            letter.setGravity(Gravity.CENTER_HORIZONTAL);
             dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.bg_letter_size);
             letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
@@ -251,9 +254,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
-                    //letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setGravity(Gravity.CENTER_HORIZONTAL);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.backLetters);
-                    //letter.setBackground(gd);
+                    if  (Build.VERSION.SDK_INT > 15 ) {
+                        letter.setBackground(gd);
+                    }
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                     marginLetters.setMargins(0, 0, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius), 0);
@@ -271,9 +276,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
                     letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
-                    //letter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    letter.setGravity(Gravity.CENTER_HORIZONTAL);
                     letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
-                    //letter.setBackground(gd);
+                    if  (Build.VERSION.SDK_INT > 15 ) {
+                        letter.setBackground(gd);
+                    }
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
                     marginLetters.setMargins(0, 0, 10, 0);
