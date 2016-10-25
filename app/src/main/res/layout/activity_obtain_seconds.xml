@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/primaryColor"
-    tools:context="com.imaginados.patricio.toledo.imaginados.ObtainSecondsActivity">
+    tools:context="com.luckypalm.imaginados.ObtainSecondsActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         android:id="@+id/participar"
         android:background="@drawable/ganar"
         android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/volverajugar" />
+         />
 
     <Button
         android:layout_width="wrap_content"

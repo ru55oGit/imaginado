@@ -1,48 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="280dp"
+    android:layout_height="wrap_content"
     android:background="@color/primaryColor"
-    android:weightSum="2"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:paddingBottom="15dp">
+    android:weightSum="2">
 
-    <ImageButton
-        android:id="@+id/dialogButtonOK"
-        android:layout_width="50dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/cerrar"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:padding="10dp"
+        android:id="@+id/header"
+        android:background="@color/secondaryColor"
+        android:orientation="horizontal"
+        android:gravity="right">
 
-        <ImageView
-            android:id="@+id/image"
+        <ImageButton
+            android:id="@+id/dialogButtonOK"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cerrar"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/firstSeparator"
+        android:layout_below="@+id/header"
+        android:orientation="horizontal"
+        android:background="@color/cardview_light_background"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buyContainer"
+        android:layout_below="@+id/firstSeparator"
+        android:padding="10dp"
+        android:weightSum="1">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/sintiempo"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true" />
-
+            android:text="@string/sin_tiempo_comprar"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/thirdColor"
+            android:paddingLeft="5dp"
+            android:layout_weight="0.8" />
 
         <ImageView
             android:id="@+id/comprarSegundos"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:src="@drawable/comprar"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/secondSeparator"
+        android:orientation="horizontal"
+        android:layout_below="@+id/buyContainer"
+        android:background="@color/cardview_light_background"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/winContainer"
+        android:padding="10dp"
+        android:layout_below="@+id/secondSeparator">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:background="@drawable/comprar"
-            android:layout_weight="1"
-            android:layout_alignTop="@+id/ganarSegundos"
-            android:layout_alignParentEnd="true" />
-
+            android:text="@string/sin_tiempo_jugar"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/thirdColor"
+            android:paddingLeft="5dp"
+            android:layout_weight="0.8" />
         <ImageView
             android:id="@+id/ganarSegundos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
             android:background="@drawable/ganar"
-            android:layout_weight="1"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/thirdSeparator"
+        android:orientation="horizontal"
+        android:layout_below="@+id/winContainer"
+        android:background="@color/cardview_light_background"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shareContainer"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_below="@+id/thirdSeparator">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shareText"
+            android:text="@string/sin_tiempo_compartir"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/thirdColor"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shareContainer"
+        android:gravity="center"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/sharetwitter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/twittericon"/>
+
+        <ImageView
+            android:id="@+id/sharefacebook"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/facebookicon"/>
+
+        <ImageView
+            android:id="@+id/sharewsap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/whatsappicon"/>
+    </LinearLayout>
+
 
 </RelativeLayout>

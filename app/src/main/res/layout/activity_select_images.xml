@@ -9,13 +9,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/primaryColor"
     android:id="@+id/selectLayout"
-    tools:context="com.imaginados.patricio.toledo.imaginados.SelectImagesActivity">
+    tools:context="com.luckypalm.imaginados.SelectImagesActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout"
         android:gravity="center_horizontal|top"
-        android:layout_alignParentStart="true"
         android:layout_marginBottom="15dp"
         android:foregroundGravity="top">
         <ImageView
@@ -38,8 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout">
 
 
