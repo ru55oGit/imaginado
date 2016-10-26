@@ -228,31 +228,31 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                 Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
                 String shareText = new String();
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                sharingIntent.setPackage("com.twitter.android");
 
                 if (uri.contains("adivinanzas")) {
-                    shareText = "Ayudame a resolver este acertijo";
+                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
                 } else if (uri.contains("banderas")) {
-                    shareText = "No recuerdo de que país es esta bandera";
+                    shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
                 } else if (uri.contains("escudos")) {
-                    shareText = "¿De qué equipo de fútbol es este escudo";
+                    shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
                 } else if (uri.contains("marcas")) {
-                    shareText = "Este logo era de... mmmmm";
+                    shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
                 } else if (uri.contains("peliculas")) {
-                    shareText = "¿Viste esta película? ¿Cuál es?";
+                    shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
                 } else if (uri.contains("personajes")) {
-                    shareText = "¿ehhh... cómo se llamaba?";
+                    shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
                 }
 
-                String tweetUrl = "https://twitter.com/intent/tweet?text="+ shareText +"&url="
-                        + "https://goo.gl/OufAlF";
-                Uri uri = Uri.parse(tweetUrl);
-                startActivity(new Intent(Intent.ACTION_VIEW, uri));
-                //startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                sharingIntent.setType("image/png");
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                sharingIntent.setType("text/plain");
+
+                sharingIntent.setPackage("com.twitter.android");
+                startActivity(sharingIntent);
             }
         });
     }
@@ -649,10 +649,36 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private void customDialog(){
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
-        dialogCustom.setContentView(com.luckypalm.imaginados.R.layout.custom_dialog_withoutseconds);
+        dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
 
-        ImageView ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.ganarSegundos);
-        ImageView compartir = (ImageView) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.comprarSegundos);
+        ImageView ganar = (ImageView) dialogCustom.findViewById(R.id.ganarSegundos);
+        ImageView comprar = (ImageView) dialogCustom.findViewById(R.id.comprarSegundos);
+
+        ImageView shareFace = (ImageView) dialogCustom.findViewById(R.id.sharefacebookDialog);
+        ImageView shareTwit = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
+        ImageView shareWsap = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
+
+        shareFace.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String sharedDescription = new String();
+                String sharedImage = new String();
+
+                sharedDescription =  getResources().getString(R.string.sin_tiempo_compartir);
+                sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
+
+                if (ShareDialog.canShow(ShareLinkContent.class)) {
+                    ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
+                            .setContentTitle("Imaginados")
+                            .setContentDescription(sharedDescription)
+                            .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
+                            .setImageUrl(Uri.parse(sharedImage))
+                            .build();
+                    shareDialog.show(shareLinkContent);
+                }
+            }
+        });
+
         ganar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -660,10 +686,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 startActivity(intent);
             }
         });
-        compartir.setOnClickListener(new View.OnClickListener() {
+        comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -677,10 +703,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
             public void onDismiss(final DialogInterface dialog) {
-                // Cierro el teclado cuando me quedo sin tiempo
-                inputMethodManager.hideSoftInputFromWindow(frameLayout.getWindowToken(), 0);
+            // Cierro el teclado cuando me quedo sin tiempo
+            inputMethodManager.hideSoftInputFromWindow(frameLayout.getWindowToken(), 0);
             }
         });
+
         if (dialogCustom != null) {
             dialogCustom.show();
         }

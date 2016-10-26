@@ -113,19 +113,19 @@
         android:paddingBottom="20dp">
 
         <ImageView
-            android:id="@+id/sharetwitter"
+            android:id="@+id/sharetwitterDialog"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/twittericon"/>
 
         <ImageView
-            android:id="@+id/sharefacebook"
+            android:id="@+id/sharefacebookDialog"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/facebookicon"/>
 
         <ImageView
-            android:id="@+id/sharewsap"
+            android:id="@+id/sharewsapDialog"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/whatsappicon"/>
