@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -47,6 +48,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
 public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
@@ -471,8 +473,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     aciertos++;
                 }
             }
-
-
         }
         int errores = 0;
         for (int i = 0;i < word.length(); i++) {
@@ -570,14 +570,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
-                    if (!("00:00").equals(counter.getText())) {
-                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                    } else {
-                        customDialog();
-                    }
-
+            if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
+                if (!("00:00").equals(counter.getText())) {
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                } else {
+                    customDialog();
                 }
+            }
             }
         });
     }
@@ -590,8 +589,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         timer = new CountDownTimer(milliseconds, 1000) {
             public void onTick(long millisUntilFinished) {
                 counter.setText(""+String.format(FORMAT,
-                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
-                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
+                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
             }
             public void onFinish() {
                 // Cuando el reloj llega a cero, se cambia el mensaje
@@ -656,16 +655,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         ImageView shareFace = (ImageView) dialogCustom.findViewById(R.id.sharefacebookDialog);
         ImageView shareTwit = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
-        ImageView shareWsap = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
+        ImageView shareWsap = (ImageView) dialogCustom.findViewById(R.id.sharewsapDialog);
 
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String sharedDescription = new String();
-                String sharedImage = new String();
-
-                sharedDescription =  getResources().getString(R.string.sin_tiempo_compartir);
-                sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
+                String sharedDescription =  getResources().getString(R.string.generic_share_text);
+                String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
 
                 if (ShareDialog.canShow(ShareLinkContent.class)) {
                     ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
@@ -678,6 +674,38 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
             }
         });
+
+        shareTwit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
+                String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
+
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                sharingIntent.setType("image/png");
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+
+                sharingIntent.setPackage("com.twitter.android");
+                startActivity(sharingIntent);
+            }
+        });
+
+        shareWsap.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                 Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
+                 Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
+                 String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
+                 sharingIntent.setPackage("com.whatsapp");
+                 sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                 sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                 sharingIntent.setType("image/*");
+
+                 startActivity(sharingIntent);
+             }
+         });
 
         ganar.setOnClickListener(new View.OnClickListener() {
             @Override
