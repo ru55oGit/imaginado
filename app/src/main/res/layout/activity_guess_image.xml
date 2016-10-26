@@ -9,13 +9,6 @@
     android:background="@drawable/tile"
     tools:context=".GuessImageActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/sintiempo"
-        android:id="@+id/sintiempo"
-        android:visibility="invisible" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

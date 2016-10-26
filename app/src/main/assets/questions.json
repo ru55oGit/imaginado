@@ -74,12 +74,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué director de cine norteamericano aterrorizó a los Estados Unidos con su adaptación radiofónica de 'La guerra de los mundos'?",
-      "respuesta": "Orson|Welles"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Cual es el nombre del personaje que interpreta Kristen Stewart en la saga 'Crepúsculo'?",
       "respuesta": "bella"
     }
@@ -482,7 +476,7 @@
   ,
     {
       "title": "",
-      "pregunta": "Cuerpo celeste de núcleo poco denso que suele ir rodeado de un rastro luminoso a modo de cabellera y de una prolongación denominada cola",
+      "pregunta": "Cuerpo celeste de núcleo poco denso que suele ir rodeado de un rastro luminoso",
       "respuesta": "cometa"
     }
   ,
@@ -2539,7 +2533,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Discípulo respecto de su maestro, de la materia que está aprendiendo o de la escuela, clase, colegio o universidad donde estudia",
+      "pregunta": "Discípulo respecto de su maestro, de la materia que está aprendiendo o del establecimiento donde asiste",
       "respuesta": "alumno"
     }
   ,
@@ -2569,7 +2563,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Persona que hace por su cuenta objetos de uso doméstico imprimiéndoles un sello personal, a diferencia del obrero fabril",
+      "pregunta": "Persona que hace por su cuenta objetos de uso doméstico imprimiéndoles un sello personal",
       "respuesta": "artesano"
     }
   ,
@@ -2587,18 +2581,12 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Cualquiera de las partes del cuerpo de un ser vivo que desempeñan una función diferenciada/Instrumento musical",
-      "respuesta": "organo"
-    }
-  ,
-    {
-      "title": "Definición:",
       "pregunta": "Órgano muscular hueco, impulsor de la circulación de la sangre en los vertebrados y otros animales",
       "respuesta": "corazon"
     }  ,
     {
       "title": "Definición:",
-      "pregunta": "En los aparatos telefónicos o receptores de sonido, parte o dispositivo que se aplica al oído para recibirlo",
+      "pregunta": "Dispositivo que se aplica dentro o sobre el oído para recibir sonidos",
       "respuesta": "auricular"
     }
   ,
@@ -2610,19 +2598,13 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Nombre común de la fase adulta de diversos insectos lepidópteros,con dos pares de alas membranosas,a menudo de colores vistosos",
-      "respuesta": "mariposa"
-    }
-  ,
-    {
-      "title": "Definición:",
       "pregunta": "Del mar o relativo a él",
       "respuesta": "marino"
     }
   ,
     {
       "title": "Definición:",
-      "pregunta": "Ave galliforme de cresta roja y alta, pico corto, grueso y arqueado, y unas formaciones carnosas rojas colgantes bajo el pico",
+      "pregunta": "Ave de cresta roja, pico corto, grueso y arqueado, y unas formaciones carnosas rojas colgantes bajo el pico",
       "respuesta": "gallo"
     }
   ,
@@ -2652,7 +2634,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Deporte en que dos adversarios luchan con los puños enfundados en guantes especiales, para golpear al contrario por encima de la cintura",
+      "pregunta": "Deporte en que dos adversarios luchan con los puños enfundados en guantes especiales",
       "respuesta": "boxeo"
     }  ,
     {
@@ -2681,12 +2663,6 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Cerradura contenida en una caja de metal de la que se enganchan cadenas con las que se aseguran puertas, rejas u objetos con tapa",
-      "respuesta": "candado"
-    }
-  ,
-    {
-      "title": "Definición:",
       "pregunta": "Deporte practicado entre dos equipos de once jugadores c/u, que se disputan una pelota con los pies",
       "respuesta": "futbol"
     }
@@ -2711,7 +2687,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Instrumento musical de cuerda compuesto por una caja de resonancia con un agujero central, un mástil y seis cuerdas",
+      "pregunta": "Instrumento musical de cuerda compuesto por una caja de resonancia, un mástil y seis cuerdas",
       "respuesta": "guitarra"
     }
   ,
@@ -2723,7 +2699,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Reptil escamoso de unos 30 cm de longitud, cola prensil cuya piel cambia de color para adaptarse al de los objetos que le rodean",
+      "pregunta": "Reptil escamoso de cola prensil cuya piel cambia de color para adaptarse al de los objetos que le rodean",
       "respuesta": "camaleon"
     }
   ,
@@ -2777,7 +2753,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Pieza de metal acuñada,generalmente redonda,que sirve de medida común de cambio por su valor efectivo o atribuido",
+      "pregunta": "Pieza de metal acuñada, generalmente redonda, que sirve de medida común de cambio",
       "respuesta": "moneda"
     }
   ,
@@ -2819,12 +2795,6 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Estado de quien no ha contraído matrimonio, especialmente referido al estado de los religiosos que han hecho voto de castidad",
-      "respuesta": "celibato"
-    }
-  ,
-    {
-      "title": "Definición:",
       "pregunta": "Pieza valiosa que rodea el cuello como adorno o como símbolo de distinción",
       "respuesta": "collar"
     }
@@ -2843,7 +2813,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Aro de ramas, flores, metal generalmente precioso, etc., que se coloca en la cabeza como premio, adorno o símbolo de dignidad",
+      "pregunta": "Aro que se coloca en la cabeza como premio, adorno o símbolo de dignidad",
       "respuesta": "corona"
     }
   ,
@@ -2921,7 +2891,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Vehículo blindado de combate,que se desplaza sobre dos cintas o cadenas articuladas que le permiten el acceso a todo tipo de terrenos",
+      "pregunta": "Vehículo blindado de combate,que se desplaza sobre todo tipo de terrenos",
       "respuesta": "tanque"
     }
   ,
@@ -3717,11 +3687,6 @@
     },
     {
       "title": "Personaje Marvel",
-      "pregunta": ".jpg",
-      "respuesta": ""
-    },
-    {
-      "title": "Personaje Marvel",
       "pregunta": "agentecoulson.jpg",
       "respuesta": "agente|coulson"
     },
@@ -3842,8 +3807,8 @@
     },
     {
       "title": "Personaje Marvel",
-      "pregunta": "nigthcrawler.jpg",
-      "respuesta": "nigthcrawler"
+      "pregunta": "nightcrawler.jpg",
+      "respuesta": "nightcrawler"
     },
     {
       "title": "Personaje Marvel",

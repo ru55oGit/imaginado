@@ -1,7 +1,6 @@
 package com.luckypalm.imaginados;
 
 import android.Manifest;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -42,22 +41,17 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.share.model.ShareLinkContent;
-import com.facebook.share.model.SharePhoto;
-import com.facebook.share.model.SharePhotoContent;
-import com.facebook.share.widget.MessageDialog;
 import com.facebook.share.widget.ShareDialog;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
     private RelativeLayout frameLayout;
     private ImageView imageToGuess;
-    private ImageView sinTiempo;
     // Counters variables
     private CountDownTimer timer;
     private Boolean timerFlag;
@@ -295,9 +289,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         imageToGuess.setImageResource(res);
         // obtengo la palabra que se va adivinar
         word = extras.getString("word");
-
-        // titulo sin tiempos
-        sinTiempo = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sintiempo);
 
         // volver
         volver = (ImageView) findViewById(com.luckypalm.imaginados.R.id.volver);
@@ -604,9 +595,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
             public void onFinish() {
                 // Cuando el reloj llega a cero, se cambia el mensaje
-                sinTiempo.setVisibility(View.VISIBLE);
                 counter.setText("00:00");
-                counter.setVisibility(View.INVISIBLE);
                 // Cierro el teclado cuando me quedo sin tiempo
                 inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
 
@@ -683,8 +672,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
                 dialogCustom.dismiss();
-                sinTiempo.setVisibility(View.VISIBLE);
-                counter.setVisibility(View.INVISIBLE);
             }
         });
 
