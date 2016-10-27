@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/frameCounter"
     android:background="@drawable/tile"
     tools:context=".GuessImageActivity">
@@ -16,8 +14,6 @@
         android:text="00:00"
         android:background="@drawable/borders"
         android:textStyle="bold"
-        android:layout_marginBottom="@dimen/margin_clock"
-        android:textSize="@dimen/clock_size"
         android:layout_alignParentTop="true"
         android:textColor="@color/secondaryColor"
         android:paddingBottom="3dp"
@@ -25,7 +21,9 @@
         android:paddingLeft="6dp"
         android:paddingRight="6dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp" />
+        android:textSize="@dimen/clock_size"
+        android:layout_marginBottom="@dimen/margin_clock"
+        android:layout_marginTop="@dimen/margin_clock" />
 
     <ImageView
         android:layout_width="@dimen/guessimage_size"
@@ -63,32 +61,34 @@
         android:gravity="center_horizontal"
         android:id="@+id/wordContainerThird"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="71dp"></LinearLayout>
+        android:layout_alignParentEnd="true"></LinearLayout>
 
     <ImageView
         android:id="@+id/sharetwitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/twittericon"
-        android:layout_above="@+id/wordContainerThird"
-        android:layout_alignStart="@+id/imageToGuess" />
+        android:layout_alignStart="@+id/imageToGuess"
+        android:layout_above="@+id/volver"
+        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
 
     <ImageView
         android:id="@+id/sharewsap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/whatsappicon"
-        android:layout_above="@+id/wordContainerThird"
-        android:layout_alignEnd="@+id/imageToGuess" />
+        android:layout_alignEnd="@+id/imageToGuess"
+        android:layout_above="@+id/volver"
+        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
 
     <ImageView
         android:id="@+id/sharefacebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/facebookicon"
-        android:layout_above="@+id/wordContainerThird"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/volver"
+        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
 
     <ImageView
         android:id="@+id/volver"
@@ -96,6 +96,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/volver"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
 
 </RelativeLayout>

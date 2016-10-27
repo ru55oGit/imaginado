@@ -38,10 +38,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.luckypalm.imaginados.ObtainSecondsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name="com.luckypalm.imaginados.PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"

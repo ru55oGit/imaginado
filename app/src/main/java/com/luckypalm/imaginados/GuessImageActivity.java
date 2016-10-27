@@ -411,13 +411,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (!"00:00".equalsIgnoreCase(counter.getText().toString())) {
-                BackDialog bd = new BackDialog();
-                bd.show(getFragmentManager(), "finnish");
-                timer.cancel();
-            } else {
-                finish();
-            }
+            timer.cancel();
+            finish();
             return false;
         }
 
@@ -614,7 +609,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     public String saveBitmap(Bitmap bitmap) {
-        File imagePath = new File(Environment.getExternalStorageDirectory() + "/"+ Math.random()*100000 +"_sinsegundos.jpg");
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_sinsegundos.jpg");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
