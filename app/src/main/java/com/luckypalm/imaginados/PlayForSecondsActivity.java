@@ -1,6 +1,5 @@
 package com.luckypalm.imaginados;
 
-import android.app.ActionBar;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -42,7 +41,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private ImageView imageForPlay;
     private TextView transition;
     private Boolean timerFlag;
-    private ImageView nosumaste;
     private int dim;
     private CountDownTimer timer;
     private TextView counter;
@@ -58,7 +56,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private LinearLayout ll;
     private LinearLayout ll2;
     private int gainedTime = 0;
-    private int questionsSum = 0;
+    private int errors = 0;
     private GradientDrawable gd;
     private ArrayList<Integer> random = new ArrayList<Integer>();
     InputMethodManager inputMethodManager;
@@ -84,6 +82,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         }
         Collections.shuffle(random);
         Collections.shuffle(random);
+        frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
+        toggleKeyboardVisible();
     }
 
     @Override
@@ -110,7 +110,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         question = pregResp.get(questionNumber);
 
-        frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
         // Instancio y seteo la pregunta
         preguntaTitle = (TextView) findViewById(com.luckypalm.imaginados.R.id.title);
         preguntaView = (TextView) findViewById(com.luckypalm.imaginados.R.id.question);
@@ -129,11 +128,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         preguntaView.setTypeface(lobsterFont);
         preguntaTitle.setTypeface(lobsterFont);
-
-        // Instancio y limpio el reloj de transicion
-        //transition = (TextView) findViewById(R.id.transition);
-
-        nosumaste = (ImageView) findViewById(com.luckypalm.imaginados.R.id.nosumaste);
 
         // Border radius para las letras
         gd = new GradientDrawable();
@@ -285,6 +279,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
            timer.cancel();
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
+            onResume();
             try {
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = Integer.parseInt(tiempo[1])*1000;
@@ -292,21 +287,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-            questionsSum++;
-            if (questionsSum <= 25){
-                //timerTranstion(4000);
-                onResume();
-            } else {
-                showSecondsGained(milisegundos);
-            }
         }
         return true;
     }
 
-    private void showSecondsGained(int milis) {
-        //counter.setText("Has acumulado "+ (milisegundos/1000) + " segundos.");
-        //toggleKeyboardVisible(true);
+    private void backToPlay(int milis) {
         editor.putInt("time", milisegundos);
         editor.commit();
         finish();
@@ -315,16 +300,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     /*
     *  abre/cierra el teclado
     * */
-    private void toggleKeyboardVisible (final boolean flag) {
+    private void toggleKeyboardVisible() {
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                if (flag) {
-                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 1);
-                } else {
-                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                }
             }
         });
     }
@@ -337,14 +317,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 transition.setVisibility(View.VISIBLE);
                 firstLine.setVisibility(View.INVISIBLE);
                 secondLine.setVisibility(View.INVISIBLE);
-                toggleKeyboardVisible(false);
             }
             @Override
             public void onFinish() {
                 transition.setVisibility(View.INVISIBLE);
                 firstLine.setVisibility(View.VISIBLE);
                 secondLine.setVisibility(View.VISIBLE);
-                toggleKeyboardVisible(true);
                 //onResume();
                 timer(10000);
             }
@@ -361,19 +339,16 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 counter.setText(""+String.format(FORMAT,
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
                         TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
-                nosumaste.setVisibility(View.INVISIBLE);
                 counter.setVisibility(View.VISIBLE);
             }
             public void onFinish() {
-                questionsSum++;
+                errors++;
                 // Cuando el reloj llega a cero, se cambia el mensaje
-                if (questionsSum <= 5) {
+                if (errors == 3) {
                     counter.setVisibility(View.INVISIBLE);
-                    nosumaste.setVisibility(View.VISIBLE);
-                    //timerTranstion(4000);
-                    onResume();
+                    backToPlay(milliseconds);
                 } else {
-                    showSecondsGained(milliseconds);
+                    onResume();
                 }
             }
         }.start();
