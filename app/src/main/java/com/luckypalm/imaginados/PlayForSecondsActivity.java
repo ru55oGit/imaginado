@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.luckypalm.imaginados.pojo.Question;
 
@@ -44,6 +45,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private int dim;
     private CountDownTimer timer;
     private TextView counter;
+    private TextView timeGained;
     private static final String FORMAT = "%02d:%02d";
     private static final String FORMAT_TRANSITION = "%02d";
     private int milisegundos = 0;
@@ -59,6 +61,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private int errors = 0;
     private GradientDrawable gd;
     private ArrayList<Integer> random = new ArrayList<Integer>();
+    private Typeface lobsterFont;
+    private Typeface  digifont;
     InputMethodManager inputMethodManager;
 
 
@@ -71,6 +75,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(com.luckypalm.imaginados.R.layout.activity_play_for_seconds);
+        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+        digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
 
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
@@ -83,6 +89,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         Collections.shuffle(random);
         Collections.shuffle(random);
         frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
+        timeGained = (TextView) findViewById(com.luckypalm.imaginados.R.id.chrono);
         toggleKeyboardVisible();
     }
 
@@ -94,10 +101,14 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         //timerTranstion(6000);
         aciertos = 0;
         // Instancio el reloj
-        counter = (TextView) findViewById(com.luckypalm.imaginados.R.id.counterText);
-        Typeface digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+        counter = (TextView) findViewById(R.id.counterText);
+
+
         counter.setTypeface(digifont);
         counter.setText("00:10");
+
+        timeGained.setTypeface(digifont);
+
         // Instancio el contenedor de las letras
         firstLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerFirst);
         secondLine = (LinearLayout) findViewById(com.luckypalm.imaginados.R.id.wordContainerSecond);
@@ -125,7 +136,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             imageForPlay.setVisibility(View.INVISIBLE);
             preguntaView.setText(question.getPregunta());
         }
-        Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+
         preguntaView.setTypeface(lobsterFont);
         preguntaTitle.setTypeface(lobsterFont);
 
@@ -284,9 +295,15 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = Integer.parseInt(tiempo[1])*1000;
                 milisegundos+= segundos;
+                Toast showSecondsGained = Toast.makeText(getBaseContext(),"+"+segundos/1000+"seg.",Toast.LENGTH_SHORT);
+                showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
+                showSecondsGained.show();
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            timeGained.setText(""+String.format(FORMAT,
+                    TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
+                    TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
         }
         return true;
     }
@@ -304,7 +321,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+            inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             }
         });
     }
