@@ -19,9 +19,11 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.concurrent.TimeUnit;
 
 public class SelectImagesActivity extends AppCompatActivity {
     private ImageView imagen1;
@@ -35,7 +37,10 @@ public class SelectImagesActivity extends AppCompatActivity {
     private SharedPreferences settings;
     private RelativeLayout frameLayout;
     private SharedPreferences.Editor editor;
-
+    private Typeface digifont;
+    private TextView chrono;
+    private int milisegundos;
+    private static final String FORMAT = "%02d:%02d";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,16 @@ public class SelectImagesActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.selectLayout);
+
+        // seteo el tiempo que tengo para jugar en el reloj
+        milisegundos = settings.getInt("time", 120000);
+
+        digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+        chrono = (TextView) findViewById(R.id.chrono);
+        chrono.setTypeface(digifont);
+        chrono.setText(""+String.format(FORMAT,
+                TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
+                TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
         if (("000000").equals(statusOfLevel.toString())) {

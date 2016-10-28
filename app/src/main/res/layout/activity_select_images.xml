@@ -10,7 +10,7 @@
     android:background="@color/primaryColor"
     android:id="@+id/selectLayout"
     tools:context="com.luckypalm.imaginados.SelectImagesActivity">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout"
@@ -22,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="65dp"
             android:background="@drawable/level"/>
+
         <TextView
             android:layout_width="65dp"
             android:layout_height="65dp"
@@ -30,15 +31,30 @@
             android:textSize="@dimen/label_size"
             android:background="@drawable/circle"
             android:textAlignment="center"
-            android:textColor="@color/secondaryColor" />
-    </LinearLayout>
+            android:textColor="@color/secondaryColor"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/level"
+            android:layout_toEndOf="@+id/level" />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="77dp"
+            android:background="@drawable/lightchrono"
+            android:id="@+id/chrono"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:rotation="20"
+            android:paddingTop="28dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/linearLayout">
-
 
         <ImageView
             android:layout_width="155dp"
@@ -93,6 +109,5 @@
             android:src="@drawable/paises"
             android:padding="5dp"
             android:background="@color/secondaryColor"/>
-
     </FrameLayout>
 </RelativeLayout>

@@ -46,6 +46,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private CountDownTimer timer;
     private TextView counter;
     private TextView timeGained;
+    private TextView questionCircle;
     private static final String FORMAT = "%02d:%02d";
     private static final String FORMAT_TRANSITION = "%02d";
     private int milisegundos = 0;
@@ -58,13 +59,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private LinearLayout ll;
     private LinearLayout ll2;
     private int gainedTime = 0;
-    private int errors = 0;
+    private int cantPreguntas = 1;
     private GradientDrawable gd;
     private ArrayList<Integer> random = new ArrayList<Integer>();
     private Typeface lobsterFont;
     private Typeface  digifont;
     InputMethodManager inputMethodManager;
-
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
@@ -90,6 +90,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         Collections.shuffle(random);
         frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
         timeGained = (TextView) findViewById(com.luckypalm.imaginados.R.id.chrono);
+        questionCircle = (TextView) findViewById(R.id.questionCircle);
+        questionCircle.setTypeface(lobsterFont);
+        questionCircle.setText(cantPreguntas + "/10");
+
+        timeGained.setText(""+String.format(FORMAT,
+                TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(0)),
+                TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(0))));
         toggleKeyboardVisible();
     }
 
@@ -97,12 +104,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     protected void onResume() {
         super.onResume();
         timerFlag = true;
-
-        //timerTranstion(6000);
         aciertos = 0;
         // Instancio el reloj
         counter = (TextView) findViewById(R.id.counterText);
-
 
         counter.setTypeface(digifont);
         counter.setText("00:10");
@@ -145,8 +149,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         gd.setColor(Color.WHITE);
         gd.setCornerRadius((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius));
         gd.setStroke((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_letters_guess), getResources().getColor(com.luckypalm.imaginados.R.color.secondaryColor));
-
-        //timer(11000);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
         for (int i = 0; i < question.getRespuesta().length(); i++) {
@@ -286,6 +288,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         }
         // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
         if (aciertos == question.getRespuesta().replaceAll(" ", "").replaceAll("\\|","").length()) {
+            // incremento el numero de preguntas
+            cantPreguntas++;
             // paro el reloj
            timer.cancel();
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
@@ -295,15 +299,25 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = Integer.parseInt(tiempo[1])*1000;
                 milisegundos+= segundos;
-                Toast showSecondsGained = Toast.makeText(getBaseContext(),"+"+segundos/1000+"seg.",Toast.LENGTH_SHORT);
-                showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
-                showSecondsGained.show();
+                if (cantPreguntas<10) {
+                    Toast showSecondsGained = Toast.makeText(getBaseContext(),"+"+segundos/1000+"seg.",Toast.LENGTH_SHORT);
+                    showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
+                    showSecondsGained.show();
+                    questionCircle.setText(cantPreguntas + "/10");
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
             timeGained.setText(""+String.format(FORMAT,
                     TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
                     TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
+
+            // Cuando el reloj llega a cero, se cambia el mensaje
+            if (cantPreguntas > 10) {
+                counter.setVisibility(View.INVISIBLE);
+                backToPlay(milisegundos);
+            }
+
         }
         return true;
     }
@@ -359,14 +373,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 counter.setVisibility(View.VISIBLE);
             }
             public void onFinish() {
-                errors++;
-                // Cuando el reloj llega a cero, se cambia el mensaje
-                if (errors == 3) {
-                    counter.setVisibility(View.INVISIBLE);
-                    backToPlay(milliseconds);
-                } else {
-                    onResume();
-                }
+                onResume();
             }
         }.start();
     }
