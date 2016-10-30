@@ -109,7 +109,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         counter = (TextView) findViewById(R.id.counterText);
 
         counter.setTypeface(digifont);
-        counter.setText("00:10");
+        counter.setText("00:15");
 
         timeGained.setTypeface(digifont);
 
@@ -221,7 +221,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
         if (timerFlag) {
-            timer(10000);
+            timer(15000);
             timerFlag = false;
         }
 
@@ -299,7 +299,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = Integer.parseInt(tiempo[1])*1000;
                 milisegundos+= segundos;
-                if (cantPreguntas<10) {
+                if (cantPreguntas<11) {
                     Toast showSecondsGained = Toast.makeText(getBaseContext(),"+"+segundos/1000+"seg.",Toast.LENGTH_SHORT);
                     showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
                     showSecondsGained.show();
@@ -313,7 +313,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
             // Cuando el reloj llega a cero, se cambia el mensaje
-            if (cantPreguntas > 10) {
+            if (cantPreguntas == 11) {
                 counter.setVisibility(View.INVISIBLE);
                 backToPlay(milisegundos);
             }
@@ -340,26 +340,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         });
     }
 
-    private void timerTranstion(final int milliseconds) {
-        timer = new CountDownTimer(milliseconds, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                transition.setText(""+String.format(FORMAT_TRANSITION,TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
-                transition.setVisibility(View.VISIBLE);
-                firstLine.setVisibility(View.INVISIBLE);
-                secondLine.setVisibility(View.INVISIBLE);
-            }
-            @Override
-            public void onFinish() {
-                transition.setVisibility(View.INVISIBLE);
-                firstLine.setVisibility(View.VISIBLE);
-                secondLine.setVisibility(View.VISIBLE);
-                //onResume();
-                timer(10000);
-            }
-        }.start();
-    }
-
     /**
      *  Maneja el reloj con el tiempo que se dispone para adivinar
      *  @param milliseconds tiempo en milisegundos para setear el reloj
@@ -373,6 +353,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 counter.setVisibility(View.VISIBLE);
             }
             public void onFinish() {
+                cantPreguntas++;
+                if (cantPreguntas<11) {
+                    Toast showSecondsGained = Toast.makeText(getBaseContext(),"No sumaste segundos",Toast.LENGTH_SHORT);
+                    showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
+                    showSecondsGained.show();
+                    questionCircle.setText(cantPreguntas + "/10");
+                }
                 onResume();
             }
         }.start();
@@ -381,7 +368,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     // en el back abro un popup, en el aceptar termino el activity
     @Override
     public void onDialogPositiveClick(DialogFragment dialog) {
-        finish();
+        backToPlay(milisegundos);
     }
     // en el back abro un popup, en el cancelar sigo con el timer
     @Override

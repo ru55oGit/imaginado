@@ -401,7 +401,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     public boolean onKeyDown (int keyCode, KeyEvent event){
         // arranco el timer cuando arriesga la primer tecla
         if (timerFlag) {
-            milisegundos = settings.getInt("time", 60000);
+            milisegundos = settings.getInt("time", 120000);
             timer(milisegundos);
             timerFlag = false;
         }
@@ -412,6 +412,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             timer.cancel();
+            editor.putInt("time", milisegundos);
+            editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
+            editor.commit();
             finish();
             return false;
         }
