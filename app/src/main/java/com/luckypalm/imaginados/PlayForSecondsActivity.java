@@ -154,7 +154,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         for (int i = 0; i < question.getRespuesta().length(); i++) {
             letter = new TextView(this);
             if (Character.isWhitespace(question.getRespuesta().charAt(i))) {
-                letter.setText(" ");
+                letter.setText("");
             } else {
                 letter.setText("__");
                 letter.setAllCaps(true);
@@ -359,6 +359,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
                     showSecondsGained.show();
                     questionCircle.setText(cantPreguntas + "/10");
+                } else {
+                    backToPlay(milisegundos);
                 }
                 onResume();
             }

@@ -300,9 +300,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (timer != null) {
-                    timer.cancel();
-                }
+                closeAndSave();
                 finish();
             }
         });
@@ -375,6 +373,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (toast != null) {
             toast.cancel();
         }
+
+        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+
+        finish();
+    }
+
+    private void closeAndSave() {
         if (timer != null) {
             timer.cancel();
         }
@@ -388,14 +393,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 // guardo los segundos totales para ser usados en la proxima palabra
                 settings = getSharedPreferences("Status", 0);
                 editor.putInt("time", milisegundos);
-                editor.commit();
+                if (editor.commit()) {
+                    finish();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+        } else {
 
-        finish();
+        }
+
     }
 
     // maneja la presion de las teclas
@@ -413,11 +420,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            timer.cancel();
-            editor.putInt("time", milisegundos);
-            editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
-            editor.commit();
-            finish();
+            closeAndSave();
             return false;
         }
 

@@ -76,14 +76,14 @@ public class SelectImagesActivity extends AppCompatActivity {
                 TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
-        if (("000000").equals(statusOfLevel.toString())) {
+        //if (("000000").equals(statusOfLevel.toString())) {
             imagen1.setImageResource(getResources().getIdentifier("acertijos", "drawable", getPackageName()));
             imagen2.setImageResource(getResources().getIdentifier("escudosfutbol", "drawable", getPackageName()));
             imagen3.setImageResource(getResources().getIdentifier("logos", "drawable", getPackageName()));
             imagen4.setImageResource(getResources().getIdentifier("iconospeliculas", "drawable", getPackageName()));
             imagen5.setImageResource(getResources().getIdentifier("personajesanimados", "drawable", getPackageName()));
             imagen6.setImageResource(getResources().getIdentifier("paises", "drawable", getPackageName()));
-        }
+        //}
 
         level = settings.getString("level", "1");
 
