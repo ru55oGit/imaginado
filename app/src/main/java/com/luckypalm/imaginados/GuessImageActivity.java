@@ -267,6 +267,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+        finish();
     }
 
     @Override
@@ -627,12 +628,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }.start();
     }
 
+    // Devuelvo un Bitmap con un screenshot
     public Bitmap takeScreenshot() {
         View rootView = findViewById(android.R.id.content).getRootView();
         rootView.setDrawingCacheEnabled(true);
         return rootView.getDrawingCache();
     }
-
+    // retorno la ruta del screenshot
     public String saveBitmap(Bitmap bitmap) {
         File imagePath = new File(Environment.getExternalStorageDirectory() + "/_sinsegundos.jpg");
         FileOutputStream fos;
@@ -680,56 +682,65 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-            if (verifyStoragePermissions(GuessImageActivity.this)) {
-                String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
+                if (verifyStoragePermissions(GuessImageActivity.this)) {
+                    String sharedDescription =  getResources().getString(R.string.generic_share_text);
+                    String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
 
-                if (ShareDialog.canShow(ShareLinkContent.class)) {
-                    ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
-                            .setContentTitle("Imaginados")
-                            .setContentDescription(sharedDescription)
-                            .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
-                            .setImageUrl(Uri.parse(sharedImage))
-                            .build();
-                    shareDialog.show(shareLinkContent);
+                    if (ShareDialog.canShow(ShareLinkContent.class)) {
+                        ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
+                                .setContentTitle("Imaginados")
+                                .setContentDescription(sharedDescription)
+                                .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
+                                .setImageUrl(Uri.parse(sharedImage))
+                                .build();
+                        shareDialog.show(shareLinkContent);
+                    }
+                    milisegundos+= 30000;
+                    editor.putInt("time", milisegundos);
+                    editor.commit();
                 }
-            }
             }
         });
 
         shareTwit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-            if (verifyStoragePermissions(GuessImageActivity.this)) {
-                Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
-                String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
+                if (verifyStoragePermissions(GuessImageActivity.this)) {
+                    Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
+                    String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
 
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                sharingIntent.setType("image/png");
-                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                    sharingIntent.setType("image/png");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
 
-                sharingIntent.setPackage("com.twitter.android");
-                startActivity(sharingIntent);
-            }
+                    sharingIntent.setPackage("com.twitter.android");
+                    startActivity(sharingIntent);
+                    milisegundos+= 30000;
+                    editor.putInt("time", milisegundos);
+                    editor.commit();
+                }
             }
         });
 
         shareWsap.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-             if (verifyStoragePermissions(GuessImageActivity.this)) {
-                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                 Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
-                 Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
-                 String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
-                 sharingIntent.setPackage("com.whatsapp");
-                 sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-                 sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                 sharingIntent.setType("image/*");
+                 if (verifyStoragePermissions(GuessImageActivity.this)) {
+                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                     Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
+                     Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
+                     String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
+                     sharingIntent.setPackage("com.whatsapp");
+                     sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                     sharingIntent.setType("image/*");
 
-                 startActivity(sharingIntent);
-             }
+                     startActivity(sharingIntent);
+                     milisegundos+= 30000;
+                     editor.putInt("time", milisegundos);
+                     editor.commit();
+                 }
              }
          });
 

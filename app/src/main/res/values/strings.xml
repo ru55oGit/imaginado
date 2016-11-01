@@ -11,6 +11,6 @@
     <string name="facebook_app_id">315657302130813</string>
     <string name="sin_tiempo_comprar">Te quedaste sin segundos, puedes conseguir más tiempo comprando aquí...</string>
     <string name="sin_tiempo_jugar">...o responde unas preguntas y acumula segundos contestando...</string>
-    <string name="sin_tiempo_compartir">O comparte en redes sociales y consigue segundos.</string>
+    <string name="sin_tiempo_compartir">O comparte en redes sociales y consigue 30 segundos.</string>
     <string name="generic_share_text">¿Tenés buena memoria? ¿Puedes resolver estas trivias?</string>
 </resources>
