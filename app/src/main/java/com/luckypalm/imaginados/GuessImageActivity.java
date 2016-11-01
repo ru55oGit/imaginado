@@ -230,31 +230,33 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                String shareText = new String();
+                if (verifyStoragePermissions(GuessImageActivity.this)) {
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                    String shareText = new String();
 
-                if (uri.contains("adivinanzas")) {
-                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
-                } else if (uri.contains("banderas")) {
-                    shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
-                } else if (uri.contains("escudos")) {
-                    shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
-                } else if (uri.contains("marcas")) {
-                    shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
-                } else if (uri.contains("peliculas")) {
-                    shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
-                } else if (uri.contains("personajes")) {
-                    shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
+                    if (uri.contains("adivinanzas")) {
+                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
+                    } else if (uri.contains("banderas")) {
+                        shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
+                    } else if (uri.contains("escudos")) {
+                        shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
+                    } else if (uri.contains("marcas")) {
+                        shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
+                    } else if (uri.contains("peliculas")) {
+                        shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
+                    } else if (uri.contains("personajes")) {
+                        shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
+                    }
+
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                    sharingIntent.setType("image/png");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                    sharingIntent.setType("text/plain");
+
+                    sharingIntent.setPackage("com.twitter.android");
+                    startActivity(sharingIntent);
                 }
-
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                sharingIntent.setType("image/png");
-                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-                sharingIntent.setType("text/plain");
-
-                sharingIntent.setPackage("com.twitter.android");
-                startActivity(sharingIntent);
             }
         });
     }
@@ -298,9 +300,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (timer != null) {
-                    timer.cancel();
-                }
+                closeAndSave();
                 finish();
             }
         });
@@ -373,6 +373,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (toast != null) {
             toast.cancel();
         }
+
+        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+
+        finish();
+    }
+
+    private void closeAndSave() {
         if (timer != null) {
             timer.cancel();
         }
@@ -386,14 +393,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 // guardo los segundos totales para ser usados en la proxima palabra
                 settings = getSharedPreferences("Status", 0);
                 editor.putInt("time", milisegundos);
-                editor.commit();
+                if (editor.commit()) {
+                    finish();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
-        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+        } else {
 
-        finish();
+        }
+
     }
 
     // maneja la presion de las teclas
@@ -401,7 +410,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     public boolean onKeyDown (int keyCode, KeyEvent event){
         // arranco el timer cuando arriesga la primer tecla
         if (timerFlag) {
-            milisegundos = settings.getInt("time", 60000);
+            milisegundos = settings.getInt("time", 120000);
             timer(milisegundos);
             timerFlag = false;
         }
@@ -411,8 +420,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            timer.cancel();
-            finish();
+            closeAndSave();
             return false;
         }
 
@@ -655,6 +663,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+            if (verifyStoragePermissions(GuessImageActivity.this)) {
                 String sharedDescription =  getResources().getString(R.string.generic_share_text);
                 String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
 
@@ -668,11 +677,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     shareDialog.show(shareLinkContent);
                 }
             }
+            }
         });
 
         shareTwit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+            if (verifyStoragePermissions(GuessImageActivity.this)) {
                 Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
                 String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
 
@@ -684,11 +695,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 sharingIntent.setPackage("com.twitter.android");
                 startActivity(sharingIntent);
             }
+            }
         });
 
         shareWsap.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+             if (verifyStoragePermissions(GuessImageActivity.this)) {
                  Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                  Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
                  Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
@@ -699,6 +712,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                  sharingIntent.setType("image/*");
 
                  startActivity(sharingIntent);
+             }
              }
          });
 

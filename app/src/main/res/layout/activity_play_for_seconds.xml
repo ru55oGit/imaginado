@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/counterText"
-            android:text="00:10"
+            android:text="00:15"
             android:background="@drawable/borders"
             android:textStyle="bold"
             android:textSize="@dimen/clock_size"

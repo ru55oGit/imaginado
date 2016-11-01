@@ -218,7 +218,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué famoso oso vive en el Parque Yelloestone?",
+      "pregunta": "¿Qué famoso oso vive en el Parque Yellowstone?",
       "respuesta": "Yogi"
     }
   ,
@@ -1869,12 +1869,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿3333 / 1111 - 3 + 1?",
-      "respuesta": "1"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿64 / 8 - 8 + 64?",
       "respuesta": "64"
     }
@@ -2158,7 +2152,7 @@
     {
       "title": "¿Cuál es la capital?",
       "pregunta": "banderas58.jpg",
-      "respuesta": "san salvador"
+      "respuesta": "san|salvador"
     }
   ,
     {
@@ -2497,7 +2491,7 @@
   ,
     {
       "title": "Definición:",
-      "pregunta": "Expresión o manifestación contraria a lo que se sabe,se cree o se piensa",
+      "pregunta": "Opuesto a la verdad",
       "respuesta": "mentira"
     }
   ,
@@ -3080,7 +3074,7 @@
     {
       "title": "",
       "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
-      "respuesta": "45"
+      "respuesta": "41"
     }
   ,
     {
