@@ -2,6 +2,455 @@
   "preguntas": [
     {
       "title": "",
+      "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
+      "respuesta": "41"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿5 x 5 + 5 - 5 / 5?",
+      "respuesta": "29"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿12 x 12?",
+      "respuesta": "144"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿(1 + 4) * (5) + 5?",
+      "respuesta": "30"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿6 x 6 -6 + 16 / 2?",
+      "respuesta": "38"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿10 x 10 + 10 / 10?",
+      "respuesta": "101"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿9 x 9 + 9 + 9 + 9 / 9 + 9?",
+      "respuesta": "109"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿2 + 2 x 2 - 2 / 2 + 22?",
+      "respuesta": "27"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿4 - 4 / 4 + 4 + 4 + 4 x 4?",
+      "respuesta": "27"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿7 x 7 + 7 / 7 + 7 x 1 - 7?",
+      "respuesta": "50"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿3 - 3 + 3 x 3 x 3 + 3?",
+      "respuesta": "30"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿8 x 8 + 8 + 8 + 8 - 88 + 8?",
+      "respuesta": "8"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿2 x 4 + 6 + 8 x 10?",
+      "respuesta": "94"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿3 / 3 x 4 / 4 x 5 / 5?",
+      "respuesta": "1"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿1 + 2 + 3 x 4 + 5 x 6 - 7?",
+      "respuesta": "38"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿9 - 8 - 7 + 6 + 5 + 4 + 3 - 2 - 1?",
+      "respuesta": "9"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿1 + 1 + 1 - 1 + 1 x 1 - 1 + 1?",
+      "respuesta": "3"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿2,5 + 3,5 + 4,5 - 0,5?",
+      "respuesta": "10"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿64 / 8 - 8 + 64?",
+      "respuesta": "64"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿3 x 6 - (3 + 3 + 3)?",
+      "respuesta": "9"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿2 + 2 + 2 - 2 + 2 + 2 - 2 x 2?",
+      "respuesta": "4"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿(6 x 7 + 3) / 9?",
+      "respuesta": "5"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿7 x 7 - 38?",
+      "respuesta": "11"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas1.jpg",
+      "respuesta": "buenos|aires"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas2.jpg",
+      "respuesta": "washington"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas3.jpg",
+      "respuesta": "pekin"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas4.jpg",
+      "respuesta": "moscu"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas5.jpg",
+      "respuesta": "berlin"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas6.jpg",
+      "respuesta": "roma"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas7.jpg",
+      "respuesta": "paris"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas8.jpg",
+      "respuesta": "tokio"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas9.jpg",
+      "respuesta": "canberra"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas10.jpg",
+      "respuesta": "seul"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas11.jpg",
+      "respuesta": "budapest"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas12.jpg",
+      "respuesta": "amsterdam"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas13.jpg",
+      "respuesta": "montevideo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas14.jpg",
+      "respuesta": "Wellington"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas15.jpg",
+      "respuesta": "brasilia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas19.jpg",
+      "respuesta": "ottawa"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas20.jpg",
+      "respuesta": "varsovia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas21.jpg",
+      "respuesta": "bogota"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas22.jpg",
+      "respuesta": "la habana"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas23.jpg",
+      "respuesta": "berna"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas24.jpg",
+      "respuesta": "bruselas"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas25.jpg",
+      "respuesta": "atenas"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas26.jpg",
+      "respuesta": "bangkok"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas28.jpg",
+      "respuesta": "kingston"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas29.jpg",
+      "respuesta": "teheran"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas31.jpg",
+      "respuesta": "estocolmo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas32.jpg",
+      "respuesta": "kiev"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas33.jpg",
+      "respuesta": "copenhague"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas36.jpg",
+      "respuesta": "praga"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas37.jpg",
+      "respuesta": "bucarest"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas40.jpg",
+      "respuesta": "hanoi"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas42.jpg",
+      "respuesta": "nasau"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas46.jpg",
+      "respuesta": "rabat"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas47.jpg",
+      "respuesta": "yaunde"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas48.jpg",
+      "respuesta": "edimburgo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas49.jpg",
+      "respuesta": "nicosia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas50.jpg",
+      "respuesta": "Nueva|Delhi"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas51.jpg",
+      "respuesta": "panama"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas52.jpg",
+      "respuesta": "argel"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas53.jpg",
+      "respuesta": "asuncion"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas54.jpg",
+      "respuesta": "el cairo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas55.jpg",
+      "respuesta": "san jose"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas56.jpg",
+      "respuesta": "lisboa"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas74.jpg",
+      "respuesta": "jerusalen"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas58.jpg",
+      "respuesta": "san|salvador"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas75.jpg",
+      "respuesta": "sofia"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas70.jpg",
+      "respuesta": "ankara"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas71.jpg",
+      "respuesta": "santiago|de chile"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas72.jpg",
+      "respuesta": "dublin"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas73.jpg",
+      "respuesta": "oslo"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas77.jpg",
+      "respuesta": "helsinki"
+    }
+  ,
+    {
+      "title": "¿Cuál es la capital?",
+      "pregunta": "banderas68.jpg",
+      "respuesta": "viena"
+    },
+    {
+      "title": "",
       "pregunta": "¿Cuál es el ojo defectuoso de Popeye?",
       "respuesta": "derecho"
     }
@@ -48,18 +497,7 @@
       "respuesta": "Africa"
     }
   ,
-    {
-      "title": "",
-      "pregunta": "¿5 x 5 + 5 - 5 / 5?",
-      "respuesta": "29"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿12 x 12?",
-      "respuesta": "144"
-    }
-  ,
+
     {
       "title": "",
       "pregunta": "¿Como se llama el personaje de Leonardo Di Caprio en Titanic?",
@@ -548,12 +986,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el ave que camina más rápido?",
-      "respuesta": "correcaminos"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Qué número esta rodeado por todos los demás en el teclado de un celular?",
       "respuesta": "5"
     }
@@ -902,12 +1334,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿(1 + 4) * (5) + 5?",
-      "respuesta": "30"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué país viven los lusitanos?",
       "respuesta": "portugal"
     }
@@ -916,205 +1342,6 @@
       "title": "",
       "pregunta": "¿Cómo  se llama el agujero de los volcanes?",
       "respuesta": "crater"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "damon.jpg",
-      "respuesta": "matt|damon"
-    }
-  ,
-
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "djokovic.jpg",
-      "respuesta": "novak|djokovic"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "federer.jpg",
-      "respuesta": "roger|federer"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "mjackson.jpg",
-      "respuesta": "michael|jackson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "neymar.jpg",
-      "respuesta": "neymar jr"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "gibson.jpg",
-      "respuesta": "mel|gibson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "steventyler.jpg",
-      "respuesta": "steven|tyler"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "salmahayek.jpg",
-      "respuesta": "salma|hayek"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "reeves.jpg",
-      "respuesta": "keanu|reeves"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "emmawatson.jpg",
-      "respuesta": "emma|watson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "blakelively.jpg",
-      "respuesta": "blake|lively"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "scarlet.jpg",
-      "respuesta": "scarlet|johansson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "statham.jpg",
-      "respuesta": "jason|statham"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "blunt.jpg",
-      "respuesta": "emily|blunt"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "tarantino.jpg",
-      "respuesta": "quentin|tarantino"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "denzel.jpg",
-      "respuesta": "denzel|washington"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "zacefron.jpg",
-      "respuesta": "zac|efron"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "stallone.jpg",
-      "respuesta": "sylvester|stallone"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "gere.jpg",
-      "respuesta": "richard|gere"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "willis.jpg",
-      "respuesta": "bruce|willis"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "axlrose.jpg",
-      "respuesta": "axl|rose"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "jagger.jpg",
-      "respuesta": "mick|jagger"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "shakira.jpg",
-      "respuesta": "shakira"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "presley.jpg",
-      "respuesta": "elvis|presley"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "rickymartin.jpg",
-      "respuesta": "ricky|martin"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "fredymercury.jpg",
-      "respuesta": "freddie|mercury"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "amy.jpg",
-      "respuesta": "amy|winehouse"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "billgates.jpg",
-      "respuesta": "bill|gates"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "muhammadali.jpg",
-      "respuesta": "muhammad|ali"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "einstein.jpg",
-      "respuesta": "albert|einstein"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "franciscoi.jpg",
-      "respuesta": "papa|francisco"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "cristiano.jpg",
-      "respuesta": "cristiano|ronaldo"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "dicaprio.jpg",
-      "respuesta": "leonardo|dicaprio"
     }
   ,
     {
@@ -1133,150 +1360,6 @@
       "title": "",
       "pregunta": "¿Cuál es el código internacional para Cuba?",
       "respuesta": "CU"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "messi.jpg",
-      "respuesta": "lionel|messi"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "angelina.jpg",
-      "respuesta": "angelina|jolie"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "sandler.jpg",
-      "respuesta": "adam|sandler"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "jlopez.jpg",
-      "respuesta": "jennifer|lopez"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "perry.jpg",
-      "respuesta": "katy|perry"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "gaga.jpg",
-      "respuesta": "lady|gaga"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "rihanna.jpg",
-      "respuesta": "rihanna"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "downeyjr.jpg",
-      "respuesta": "robert|downey jr"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "wsmith.jpg",
-      "respuesta": "will|smith"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "dwayne.jpg",
-      "respuesta": "Dwayne|Johnson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "nadal.jpg",
-      "respuesta": "rafa|nadal"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "anniston.jpg",
-      "respuesta": "jennifer|aniston"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "stewart.jpg",
-      "respuesta": "kristen|stewart"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "bullock.jpg",
-      "respuesta": "sandra|bullock"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "jackman.jpg",
-      "respuesta": "hugh|jackman"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "cruise.jpg",
-      "respuesta": "tom|cruise"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "affleck.jpg",
-      "respuesta": "ben|affleck"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "mperry.jpg",
-      "respuesta": "matthew|perry"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "sheen.jpg",
-      "respuesta": "charlie|sheen"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "kutcher.jpg",
-      "respuesta": "ashton|kutcher"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "theron.jpg",
-      "respuesta": "Charlize|Theron"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "cooper.jpg",
-      "respuesta": "bradley|cooper"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "wahlberg.jpg",
-      "respuesta": "mark|wahlberg"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "hemsworth.jpg",
-      "respuesta": "chris|hemsworth"
     }
   ,
     {
@@ -1355,12 +1438,6 @@
       "title": "",
       "pregunta": "¿Cuál es el planeta más caluroso del sistema solar?",
       "respuesta": "Venus"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿Qué tortuga llevaba el pañuelo naranja en 'Las tortugas ninja'?",
-      "respuesta": "Michelangelo"
     }
   ,
     {
@@ -1487,714 +1564,6 @@
       "title": "",
       "pregunta": "¿Cuántas monedas le pagaron a Judas por entregar a Cristo?",
       "respuesta": "30"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "lennon.jpg",
-      "respuesta": "john|lennon"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "maradona.jpg",
-      "respuesta": "diego|maradona"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "djokovic.jpg",
-      "respuesta": "novak|djokovic"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "federer.jpg",
-      "respuesta": "roger|federer"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "delpo.jpg",
-      "respuesta": "juan martin|del potro"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "mjackson.jpg",
-      "respuesta": "michael|jackson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "neymar.jpg",
-      "respuesta": "neymar jr"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "gibson.jpg",
-      "respuesta": "mel|gibson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "steventyler.jpg",
-      "respuesta": "steven|tyler"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "livtyler.jpg",
-      "respuesta": "liv|tyler"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "salmahayek.jpg",
-      "respuesta": "salma|hayek"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "reeves.jpg",
-      "respuesta": "keanu|reeves"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "emmawatson.jpg",
-      "respuesta": "emma|watson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "scarlet.jpg",
-      "respuesta": "scarlet|johansson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "statham.jpg",
-      "respuesta": "jason|statham"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "deep.jpg",
-      "respuesta": "johnny|deep"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "cdiaz.jpg",
-      "respuesta": "cameron|diaz"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "hanks.jpg",
-      "respuesta": "tom|hanks"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "mcadams.jpg",
-      "respuesta": "rachel|mcadams"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "pitt.jpg",
-      "respuesta": "brad|pitt"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "allen.jpg",
-      "respuesta": "woody|allen"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "tyson.jpg",
-      "respuesta": "mike|tyson"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "cage.jpg",
-      "respuesta": "nicolas|cage"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "aaronpaul.jpg",
-      "respuesta": "aaron|paul"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "ryangosling.jpg",
-      "respuesta": "ryan|gosling"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "christianbale.jpg",
-      "respuesta": "christian|bale"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "reynolds.jpg",
-      "respuesta": "ryan|reynolds"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "deniro.jpg",
-      "respuesta": "robert|de niro"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "denzel.jpg",
-      "respuesta": "denzel|washington"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "zacefron.jpg",
-      "respuesta": "zac|efron"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "stallone.jpg",
-      "respuesta": "sylvester|stallone"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "gere.jpg",
-      "respuesta": "richard|gere"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "axlrose.jpg",
-      "respuesta": "axl|rose"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "jagger.jpg",
-      "respuesta": "mick|jagger"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "shakira.jpg",
-      "respuesta": "shakira"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "presley.jpg",
-      "respuesta": "elvis|presley"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "bowie.jpg",
-      "respuesta": "david|bowie"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "rickymartin.jpg",
-      "respuesta": "ricky|martin"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "fredymercury.jpg",
-      "respuesta": "freddie|mercury"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "amy.jpg",
-      "respuesta": "amy|winehouse"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "billgates.jpg",
-      "respuesta": "bill|gates"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "muhammadali.jpg",
-      "respuesta": "muhammad|ali"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "gandi.jpg",
-      "respuesta": "mahatma|gandhi"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "franciscoi.jpg",
-      "respuesta": "papa|francisco"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "evita.jpg",
-      "respuesta": "evita"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "jordan.jpg",
-      "respuesta": "michael|jordan"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿6 x 6 -6 + 16 / 2?",
-      "respuesta": "38"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿10 x 10 + 10 / 10?",
-      "respuesta": "101"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿9 x 9 + 9 + 9 + 9 / 9 + 9?",
-      "respuesta": "109"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿2 + 2 x 2 - 2 / 2 + 22?",
-      "respuesta": "27"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿4 - 4 / 4 + 4 + 4 + 4 x 4?",
-      "respuesta": "27"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿7 x 7 + 7 / 7 + 7 x 1 - 7?",
-      "respuesta": "50"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿3 - 3 + 3 x 3 x 3 + 3?",
-      "respuesta": "30"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿8 x 8 + 8 + 8 + 8 - 88 + 8?",
-      "respuesta": "8"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿2 x 4 + 6 + 8 x 10?",
-      "respuesta": "94"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿3 / 3 x 4 / 4 x 5 / 5?",
-      "respuesta": "1"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "marilin.jpg",
-      "respuesta": "marilyn|monroe"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "kravitz.jpg",
-      "respuesta": "lenny|kravitz"
-    }
-  ,
-    {
-      "title": "¿Cómo se llama?",
-      "pregunta": "jobs.jpg",
-      "respuesta": "steve|jobs"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿1 + 2 + 3 x 4 + 5 x 6 - 7?",
-      "respuesta": "38"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿9 - 8 - 7 + 6 + 5 + 4 + 3 - 2 - 1?",
-      "respuesta": "9"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿1 + 1 + 1 - 1 + 1 x 1 - 1 + 1?",
-      "respuesta": "3"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿2,5 + 3,5 + 4,5 - 0,5?",
-      "respuesta": "10"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿64 / 8 - 8 + 64?",
-      "respuesta": "64"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿3 x 6 - (3 + 3 + 3)?",
-      "respuesta": "9"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿2 + 2 + 2 - 2 + 2 + 2 - 2 x 2?",
-      "respuesta": "4"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas1.jpg",
-      "respuesta": "buenos|aires"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas2.jpg",
-      "respuesta": "washington"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas3.jpg",
-      "respuesta": "pekin"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas4.jpg",
-      "respuesta": "moscu"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas5.jpg",
-      "respuesta": "berlin"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas6.jpg",
-      "respuesta": "roma"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas7.jpg",
-      "respuesta": "paris"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas8.jpg",
-      "respuesta": "tokio"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas9.jpg",
-      "respuesta": "canberra"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas10.jpg",
-      "respuesta": "seul"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas11.jpg",
-      "respuesta": "budapest"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas12.jpg",
-      "respuesta": "amsterdam"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas13.jpg",
-      "respuesta": "montevideo"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas14.jpg",
-      "respuesta": "Wellington"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas15.jpg",
-      "respuesta": "brasilia"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas19.jpg",
-      "respuesta": "ottawa"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas20.jpg",
-      "respuesta": "varsovia"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas21.jpg",
-      "respuesta": "bogota"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas22.jpg",
-      "respuesta": "la habana"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas23.jpg",
-      "respuesta": "berna"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas24.jpg",
-      "respuesta": "bruselas"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas25.jpg",
-      "respuesta": "atenas"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas26.jpg",
-      "respuesta": "bangkok"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas28.jpg",
-      "respuesta": "kingston"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas29.jpg",
-      "respuesta": "teheran"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas31.jpg",
-      "respuesta": "estocolmo"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas32.jpg",
-      "respuesta": "kiev"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas33.jpg",
-      "respuesta": "copenhague"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas36.jpg",
-      "respuesta": "praga"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas37.jpg",
-      "respuesta": "bucarest"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas40.jpg",
-      "respuesta": "hanoi"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas42.jpg",
-      "respuesta": "nasau"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas46.jpg",
-      "respuesta": "rabat"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas47.jpg",
-      "respuesta": "yaunde"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas48.jpg",
-      "respuesta": "edimburgo"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas49.jpg",
-      "respuesta": "nicosia"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas50.jpg",
-      "respuesta": "Nueva|Delhi"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas51.jpg",
-      "respuesta": "panama"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas52.jpg",
-      "respuesta": "argel"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas53.jpg",
-      "respuesta": "asuncion"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas54.jpg",
-      "respuesta": "el cairo"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas55.jpg",
-      "respuesta": "san jose"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas56.jpg",
-      "respuesta": "lisboa"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas74.jpg",
-      "respuesta": "jerusalen"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas58.jpg",
-      "respuesta": "san|salvador"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas75.jpg",
-      "respuesta": "sofia"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas70.jpg",
-      "respuesta": "ankara"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas71.jpg",
-      "respuesta": "santiago|de chile"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas72.jpg",
-      "respuesta": "dublin"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas73.jpg",
-      "respuesta": "oslo"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas77.jpg",
-      "respuesta": "helsinki"
-    }
-  ,
-    {
-      "title": "¿Cuál es la capital?",
-      "pregunta": "banderas68.jpg",
-      "respuesta": "viena"
     }
   ,
     {
@@ -3073,12 +2442,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
-      "respuesta": "41"
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿Con cuántos países limita Argentina?",
       "respuesta": "5"
     }
@@ -3292,18 +2655,6 @@
       "title": "",
       "pregunta": "¿Miedo a qué produce la hemofobia?",
       "respuesta": "sangre"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿(6 x 7 + 3) / 9?",
-      "respuesta": "5"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿7 x 7 - 38?",
-      "respuesta": "11"
     }
   ,
     {
@@ -3847,6 +3198,642 @@
       "title": "Personaje Marvel",
       "pregunta": "wolverine.jpg",
       "respuesta": "wolverine"
+    }
+    ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "damon.jpg",
+      "respuesta": "matt|damon"
+    }
+  ,
+
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "djokovic.jpg",
+      "respuesta": "novak|djokovic"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "federer.jpg",
+      "respuesta": "roger|federer"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "mjackson.jpg",
+      "respuesta": "michael|jackson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "neymar.jpg",
+      "respuesta": "neymar jr"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "gibson.jpg",
+      "respuesta": "mel|gibson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "steventyler.jpg",
+      "respuesta": "steven|tyler"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "salmahayek.jpg",
+      "respuesta": "salma|hayek"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "reeves.jpg",
+      "respuesta": "keanu|reeves"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "emmawatson.jpg",
+      "respuesta": "emma|watson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "blakelively.jpg",
+      "respuesta": "blake|lively"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "scarlet.jpg",
+      "respuesta": "scarlet|johansson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "statham.jpg",
+      "respuesta": "jason|statham"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "blunt.jpg",
+      "respuesta": "emily|blunt"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "tarantino.jpg",
+      "respuesta": "quentin|tarantino"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "denzel.jpg",
+      "respuesta": "denzel|washington"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "zacefron.jpg",
+      "respuesta": "zac|efron"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "stallone.jpg",
+      "respuesta": "sylvester|stallone"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "gere.jpg",
+      "respuesta": "richard|gere"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "willis.jpg",
+      "respuesta": "bruce|willis"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "axlrose.jpg",
+      "respuesta": "axl|rose"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "jagger.jpg",
+      "respuesta": "mick|jagger"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "shakira.jpg",
+      "respuesta": "shakira"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "presley.jpg",
+      "respuesta": "elvis|presley"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "rickymartin.jpg",
+      "respuesta": "ricky|martin"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "fredymercury.jpg",
+      "respuesta": "freddie|mercury"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "amy.jpg",
+      "respuesta": "amy|winehouse"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "billgates.jpg",
+      "respuesta": "bill|gates"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "muhammadali.jpg",
+      "respuesta": "muhammad|ali"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "einstein.jpg",
+      "respuesta": "albert|einstein"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "franciscoi.jpg",
+      "respuesta": "papa|francisco"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "cristiano.jpg",
+      "respuesta": "cristiano|ronaldo"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "dicaprio.jpg",
+      "respuesta": "leonardo|dicaprio"
+    }  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "messi.jpg",
+      "respuesta": "lionel|messi"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "angelina.jpg",
+      "respuesta": "angelina|jolie"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "sandler.jpg",
+      "respuesta": "adam|sandler"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "jlopez.jpg",
+      "respuesta": "jennifer|lopez"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "perry.jpg",
+      "respuesta": "katy|perry"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "gaga.jpg",
+      "respuesta": "lady|gaga"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "rihanna.jpg",
+      "respuesta": "rihanna"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "downeyjr.jpg",
+      "respuesta": "robert|downey jr"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "wsmith.jpg",
+      "respuesta": "will|smith"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "dwayne.jpg",
+      "respuesta": "Dwayne|Johnson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "nadal.jpg",
+      "respuesta": "rafa|nadal"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "anniston.jpg",
+      "respuesta": "jennifer|aniston"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "stewart.jpg",
+      "respuesta": "kristen|stewart"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "bullock.jpg",
+      "respuesta": "sandra|bullock"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "jackman.jpg",
+      "respuesta": "hugh|jackman"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "cruise.jpg",
+      "respuesta": "tom|cruise"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "affleck.jpg",
+      "respuesta": "ben|affleck"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "mperry.jpg",
+      "respuesta": "matthew|perry"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "sheen.jpg",
+      "respuesta": "charlie|sheen"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "kutcher.jpg",
+      "respuesta": "ashton|kutcher"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "theron.jpg",
+      "respuesta": "Charlize|Theron"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "cooper.jpg",
+      "respuesta": "bradley|cooper"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "wahlberg.jpg",
+      "respuesta": "mark|wahlberg"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "hemsworth.jpg",
+      "respuesta": "chris|hemsworth"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "lennon.jpg",
+      "respuesta": "john|lennon"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "maradona.jpg",
+      "respuesta": "diego|maradona"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "djokovic.jpg",
+      "respuesta": "novak|djokovic"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "federer.jpg",
+      "respuesta": "roger|federer"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "delpo.jpg",
+      "respuesta": "juan martin|del potro"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "mjackson.jpg",
+      "respuesta": "michael|jackson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "neymar.jpg",
+      "respuesta": "neymar jr"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "gibson.jpg",
+      "respuesta": "mel|gibson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "steventyler.jpg",
+      "respuesta": "steven|tyler"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "livtyler.jpg",
+      "respuesta": "liv|tyler"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "salmahayek.jpg",
+      "respuesta": "salma|hayek"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "reeves.jpg",
+      "respuesta": "keanu|reeves"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "emmawatson.jpg",
+      "respuesta": "emma|watson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "scarlet.jpg",
+      "respuesta": "scarlet|johansson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "statham.jpg",
+      "respuesta": "jason|statham"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "deep.jpg",
+      "respuesta": "johnny|deep"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "cdiaz.jpg",
+      "respuesta": "cameron|diaz"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "hanks.jpg",
+      "respuesta": "tom|hanks"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "mcadams.jpg",
+      "respuesta": "rachel|mcadams"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "pitt.jpg",
+      "respuesta": "brad|pitt"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "allen.jpg",
+      "respuesta": "woody|allen"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "tyson.jpg",
+      "respuesta": "mike|tyson"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "cage.jpg",
+      "respuesta": "nicolas|cage"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "aaronpaul.jpg",
+      "respuesta": "aaron|paul"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "ryangosling.jpg",
+      "respuesta": "ryan|gosling"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "christianbale.jpg",
+      "respuesta": "christian|bale"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "reynolds.jpg",
+      "respuesta": "ryan|reynolds"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "deniro.jpg",
+      "respuesta": "robert|de niro"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "denzel.jpg",
+      "respuesta": "denzel|washington"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "zacefron.jpg",
+      "respuesta": "zac|efron"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "stallone.jpg",
+      "respuesta": "sylvester|stallone"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "gere.jpg",
+      "respuesta": "richard|gere"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "axlrose.jpg",
+      "respuesta": "axl|rose"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "jagger.jpg",
+      "respuesta": "mick|jagger"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "shakira.jpg",
+      "respuesta": "shakira"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "presley.jpg",
+      "respuesta": "elvis|presley"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "bowie.jpg",
+      "respuesta": "david|bowie"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "rickymartin.jpg",
+      "respuesta": "ricky|martin"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "fredymercury.jpg",
+      "respuesta": "freddie|mercury"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "amy.jpg",
+      "respuesta": "amy|winehouse"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "billgates.jpg",
+      "respuesta": "bill|gates"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "muhammadali.jpg",
+      "respuesta": "muhammad|ali"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "gandi.jpg",
+      "respuesta": "mahatma|gandhi"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "franciscoi.jpg",
+      "respuesta": "papa|francisco"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "evita.jpg",
+      "respuesta": "evita"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "jordan.jpg",
+      "respuesta": "michael|jordan"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "marilin.jpg",
+      "respuesta": "marilyn|monroe"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "kravitz.jpg",
+      "respuesta": "lenny|kravitz"
+    }
+  ,
+    {
+      "title": "¿Cómo se llama?",
+      "pregunta": "jobs.jpg",
+      "respuesta": "steve|jobs"
     }
   ]
 }

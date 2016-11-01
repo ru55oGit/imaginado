@@ -102,6 +102,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:id="@+id/rightarrow"
         android:src="@drawable/rightarrow"
         android:layout_above="@+id/wordContainerFirst"
         android:layout_alignParentRight="true"
@@ -111,6 +112,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:id="@+id/leftarrow"
         android:src="@drawable/leftarrow"
         android:layout_above="@+id/wordContainerFirst"
         android:layout_alignParentLeft="true"

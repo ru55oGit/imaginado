@@ -44,11 +44,17 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
@@ -83,6 +89,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private LinearLayout firstLine;
     private LinearLayout secondLine;
+
+    private ImageView leftArrow;
+    private ImageView rightArrow;
+    private String statusOfGuessed;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -139,8 +149,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         counter.setText(""+String.format(FORMAT,
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
                 TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
-
-
 
         // share wsap
         sharewsap = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharewsap);
@@ -222,7 +230,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         shareDialog.show(shareLinkContent);
                     }
                 }
-
             }
         });
 
@@ -311,7 +318,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         firstLine.removeAllViews();
         secondLine.removeAllViews();
 
-
         LinearLayout thirdLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerThird);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
@@ -364,6 +370,24 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
             }.start();
         }
+
+        leftArrow = (ImageView) findViewById(R.id.leftarrow);
+        leftArrow.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                closeAndSave();
+                finish();
+            }
+        });
+
+        rightArrow = (ImageView) findViewById(R.id.rightarrow);
+        rightArrow.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                closeAndSave();
+                finish();
+            }
+        });
     }
 
     @Override
@@ -375,7 +399,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-
         finish();
     }
 
@@ -399,10 +422,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
-
         }
-
     }
 
     // maneja la presion de las teclas
@@ -531,6 +551,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putInt("time", milisegundos);
             editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
             editor.commit();
+            leftArrow.setVisibility(View.VISIBLE);
+            rightArrow.setVisibility(View.VISIBLE);
         }
         return true;
     }
