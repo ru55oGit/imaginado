@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this, SelectImagesActivity.class);
-            startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
             }
         });
         clover = (ImageView) findViewById(com.luckypalm.imaginados.R.id.clover);
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             public void onFinish() {
-                Intent intent = new Intent(MainActivity.this, SelectImagesActivity.class);
+                Intent intent = new Intent(MainActivity.this, SelectLevelActivity.class);
                 startActivity(intent);
             }
         }.start();
