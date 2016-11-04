@@ -1,6 +1,7 @@
 package com.luckypalm.imaginados;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,9 @@ import android.widget.TextView;
 public class SelectLevelActivity extends AppCompatActivity {
     private TextView play;
     private LinearLayout contenedorNiveles;
+    private SharedPreferences settings;
+    private SharedPreferences.Editor editor;
+    private String level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +29,25 @@ public class SelectLevelActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_select_level);
 
-        /*play = (TextView) findViewById(com.luckypalm.imaginados.R.id.play);
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SelectLevelActivity.this, SelectImagesActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
         contenedorNiveles = (LinearLayout) findViewById(R.id.innerLay);
+    }
 
-        for (int i = 1;i<=20;i++) {
-            TextView letter = new TextView(this);
-            letter.setGravity(Gravity.CENTER_HORIZONTAL);
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Traigo el tiempo acumulado para setear el timer
+        settings = getSharedPreferences("Status", 0);
+        editor = settings.edit();
+        level = settings.getString("level","1");
+        contenedorNiveles.removeAllViews();
+
+        for (int i = 1;i<=100;i++) {
+            TextView levelCircle = new TextView(this);
+            levelCircle.setGravity(Gravity.CENTER_HORIZONTAL);
             int dim = 210;
-            letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.margin_clock));
-            letter.setBackground(getResources().getDrawable(R.drawable.circle));
-            letter.setText(i+"");
+            levelCircle.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.margin_clock));
+            levelCircle.setBackground(getResources().getDrawable(R.drawable.circle));
+            levelCircle.setText(i+"");
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             if (i%2 == 0) {
                 marginLetters.setMargins(0, 25, 30, 0);
@@ -50,9 +55,23 @@ public class SelectLevelActivity extends AppCompatActivity {
                 marginLetters.setMargins(0, 0, 30, 25);
             }
 
-            letter.setLayoutParams(marginLetters);
+            levelCircle.setLayoutParams(marginLetters);
+            if (i <= Integer.parseInt(level)) {
+                levelCircle.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        editor.putString("levelSelected", ((TextView) v).getText().toString());
+                        editor.commit();
 
-            contenedorNiveles.addView(letter);
+                        Intent intent = new Intent(SelectLevelActivity.this, SelectImagesActivity.class);
+                        startActivity(intent);
+                    }
+                });
+            } else {
+                levelCircle.setAlpha(0.35f);
+                levelCircle.setClickable(false);
+            }
+            contenedorNiveles.addView(levelCircle);
         }
     }
 

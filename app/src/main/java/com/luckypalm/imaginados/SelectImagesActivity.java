@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,7 +41,9 @@ public class SelectImagesActivity extends AppCompatActivity {
     private Typeface digifont;
     private TextView chrono;
     private int milisegundos;
+    private String levelSelected;
     private static final String FORMAT = "%02d:%02d";
+    private Boolean previousLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,16 +79,18 @@ public class SelectImagesActivity extends AppCompatActivity {
                 TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
-        //if (("000000").equals(statusOfLevel.toString())) {
-            imagen1.setImageResource(getResources().getIdentifier("acertijos", "drawable", getPackageName()));
-            imagen2.setImageResource(getResources().getIdentifier("escudosfutbol", "drawable", getPackageName()));
-            imagen3.setImageResource(getResources().getIdentifier("logos", "drawable", getPackageName()));
-            imagen4.setImageResource(getResources().getIdentifier("iconospeliculas", "drawable", getPackageName()));
-            imagen5.setImageResource(getResources().getIdentifier("personajesanimados", "drawable", getPackageName()));
-            imagen6.setImageResource(getResources().getIdentifier("paises", "drawable", getPackageName()));
-        //}
+        imagen1.setImageResource(getResources().getIdentifier("acertijos", "drawable", getPackageName()));
+        imagen2.setImageResource(getResources().getIdentifier("escudosfutbol", "drawable", getPackageName()));
+        imagen3.setImageResource(getResources().getIdentifier("logos", "drawable", getPackageName()));
+        imagen4.setImageResource(getResources().getIdentifier("iconospeliculas", "drawable", getPackageName()));
+        imagen5.setImageResource(getResources().getIdentifier("personajesanimados", "drawable", getPackageName()));
+        imagen6.setImageResource(getResources().getIdentifier("paises", "drawable", getPackageName()));
 
+        levelSelected = settings.getString("levelSelected", "1");
         level = settings.getString("level", "1");
+        level = Integer.parseInt(level) >= Integer.parseInt(levelSelected)? levelSelected:level;
+
+        previousLevel = Integer.parseInt(settings.getString("levelSelected", "1"))< Integer.parseInt(settings.getString("level", "1"));
 
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
         TextView label = (TextView)findViewById(com.luckypalm.imaginados.R.id.labelLevelText);
@@ -115,7 +120,7 @@ public class SelectImagesActivity extends AppCompatActivity {
         label.setTypeface(lobsterFont);
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(0) == '1'){
+        if (statusOfLevel.charAt(0) == '1' && !previousLevel){
             imagen1.setAlpha(0.35f);
             imagen1.setClickable(false);
         } else {
@@ -133,7 +138,7 @@ public class SelectImagesActivity extends AppCompatActivity {
         }
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(1) == '1') {
+        if (statusOfLevel.charAt(1) == '1'&& !previousLevel) {
             imagen2.setAlpha(0.35f);
             imagen2.setClickable(false);
         } else {
@@ -141,17 +146,17 @@ public class SelectImagesActivity extends AppCompatActivity {
             imagen2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagen2.setDrawingCacheEnabled(true);
-                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                    intent.putExtra("src", "escudos"+level);
-                    intent.putExtra("word", getWord("escudos", level));
-                    startActivity(intent);
+                imagen2.setDrawingCacheEnabled(true);
+                Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                intent.putExtra("src", "escudos"+level);
+                intent.putExtra("word", getWord("escudos", level));
+                startActivity(intent);
                 }
             });
         }
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(2) == '1') {
+        if (statusOfLevel.charAt(2) == '1'&& !previousLevel) {
             imagen3.setAlpha(0.35f);
             imagen3.setClickable(false);
         } else {
@@ -159,17 +164,17 @@ public class SelectImagesActivity extends AppCompatActivity {
             imagen3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagen3.setDrawingCacheEnabled(true);
-                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                    intent.putExtra("src", "marcas"+ level);
-                    intent.putExtra("word", getWord("marcas", level));
-                    startActivity(intent);
+                imagen3.setDrawingCacheEnabled(true);
+                Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                intent.putExtra("src", "marcas"+ level);
+                intent.putExtra("word", getWord("marcas", level));
+                startActivity(intent);
                 }
             });
         }
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(3) == '1') {
+        if (statusOfLevel.charAt(3) == '1'&& !previousLevel) {
             imagen4.setAlpha(0.35f);
             imagen4.setClickable(false);
         } else {
@@ -177,17 +182,17 @@ public class SelectImagesActivity extends AppCompatActivity {
             imagen4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagen4.setDrawingCacheEnabled(true);
-                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                    intent.putExtra("src", "peliculas"+ level);
-                    intent.putExtra("word", getWord("peliculas", level));
-                    startActivity(intent);
+                imagen4.setDrawingCacheEnabled(true);
+                Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                intent.putExtra("src", "peliculas"+ level);
+                intent.putExtra("word", getWord("peliculas", level));
+                startActivity(intent);
                 }
             });
         }
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(4) == '1') {
+        if (statusOfLevel.charAt(4) == '1'&& !previousLevel) {
             imagen5.setAlpha(0.35f);
             imagen5.setClickable(false);
         } else {
@@ -195,17 +200,17 @@ public class SelectImagesActivity extends AppCompatActivity {
             imagen5.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagen5.setDrawingCacheEnabled(true);
-                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                    intent.putExtra("src", "personajes"+ level);
-                    intent.putExtra("word", getWord("personajes", level));
-                    startActivity(intent);
+                imagen5.setDrawingCacheEnabled(true);
+                Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                intent.putExtra("src", "personajes"+ level);
+                intent.putExtra("word", getWord("personajes", level));
+                startActivity(intent);
                 }
             });
         }
 
         // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(5) == '1') {
+        if (statusOfLevel.charAt(5) == '1'&& !previousLevel) {
             imagen6.setAlpha(0.35f);
             imagen6.setClickable(false);
         } else {
@@ -213,11 +218,11 @@ public class SelectImagesActivity extends AppCompatActivity {
             imagen6.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagen6.setDrawingCacheEnabled(true);
-                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                    intent.putExtra("src", "banderas"+ level);
-                    intent.putExtra("word", getWord("banderas", level));
-                    startActivity(intent);
+                imagen6.setDrawingCacheEnabled(true);
+                Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                intent.putExtra("src", "banderas"+ level);
+                intent.putExtra("word", getWord("banderas", level));
+                startActivity(intent);
                 }
             });
         }
@@ -248,6 +253,12 @@ public class SelectImagesActivity extends AppCompatActivity {
             public void onFinish() {
             }
         }.start();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
     }
 
     private int getSrcByLevel (String level, String category) {
