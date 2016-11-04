@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -49,10 +50,13 @@ public class SelectLevelActivity extends AppCompatActivity {
             levelCircle.setBackground(getResources().getDrawable(R.drawable.circle));
             levelCircle.setText(i+"");
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-            if (i%2 == 0) {
-                marginLetters.setMargins(0, 25, 30, 0);
-            } else {
-                marginLetters.setMargins(0, 0, 30, 25);
+
+            switch ((int)Math.round(Math.sin(i))+2) {
+                case 1: marginLetters.setMargins(0, 0, 140, 100);break;
+                case 2: marginLetters.setMargins(0, 0, 100, 300);break;
+                case 3: marginLetters.setMargins(0, 100, 190, 0);break;
+                default:
+                    marginLetters.setMargins(0, 0, 30, 20);break;
             }
 
             levelCircle.setLayoutParams(marginLetters);
