@@ -2,36 +2,75 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_select_level"
-    android:layout_width="1000dp"
+    android:layout_width="wrap_content"
     android:layout_height="fill_parent"
     tools:context="com.luckypalm.imaginados.SelectLevelActivity">
 
-    <HorizontalScrollView
+    <ScrollView
         android:id="@+id/hsv"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fillViewport="true"
         android:measureAllChildren="false"
         android:scrollbars="none"
-        android:gravity="bottom"
+        android:gravity="center"
         android:background="@color/primaryColor"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="94dp">
 
-        <LinearLayout
-            android:id="@+id/innerLay"
-            android:layout_width="match_parent"
-            android:layout_height="400dip"
-            android:gravity="bottom"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:addStatesFromChildren="true">
+    </ScrollView>
 
-        </LinearLayout>
-    </HorizontalScrollView>
+    <GridLayout
+        android:id="@+id/innerLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/hsv"
+        android:layout_toRightOf="@+id/hsv"
+        android:layout_toEndOf="@+id/hsv">
 
+        <TextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="@dimen/bg_letter_size"
+            android:background="@drawable/circle"
+            android:onClick="goToSelectImages"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <TextView
+            android:text="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="@dimen/bg_letter_size"
+            android:background="@drawable/circle"
+            android:onClick="goToSelectImages" />
+
+        <TextView
+            android:text="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="@dimen/bg_letter_size"
+            android:background="@drawable/circle"
+            android:onClick="goToSelectImages"
+            android:layout_row="0"
+            android:layout_column="3" />
+
+        <TextView
+            android:text="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="@dimen/bg_letter_size"
+            android:background="@drawable/circle"
+            android:onClick="goToSelectImages"
+            android:layout_row="0"
+            android:layout_column="12" />
+    </GridLayout>
 
 </RelativeLayout>
