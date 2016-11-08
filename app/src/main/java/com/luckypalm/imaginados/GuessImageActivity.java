@@ -553,6 +553,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putInt("time", milisegundos);
             editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
             editor.commit();
+            counter.setText(""+String.format(FORMAT,
+                    TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
+                    TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
             leftArrow.setVisibility(View.VISIBLE);
             rightArrow.setVisibility(View.VISIBLE);
         }

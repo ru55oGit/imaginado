@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.GridLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import static com.luckypalm.imaginados.R.id.center;
@@ -21,6 +22,7 @@ public class SelectLevelActivity extends AppCompatActivity {
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
     private String level;
+    private ScrollView hsv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class SelectLevelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_level);
 
         contenedorNiveles = (GridLayout) findViewById(R.id.innerLay);
+        hsv = (ScrollView) findViewById(R.id.hsv);
         title = (TextView) findViewById(R.id.title);
     }
 
@@ -68,11 +71,13 @@ public class SelectLevelActivity extends AppCompatActivity {
                     }
                 });
             } else {
+
                 levelCircle.setAlpha(0.35f);
                 levelCircle.setClickable(false);
             }
             contenedorNiveles.addView(levelCircle);
         }
+        //hsv.smoothScrollTo(0, Integer.parseInt(level)*100);
     }
 
     @Override
