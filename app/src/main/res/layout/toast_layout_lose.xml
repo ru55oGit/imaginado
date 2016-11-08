@@ -4,9 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="8dp"
-    android:background="@drawable/borders"
-    >
-    <ImageView android:src="@drawable/droid"
+    android:background="@drawable/borders">
+    <ImageView android:src="@drawable/lose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"

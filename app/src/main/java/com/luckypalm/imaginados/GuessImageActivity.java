@@ -73,7 +73,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private GradientDrawable gd;
     private Typeface digifont;
     private Typeface lobsterFont;
-    private Toast toast;
+    private Toast toastLose;
+    private Toast toastWin;
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
     private InputMethodManager inputMethodManager;
@@ -381,9 +382,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     @Override
     protected void onStop() {
         super.onStop();
-        // cancelo el custom toast cdo salgo
-        if (toast != null) {
-            toast.cancel();
+        // cancelo el custom toastLose cdo salgo
+        if (toastLose != null) {
+            toastLose.cancel();
         }
 
         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
@@ -423,8 +424,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             timerFlag = false;
         }
 
-        if (toast != null){
-            toast.cancel();
+        if (toastLose != null){
+            toastLose.cancel();
         }
 
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -504,18 +505,18 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             milisegundos = minutos + segundos;
             timer(milisegundos);
             LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(com.luckypalm.imaginados.R.layout.toast_layout,
+            View layout = inflater.inflate(com.luckypalm.imaginados.R.layout.toast_layout_lose,
                     (ViewGroup) findViewById(com.luckypalm.imaginados.R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(com.luckypalm.imaginados.R.id.text);
             text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
             text.setTypeface(lobsterFont);
 
-            toast = new Toast(getApplicationContext());
-            toast.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.top_toast));
-            toast.setDuration(Toast.LENGTH_SHORT);
-            toast.setView(layout);
-            toast.show();
+            toastLose = new Toast(getApplicationContext());
+            toastLose.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.top_toast));
+            toastLose.setDuration(Toast.LENGTH_SHORT);
+            toastLose.setView(layout);
+            toastLose.show();
         }
 
         // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
@@ -532,7 +533,20 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             // a los segundos restantes, por haber acertado la palabra, le sumo tantos segundos como letras tenga la misma como bonus
             milisegundos+= 10000;
             // muestro la cantidad de segundos obtenidos
-            Toast.makeText(getBaseContext(),"has ganado 10 segundos",Toast.LENGTH_LONG).show();
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.toast_layout_win,
+                    (ViewGroup) findViewById(R.id.toast_layout_root));
+
+            TextView text = (TextView) layout.findViewById(R.id.text);
+            text.setText(getResources().getString(R.string.toast_win));
+            text.setTypeface(lobsterFont);
+
+            toastWin = new Toast(getApplicationContext());
+            toastWin.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.top_toast));
+            toastWin.setDuration(Toast.LENGTH_LONG);
+            toastWin.setView(layout);
+            toastWin.show();
+
             // guardo los segundos totales para ser usados en la proxima palabra
             settings = getSharedPreferences("Status", 0);
 

@@ -13,4 +13,6 @@
     <string name="sin_tiempo_jugar">...o responde unas preguntas y acumula segundos contestando...</string>
     <string name="sin_tiempo_compartir">O comparte en redes sociales y consigue 30 segundos.</string>
     <string name="generic_share_text">¿Tenés buena memoria? ¿Puedes resolver estas trivias?</string>
+    <string name="select_level_title">Elige el nivel</string>
+    <string name="toast_win">¡Ganaste 10 segundos!</string>
 </resources>

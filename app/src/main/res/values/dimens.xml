@@ -18,5 +18,6 @@
     <dimen name="top_toast">150dp</dimen>
     <dimen name="sinsegundos_popup_letter">17dp</dimen>
     <dimen name="margin_bottom_volver">15dp</dimen>
+    <dimen name="select_level_fontsize">13dp</dimen>
 </resources>
 

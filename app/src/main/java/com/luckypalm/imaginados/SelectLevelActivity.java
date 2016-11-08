@@ -2,8 +2,10 @@ package com.luckypalm.imaginados;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -11,8 +13,10 @@ import android.view.WindowManager;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
+import static com.luckypalm.imaginados.R.id.center;
+
 public class SelectLevelActivity extends AppCompatActivity {
-    private TextView play;
+    private TextView title;
     private GridLayout contenedorNiveles;
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
@@ -26,6 +30,7 @@ public class SelectLevelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_level);
 
         contenedorNiveles = (GridLayout) findViewById(R.id.innerLay);
+        title = (TextView) findViewById(R.id.title);
     }
 
     @Override
@@ -36,26 +41,21 @@ public class SelectLevelActivity extends AppCompatActivity {
         editor = settings.edit();
         level = settings.getString("level","1");
 
-        /*contenedorNiveles.removeAllViews();
+        contenedorNiveles.removeAllViews();
+
+        Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+        title.setTypeface(lobsterFont);
 
         for (int i = 1;i<=100;i++) {
             TextView levelCircle = new TextView(this);
-            levelCircle.setGravity(Gravity.CENTER_HORIZONTAL);
-            int dim = 210;
-            levelCircle.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.margin_clock));
-            levelCircle.setBackground(getResources().getDrawable(R.drawable.circle));
+            levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            levelCircle.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.select_level_fontsize));
+            levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
             levelCircle.setText(i+"");
-            LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
+            levelCircle.setBackground(getResources().getDrawable(R.drawable.selectlevelback));
+            levelCircle.setTypeface(lobsterFont);
+            levelCircle.setPadding(0,30,20,0);
 
-            switch ((int)Math.round(Math.sin(i))+2) {
-                case 1: marginLetters.setMargins(0, 0, 140, 100);break;
-                case 2: marginLetters.setMargins(0, 0, 100, 300);break;
-                case 3: marginLetters.setMargins(0, 100, 190, 0);break;
-                default:
-                    marginLetters.setMargins(0, 0, 30, 20);break;
-            }
-
-            levelCircle.setLayoutParams(marginLetters);
             if (i <= Integer.parseInt(level)) {
                 levelCircle.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -72,7 +72,7 @@ public class SelectLevelActivity extends AppCompatActivity {
                 levelCircle.setClickable(false);
             }
             contenedorNiveles.addView(levelCircle);
-        }*/
+        }
     }
 
     @Override
