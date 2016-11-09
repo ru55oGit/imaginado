@@ -55,6 +55,7 @@ public class SelectLevelActivity extends AppCompatActivity {
             levelCircle.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.select_level_fontsize));
             levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
             levelCircle.setText(i+"");
+            levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));
             levelCircle.setBackground(getResources().getDrawable(R.drawable.selectlevelback));
             levelCircle.setTypeface(lobsterFont);
             levelCircle.setPadding(0,30,20,0);
@@ -71,7 +72,6 @@ public class SelectLevelActivity extends AppCompatActivity {
                     }
                 });
             } else {
-
                 levelCircle.setAlpha(0.35f);
                 levelCircle.setClickable(false);
             }

@@ -11,13 +11,14 @@
     tools:context="com.luckypalm.imaginados.MainActivity">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="200dp"
+        android:layout_width="120dp"
+        android:layout_height="240dp"
         android:text="Jugar"
         android:id="@+id/play"
         android:background="@drawable/luckypalm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="185dp" />
+        android:layout_marginTop="208dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="30dp"
@@ -25,9 +26,9 @@
         android:text="Jugar"
         android:id="@+id/clover"
         android:background="@drawable/clover5"
+        android:layout_marginBottom="57dp"
         android:layout_alignBottom="@+id/play"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp" />
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
