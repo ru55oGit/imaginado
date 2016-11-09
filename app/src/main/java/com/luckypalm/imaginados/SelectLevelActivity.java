@@ -77,7 +77,7 @@ public class SelectLevelActivity extends AppCompatActivity {
             }
             contenedorNiveles.addView(levelCircle);
         }
-        //hsv.smoothScrollTo(0, Integer.parseInt(level)*100);
+        hsv.smoothScrollTo(0, Integer.parseInt(level)*50);
     }
 
     @Override

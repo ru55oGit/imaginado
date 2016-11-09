@@ -82,6 +82,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private ImageView shareTwitter;
     private ImageView shareFacebook;
     private ImageView volver;
+    private ImageView title;
 
     private LinearLayout firstLine;
     private LinearLayout secondLine;
@@ -377,6 +378,22 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 finish();
             }
         });
+
+        title = (ImageView) findViewById(R.id.title);
+        // cambio la imagen del title
+        if (uri.contains("adivinanzas")) {
+            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+        } else if (uri.contains("banderas")) {
+            title.setBackground(getResources().getDrawable(R.drawable.banderas_title));
+        } else if (uri.contains("escudos")) {
+            title.setBackground(getResources().getDrawable(R.drawable.escudos_title));
+        } else if (uri.contains("marcas")) {
+            title.setBackground(getResources().getDrawable(R.drawable.logos_title));
+        } else if (uri.contains("peliculas")) {
+            title.setBackground(getResources().getDrawable(R.drawable.peliculas_title));
+        } else if (uri.contains("personajes")) {
+            title.setBackground(getResources().getDrawable(R.drawable.personajes_title));
+        }
     }
 
     @Override
