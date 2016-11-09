@@ -47,42 +47,6 @@
         android:layout_alignParentEnd="true"></LinearLayout>
 
     <ImageView
-        android:id="@+id/sharetwitter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/twittericon"
-        android:layout_alignStart="@+id/imageToGuess"
-        android:layout_above="@+id/volver"
-        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
-
-    <ImageView
-        android:id="@+id/sharewsap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/whatsappicon"
-        android:layout_alignEnd="@+id/imageToGuess"
-        android:layout_above="@+id/volver"
-        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
-
-    <ImageView
-        android:id="@+id/sharefacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/facebookicon"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/volver"
-        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
-
-    <ImageView
-        android:id="@+id/volver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/volver"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/margin_bottom_volver"/>
-
-    <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/rightarrow"
@@ -124,5 +88,43 @@
         android:layout_above="@+id/imageToGuess"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"/>
+
+    <ImageView
+        android:id="@+id/sharewsap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsappicon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageToGuess"
+        android:layout_alignEnd="@+id/imageToGuess"
+        android:layout_marginBottom="104dp" />
+
+    <ImageView
+        android:id="@+id/sharetwitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/twittericon"
+        android:layout_alignTop="@+id/sharewsap"
+        android:layout_alignLeft="@+id/imageToGuess"
+        android:layout_alignStart="@+id/imageToGuess" />
+
+    <ImageView
+        android:id="@+id/sharefacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebookicon"
+        android:layout_alignTop="@+id/sharewsap"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/cerrar_shadow"
+        android:id="@+id/volver"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

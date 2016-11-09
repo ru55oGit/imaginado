@@ -122,7 +122,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(com.luckypalm.imaginados.R.layout.activity_guess_image);
+        setContentView(R.layout.activity_guess_image);
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
@@ -297,6 +297,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                //inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.RESULT_HIDDEN, 0);
+                inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
                 closeAndSave();
                 finish();
             }
@@ -403,8 +405,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (toastLose != null) {
             toastLose.cancel();
         }
-
-        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
         finish();
     }
 
