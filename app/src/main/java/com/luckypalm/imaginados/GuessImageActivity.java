@@ -667,6 +667,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
+            bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1100);
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             fos.flush();
             fos.close();
