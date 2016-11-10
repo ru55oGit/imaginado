@@ -19,5 +19,6 @@
     <dimen name="sinsegundos_popup_letter">17dp</dimen>
     <dimen name="margin_bottom_volver">15dp</dimen>
     <dimen name="select_level_fontsize">13dp</dimen>
+    <dimen name="level_guess_fontsize">17dp</dimen>
 </resources>
 

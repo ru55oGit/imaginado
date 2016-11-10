@@ -61,6 +61,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private Boolean timerFlag;
     private CountDownTimer showSoftKey;
     private TextView counter;
+    private TextView labelLevelText;
     private static final String FORMAT = "%02d:%02d";
     private int milisegundos;
     private int secondsToSubtract;
@@ -147,6 +148,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
                 TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
+        labelLevelText = (TextView) findViewById(R.id.labelLevelText);
+
         // share wsap
         sharewsap = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharewsap);
         sharewsap.setOnClickListener(new View.OnClickListener() {
@@ -156,6 +159,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     if (timer != null) {
                         timer.cancel();
                     }
+                    volver.setVisibility(View.INVISIBLE);
+                    labelLevelText.setVisibility(View.VISIBLE);
 
                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                     Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
@@ -191,6 +196,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     if (timer != null) {
                         timer.cancel();
                     }
+                    volver.setVisibility(View.INVISIBLE);
+                    labelLevelText.setVisibility(View.VISIBLE);
+
                     String shareText = new String();
 
                     if (uri.contains("adivinanzas")) {
@@ -229,6 +237,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
                     String shareText = new String();
+
+                    volver.setVisibility(View.INVISIBLE);
+                    labelLevelText.setVisibility(View.VISIBLE);
 
                     if (uri.contains("adivinanzas")) {
                         shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
@@ -281,6 +292,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // traigo el Nivel
         level = settings.getString("level","1");
 
+        labelLevelText.setText("Nivel " + level);
+        labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
         uri = extras.getString("src");
@@ -671,6 +684,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             fos.flush();
             fos.close();
+
+            volver.setVisibility(View.VISIBLE);
+            labelLevelText.setVisibility(View.INVISIBLE);
         } catch (FileNotFoundException e) {
             Log.e("GREC", e.getMessage(), e);
         } catch (IOException e) {

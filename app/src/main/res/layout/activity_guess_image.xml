@@ -127,4 +127,20 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/labelLevelText"
+        android:textStyle="bold"
+        android:textSize="@dimen/level_guess_fontsize"
+        android:background="@drawable/camelcircle"
+        android:textAlignment="center"
+        android:textColor="@color/secondaryColor"
+        android:rotation="-20"
+        android:paddingTop="19dp"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignLeft="@+id/volver"
+        android:layout_alignStart="@+id/volver"
+        android:visibility="invisible"/>
+
 </RelativeLayout>
