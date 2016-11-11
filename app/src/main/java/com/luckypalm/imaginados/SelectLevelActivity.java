@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -14,7 +13,6 @@ import android.widget.GridLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import static com.luckypalm.imaginados.R.id.center;
 
 public class SelectLevelActivity extends AppCompatActivity {
     private TextView title;
@@ -60,24 +58,25 @@ public class SelectLevelActivity extends AppCompatActivity {
             levelCircle.setTypeface(lobsterFont);
             levelCircle.setPadding(0,30,20,0);
 
-            if (i <= Integer.parseInt(level)) {
-                levelCircle.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        editor.putString("levelSelected", ((TextView) v).getText().toString());
-                        editor.commit();
+            levelCircle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    editor.putString("levelSelected", ((TextView) v).getText().toString());
+                    editor.commit();
 
-                        Intent intent = new Intent(SelectLevelActivity.this, SelectImagesActivity.class);
-                        startActivity(intent);
-                    }
-                });
+                    Intent intent = new Intent(SelectLevelActivity.this, SelectImagesActivity.class);
+                    startActivity(intent);
+                }
+            });
+            if (i <= Integer.parseInt(level)) {
+
             } else {
                 levelCircle.setAlpha(0.35f);
-                levelCircle.setClickable(false);
+                //levelCircle.setClickable(false);
             }
             contenedorNiveles.addView(levelCircle);
         }
-        hsv.smoothScrollTo(0, Integer.parseInt(level)*50);
+        hsv.scrollTo(0, Integer.parseInt(level)*50);
     }
 
     @Override

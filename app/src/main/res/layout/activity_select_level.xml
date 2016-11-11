@@ -9,7 +9,11 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="@color/secondaryColor"
+        android:id="@+id/headerSelectLevel">
 
         <TextView
             android:layout_width="match_parent"
@@ -18,18 +22,17 @@
             android:gravity="center_horizontal"
             android:id="@+id/title"
             android:textSize="@dimen/clock_size"
-            android:textColor="@color/secondaryColor"
+            android:textColor="@color/white"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
     </RelativeLayout>
-
     <ScrollView
         android:id="@+id/hsv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:scrollbars="none"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="71dp"
+        android:scrollbars="none">
 
         <GridLayout
             android:id="@+id/innerLay"

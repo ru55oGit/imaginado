@@ -581,7 +581,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             settings = getSharedPreferences("Status", 0);
 
             editor.putInt("time", milisegundos);
-            editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
+            if (Integer.parseInt(level) == Integer.parseInt(settings.getString("levelSelected","1"))){
+                editor.putString("statusLevel", saveStateOfLevel(settings.getString("statusLevel", "000000")));
+            }
             editor.commit();
             counter.setText(""+String.format(FORMAT,
                     TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
@@ -616,7 +618,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if ("111111".equals(sts.toString())) {
             level = ((Integer)(Integer.parseInt(level) + 1)).toString();
             editor.putString("level", level);
-            editor.putString("levelSelected", ((Integer)(Integer.parseInt(level) + 2)).toString());
+            editor.putString("levelSelected", level);
             editor.commit();
             sts = new StringBuilder("000000");
         }

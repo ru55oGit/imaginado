@@ -44,6 +44,7 @@ public class SelectImagesActivity extends AppCompatActivity {
     private String levelSelected;
     private static final String FORMAT = "%02d:%02d";
     private Boolean previousLevel;
+    private Boolean nextsLevels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,11 +87,15 @@ public class SelectImagesActivity extends AppCompatActivity {
         imagen5.setImageResource(getResources().getIdentifier("personajesanimados", "drawable", getPackageName()));
         imagen6.setImageResource(getResources().getIdentifier("paises", "drawable", getPackageName()));
 
+        // nivel seleccionado
         levelSelected = settings.getString("levelSelected", "1");
+        // nivel actual jugado
         level = settings.getString("level", "1");
-        level = Integer.parseInt(level) >= Integer.parseInt(levelSelected)? levelSelected:level;
-
+        // si el nivel seleccionado es menor al actual jugado, seteo un flag para no grisar las imagenes adivinadas
+        level = Integer.parseInt(level) != Integer.parseInt(levelSelected)? levelSelected:level;
         previousLevel = Integer.parseInt(settings.getString("levelSelected", "1"))< Integer.parseInt(settings.getString("level", "1"));
+        // si selecciona un nivel mayor al actual, les dejo ver las imagenes pero no jugar
+        nextsLevels = Integer.parseInt(settings.getString("levelSelected", "1"))> Integer.parseInt(settings.getString("level", "1"));
 
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
         TextView label = (TextView)findViewById(com.luckypalm.imaginados.R.id.labelLevelText);
@@ -119,8 +124,8 @@ public class SelectImagesActivity extends AppCompatActivity {
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         label.setTypeface(lobsterFont);
 
-        // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(0) == '1' && !previousLevel){
+        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        if (statusOfLevel.charAt(0) == '1' && !previousLevel || nextsLevels){
             imagen1.setAlpha(0.35f);
             imagen1.setClickable(false);
         } else {
@@ -137,8 +142,8 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(1) == '1'&& !previousLevel) {
+        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        if (statusOfLevel.charAt(1) == '1'&& !previousLevel || nextsLevels) {
             imagen2.setAlpha(0.35f);
             imagen2.setClickable(false);
         } else {
@@ -155,8 +160,8 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(2) == '1'&& !previousLevel) {
+        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        if (statusOfLevel.charAt(2) == '1'&& !previousLevel || nextsLevels) {
             imagen3.setAlpha(0.35f);
             imagen3.setClickable(false);
         } else {
@@ -173,8 +178,8 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(3) == '1'&& !previousLevel) {
+        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        if (statusOfLevel.charAt(3) == '1'&& !previousLevel || nextsLevels) {
             imagen4.setAlpha(0.35f);
             imagen4.setClickable(false);
         } else {
@@ -191,8 +196,8 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(4) == '1'&& !previousLevel) {
+        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        if (statusOfLevel.charAt(4) == '1'&& !previousLevel || nextsLevels) {
             imagen5.setAlpha(0.35f);
             imagen5.setClickable(false);
         } else {
@@ -209,8 +214,8 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // si la imagen ya fue adivinada, le pongo opacity y le saco el click
-        if (statusOfLevel.charAt(5) == '1'&& !previousLevel) {
+        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        if (statusOfLevel.charAt(5) == '1'&& !previousLevel || nextsLevels) {
             imagen6.setAlpha(0.35f);
             imagen6.setClickable(false);
         } else {

@@ -9,5 +9,6 @@
     <color name="secondaryColor">#cb4e48</color>
     <color name="thirdColor">#f3d4b8</color>
     <color name="splahColor">#ffffff</color>
+    <color name="white">#ffffff</color>
     <color name="numberLevel">#f2ebeb</color>
 </resources>
