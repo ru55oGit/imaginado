@@ -292,7 +292,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // traigo el Nivel
         level = settings.getString("level","1");
 
-        labelLevelText.setText("Nivel " + level);
+        labelLevelText.setText("Nivel " + settings.getString("levelSelected","1"));
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
