@@ -3,7 +3,7 @@
 
     },{
       "adivinanzas": "limonada",
-      "escudos": "barcelona",
+      "escudos": "river|plate",
       "marcas": "chrome",
       "peliculas": "ironman",
       "personajes": "homero|simpson",
@@ -17,7 +17,7 @@
       "banderas": "estados|unidos"
     },{
       "adivinanzas": "empanada",
-      "escudos": "river plate",
+      "escudos": "barcelona",
       "marcas": "wordpress",
       "peliculas": "et",
       "personajes": "pikachu",
@@ -558,7 +558,7 @@
       "adivinanzas": "porcelana",
       "escudos": "parma",
       "marcas": "kappa",
-      "peliculas": "los picapiedras",
+      "peliculas": "los|picapiedras",
       "personajes": "pitufo|filosofo",
       "banderas": "islandia"
     },{
@@ -678,7 +678,7 @@
       "escudos": "Hannover 96",
       "marcas": "bmw",
       "peliculas": "red social",
-      "personajes": "el oso hormiguero",
+      "personajes": "el oso|hormiguero",
       "banderas": "nepal"
     },{
       "adivinanzas": "pentagrama",
