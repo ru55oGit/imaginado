@@ -1,6 +1,606 @@
 {
   "preguntas": [
     {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas1.jpg",
+      "respuesta": "chrome"
+    },
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas2.jpg",
+      "respuesta": "facebook"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas3.jpg",
+      "respuesta": "wordpress"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas4.jpg",
+      "respuesta": "twitter"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas5.jpg",
+      "respuesta": "picasa"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas6.jpg",
+      "respuesta": "cartoon|network"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas7.jpg",
+      "respuesta": "nickelodeon"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas8.jpg",
+      "respuesta": "apple"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas9.jpg",
+      "respuesta": "amazon"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas10.jpg",
+      "respuesta": "whatsapp"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas11.jpg",
+      "respuesta": "mini cooper"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas12.jpg",
+      "respuesta": "claro"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas13.jpg",
+      "respuesta": "chevrolet"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas14.jpg",
+      "respuesta": "ford"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas15.jpg",
+      "respuesta": "kodak"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas16.jpg",
+      "respuesta": "lacoste"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas17.jpg",
+      "respuesta": "play|station"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas18.jpg",
+      "respuesta": "peugeot"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas19.jpg",
+      "respuesta": "mercedes|benz"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas20.jpg",
+      "respuesta": "pepsi"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas21.jpg",
+      "respuesta": "adidas"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas22.jpg",
+      "respuesta": "fisher|price"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas23.jpg",
+      "respuesta": "ferrari"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas24.jpg",
+      "respuesta": "firefox"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas25.jpg",
+      "respuesta": "nike"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas26.jpg",
+      "respuesta": "levis"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas27.jpg",
+      "respuesta": "volskwagen"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas28.jpg",
+      "respuesta": "umbro"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas29.jpg",
+      "respuesta": "coca cola"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas30.jpg",
+      "respuesta": "bacardi"
+
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas31.jpg",
+      "respuesta": "motorola"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas32.jpg",
+      "respuesta": "suzuki"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas33.jpg",
+      "respuesta": "stella|artois"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas34.jpg",
+      "respuesta": "shell"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas35.jpg",
+      "respuesta": "seat"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas36.jpg",
+      "respuesta": "samsung"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas37.jpg",
+      "respuesta": "reebok"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas38.jpg",
+      "respuesta": "quilmes"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas39.jpg",
+      "respuesta": "gucci"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas40.jpg",
+      "respuesta": "converse"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas41.jpg",
+      "respuesta": "fanta"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas42.jpg",
+      "respuesta": "puma"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas43.jpg",
+      "respuesta": "pritt"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas44.jpg",
+      "respuesta": "audi"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas45.jpg",
+      "respuesta": "mcdonalds"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas46.jpg",
+      "respuesta": "chanel"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas47.jpg",
+      "respuesta": "bridgestone"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas48.jpg",
+      "respuesta": "bic"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas49.jpg",
+      "respuesta": "carolina|herrera"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas50.jpg",
+      "respuesta": "direct tv"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas51.jpg",
+      "respuesta": "citroen"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas52.jpg",
+      "respuesta": "instagram"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas53.jpg",
+      "respuesta": "dodge"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas54.jpg",
+      "respuesta": "speed"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas55.jpg",
+      "respuesta": "yves saint|laurent"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas56.jpg",
+      "respuesta": "gatorade"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas57.jpg",
+      "respuesta": "firestone"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas58.jpg",
+      "respuesta": "quiksilver"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas59.jpg",
+      "respuesta": "unilever"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas60.jpg",
+      "respuesta": "dove"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas61.jpg",
+      "respuesta": "carrefour"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas62.jpg",
+      "respuesta": "mitsubishi"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas63.jpg",
+      "respuesta": "le coq|sportif"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas64.jpg",
+      "respuesta": "opel"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas65.jpg",
+      "respuesta": "movistar"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas66.jpg",
+      "respuesta": "nestle"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas67.jpg",
+      "respuesta": "wilson"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas68.jpg",
+      "respuesta": "pringles"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas69.jpg",
+      "respuesta": "red bull"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas70.jpg",
+      "respuesta": "lego"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas71.jpg",
+      "respuesta": "honda"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas72.jpg",
+      "respuesta": "minolta"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas73.jpg",
+      "respuesta": "rip curl"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas74.jpg",
+      "respuesta": "mizuno"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas75.jpg",
+      "respuesta": "hewlett|packard"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas76.jpg",
+      "respuesta": "starbucks"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas77.jpg",
+      "respuesta": "giorgio|armani"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas78.jpg",
+      "respuesta": "lotto"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas79.jpg",
+      "respuesta": "new balance"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas80.jpg",
+      "respuesta": "kappa"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas81.jpg",
+      "respuesta": "rolex"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas82.jpg",
+      "respuesta": "dropbox"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas83.jpg",
+      "respuesta": "drive"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas84.jpg",
+      "respuesta": "burger king"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas85.jpg",
+      "respuesta": "timberland"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas86.jpg",
+      "respuesta": "visa"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas87.jpg",
+      "respuesta": "rayban"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas88.jpg",
+      "respuesta": "opera"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas89.jpg",
+      "respuesta": "vans"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas90.jpg",
+      "respuesta": "intel"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas91.jpg",
+      "respuesta": "wikipedia"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas92.jpg",
+      "respuesta": "mercado libre"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas93.jpg",
+      "respuesta": "ebay"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas94.jpg",
+      "respuesta": "nbc"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas95.jpg",
+      "respuesta": "pizza hut"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas96.jpg",
+      "respuesta": "toyota"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas97.jpg",
+      "respuesta": "bmw"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas98.jpg",
+      "respuesta": "lg"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas99.jpg",
+      "respuesta": "texaco"
+    }
+  ,
+    {
+      "title": "¿Conoces este logo?",
+      "pregunta": "marcas100.jpg",
+      "respuesta": "national|geographic"
+    }
+  ,
+    {
       "title": "",
       "pregunta": "¿6 x 6 - 3 + 2 x 4 ?",
       "respuesta": "41"

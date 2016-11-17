@@ -1,706 +1,206 @@
 {"palabras": [
-    {
+  {
 
-    },{
-      "adivinanzas": "limonada",
-      "escudos": "river|plate",
-      "marcas": "chrome",
-      "peliculas": "ironman",
-      "personajes": "homero|simpson",
-      "banderas": "argentina"
-    },{
-      "adivinanzas": "berenjena",
-      "escudos": "napoli",
-      "marcas": "facebook",
-      "peliculas": "los juegos|del hambre",
-      "personajes": "vegeta",
-      "banderas": "estados|unidos"
-    },{
-      "adivinanzas": "empanada",
-      "escudos": "barcelona",
-      "marcas": "wordpress",
-      "peliculas": "et",
-      "personajes": "pikachu",
-      "banderas": "china"
-    },{
-      "adivinanzas": "pinocho",
-      "escudos": "valencia",
-      "marcas": "twitter",
-      "peliculas": "los gremlins",
-      "personajes": "seiya",
-      "banderas": "rusia"
-    },{
-      "adivinanzas": "quincena",
-      "escudos": "bayer|munich",
-      "marcas": "picasa",
-      "peliculas": "capitan|america",
-      "personajes": "jem",
-      "banderas": "alemania"
-    },{
-      "adivinanzas": "pantalon",
-      "escudos": "roma",
-      "marcas": "cartoon|network",
-      "peliculas": "chucky",
-      "personajes": "la pantera|rosa",
-      "banderas": "italia"
-    },{
-      "adivinanzas": "estomago",
-      "escudos": "cruz azul",
-      "marcas": "nickelodeon",
-      "peliculas": "liberen|a willy",
-      "personajes": "el inspector|gadget",
-      "banderas": "francia"
-    },{
-      "adivinanzas": "tesoro",
-      "escudos": "real madrid",
-      "marcas": "apple",
-      "peliculas": "matrix",
-      "personajes": "la hormiga|atomica",
-      "banderas": "japon"
-    },{
-      "adivinanzas": "entretenido",
-      "escudos": "racing club",
-      "marcas": "amazon",
-      "peliculas": "cars",
-      "personajes": "gargamel",
-      "banderas": "australia"
-    },{
-      "adivinanzas": "pantano",
-      "escudos": "san pablo",
-      "marcas": "whatsapp",
-      "peliculas": "jumanji",
-      "personajes": "el gallo|claudio",
-      "banderas": "corea|del sur"
-    },{
-      "adivinanzas": "sombrilla",
-      "escudos": "gremio",
-      "marcas": "mini cooper",
-      "peliculas": "king kong",
-      "personajes": "rayo de|plata",
-      "banderas": "hungria"
-      },{
-      "adivinanzas": "sorpresa",
-      "escudos": "atletico|madrid",
-      "marcas": "claro",
-      "peliculas": "megamente",
-      "personajes": "don gato",
-      "banderas": "holanda"
-    },{
-      "adivinanzas": "pepino",
-      "escudos": "borussia|dortmund",
-      "marcas": "chevrolet",
-      "peliculas": "memento",
-      "personajes": "babar",
-      "banderas": "uruguay"
-    },{
-      "adivinanzas": "el gordo|y el flaco",
-      "escudos": "milan",
-      "marcas": "ford",
-      "peliculas": "marcianos|al ataque",
-      "personajes": "astroboy",
-      "banderas": "nueva|zelanda"
-    },{
-      "adivinanzas": "conocimiento",
-      "escudos": "manchester|city",
-      "marcas": "kodak",
-      "peliculas": "malefica",
-      "personajes": "aquaman",
-      "banderas": "brasil"
-    },{
-      "adivinanzas": "revelar",
-      "escudos": "colo colo",
-      "marcas": "lacoste",
-      "peliculas": "ratatouille",
-      "personajes": "battlecat",
-      "banderas": "Kazajistan"
-    },{
-      "adivinanzas": "me chupa|un huevo",
-      "escudos": "inter de|porto alegre",
-      "marcas": "play|station",
-      "peliculas": "robocop",
-      "personajes": "benji price",
-      "banderas": "Corea|del Norte"
-    },{
-      "adivinanzas": "termometro",
-      "escudos": "once caldas",
-      "marcas": "peugeot",
-      "peliculas": "el juego|del miedo",
-      "personajes": "birdman",
-      "banderas": "kenia"
-    },{
-      "adivinanzas": "leer entre|lineas",
-      "escudos": "manchester|united",
-      "marcas": "mercedes|benz",
-      "peliculas": "tonto y|retonto",
-      "personajes": "bobby",
-      "banderas": "canada"
-    },{
-      "adivinanzas": "escama",
-      "escudos": "cruzeiro",
-      "marcas": "pepsi",
-      "peliculas": "ouija",
-      "personajes": "bugs bunny",
-      "banderas": "polonia"
-    },{
-      "adivinanzas": "entrenadora",
-      "escudos": "atletico|nacional",
-      "marcas": "adidas",
-      "peliculas": "corto|circuito",
-      "personajes": "cerebro",
-      "banderas": "colombia"
-    },{
-      "adivinanzas": "llave|inglesa",
-      "escudos": "lazio",
-      "marcas": "fisher|price",
-      "peliculas": "los pitufos",
-      "personajes": "el inspector|ardilla",
-      "banderas": "cuba"
-    },{
-      "adivinanzas": "fe de|erratas",
-      "escudos": "chelsea",
-      "marcas": "ferrari",
-      "peliculas": "rocky",
-      "personajes": "el oso yogi",
-      "banderas": "suiza"
-    },{
-      "adivinanzas": "ingenio",
-      "escudos": "wolfsburgo",
-      "marcas": "firefox",
-      "peliculas": "scream",
-      "personajes": "heidi",
-      "banderas": "belgica"
-    },{
-      "adivinanzas": "envido",
-      "escudos": "san lorenzo|de almagro",
-      "marcas": "nike",
-      "peliculas": "quisiera|ser grande",
-      "personajes": "garfield",
-      "banderas": "grecia"
-    },{
-      "adivinanzas": "real envido",
-      "escudos": "flamengo",
-      "marcas": "levis",
-      "peliculas": "twister",
-      "personajes": "freezer",
-      "banderas": "tailandia"
-    },{
-      "adivinanzas": "falta envido",
-      "escudos": "hamburgo",
-      "marcas": "volskwagen",
-      "peliculas": "transformers",
-      "personajes": "flash",
-      "banderas": "uzbekistan"
-    },{
-      "adivinanzas": "el canal de|la mancha",
-      "escudos": "sevilla",
-      "marcas": "umbro",
-      "peliculas": "milagro en|la calle 8",
-      "personajes": "goku",
-      "banderas": "jamaica"
-    },{
-      "adivinanzas": "colaboracion",
-      "escudos": "juventus",
-      "marcas": "coca cola",
-      "peliculas": "jerry|maguire",
-      "personajes": "ikki",
-      "banderas": "iran"
-    },{
-      "adivinanzas": "encubierto",
-      "escudos": "arsenal",
-      "marcas": "bacardi",
-      "peliculas": "timon|y pumba",
-      "personajes": "pitufo|goloso",
-      "banderas": "sudafrica"
-    },{
-      "adivinanzas": "enfadado",
-      "escudos": "Bayer|Leverkusen",
-      "marcas": "motorola",
-      "peliculas": "la bella|y la bestia",
-      "personajes": "scooby doo",
-      "banderas": "suecia"
-    },{
-      "adivinanzas": "la torre|de pisa",
-      "escudos": "lanus",
-      "marcas": "suzuki",
-      "peliculas": "madagascar",
-      "personajes": "bart|simpson",
-      "banderas": "ucrania"
-    },{
-      "adivinanzas": "leche|cortada",
-      "escudos": "osasuna",
-      "marcas": "stella|artois",
-      "peliculas": "300",
-      "personajes": "principe|adam",
-      "banderas": "dinamarca"
-    },{
-      "adivinanzas": "emparedado",
-      "escudos": "america",
-      "marcas": "shell",
-      "peliculas": "christine",
-      "personajes": "ricky ricon",
-      "banderas": "bielorrusia"
-    },{
-      "adivinanzas": "triangulo de|las bermudas",
-      "escudos": "inter|de milan",
-      "marcas": "seat",
-      "peliculas": "godzilla",
-      "personajes": "pepe le pew",
-      "banderas": "eslovenia"
-    },{
-      "adivinanzas": "circulo|polar artico",
-      "escudos": "malaga",
-      "marcas": "samsung",
-      "peliculas": "hellboy",
-      "personajes": "papa|pitufo",
-      "banderas": "republica|checa"
-    },{
-      "adivinanzas": "confirma",
-      "escudos": "liverpool",
-      "marcas": "reebok",
-      "peliculas": "monstruos|vs aliens",
-      "personajes": "oliver atom",
-      "banderas": "rumania"
-    },{
-      "adivinanzas": "todo sobre|ruedas",
-      "escudos": "Schalke 04",
-      "marcas": "quilmes",
-      "peliculas": "stuart|little",
-      "personajes": "oddie",
-      "banderas": "barein"
-    },{
-      "adivinanzas": "escalpelo",
-      "escudos": "torino",
-      "marcas": "gucci",
-      "peliculas": "rapido y|furioso",
-      "personajes": "oficial|matute",
-      "banderas": "eslovaquia"
-    },{
-      "adivinanzas": "bizcochuelo",
-      "escudos": "everton",
-      "marcas": "converse",
-      "peliculas": "una noche|en el museo",
-      "personajes": "mandibulin",
-      "banderas": "vietnam"
-    },{
-      "adivinanzas": "florencia",
-      "escudos": "universidad|de chile",
-      "marcas": "fanta",
-      "peliculas": "troya",
-      "personajes": "orson",
-      "banderas": "etiopia"
-    },{
-      "adivinanzas": "aire|comprimido",
-      "escudos": "estudiantes|de la plata",
-      "marcas": "puma",
-      "peliculas": "las cronicas|de narnia",
-      "personajes": "pato lucas",
-      "banderas": "bahamas"
-    },{
-      "adivinanzas": "ascensor",
-      "escudos": "sampdoria",
-      "marcas": "pritt",
-      "peliculas": "el origen",
-      "personajes": "la mujer|maravilla",
-      "banderas": "fiyi"
-    },{
-      "adivinanzas": "cantero",
-      "escudos": "velez|sarsfield",
-      "marcas": "audi",
-      "peliculas": "buscando|a nemo",
-      "personajes": "picoro",
-      "banderas": "kosovo"
-    },{
-      "adivinanzas": "soldado",
-      "escudos": "real betis",
-      "marcas": "mcdonalds",
-      "peliculas": "little miss|sunshine",
-      "personajes": "hyoga",
-      "banderas": "singapur"
-    },{
-      "adivinanzas": "pancarta",
-      "escudos": "siena",
-      "marcas": "chanel",
-      "peliculas": "la dama y|el vagabundo",
-      "personajes": "gohan",
-      "banderas": "marruecos"
-    },{
-      "adivinanzas": "vino blanco",
-      "escudos": "necaxa",
-      "marcas": "bridgestone",
-      "peliculas": "anaconda",
-      "personajes": "el gavilan|pollero",
-      "banderas": "camerun"
-    },{
-      "adivinanzas": "estetoscopio",
-      "escudos": "west|bromwich",
-      "marcas": "bic",
-      "peliculas": "depredador",
-      "personajes": "el coyote",
-      "banderas": "escocia"
-    },{
-      "adivinanzas": "jueves|santo",
-      "escudos": "peruggia",
-      "marcas": "carolina|herrera",
-      "peliculas": "toy story",
-      "personajes": "benito",
-      "banderas": "chipre"
-    },{
-      "adivinanzas": "cucharita",
-      "escudos": "villareal",
-      "marcas": "direct tv",
-      "peliculas": "resident|evil",
-      "personajes": "baloo",
-      "banderas": "india"
-    },{
-      "adivinanzas": "mas vale tarde|que nunca",
-      "escudos": "herta|berlin",
-      "marcas": "citroen",
-      "peliculas": "volver al|futuro",
-      "personajes": "Penny",
-      "banderas": "panama"
-    },{
-      "adivinanzas": "analfabeta",
-      "escudos": "rosario|central",
-      "marcas": "instagram",
-      "peliculas": "click",
-      "personajes": "marvin",
-      "banderas": "argelia"
-    },{
-      "adivinanzas": "alfa romeo",
-      "escudos": "santos",
-      "marcas": "dodge",
-      "peliculas": "la estafa|maestra",
-      "personajes": "lucero|sonico",
-      "banderas": "paraguay"
-    },{
-      "adivinanzas": "climatizado",
-      "escudos": "millonarios",
-      "marcas": "speed",
-      "peliculas": "los cuatro|fantasticos",
-      "personajes": "jefe quimby",
-      "banderas": "egipto"
-    },{
-      "adivinanzas": "todo bajo|control",
-      "escudos": "universidad|catolica",
-      "marcas": "yves saint|laurent",
-      "peliculas": "dias de|trueno",
-      "personajes": "majin boo",
-      "banderas": "costa rica"
-    },{
-      "adivinanzas": "camaleon",
-      "escudos": "fiorentina",
-      "marcas": "gatorade",
-      "peliculas": "monster inc",
-      "personajes": "bruce|harper",
-      "banderas": "portugal"
-    },{
-      "adivinanzas": "fuego|cruzado",
-      "escudos": "atlas",
-      "marcas": "firestone",
-      "peliculas": "el padrino",
-      "personajes": "daniel",
-      "banderas": "bolivia"
-    },{
-      "adivinanzas": "votar en|blanco",
-      "escudos": "Tottenham|Hotspur",
-      "marcas": "quiksilver",
-      "peliculas": "guardianes de|la galaxia",
-      "personajes": "azrael",
-      "banderas": "el salvador"
-    },{
-      "adivinanzas": "guardar bajo|llave",
-      "escudos": "palmeiras",
-      "marcas": "unilever",
-      "peliculas": "babe",
-      "personajes": "astro",
-      "banderas": "croacia"
-    },{
-      "adivinanzas": "polenta",
-      "escudos": "Werder|Bremen",
-      "marcas": "dove",
-      "peliculas": "alien",
-      "personajes": "pitufo|fortachon",
-      "banderas": "peru"
-    },{
-      "adivinanzas": "circulo|vicioso",
-      "escudos": "bologna",
-      "marcas": "carrefour",
-      "peliculas": "101 dalmatas",
-      "personajes": "porky",
-      "banderas": "mexico"
-    },{
-      "adivinanzas": "agua|oxigenada",
-      "escudos": "newcastle",
-      "marcas": "mitsubishi",
-      "peliculas": "kung fu|panda",
-      "personajes": "sam bigotes",
-      "banderas": "ecuador"
-    },{
-      "adivinanzas": "picara",
-      "escudos": "levante",
-      "marcas": "le coq|sportif",
-      "peliculas": "el llanero|solitario",
-      "personajes": "yagi",
-      "banderas": "guatemala"
-    },{
-      "adivinanzas": "emperador",
-      "escudos": "palermo",
-      "marcas": "opel",
-      "peliculas": "tiburon",
-      "personajes": "shiryu",
-      "banderas": "arabia|saudita"
-    },{
-      "adivinanzas": "maniatico",
-      "escudos": "tigre",
-      "marcas": "movistar",
-      "peliculas": "terminator",
-      "personajes": "silvestre",
-      "banderas": "serbia"
-    },{
-      "adivinanzas": "edad media",
-      "escudos": "junior de|barranquilla",
-      "marcas": "nestle",
-      "peliculas": "dia de la|independencia",
-      "personajes": "marge|simpson",
-      "banderas": "ghana"
-    },{
-      "adivinanzas": "canoso",
-      "escudos": "corinthians",
-      "marcas": "wilson",
-      "peliculas": "v de vendetta",
-      "personajes": "steve hyuga",
-      "banderas": "nigeria"
-    },{
-      "adivinanzas": "lenteja",
-      "escudos": "fluminense",
-      "marcas": "pringles",
-      "peliculas": "la guerra de|las galaxias",
-      "personajes": "super raton",
-      "banderas": "austria"
-    },{
-      "adivinanzas": "bolchevique",
-      "escudos": "Newells|Old Boys",
-      "marcas": "red bull",
-      "peliculas": "daniel el|travieso",
-      "personajes": "squirtle",
-      "banderas": "honduras"
-    },{
-      "adivinanzas": "paraguas",
-      "escudos": "deportivo|cali",
-      "marcas": "lego",
-      "peliculas": "lassie",
-      "personajes": "milhouse",
-      "banderas": "turquia"
-    },{
-      "adivinanzas": "carajo",
-      "escudos": "west|ham",
-      "marcas": "honda",
-      "peliculas": "batman",
-      "personajes": "shun",
-      "banderas": "chile"
-    },{
-      "adivinanzas": "cantantes",
-      "escudos": "monterrey",
-      "marcas": "minolta",
-      "peliculas": "up",
-      "personajes": "lisa|simpson",
-      "banderas": "irlanda"
-    },{
-      "adivinanzas": "impresa",
-      "escudos": "chievo|verona",
-      "marcas": "rip curl",
-      "peliculas": "hulk",
-      "personajes": "toribio",
-      "banderas": "noruega"
-    },{
-      "adivinanzas": "paciente",
-      "escudos": "aston villa",
-      "marcas": "mizuno",
-      "peliculas": "vecinos|invasores",
-      "personajes": "ultra|sonico",
-      "banderas": "israel"
-    },{
-      "adivinanzas": "negrita",
-      "escudos": "empoli",
-      "marcas": "hewlett|packard",
-      "peliculas": "beethoven",
-      "personajes": "tiro loco|mcgraw",
-      "banderas": "bulgaria"
-    },{
-      "adivinanzas": "caracol",
-      "escudos": "vasco|da gama",
-      "marcas": "starbucks",
-      "peliculas": "el joven manos|de tijera",
-      "personajes": "speedy|gonzalez",
-      "banderas": "republica|dominicana"
-    },{
-      "adivinanzas": "coliflor",
-      "escudos": "america|de cali",
-      "marcas": "giorgio|armani",
-      "peliculas": "las tortugas|ninja",
-      "personajes": "trunks",
-      "banderas": "finlandia"
-    },{
-      "adivinanzas": "chupame el|porongo",
-      "escudos": "colon",
-      "marcas": "lotto",
-      "peliculas": "sherlock|holmes",
-      "personajes": "pinky",
-      "banderas": "ruanda"
-    },{
-      "adivinanzas": "dependencia",
-      "escudos": "gimnasia y|esgrima de lp",
-      "marcas": "new balance",
-      "peliculas": "el regalo|prometido",
-      "personajes": "tweety",
-      "banderas": "gabon"
-    },{
-      "adivinanzas": "porcelana",
-      "escudos": "parma",
-      "marcas": "kappa",
-      "peliculas": "los|picapiedras",
-      "personajes": "pitufo|filosofo",
-      "banderas": "islandia"
-    },{
-      "adivinanzas": "sobrevolar",
-      "escudos": "banfield",
-      "marcas": "rolex",
-      "peliculas": "Rescate en|la Antartida",
-      "personajes": "riff raff",
-      "banderas": "jordania"
-    },{
-      "adivinanzas": "verde",
-      "escudos": "rayo|vallecano",
-      "marcas": "dropbox",
-      "peliculas": "frozen",
-      "personajes": "robotina",
-      "banderas": "libano"
-    },{
-      "adivinanzas": "viento en|popa",
-      "escudos": "olympique|de marsella",
-      "marcas": "drive",
-      "peliculas": "el planeta|de los simios",
-      "personajes": "sabiondo",
-      "banderas": "tanzania"
-    },{
-      "adivinanzas": "sobrevivir",
-      "escudos": "genoa",
-      "marcas": "burger king",
-      "peliculas": "james bond",
-      "personajes": "maggie|simpson",
-      "banderas": "liberia"
-    },{
-      "adivinanzas": "microscopico",
-      "escudos": "independiente|santa fe",
-      "marcas": "timberland",
-      "peliculas": "el rey leon",
-      "personajes": "super|sonico",
-      "banderas": "malasia"
-    },{
-      "adivinanzas": "corazonada",
-      "escudos": "Real Sociedad",
-      "marcas": "visa",
-      "peliculas": "top secret",
-      "personajes": "el demonio|de tazmania",
-      "banderas": "madagascar"
-    },{
-      "adivinanzas": "epico",
-      "escudos": "fulham",
-      "marcas": "rayban",
-      "peliculas": "los duques|de hazzard",
-      "personajes": "cometin|sonico",
-      "banderas": "estonia"
-    },{
-      "adivinanzas": "resfrio",
-      "escudos": "independiente",
-      "marcas": "opera",
-      "peliculas": "los sospechosos|de siempre",
-      "personajes": "dartagnan",
-      "banderas": "filipinas"
-    },{
-      "adivinanzas": "sintaxis",
-      "escudos": "Stuttgart",
-      "marcas": "vans",
-      "peliculas": "mary poppins",
-      "personajes": "sargento dodo",
-      "banderas": "oman"
-    },{
-      "adivinanzas": "sin ton|ni son",
-      "escudos": "Espanyol",
-      "marcas": "intel",
-      "peliculas": "bambi",
-      "personajes": "heathcliff",
-      "banderas": "somalia"
-    },{
-      "adivinanzas": "empezar",
-      "escudos": "munich 1860",
-      "marcas": "wikipedia",
-      "peliculas": "ghost rider",
-      "personajes": "huckleberry|hound",
-      "banderas": "Bosnia|Herzegovina"
-    },{
-      "adivinanzas": "rueda de|prensa",
-      "escudos": "union",
-      "marcas": "mercado libre",
-      "peliculas": "van helsing",
-      "personajes": "krilin",
-      "banderas": "Tibet"
-    },{
-      "adivinanzas": "palometa",
-      "escudos": "paris saint|germain",
-      "marcas": "ebay",
-      "peliculas": "la era|del hielo",
-      "personajes": "la hormiga",
-      "banderas": "tunez"
-    },{
-      "adivinanzas": "plano|inclinado",
-      "escudos": "Southampton",
-      "marcas": "nbc",
-      "peliculas": "zoolander",
-      "personajes": "patty",
-      "banderas": "Trinidad|y Tobago"
-    },{
-      "adivinanzas": "desencuentro",
-      "escudos": "leicester|city",
-      "marcas": "pizza hut",
-      "peliculas": "el oso yogi",
-      "personajes": "el inspector",
-      "banderas": "Tonga"
-    },{
-      "adivinanzas": "mal educado",
-      "escudos": "hellas|verona",
-      "marcas": "toyota",
-      "peliculas": "tron",
-      "personajes": "el fantasma|del espacio",
-      "banderas": "pakistan"
-    },{
-      "adivinanzas": "caleidoscopio",
-      "escudos": "Hannover 96",
-      "marcas": "bmw",
-      "peliculas": "red social",
-      "personajes": "el oso|hormiguero",
-      "banderas": "nepal"
-    },{
-      "adivinanzas": "pentagrama",
-      "escudos": "celta de vigo",
-      "marcas": "lg",
-      "peliculas": "la mascara",
-      "personajes": "gleek",
-      "banderas": "Mongolia"
-    },{
-      "adivinanzas": "ni fu ni fa",
-      "escudos": "Watford",
-      "marcas": "texaco",
-      "peliculas": "Happy Feet",
-      "personajes": "los gemelos|fantasticos",
-      "banderas": "monaco"
-    },{
-      "adivinanzas": "pariente",
-      "escudos": "cagliari",
-      "marcas": "national|geographic",
-      "peliculas": "mi novia|polly",
-      "personajes": "pitufo|vanidoso",
-      "banderas": "Mozambique"
-    }
-  ]
+  },{
+    "adivinanzas": "limonada"
+  },{
+    "adivinanzas": "berenjena"
+  },{
+    "adivinanzas": "empanada"
+  },{
+    "adivinanzas": "pinocho"
+  },{
+    "adivinanzas": "quincena"
+  },{
+    "adivinanzas": "pantalon"
+  },{
+    "adivinanzas": "estomago"
+  },{
+    "adivinanzas": "tesoro"
+  },{
+    "adivinanzas": "entretenido"
+  },{
+    "adivinanzas": "pantano"
+  },{
+    "adivinanzas": "sombrilla"
+  },{
+    "adivinanzas": "sorpresa"
+  },{
+    "adivinanzas": "pepino"
+  },{
+    "adivinanzas": "el gordo|y el flaco"
+  },{
+    "adivinanzas": "conocimiento"
+  },{
+    "adivinanzas": "revelar"
+  },{
+    "adivinanzas": "me chupa|un huevo"
+  },{
+    "adivinanzas": "termometro"
+  },{
+    "adivinanzas": "leer entre|lineas"
+  },{
+    "adivinanzas": "escama"
+  },{
+    "adivinanzas": "entrenadora"
+  },{
+    "adivinanzas": "llave|inglesa"
+  },{
+    "adivinanzas": "fe de|erratas"
+  },{
+    "adivinanzas": "ingenio"
+  },{
+    "adivinanzas": "envido"
+  },{
+    "adivinanzas": "real envido"
+  },{
+    "adivinanzas": "falta envido"
+  },{
+    "adivinanzas": "el canal de|la mancha"
+  },{
+    "adivinanzas": "colaboracion"
+  },{
+    "adivinanzas": "encubierto"
+  },{
+    "adivinanzas": "enfadado"
+  },{
+    "adivinanzas": "la torre|de pisa"
+  },{
+    "adivinanzas": "leche|cortada"
+  },{
+    "adivinanzas": "emparedado"
+  },{
+    "adivinanzas": "triangulo de|las bermudas"
+  },{
+    "adivinanzas": "circulo|polar artico"
+  },{
+    "adivinanzas": "confirma"
+  },{
+    "adivinanzas": "todo sobre|ruedas"
+  },{
+    "adivinanzas": "escalpelo"
+  },{
+    "adivinanzas": "bizcochuelo"
+  },{
+    "adivinanzas": "florencia"
+  },{
+    "adivinanzas": "aire|comprimido"
+  },{
+    "adivinanzas": "ascensor"
+  },{
+    "adivinanzas": "cantero"
+  },{
+    "adivinanzas": "soldado"
+  },{
+    "adivinanzas": "pancarta"
+  },{
+    "adivinanzas": "vino blanco"
+  },{
+    "adivinanzas": "estetoscopio"
+  },{
+    "adivinanzas": "jueves|santo"
+  },{
+    "adivinanzas": "cucharita"
+  },{
+    "adivinanzas": "mas vale tarde|que nunca"
+  },{
+    "adivinanzas": "analfabeta"
+  },{
+    "adivinanzas": "alfa romeo"
+  },{
+    "adivinanzas": "climatizado"
+  },{
+    "adivinanzas": "todo bajo|control"
+  },{
+    "adivinanzas": "camaleon"
+  },{
+    "adivinanzas": "fuego|cruzado"
+  },{
+    "adivinanzas": "votar en|blanco"
+  },{
+    "adivinanzas": "guardar bajo|llave"
+  },{
+    "adivinanzas": "polenta"
+  },{
+    "adivinanzas": "circulo|vicioso"
+  },{
+    "adivinanzas": "agua|oxigenada"
+  },{
+    "adivinanzas": "picara"
+  },{
+    "adivinanzas": "emperador"
+  },{
+    "adivinanzas": "maniatico"
+  },{
+    "adivinanzas": "edad media"
+  },{
+    "adivinanzas": "canoso"
+  },{
+    "adivinanzas": "lenteja"
+  },{
+    "adivinanzas": "bolchevique"
+  },{
+    "adivinanzas": "paraguas"
+  },{
+    "adivinanzas": "carajo"
+  },{
+    "adivinanzas": "cantantes"
+  },{
+    "adivinanzas": "impresa"
+  },{
+    "adivinanzas": "paciente"
+  },{
+    "adivinanzas": "negrita"
+  },{
+    "adivinanzas": "caracol"
+  },{
+    "adivinanzas": "coliflor"
+  },{
+    "adivinanzas": "chupame el|porongo"
+  },{
+    "adivinanzas": "dependencia"
+  },{
+    "adivinanzas": "porcelana"
+  },{
+    "adivinanzas": "sobrevolar"
+  },{
+    "adivinanzas": "verde"
+  },{
+    "adivinanzas": "viento en|popa"
+  },{
+    "adivinanzas": "sobrevivir"
+  },{
+    "adivinanzas": "microscopico"
+  },{
+    "adivinanzas": "corazonada"
+  },{
+    "adivinanzas": "epico"
+  },{
+    "adivinanzas": "resfrio"
+  },{
+    "adivinanzas": "sintaxis"
+  },{
+    "adivinanzas": "sin ton|ni son"
+  },{
+    "adivinanzas": "empezar"
+  },{
+    "adivinanzas": "rueda de|prensa"
+  },{
+    "adivinanzas": "palometa"
+  },{
+    "adivinanzas": "plano|inclinado"
+  },{
+    "adivinanzas": "desencuentro"
+  },{
+    "adivinanzas": "mal educado"
+  },{
+    "adivinanzas": "caleidoscopio"
+  },{
+    "adivinanzas": "pentagrama"
+  },{
+    "adivinanzas": "ni fu ni fa"
+  },{
+    "adivinanzas": "pariente"
+  }
+]
 }

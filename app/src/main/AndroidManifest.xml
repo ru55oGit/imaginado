@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.luckypalm.imaginados">
+    package="com.luckypalm.acertijos">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
-            android:name=".MainActivity"
+            android:name="com.luckypalm.acertijos.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -31,12 +31,6 @@
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
-        <activity
-            android:name=".SelectImagesActivity"
-            android:label="@string/title_activity_select_images"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".GuessImageActivity"
             android:label="@string/title_activity_guess_image"

@@ -5,10 +5,10 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.luckypalm.imaginados"
+        applicationId "com.luckypalm.acertijos"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 6
+        versionCode 1
         versionName "1.1"
     }
     buildTypes {b
