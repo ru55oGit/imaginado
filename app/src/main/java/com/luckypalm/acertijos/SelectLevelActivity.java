@@ -50,42 +50,48 @@ public class SelectLevelActivity extends AppCompatActivity {
         editor = settings.edit();
         level = settings.getString("level","1");
 
+        boolean autoclick = settings.getBoolean("autoclick", false);
+
         contenedorNiveles.removeAllViews();
 
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         title.setTypeface(lobsterFont);
 
-        for (int i = 1;i<=116;i++) {
-            TextView levelCircle = new TextView(this);
-            levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-            levelCircle.setTextSize((int)getResources().getDimension(R.dimen.select_level_fontsize));
-            levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
-            levelCircle.setText(i+"");
-            levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));
-            levelCircle.setBackground(getResources().getDrawable(R.drawable.selectlevelback));
-            levelCircle.setTypeface(lobsterFont);
-            levelCircle.setPadding(0,30,20,0);
+        // si hizo siguiente o anterior en la pantalla de guessimage, voy directo al nivel seteado
+        if (autoclick) {
+            Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
+            startActivity(intent);
+        } else {
+            for (int i = 1;i<=getLevelCount();i++) {
+                TextView levelCircle = new TextView(this);
+                levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                levelCircle.setTextSize((int)getResources().getDimension(R.dimen.select_level_fontsize));
+                levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
+                levelCircle.setText(i+"");
+                levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));
+                levelCircle.setBackground(getResources().getDrawable(R.drawable.selectlevelback));
+                levelCircle.setTypeface(lobsterFont);
+                levelCircle.setPadding(0,30,20,0);
 
-            levelCircle.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    editor.putString("levelSelected", ((TextView) v).getText().toString());
-                    editor.commit();
+                levelCircle.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        editor.putString("levelSelected", ((TextView) v).getText().toString());
+                        editor.commit();
 
-                    Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
-                    intent.putExtra("src", "adivinanzas" + ((TextView) v).getText().toString());
-                    intent.putExtra("word", getWord("adivinanzas", ((TextView) v).getText().toString()));
-                    startActivity(intent);
+                        Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                if (i > Integer.parseInt(level)) {
+                    levelCircle.setAlpha(0.35f);
                 }
-            });
-            if (i <= Integer.parseInt(level)) {
-
-            } else {
-                levelCircle.setAlpha(0.35f);
+                contenedorNiveles.addView(levelCircle);
             }
-            contenedorNiveles.addView(levelCircle);
         }
-        //hsv.scrollTo(0, Integer.parseInt(level)*50);
+
+        hsv.scrollTo(0, Integer.parseInt(level)*50);
+
     }
 
     @Override
@@ -114,12 +120,6 @@ public class SelectLevelActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private int getSrcByLevel (String level, String category) {
-        String uri = category + level;
-        int res = getResources().getIdentifier(uri, "drawable", getPackageName());
-        return res;
-    }
-
     public String AssetJSONFile (String filename, Context context) throws IOException {
         InputStream file = getAssets().open(filename);
         byte[] formArray = new byte[file.available()];
@@ -128,26 +128,20 @@ public class SelectLevelActivity extends AppCompatActivity {
 
         return new String(formArray);
     }
-
-    private String getWord (String categoria, String level) {
-        String word = "";
+    // Retorno la cantidad de niveles que tengo en el juego (es -1 porque la primer posicion es cero)
+    private int getLevelCount() {
+        int count = 0;
         try {
-            //obtengo el archivo
             String jsonLocation = AssetJSONFile("data.json", getBaseContext());
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles
             JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");
-            //obtengo el nivel
-            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
-            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
-            word = nivel.getString(categoria);
-
+            count = jarray.length();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return word;
+        return count-1;
     }
-
 }

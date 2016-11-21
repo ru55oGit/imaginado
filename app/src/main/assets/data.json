@@ -2,11 +2,11 @@
   {
 
   },{
-    "adivinanzas": "limonada"
+    "adivinanzas": "lunatico"
   },{
-    "adivinanzas": "berenjena"
+    "adivinanzas": "estomago"
   },{
-    "adivinanzas": "empanada"
+    "adivinanzas": "ingenio"
   },{
     "adivinanzas": "pinocho"
   },{
@@ -14,9 +14,9 @@
   },{
     "adivinanzas": "pantalon"
   },{
-    "adivinanzas": "estomago"
+    "adivinanzas": "enfadado"
   },{
-    "adivinanzas": "tesoro"
+    "adivinanzas": "bizcochuelo"
   },{
     "adivinanzas": "entretenido"
   },{
@@ -48,21 +48,21 @@
   },{
     "adivinanzas": "fe de|erratas"
   },{
-    "adivinanzas": "ingenio"
-  },{
-    "adivinanzas": "envido"
-  },{
-    "adivinanzas": "real envido"
-  },{
-    "adivinanzas": "falta envido"
-  },{
-    "adivinanzas": "el canal de|la mancha"
+    "adivinanzas": "encubierto"
   },{
     "adivinanzas": "colaboracion"
   },{
-    "adivinanzas": "encubierto"
+    "adivinanzas": "confirma"
   },{
-    "adivinanzas": "enfadado"
+    "adivinanzas": "pancarta"
+  },{
+    "adivinanzas": "el canal de|la mancha"
+  },{
+    "adivinanzas": "maniatico"
+  },{
+    "adivinanzas": "circulo|vicioso"
+  },{
+    "adivinanzas": "agua|oxigenada"
   },{
     "adivinanzas": "la torre|de pisa"
   },{
@@ -74,13 +74,13 @@
   },{
     "adivinanzas": "circulo|polar artico"
   },{
-    "adivinanzas": "confirma"
+    "adivinanzas": "guardar|bajo llave"
   },{
     "adivinanzas": "todo sobre|ruedas"
   },{
     "adivinanzas": "escalpelo"
   },{
-    "adivinanzas": "bizcochuelo"
+    "adivinanzas": "limonada"
   },{
     "adivinanzas": "florencia"
   },{
@@ -92,13 +92,13 @@
   },{
     "adivinanzas": "soldado"
   },{
-    "adivinanzas": "pancarta"
+    "adivinanzas": "berenjena"
   },{
     "adivinanzas": "vino blanco"
   },{
     "adivinanzas": "estetoscopio"
   },{
-    "adivinanzas": "jueves|santo"
+    "adivinanzas": "palometa"
   },{
     "adivinanzas": "cucharita"
   },{
@@ -110,7 +110,7 @@
   },{
     "adivinanzas": "climatizado"
   },{
-    "adivinanzas": "todo bajo|control"
+    "adivinanzas": "comida|rapida"
   },{
     "adivinanzas": "camaleon"
   },{
@@ -118,19 +118,19 @@
   },{
     "adivinanzas": "votar en|blanco"
   },{
-    "adivinanzas": "guardar bajo|llave"
+    "adivinanzas": "caleidoscopio"
   },{
     "adivinanzas": "polenta"
   },{
-    "adivinanzas": "circulo|vicioso"
+    "adivinanzas": "empanada"
   },{
-    "adivinanzas": "agua|oxigenada"
+    "adivinanzas": "resfrio"
   },{
     "adivinanzas": "picara"
   },{
     "adivinanzas": "emperador"
   },{
-    "adivinanzas": "maniatico"
+    "adivinanzas": "apila"
   },{
     "adivinanzas": "edad media"
   },{
@@ -176,7 +176,7 @@
   },{
     "adivinanzas": "epico"
   },{
-    "adivinanzas": "resfrio"
+    "adivinanzas": "tesoro"
   },{
     "adivinanzas": "sintaxis"
   },{
@@ -186,7 +186,7 @@
   },{
     "adivinanzas": "rueda de|prensa"
   },{
-    "adivinanzas": "palometa"
+    "adivinanzas": "jueves|santo"
   },{
     "adivinanzas": "plano|inclinado"
   },{
@@ -194,13 +194,41 @@
   },{
     "adivinanzas": "mal educado"
   },{
-    "adivinanzas": "caleidoscopio"
+    "adivinanzas": "pariente"
   },{
     "adivinanzas": "pentagrama"
   },{
     "adivinanzas": "ni fu ni fa"
   },{
-    "adivinanzas": "pariente"
+    "adivinanzas": "pilates"
+  },{
+    "adivinanzas": "envido"
+  },{
+    "adivinanzas": "real|envido"
+  },{
+    "adivinanzas": "falta|envido"
+  },{
+    "adivinanzas": "dios|mediante"
+  },{
+    "adivinanzas": "sincope"
+  },{
+    "adivinanzas": "singapur"
+  },{
+    "adivinanzas": "docena"
+  },{
+    "adivinanzas": "mate|cocido"
+  },{
+    "adivinanzas": "endosa"
+  },{
+    "adivinanzas": "postres|helados"
+  },{
+    "adivinanzas": "puente"
+  },{
+    "adivinanzas": "vestir de|punta en blanco"
+  },{
+    "adivinanzas": "casino"
+  },{
+    "adivinanzas": "todo bajo|control"
   }
 ]
 }

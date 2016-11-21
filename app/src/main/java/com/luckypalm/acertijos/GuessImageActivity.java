@@ -47,10 +47,15 @@ import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
 
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
 public class GuessImageActivity extends AppCompatActivity implements BackDialog.BackDialogListener{
@@ -71,6 +76,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private int aciertos = 0;
     private String uri;
     private String level;
+    private String levelSelected;
     private GradientDrawable gd;
     private Typeface digifont;
     private Typeface lobsterFont;
@@ -133,22 +139,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
-
-        // Traigo el tiempo acumulado para setear el timer
-        settings = getSharedPreferences("Status", 0);
-        editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        timerFlag = true;
-
-        // seteo el tiempo que tengo para jugar en el reloj
-        milisegundos = settings.getInt("time", 120000);
-        counter = (TextView) findViewById(R.id.counterText);
-        counter.setTypeface(digifont);
-        counter.setText(""+String.format(FORMAT,
-                TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
-                TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
-
-        labelLevelText = (TextView) findViewById(R.id.labelLevelText);
 
         // share wsap
         sharewsap = (ImageView) findViewById(R.id.sharewsap);
@@ -167,23 +158,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     sharingIntent.setPackage("com.whatsapp");
                     sharingIntent.setType("image/*");
                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
 
-                    if (uri.contains("adivinanzas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
-                    } else if (uri.contains("banderas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  https://goo.gl/OufAlF");
-                    } else if (uri.contains("escudos")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  https://goo.gl/OufAlF");
-                    } else if (uri.contains("marcas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  https://goo.gl/OufAlF");
-                    } else if (uri.contains("peliculas")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  https://goo.gl/OufAlF");
-                    } else if (uri.contains("personajes")) {
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  https://goo.gl/OufAlF");
-                    }
                     startActivity(Intent.createChooser(sharingIntent, "Share image using"));
-                } else {
-
                 }
             }
         });
@@ -200,20 +177,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     labelLevelText.setVisibility(View.VISIBLE);
 
                     String shareText = new String();
-
-                    if (uri.contains("adivinanzas")) {
-                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
-                    } else if (uri.contains("banderas")) {
-                        shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
-                    } else if (uri.contains("escudos")) {
-                        shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
-                    } else if (uri.contains("marcas")) {
-                        shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
-                    } else if (uri.contains("peliculas")) {
-                        shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
-                    } else if (uri.contains("personajes")) {
-                        shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
-                    }
+                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
                     Bitmap image = takeScreenshot();
                     SharePhoto photo = new SharePhoto.Builder()
                             .setBitmap(image)
@@ -241,19 +205,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     volver.setVisibility(View.INVISIBLE);
                     labelLevelText.setVisibility(View.VISIBLE);
 
-                    if (uri.contains("adivinanzas")) {
-                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
-                    } else if (uri.contains("banderas")) {
-                        shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
-                    } else if (uri.contains("escudos")) {
-                        shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
-                    } else if (uri.contains("marcas")) {
-                        shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
-                    } else if (uri.contains("peliculas")) {
-                        shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
-                    } else if (uri.contains("personajes")) {
-                        shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
-                    }
+                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
 
                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -280,6 +232,21 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         super.onResume();
         secondsToSubtract = 0;
 
+        // Traigo el tiempo acumulado para setear el timer
+        settings = getSharedPreferences("Status", 0);
+        editor = settings.edit();
+        timerFlag = true;
+
+        // seteo el tiempo que tengo para jugar en el reloj
+        milisegundos = settings.getInt("time", 120000);
+        counter = (TextView) findViewById(R.id.counterText);
+        counter.setTypeface(digifont);
+        counter.setText(""+String.format(FORMAT,
+                TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
+                TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
+
+        labelLevelText = (TextView) findViewById(R.id.labelLevelText);
+
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(settings.getString("level", "1"))) {
             toggleKeyboardVisible();
@@ -293,18 +260,19 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         // traigo el Nivel
         level = settings.getString("level","1");
+        levelSelected = settings.getString("levelSelected","1");
 
-        labelLevelText.setText("Nivel " + settings.getString("levelSelected","1"));
+        labelLevelText.setText("Nivel " + levelSelected);
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
-        uri = extras.getString("src");
+        uri = "adivinanzas" + levelSelected;
         int res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
         imageToGuess.setImageResource(res);
         // obtengo la palabra que se va adivinar
-        word = extras.getString("word");
+        word = getWord("adivinanzas", levelSelected);
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
@@ -366,7 +334,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // si no hay segundos, abro el popup sin tiempo
         if (milisegundos == 0) {
             customDialog();
-        } else if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(settings.getString("level", "1"))) {
+        } else if (Integer.parseInt(levelSelected)<= Integer.parseInt(level)) {
             // si hay segundos abro el teclado
             showSoftKey = new CountDownTimer(700, 1000) {
                 public void onTick(long millisUntilFinished) {
@@ -382,7 +350,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         leftArrow.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                closeAndSave();
+                moveToNextOrPrevious("previous");
                 finish();
             }
         });
@@ -391,7 +359,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         rightArrow.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                closeAndSave();
+                moveToNextOrPrevious("next");
                 finish();
             }
         });
@@ -437,6 +405,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 // guardo los segundos totales para ser usados en la proxima palabra
                 settings = getSharedPreferences("Status", 0);
                 editor.putInt("time", milisegundos);
+                editor.putBoolean("autoclick", false);
                 if (editor.commit()) {
                     finish();
                 }
@@ -445,6 +414,43 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         }
     }
+
+    private int getSrcByLevel (String level, String category) {
+        String uri = category + level;
+        int res = getResources().getIdentifier(uri, "drawable", getPackageName());
+        return res;
+    }
+
+    public String AssetJSONFile (String filename, Context context) throws IOException {
+        InputStream file = getAssets().open(filename);
+        byte[] formArray = new byte[file.available()];
+        file.read(formArray);
+        file.close();
+
+        return new String(formArray);
+    }
+
+    private String getWord (String categoria, String level) {
+        String word = "";
+        try {
+            //obtengo el archivo
+            String jsonLocation = AssetJSONFile("data.json", getBaseContext());
+            JSONObject jsonobject = new JSONObject(jsonLocation);
+            //obtengo el array de niveles
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");
+            //obtengo el nivel
+            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
+            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
+            word = nivel.getString(categoria);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return word;
+    }
+
 
     // maneja la presion de las teclas
     @Override
@@ -583,7 +589,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             settings = getSharedPreferences("Status", 0);
 
             editor.putInt("time", milisegundos);
-            if (Integer.parseInt(level) == Integer.parseInt(settings.getString("levelSelected","1"))){
+            if (Integer.parseInt(level) == Integer.parseInt(levelSelected)){
                 saveStateOfLevel();
             }
             editor.commit();
@@ -596,8 +602,22 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         return true;
     }
 
+    private void moveToNextOrPrevious(String moveTo) {
+        if ("next".equals(moveTo)) {
+            editor.putString("levelSelected", ((Integer)(Integer.parseInt(levelSelected) + 1)).toString());
+        }
+        if ("previous".equals(moveTo)) {
+            editor.putString("levelSelected", ((Integer)(Integer.parseInt(levelSelected) - 1)).toString());
+        }
+        editor.putBoolean("autoclick", true);
+        editor.putString("level", level);
+        editor.commit();
+    }
+
     private void saveStateOfLevel(){
-        level = ((Integer)(Integer.parseInt(level) + 1)).toString();
+        if (Integer.parseInt(levelSelected) == Integer.parseInt(level)) {
+            level = ((Integer)(Integer.parseInt(level) + 1)).toString();
+        }
         editor.putString("level", level);
         editor.putString("levelSelected", level);
         editor.commit();
