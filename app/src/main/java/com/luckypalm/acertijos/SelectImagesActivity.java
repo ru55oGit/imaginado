@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ public class SelectImagesActivity extends AppCompatActivity {
     private static final String FORMAT = "%02d:%02d";
     private Boolean previousLevel;
     private Boolean nextsLevels;
+    private InputMethodManager inputMethodManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,9 @@ public class SelectImagesActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         frameLayout = (RelativeLayout) findViewById(R.id.selectLayout);
+        // cerrar teclado
+        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
 
         // seteo el tiempo que tengo para jugar en el reloj
         milisegundos = settings.getInt("time", 120000);

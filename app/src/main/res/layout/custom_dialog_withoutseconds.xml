@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/primaryColor">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:padding="10dp"
         android:id="@+id/header"
-        android:background="@color/secondaryColor"
+        android:background="@color/primaryColor"
         android:orientation="horizontal"
         android:gravity="right">
 
@@ -26,20 +25,21 @@
         android:id="@+id/firstSeparator"
         android:layout_below="@+id/header"
         android:orientation="horizontal"
-        android:background="@color/cardview_light_background"></LinearLayout>
+        android:background="@color/primaryColor"></LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buyContainer"
         android:layout_below="@+id/firstSeparator"
         android:padding="10dp"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:background="@color/white">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sin_tiempo_comprar"
             android:textSize="@dimen/sinsegundos_popup_letter"
-            android:textColor="@color/thirdColor"
+            android:textColor="@color/primaryColor"
             android:paddingLeft="5dp"
             android:layout_weight="0.8" />
 
@@ -56,19 +56,20 @@
         android:id="@+id/secondSeparator"
         android:orientation="horizontal"
         android:layout_below="@+id/buyContainer"
-        android:background="@color/cardview_light_background"></LinearLayout>
+        android:background="@color/primaryColor"></LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/winContainer"
         android:padding="10dp"
-        android:layout_below="@+id/secondSeparator">
+        android:layout_below="@+id/secondSeparator"
+        android:background="@color/white">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sin_tiempo_jugar"
             android:textSize="@dimen/sinsegundos_popup_letter"
-            android:textColor="@color/thirdColor"
+            android:textColor="@color/primaryColor"
             android:paddingLeft="5dp"
             android:layout_weight="0.8" />
         <ImageView
@@ -84,7 +85,7 @@
         android:id="@+id/thirdSeparator"
         android:orientation="horizontal"
         android:layout_below="@+id/winContainer"
-        android:background="@color/cardview_light_background"></LinearLayout>
+        android:background="@color/primaryColor"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,7 +93,8 @@
         android:id="@+id/shareContainer"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:layout_below="@+id/thirdSeparator">
+        android:layout_below="@+id/thirdSeparator"
+        android:background="@color/white">
 
         <TextView
             android:layout_width="match_parent"
@@ -100,7 +102,7 @@
             android:id="@+id/shareText"
             android:text="@string/sin_tiempo_compartir"
             android:textSize="@dimen/sinsegundos_popup_letter"
-            android:textColor="@color/thirdColor"
+            android:textColor="@color/primaryColor"
             android:textAlignment="center"/>
     </LinearLayout>
 
@@ -109,7 +111,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/shareContainer"
         android:gravity="center"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/sharetwitterDialog"

@@ -395,6 +395,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (timer != null) {
             timer.cancel();
         }
+        editor.putBoolean("autoclick", false);
         if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
@@ -405,7 +406,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 // guardo los segundos totales para ser usados en la proxima palabra
                 settings = getSharedPreferences("Status", 0);
                 editor.putInt("time", milisegundos);
-                editor.putBoolean("autoclick", false);
+
                 if (editor.commit()) {
                     finish();
                 }
@@ -596,8 +597,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             counter.setText(""+String.format(FORMAT,
                     TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
                     TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
-            leftArrow.setVisibility(View.VISIBLE);
-            rightArrow.setVisibility(View.VISIBLE);
+            // si es el primer nivel, no muestro la flechita de volver para atras
+            if (Integer.parseInt(levelSelected) > 1) {
+                leftArrow.setVisibility(View.VISIBLE);
+            }
+            // si es el ultimo nivel, no muestro la flechita de ir para adelante
+            if (Integer.parseInt(levelSelected) < getLevelCount()) {
+                rightArrow.setVisibility(View.VISIBLE);
+            }
         }
         return true;
     }
@@ -825,6 +832,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (dialogCustom != null) {
             dialogCustom.show();
         }
+    }
+
+    // Retorno la cantidad de niveles que tengo en el juego (es -1 porque la primer posicion es cero)
+    private int getLevelCount() {
+        int count = 0;
+        try {
+            String jsonLocation = AssetJSONFile("data.json", getBaseContext());
+            JSONObject jsonobject = new JSONObject(jsonLocation);
+            //obtengo el array de niveles
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");
+            count = jarray.length();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return count-1;
     }
 
     public static boolean isAppInstalled(Context context, String packageName) {

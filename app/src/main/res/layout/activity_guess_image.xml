@@ -135,7 +135,7 @@
         android:textSize="@dimen/level_guess_fontsize"
         android:background="@drawable/camelcircle"
         android:textAlignment="center"
-        android:textColor="@color/secondaryColor"
+        android:textColor="@color/white"
         android:rotation="-20"
         android:paddingTop="19dp"
         android:layout_alignBottom="@+id/title"
