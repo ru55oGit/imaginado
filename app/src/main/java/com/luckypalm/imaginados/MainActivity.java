@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(com.luckypalm.imaginados.R.layout.activity_main);
 
-
         play = (ImageView) findViewById(com.luckypalm.imaginados.R.id.play);
         play.setOnClickListener(new View.OnClickListener() {
             @Override

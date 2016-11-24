@@ -45,6 +45,9 @@ import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 
 import java.io.File;
@@ -90,7 +93,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private ImageView leftArrow;
     private ImageView rightArrow;
-    private String statusOfGuessed;
+    private AdView ads;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -124,6 +127,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_guess_image);
+
+        MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
@@ -279,6 +289,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onResume() {
         super.onResume();
         secondsToSubtract = 0;
+
+        ads = (AdView) findViewById(R.id.adView);
 
         frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
         toggleKeyboardVisible();
@@ -553,6 +565,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (aciertos == word.replaceAll(" ", "").replaceAll("\\|","").length()) {
             // paro el reloj
             timer.cancel();
+
+            ads.setVisibility(View.VISIBLE);
+
             // Cierro el teclado
             inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
