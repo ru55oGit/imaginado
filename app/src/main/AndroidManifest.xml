@@ -42,6 +42,7 @@
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PlayForSecondsActivity"
@@ -59,5 +60,4 @@
             android:authorities="com.facebook.app.FacebookContentProvider315657302130813"
             android:exported="true" />
     </application>
-
 </manifest>
