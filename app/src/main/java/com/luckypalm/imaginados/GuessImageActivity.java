@@ -45,6 +45,7 @@ import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -98,6 +99,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
+    private AdView mAdView;
+    private AdRequest adRequest;
+
     // Storage Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -129,6 +133,18 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         setContentView(R.layout.activity_guess_image);
         // ADS
         MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
+        mAdView = (AdView) findViewById(R.id.adView);
+        adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
+                focus.setFocusableInTouchMode(true);
+                focus.requestFocus();
+            }
+        });
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
@@ -147,7 +163,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         // seteo el tiempo que tengo para jugar en el reloj
         milisegundos = settings.getInt("time", 120000);
-        counter = (TextView) findViewById(com.luckypalm.imaginados.R.id.counterText);
+        counter = (TextView) findViewById(R.id.counterText);
         counter.setTypeface(digifont);
         counter.setText(""+String.format(FORMAT,
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
@@ -156,7 +172,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         labelLevelText = (TextView) findViewById(R.id.labelLevelText);
 
         // share wsap
-        sharewsap = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharewsap);
+        sharewsap = (ImageView) findViewById(R.id.sharewsap);
         sharewsap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -191,7 +207,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        shareFacebook = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharefacebook);
+        shareFacebook = (ImageView) findViewById(R.id.sharefacebook);
         shareFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -233,7 +249,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        shareTwitter = (ImageView) findViewById(com.luckypalm.imaginados.R.id.sharetwitter);
+        shareTwitter = (ImageView) findViewById(R.id.sharetwitter);
         shareTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -283,14 +299,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         super.onResume();
         secondsToSubtract = 0;
 
-        frameLayout = (RelativeLayout) findViewById(com.luckypalm.imaginados.R.id.frameCounter);
+        frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         toggleKeyboardVisible();
 
         // border radius
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
-        gd.setCornerRadius((int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius));
-        gd.setStroke((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_letters_guess), getResources().getColor(com.luckypalm.imaginados.R.color.secondaryColor));
+        gd.setCornerRadius((int) getResources().getDimension(R.dimen.border_radius));
+        gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
         // traigo el Nivel
         level = settings.getString("level","1");
@@ -302,13 +318,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         uri = extras.getString("src");
         int res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
-        imageToGuess = (ImageView) findViewById(com.luckypalm.imaginados.R.id.imageToGuess);
+        imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
         imageToGuess.setImageResource(res);
         // obtengo la palabra que se va adivinar
         word = extras.getString("word");
 
         // volver
-        volver = (ImageView) findViewById(com.luckypalm.imaginados.R.id.volver);
+        volver = (ImageView) findViewById(R.id.volver);
 
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -320,20 +336,18 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        firstLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerFirst);
-        secondLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerSecond);
+        firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
+        secondLine = (LinearLayout)findViewById(R.id.wordContainerSecond);
         // Remuevo todas la letras porque se apendean cuando hago compartir y cancelo
         firstLine.removeAllViews();
         secondLine.removeAllViews();
-
-        LinearLayout thirdLine = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerThird);
 
         // dibujo los guiones correspondientes a cada letra de la palabra
         for (int i = 0; i < word.length(); i++) {
             TextView letter = new TextView(this);
             if (Character.isWhitespace(word.charAt(i))) {
                 letter.setText("");
-                dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size_whitespace);
+                dim = (int) getResources().getDimension(R.dimen.letter_size_whitespace);
             } else if ('|' != word.charAt(i)){
                 letter.setText("__");
                 letter.setAllCaps(true);
@@ -342,11 +356,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 } else {
                     //letter.setBackgroundResource();
                 }
-                dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.bg_letter_size);
+                dim = (int) getResources().getDimension(R.dimen.bg_letter_size);
             }
             letter.setGravity(Gravity.CENTER_HORIZONTAL);
 
-            letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
+            letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins(0, 0, 10, 0);
             letter.setLayoutParams(marginLetters);
@@ -369,14 +383,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             customDialog();
         } else {
             // si hay segundos abro el teclado
-            showSoftKey = new CountDownTimer(700, 1000) {
+            /*showSoftKey = new CountDownTimer(700, 1000) {
                 public void onTick(long millisUntilFinished) {
 
                 }
                 public void onFinish() {
                     inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                 }
-            }.start();
+            }.start();*/
         }
 
         leftArrow = (ImageView) findViewById(R.id.leftarrow);
@@ -466,8 +480,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             return false;
         }
 
-        LinearLayout ll = (LinearLayout)findViewById(com.luckypalm.imaginados.R.id.wordContainerFirst);
-        LinearLayout ll2 = (LinearLayout) findViewById(com.luckypalm.imaginados.R.id.wordContainerSecond);
+        LinearLayout ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
+        LinearLayout ll2 = (LinearLayout) findViewById(R.id.wordContainerSecond);
 
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < word.length(); i++) {
@@ -478,9 +492,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     TextView letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
                     letter.setGravity(Gravity.CENTER_HORIZONTAL);
-                    letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
+                    letter.setBackgroundResource(R.color.primaryColor);
                     if (Build.VERSION.SDK_INT > 15)
                         letter.setBackground(gd);
 
@@ -499,9 +513,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     TextView letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.letter_size));
                     letter.setGravity(Gravity.CENTER_HORIZONTAL);
-                    letter.setBackgroundResource(com.luckypalm.imaginados.R.color.primaryColor);
+                    letter.setBackgroundResource(R.color.primaryColor);
                     if (Build.VERSION.SDK_INT > 15)
                         letter.setBackground(gd);
 
@@ -538,15 +552,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             milisegundos = minutos + segundos;
             timer(milisegundos);
             LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(com.luckypalm.imaginados.R.layout.toast_layout_lose,
-                    (ViewGroup) findViewById(com.luckypalm.imaginados.R.id.toast_layout_root));
+            View layout = inflater.inflate(R.layout.toast_layout_lose,
+                    (ViewGroup) findViewById(R.id.toast_layout_root));
 
-            TextView text = (TextView) layout.findViewById(com.luckypalm.imaginados.R.id.text);
+            TextView text = (TextView) layout.findViewById(R.id.text);
             text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
             text.setTypeface(lobsterFont);
 
             toastLose = new Toast(getApplicationContext());
-            toastLose.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.top_toast));
+            toastLose.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
             toastLose.setDuration(Toast.LENGTH_SHORT);
             toastLose.setView(layout);
             toastLose.show();
@@ -556,11 +570,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (aciertos == word.replaceAll(" ", "").replaceAll("\\|","").length()) {
             // paro el reloj
             timer.cancel();
-
             // ADS
-            AdView mAdView = (AdView) findViewById(R.id.adView);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
+            //mAdView.loadAd(adRequest);
 
             // Cierro el teclado
             inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
@@ -581,7 +592,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             text.setTypeface(lobsterFont);
 
             toastWin = new Toast(getApplicationContext());
-            toastWin.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.top_toast));
+            toastWin.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
             toastWin.setDuration(Toast.LENGTH_LONG);
             toastWin.setView(layout);
             toastWin.show();
@@ -642,13 +653,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
-                if (!("00:00").equals(counter.getText())) {
-                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                } else {
-                    customDialog();
+                if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
+                    if (!("00:00").equals(counter.getText())) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    } else {
+                        customDialog();
+                    }
                 }
-            }
             }
         });
     }
@@ -723,12 +734,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     private void customDialog(){
-        // ADS
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
-        // custom dialog
+                // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
 
@@ -824,7 +830,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(com.luckypalm.imaginados.R.id.dialogButtonOK);
+        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(R.id.dialogButtonOK);
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

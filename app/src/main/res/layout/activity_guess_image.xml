@@ -22,29 +22,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/imageToGuess"
         android:orientation="horizontal"
+        android:paddingTop="10dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:gravity="center_horizontal"
         android:id="@+id/wordContainerFirst"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:id="@+id/wordContainerSecond"
         android:layout_below="@+id/wordContainerFirst"
-        android:layout_alignParentEnd="true"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:id="@+id/wordContainerThird"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"></LinearLayout>
 
     <ImageView
