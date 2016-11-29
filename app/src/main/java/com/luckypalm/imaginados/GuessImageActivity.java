@@ -89,6 +89,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private ImageView shareFacebook;
     private ImageView volver;
     private ImageView title;
+    private ImageView keyboardIcon;
 
     private LinearLayout firstLine;
     private LinearLayout secondLine;
@@ -143,6 +144,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
                 focus.setFocusableInTouchMode(true);
                 focus.requestFocus();
+                ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
+                keyboardIcon.setVisibility(View.INVISIBLE);
+                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             }
         });
 

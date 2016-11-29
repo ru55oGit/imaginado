@@ -147,6 +147,14 @@
         android:layout_marginBottom="24dp">
     </com.google.android.gms.ads.AdView>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/keyboardIcon"
+        android:src="@drawable/keyboard"
+        android:layout_alignBottom="@+id/adView"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
 
 
