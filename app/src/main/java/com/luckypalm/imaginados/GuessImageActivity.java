@@ -48,6 +48,7 @@ import com.facebook.share.widget.ShareDialog;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
 
@@ -72,6 +73,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private int secondsToSubtract;
 
     private String word;
+    private String statusLevel;
     private int dim;
     private int aciertos = 0;
     private String uri;
@@ -89,7 +91,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private ImageView shareFacebook;
     private ImageView volver;
     private ImageView title;
-    private ImageView keyboardIcon;
 
     private LinearLayout firstLine;
     private LinearLayout secondLine;
@@ -132,6 +133,25 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_guess_image);
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+
+        digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+
+        // Traigo el tiempo acumulado para setear el timer
+        settings = getSharedPreferences("Status", 0);
+        editor = settings.edit();
+        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        timerFlag = true;
+
+        // traigo el Nivel
+        level = settings.getString("level","1");
+
         // ADS
         MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
         mAdView = (AdView) findViewById(R.id.adView);
@@ -149,21 +169,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             }
         });
-
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
-
-        callbackManager = CallbackManager.Factory.create();
-        shareDialog = new ShareDialog(this);
-
-        digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
-        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
-
-        // Traigo el tiempo acumulado para setear el timer
-        settings = getSharedPreferences("Status", 0);
-        editor = settings.edit();
-        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        timerFlag = true;
 
         // seteo el tiempo que tengo para jugar en el reloj
         milisegundos = settings.getInt("time", 120000);
@@ -312,9 +317,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setCornerRadius((int) getResources().getDimension(R.dimen.border_radius));
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
-        // traigo el Nivel
-        level = settings.getString("level","1");
-
         labelLevelText.setText("Nivel " + settings.getString("levelSelected","1"));
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
@@ -333,7 +335,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.RESULT_HIDDEN, 0);
                 inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
                 closeAndSave();
                 finish();
@@ -385,16 +386,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // si no hay segundos, abro el popup sin tiempo
         if (milisegundos == 0) {
             customDialog();
-        } else {
-            // si hay segundos abro el teclado
-            /*showSoftKey = new CountDownTimer(700, 1000) {
-                public void onTick(long millisUntilFinished) {
-
-                }
-                public void onFinish() {
-                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                }
-            }.start();*/
         }
 
         leftArrow = (ImageView) findViewById(R.id.leftarrow);
@@ -646,7 +637,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.commit();
             sts = new StringBuilder("000000");
         }
-
         return sts.toString();
     }
 

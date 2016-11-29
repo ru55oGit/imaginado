@@ -17,6 +17,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,6 +49,8 @@ public class SelectImagesActivity extends AppCompatActivity {
     private static final String FORMAT = "%02d:%02d";
     private Boolean previousLevel;
     private Boolean nextsLevels;
+
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,34 +103,23 @@ public class SelectImagesActivity extends AppCompatActivity {
         // si selecciona un nivel mayor al actual, les dejo ver las imagenes pero no jugar
         nextsLevels = Integer.parseInt(settings.getString("levelSelected", "1"))> Integer.parseInt(settings.getString("level", "1"));
 
+        // ADS
+        MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
+
+        if ("000000".equals(statusOfLevel.toString())){
+            requestNewInterstitial();
+        }
+
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
         TextView label = (TextView)findViewById(com.luckypalm.imaginados.R.id.labelLevelText);
         label.setText(level);
 
-        // for testing
-        /*label.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                level = ((Integer)(Integer.parseInt(level) + 1)).toString();
-                editor.putString("level", level);
-                editor.commit();
-                ((TextView)v).setText(level);
-            }
-        });
-        ImageView levelImage = (ImageView)findViewById(com.luckypalm.imaginados.R.id.level);
-        levelImage.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                level = ((Integer)(Integer.parseInt(level) - 1)).toString();
-                editor.putString("level", level);
-                editor.commit();
-            }
-        });*/
-
         Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         label.setTypeface(lobsterFont);
 
-        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
         if (statusOfLevel.charAt(0) == '1' && !previousLevel || nextsLevels){
             imagen1.setAlpha(0.35f);
             imagen1.setClickable(false);
@@ -133,16 +128,16 @@ public class SelectImagesActivity extends AppCompatActivity {
             imagen1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagen1.setDrawingCacheEnabled(true);
-                    Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
-                    intent.putExtra("src", "adivinanzas" + level);
-                    intent.putExtra("word", getWord("adivinanzas", level));
-                    startActivity(intent);
+                imagen1.setDrawingCacheEnabled(true);
+                Intent intent = new Intent(SelectImagesActivity.this, GuessImageActivity.class);
+                intent.putExtra("src", "adivinanzas" + level);
+                intent.putExtra("word", getWord("adivinanzas", level));
+                startActivity(intent);
                 }
             });
         }
 
-        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
         if (statusOfLevel.charAt(1) == '1'&& !previousLevel || nextsLevels) {
             imagen2.setAlpha(0.35f);
             imagen2.setClickable(false);
@@ -160,7 +155,7 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
         if (statusOfLevel.charAt(2) == '1'&& !previousLevel || nextsLevels) {
             imagen3.setAlpha(0.35f);
             imagen3.setClickable(false);
@@ -178,7 +173,7 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
         if (statusOfLevel.charAt(3) == '1'&& !previousLevel || nextsLevels) {
             imagen4.setAlpha(0.35f);
             imagen4.setClickable(false);
@@ -196,7 +191,7 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
         if (statusOfLevel.charAt(4) == '1'&& !previousLevel || nextsLevels) {
             imagen5.setAlpha(0.35f);
             imagen5.setClickable(false);
@@ -214,7 +209,7 @@ public class SelectImagesActivity extends AppCompatActivity {
             });
         }
 
-        // // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
+        // si la imagen ya fue adivinada, le pongo opacity y le saco el click, o si selecciona un nivel superior
         if (statusOfLevel.charAt(5) == '1'&& !previousLevel || nextsLevels) {
             imagen6.setAlpha(0.35f);
             imagen6.setClickable(false);
@@ -264,6 +259,19 @@ public class SelectImagesActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
 
+        // Muestro el interstitial cada 2 niveles
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(getResources().getString(R.string.banner_ad_unit_interstitial))
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
     }
 
     private int getSrcByLevel (String level, String category) {
@@ -300,5 +308,11 @@ public class SelectImagesActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return word;
+    }
+
+    private boolean loadInterstitial(String statusLevel) {
+        int cant = statusLevel.length() - statusLevel.replaceAll("1", "").length();
+
+        return cant >= 4? true : false;
     }
 }

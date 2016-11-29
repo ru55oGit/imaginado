@@ -1,7 +1,7 @@
 <resources>
     <string name="facebook_app_id">315657302130813</string>
-    <!--string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string-->
     <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/7841053319</string>
+    <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/2888829717 </string>
     <string name="app_name">Imaginados</string>
     <string name="title_activity_select_images">SelectImages</string>
     <string name="title_activity_guess_image">GuessImageActivity</string>
