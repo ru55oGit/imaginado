@@ -50,6 +50,9 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 
 import java.io.File;
@@ -103,6 +106,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private AdView mAdView;
     private AdRequest adRequest;
+    private RewardedVideoAd mVideoAd;
+
 
     // Storage Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -151,6 +156,45 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         // traigo el Nivel
         level = settings.getString("level","1");
+        // Use an activity context to get the rewarded video instance.
+        mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdOpened() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoStarted() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdClosed() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+                // Preload the next video ad.
+                loadRewardedVideoAd();
+            }
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+                //Toast.makeText(GuessImageActivity.this, "Has obtenido" + rewardItem.getAmount() + rewardItem.getType(), Toast.LENGTH_SHORT).show();
+                milisegundos+= rewardItem.getAmount()*1000;
+                editor.putInt("time", milisegundos);
+                editor.commit();
+            }
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int err) {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        loadRewardedVideoAd();
 
         // ADS
         MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
@@ -160,13 +204,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         mAdView.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
-                super.onAdLoaded();
-                RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
-                focus.setFocusableInTouchMode(true);
-                focus.requestFocus();
-                ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
-                keyboardIcon.setVisibility(View.INVISIBLE);
-                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+            super.onAdLoaded();
+            RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
+            focus.setFocusableInTouchMode(true);
+            focus.requestFocus();
+            ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
+            keyboardIcon.setVisibility(View.INVISIBLE);
+            inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             }
         });
 
@@ -305,6 +349,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     @Override
     protected void onResume() {
+        mVideoAd.resume(this);
         super.onResume();
         secondsToSubtract = 0;
 
@@ -335,9 +380,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
-                closeAndSave();
-                finish();
+            inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
+            closeAndSave();
+            finish();
             }
         });
 
@@ -647,13 +692,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
-                    if (!("00:00").equals(counter.getText())) {
-                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                    } else {
-                        customDialog();
-                    }
+            if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
+                if (!("00:00").equals(counter.getText())) {
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                } else {
+                    customDialog();
                 }
+            }
             }
         });
     }
@@ -728,12 +773,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     private void customDialog(){
-                // custom dialog
+        // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
 
         ImageView ganar = (ImageView) dialogCustom.findViewById(R.id.ganarSegundos);
         ImageView comprar = (ImageView) dialogCustom.findViewById(R.id.comprarSegundos);
+        ImageView vervideo = (ImageView) dialogCustom.findViewById(R.id.watchVideo);
 
         ImageView shareFace = (ImageView) dialogCustom.findViewById(R.id.sharefacebookDialog);
         ImageView shareTwit = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
@@ -742,71 +788,71 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                    String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
+            if (verifyStoragePermissions(GuessImageActivity.this)) {
+                String sharedDescription =  getResources().getString(R.string.generic_share_text);
+                String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
 
-                    if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        if (ShareDialog.canShow(ShareLinkContent.class)) {
-                            ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
-                                    .setContentTitle("Imaginados")
-                                    .setContentDescription(sharedDescription)
-                                    .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
-                                    .setImageUrl(Uri.parse(sharedImage))
-                                    .build();
-                            shareDialog.show(shareLinkContent);
-                        }
-                        milisegundos+= 30000;
-                        editor.putInt("time", milisegundos);
-                        editor.commit();
+                if(isAppInstalled(getBaseContext(), "com.twitter.android")){
+                    if (ShareDialog.canShow(ShareLinkContent.class)) {
+                        ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
+                                .setContentTitle("Imaginados")
+                                .setContentDescription(sharedDescription)
+                                .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
+                                .setImageUrl(Uri.parse(sharedImage))
+                                .build();
+                        shareDialog.show(shareLinkContent);
                     }
+                    milisegundos+= 30000;
+                    editor.putInt("time", milisegundos);
+                    editor.commit();
                 }
+            }
             }
         });
 
         shareTwit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
-                    String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
+            if (verifyStoragePermissions(GuessImageActivity.this)) {
+                Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
+                String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
 
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                    sharingIntent.setType("image/png");
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                sharingIntent.setType("image/png");
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
 
-                    sharingIntent.setPackage("com.twitter.android");
-                    if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        startActivity(sharingIntent);
-                        milisegundos+= 30000;
-                        editor.putInt("time", milisegundos);
-                        editor.commit();
-                    }
+                sharingIntent.setPackage("com.twitter.android");
+                if(isAppInstalled(getBaseContext(), "com.twitter.android")){
+                    startActivity(sharingIntent);
+                    milisegundos+= 30000;
+                    editor.putInt("time", milisegundos);
+                    editor.commit();
                 }
+            }
             }
         });
 
         shareWsap.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 if (verifyStoragePermissions(GuessImageActivity.this)) {
-                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                     Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
-                     Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
-                     String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
-                     sharingIntent.setPackage("com.whatsapp");
-                     sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                     sharingIntent.setType("image/*");
+             if (verifyStoragePermissions(GuessImageActivity.this)) {
+                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                 Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
+                 Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
+                 String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
+                 sharingIntent.setPackage("com.whatsapp");
+                 sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                 sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                 sharingIntent.setType("image/*");
 
-                     if(isAppInstalled(getBaseContext(), "com.whatsapp")){
-                         startActivity(sharingIntent);
-                         milisegundos+= 30000;
-                         editor.putInt("time", milisegundos);
-                         editor.commit();
-                     }
+                 if(isAppInstalled(getBaseContext(), "com.whatsapp")){
+                     startActivity(sharingIntent);
+                     milisegundos+= 30000;
+                     editor.putInt("time", milisegundos);
+                     editor.commit();
                  }
+             }
              }
          });
 
@@ -817,10 +863,20 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 startActivity(intent);
             }
         });
+
         comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        vervideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mVideoAd.isLoaded()) {
+                    mVideoAd.show();
+                }
             }
         });
 
@@ -851,5 +907,22 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
+    }
+
+    @Override
+    public void onPause() {
+        mVideoAd.pause(this);
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        mVideoAd.destroy(this);
+        super.onDestroy();
+    }
+
+
+    private void  loadRewardedVideoAd () {
+        mVideoAd.loadAd(getResources().getString(R.string.banner_ad_unit_video), new AdRequest.Builder().build());
     }
 }

@@ -11,14 +11,24 @@
         android:id="@+id/header"
         android:background="@color/secondaryColor"
         android:orientation="horizontal"
-        android:gravity="right">
+        android:weightSum="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sin_tiempo_title"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/thirdColor"
+            android:padding="3dp"
+            android:layout_gravity="left"
+            android:layout_weight="0.95"/>
 
         <ImageButton
             android:id="@+id/dialogButtonOK"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/cerrar"
-            android:layout_gravity="right"/>
+            android:layout_gravity="right"
+            android:layout_weight="0.05"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,6 +95,34 @@
         android:orientation="horizontal"
         android:layout_below="@+id/winContainer"
         android:background="@color/cardview_light_background"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/watchContainer"
+        android:padding="10dp"
+        android:layout_below="@+id/thirdSeparator">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sin_tiempo_vervideo"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/thirdColor"
+            android:paddingLeft="5dp"
+            android:layout_weight="0.8" />
+        <ImageView
+            android:id="@+id/watchVideo"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:background="@drawable/vervideo"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/fourthSeparator"
+        android:orientation="horizontal"
+        android:layout_below="@+id/watchContainer"
+        android:background="@color/cardview_light_background"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,7 +130,7 @@
         android:id="@+id/shareContainer"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:layout_below="@+id/thirdSeparator">
+        android:layout_below="@+id/fourthSeparator">
 
         <TextView
             android:layout_width="match_parent"
