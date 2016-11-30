@@ -3,15 +3,17 @@
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="8dp"
-    android:background="@drawable/borders_black">
+    android:background="@drawable/borders_black"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:paddingLeft="8dp">
     <TextView android:id="@+id/text1"
         android:layout_width="130dp"
         android:layout_height="55dp"
         android:gravity="center_vertical"
         android:textSize="18sp"
         android:text="Ups, el video es muy PESADO..."
-        android:textColor="@color/greyDark" />
+        android:textColor="@color/secondaryColor" />
 
     <ImageView android:src="@drawable/aguero"
         android:layout_width="60dp"
@@ -24,5 +26,5 @@
         android:gravity="center_vertical"
         android:textSize="18sp"
         android:text="...dije video kun."
-        android:textColor="@color/greyDark" />
+        android:textColor="@color/secondaryColor" />
 </LinearLayout>
