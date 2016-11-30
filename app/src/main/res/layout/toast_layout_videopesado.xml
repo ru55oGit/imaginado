@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_layout_root"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/borders_black">
+    <TextView android:id="@+id/text1"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:text="Ups, el video es muy PESADO..."
+        android:textColor="@color/greyDark" />
+
+    <ImageView android:src="@drawable/aguero"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView"/>
+
+    <TextView android:id="@+id/text2"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:text="...dije video kun."
+        android:textColor="@color/greyDark" />
+</LinearLayout>

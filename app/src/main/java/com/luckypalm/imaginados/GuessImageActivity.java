@@ -86,6 +86,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private Typeface lobsterFont;
     private Toast toastLose;
     private Toast toastWin;
+    private Toast toastVideo;
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
     private InputMethodManager inputMethodManager;
@@ -179,7 +180,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
             @Override
             public void onRewarded(RewardItem rewardItem) {
-                //Toast.makeText(GuessImageActivity.this, "Has obtenido" + rewardItem.getAmount() + rewardItem.getType(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(GuessImageActivity.this, "Has obtenido" + rewardItem.getAmount() + rewardItem.getType(), Toast.LENGTH_SHORT).show();
                 milisegundos+= rewardItem.getAmount()*1000;
                 editor.putInt("time", milisegundos);
                 editor.commit();
@@ -878,6 +879,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (mVideoAd.isLoaded()) {
                     mVideoAd.show();
+                } else {
+                    LayoutInflater inflater = getLayoutInflater();
+                    View layout = inflater.inflate(R.layout.toast_layout_videopesado,
+                            (ViewGroup) findViewById(R.id.toast_layout_root));
+                    toastVideo = new Toast(getApplicationContext());
+                    toastVideo.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
+                    toastVideo.setDuration(Toast.LENGTH_LONG);
+                    toastVideo.setView(layout);
+                    toastVideo.show();
                 }
             }
         });
