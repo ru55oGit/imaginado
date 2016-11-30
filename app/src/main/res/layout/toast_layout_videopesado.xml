@@ -6,7 +6,8 @@
     android:background="@drawable/borders_black"
     android:paddingBottom="8dp"
     android:paddingTop="8dp"
-    android:paddingLeft="8dp">
+    android:paddingLeft="8dp"
+    android:weightSum="1">
     <TextView android:id="@+id/text1"
         android:layout_width="130dp"
         android:layout_height="55dp"
@@ -16,9 +17,9 @@
         android:textColor="@color/secondaryColor" />
 
     <ImageView android:src="@drawable/aguero"
-        android:layout_width="60dp"
+        android:layout_width="43dp"
         android:layout_height="50dp"
-        android:id="@+id/imageView"/>
+        android:id="@+id/imageView" />
 
     <TextView android:id="@+id/text2"
         android:layout_width="118dp"
