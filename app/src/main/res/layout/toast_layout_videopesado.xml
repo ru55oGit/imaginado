@@ -9,12 +9,13 @@
     android:paddingLeft="8dp"
     android:weightSum="1">
     <TextView android:id="@+id/text1"
-        android:layout_width="130dp"
+        android:layout_width="145dp"
         android:layout_height="55dp"
         android:gravity="center_vertical"
         android:textSize="18sp"
-        android:text="Ups, el video es muy PESADO..."
-        android:textColor="@color/secondaryColor" />
+        android:text="Ups, la película es muy pesada..."
+        android:textColor="@color/secondaryColor"
+        android:layout_weight="6.95" />
 
     <ImageView android:src="@drawable/aguero"
         android:layout_width="43dp"
@@ -26,6 +27,6 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:textSize="18sp"
-        android:text="...dije video kun."
+        android:text="...no dije gorda che."
         android:textColor="@color/secondaryColor" />
 </LinearLayout>
