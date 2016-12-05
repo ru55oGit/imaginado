@@ -862,15 +862,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         ganar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GuessImageActivity.this, PlayForSecondsActivity.class);
-                startActivity(intent);
+            Intent intent = new Intent(GuessImageActivity.this, PlayForSecondsActivity.class);
+            startActivity(intent);
             }
         });
 
         comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(GuessImageActivity.this, BuySecondsActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -932,7 +934,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         mVideoAd.destroy(this);
         super.onDestroy();
     }
-
 
     private void  loadRewardedVideoAd () {
         mVideoAd.loadAd(getResources().getString(R.string.banner_ad_unit_video), new AdRequest.Builder().build());
