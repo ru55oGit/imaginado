@@ -74,7 +74,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                             String price = object.getString("price");
 
                             if (sku.equals(inappid_three)) {
-                                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(),sku, "inapp","")
+                                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(),sku, "inapp","");
                             }
                         }
                     }
@@ -82,9 +82,9 @@ public class BuySecondsActivity extends AppCompatActivity {
                     e.printStackTrace();
                 } catch (JSONException e) {
                     e.printStackTrace();
-                } catch (IntentSender.SendIntentException e) {
+                } /*catch (IntentSender.SendIntentException e) {
                     e.printStackTrace();
-                }
+                }*/
             }
         });
 
