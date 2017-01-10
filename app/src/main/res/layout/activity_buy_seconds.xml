@@ -43,11 +43,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sin_tiempo_comprar"
             android:textSize="@dimen/sinsegundos_popup_letter"
             android:textColor="@color/backLetters"
             android:paddingLeft="5dp"
-            android:layout_weight="0.8" />
+            android:layout_weight="0.8"
+            android:text="180 segundos" />
 
         <ImageView
             android:id="@+id/three_minutes"
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sin_tiempo_jugar"
+            android:text="300 segundos"
             android:textSize="@dimen/sinsegundos_popup_letter"
             android:textColor="@color/cardview_light_background"
             android:paddingLeft="5dp"
@@ -102,7 +102,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sin_tiempo_vervideo"
+            android:text="420 segundos"
             android:textSize="@dimen/sinsegundos_popup_letter"
             android:textColor="@color/backLetters"
             android:paddingLeft="5dp"

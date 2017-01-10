@@ -27,6 +27,11 @@ public class BuySecondsActivity extends AppCompatActivity {
     IInAppBillingService mService;
     ServiceConnection mServiceConn;
     String inappid_three = "com.luckypalm.imaginados.three_minutes";
+    String inappid_five = "com.luckypalm.imaginados.five_minutes";
+    String inappid_seven = "com.luckypalm.imaginados.seven_minutes";
+    String inappid_ten = "com.luckypalm.imaginados.ten_minutes";
+    String inappid_fifteen = "com.luckypalm.imaginados.fifteen_minutes";
+    String inappid_twenty = "com.luckypalm.imaginados.twenty_minutes";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,40 +56,49 @@ public class BuySecondsActivity extends AppCompatActivity {
         serviceIntent.setPackage("com.android.vending");
         bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
 
+        ArrayList<String> skuList = new ArrayList<String> ();
+        skuList.add(inappid_three);
+        skuList.add(inappid_five);
+        skuList.add(inappid_seven);
+        skuList.add(inappid_ten);
+        skuList.add(inappid_fifteen);
+        skuList.add(inappid_twenty);
+
+        Bundle querySkus = new Bundle();
+        querySkus.putStringArrayList("ITEM_ID_LIST", skuList);
+        Bundle skuDetails;
+
+        try {
+            skuDetails = mService.getSkuDetails(3, getPackageName(), "inapp", querySkus);
+            int response = skuDetails.getInt("RESPONSE_CODE");
+            if (response == 0) {
+                ArrayList<String> responseList = skuDetails.getStringArrayList("DETAILS_LIST");
+                for (String thisResponse:responseList) {
+                    JSONObject object = new JSONObject(thisResponse);
+                    String sku = object.getString("productId");
+                    String price = object.getString("price");
+                    String description = object.getString("description");
+                    String title = object.getString("title");
+
+                    if (sku.equals(inappid_three)) {
+                        Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(),sku, "inapp","");
+                    }
+                }
+            }
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } /*catch (IntentSender.SendIntentException e) {
+            e.printStackTrace();
+        }*/
+
         ImageView three_minutesBtn = (ImageView) findViewById(R.id.three_minutes);
 
         three_minutesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<String> skuList = new ArrayList<String> ();
-                skuList.add("three_minutes");
-                skuList.add("five_minutes");
-                Bundle querySkus = new Bundle();
-                querySkus.putStringArrayList("ITEM_ID_LIST", skuList);
-                Bundle skuDetails;
 
-                try {
-                    skuDetails = mService.getSkuDetails(3, getPackageName(), "inapp", querySkus);
-                    int response = skuDetails.getInt("RESPONSE_CODE");
-                    if (response == 0) {
-                        ArrayList<String> responseList = skuDetails.getStringArrayList("DETAILS_LIST");
-                        for (String thisResponse:responseList) {
-                            JSONObject object = new JSONObject(thisResponse);
-                            String sku = object.getString("productId");
-                            String price = object.getString("price");
-
-                            if (sku.equals(inappid_three)) {
-                                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(),sku, "inapp","");
-                            }
-                        }
-                    }
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                } /*catch (IntentSender.SendIntentException e) {
-                    e.printStackTrace();
-                }*/
             }
         });
 
