@@ -35,11 +35,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buyContainer"
+        android:id="@+id/threeMinutesContainer"
         android:layout_below="@+id/firstSeparator"
         android:padding="10dp"
         android:weightSum="1"
         android:background="@color/cardview_light_background">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,26 +50,20 @@
             android:layout_weight="0.8"
             android:text="180 segundos" />
 
-        <ImageView
-            android:id="@+id/three_minutes"
-            android:layout_width="75dp"
-            android:layout_height="60dp"
-            android:src="@drawable/comprar"
-            android:layout_weight="0.2"/>
+        <Button
+            android:text="U$S 0.99"
+            android:id="@+id/threeMinutesBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:id="@+id/secondSeparator"
-        android:orientation="horizontal"
-        android:layout_below="@+id/buyContainer"
-        android:background="@color/cardview_dark_background"></LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/winContainer"
+        android:id="@+id/fiveMinutesContainer"
         android:padding="10dp"
-        android:layout_below="@+id/secondSeparator"
+        android:layout_below="@+id/threeMinutesContainer"
         android:background="@color/backLetters">
         <TextView
             android:layout_width="wrap_content"
@@ -78,26 +73,20 @@
             android:textColor="@color/cardview_light_background"
             android:paddingLeft="5dp"
             android:layout_weight="0.8" />
-        <ImageView
-            android:id="@+id/ganarSegundos"
-            android:layout_width="75dp"
-            android:layout_height="60dp"
-            android:background="@drawable/ganar"
-            android:layout_weight="0.2"/>
+
+        <Button
+            android:text="U$S 1.99"
+            android:id="@+id/fiveMinutesBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"  />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:id="@+id/thirdSeparator"
-        android:orientation="horizontal"
-        android:layout_below="@+id/winContainer"
-        android:background="@color/cardview_light_background"></LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/watchContainer"
+        android:id="@+id/sevenMinutesContainer"
         android:padding="10dp"
-        android:layout_below="@+id/thirdSeparator"
+        android:layout_below="@+id/fiveMinutesContainer"
         android:background="@color/cardview_light_background">
         <TextView
             android:layout_width="wrap_content"
@@ -107,19 +96,14 @@
             android:textColor="@color/backLetters"
             android:paddingLeft="5dp"
             android:layout_weight="0.8" />
-        <ImageView
-            android:id="@+id/watchVideo"
-            android:layout_width="75dp"
-            android:layout_height="60dp"
-            android:background="@drawable/vervideo"
-            android:layout_weight="0.2"/>
+
+        <Button
+            android:text="U$S 1.99"
+            android:id="@+id/sevenMinutesBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"  />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:id="@+id/fourthSeparator"
-        android:orientation="horizontal"
-        android:layout_below="@+id/watchContainer"
-        android:background="@color/cardview_light_background"></LinearLayout>
+
 
 </RelativeLayout>
