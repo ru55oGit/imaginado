@@ -8,13 +8,19 @@
     android:background="@drawable/tile"
     tools:context=".BuySecondsActivity">
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstSeparator"
+        android:orientation="horizontal"
+        android:background="@color/cardview_dark_background"
+        android:padding="1dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:padding="10dp"
         android:id="@+id/header"
-        android:background="@color/backLetters"
+        android:background="@color/secondaryColor"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
@@ -23,39 +29,46 @@
             android:textSize="@dimen/sinsegundos_popup_letter"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:padding="3dp"
-            android:layout_gravity="left"/>
+            android:layout_gravity="left"
+            android:layout_weight="0.95"/>
+        <ImageButton
+            android:id="@+id/dialogButtonOK"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cerrar"
+            android:layout_gravity="right"
+            android:layout_weight="0.05"
+            android:shadowColor="@color/cardview_dark_background"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:id="@+id/firstSeparator"
-        android:layout_below="@+id/header"
-        android:orientation="horizontal"
-        android:background="@color/cardview_dark_background"></LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/threeMinutesContainer"
-        android:layout_below="@+id/firstSeparator"
+        android:layout_below="@+id/header"
         android:padding="10dp"
         android:weightSum="1"
-        android:background="@color/cardview_light_background">
+        android:background="@color/thirdColor">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/threeMinutesTxt"
             android:textSize="@dimen/sinsegundos_popup_letter"
-            android:textColor="@color/backLetters"
+            android:textColor="@color/secondaryColor"
             android:paddingLeft="5dp"
-            android:layout_weight="0.8"
-            android:text="180 segundos" />
+            android:layout_weight="0.8" />
 
         <Button
-            android:text="U$S 0.99"
             android:id="@+id/threeMinutesBtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2" />
+            android:layout_weight="0.2"
+            android:background="@drawable/borders_buy"
+            android:textColor="@color/cardview_light_background" />
 
     </LinearLayout>
     <LinearLayout
@@ -64,22 +77,23 @@
         android:id="@+id/fiveMinutesContainer"
         android:padding="10dp"
         android:layout_below="@+id/threeMinutesContainer"
-        android:background="@color/backLetters">
+        android:background="@color/primaryColor">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="300 segundos"
+            android:id="@+id/fiveMinutesTxt"
             android:textSize="@dimen/sinsegundos_popup_letter"
-            android:textColor="@color/cardview_light_background"
+            android:textColor="@color/thirdColor"
             android:paddingLeft="5dp"
             android:layout_weight="0.8" />
 
         <Button
-            android:text="U$S 1.99"
             android:id="@+id/fiveMinutesBtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"  />
+            android:layout_weight="0.2"
+            android:background="@drawable/borders_buy"
+            android:textColor="@color/cardview_light_background"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,23 +101,112 @@
         android:id="@+id/sevenMinutesContainer"
         android:padding="10dp"
         android:layout_below="@+id/fiveMinutesContainer"
-        android:background="@color/cardview_light_background">
+        android:background="@color/thirdColor">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="420 segundos"
+            android:id="@+id/sevenMinutesTxt"
             android:textSize="@dimen/sinsegundos_popup_letter"
-            android:textColor="@color/backLetters"
+            android:textColor="@color/secondaryColor"
             android:paddingLeft="5dp"
-            android:layout_weight="0.8" />
+            android:layout_weight="0.6" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/noads"/>
 
         <Button
-            android:text="U$S 1.99"
             android:id="@+id/sevenMinutesBtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"  />
+            android:layout_weight="0.2"
+            android:background="@drawable/borders_buy"
+            android:textColor="@color/cardview_light_background"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tenMinutesContainer"
+        android:padding="10dp"
+        android:layout_below="@+id/sevenMinutesContainer"
+        android:background="@color/primaryColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tenMinutesTxt"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/thirdColor"
+            android:paddingLeft="5dp"
+            android:layout_weight="0.6" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/noads"/>
 
+        <Button
+            android:id="@+id/fifteenMinutesBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/borders_buy"
+            android:textColor="@color/cardview_light_background"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fifteenMinutesContainer"
+        android:padding="10dp"
+        android:layout_below="@+id/tenMinutesContainer"
+        android:background="@color/thirdColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fifteenMinutesTxt"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/secondaryColor"
+            android:paddingLeft="5dp"
+            android:layout_weight="0.6" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/noads"/>
+
+        <Button
+            android:id="@+id/tenMinutesBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/borders_buy"
+            android:textColor="@color/cardview_light_background"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/twentyMinutesContainer"
+        android:padding="10dp"
+        android:layout_below="@+id/fifteenMinutesContainer"
+        android:background="@color/primaryColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/twentyMinutesTxt"
+            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textColor="@color/thirdColor"
+            android:paddingLeft="5dp"
+            android:layout_weight="0.6" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/noads"/>
+
+        <Button
+            android:id="@+id/twentyMinutesBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/borders_buy"
+            android:textColor="@color/cardview_light_background"/>
+    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

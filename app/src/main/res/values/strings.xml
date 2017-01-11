@@ -3,6 +3,7 @@
     <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/7841053319</string>
     <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/2888829717 </string>
     <string name="banner_ad_unit_video">ca-app-pub-5537378422935748/7899282117</string>
+    <string name="inapp_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmleqGqeHISkNO16J9RbvG5PvxT//KyMyPNCPIijzxFKzGBcs6ECSndEqgR6C7moR01bVubdqDoEyoLZY7eFoRZoAGnQdyieZeuvXhSDCGaEBqEOeiTQ2yj/D75T53LUA9OGOwWzQTtQ+yPN5R4znjpMDZGy2omHcmApm/+pUVvnfzI9nZ/POgGNMcHrrnDaxDNPOKaZqquVfiyRVRnIFQSXz2BcP/wiD5rHQ5GW/DiP7svzF5XElUdhZoz0UkcPfV9SeXkfkMhmR2Sr0liQaXYFlH+Gd/KIwaP/s0LA9dY/EoMsqR5w3zTPkDg2BMnTYp2e0WLDJraWxYbjvOsKKBQIDAQAB</string>
     <string name="app_name">Imaginados</string>
     <string name="title_activity_select_images">SelectImages</string>
     <string name="title_activity_guess_image">GuessImageActivity</string>
