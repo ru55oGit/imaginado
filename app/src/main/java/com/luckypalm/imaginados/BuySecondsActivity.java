@@ -238,7 +238,7 @@ public class BuySecondsActivity extends AppCompatActivity {
         }
         private void buy (String mSku, String mTitle) {
             try {
-                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(), mSku, "inapp", mSku + mTitle.replaceAll(" ",""));
+                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(), "android.test.purchased", "inapp", mSku + mTitle.replaceAll(" ",""));
                 PendingIntent pendingIntent = buyIntentBundle.getParcelable("BUY_INTENT");
                 startIntentSenderForResult(pendingIntent.getIntentSender(),
                         1001, new Intent(), Integer.valueOf(0), Integer.valueOf(0),

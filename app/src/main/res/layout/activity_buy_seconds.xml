@@ -185,26 +185,30 @@
         android:id="@+id/twentyMinutesContainer"
         android:padding="10dp"
         android:layout_below="@+id/fifteenMinutesContainer"
-        android:background="@color/primaryColor">
+        android:background="@color/primaryColor"
+         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/twentyMinutesTxt"
-            android:textSize="@dimen/sinsegundos_popup_letter"
+            android:textSize="17dp"
             android:textColor="@color/thirdColor"
             android:paddingLeft="5dp"
-            android:layout_weight="0.6" />
+            android:layout_gravity="center_vertical"
+            android:text="20 minutos +" />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/noads"/>
+            android:src="@drawable/noads"
+            />
 
         <Button
             android:id="@+id/twentyMinutesBtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
             android:background="@drawable/borders_buy"
+            android:layout_gravity="center_vertical|right"
             android:textColor="@color/cardview_light_background"/>
     </LinearLayout>
     </RelativeLayout>
