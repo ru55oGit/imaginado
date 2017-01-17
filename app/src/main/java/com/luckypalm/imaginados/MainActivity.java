@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timer.cancel();
                 Intent intent = new Intent(MainActivity.this, SelectLevelActivity.class);
                 startActivity(intent);
             }

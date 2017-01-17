@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -39,7 +40,7 @@ public class BuySecondsActivity extends AppCompatActivity {
     private String inappid_ten = "com.luckypalm.imaginados.ten_minutes";
     private String inappid_fifteen = "com.luckypalm.imaginados.fifteen_minutes";
     private String inappid_twenty = "com.luckypalm.imaginados.twenty_minutes";
-    private String purchaseToken = "inapp:com.luckypalm.imaginados:android.test.purchased";
+    private String purchaseToken = "android.test.purchased";
 
     private Button three_minutesBtn;
     private Button five_minutesBtn;
@@ -56,8 +57,10 @@ public class BuySecondsActivity extends AppCompatActivity {
     private TextView twenty_minutesTxt;
 
     private ImageButton close;
-
     private IabHelper mHelper;
+
+    private SharedPreferences settings;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,10 @@ public class BuySecondsActivity extends AppCompatActivity {
 
         // ...
         String base64EncodedPublicKey = getResources().getString(R.string.inapp_key);
+
+        // Traigo el tiempo acumulado para setear el timer
+        settings = getSharedPreferences("Status", 0);
+        editor = settings.edit();
 
         // compute your public key and store it in base64EncodedPublicKey
         mHelper = new IabHelper(getApplicationContext(), base64EncodedPublicKey);
@@ -124,6 +131,7 @@ public class BuySecondsActivity extends AppCompatActivity {
 
     }
 
+    // manejos la vuelta de la compra
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1001) {
@@ -134,8 +142,9 @@ public class BuySecondsActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 try {
                     JSONObject jo = new JSONObject(purchaseData);
-                    String sku = jo.getString("purchaseToken");
-                    new ConsumePurchase().execute(sku);
+                    String purchaseToken = jo.getString("purchaseToken");
+                    String productId = jo.getString("productId");
+                    new ConsumePurchase().execute(purchaseToken, productId);
 
                 }
                 catch (JSONException e) {
@@ -145,40 +154,35 @@ public class BuySecondsActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mService != null) {
-            unbindService(mServiceConn);
-        }
-    }
-
+    // consumo la compra y acredito los segundos correspondientes
     class ConsumePurchase extends AsyncTask<String, Void, String> {
         protected String doInBackground(String... params) {
-            int response = -2;
+            int response = 0;
             try {
                 response = mService.consumePurchase(3, getPackageName(), params[0].toString());
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
-            return params[0].toString();
+            return params[1].toString();
         }
         protected void onPostExecute(String id) {
             if (inappid_three.equals(id)) {
-
+                editor.putInt("time", 180000);
             } else if (inappid_five.equals(id)) {
-
+                editor.putInt("time", 300000);
             } else if (inappid_seven.equals(id)) {
-
+                editor.putInt("time", 420000);
             } else if (inappid_ten.equals(id)) {
-
-            }  else if (inappid_fifteen.equals(id)) {
-
+                editor.putInt("time", 600000);
+            } else if (inappid_fifteen.equals(id)) {
+                editor.putInt("time", 900000);
             } else if (inappid_twenty.equals(id)) {
-
+                editor.putInt("time", 1200000);
             } else if (purchaseToken.equals(id)) {
-
+                editor.putInt("time", 1200000);
             }
+            editor.commit();
+            finish();
         }
     }
 
@@ -225,7 +229,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                         three_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                            buy(inappid_three, description);
+                                buy(inappid_three, description);
                             }
                         });
                     }
@@ -235,7 +239,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                         five_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                            buy(inappid_five, description);
+                                buy(inappid_five, description);
                             }
                         });
                     }
@@ -245,7 +249,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                         seven_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                            buy(inappid_seven, description);
+                                buy(inappid_seven, description);
                             }
                         });
                     }
@@ -255,7 +259,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                         ten_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                            buy(inappid_ten, description);
+                                buy(inappid_ten, description);
                             }
                         });
                     }
@@ -265,7 +269,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                         fifteen_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                            buy(inappid_fifteen, description);
+                                buy(inappid_fifteen, description);
                             }
                         });
                     }
@@ -275,7 +279,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                         twenty_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                            buy(inappid_twenty, description);
+                                buy(inappid_twenty, description);
                             }
                         });
                     }
@@ -300,7 +304,16 @@ public class BuySecondsActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mService != null) {
+            unbindService(mServiceConn);
+        }
+    }
 }
+
     /*String sku = object.getString("productId");
     String price = object.getString("price");
     String description = object.getString("description");
