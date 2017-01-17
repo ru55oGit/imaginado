@@ -9,7 +9,6 @@ import android.content.ServiceConnection;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +17,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.vending.billing.IInAppBillingService;
@@ -41,6 +39,7 @@ public class BuySecondsActivity extends AppCompatActivity {
     private String inappid_ten = "com.luckypalm.imaginados.ten_minutes";
     private String inappid_fifteen = "com.luckypalm.imaginados.fifteen_minutes";
     private String inappid_twenty = "com.luckypalm.imaginados.twenty_minutes";
+    private String purchaseToken = "inapp:com.luckypalm.imaginados:android.test.purchased";
 
     private Button three_minutesBtn;
     private Button five_minutesBtn;
@@ -126,6 +125,27 @@ public class BuySecondsActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1001) {
+            int responseCode = data.getIntExtra("RESPONSE_CODE", 0);
+            String purchaseData = data.getStringExtra("INAPP_PURCHASE_DATA");
+            String dataSignature = data.getStringExtra("INAPP_DATA_SIGNATURE");
+
+            if (resultCode == RESULT_OK) {
+                try {
+                    JSONObject jo = new JSONObject(purchaseData);
+                    String sku = jo.getString("purchaseToken");
+                    new ConsumePurchase().execute(sku);
+
+                }
+                catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         if (mService != null) {
@@ -133,10 +153,39 @@ public class BuySecondsActivity extends AppCompatActivity {
         }
     }
 
+    class ConsumePurchase extends AsyncTask<String, Void, String> {
+        protected String doInBackground(String... params) {
+            int response = -2;
+            try {
+                response = mService.consumePurchase(3, getPackageName(), params[0].toString());
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            return params[0].toString();
+        }
+        protected void onPostExecute(String id) {
+            if (inappid_three.equals(id)) {
+
+            } else if (inappid_five.equals(id)) {
+
+            } else if (inappid_seven.equals(id)) {
+
+            } else if (inappid_ten.equals(id)) {
+
+            }  else if (inappid_fifteen.equals(id)) {
+
+            } else if (inappid_twenty.equals(id)) {
+
+            } else if (purchaseToken.equals(id)) {
+
+            }
+        }
+    }
+
     class GetItemList extends AsyncTask<Integer, Integer, ArrayList<String>> {
         private String sku = "";
         private String price = "";
-        private String title = "";
+        private String description = "";
         protected ArrayList<String> doInBackground(Integer... params) {
             ArrayList<String> skuList = new ArrayList<String>();
             skuList.add(inappid_three);
@@ -168,65 +217,65 @@ public class BuySecondsActivity extends AppCompatActivity {
                     JSONObject object = new JSONObject(thisResponse);
                     sku = object.getString("productId");
                     price = object.getString("price");
-                    title = object.getString("description");
+                    description = object.getString("description");
 
                     if (inappid_three.equals(sku)) {
                         three_minutesBtn.setText(price);
-                        three_minutesTxt.setText(title);
+                        three_minutesTxt.setText(description);
                         three_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                            buy(sku, title);
+                            buy(inappid_three, description);
                             }
                         });
                     }
                     if (inappid_five.equals(sku)) {
                         five_minutesBtn.setText(price);
-                        five_minutesTxt.setText(title);
+                        five_minutesTxt.setText(description);
                         five_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                buy(sku, title);
+                            buy(inappid_five, description);
                             }
                         });
                     }
                     if (inappid_seven.equals(sku)) {
                         seven_minutesBtn.setText(price);
-                        seven_minutesTxt.setText(title);
+                        seven_minutesTxt.setText(description);
                         seven_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                buy(sku, title);
+                            buy(inappid_seven, description);
                             }
                         });
                     }
                     if (inappid_ten.equals(sku)) {
                         ten_minutesBtn.setText(price);
-                        ten_minutesTxt.setText(title);
+                        ten_minutesTxt.setText(description);
                         ten_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                buy(sku, title);
+                            buy(inappid_ten, description);
                             }
                         });
                     }
                     if (inappid_fifteen.equals(sku)) {
                         fifteen_minutesBtn.setText(price);
-                        fifteen_minutesTxt.setText(title);
+                        fifteen_minutesTxt.setText(description);
                         fifteen_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                buy(sku, title);
+                            buy(inappid_fifteen, description);
                             }
                         });
                     }
                     if (inappid_twenty.equals(sku)) {
                         twenty_minutesBtn.setText(price);
-                        twenty_minutesTxt.setText(title);
+                        twenty_minutesTxt.setText(description);
                         twenty_minutesBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                buy(sku, title);
+                            buy(inappid_twenty, description);
                             }
                         });
                     }
@@ -236,13 +285,14 @@ public class BuySecondsActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        private void buy (String mSku, String mTitle) {
+        private void buy (String mSku, String mDesc) {
             try {
-                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(), "android.test.purchased", "inapp", mSku + mTitle.replaceAll(" ",""));
+                // limpiar purchase token de prueba
+                //int response = mService.consumePurchase(3, getPackageName(), "inapp:com.luckypalm.imaginados:android.test.purchased");
+                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(), "android.test.purchased", "inapp", mSku + mDesc.replaceAll(" ",""));
                 PendingIntent pendingIntent = buyIntentBundle.getParcelable("BUY_INTENT");
-                startIntentSenderForResult(pendingIntent.getIntentSender(),
-                        1001, new Intent(), Integer.valueOf(0), Integer.valueOf(0),
-                        Integer.valueOf(0));
+                startIntentSenderForResult(pendingIntent.getIntentSender(), 1001, new Intent(), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0));
+
             } catch (RemoteException e) {
                 e.printStackTrace();
             } catch (IntentSender.SendIntentException e) {
@@ -254,4 +304,32 @@ public class BuySecondsActivity extends AppCompatActivity {
     /*String sku = object.getString("productId");
     String price = object.getString("price");
     String description = object.getString("description");
-    String title = object.getString("title");*/
+    String description = object.getString("description");
+    "android.test.purchased"
+    "android.test.cancelled"
+    Bundle ownedItems = mService.getPurchases(3, getPackageName(), "inapp", null);
+    int response = ownedItems.getInt("RESPONSE_CODE");
+    if (response == 0) {
+       ArrayList<String> ownedSkus =
+          ownedItems.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
+       ArrayList<String>  purchaseDataList =
+          ownedItems.getStringArrayList("INAPP_PURCHASE_DATA_LIST");
+       ArrayList<String>  signatureList =
+          ownedItems.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
+       String continuationToken =
+          ownedItems.getString("INAPP_CONTINUATION_TOKEN");
+
+       for (int i = 0; i < purchaseDataList.size(); ++i) {
+          String purchaseData = purchaseDataList.get(i);
+          String signature = signatureList.get(i);
+          String sku = ownedSkus.get(i);
+
+          // do something with this purchase information
+          // e.g. display the updated list of products owned by user
+       }
+
+       // if continuationToken != null, call getPurchases again
+       // and pass in the token to retrieve more items
+    }
+
+    */
