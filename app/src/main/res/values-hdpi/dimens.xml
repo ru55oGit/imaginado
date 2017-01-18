@@ -17,5 +17,6 @@
     <dimen name="question_letter_size">23dp</dimen>
     <dimen name="top_toast">150dp</dimen>
     <dimen name="margin_bottom_volver">15dp</dimen>
+    <dimen name="buyseconds_letter_size">23dp</dimen>
 </resources>
 

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -62,12 +63,16 @@ public class BuySecondsActivity extends AppCompatActivity {
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
 
+    private Typeface lobsterFont;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_buy_seconds);
+
+        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
 
         // ...
         String base64EncodedPublicKey = getResources().getString(R.string.inapp_key);
@@ -114,11 +119,17 @@ public class BuySecondsActivity extends AppCompatActivity {
         twenty_minutesBtn = (Button) findViewById(R.id.twentyMinutesBtn);
 
         three_minutesTxt = (TextView) findViewById(R.id.threeMinutesTxt);
+        three_minutesTxt.setTypeface(lobsterFont);
         five_minutesTxt = (TextView) findViewById(R.id.fiveMinutesTxt);
+        five_minutesTxt.setTypeface(lobsterFont);
         seven_minutesTxt = (TextView) findViewById(R.id.sevenMinutesTxt);
+        seven_minutesTxt.setTypeface(lobsterFont);
         ten_minutesTxt = (TextView) findViewById(R.id.tenMinutesTxt);
+        ten_minutesTxt.setTypeface(lobsterFont);
         fifteen_minutesTxt = (TextView) findViewById(R.id.fifteenMinutesTxt);
+        fifteen_minutesTxt.setTypeface(lobsterFont);
         twenty_minutesTxt = (TextView) findViewById(R.id.twentyMinutesTxt);
+        twenty_minutesTxt.setTypeface(lobsterFont);
 
         close = (ImageButton) findViewById(R.id.dialogButtonOK);
 
@@ -128,7 +139,6 @@ public class BuySecondsActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 
     // manejos la vuelta de la compra
@@ -157,9 +167,8 @@ public class BuySecondsActivity extends AppCompatActivity {
     // consumo la compra y acredito los segundos correspondientes
     class ConsumePurchase extends AsyncTask<String, Void, String> {
         protected String doInBackground(String... params) {
-            int response = 0;
             try {
-                response = mService.consumePurchase(3, getPackageName(), params[0].toString());
+                int response = mService.consumePurchase(3, getPackageName(), params[0].toString());
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
@@ -172,14 +181,19 @@ public class BuySecondsActivity extends AppCompatActivity {
                 editor.putInt("time", 300000);
             } else if (inappid_seven.equals(id)) {
                 editor.putInt("time", 420000);
+                editor.putBoolean("showAds", false);
             } else if (inappid_ten.equals(id)) {
                 editor.putInt("time", 600000);
+                editor.putBoolean("showAds", false);
             } else if (inappid_fifteen.equals(id)) {
                 editor.putInt("time", 900000);
+                editor.putBoolean("showAds", false);
             } else if (inappid_twenty.equals(id)) {
                 editor.putInt("time", 1200000);
+                editor.putBoolean("showAds", false);
             } else if (purchaseToken.equals(id)) {
-                editor.putInt("time", 1200000);
+                editor.putInt("time", 900000);
+                editor.putBoolean("showAds", false);
             }
             editor.commit();
             finish();
@@ -212,7 +226,6 @@ public class BuySecondsActivity extends AppCompatActivity {
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
-
             return responseList;
         }
         protected void onPostExecute(ArrayList<String> responseList) {
@@ -293,7 +306,7 @@ public class BuySecondsActivity extends AppCompatActivity {
             try {
                 // limpiar purchase token de prueba
                 //int response = mService.consumePurchase(3, getPackageName(), "inapp:com.luckypalm.imaginados:android.test.purchased");
-                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(), "android.test.purchased", "inapp", mSku + mDesc.replaceAll(" ",""));
+                Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(), mSku, "inapp", mSku + mDesc.replaceAll(" ",""));
                 PendingIntent pendingIntent = buyIntentBundle.getParcelable("BUY_INTENT");
                 startIntentSenderForResult(pendingIntent.getIntentSender(), 1001, new Intent(), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(0));
 

@@ -143,6 +143,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
 
+        frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
+
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
 
@@ -155,70 +157,73 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         timerFlag = true;
 
-        // traigo el Nivel
-        level = settings.getString("level","1");
-        // Use an activity context to get the rewarded video instance.
-        mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-        mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
-            @Override
-            public void onRewardedVideoAdLoaded() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onRewardedVideoAdOpened() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onRewardedVideoStarted() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onRewardedVideoAdClosed() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
-                // Preload the next video ad.
-                loadRewardedVideoAd();
-            }
-            @Override
-            public void onRewarded(RewardItem rewardItem) {
-                Toast.makeText(GuessImageActivity.this, "Has obtenido" + rewardItem.getAmount() + rewardItem.getType(), Toast.LENGTH_SHORT).show();
-                milisegundos+= rewardItem.getAmount()*1000;
-                editor.putInt("time", milisegundos);
-                editor.commit();
-            }
-            @Override
-            public void onRewardedVideoAdLeftApplication() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onRewardedVideoAdFailedToLoad(int err) {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        loadRewardedVideoAd();
-
-        // ADS
-        MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
-        mAdView = (AdView) findViewById(R.id.adView);
-        adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-            super.onAdLoaded();
-            RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
-            focus.setFocusableInTouchMode(true);
-            focus.requestFocus();
-            ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
-            keyboardIcon.setVisibility(View.INVISIBLE);
-            if (milisegundos>0) {
-                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-            }
-            }
-        });
-
         // seteo el tiempo que tengo para jugar en el reloj
         milisegundos = settings.getInt("time", 120000);
+
+        // traigo el Nivel
+        level = settings.getString("level","1");
+        if (settings.getBoolean("showAds", true)) {
+            // Use an activity context to get the rewarded video instance.
+            mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+            mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+                @Override
+                public void onRewardedVideoAdLoaded() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoAdOpened() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoStarted() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoAdClosed() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+                    // Preload the next video ad.
+                    loadRewardedVideoAd();
+                }
+                @Override
+                public void onRewarded(RewardItem rewardItem) {
+                    Toast.makeText(GuessImageActivity.this, "Has obtenido" + rewardItem.getAmount() + rewardItem.getType(), Toast.LENGTH_SHORT).show();
+                    milisegundos+= rewardItem.getAmount()*1000;
+                    editor.putInt("time", milisegundos);
+                    editor.commit();
+                }
+                @Override
+                public void onRewardedVideoAdLeftApplication() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoAdFailedToLoad(int err) {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            loadRewardedVideoAd();
+
+            // ADS
+            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
+            mAdView = (AdView) findViewById(R.id.adView);
+            adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+            mAdView.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    super.onAdLoaded();
+                    RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
+                    focus.setFocusableInTouchMode(true);
+                    focus.requestFocus();
+                    ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
+                    keyboardIcon.setVisibility(View.INVISIBLE);
+                    if (milisegundos > 0) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    }
+                }
+            });
+        }
+
         counter = (TextView) findViewById(R.id.counterText);
         counter.setTypeface(digifont);
         counter.setText(""+String.format(FORMAT,
@@ -352,11 +357,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     @Override
     protected void onResume() {
-        mVideoAd.resume(this);
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.resume(this);
+        }
         super.onResume();
         secondsToSubtract = 0;
 
-        frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         toggleKeyboardVisible();
 
         // border radius
@@ -879,7 +885,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         vervideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mVideoAd.isLoaded()) {
+                if (settings.getBoolean("showAds", true) && mVideoAd.isLoaded()) {
                     mVideoAd.show();
                 } else {
                     LayoutInflater inflater = getLayoutInflater();
@@ -925,13 +931,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     @Override
     public void onPause() {
-        mVideoAd.pause(this);
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.pause(this);
+        }
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        mVideoAd.destroy(this);
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.destroy(this);
+        }
         super.onDestroy();
     }
 

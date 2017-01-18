@@ -103,13 +103,15 @@ public class SelectImagesActivity extends AppCompatActivity {
         // si selecciona un nivel mayor al actual, les dejo ver las imagenes pero no jugar
         nextsLevels = Integer.parseInt(settings.getString("levelSelected", "1"))> Integer.parseInt(settings.getString("level", "1"));
 
-        // ADS
-        MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
+        if (settings.getBoolean("showAds", true)) {
+            // ADS
+            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
 
-        if ("000000".equals(statusOfLevel.toString())){
-            requestNewInterstitial();
+            if ("000000".equals(statusOfLevel.toString())){
+                requestNewInterstitial();
+            }
         }
 
         // Seteo en nivel en el que estamos en la etiqueta de la pantalla
@@ -258,12 +260,12 @@ public class SelectImagesActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
-
-        // Muestro el interstitial cada 2 niveles
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        if (settings.getBoolean("showAds", true)) {
+            // Muestro el interstitial cada 2 niveles
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
         }
-
     }
 
     private void requestNewInterstitial() {
