@@ -222,6 +222,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     }
                 }
             });
+        } else {
+            showSoftKey = new CountDownTimer(700, 1000) {
+                public void onTick(long millisUntilFinished) {
+
+                }
+                public void onFinish() {
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                }
+            }.start();
         }
 
         counter = (TextView) findViewById(R.id.counterText);
@@ -860,6 +869,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                      sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                      sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
                      sharingIntent.setType("image/*");
+                     startActivity(sharingIntent);
 
                      milisegundos+= 30000;
                      editor.putInt("time", milisegundos);
