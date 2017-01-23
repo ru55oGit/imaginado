@@ -472,17 +472,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         title = (ImageView) findViewById(R.id.title);
         // cambio la imagen del title
         if (uri.contains("adivinanzas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.acertijos_title));
         } else if (uri.contains("banderas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.banderas_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.banderas_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.banderas_title));
         } else if (uri.contains("escudos")) {
-            title.setBackground(getResources().getDrawable(R.drawable.escudos_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.escudos_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.escudos_title));
         } else if (uri.contains("marcas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.logos_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.logos_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.logos_title));
         } else if (uri.contains("peliculas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.peliculas_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.peliculas_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.peliculas_title));
         } else if (uri.contains("personajes")) {
-            title.setBackground(getResources().getDrawable(R.drawable.personajes_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.personajes_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.personajes_title));
         }
     }
 
@@ -502,7 +508,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
         if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
-            String tiempo[] = ((String)this.counter.getText()).split(":");
+            //String tiempo[] = ((String)this.counter.getText()).split(":");
+            String tiempo[] = (this.counter.getText().toString()).split(":");
+
             try {
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = Integer.parseInt(tiempo[1]) * 1000;
