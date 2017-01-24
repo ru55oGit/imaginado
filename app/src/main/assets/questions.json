@@ -4091,7 +4091,7 @@
     {
       "title": "",
       "pregunta": "¿Qué océanos bañan las costas de Estados Unidos?",
-      "respuesta": "pacifico y atlantico"
+      "respuesta": "pacifico y| atlantico"
     }
   ,
     {
