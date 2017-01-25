@@ -817,7 +817,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                        String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
+                        String sharedImage = "https://lh3.googleusercontent.com/q7y5py9M1B8ZgalnVCmR7ZTN54jcMDf8HWhVFQy5iSzsFLa8chBb6HGU6T-oELC4kw=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle("Imaginados")
