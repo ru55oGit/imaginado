@@ -93,6 +93,20 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         questionCircle = (TextView) findViewById(R.id.questionCircle);
         questionCircle.setTypeface(lobsterFont);
         questionCircle.setText(cantPreguntas + "/10");
+        questionCircle.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v) {
+                onResume();
+                return true;
+            }
+        });
+
+        questionCircle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                onResume();
+            }
+        });
 
         timeGained.setText(""+String.format(FORMAT,
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(0)),
@@ -168,7 +182,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             dim = (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.bg_letter_size);
             letter.setTextSize((int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-            marginLetters.setMargins(0, 0, (int)getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius), 0);
+            marginLetters.setMargins((int)getResources().getDimension(R.dimen.margin_right_play), 0, (int)getResources().getDimension(R.dimen.margin_right_play), 0);
             letter.setLayoutParams(marginLetters);
 
             if (question.getRespuesta().indexOf("|") > 0) {
@@ -251,7 +265,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     }
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                    marginLetters.setMargins(0, 0, (int) getResources().getDimension(com.luckypalm.imaginados.R.dimen.border_radius), 0);
+                    marginLetters.setMargins((int)getResources().getDimension(R.dimen.margin_right_play), 0, (int)getResources().getDimension(R.dimen.margin_right_play), 0);
                     letter.setLayoutParams(marginLetters);
                     ll.removeViewAt(i);
                     ll.addView(letter, i);
@@ -273,7 +287,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     }
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                    marginLetters.setMargins(0, 0, 10, 0);
+                    marginLetters.setMargins((int)getResources().getDimension(R.dimen.margin_right_play), 0, (int)getResources().getDimension(R.dimen.margin_right_play), 0);
                     letter.setLayoutParams(marginLetters);
                     if (i < question.getRespuesta().indexOf("|")) {
                         ll.removeViewAt(i);

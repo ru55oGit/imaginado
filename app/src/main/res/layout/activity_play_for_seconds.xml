@@ -105,7 +105,8 @@
         android:id="@+id/wordContainerFirst"
         android:layout_below="@+id/frameLayout"
         android:layout_marginTop="@dimen/fab_margin"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true">
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -115,6 +116,7 @@
         android:id="@+id/wordContainerSecond"
         android:layout_alignParentStart="true"
         android:layout_marginTop="@dimen/fab_margin"
-        android:layout_below="@+id/wordContainerFirst">
+        android:layout_below="@+id/wordContainerFirst"
+        android:layout_centerHorizontal="true">
     </LinearLayout>
 </RelativeLayout>

@@ -247,32 +247,36 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
             if (verifyStoragePermissions(GuessImageActivity.this)) {
-                if (timer != null) {
-                    timer.cancel();
-                }
-                volver.setVisibility(View.INVISIBLE);
-                labelLevelText.setVisibility(View.VISIBLE);
+                if(isAppInstalled(getBaseContext(), "com.whatsapp")){
+                    if (timer != null) {
+                        timer.cancel();
+                    }
+                    volver.setVisibility(View.INVISIBLE);
+                    labelLevelText.setVisibility(View.VISIBLE);
 
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                sharingIntent.setPackage("com.whatsapp");
-                sharingIntent.setType("image/*");
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
+                    sharingIntent.setPackage("com.whatsapp");
+                    sharingIntent.setType("image/*");
+                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
 
-                if (uri.contains("adivinanzas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
-                } else if (uri.contains("banderas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  https://goo.gl/OufAlF");
-                } else if (uri.contains("escudos")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  https://goo.gl/OufAlF");
-                } else if (uri.contains("marcas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  https://goo.gl/OufAlF");
-                } else if (uri.contains("peliculas")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  https://goo.gl/OufAlF");
-                } else if (uri.contains("personajes")) {
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  https://goo.gl/OufAlF");
+                    if (uri.contains("adivinanzas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
+                    } else if (uri.contains("banderas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "No recuerdo de que país es esta bandera:  https://goo.gl/OufAlF");
+                    } else if (uri.contains("escudos")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿De qué equipo de fútbol es este escudo?:  https://goo.gl/OufAlF");
+                    } else if (uri.contains("marcas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Este logo era de... mmmmm:  https://goo.gl/OufAlF");
+                    } else if (uri.contains("peliculas")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿Viste esta película? ¿Cuál es?:  https://goo.gl/OufAlF");
+                    } else if (uri.contains("personajes")) {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "¿ehhh... cómo se llamaba?:  https://goo.gl/OufAlF");
+                    }
+                    startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                } else {
+                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                 }
-                startActivity(Intent.createChooser(sharingIntent, "Share image using"));
             }
             }
         });
@@ -282,38 +286,42 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
             if (verifyStoragePermissions(GuessImageActivity.this)) {
-                if (timer != null) {
-                    timer.cancel();
-                }
-                volver.setVisibility(View.INVISIBLE);
-                labelLevelText.setVisibility(View.VISIBLE);
+                if(isAppInstalled(getBaseContext(), "com.facebook.katana")) {
+                    if (timer != null) {
+                        timer.cancel();
+                    }
+                    volver.setVisibility(View.INVISIBLE);
+                    labelLevelText.setVisibility(View.VISIBLE);
 
-                String shareText = new String();
+                    String shareText = new String();
 
-                if (uri.contains("adivinanzas")) {
-                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
-                } else if (uri.contains("banderas")) {
-                    shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
-                } else if (uri.contains("escudos")) {
-                    shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
-                } else if (uri.contains("marcas")) {
-                    shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
-                } else if (uri.contains("peliculas")) {
-                    shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
-                } else if (uri.contains("personajes")) {
-                    shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
-                }
-                Bitmap image = takeScreenshot();
-                SharePhoto photo = new SharePhoto.Builder()
-                        .setBitmap(image)
-                        .setCaption(shareText)
-                        .build();
-                SharePhotoContent content = new SharePhotoContent.Builder()
-                        .addPhoto(photo)
-                        .build();
+                    if (uri.contains("adivinanzas")) {
+                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
+                    } else if (uri.contains("banderas")) {
+                        shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
+                    } else if (uri.contains("escudos")) {
+                        shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
+                    } else if (uri.contains("marcas")) {
+                        shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
+                    } else if (uri.contains("peliculas")) {
+                        shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
+                    } else if (uri.contains("personajes")) {
+                        shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
+                    }
+                    Bitmap image = takeScreenshot();
+                    SharePhoto photo = new SharePhoto.Builder()
+                            .setBitmap(image)
+                            .setCaption(shareText)
+                            .build();
+                    SharePhotoContent content = new SharePhotoContent.Builder()
+                            .addPhoto(photo)
+                            .build();
 
-                if (ShareDialog.canShow(ShareLinkContent.class)) {
-                    shareDialog.show(content);
+                    if (ShareDialog.canShow(ShareLinkContent.class)) {
+                        shareDialog.show(content);
+                    }
+                } else {
+                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                 }
             }
             }
@@ -324,34 +332,38 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
             if (verifyStoragePermissions(GuessImageActivity.this)) {
-                Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
-                String shareText = new String();
+                if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
+                    String shareText = new String();
 
-                volver.setVisibility(View.INVISIBLE);
-                labelLevelText.setVisibility(View.VISIBLE);
+                    volver.setVisibility(View.INVISIBLE);
+                    labelLevelText.setVisibility(View.VISIBLE);
 
-                if (uri.contains("adivinanzas")) {
-                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
-                } else if (uri.contains("banderas")) {
-                    shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
-                } else if (uri.contains("escudos")) {
-                    shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
-                } else if (uri.contains("marcas")) {
-                    shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
-                } else if (uri.contains("peliculas")) {
-                    shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
-                } else if (uri.contains("personajes")) {
-                    shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
+                    if (uri.contains("adivinanzas")) {
+                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
+                    } else if (uri.contains("banderas")) {
+                        shareText = "No recuerdo de que país es esta bandera https://goo.gl/OufAlF";
+                    } else if (uri.contains("escudos")) {
+                        shareText = "¿De qué equipo de fútbol es este escudo https://goo.gl/OufAlF";
+                    } else if (uri.contains("marcas")) {
+                        shareText = "Este logo era de... mmmmm https://goo.gl/OufAlF";
+                    } else if (uri.contains("peliculas")) {
+                        shareText = "¿Viste esta película? ¿Cuál es? https://goo.gl/OufAlF";
+                    } else if (uri.contains("personajes")) {
+                        shareText = "¿ehhh... cómo se llamaba? https://goo.gl/OufAlF";
+                    }
+
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                    sharingIntent.setType("image/png");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                    sharingIntent.setType("text/plain");
+
+                    sharingIntent.setPackage("com.twitter.android");
+                    startActivity(sharingIntent);
+                } else {
+                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                 }
-
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                sharingIntent.setType("image/png");
-                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-                sharingIntent.setType("text/plain");
-
-                sharingIntent.setPackage("com.twitter.android");
-                startActivity(sharingIntent);
             }
             }
         });
@@ -762,12 +774,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         return rootView.getDrawingCache();
     }
     // retorno la ruta del screenshot
-    public String saveBitmap(Bitmap bitmap) {
+    public String saveBitmap(Bitmap bitmap, Boolean fullImage) {
         File imagePath = new File(Environment.getExternalStorageDirectory() + "/_sinsegundos.jpg");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
-            bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1100);
+            if (fullImage) {
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight());
+            } else {
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1100);
+            }
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             fos.flush();
             fos.close();
@@ -871,7 +887,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                  if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                      Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                      Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
-                     Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
+                     Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
                      String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
                      sharingIntent.setPackage("com.whatsapp");
                      sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
