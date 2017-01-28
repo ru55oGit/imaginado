@@ -101,12 +101,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             }
         });
 
-        questionCircle.setOnClickListener(new View.OnClickListener(){
+        /*questionCircle.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 onResume();
             }
-        });
+        });*/
 
         timeGained.setText(""+String.format(FORMAT,
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(0)),
