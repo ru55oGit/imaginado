@@ -4351,6 +4351,749 @@
       "pregunta": "¿Cómo se llaman los lados que forman un ángulo recto en el triángulo rectángulo?",
       "respuesta": "catetos"
     }
-
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el aparato para medir el viento?",
+      "respuesta": "anemometro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué tipo de energía produce el viento?",
+      "respuesta": "eolica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué nombre se conoce al 'Partido nacional socialista obrero alemán'?",
+      "respuesta": "Partido nazi"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué teoría formuló Albert Einstein?",
+      "respuesta": "la teoria de|la relatividad"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De dónde se obtiene la penicilina?",
+      "respuesta": "de un hongo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el aparato que mide la temperatura?",
+      "respuesta": "termometro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué se mide la energía de los alimentos?",
+      "respuesta": "calorias"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llamaba antiguamente Estambul?",
+      "respuesta": "constantinopla"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuáles son los 3 estados de la materia?",
+      "respuesta": "liquido solido|gaseoso"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el principal componente de la sal?",
+      "respuesta": "cloruro|de sodio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué rayos se sacan las radiografías?",
+      "respuesta": "rayos x"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién era el rey de España cuando se produjo la Revolución de Mayo de 1810?",
+      "respuesta": "Fernando VII"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué vacuna hay que aplicarse ante un corte con un metal oxidado?",
+      "respuesta": "antitetanica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién fue el creador de la doctrina islámica?",
+      "respuesta": "mahoma"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué significa la sigla T.N.T?",
+      "respuesta": "trinitro tolueno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué forman dos moléculoas de hidrógeno y una de oxígeno?",
+      "respuesta": "agua"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué color es la glicerina?",
+      "respuesta": "Incolora"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el agua en estado sólido?",
+      "respuesta": "hielo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el agua en estado gaseoso?",
+      "respuesta": "vapor"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "El plástico es un derivado del...",
+      "respuesta": "petroleo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la ciencia que estudia las rocas?",
+      "respuesta": "geologia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la ciencia que estudia la química del ser humano?",
+      "respuesta": "bioquimica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué estado debe estar un material para contrariar la fuerza de la gravedad?",
+      "respuesta": "gaseoso"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la unidad de medida del peso en Inglaterra?",
+      "respuesta": "libra"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué material son la mayoría de los cables eléctricos?",
+      "respuesta": "cobre"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué unidad se mide la electricidad?",
+      "respuesta": "voltios"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los cuerpos que no permiten el paso de la luz?",
+      "respuesta": "opacos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina a los cuerpos que recobran la forma original luego de ser deformados?",
+      "respuesta": "elasticos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué país fue presidente Nelson Mandela?",
+      "respuesta": "sudafrica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Médico argentino que recibio el premio Nobel de Química",
+      "respuesta": "Luis Federico|leloir"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la fotografía obtenida con un rayo láser?",
+      "respuesta": "holograma"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Por el contacto con que elemento se produce la oxidación de la manzana?",
+      "respuesta": "aire"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué fuerza se aplica en un secaropa que no es a calor?",
+      "respuesta": "centrifuga"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la fuerza contraria a la centrífuga?",
+      "respuesta": "centripeta"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el componente básico del aire?",
+      "respuesta": "oxigeno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué unidad se mide la presión atmosférica?",
+      "respuesta": "milibares"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué sucede con un metal cuando se le aplica calor?",
+      "respuesta": "se dilata"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué elementos integran el monóxido de carbono?",
+      "respuesta": "Carbono y|oxigeno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina al trabajo de los líquidos?",
+      "respuesta": "hidraulico"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina al trabajo del aire?",
+      "respuesta": "neumatico"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué onda genera una explosión?",
+      "respuesta": "onda expansiva"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué energía se forman los relámpagos?",
+      "respuesta": "estatica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Mediante qué evento se forma la electricidad estática?",
+      "respuesta": "el rozamiento"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué polos de un imán se repelen?",
+      "respuesta": "los iguales"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué polos de un imán se atraen?",
+      "respuesta": "los opuestos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuántos polos tiene un imán?",
+      "respuesta": "2"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al resultante de la unión de dos metales?",
+      "respuesta": "aleacion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué carga queda un cuerpo que recibe electrones?",
+      "respuesta": "negativa"
+    }
+  ,
+    {
+      "title": "Definición",
+      "pregunta": "Instrumento óptico para ampliar la imagen de objetos o seres, o de detalles de estos, tan pequeños que no se pueden ver a simple vista",
+      "respuesta": "microscopio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué se transforma el oxígeno luego de ser quemado?",
+      "respuesta": "dioxido de|carbono"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué tipo de emisión transmite un control remoto?",
+      "respuesta": "infrarroja"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué carga queda un cuerpo que cede electrones?",
+      "respuesta": "positiva"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Mediante qué energía vuela un globo aerostático?",
+      "respuesta": "aire|caliente"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué material se fabrican las minas de los lápices?",
+      "respuesta": "carbon"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al gas que usan los dirigibles?",
+      "respuesta": "helio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el metal mas pesado?",
+      "respuesta": "mercurio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué estado se encuentra el metal Mercurio?",
+      "respuesta": "liquido"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la fórmula del amoníaco?",
+      "respuesta": "nh3"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la fuerza resultante de la acción de la gravedad sobre un cuerpo?",
+      "respuesta": "peso"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué unidad se mide la frecuencia?",
+      "respuesta": "hertz"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué año termino la segunda guerra mundial?",
+      "respuesta": "1945"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué otro nombre se les da a los grados centígrados?",
+      "respuesta": "celsius"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina el producto de la fuerza por el desplazamiento?",
+      "respuesta": "trabajo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina al cociente entre la fuerza aplicada y la superficie sobre la que actúa?",
+      "respuesta": "presion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En quá año finalizo la guerra civil española?",
+      "respuesta": "1939"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué país se disputo la República Argentina el canal de Beagle?",
+      "respuesta": "chile"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién era el presidente de Estados Unidos cuando estallo la Segunda Guerra Mundial?",
+      "respuesta": "roosevelt"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál era el nombre del grupo guerrillero más importante del Uruguay?",
+      "respuesta": "tupamaros"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué año se abrio el canal de Panamá?",
+      "respuesta": "1914"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué nacionalidad era Albert Einstein?",
+      "respuesta": "aleman"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama a la capacidad de los cuerpos en movimiento para producir trabajo?",
+      "respuesta": "energia|cinetica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país murió el Che Guevara?",
+      "respuesta": "bolivia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué país perpetró el genocidio contra los armenios a principios del siglo XX?",
+      "respuesta": "turquia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué tratado se firmó al finalizar la Primera Guerra Mundial?",
+      "respuesta": "el tratado|de versalles"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Dónde nació Adolf Hitler?",
+      "respuesta": "Austria"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el más ligero de los gases?",
+      "respuesta": "hidrogeno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el símbolo del Helio?",
+      "respuesta": "he"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién fué elegido para suceder a G. Bush a partir del año 2009?",
+      "respuesta": "Barak Obama"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién fué elegido para suceder a Barak Obama a partir del año 2017?",
+      "respuesta": "Donald Trump"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién sucedió en el poder a Fidel Castro?",
+      "respuesta": "raul castro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el símbolo del Hierro?",
+      "respuesta": "Fe"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué científico del siglo XVII estableció la base de la mecánica clásica?",
+      "respuesta": "newton"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la unidad de intensidad eléctrica?",
+      "respuesta": "Ampere"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué países formaron el Eje durante la Segunda Guerra Mundial?",
+      "respuesta": "italia japon|y alemania"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién gobernaba la Unión Soviética durante la Segunda Guerra Mundial?",
+      "respuesta": "Stalin"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué máquina simple consta de un disco y una cuerda que se desliza por él?",
+      "respuesta": "la polea"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué gas es imprescindible para la vida?",
+      "respuesta": "oxigeno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los científicos que estudian los astros?",
+      "respuesta": "astronomos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué ciencia estudia los fenómenos atmosféricos?",
+      "respuesta": "meteorologia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué clase de carga eléctrica tiene un electrón?",
+      "respuesta": "negativa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llamaba la amante de Hitler?",
+      "respuesta": "eva braun"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman el aparato que se usa para medir la presión atmosférica?",
+      "respuesta": "barometro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué presidente argentino de facto le declaró la guerra a Inglaterra al tomar las Islas Malvinas?",
+      "respuesta": "galtieri"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al cambio de dirección que experimenta la luz al atravesar la superficie de separación de dos medios transparentes?",
+      "respuesta": "refraccion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al camino recorrido por un móvil cuando se traslada de un punto a otro?",
+      "respuesta": "trayectoria"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué dispositivo se utiliza para observar el espacio exterior desde la Tierra?",
+      "respuesta": "telescopio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué piedra preciosa se obtiene si un pedazo de carbón se cristaliza?",
+      "respuesta": "diamante"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la carga eléctrica de los neutrones?",
+      "respuesta": "neutra"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el punto donde se aplica una fuerza?",
+      "respuesta": "punto de|aplicacion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama a la fuerza ejercida por el aire atmosférica?",
+      "respuesta": "presion|atmosferica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el macho de la vaca?",
+      "respuesta": "toro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la sílaba de una palabra que pronunciamos con más fuerza?",
+      "respuesta": "tonica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la parte trasera de un barco?",
+      "respuesta": "popa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el animal que tiene el cuello más largo?",
+      "respuesta": "jirafa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué color es la capa de Superman?",
+      "respuesta": "roja"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el enemigo de Peter Pan?",
+      "respuesta": "capitan|garfio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué color son los pitufos?",
+      "respuesta": "azules"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué tiene dibujado Batman en el pecho?",
+      "respuesta": "un murcielago"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denominan los aviones sin motores?",
+      "respuesta": "planeadores"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el país al que viajó Peter Pan?",
+      "respuesta": "nunca jamas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué alimento dulce producen las abejas?",
+      "respuesta": "miel"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "Los cítricos son ricos en vitamina...",
+      "respuesta": "C"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la novia del Pato Donald?",
+      "respuesta": "daisy"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el chimpancé que acompaña a Tarzan?",
+      "respuesta": "chita"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué ruido hace el Correcaminos cuando es perseguido por el Coyote?",
+      "respuesta": "bip bip"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué perdio la Cenicienta al salir del palacio?",
+      "respuesta": "el zapato|de cristal"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el dedo más gordo de la mano?",
+      "respuesta": "pulgar"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué mes empieza la primavera en el hemisferio sur?",
+      "respuesta": "septiembre"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué familia de instrumentos pertenece el tambor?",
+      "respuesta": "percusion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué familia de instrumentos pertenece el violín?",
+      "respuesta": "cuerda"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué familia de instrumentos pertenece la flauta?",
+      "respuesta": "viento"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las antiguas construcciones egipcias consideradas una de las maravillas del mundo?",
+      "respuesta": "piramides"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué sistema usan los no videntes para leer?",
+      "respuesta": "braille"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué siglo se inventó la fotografía?",
+      "respuesta": "xix"
+    }
   ]
 }
