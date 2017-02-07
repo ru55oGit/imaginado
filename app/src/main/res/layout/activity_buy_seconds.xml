@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sin_tiempo_title"
             android:textSize="18dp"
-            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textColor="@color/backLetters"
             android:padding="3dp"
             android:layout_gravity="left"
             android:layout_weight="0.95"/>
