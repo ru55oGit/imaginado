@@ -720,23 +720,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private void customDialog(){
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
-        dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
+        dialogCustom.setContentView(com.luckypalm.acertijos.R.layout.custom_dialog_withoutseconds);
 
-        ImageView ganar = (ImageView) dialogCustom.findViewById(R.id.ganarSegundos);
-        ImageView comprar = (ImageView) dialogCustom.findViewById(R.id.comprarSegundos);
+        ImageView ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.ganarSegundos);
+        ImageView comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.comprarSegundos);
+        ImageView vervideo = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.watchVideo);
 
-        ImageView shareFace = (ImageView) dialogCustom.findViewById(R.id.sharefacebookDialog);
-        ImageView shareTwit = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
-        ImageView shareWsap = (ImageView) dialogCustom.findViewById(R.id.sharewsapDialog);
+        ImageView shareFace = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharefacebookDialog);
+        ImageView shareTwit = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharetwitterDialog);
+        ImageView shareWsap = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharewsapDialog);
 
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                    String sharedImage = "https://lh3.googleusercontent.com/qJAwISZCFEdEtr1-RaZd1ZyA_aUk1mR3LHDlFvKevp9qOkRR8krfGYfgICbHFMtDsg=h900";
-
-                    if(isAppInstalled(getBaseContext(), "com.twitter.android")){
+                    if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
+                        String sharedDescription =  getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text);
+                        String sharedImage = "https://lh3.googleusercontent.com/q7y5py9M1B8ZgalnVCmR7ZTN54jcMDf8HWhVFQy5iSzsFLa8chBb6HGU6T-oELC4kw=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle("Imaginados")
@@ -745,10 +745,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                                     .setImageUrl(Uri.parse(sharedImage))
                                     .build();
                             shareDialog.show(shareLinkContent);
+
+                            milisegundos+= 30000;
+                            editor.putInt("time", milisegundos);
+                            editor.commit();
                         }
-                        milisegundos+= 30000;
-                        editor.putInt("time", milisegundos);
-                        editor.commit();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -758,47 +761,52 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.acertijos/drawable/sharetwitterimage");
-                    String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
-
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                    sharingIntent.setType("image/png");
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-
-                    sharingIntent.setPackage("com.twitter.android");
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
+                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
+                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/OufAlF";
+
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.setType("image/png");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+
+                        sharingIntent.setPackage("com.twitter.android");
+
                         startActivity(sharingIntent);
                         milisegundos+= 30000;
                         editor.putInt("time", milisegundos);
                         editor.commit();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
 
         shareWsap.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 if (verifyStoragePermissions(GuessImageActivity.this)) {
-                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                     Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
-                     Uri screenshotUri = Uri.parse(saveBitmap(largeIcon));
-                     String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/OufAlF";
-                     sharingIntent.setPackage("com.whatsapp");
-                     sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                     sharingIntent.setType("image/*");
+            @Override
+            public void onClick(View v) {
+                if (verifyStoragePermissions(GuessImageActivity.this)) {
+                    if(isAppInstalled(getBaseContext(), "com.whatsapp")){
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), com.luckypalm.acertijos.R.drawable.sharetwitterimage);
+                        Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
+                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/OufAlF";
+                        sharingIntent.setPackage("com.whatsapp");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.setType("image/*");
+                        startActivity(sharingIntent);
 
-                     if(isAppInstalled(getBaseContext(), "com.whatsapp")){
-                         startActivity(sharingIntent);
-                         milisegundos+= 30000;
-                         editor.putInt("time", milisegundos);
-                         editor.commit();
-                     }
-                 }
-             }
-         });
+                        milisegundos+= 30000;
+                        editor.putInt("time", milisegundos);
+                        editor.commit();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
 
         ganar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -807,14 +815,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 startActivity(intent);
             }
         });
+
         comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(GuessImageActivity.this, BuySecondsActivity.class);
+                startActivity(intent);
             }
         });
 
-        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(R.id.dialogButtonOK);
+        vervideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
+        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.dialogButtonOK);
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -824,8 +841,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
             public void onDismiss(final DialogInterface dialog) {
-            // Cierro el teclado cuando me quedo sin tiempo
-            inputMethodManager.hideSoftInputFromWindow(frameLayout.getWindowToken(), 0);
+                // Cierro el teclado cuando me quedo sin tiempo
+                inputMethodManager.hideSoftInputFromWindow(frameLayout.getWindowToken(), 0);
             }
         });
 
