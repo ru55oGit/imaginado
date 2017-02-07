@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Descifralo</string>
+    <string name="facebook_app_id">1138149882905959</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/7841053319</string>
+    <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/2888829717 </string>
+    <string name="banner_ad_unit_video">ca-app-pub-5537378422935748/7899282117</string>
+    <string name="inapp_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmleqGqeHISkNO16J9RbvG5PvxT//KyMyPNCPIijzxFKzGBcs6ECSndEqgR6C7moR01bVubdqDoEyoLZY7eFoRZoAGnQdyieZeuvXhSDCGaEBqEOeiTQ2yj/D75T53LUA9OGOwWzQTtQ+yPN5R4znjpMDZGy2omHcmApm/+pUVvnfzI9nZ/POgGNMcHrrnDaxDNPOKaZqquVfiyRVRnIFQSXz2BcP/wiD5rHQ5GW/DiP7svzF5XElUdhZoz0UkcPfV9SeXkfkMhmR2Sr0liQaXYFlH+Gd/KIwaP/s0LA9dY/EoMsqR5w3zTPkDg2BMnTYp2e0WLDJraWxYbjvOsKKBQIDAQAB</string>
     <string name="title_activity_select_images">SelectImages</string>
     <string name="title_activity_guess_image">GuessImageActivity</string>
     <string name="deseasalir">¿Seguro que desea salir?</string>
@@ -8,9 +13,10 @@
     <string name="title_activity_play_for_seconds">PlayForSecondsActivity</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="facebook_app_id">1138149882905959</string>
-    <string name="sin_tiempo_comprar">Te quedaste sin segundos, puedes conseguir más tiempo comprando aquí...</string>
-    <string name="sin_tiempo_jugar">...o responde unas preguntas y acumula segundos contestando...</string>
+    <string name="sin_tiempo_title">Te quedaste sin segundos</string>
+    <string name="sin_tiempo_comprar">Puedes conseguir más tiempo comprando aquí...</string>
+    <string name="sin_tiempo_jugar">...o sigue jugando para ganar más...</string>
+    <string name="sin_tiempo_vervideo">...o mira el vídeo y obtiene 60 segundos...</string>
     <string name="sin_tiempo_compartir">O comparte en redes sociales y consigue 30 segundos.</string>
     <string name="generic_share_text">¿Tenés buena memoria? ¿Puedes resolver estas trivias?</string>
     <string name="select_level_title">Elige el nivel</string>
