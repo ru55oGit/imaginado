@@ -367,17 +367,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         title = (ImageView) findViewById(R.id.title);
         // cambio la imagen del title
         if (uri.contains("adivinanzas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.acertijos_title));
         } else if (uri.contains("banderas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.banderas_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.banderas_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.banderas_title));
         } else if (uri.contains("escudos")) {
-            title.setBackground(getResources().getDrawable(R.drawable.escudos_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.escudos_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.escudos_title));
         } else if (uri.contains("marcas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.logos_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.logos_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.logos_title));
         } else if (uri.contains("peliculas")) {
-            title.setBackground(getResources().getDrawable(R.drawable.peliculas_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.peliculas_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.peliculas_title));
         } else if (uri.contains("personajes")) {
-            title.setBackground(getResources().getDrawable(R.drawable.personajes_title));
+            //title.setBackground(getResources().getDrawable(R.drawable.personajes_title));
+            title.setImageDrawable(getResources().getDrawable(R.drawable.personajes_title));
         }
     }
 
@@ -681,12 +687,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         return rootView.getDrawingCache();
     }
     // retorno la ruta del screenshot
-    public String saveBitmap(Bitmap bitmap) {
+    public String saveBitmap(Bitmap bitmap, Boolean fullImage) {
         File imagePath = new File(Environment.getExternalStorageDirectory() + "/_sinsegundos.jpg");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
-            bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1100);
+            if (fullImage) {
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight());
+            } else {
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1100);
+            }
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             fos.flush();
             fos.close();
