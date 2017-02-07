@@ -154,7 +154,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     labelLevelText.setVisibility(View.VISIBLE);
 
                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
                     sharingIntent.setPackage("com.whatsapp");
                     sharingIntent.setType("image/*");
                     sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -199,7 +199,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot()));
+                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
                     String shareText = new String();
 
                     volver.setVisibility(View.INVISIBLE);
@@ -363,28 +363,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 finish();
             }
         });
-
-        title = (ImageView) findViewById(R.id.title);
-        // cambio la imagen del title
-        if (uri.contains("adivinanzas")) {
-            //title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
-            title.setImageDrawable(getResources().getDrawable(R.drawable.acertijos_title));
-        } else if (uri.contains("banderas")) {
-            //title.setBackground(getResources().getDrawable(R.drawable.banderas_title));
-            title.setImageDrawable(getResources().getDrawable(R.drawable.banderas_title));
-        } else if (uri.contains("escudos")) {
-            //title.setBackground(getResources().getDrawable(R.drawable.escudos_title));
-            title.setImageDrawable(getResources().getDrawable(R.drawable.escudos_title));
-        } else if (uri.contains("marcas")) {
-            //title.setBackground(getResources().getDrawable(R.drawable.logos_title));
-            title.setImageDrawable(getResources().getDrawable(R.drawable.logos_title));
-        } else if (uri.contains("peliculas")) {
-            //title.setBackground(getResources().getDrawable(R.drawable.peliculas_title));
-            title.setImageDrawable(getResources().getDrawable(R.drawable.peliculas_title));
-        } else if (uri.contains("personajes")) {
-            //title.setBackground(getResources().getDrawable(R.drawable.personajes_title));
-            title.setImageDrawable(getResources().getDrawable(R.drawable.personajes_title));
-        }
     }
 
     @Override
@@ -749,7 +727,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         String sharedImage = "https://lh3.googleusercontent.com/q7y5py9M1B8ZgalnVCmR7ZTN54jcMDf8HWhVFQy5iSzsFLa8chBb6HGU6T-oELC4kw=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
-                                    .setContentTitle("Imaginados")
+                                    .setContentTitle("Descifralo")
                                     .setContentDescription(sharedDescription)
                                     .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
                                     .setImageUrl(Uri.parse(sharedImage))
@@ -772,7 +750,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.imaginados/drawable/sharetwitterimage");
+                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.acertijos/drawable/sharetwitterimage");
                         String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/OufAlF";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
@@ -829,7 +807,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getBaseContext(), "Muy pronto podras comprar segundos", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(GuessImageActivity.this, BuySecondsActivity.class);
                 startActivity(intent);
             }

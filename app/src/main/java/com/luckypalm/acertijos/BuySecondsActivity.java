@@ -38,12 +38,12 @@ public class BuySecondsActivity extends AppCompatActivity {
     private IInAppBillingService mService;
     private ServiceConnection mServiceConn;
 
-    private String inappid_three = "com.luckypalm.imaginados.three_minutes";
-    private String inappid_five = "com.luckypalm.imaginados.five_minutes";
-    private String inappid_seven = "com.luckypalm.imaginados.seven_minutes";
-    private String inappid_ten = "com.luckypalm.imaginados.ten_minutes";
-    private String inappid_fifteen = "com.luckypalm.imaginados.fifteen_minutes";
-    private String inappid_twenty = "com.luckypalm.imaginados.twenty_minutes";
+    private String inappid_three = "com.luckypalm.acertijos.three_minutes";
+    private String inappid_five = "com.luckypalm.acertijos.five_minutes";
+    private String inappid_seven = "com.luckypalm.acertijos.seven_minutes";
+    private String inappid_ten = "com.luckypalm.acertijos.ten_minutes";
+    private String inappid_fifteen = "com.luckypalm.acertijos.fifteen_minutes";
+    private String inappid_twenty = "com.luckypalm.acertijos.twenty_minutes";
     private String purchaseToken = "android.test.purchased";
 
     private Button three_minutesBtn;

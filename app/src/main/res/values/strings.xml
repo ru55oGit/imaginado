@@ -7,6 +7,7 @@
     <string name="inapp_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgV4MwVjUWnLquTOL6Oe9ZnOdD53ukEZnGQ7ILnuoRd/OMeIj+uSyQLgDgfe1h5nKf2qP7xPK4rl86y93XEdkf+K8Rwu3lmH95yQkoy/FI+WGmJsSmIczI8QUvd3SjLbkiUGvRU2TGqhWxMJ5NskJpJdk3xS6GrAkVDCqQvDh5NxXw0w9z30ZF0jPqAGELr3Uir1a9HtgQuFZcJfG7ZmM6br04GGGzCFQAsqUzNnaCwLpckEszHHe8Z5e6Zz/3zX8ek175M8g3xut8Eh2NA2kfNyVhpGsUx9+H3HxxUgAnXxfwkrrL1NTAIF603hV2rUSWeB587NhaWptAH1tfuvE8QIDAQAB</string>
     <string name="title_activity_select_images">SelectImages</string>
     <string name="title_activity_guess_image">GuessImageActivity</string>
+    <string name="title_activity_buy_seconds">BuySecondsActivity</string>
     <string name="deseasalir">¿Seguro que desea salir?</string>
     <string name="aceptar">Aceptar</string>
     <string name="cancelar">Cancelar</string>
