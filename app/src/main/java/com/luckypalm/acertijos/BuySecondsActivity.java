@@ -1,9 +1,34 @@
 package com.luckypalm.acertijos;
 
+import android.app.PendingIntent;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentSender;
+import android.content.ServiceConnection;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.android.vending.billing.IInAppBillingService;
+import com.luckypalm.acertijos.util.IabHelper;
+import com.luckypalm.acertijos.util.IabResult;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 /**
  * Created by ToledoP on 27/01/2017.
