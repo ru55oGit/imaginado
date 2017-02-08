@@ -3662,7 +3662,7 @@
     {
       "title": "Personaje Marvel",
       "pregunta": "bucky.jpg",
-      "respuesta": "bucky"
+      "respuesta": "el soldado|del invierno"
     },
     {
       "title": "Personaje Marvel",
@@ -3798,8 +3798,28 @@
       "title": "Personaje Marvel",
       "pregunta": "wolverine.jpg",
       "respuesta": "wolverine"
+    },
+    {
+      "title": "Personaje Marvel",
+      "pregunta": "drstrange.jpg",
+      "respuesta": "dr strange"
     }
-    ,
+  ,{
+      "title": "Personaje Marvel",
+      "pregunta": "thething.jpg",
+      "respuesta": "la mole"
+    }
+  ,{
+      "title": "Personaje Marvel",
+      "pregunta": "redskull.jpg",
+      "respuesta": "red skull"
+    }
+  ,{
+      "title": "Personaje Marvel",
+      "pregunta": "hawkeye.jpg",
+      "respuesta": "hawkeye"
+    }
+  ,
     {
       "title": "¿Cómo se llama?",
       "pregunta": "damon.jpg",
