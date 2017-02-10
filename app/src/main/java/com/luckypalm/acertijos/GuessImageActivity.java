@@ -146,21 +146,25 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         sharewsap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    if (timer != null) {
-                        timer.cancel();
+                if(isAppInstalled(getBaseContext(), "com.whatsapp")){
+                    if (verifyStoragePermissions(GuessImageActivity.this)) {
+                        if (timer != null) {
+                            timer.cancel();
+                        }
+                        volver.setVisibility(View.INVISIBLE);
+                        labelLevelText.setVisibility(View.VISIBLE);
+
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
+                        sharingIntent.setPackage("com.whatsapp");
+                        sharingIntent.setType("image/*");
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
+
+                        startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
-                    volver.setVisibility(View.INVISIBLE);
-                    labelLevelText.setVisibility(View.VISIBLE);
-
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
-                    sharingIntent.setPackage("com.whatsapp");
-                    sharingIntent.setType("image/*");
-                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
-
-                    startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                } else {
+                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -169,27 +173,31 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    if (timer != null) {
-                        timer.cancel();
-                    }
-                    volver.setVisibility(View.INVISIBLE);
-                    labelLevelText.setVisibility(View.VISIBLE);
+                if(isAppInstalled(getBaseContext(), "com.facebook.katana")) {
+                    if (verifyStoragePermissions(GuessImageActivity.this)) {
+                        if (timer != null) {
+                            timer.cancel();
+                        }
+                        volver.setVisibility(View.INVISIBLE);
+                        labelLevelText.setVisibility(View.VISIBLE);
 
-                    String shareText = new String();
-                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
-                    Bitmap image = takeScreenshot();
-                    SharePhoto photo = new SharePhoto.Builder()
-                            .setBitmap(image)
-                            .setCaption(shareText)
-                            .build();
-                    SharePhotoContent content = new SharePhotoContent.Builder()
-                            .addPhoto(photo)
-                            .build();
+                        String shareText = new String();
+                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
+                        Bitmap image = takeScreenshot();
+                        SharePhoto photo = new SharePhoto.Builder()
+                                .setBitmap(image)
+                                .setCaption(shareText)
+                                .build();
+                        SharePhotoContent content = new SharePhotoContent.Builder()
+                                .addPhoto(photo)
+                                .build();
 
-                    if (ShareDialog.canShow(ShareLinkContent.class)) {
-                        shareDialog.show(content);
+                        if (ShareDialog.canShow(ShareLinkContent.class)) {
+                            shareDialog.show(content);
+                        }
                     }
+                } else {
+                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -198,23 +206,27 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (verifyStoragePermissions(GuessImageActivity.this)) {
-                    Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
-                    String shareText = new String();
+                if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
+                    if (verifyStoragePermissions(GuessImageActivity.this)) {
+                        Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
+                        String shareText = new String();
 
-                    volver.setVisibility(View.INVISIBLE);
-                    labelLevelText.setVisibility(View.VISIBLE);
+                        volver.setVisibility(View.INVISIBLE);
+                        labelLevelText.setVisibility(View.VISIBLE);
 
-                    shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
+                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
 
-                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                    sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                    sharingIntent.setType("image/png");
-                    sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-                    sharingIntent.setType("text/plain");
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.setType("image/png");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                        sharingIntent.setType("text/plain");
 
-                    sharingIntent.setPackage("com.twitter.android");
-                    startActivity(sharingIntent);
+                        sharingIntent.setPackage("com.twitter.android");
+                        startActivity(sharingIntent);
+                    }
+                } else {
+                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -231,6 +243,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onResume() {
         super.onResume();
         secondsToSubtract = 0;
+
+        if (toastWin != null) {
+            toastWin.cancel();
+        }
 
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
@@ -283,7 +299,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 //inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.RESULT_HIDDEN, 0);
                 inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
                 closeAndSave();
-                finish();
+                //finish();
             }
         });
 
@@ -315,7 +331,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
             letter.setTextSize((int)getResources().getDimension(R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-            marginLetters.setMargins(0, 0, 10, 0);
+            marginLetters.setMargins((int)getResources().getDimension(R.dimen.margin_right_play), 0, (int)getResources().getDimension(R.dimen.margin_right_play), 0);
             letter.setLayoutParams(marginLetters);
             // uso el pipe para mandar al segundo renglon palabras cuando
             // la cantidad de las mismas superan el ancho de la pantalla
@@ -397,6 +413,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        } else {
+            finish();
         }
     }
 
@@ -475,7 +493,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                    marginLetters.setMargins(0, 0, 10, 0);
+                    marginLetters.setMargins((int)getResources().getDimension(R.dimen.margin_right_play), 0, (int)getResources().getDimension(R.dimen.margin_right_play), 0);
                     letter.setLayoutParams(marginLetters);
                     ll.removeViewAt(i);
                     ll.addView(letter, i);
@@ -496,7 +514,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         letter.setBackground(gd);
 
                     LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
-                    marginLetters.setMargins(0, 0, 10, 0);
+                    marginLetters.setMargins((int)getResources().getDimension(R.dimen.margin_right_play), 0, (int)getResources().getDimension(R.dimen.margin_right_play), 0);
                     letter.setLayoutParams(marginLetters);
                     if (i < word.indexOf("|")) {
                         ll.removeViewAt(i);
@@ -566,7 +584,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
             toastWin = new Toast(getApplicationContext());
             toastWin.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
-            toastWin.setDuration(Toast.LENGTH_LONG);
+            toastWin.setDuration(Toast.LENGTH_SHORT);
             toastWin.setView(layout);
             toastWin.show();
 

@@ -21,6 +21,6 @@
     <dimen name="select_level_fontsize">13dp</dimen>
     <dimen name="level_guess_fontsize">17dp</dimen>
     <dimen name="buyseconds_letter_size">23dp</dimen>
-    <dimen name="margin_right_play">0.5dp</dimen>
+    <dimen name="margin_right_play">1dp</dimen>
 </resources>
 
