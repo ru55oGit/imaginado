@@ -6953,7 +6953,7 @@
     {
       "title": "",
       "pregunta": "¿Cómo se llama a un especialista en oídos, nariz y garganta?",
-      "respuesta": "Otorrinolaringolo"
+      "respuesta": "Otorrino|laringolo"
     }
   ,
     {
@@ -6978,6 +6978,408 @@
       "title": "",
       "pregunta": "¿Cómo se llaman los actos involuntarios?",
       "respuesta": "Reflejos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Infinitivo del verbo 'hay'?",
+      "respuesta": "Haber"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el sustantivo colectivo que indica 'grupo de perros'?",
+      "respuesta": "Jauria"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el diminutivo de pez?",
+      "respuesta": "pececito"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina a la persona que habla mucho idiomas?",
+      "respuesta": "Poliglota"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué expresan las oraciones dubitativas?",
+      "respuesta": "Dudas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el gerundia del verbo 'gritar'?",
+      "respuesta": "Gritando"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué palabra indica la acción del sujeto en una oración?",
+      "respuesta": "el verbo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre recibe cada renglón en un poema?",
+      "respuesta": "Verso"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre recibe la repetición de fonemas al final de los verbos?",
+      "respuesta": "Rima"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué palabra acompaña al sustantivo y expresa una cualidad de éste?",
+      "respuesta": "El adjetivo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denominan a dos palabras que comparten el mismo significado?",
+      "respuesta": "Sinonimos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué forman dos vocales juntas que no integran diptongos?",
+      "respuesta": "Hiatos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué signo de puntuación se coloca al final de una frase incompleta?",
+      "respuesta": "Puntos|suspensivos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué signos ortográficos llevan necesariamente las oraciones exclamativas?",
+      "respuesta": "Signos de|admiracion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué letra de nuestro alfabeto no existe como fonema?",
+      "respuesta": "h"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los párrafos de un peoma?",
+      "respuesta": "Estrofas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué personaje de la mitología sostenía el mundo sobre sus hombros?",
+      "respuesta": "Atlas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la contraposición de dos ideas o pensamientos?",
+      "respuesta": "Antitesis"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la época histórica de la que no se conservan testimonios escritos?",
+      "respuesta": "Prehistoria"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el río mas ancho del mundo?",
+      "respuesta": "El rio|de la plata"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué país sudamericano es el mayor productor de petróleo?",
+      "respuesta": "Venezuela"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién fué el primer presidente norteamericano?",
+      "respuesta": "Geogrge|Washington"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué ciudad norteamericana se encuentra Hollywood?",
+      "respuesta": "Los angeles"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué país es reconocido mundialmente por sus relojes?",
+      "respuesta": "Suiza"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Sobre qué océano está Chile?",
+      "respuesta": "Pacifico"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el idioma oficial de Austria?",
+      "respuesta": "Aleman"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el río más largo del mundo?",
+      "respuesta": "Nilo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué torre italiana es famosa por su inclinación?",
+      "respuesta": "la torre|de pisa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué año se descubrió América?",
+      "respuesta": "1492"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A quién le debe su nombre el continente americano?",
+      "respuesta": "Americo|Vespucio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué imperio antiguo fué emperador Calígula?",
+      "respuesta": "Romano"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman a las pinturas prehistóricas de las cuevas?",
+      "respuesta": "pinturas|rupestres"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué fecha fueron los atentados que derribaron las Torres Gemelas de NY?",
+      "respuesta": "11 9 2001"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué puerto zarpó Colón hacia las Indias cuando finalmente llegó a América?",
+      "respuesta": "Puerto de|palos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué año se produjo la Revolución Francesa?",
+      "respuesta": "1789"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué continente se le llama 'el continente blanco'?",
+      "respuesta": "Antartido"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuántos continetes empiezan con la letra A?",
+      "respuesta": "4"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el continente menos poblado?",
+      "respuesta": "Antartida"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Dónde vivían los humanos en la prehistoria?",
+      "respuesta": "Cavernas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué ciudad se encuentra el muro de los lamentos?",
+      "respuesta": "Jerusalen"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el continente mas grande?",
+      "respuesta": "Asia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el idioma oficial de Siria?",
+      "respuesta": "Arabe"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país europeo está la ciudad de la Haya?",
+      "respuesta": "Holanda"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el material fundido que expulsan los volcanes?",
+      "respuesta": "Lava"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué reyes españoles impulsaron la conquista de América?",
+      "respuesta": "Los Reyes|Catolicos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién presidía la Unión Soviética durante la Segunda Guerra Mundial?",
+      "respuesta": "Stalin"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál era el dios griego que reinaba el Monte Olimpo?",
+      "respuesta": "Zeus"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la desembocadura de un río que tiene varios brazos?",
+      "respuesta": "Delta"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué país es conocido como el Imperio del Sol Naciente?",
+      "respuesta": "Japon"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué batalla fue derrotado definitivamente Napoleon?",
+      "respuesta": "Waterloo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el continente mas chico?",
+      "respuesta": "Oceania"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién es el padre de la patria de Venezuela?",
+      "respuesta": "Simon|Bolivar"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién es el padre de la patria de Argentina?",
+      "respuesta": "Jose de|San Martin"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién fué la primer mujer en presidir Chile?",
+      "respuesta": "Michelle|Bachelet"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién fue el Adelantado español que conquistó México?",
+      "respuesta": "Hernan|Cortes"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién dió la primera vuelta al mundo?",
+      "respuesta": "Sebastian|Elcano"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué estrecho separa el Océano Pacífico del Ártico?",
+      "respuesta": "Estrecho de|Bering"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué ciudad está el famoso reloj llamado Big Ben?",
+      "respuesta": "Londres"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre llevan las costas altas y rocosas?",
+      "respuesta": "Acantilados"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se anuncia la elección de un nuevo Papa?",
+      "respuesta": "con humo|blanco"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A quién se le atribuyó el asesinato de Kennedy?",
+      "respuesta": "Lee Harvey|Oswald"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién era el emperador de Japón durante la Segunda Guerra Mundial?",
+      "respuesta": "Hiroito"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué emperador romano es conocido por haber incendiado parte de Roma?",
+      "respuesta": "Neron"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué revolución se inicio con la toma de la Bastilla?",
+      "respuesta": "la francesa"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el período mas antiguo de la prehistoria?",
+      "respuesta": "Paleolitico"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué país sucedió la batalla de Waterloo?",
+      "respuesta": "Belgica"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué año comenzó la Primera Guerra Mundial?",
+      "respuesta": "1914"
     }
   ]
 }
