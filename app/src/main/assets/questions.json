@@ -6312,7 +6312,7 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué famoso escritor chileo ganó el premio Nobel de literatura?",
+      "pregunta": "¿Qué famoso escritor chileno ganó el premio Nobel de literatura?",
       "respuesta": "Pablo|Neruda"
     }
   ,
@@ -6374,12 +6374,6 @@
       "title": "",
       "pregunta": "¿Dónde nació el emperador francés Napoleón Bonaparte?",
       "respuesta": "Corcega"
-    }
-  ,
-    {
-      "title": "",
-      "pregunta": "¿En qué país construyo EE.UU un canal que une el Océano Pacífico con el Atlántico?",
-      "respuesta": "Panama"
     }
   ,
     {
@@ -6481,7 +6475,7 @@
     {
       "title": "",
       "pregunta": "¿Quién escribió Mujercitas?",
-      "respuesta": "Louisa May Alcott"
+      "respuesta": "Louisa May|Alcott"
     }
   ,
     {
@@ -6633,6 +6627,977 @@
       "pregunta": "¿En qué club brasilero de fútbol debutó Pelé?",
       "respuesta": "Santos"
     }
-
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las zonas de unión entre dos huesos contiguos?",
+      "respuesta": "Articulaciones"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el segundo planeta mas grande del sistema solar?",
+      "respuesta": "Saturno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el fruto del peral?",
+      "respuesta": "La pera"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre recibe el conjunto de los huesos del cuerpo?",
+      "respuesta": "Esqueleto"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuáles son las unidades basicas que forman nuestro cuerpo?",
+      "respuesta": "celulas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A dónde se dirige la sangre que sale del ventrículo derecho?",
+      "respuesta": "los pulmones"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Por qué aurícula  ingresa al corazón la sangre recogida del cuerpo?",
+      "respuesta": "derecha"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las sustancias defensivas que fabrica nuestro organismo?",
+      "respuesta": "Anticuerpos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué aparatos registran los movimientos sísmicos?",
+      "respuesta": "Sismografos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre recibe la parte central de un átomo?",
+      "respuesta": "Nucleo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo llamamos al movimiento de la Tierra alrededor del Sol?",
+      "respuesta": "Traslacion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Entre qué planetas se halla la Tierra?",
+      "respuesta": "Marte y|Venus"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué órganos son los encargados de nuestra respiración?",
+      "respuesta": "los pulmones"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Por dónde reciben las plantas la energía del Sol?",
+      "respuesta": "las hojas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el líquido que circula dentro de las plantas?",
+      "respuesta": "Savia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el movimiento que realiza la Tierra sobre su propio eje?",
+      "respuesta": "Rotacion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué es la rana antes de su metamorfosis?",
+      "respuesta": "Renacuajo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el ave más grande?",
+      "respuesta": "Avestruz"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué parte del cuerpo está 'la línea de la vida'?",
+      "respuesta": "las manos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué constelación se encuentra la Estrella Polar?",
+      "respuesta": "La Osa Menor"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué les ocurre a dos cargas eléctricas del mismo signo que están próximas?",
+      "respuesta": ""
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué constelación estan Las Tres Marias?",
+      "respuesta": "Orion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuánto tarda la Tierra en dar una vuelta sobre sí misma?",
+      "respuesta": "24 horas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los extremos de la Tierra?",
+      "respuesta": "Polos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quiénes producen la miel?",
+      "respuesta": "Las abejas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué estación viene después de la primavera?",
+      "respuesta": "Verano"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué especie de animales pertenecen los tigres, leones y gatos?",
+      "respuesta": "Felinos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Por qué esta cubierto el cuerpo de los pájaros?",
+      "respuesta": "Plumas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la cría de la rana?",
+      "respuesta": "Renacuajo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué tipo de agua tienen los mares?",
+      "respuesta": "Salada"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué tipo de agua tienen los lagos y lagunas?",
+      "respuesta": "Dulce"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los animales que comen hierbas?",
+      "respuesta": "Herbivoros"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el médico encargado de revisar los ojos?",
+      "respuesta": "Oftalmologo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué es un tsunami?",
+      "respuesta": "Un maremoto"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuáles son las siglas del ácido desoxirribonucleico?",
+      "respuesta": "ADN"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al acto que da lugar al nacimiento?",
+      "respuesta": "Parto"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la marca que deja el cordón umbilical?",
+      "respuesta": "Ombligo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué membrana separa al oído externo del interno?",
+      "respuesta": "El timpano"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué es un 'cumulus nimbus'?",
+      "respuesta": "Una nube"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina a las nubes que se encuentran al nivel del suelo?",
+      "respuesta": "Niebla"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Por dónde toman agua las plantas?",
+      "respuesta": "La raiz"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los animales que se alimentan de carne?",
+      "respuesta": "Carnivoros"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué células nerviosas son las encargadas de transmitir información?",
+      "respuesta": "Las neuronas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la unidad biológica formada por un lugar y los seres que lo habitan?",
+      "respuesta": "Ecosistema"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué tipo de reproducción tienen las aves?",
+      "respuesta": "Ovipara"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los huesos en forma de arco que protegen a los pulmones?",
+      "respuesta": "Costillas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué intestino pasan los alimentos luego del estómago?",
+      "respuesta": "delgado"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la cría de la oveja?",
+      "respuesta": "Cordero"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el lugar donde viven las abejas?",
+      "respuesta": "Colmenas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los huesos que forman la columna vertebral?",
+      "respuesta": "Vertebras"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la capa de gases que cubre la Tierra?",
+      "respuesta": "Atmosfera"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A través de qué conducto llega el aire a los pulmones?",
+      "respuesta": "Traquea"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué aparato pertenece el corazón?",
+      "respuesta": "Circulatorio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué órgano del sistema nervioso controla el equilibrio?",
+      "respuesta": "Cerebelo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuánto tarda la Luna en dar una vuelta a la Tierra?",
+      "respuesta": "28 dias"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama lo que recubre el cuerpo de los reptiles?",
+      "respuesta": "Escamas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el óvulo fecundado?",
+      "respuesta": "Cigoto"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al conducto que lleva la comida al estómago?",
+      "respuesta": "Esofago"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué sistema pertenece el cerebro?",
+      "respuesta": "Nervioso"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los bloques de hielo que flotan en el mar?",
+      "respuesta": "Icebergs"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el planeta más alejado del Sol?",
+      "respuesta": "Pluton"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre recibe la articulación por la que se dobla el brazo?",
+      "respuesta": "Codo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál de los 5 sentidos se asocia a la lengua?",
+      "respuesta": "Gusto"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál de los 5 sentidos se asocia a la nariz?",
+      "respuesta": "Olfato"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la parte coloreada del ojo?",
+      "respuesta": "Iris"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué proteína contienen las uñas?",
+      "respuesta": "Queratina"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el líquido que sale por los poros de la piel?",
+      "respuesta": "Sudor"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina un conjunto de estrellas?",
+      "respuesta": "Constelacion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Quién descubrio la penicilina?",
+      "respuesta": "Fleming"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la unidad de presión en el sistema internacional?",
+      "respuesta": "pascal"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué zonas de la Tierra es mayor la fuerza de gravedad?",
+      "respuesta": "los polos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué músculo se contrae rítmicamente sin parar durante toda la vida?",
+      "respuesta": "El corazón"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la vena mas grande del cuerpo humano?",
+      "respuesta": "Cava"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman a los animales sin esqueleto?",
+      "respuesta": "Invertebrados"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué sustancia segregan las glándulas sudoríparas?",
+      "respuesta": "Sudor"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué vitamina tienen las naranjas y los limones?",
+      "respuesta": "C"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el fenómeno acústico producido cuando una onda se refleja y regresa hacia su emisor?",
+      "respuesta": "Eco"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué órganos expulsan el dióxido de carbono de nuestro cuerpo?",
+      "respuesta": "Los pulmones"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina el desgaste de la superficie terrestre?",
+      "respuesta": "Erosion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman a los animales que cazan para obtener alimento?",
+      "respuesta": "Depredadores"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué células de la sangre defienden al organismo de las infecciones?",
+      "respuesta": "Los globulos|blancos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el período normal de gestación de la especie humana?",
+      "respuesta": "nueve|meses"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A cuál de los sentidos afecta la miopía?",
+      "respuesta": "Vista"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué animal produce las perlas?",
+      "respuesta": "Ostras"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los órganos respiratorios de los peces?",
+      "respuesta": "Branquias"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué se transporta por medio de un oleoducto?",
+      "respuesta": "Petroleo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A qué aparato pertenecen las venas y las arterias?",
+      "respuesta": "Circulatorio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las extremidades del cuerpo humano?",
+      "respuesta": "Brazos y|piernas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el tejido que une el músculo al hueso?",
+      "respuesta": "Tendon"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es el hueso más largo del cuerpo?",
+      "respuesta": "Femur"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué color es la clorofila?",
+      "respuesta": "Verde"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre reciben los productos cuyos residuos pueden volver a ser utilizados?",
+      "respuesta": "Reciclables"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los movimientos sísmicos que se producen en el mar?",
+      "respuesta": "Maremotos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al proceso por el cual los vegetales convierten la energía solar en alimento?",
+      "respuesta": "Fotosintesis"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las ramas en que se divide la tráquea?",
+      "respuesta": "Bronquios"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los aparatos que producen corriente eléctrica?",
+      "respuesta": "Generadores"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué escala se mide la magnitud de un terremoto?",
+      "respuesta": "Richter"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre recibe la parte líquida de la sangre?",
+      "respuesta": "Plasma"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denominan los cuerpos que dejan pasar la corriente eléctrica?",
+      "respuesta": "Conductores"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿La sacarina es de origen animal, vegetal o mineral?",
+      "respuesta": "Vegetal"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los restos de los seres vivos petrificados?",
+      "respuesta": "Fosiles"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué ciencia estudia los fósiles?",
+      "respuesta": "Paleontologia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué órganos del aparato reproductor femenino se generan los óvulos?",
+      "respuesta": "Ovarios"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué aparatos se introducen a los niños prematuros para proveerles calor?",
+      "respuesta": "Incubadora"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el líquido que envuelve al feto?",
+      "respuesta": "Amniotico"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué sexo corresponde a la pareja de cromosomas XX?",
+      "respuesta": "Femenino"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué otro nombre reciben las grasas?",
+      "respuesta": "Lipidos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué magnitud se mide en Km/h?",
+      "respuesta": "Velocidad"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el macho de una colmena?",
+      "respuesta": "Zangano"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el aparato que mide la cantidad de lluvia caída?",
+      "respuesta": "Pluviometro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la flor del limonero?",
+      "respuesta": "Azahar"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la glándula que controla el resto de las glándulas?",
+      "respuesta": "Hipofisis"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las partes más pequeñas en que pueden dividirse las moléculas?",
+      "respuesta": "Atomos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las sustancias que fabrican los linfocitos contra las enfermedades?",
+      "respuesta": "Anticuerpos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuántos equinoccios hay por año?",
+      "respuesta": "2"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿En qué glándulas masculinas se producen los espermatozoides?",
+      "respuesta": "Testiculos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué sexo corresponde a la pareja de cromosomas XY?",
+      "respuesta": "Masculino"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué bebida a base de lúpulo y levadura sufre el proceso de pasteurización?",
+      "respuesta": "Cerveza"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el punto donde se encuentra el centro del terremoto?",
+      "respuesta": "Epicentro"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué elementos estan hecho los panales naturales de las abejas?",
+      "respuesta": "Cera"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la obstrucción de un vaso sanguíneo?",
+      "respuesta": "Trombosis"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Con qué sustancia se mezcla el alimento en la boca?",
+      "respuesta": "Saliva"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué nombre recibe el espacio hasta donde llega la atracción de un imán?",
+      "respuesta": "Campo|Magnetico"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al proceso por el cual una célula se divide en dos células idénticas?",
+      "respuesta": "Mitosis"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los sonidos que no podemos oír debido a su alta frecuencia?",
+      "respuesta": "Ultrasonidos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué teoría explica la formación del universo postulando que está en permanente expansión?",
+      "respuesta": "El Big bang"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué continente es originario el árbol del cacao?",
+      "respuesta": "America|Central"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las papilas que recubren la lengua?",
+      "respuesta": "Gustativas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la mezcla de estaño y cobre?",
+      "respuesta": "Bronce"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina la capa de la Tierra en que habitan los seres vivos?",
+      "respuesta": "Biosfera"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué propiedad tiene el imán para atraer a otros cuerpos?",
+      "respuesta": "Magnetismo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las aves que se alimentan de insectos?",
+      "respuesta": "Insectivoras"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama al endurecimiento de las arterias?",
+      "respuesta": "Arteriosclerosis"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la línea imaginaria que rodea la Tierra por parte más ancha?",
+      "respuesta": "Ecuador"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué órganos destruye la tuberculosis?",
+      "respuesta": "Los pulmones"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué producen los estambres de las flores?",
+      "respuesta": "Polen"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué hay dentro del pistilo de la flor?",
+      "respuesta": "Ovulos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama la salida de sangre por rotura de un vaso sanguíneo?",
+      "respuesta": "Hemorragia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cuál es la mayor arteria del cuerpo humano?",
+      "respuesta": "Aorta"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿A través de qué se alimenta el embrión?",
+      "respuesta": "El cordon|umbilical"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las montañas de arenas?",
+      "respuesta": "Dunas"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo llamamos a los conductos que unen las arterias y las venas?",
+      "respuesta": "Capilares"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina la rápida difusión de una enfermedad?",
+      "respuesta": "Epidemia"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué elemento es fundamental para construir la bomba H?",
+      "respuesta": "Hidrogeno"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué órgano destruye la enfermedad de la cirrosis?",
+      "respuesta": "Higado"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué parte del cuerpo tiene la piel mas fina?",
+      "respuesta": "Parpado"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué enfermedad transmite la picadura del mosquito anófeles?",
+      "respuesta": "Paludismo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama el movimiento de la tierra que da lugar a los días y las noches?",
+      "respuesta": "Rotacion"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama a un especialista en enfermedades de la piel?",
+      "respuesta": "Dermatologo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué produce la poliomielitis?",
+      "respuesta": "Paralisis"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las hojas que forman la corola de una flor?",
+      "respuesta": "Petalos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué elemento químico predomina en la arena?",
+      "respuesta": "Silicio"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué glándula regula la producción de las hormonas?",
+      "respuesta": "hipotalamo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De qué continente proviene el tomate?",
+      "respuesta": "America|Central"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿De dónde proviene la soja?",
+      "respuesta": "China"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué científico del siglo XVII usó el telescopio por primera vez para ver la luna?",
+      "respuesta": "Galileo|Galilei"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman las articulacions de los dedos?",
+      "respuesta": "Nudillos"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llama a un especialista en oídos, nariz y garganta?",
+      "respuesta": "Otorrinolaringolo"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué insecto transmite la enfermedad del mal de chagas?",
+      "respuesta": "Vinchuca"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se denomina al animal o planta que posee los órganos masculinos y femeninos de la reproducción?",
+      "respuesta": "Hermafrodita"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Qué parte del sistema nervioso está dentro de la columna vertebral?",
+      "respuesta": "La medula|espinal"
+    }
+  ,
+    {
+      "title": "",
+      "pregunta": "¿Cómo se llaman los actos involuntarios?",
+      "respuesta": "Reflejos"
+    }
   ]
 }
