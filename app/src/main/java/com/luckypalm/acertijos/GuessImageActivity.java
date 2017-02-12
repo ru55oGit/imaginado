@@ -414,7 +414,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 e.printStackTrace();
             }
         } else {
-            finish();
+            if (editor.commit()) {
+                finish();
+            }
         }
     }
 
