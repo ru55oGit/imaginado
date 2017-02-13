@@ -1,6 +1,216 @@
 {
   "preguntas": [
     {
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes1.jpg",
+      "respuesta": "la hormiga|atomica"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes2.jpg",
+      "respuesta": "vegeta"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes3.jpg",
+      "respuesta": "pikachu"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes4.jpg",
+      "respuesta": "seiya"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes5.jpg",
+      "respuesta": "jem"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes6.jpg",
+      "respuesta": "la pantera|rosa"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes7.jpg",
+      "respuesta": "el inspector|gadget"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes8.jpg",
+      "respuesta": "el oso|hormiguero"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes9.jpg",
+      "respuesta": "gargamel"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes10.jpg",
+      "respuesta": "el gallo|claudio"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes11.jpg",
+      "respuesta": "rayo de|plata"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes12.jpg",
+      "respuesta": "don gato"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes13.jpg",
+      "respuesta": "babar"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes14.jpg",
+      "respuesta": "astroboy"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes15.jpg",
+      "respuesta": "aquaman"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes16.jpg",
+      "respuesta": "battlecat"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes17.jpg",
+      "respuesta": "benji|price"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes18.jpg",
+      "respuesta": "birdman"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes19.jpg",
+      "respuesta": "bobby"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes20.jpg",
+      "respuesta": "bugs bunny"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes21.jpg",
+      "respuesta": "cerebro"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes22.jpg",
+      "respuesta": "el inspector|ardilla"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes23.jpg",
+      "respuesta": "el oso yogi"
+    },
+    {
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes24.jpg",
+      "respuesta": "heidi"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes25.jpg",
+      "respuesta": "garfield"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes26.jpg",
+      "respuesta": "freezer"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes27.jpg",
+      "respuesta": "flash"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes28.jpg",
+      "respuesta": "goku"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes29.jpg",
+      "respuesta": "ikki"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes30.jpg",
+      "respuesta": "pitufo|goloso"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes31.jpg",
+      "respuesta": "scooby|doo"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes32.jpg",
+      "respuesta": "bart|simpson"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes33.jpg",
+      "respuesta": "principe|adam"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes34.jpg",
+      "respuesta": "ricky|ricon"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes35.jpg",
+      "respuesta": "pepe le pew"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes36.jpg",
+      "respuesta": "papa|pitufo"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes37.jpg",
+      "respuesta": "oliver|atom"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes38.jpg",
+      "respuesta": "oddie"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes39.jpg",
+      "respuesta": "oficial|matute"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes40.jpg",
+      "respuesta": "mandibulin"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes41.jpg",
+      "respuesta": "orson"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes42.jpg",
+      "respuesta": "el pato|lucas"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes43.jpg",
+      "respuesta": "la mujer|maravilla"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes44.jpg",
+      "respuesta": "picoro"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes45.jpg",
+      "respuesta": "hyoga"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes46.jpg",
+      "respuesta": "gohan"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes47.jpg",
+      "respuesta": "el gavilan|pollero"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes48.jpg",
+      "respuesta": "el coyote"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes49.jpg",
+      "respuesta": "benito"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes50.jpg",
+      "respuesta": "baloo"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes51.jpg",
+      "respuesta": "Penny"
+    },{
+      "title": "¿Recuerdas de este personaje?",
+      "pregunta": "personajes52.jpg",
+      "respuesta": "marvin"
+    },
+    {
       "title": "¿Conoces este logo?",
       "pregunta": "marcas1.jpg",
       "respuesta": "chrome"
