@@ -401,10 +401,6 @@
       "title": "¿Cómo se llama?",
       "pregunta": "personajes101.jpg",
       "respuesta": "maestro|roshi"
-    },{
-      "title": "¿Cómo se llama?",
-      "pregunta": "personajes.jpg",
-      "respuesta": ""
     },
     {
       "title": "¿Conoces este logo?",
@@ -1919,7 +1915,7 @@
     }
   ,
     {
-      "title": "",
+      "title": "Definición",
       "pregunta": "Cuerpo celeste de núcleo poco denso que suele ir rodeado de un rastro luminoso",
       "respuesta": "cometa"
     }
@@ -5625,9 +5621,9 @@
     }
   ,
     {
-      "title": "",
-      "pregunta": "¿Qué onda genera una explosión?",
-      "respuesta": "onda expansiva"
+      "title": "Definición",
+      "pregunta": "onda que se caracteriza por tener un centro de máximo efecto y un área de influencia sobre la que, a medida que nos alejamos del centro, disminuye el efecto",
+      "respuesta": "expansiva"
     }
   ,
     {
@@ -7157,7 +7153,7 @@
     {
       "title": "",
       "pregunta": "¿Qué les ocurre a dos cargas eléctricas del mismo signo que están próximas?",
-      "respuesta": ""
+      "respuesta": "se repelen"
     }
   ,
     {
