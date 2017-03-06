@@ -1,6 +1,577 @@
 {
   "preguntas": [
     {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos1.jpg",
+      "respuesta": "River|Plate"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos2.jpg",
+      "respuesta": "Napoli"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos3.jpg",
+      "respuesta": "Barcelona"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos4.jpg",
+      "respuesta": "Valencia"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos5.jpg",
+      "respuesta": "Bayer|Munich"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos6.jpg",
+      "respuesta": "Roma"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos7.jpg",
+      "respuesta": "Cruz|Azul"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos8.jpg",
+      "respuesta": "Real|Madrid"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos9.jpg",
+      "respuesta": "Racing|Club"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos10.jpg",
+      "respuesta": "San Pablo"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos11.jpg",
+      "respuesta": "Gremio"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos12.jpg",
+      "respuesta": "Atletico|Madrid"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos13.jpg",
+      "respuesta": "Borussia|Dortmund"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos14.jpg",
+      "respuesta": "Milan"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos15.jpg",
+      "respuesta": "Manchester|City"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos16.jpg",
+      "respuesta": "Colo Colo"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos17.jpg",
+      "respuesta": "Inter de|Porto Alegre"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos18.jpg",
+      "respuesta": "Once|Caldas"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos19.jpg",
+      "respuesta": "Manchester|United"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos20.jpg",
+      "respuesta": "Cruzeiro"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos21.jpg",
+      "respuesta": "Atletico|Nacional"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos22.jpg",
+      "respuesta": "Lazio"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos23.jpg",
+      "respuesta": "Chelsea"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos24.jpg",
+      "respuesta": "Wolfsburgo"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos25.jpg",
+      "respuesta": "San Lorenzo"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos26.jpg",
+      "respuesta": "Flamengo"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos27.jpg",
+      "respuesta": "Hamburgo"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos28.jpg",
+      "respuesta": "Sevilla"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos29.jpg",
+      "respuesta": "Juventus"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos30.jpg",
+      "respuesta": "Arsenal"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos31.jpg",
+      "respuesta": "Bayer|Leverkusen"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos32.jpg",
+      "respuesta": "Lanus"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos33.jpg",
+      "respuesta": "Osasuna"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos34.jpg",
+      "respuesta": "America"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos35.jpg",
+      "respuesta": "Inter de|Milan"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos36.jpg",
+      "respuesta": "Malaga"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos37.jpg",
+      "respuesta": "Liverpool"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos38.jpg",
+      "respuesta": "Schalke 04"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos39.jpg",
+      "respuesta": "Torino"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos40.jpg",
+      "respuesta": "Everton"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos41.jpg",
+      "respuesta": "Universidad|de chile"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos42.jpg",
+      "respuesta": "Estudiantes|de la plata"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos43.jpg",
+      "respuesta": "Sampdoria"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos44.jpg",
+      "respuesta": "Velez|Sarsfield"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos45.jpg",
+      "respuesta": "Betis"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos46.jpg",
+      "respuesta": "Siena"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos47.jpg",
+      "respuesta": "Necaxa"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos48.jpg",
+      "respuesta": "West|Bromwich"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos49.jpg",
+      "respuesta": "Perugia"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos50.jpg",
+      "respuesta": "Villareal"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos51.jpg",
+      "respuesta": "Herta|Berlin"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos52.jpg",
+      "respuesta": "Rosario|Central"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos53.jpg",
+      "respuesta": "Santos"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos54.jpg",
+      "respuesta": "Millonarios"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos55.jpg",
+      "respuesta": "Universidad|Catolica"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos56.jpg",
+      "respuesta": "Fiorentina"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos57.jpg",
+      "respuesta": "Atlas"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos58.jpg",
+      "respuesta": "Tottenham|Hotspur"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos59.jpg",
+      "respuesta": "Palmeiras"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos60.jpg",
+      "respuesta": "Werder|Bremen"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos61.jpg",
+      "respuesta": "Bologna"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos62.jpg",
+      "respuesta": "Newcastle"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos63.jpg",
+      "respuesta": "Levante"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos64.jpg",
+      "respuesta": "Palermo"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos65.jpg",
+      "respuesta": "Tigre"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos66.jpg",
+      "respuesta": "Junior de|Barranquilla"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos67.jpg",
+      "respuesta": "corinthians"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos68.jpg",
+      "respuesta": "Fluminense"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos69.jpg",
+      "respuesta": "Newells|Old Boys"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos70.jpg",
+      "respuesta": "Deportivo|Cali"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos71.jpg",
+      "respuesta": "West|Ham"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos72.jpg",
+      "respuesta": "Monterrey"
+
+    },
+
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos73.jpg",
+      "respuesta": "chievo|verona"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos74.jpg",
+      "respuesta": "Aston|Villa"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos75.jpg",
+      "respuesta": "Empoli"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos76.jpg",
+      "respuesta": "Vasco da|Gama"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos77.jpg",
+      "respuesta": "America|de Cali"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos78.jpg",
+      "respuesta": "Colon"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos79.jpg",
+      "respuesta": "Gimnasia|de la plata"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos80.jpg",
+      "respuesta": "Parma"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos81.jpg",
+      "respuesta": "Banfield"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos82.jpg",
+      "respuesta": "Rayo|Vallecano"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos83.jpg",
+      "respuesta": "olympique|de marsella"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos84.jpg",
+      "respuesta": "Genoa"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos85.jpg",
+      "respuesta": "Independiente|santa fe"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos86.jpg",
+      "respuesta": "Real|Sociedad"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos87.jpg",
+      "respuesta": "Fulham"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos88.jpg",
+      "respuesta": "Independiente|de avellaneda"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos89.jpg",
+      "respuesta": "Stuttgart"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos90.jpg",
+      "respuesta": "Espanyol de|Barcelona"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos92.jpg",
+      "respuesta": "Union"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos93.jpg",
+      "respuesta": "Paris|Saint Germain"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos94.jpg",
+      "respuesta": "Southampton"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos95.jpg",
+      "respuesta": "leicester"
+
+    },
+    {
+      "title": "Equipos de fútbol",
+      "pregunta": "escudos96.jpg",
+      "respuesta": "Hellas|Verona"
+
+    },
+    {
       "title": "¿Cómo se llama?",
       "pregunta": "personajes1.jpg",
       "respuesta": "la hormiga|atomica"
@@ -2174,8 +2745,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué odia Mafalda?",
-      "respuesta": "La sopa"
+      "pregunta": "¿Qué comida odia Mafalda?",
+      "respuesta": "sopa"
     }
   ,
     {
@@ -2240,8 +2811,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el satélite natural de la tierra?",
-      "respuesta": "la luna"
+      "pregunta": "¿Cómo se llama el satélite natural de la tierra?",
+      "respuesta": "luna"
     }
   ,
     {
@@ -5275,7 +5846,7 @@
     {
       "title": "",
       "pregunta": "¿Qué significa la sigla T.N.T?",
-      "respuesta": "trinitro tolueno"
+      "respuesta": "trinitro|tolueno"
     }
   ,
     {
@@ -5443,7 +6014,7 @@
     {
       "title": "",
       "pregunta": "¿Mediante qué evento se forma la electricidad estática?",
-      "respuesta": "el rozamiento"
+      "respuesta": "rozamiento"
     }
   ,
     {
@@ -5833,7 +6404,7 @@
     {
       "title": "",
       "pregunta": "¿Qué tiene dibujado Batman en el pecho?",
-      "respuesta": "un murcielago"
+      "respuesta": "murcielago"
     }
   ,
     {
@@ -6060,8 +6631,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el símbolo mundial de la paz?",
-      "respuesta": "una paloma"
+      "pregunta": "¿Qué animal es el símbolo mundial de la paz?",
+      "respuesta": "paloma"
     }
   ,
     {
@@ -6139,19 +6710,19 @@
     {
       "title": "",
       "pregunta": "¿A qúe parte del cuerpo afecta una jaqueca?",
-      "respuesta": "la cabeza"
+      "respuesta": "cabeza"
     }
   ,
     {
       "title": "",
       "pregunta": "¿Cuál es el fruto del olivo?",
-      "respuesta": "la aceituna"
+      "respuesta": "aceituna"
     }
   ,
     {
       "title": "",
       "pregunta": "¿De qué es fanático un Melómano?",
-      "respuesta": "de la musica"
+      "respuesta": "musica"
     }
   ,
     {
@@ -6174,8 +6745,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el fruto del nogal?",
-      "respuesta": "la nuez"
+      "pregunta": "¿Cómo se llama el fruto del nogal?",
+      "respuesta": "nuez"
     }
   ,
     {
@@ -6337,13 +6908,13 @@
     {
       "title": "",
       "pregunta": "¿Cuál es la pieza mas importante del ajedrez?",
-      "respuesta": "el rey"
+      "respuesta": "rey"
     }
   ,
     {
       "title": "",
       "pregunta": "¿En ajedrez, que pieza tiene una cruz en la parte superior?",
-      "respuesta": "el rey"
+      "respuesta": "rey"
     }
   ,
     {
@@ -6391,7 +6962,7 @@
     {
       "title": "",
       "pregunta": "¿Qué instrumento tocaba Louis Amstrong?",
-      "respuesta": "La trompeta"
+      "respuesta": "trompeta"
     }
   ,
     {
@@ -6421,7 +6992,7 @@
     {
       "title": "",
       "pregunta": "¿Dónde fué asesinado Abraham Lincoln?",
-      "respuesta": "un teatro"
+      "respuesta": "teatro"
     }
   ,
     {
@@ -6432,8 +7003,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué roedor de cola aplanada fabrica represas de madera?",
-      "respuesta": "el castor"
+      "pregunta": "¿Cómo se llama el roedor de cola aplanada que fabrica represas de madera?",
+      "respuesta": "castor"
     }
   ,
     {
@@ -6552,8 +7123,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué significa la sigla FMI?",
-      "respuesta": "Fondo Monetario|Internacional"
+      "pregunta": "La sigla FMI significa: Fondo...",
+      "respuesta": "Monetario|Internacional"
     }
   ,
     {
@@ -6600,8 +7171,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Quiénes fueron los primeros hombres en volar un avión?",
-      "respuesta": "los hermanos|Wright"
+      "pregunta": "¿Cuál es el apellido de los hermanos que fueron los primeros hombres en volar un avión?",
+      "respuesta": "Wright"
     }
   ,
     {
@@ -6612,14 +7183,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Quién es el gigante de la mitología griega con un solo ojo?",
-      "respuesta": "el ciclope"
+      "pregunta": "¿Cómo se llama el gigante de la mitología griega con un solo ojo?",
+      "respuesta": "ciclope"
     }
   ,
     {
       "title": "",
       "pregunta": "¿En qué se convirtió la mujer de Lot al mirar atrás según la Biblia?",
-      "respuesta": "en estatua|de sal"
+      "respuesta": "estatua|de sal"
     }
   ,
     {
@@ -6697,7 +7268,7 @@
     {
       "title": "",
       "pregunta": "¿Qué animal es Moby Dick?",
-      "respuesta": "Una Ballena"
+      "respuesta": "Ballena"
     }
   ,
     {
@@ -6852,8 +7423,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Cuál es el fruto del peral?",
-      "respuesta": "La pera"
+      "pregunta": "¿Cómo se llama el fruto del peral?",
+      "respuesta": "pera"
     }
   ,
     {
@@ -6960,12 +7531,6 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué les ocurre a dos cargas eléctricas del mismo signo que están próximas?",
-      "respuesta": ""
-    }
-  ,
-    {
-      "title": "",
       "pregunta": "¿En qué constelación estan Las Tres Marias?",
       "respuesta": "Orion"
     }
@@ -7038,8 +7603,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué es un tsunami?",
-      "respuesta": "Un maremoto"
+      "pregunta": "¿Qué tipo de desastre natural es un tsunami?",
+      "respuesta": "maremoto"
     }
   ,
     {
@@ -7062,14 +7627,14 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué membrana separa al oído externo del interno?",
-      "respuesta": "El timpano"
+      "pregunta": "¿Cómo se llama la membrana que separa al oído externo del interno?",
+      "respuesta": "timpano"
     }
   ,
     {
       "title": "",
-      "pregunta": "¿Qué es un 'cumulus nimbus'?",
-      "respuesta": "Una nube"
+      "pregunta": "¿Tipo de qué cosa es un 'cumulus nimbus'?",
+      "respuesta": "nubes"
     }
   ,
     {
@@ -7080,8 +7645,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Por dónde toman agua las plantas?",
-      "respuesta": "La raiz"
+      "pregunta": "¿Cómo se llama la parte de la planta por dónde éstas toman agua?",
+      "respuesta": "raiz"
     }
   ,
     {
@@ -7266,8 +7831,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué músculo se contrae rítmicamente sin parar durante toda la vida?",
-      "respuesta": "El corazón"
+      "pregunta": "¿Cómo se llama el músculo que se contrae rítmicamente sin parar durante toda la vida?",
+      "respuesta": "corazon"
     }
   ,
     {
@@ -7590,8 +8155,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué teoría explica la formación del universo postulando que está en permanente expansión?",
-      "respuesta": "El Big bang"
+      "pregunta": "¿Cómo se llama la teoría que explica la formación del universo postulando que está en permanente expansión?",
+      "respuesta": "Big bang"
     }
   ,
     {
@@ -7674,8 +8239,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿A través de qué se alimenta el embrión?",
-      "respuesta": "El cordon|umbilical"
+      "pregunta": "¿Cómo se denomina el conducto por el cual se alimenta el embrión?",
+      "respuesta": "cordon|umbilical"
     }
   ,
     {
@@ -7800,8 +8365,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué parte del sistema nervioso está dentro de la columna vertebral?",
-      "respuesta": "La medula|espinal"
+      "pregunta": "¿Cómo se denomina la parte del sistema nervioso está dentro de la columna vertebral?",
+      "respuesta": "medula|espinal"
     }
   ,
     {
@@ -7848,8 +8413,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué palabra indica la acción del sujeto en una oración?",
-      "respuesta": "el verbo"
+      "pregunta": "¿Cómo se denomina la palabra que indica la acción del sujeto en una oración?",
+      "respuesta": "verbo"
     }
   ,
     {
@@ -7866,8 +8431,8 @@
   ,
     {
       "title": "",
-      "pregunta": "¿Qué palabra acompaña al sustantivo y expresa una cualidad de éste?",
-      "respuesta": "El adjetivo"
+      "pregunta": "¿Cómo se denomina la palabra que acompaña al sustantivo y expresa una cualidad de éste?",
+      "respuesta": "adjetivo"
     }
   ,
     {
