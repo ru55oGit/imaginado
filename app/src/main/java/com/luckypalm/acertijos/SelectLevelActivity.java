@@ -30,6 +30,7 @@ public class SelectLevelActivity extends AppCompatActivity {
     private SharedPreferences.Editor editor;
     private String level;
     private ScrollView hsv;
+    private TextView footer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +95,13 @@ public class SelectLevelActivity extends AppCompatActivity {
                 }
                 contenedorNiveles.addView(levelCircle);
             }
+            footer = (TextView) findViewById(R.id.footer);
+            footer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    
+                }
+            });
         }
     }
 
