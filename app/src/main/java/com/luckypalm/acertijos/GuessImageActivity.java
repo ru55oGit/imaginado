@@ -96,7 +96,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private ImageView leftArrow;
     private ImageView rightArrow;
-    private String statusOfGuessed;
+    private Boolean languageSelected;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -262,9 +262,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
         labelLevelText = (TextView) findViewById(R.id.labelLevelText);
-
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
-        if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(settings.getString("level", "1"))) {
+        languageSelected = settings.getBoolean("languageSelected", true);
+
+        // traigo el Nivel
+        level = languageSelected.booleanValue() ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
+        levelSelected = settings.getString("levelSelected","1");
+
+        // Si el numero de nivel seleccionado es mayor al numero de nivel resuelto, no muestro el teclado
+        if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(level)) {
             toggleKeyboardVisible();
         }
 
@@ -274,21 +280,18 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setCornerRadius((int) getResources().getDimension(R.dimen.border_radius));
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
-        // traigo el Nivel
-        level = settings.getString("level","1");
-        levelSelected = settings.getString("levelSelected","1");
 
-        labelLevelText.setText("Nivel " + levelSelected);
+        labelLevelText.setText(languageSelected.booleanValue()? "Level " : "Nivel " + levelSelected);
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
-        uri = "adivinanzas" + levelSelected;
+        uri = languageSelected.booleanValue() ? "wuzzles" +  levelSelected : "adivinanzas" + levelSelected;
         int res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
         imageToGuess.setImageResource(res);
         // obtengo la palabra que se va adivinar
-        word = getWord("adivinanzas", levelSelected);
+        word = languageSelected.booleanValue() ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
@@ -436,6 +439,27 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     private String getWord (String categoria, String level) {
+        String word = "";
+        try {
+            //obtengo el archivo
+            String jsonLocation = AssetJSONFile("data_en.json", getBaseContext());
+            JSONObject jsonobject = new JSONObject(jsonLocation);
+            //obtengo el array de niveles
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("words");
+            //obtengo el nivel
+            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
+            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
+            word = nivel.getString(categoria);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return word;
+    }
+
+    private String obtenerPalabra (String categoria, String level) {
         String word = "";
         try {
             //obtengo el archivo
@@ -621,7 +645,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("levelSelected", ((Integer)(Integer.parseInt(levelSelected) - 1)).toString());
         }
         editor.putBoolean("autoclick", true);
-        editor.putString("level", level);
+        if (languageSelected.booleanValue()) {
+            editor.putString("levelEnglish", level);
+        } else {
+            editor.putString("levelSpanish", level);
+        }
+
         editor.commit();
     }
 
@@ -629,7 +658,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (Integer.parseInt(levelSelected) == Integer.parseInt(level)) {
             level = ((Integer)(Integer.parseInt(level) + 1)).toString();
         }
-        editor.putString("level", level);
+        if (languageSelected.booleanValue()) {
+            editor.putString("levelEnglish", level);
+        } else {
+            editor.putString("levelSpanish", level);
+        }
         editor.putString("levelSelected", level);
         editor.commit();
     }

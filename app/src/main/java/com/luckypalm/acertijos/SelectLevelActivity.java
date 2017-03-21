@@ -5,14 +5,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.GridLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -28,9 +30,14 @@ public class SelectLevelActivity extends AppCompatActivity {
     private GridLayout contenedorNiveles;
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
-    private String level;
+    private String levelSpanish;
+    private String levelEnglish;
+    private Boolean languageSelected;
     private ScrollView hsv;
-    private TextView footer;
+    private Switch mySwitch;
+    private RelativeLayout back;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,7 @@ public class SelectLevelActivity extends AppCompatActivity {
         contenedorNiveles = (GridLayout) findViewById(R.id.innerLay);
         hsv = (ScrollView) findViewById(R.id.hsv);
         title = (TextView) findViewById(R.id.title);
+
     }
 
     @Override
@@ -50,7 +58,36 @@ public class SelectLevelActivity extends AppCompatActivity {
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
-        level = settings.getString("level","1");
+
+        languageSelected = settings.getBoolean("languageSelected", true);
+        mySwitch = (Switch) findViewById(R.id.switchy);
+        mySwitch.setChecked(languageSelected);
+        back = (RelativeLayout) findViewById(R.id.activity_select_level);
+        // por true es English
+        if(mySwitch.isChecked()){
+            back.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+        }else{
+            back.setBackgroundColor(getResources().getColor(R.color.white));
+        }
+
+        levelSpanish = settings.getString("levelSpanish","1");
+        levelEnglish = settings.getString("levelEnglish","1");
+
+        //attach a listener to check for changes in state
+        mySwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                if(mySwitch.isChecked()){
+                    editor.putBoolean("languageSelected", true);
+                    editor.commit();
+                    onResume();
+                }else{
+                    editor.putBoolean("languageSelected", false);
+                    editor.commit();
+                    onResume();
+                }
+            }
+        });
 
         boolean autoclick = settings.getBoolean("autoclick", false);
 
@@ -90,18 +127,18 @@ public class SelectLevelActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-                if (i > Integer.parseInt(level)) {
-                    levelCircle.setAlpha(0.35f);
+                // por true es English
+                if (mySwitch.isChecked()) {
+                    if (i > Integer.parseInt(levelEnglish)) {
+                        levelCircle.setAlpha(0.35f);
+                    }
+                } else {
+                    if (i > Integer.parseInt(levelSpanish)) {
+                        levelCircle.setAlpha(0.35f);
+                    }
                 }
                 contenedorNiveles.addView(levelCircle);
             }
-            footer = (TextView) findViewById(R.id.footer);
-            footer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    
-                }
-            });
         }
     }
 
@@ -123,13 +160,13 @@ public class SelectLevelActivity extends AppCompatActivity {
 
     }
 
-    public void goToSelectImages(View v){
+    /*public void goToSelectImages(View v){
         editor.putString("levelSelected", ((TextView) v).getText().toString());
         editor.commit();
 
         Intent intent = new Intent(SelectLevelActivity.this, SelectImagesActivity.class);
         startActivity(intent);
-    }
+    }*/
 
     public String AssetJSONFile (String filename, Context context) throws IOException {
         InputStream file = getAssets().open(filename);
