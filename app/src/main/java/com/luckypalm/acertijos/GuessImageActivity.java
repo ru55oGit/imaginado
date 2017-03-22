@@ -788,7 +788,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
             public void onDismiss(final DialogInterface dialog) {
                 // Abro el teclado cuando me quedo sin tiempo
-                toggleKeyboardVisible();
+                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             }
         });
 

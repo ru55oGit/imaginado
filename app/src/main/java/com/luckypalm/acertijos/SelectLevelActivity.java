@@ -11,6 +11,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.CompoundButton;
 import android.widget.GridLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -77,9 +78,9 @@ public class SelectLevelActivity extends AppCompatActivity {
         levelEnglish = settings.getString("levelEnglish","1");
 
         //attach a listener to check for changes in state
-        mySwitch.setOnClickListener(new View.OnClickListener() {
+        mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick (View v) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(mySwitch.isChecked()){
                     editor.putBoolean("languageSelected", true);
                     editor.commit();

@@ -48,14 +48,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:padding="10dp"
         android:background="@color/primaryColor"
         android:id="@+id/footerContainer"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Español"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bg_letter_size"
+            android:layout_alignParentLeft="true"/>
         <Switch
             android:id="@+id/switchy"
             android:layout_width="wrap_content"
@@ -63,6 +68,14 @@
             android:thumbTint="@color/white"
             android:trackTint="@color/white"
             android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bg_letter_size"
+            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
 
