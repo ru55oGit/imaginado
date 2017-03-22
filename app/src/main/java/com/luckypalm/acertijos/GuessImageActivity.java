@@ -46,7 +46,6 @@ import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
 
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -90,9 +89,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private ImageView shareFacebook;
     private ImageView volver;
     private ImageView title;
+    private int res;
 
     private LinearLayout firstLine;
     private LinearLayout secondLine;
+    private RelativeLayout frameCounter;
 
     private ImageView leftArrow;
     private ImageView rightArrow;
@@ -100,6 +101,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
+
 
     // Storage Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -264,6 +266,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         labelLevelText = (TextView) findViewById(R.id.labelLevelText);
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
         languageSelected = settings.getBoolean("languageSelected", true);
+        title = (ImageView) findViewById(R.id.title);
+        frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
+
+        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
+            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
+            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title_en));
+        }
 
         // traigo el Nivel
         level = languageSelected.booleanValue() ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
@@ -286,10 +295,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
         uri = languageSelected.booleanValue() ? "wuzzles" +  levelSelected : "adivinanzas" + levelSelected;
-        int res = getResources().getIdentifier(uri, "drawable", getPackageName());
+        res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
         imageToGuess.setImageResource(res);
+
+        imageToGuess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showImage(res);
+            }
+        });
         // obtengo la palabra que se va adivinar
         word = languageSelected.booleanValue() ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
 
@@ -601,11 +617,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             milisegundos+= 10000;
             // muestro la cantidad de segundos obtenidos
             LayoutInflater inflater = getLayoutInflater();
-            View layout = inflater.inflate(R.layout.toast_layout_win,
-                    (ViewGroup) findViewById(R.id.toast_layout_root));
+            View layout = inflater.inflate(R.layout.toast_layout_win, (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText(getResources().getString(R.string.toast_win));
+            if (languageSelected.booleanValue()) {
+                text.setText(getResources().getString(R.string.toast_win_en));
+            } else {
+                text.setText(getResources().getString(R.string.toast_win_es));
+            }
             text.setTypeface(lobsterFont);
 
             toastWin = new Toast(getApplicationContext());
@@ -758,10 +777,45 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         timer(milisegundos);
     }
 
+    private void showImage(int res) {
+        final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom.setContentView(R.layout.custom_dialog_zoomimage);
+
+        inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
+
+        ImageView imgZoom = (ImageView) dialogCustom.findViewById(R.id.imageToGuessZoom);
+        imgZoom.setImageResource(res);
+        dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
+            public void onDismiss(final DialogInterface dialog) {
+                // Abro el teclado cuando me quedo sin tiempo
+                toggleKeyboardVisible();
+            }
+        });
+
+        if (dialogCustom != null) {
+            dialogCustom.show();
+        }
+    }
+
     private void customDialog(){
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.setContentView(com.luckypalm.acertijos.R.layout.custom_dialog_withoutseconds);
+
+        LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle;
+        buyContainer = (LinearLayout) dialogCustom.findViewById(R.id.buyContainer);
+        winContainer = (LinearLayout) dialogCustom.findViewById(R.id.winContainer);
+        watchContainer = (LinearLayout) dialogCustom.findViewById(R.id.watchContainer);
+        shareContainer = (LinearLayout) dialogCustom.findViewById(R.id.shareContainer);
+        shareContainerTitle = (LinearLayout) dialogCustom.findViewById(R.id.shareContainerTitle);
+
+        if (languageSelected.booleanValue()) {
+            buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            shareContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+        }
 
         ImageView ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.ganarSegundos);
         ImageView comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.comprarSegundos);

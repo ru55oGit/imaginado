@@ -14,12 +14,19 @@
     <string name="title_activity_play_for_seconds">PlayForSecondsActivity</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="sin_tiempo_title">Te quedaste sin segundos</string>
-    <string name="sin_tiempo_comprar">Puedes conseguir más tiempo comprando aquí...</string>
-    <string name="sin_tiempo_jugar">...o sigue jugando para ganar más...</string>
-    <string name="sin_tiempo_vervideo">...o mira el vídeo y obtiene 60 segundos...</string>
-    <string name="sin_tiempo_compartir">O comparte en redes sociales y consigue 30 segundos.</string>
+    <string name="sin_tiempo_title_es">Te quedaste sin segundos</string>
+    <string name="sin_tiempo_title_en">You are out of time</string>
+    <string name="sin_tiempo_comprar_es">Puedes conseguir más tiempo comprando aquí...</string>
+    <string name="sin_tiempo_jugar_es">...o sigue jugando para ganar más...</string>
+    <string name="sin_tiempo_vervideo_es">...o mira el vídeo y obtiene 60 segundos...</string>
+    <string name="sin_tiempo_compartir_es">O comparte en redes sociales y consigue 30 segundos.</string>
+    <string name="sin_tiempo_comprar_en">You can buy more seconds here...</string>
+    <string name="sin_tiempo_jugar_en">...or keep playing to get more...</string>
+    <string name="sin_tiempo_vervideo_en">...or watch this video and obtain 60 seconds...</string>
+    <string name="sin_tiempo_compartir_en">Or share and obtain 30 secs.</string>
     <string name="generic_share_text">¿Tenés buena memoria? ¿Puedes resolver estas trivias?</string>
-    <string name="select_level_title">Elige el nivel</string>
-    <string name="toast_win">¡Ganaste 10 segundos!</string>
+    <string name="select_level_title_es">Elige el nivel</string>
+    <string name="select_level_title_en">Choose level</string>
+    <string name="toast_win_es">¡Ganaste 10 segundos!</string>
+    <string name="toast_win_en">Won 10 seconds</string>
 </resources>

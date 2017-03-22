@@ -5,7 +5,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:background="@color/colorPrimaryDark"
     tools:context="com.luckypalm.acertijos.SelectLevelActivity">
 
     <RelativeLayout
@@ -19,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/select_level_title"
+            android:text="@string/select_level_title_es"
             android:gravity="center_horizontal"
             android:id="@+id/title"
             android:textSize="@dimen/clock_size"
@@ -61,16 +60,9 @@
             android:id="@+id/switchy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:thumbTint="@color/white"
+            android:trackTint="@color/white"
             android:layout_centerHorizontal="true"/>
-
-        <!--ToggleButton
-            android:id="@+id/toggBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textOn="Vibrate on"
-            android:textOff="Vibrate off"
-            android:gravity="center"
-            android:onClick="onToggleClicked"/-->
 
     </RelativeLayout>
 

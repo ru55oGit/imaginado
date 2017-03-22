@@ -35,9 +35,7 @@ public class SelectLevelActivity extends AppCompatActivity {
     private Boolean languageSelected;
     private ScrollView hsv;
     private Switch mySwitch;
-    private RelativeLayout back;
-
-
+    private RelativeLayout header, footer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,12 +60,17 @@ public class SelectLevelActivity extends AppCompatActivity {
         languageSelected = settings.getBoolean("languageSelected", true);
         mySwitch = (Switch) findViewById(R.id.switchy);
         mySwitch.setChecked(languageSelected);
-        back = (RelativeLayout) findViewById(R.id.activity_select_level);
+        header = (RelativeLayout) findViewById(R.id.headerSelectLevel);
+        footer = (RelativeLayout) findViewById(R.id.footerContainer);
         // por true es English
-        if(mySwitch.isChecked()){
-            back.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+        if(!mySwitch.isChecked()){
+            header.setBackgroundColor(getResources().getColor(R.color.primaryColor));
+            footer.setBackgroundColor(getResources().getColor(R.color.primaryColor));
+            title.setText(getResources().getString(R.string.select_level_title_es));
         }else{
-            back.setBackgroundColor(getResources().getColor(R.color.white));
+            header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            title.setText(getResources().getString(R.string.select_level_title_en));
         }
 
         levelSpanish = settings.getString("levelSpanish","1");
@@ -101,7 +104,7 @@ public class SelectLevelActivity extends AppCompatActivity {
             Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
             startActivity(intent);
         } else {
-            for (int i = 1;i<=getLevelCount();i++) {
+            for (int i = 1;i <= getLevelCount(); i++) {
                 TextView levelCircle = new TextView(this);
                 levelCircle.setTextSize((int)getResources().getDimension(R.dimen.select_level_fontsize));
                 levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
@@ -128,12 +131,12 @@ public class SelectLevelActivity extends AppCompatActivity {
                     }
                 });
                 // por true es English
-                if (mySwitch.isChecked()) {
-                    if (i > Integer.parseInt(levelEnglish)) {
+                if (!mySwitch.isChecked()) {
+                    if (i > Integer.parseInt(levelSpanish)) {
                         levelCircle.setAlpha(0.35f);
                     }
                 } else {
-                    if (i > Integer.parseInt(levelSpanish)) {
+                    if (i > Integer.parseInt(levelEnglish)) {
                         levelCircle.setAlpha(0.35f);
                     }
                 }
@@ -147,7 +150,6 @@ public class SelectLevelActivity extends AppCompatActivity {
         // arranco el timer cuando arriesga la primer tecla
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
-
             return false;
         }
         return true;
@@ -159,14 +161,6 @@ public class SelectLevelActivity extends AppCompatActivity {
         super.onDestroy();
 
     }
-
-    /*public void goToSelectImages(View v){
-        editor.putString("levelSelected", ((TextView) v).getText().toString());
-        editor.commit();
-
-        Intent intent = new Intent(SelectLevelActivity.this, SelectImagesActivity.class);
-        startActivity(intent);
-    }*/
 
     public String AssetJSONFile (String filename, Context context) throws IOException {
         InputStream file = getAssets().open(filename);

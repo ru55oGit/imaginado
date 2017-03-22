@@ -8,7 +8,7 @@
     android:id="@+id/frameCounter"
     tools:context=".PlayForSecondsActivity"
     android:gravity="top"
-    android:background="@drawable/tile"
+    android:background="@drawable/tile_es"
     android:textAlignment="center">
 
     <RelativeLayout
