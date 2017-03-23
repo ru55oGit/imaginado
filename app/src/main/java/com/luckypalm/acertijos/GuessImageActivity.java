@@ -303,7 +303,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         imageToGuess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showImage(res);
+                if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
+                    if (!("00:00").equals(counter.getText())) {
+                        showImage(res);
+                    }
+                }
             }
         });
         // obtengo la palabra que se va adivinar
@@ -779,6 +783,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private void showImage(int res) {
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogCustom.setContentView(R.layout.custom_dialog_zoomimage);
 
         inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
@@ -800,6 +805,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private void customDialog(){
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogCustom.setContentView(com.luckypalm.acertijos.R.layout.custom_dialog_withoutseconds);
 
         LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle;
