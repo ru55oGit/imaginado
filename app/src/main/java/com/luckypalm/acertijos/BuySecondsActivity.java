@@ -9,6 +9,7 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -19,6 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.vending.billing.IInAppBillingService;
@@ -59,6 +61,7 @@ public class BuySecondsActivity extends AppCompatActivity {
     private TextView ten_minutesTxt;
     private TextView fifteen_minutesTxt;
     private TextView twenty_minutesTxt;
+    private TextView title;
 
     private ImageButton close;
     private IabHelper mHelper;
@@ -67,6 +70,8 @@ public class BuySecondsActivity extends AppCompatActivity {
     private SharedPreferences.Editor editor;
 
     private Typeface lobsterFont;
+    private Boolean languageSelected;
+    private RelativeLayout frameCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +79,15 @@ public class BuySecondsActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_buy_seconds);
+        settings = getSharedPreferences("Status", 0);
+        editor = settings.edit();
+
+        languageSelected = settings.getBoolean("languageSelected", true);
 
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+        frameCounter = (RelativeLayout) findViewById(R.id.activity_buy_seconds);
+        title = (TextView) findViewById(R.id.title);
+
 
         // ...
         String base64EncodedPublicKey = getResources().getString(R.string.inapp_key);
@@ -133,6 +145,11 @@ public class BuySecondsActivity extends AppCompatActivity {
         fifteen_minutesTxt.setTypeface(lobsterFont);
         twenty_minutesTxt = (TextView) findViewById(R.id.twentyMinutesTxt);
         twenty_minutesTxt.setTypeface(lobsterFont);
+
+        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
+            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
+            title.setText(getResources().getText(R.string.sin_tiempo_title_en));
+        }
 
         close = (ImageButton) findViewById(R.id.dialogButtonOK);
 
@@ -248,6 +265,9 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_three, description);
                             }
                         });
+                        if (languageSelected.booleanValue()) {
+                            three_minutesTxt.setText(three_minutesTxt.getText().toString().replace("minutos","minutes"));
+                        }
                     }
                     if (inappid_five.equals(sku)) {
                         five_minutesBtn.setText(price);
@@ -258,6 +278,9 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_five, description);
                             }
                         });
+                        if (languageSelected.booleanValue()) {
+                            five_minutesTxt.setText(five_minutesTxt.getText().toString().replace("minutos","minutes"));
+                        }
                     }
                     if (inappid_seven.equals(sku)) {
                         seven_minutesBtn.setText(price);
@@ -268,6 +291,9 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_seven, description);
                             }
                         });
+                        if (languageSelected.booleanValue()) {
+                            seven_minutesTxt.setText(seven_minutesTxt.getText().toString().replace("minutos","minutes"));
+                        }
                     }
                     if (inappid_ten.equals(sku)) {
                         ten_minutesBtn.setText(price);
@@ -278,6 +304,9 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_ten, description);
                             }
                         });
+                        if (languageSelected.booleanValue()) {
+                            ten_minutesTxt.setText(ten_minutesTxt.getText().toString().replace("minutos","minutes"));
+                        }
                     }
                     if (inappid_fifteen.equals(sku)) {
                         fifteen_minutesBtn.setText(price);
@@ -288,6 +317,9 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_fifteen, description);
                             }
                         });
+                        if (languageSelected.booleanValue()) {
+                            fifteen_minutesTxt.setText(fifteen_minutesTxt.getText().toString().replace("minutos","minutes"));
+                        }
                     }
                     if (inappid_twenty.equals(sku)) {
                         twenty_minutesBtn.setText(price);
@@ -298,6 +330,9 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_twenty, description);
                             }
                         });
+                        if (languageSelected.booleanValue()) {
+                            twenty_minutesTxt.setText(twenty_minutesTxt.getText().toString().replace("minutos","minutes"));
+                        }
                     }
                 }
 
