@@ -305,7 +305,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
                     if (!("00:00").equals(counter.getText())) {
-                        showImage(res);
+                        if (Integer.parseInt(levelSelected) <= Integer.parseInt(level)) {
+                            showImage(res);
+                        }
                     }
                 }
             }
