@@ -13,6 +13,7 @@
         android:orientation="horizontal"
         android:weightSum="1">
         <TextView
+            android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sin_tiempo_title_es"
@@ -45,6 +46,7 @@
         android:padding="10dp"
         android:weightSum="1">
         <TextView
+            android:id="@+id/buyText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sin_tiempo_comprar_es"
@@ -74,6 +76,7 @@
         android:padding="10dp"
         android:layout_below="@+id/secondSeparator">
         <TextView
+            android:id="@+id/keepplayingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sin_tiempo_jugar_es"
@@ -102,6 +105,7 @@
         android:padding="10dp"
         android:layout_below="@+id/thirdSeparator">
         <TextView
+            android:id="@+id/watchvideoText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sin_tiempo_vervideo_es"
@@ -133,9 +137,9 @@
         android:layout_below="@+id/fourthSeparator">
 
         <TextView
+            android:id="@+id/shareText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/shareText"
             android:text="@string/sin_tiempo_compartir_es"
             android:textSize="@dimen/sinsegundos_popup_letter"
             android:textColor="@color/thirdColor"

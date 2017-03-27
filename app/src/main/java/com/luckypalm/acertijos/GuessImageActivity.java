@@ -49,6 +49,7 @@ import com.facebook.share.widget.ShareDialog;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -299,26 +300,30 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
         imageToGuess.setImageResource(res);
-
+        // Zoom de la imagen a adivinar
         imageToGuess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showImage(res);
+                // no se abre si no hay tiempo o si el nivel seleccionado es mayor al nivel jugado
+                if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
+                    if (!("00:00").equals(counter.getText())) {
+                        if (Integer.parseInt(levelSelected) <= Integer.parseInt(level)) {
+                            showImage(res);
+                        }
+                    }
+                }
             }
         });
-        // obtengo la palabra que se va adivinar
+        // obtengo la palabra que se va adivinar segun el idioma seleccionado
         word = languageSelected.booleanValue() ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
-
         volver.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.RESULT_HIDDEN, 0);
                 inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
                 closeAndSave();
-                //finish();
             }
         });
 
@@ -779,6 +784,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private void showImage(int res) {
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogCustom.setContentView(R.layout.custom_dialog_zoomimage);
 
         inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
@@ -800,30 +806,46 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private void customDialog(){
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogCustom.setContentView(com.luckypalm.acertijos.R.layout.custom_dialog_withoutseconds);
 
         LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle;
+        ImageView ganar, comprar, vervideo, shareFace, shareTwit, shareWsap;
+        TextView titleText, buyText, keepplayingText, watchvideoText, shareText;
+
         buyContainer = (LinearLayout) dialogCustom.findViewById(R.id.buyContainer);
         winContainer = (LinearLayout) dialogCustom.findViewById(R.id.winContainer);
         watchContainer = (LinearLayout) dialogCustom.findViewById(R.id.watchContainer);
         shareContainer = (LinearLayout) dialogCustom.findViewById(R.id.shareContainer);
         shareContainerTitle = (LinearLayout) dialogCustom.findViewById(R.id.shareContainerTitle);
 
+        ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.ganarSegundos);
+        comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.comprarSegundos);
+        vervideo = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.watchVideo);
+        shareFace = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharefacebookDialog);
+        shareTwit = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharetwitterDialog);
+        shareWsap = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharewsapDialog);
+
+        titleText = (TextView) dialogCustom.findViewById(R.id.titleText);
+        buyText = (TextView) dialogCustom.findViewById(R.id.buyText);
+        keepplayingText = (TextView) dialogCustom.findViewById(R.id.keepplayingText);
+        watchvideoText = (TextView) dialogCustom.findViewById(R.id.watchvideoText);
+        shareText = (TextView) dialogCustom.findViewById(R.id.shareText);
+
+        // Cambio los textos y los colores segun el idioma
         if (languageSelected.booleanValue()) {
             buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             shareContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+
+            titleText.setText(getResources().getText(R.string.sin_tiempo_title_en));
+            buyText.setText(getResources().getText(R.string.sin_tiempo_comprar_en));
+            keepplayingText.setText(getResources().getText(R.string.sin_tiempo_jugar_en));
+            watchvideoText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
+            shareText.setText(getResources().getText(R.string.sin_tiempo_compartir_en));
         }
-
-        ImageView ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.ganarSegundos);
-        ImageView comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.comprarSegundos);
-        ImageView vervideo = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.watchVideo);
-
-        ImageView shareFace = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharefacebookDialog);
-        ImageView shareTwit = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharetwitterDialog);
-        ImageView shareWsap = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharewsapDialog);
 
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override

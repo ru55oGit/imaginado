@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -107,7 +108,8 @@ public class SelectLevelActivity extends AppCompatActivity {
         } else {
             for (int i = 1;i <= getLevelCount(); i++) {
                 TextView levelCircle = new TextView(this);
-                levelCircle.setTextSize((int)getResources().getDimension(R.dimen.select_level_fontsize));
+                //levelCircle.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics()));
+                levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 38);
                 levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
                 levelCircle.setText(i+"");
                 levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));
@@ -116,7 +118,7 @@ public class SelectLevelActivity extends AppCompatActivity {
                 }
                 if (Build.VERSION.SDK_INT > 17) {
                     levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    levelCircle.setPadding(0,30,20,0);
+                    levelCircle.setPadding(0,(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 13, getResources().getDisplayMetrics()),(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, getResources().getDisplayMetrics()),0);
                 } else {
                     levelCircle.setPadding(45,30,20,0);
                 }
