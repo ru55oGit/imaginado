@@ -140,7 +140,7 @@
     },{
       "title": "Cartoon Character",
       "question": "personajes35.jpg",
-      "answer": "pepe le pew"
+      "answer": "pepe|le pew"
     },{
       "title": "Cartoon Character",
       "question": "personajes36.jpg",
@@ -196,7 +196,7 @@
     },{
       "title": "Cartoon Character",
       "question": "personajes49.jpg",
-      "answer": "benny the ball"
+      "answer": "benny|the ball"
     },{
       "title": "Cartoon Character",
       "question": "personajes50.jpg",
@@ -320,7 +320,7 @@
     },{
       "title": "Cartoon Character",
       "question": "personajes81.jpg",
-      "answer": "riff raff"
+      "answer": "riff|raff"
     },{
       "title": "Cartoon Character",
       "question": "personajes82.jpg",
