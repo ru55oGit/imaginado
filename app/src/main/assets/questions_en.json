@@ -2046,12 +2046,6 @@
   ,
     {
       "title": "Celebrities",
-      "question": "axlrose.jpg",
-      "answer": "axl|rose"
-    }
-  ,
-    {
-      "title": "Celebrities",
       "question": "jagger.jpg",
       "answer": "mick|jagger"
     }
@@ -2107,7 +2101,7 @@
     {
       "title": "Celebrities",
       "question": "franciscoi.jpg",
-      "answer": "papa|francisco"
+      "answer": "pope|francis"
     }
   ,
     {
@@ -2441,12 +2435,6 @@
   ,
     {
       "title": "Celebrities",
-      "question": "zacefron.jpg",
-      "answer": "zac|efron"
-    }
-  ,
-    {
-      "title": "Celebrities",
       "question": "stallone.jpg",
       "answer": "sylvester|stallone"
     }
@@ -2525,12 +2513,6 @@
   ,
     {
       "title": "Celebrities",
-      "question": "franciscoi.jpg",
-      "answer": "papa|francisco"
-    }
-  ,
-    {
-      "title": "Celebrities",
       "question": "evita.jpg",
       "answer": "evita"
     }
@@ -2557,12 +2539,6 @@
       "title": "Celebrities",
       "question": "jobs.jpg",
       "answer": "steve|jobs"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "andyk.jpg",
-      "answer": "andy|kusnetzoff"
     }
   ,
     {

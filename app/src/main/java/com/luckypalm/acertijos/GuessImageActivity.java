@@ -49,7 +49,6 @@ import com.facebook.share.widget.ShareDialog;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -305,13 +304,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
                 // no se abre si no hay tiempo o si el nivel seleccionado es mayor al nivel jugado
-                if (aciertos != word.replaceAll(" ", "").replaceAll("\\|","").length()) {
-                    if (!("00:00").equals(counter.getText())) {
-                        if (Integer.parseInt(levelSelected) <= Integer.parseInt(level)) {
-                            showImage(res);
-                        }
+                if (!("00:00").equals(counter.getText())) {
+                    if (Integer.parseInt(levelSelected) <= Integer.parseInt(level)) {
+                        showImage(res);
                     }
                 }
+
             }
         });
         // obtengo la palabra que se va adivinar segun el idioma seleccionado
