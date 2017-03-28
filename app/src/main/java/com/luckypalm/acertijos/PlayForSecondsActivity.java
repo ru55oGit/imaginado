@@ -65,9 +65,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private Typeface lobsterFont;
     private Typeface  digifont;
     InputMethodManager inputMethodManager;
+    private RelativeLayout frameCounter;
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
+
+    private Boolean languageSelected;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +86,16 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        pregResp = getQuestion();
+        // traigo el lenguaje seleccionado
+        languageSelected = settings.getBoolean("languageSelected", true);
+
+        frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
+
+        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
+            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
+        }
+
+        pregResp = languageSelected.booleanValue()? getQuestion() : obtenerPreguntas();
         for (int i=0; i<pregResp.size();i++) {
             random.add(i);
         }
@@ -208,7 +221,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         return new String(formArray);
     }
 
-    private ArrayList<Question> getQuestion () {
+    private ArrayList<Question> obtenerPreguntas () {
         ArrayList<Question> preguntaList = new ArrayList<Question>();
         try {
             //obtengo el archivo
@@ -220,6 +233,29 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 Question question = new Question();
                 question.setPregunta(((JSONObject)jarray.get(i)).getString("pregunta"));
                 question.setRespuesta(((JSONObject) jarray.get(i)).getString("respuesta"));
+                question.setTitulo(((JSONObject) jarray.get(i)).getString("titulo"));
+                preguntaList.add(question);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return preguntaList;
+    }
+
+    private ArrayList<Question> getQuestion () {
+        ArrayList<Question> preguntaList = new ArrayList<Question>();
+        try {
+            //obtengo el archivo
+            String jsonLocation = AssetJSONFile("questions_en.json", getBaseContext());
+            JSONObject jsonobject = new JSONObject(jsonLocation);
+            //obtengo el array de preguntas
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("questions");
+            for (int i=0; i<jarray.length();i++) {
+                Question question = new Question();
+                question.setPregunta(((JSONObject)jarray.get(i)).getString("question"));
+                question.setRespuesta(((JSONObject) jarray.get(i)).getString("answer"));
                 question.setTitulo(((JSONObject) jarray.get(i)).getString("title"));
                 preguntaList.add(question);
             }

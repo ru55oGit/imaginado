@@ -842,7 +842,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
             titleText.setText(getResources().getText(R.string.sin_tiempo_title_en));
             buyText.setText(getResources().getText(R.string.sin_tiempo_comprar_en));
-            keepplayingText.setText(getResources().getText(R.string.sin_tiempo_jugar_en));
+            keepplayingText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
             watchvideoText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
             shareText.setText(getResources().getText(R.string.sin_tiempo_compartir_en));
         }
