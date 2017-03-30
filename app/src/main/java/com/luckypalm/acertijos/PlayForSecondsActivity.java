@@ -1,7 +1,9 @@
 package com.luckypalm.acertijos;
 
+import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -34,6 +36,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
+
 
 public class PlayForSecondsActivity extends AppCompatActivity implements BackDialog.BackDialogListener {
     private RelativeLayout frameLayout;
@@ -71,7 +74,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     SharedPreferences.Editor editor;
 
     private Boolean languageSelected;
-
+    private int res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,16 +160,24 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         preguntaView = (TextView) findViewById(com.luckypalm.acertijos.R.id.question);
         preguntaTitle.setText(question.getTitulo());
 
-        imageForPlay = (ImageView) findViewById(com.luckypalm.acertijos.R.id.imageForPlay);
+        imageForPlay = (ImageView) findViewById(R.id.imageForPlay);
+        res = getResources().getIdentifier(question.getPregunta().replace(".jpg", ""),"drawable",getPackageName());
         if (question.getPregunta().contains("jpg")) {
             preguntaView.setVisibility(View.INVISIBLE);
             imageForPlay.setVisibility(View.VISIBLE);
-            imageForPlay.setImageResource(getResources().getIdentifier(question.getPregunta().replace(".jpg", ""),"drawable",getPackageName()));
+            imageForPlay.setImageResource(res);
         } else {
             preguntaView.setVisibility(View.VISIBLE);
             imageForPlay.setVisibility(View.INVISIBLE);
             preguntaView.setText(question.getPregunta());
         }
+
+        imageForPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showImage(res);
+            }
+        });
 
         preguntaView.setTypeface(lobsterFont);
         preguntaTitle.setTypeface(lobsterFont);
@@ -415,6 +426,28 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 onResume();
             }
         }.start();
+    }
+
+    private void showImage(int res){
+        // custom dialog
+        final Dialog dialogCustom = new Dialog(PlayForSecondsActivity.this);
+        dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialogCustom.setContentView(R.layout.custom_dialog_zoomimage_pfs);
+
+        inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
+
+        ImageView imgZoom = (ImageView) dialogCustom.findViewById(R.id.imageToGuessZoom);
+        imgZoom.setImageResource(res);
+        dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
+            public void onDismiss(final DialogInterface dialog) {
+                // Abro el teclado cuando me quedo sin tiempo
+                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+            }
+        });
+
+        if (dialogCustom != null) {
+            dialogCustom.show();
+        }
     }
 
     // en el back abro un popup, en el aceptar termino el activity

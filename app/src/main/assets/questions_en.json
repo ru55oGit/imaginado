@@ -1997,12 +1997,6 @@
   ,
     {
       "title": "Celebrities",
-      "question": "axlrose.jpg",
-      "answer": "axl|rose"
-    }
-  ,
-    {
-      "title": "Celebrities",
       "question": "jagger.jpg",
       "answer": "mick|jagger"
     }
@@ -2374,12 +2368,6 @@
   ,
     {
       "title": "Celebrities",
-      "question": "zacefron.jpg",
-      "answer": "zac|efron"
-    }
-  ,
-    {
-      "title": "Celebrities",
       "question": "stallone.jpg",
       "answer": "sylvester|stallone"
     }
@@ -2484,12 +2472,6 @@
       "title": "Celebrities",
       "question": "jobs.jpg",
       "answer": "steve|jobs"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "andyk.jpg",
-      "answer": "andy|kusnetzoff"
     }
   ,
     {
