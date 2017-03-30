@@ -454,7 +454,7 @@
     {
       "title": "Logos",
       "question": "marcas11.jpg",
-      "answer": "mini cooper"
+      "answer": "mini|cooper"
     }
   ,
     {
@@ -1730,7 +1730,7 @@
     {
       "title": "Marvel's Character",
       "question": "agentecoulson.jpg",
-      "answer": "agente|coulson"
+      "answer": "agent|coulson"
     },
     {
       "title": "Marvel's Character",
@@ -1929,59 +1929,10 @@
       "answer": "matt|damon"
     }
   ,
-
-    {
-      "title": "Celebrities",
-      "question": "djokovic.jpg",
-      "answer": "novak|djokovic"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "federer.jpg",
-      "answer": "roger|federer"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "mjackson.jpg",
-      "answer": "michael|jackson"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "neymar.jpg",
-      "answer": "neymar jr"
-    }
-  ,
     {
       "title": "Celebrities",
       "question": "gibson.jpg",
       "answer": "mel|gibson"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "steventyler.jpg",
-      "answer": "steven|tyler"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "salmahayek.jpg",
-      "answer": "salma|hayek"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "reeves.jpg",
-      "answer": "keanu|reeves"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "emmawatson.jpg",
-      "answer": "emma|watson"
     }
   ,
     {
@@ -2107,7 +2058,7 @@
     {
       "title": "Celebrities",
       "question": "franciscoi.jpg",
-      "answer": "papa|francisco"
+      "answer": "pope|francis"
     }
   ,
     {
@@ -2297,12 +2248,6 @@
   ,
     {
       "title": "Celebrities",
-      "question": "mjackson.jpg",
-      "answer": "michael|jackson"
-    }
-  ,
-    {
-      "title": "Celebrities",
       "question": "neymar.jpg",
       "answer": "neymar jr"
     }
@@ -2341,18 +2286,6 @@
       "title": "Celebrities",
       "question": "emmawatson.jpg",
       "answer": "emma|watson"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "scarlet.jpg",
-      "answer": "scarlet|johansson"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "statham.jpg",
-      "answer": "jason|statham"
     }
   ,
     {
@@ -2521,12 +2454,6 @@
       "title": "Celebrities",
       "question": "gandi.jpg",
       "answer": "mahatma|gandhi"
-    }
-  ,
-    {
-      "title": "Celebrities",
-      "question": "franciscoi.jpg",
-      "answer": "papa|francisco"
     }
   ,
     {
