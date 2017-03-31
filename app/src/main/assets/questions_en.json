@@ -2367,11 +2367,6 @@
     },
     {
       "title": "",
-      "question": "Where can you find London bridge today?",
-      "answer": "USA"
-    },
-    {
-      "title": "",
       "question": "What spirit is mixed with ginger beer in a Moscow mule?",
       "answer": "Vodka"
     },
@@ -2383,7 +2378,7 @@
     {
       "title": "",
       "question": "Who betrayed Jesus to the Romans?",
-      "answer": "Judas|Escariot"
+      "answer": "Judas"
     },
     {
       "title": "",
@@ -2412,11 +2407,6 @@
     },
     {
       "title": "",
-      "question": "What is the name of Dennis the Menace's dog?",
-      "answer": "Gnasher"
-    },
-    {
-      "title": "",
       "question": "What are bactrians and dromedaries?",
       "answer": "Camels"
     },
@@ -2428,7 +2418,7 @@
     {
       "title": "",
       "question": "Who invented the television?",
-      "answer": "John Logie|Baird"
+      "answer": "John|Baird"
     },
     {
       "title": "",
@@ -2457,11 +2447,6 @@
     },
     {
       "title": "",
-      "question": "What was the name of inn in Treasure Island?",
-      "answer": "Admiral|Benbow"
-    },
-    {
-      "title": "",
       "question": "What was Erich Weiss better known as?",
       "answer": "Houdini"
     },
@@ -2477,11 +2462,6 @@
     },
     {
       "title": "",
-      "question": "Who wrote Gone with the Wind?",
-      "answer": "Margaret|Mitchell"
-    },
-    {
-      "title": "",
       "question": "Whose nose grew when he told a lie?",
       "answer": "Pinocchio"
     },
@@ -2494,11 +2474,6 @@
       "title": "",
       "question": "If you had pogonophobia what would you be afraid of?",
       "answer": "Beards"
-    },
-    {
-      "title": "",
-      "question": "Who won an Oscar for the African Queen?",
-      "answer": "Bogart"
     },
     {
       "title": "",
@@ -2617,11 +2592,6 @@
     },
     {
       "title": "",
-      "question": "In which city was the famous black hole?",
-      "answer": "Calcutta"
-    },
-    {
-      "title": "",
       "question": "Which part of the human body contains the most gold?",
       "answer": "Toenails"
     },
@@ -2634,6 +2604,800 @@
       "title": "",
       "question": "La Giaconda is better known as what?",
       "answer": "Mona Lisa"
+    },
+    {
+      "title": "",
+      "question": "Lalo Schifrin composed which famous TV series theme?",
+      "answer": "Mission|Impossible"
+    },
+    {
+      "title": "",
+      "question": "What is Bart Simpson's middle name?",
+      "answer": "JoJo"
+    },
+    {
+      "title": "",
+      "question": "Which non alcoholic cordial is made from pomegranates?",
+      "answer": "Grenadine"
+    },
+    {
+      "title": "",
+      "question": "Taken literally what should you see in a Hippodrome?",
+      "answer": "Horses"
+    },
+    {
+      "title": "",
+      "question": "Alan Stuart Konigsberg famous as who?",
+      "answer": "Woody|Allen"
+    },
+    {
+      "title": "",
+      "question": "Whose autobiography was The long walk to Freedom?",
+      "answer": "Nelson|Mandela"
+    },
+    {
+      "title": "",
+      "question": "What is the name of the newspaper where Peter Parker works in Spiderman?",
+      "answer": "The Daily|Bugle"
+    },
+    {
+      "title": "",
+      "question": "Which Disney film does the song 'When You Wish Upon a Star' come from?",
+      "answer": "Pinocchio"
+    },
+    {
+      "title": "",
+      "question": "What was the name of Dorothy's dog in the Wizard of Oz?",
+      "answer": "Toto"
+    },
+    {
+      "title": "",
+      "question": "Which Disney film does the song 'Circle of Life' come from?",
+      "answer": "The Lion|King"
+    },
+    {
+      "title": "",
+      "question": "Which Disney film does the song 'The Bare Necessities' come from?",
+      "answer": "The Jungle|Book"
+    },
+    {
+      "title": "",
+      "question": "What is the name of the planet that Superman comes from?",
+      "answer": "Krypton"
+    },
+    {
+      "title": "",
+      "question": "Which Disney film does the song 'Under the Sea' come from?",
+      "answer": "The Little|Mermaid"
+    },
+    {
+      "title": "",
+      "question": "Who is the author of the famous Harry Potter books?",
+      "answer": "JK Rowling"
+    },
+    {
+      "title": "",
+      "question": "Which fairy tale character slept for 100 years?",
+      "answer": "Sleeping|Beauty"
+    },
+    {
+      "title": "",
+      "question": "In the film 'The Silence of the Lambs', which actor played the part of Hannibal Lecter?",
+      "answer": "Anthony|Hopkins"
+    },
+    {
+      "title": "",
+      "question": "Who directed the movies 'Jaws', 'Schindler's List' and 'Jurassic Park'?",
+      "answer": "Stephen|Spielberg"
+    },
+    {
+      "title": "",
+      "question": "Which actor plays Marty McFly in the 'Back to The Future' series of movies?",
+      "answer": "Michael J|Fox"
+    },
+    {
+      "title": "",
+      "question": "Who starred as 'The Joker' in the 1989 film Batman?",
+      "answer": "Jack|Nicholson"
+    },
+    {
+      "title": "",
+      "question": "In the movie Wayne's World, what was the name of Wayne's 'sidekick'?",
+      "answer": "Garth"
+    },
+    {
+      "title": "",
+      "question": "Drew Barrymore, Cameron Diaz and Lucy Liu starred together in which action film?",
+      "answer": "Charlies|Angels"
+    },
+    {
+      "title": "",
+      "question": "Which 1996 part-animated film featured basketball player Michael Jordan starring alongside Bugs Bunny?",
+      "answer": "Space|Jam"
+    },
+    {
+      "title": "",
+      "question": "With which film would you associate the name 'Tyler Durden'?",
+      "answer": "Fight|Club"
+    },
+    {
+      "title": "",
+      "question": "Which movie featured the Staypuff Marshmellow Man?",
+      "answer": "Ghostbusters"
+    },
+    {
+      "title": "",
+      "question": "In the film 'The Mask', which actress starred alongside Jim Carrey?",
+      "answer": "Cameron|Diaz"
+    },
+    {
+      "title": "",
+      "question": "In the James Bond series, the character Q's name stands for what?",
+      "answer": "Quartermaster"
+    },
+    {
+      "title": "",
+      "question": "Who played Catwoman in the 1992 film 'Batman Returns'?",
+      "answer": "Michelle|Pfeiffer"
+    },
+    {
+      "title": "",
+      "question": "In which Rocky film did Mr T appear as Clubber Lang?",
+      "answer": "Rocky 3"
+    },
+    {
+      "title": "",
+      "question": "Who's directorial debut was with Reservoir Dogs?",
+      "answer": "Quentin|Tarantino"
+    },
+    {
+      "title": "",
+      "question": "Which actor played the part of Dr Evil in the film Austin Powers?",
+      "answer": "Mike Myers"
+    },
+    {
+      "title": "",
+      "question": "Who refused an academy award for his role in the Godfather?",
+      "answer": "Marlon|Brando"
+    },
+    {
+      "title": "",
+      "question": "Which fictional character has been played by Gene Hackman, John Shea, Kevin Spacey and various other actors?",
+      "answer": "Lex Luthor"
+    },
+    {
+      "title": "",
+      "question": "Who has appeared in more Alfred Hitchcock films than any one else?",
+      "answer": "Alfred|Hitchcock"
+    },
+    {
+      "title": "",
+      "question": "In which film did Jamie Fox play the part of a blind Musician?",
+      "answer": "Ray"
+    },
+    {
+      "title": "",
+      "question": "Who starred in the film 'Mrs Doubtfire'?",
+      "answer": "Robin|Williams"
+    },
+    {
+      "title": "",
+      "question": "Which series of films featured a spacecraft called the 'Millennium Falcon'?",
+      "answer": "Star Wars"
+    },
+    {
+      "title": "",
+      "question": "Who played Indiana Jones' father in the movie 'Indiana Jones and the Last Crusade'?",
+      "answer": "Sean|Connery"
+    },
+    {
+      "title": "",
+      "question": "What was the name of the killer in the film 'Halloween'?",
+      "answer": "Michael|Myers"
+    },
+    {
+      "title": "",
+      "question": "Which 1979 science fiction movie was advertised by the slogan 'In space, no-one can hear you scream'?",
+      "answer": "Alien"
+    },
+    {
+      "title": "",
+      "question": "Which British actor played Boromir in the Lord of the Rings trilogy?",
+      "answer": "Sean Bean"
+    },
+    {
+      "title": "",
+      "question": "What was the name of Bruce Wayne's butler?",
+      "answer": "Alfred"
+    },
+    {
+      "title": "",
+      "question": "Who starred alongside John Travolta in the movie 'Face Off'?",
+      "answer": "Nicholas|Cage"
+    },
+    {
+      "title": "",
+      "question": "Who played the title role in the film 'Edward Scissorhands'?",
+      "answer": "Jonny Depp"
+    },
+    {
+      "title": "",
+      "question": "John Connor is a character from which series of films?",
+      "answer": "The|Terminator"
+    },
+    {
+      "title": "",
+      "question": "Who directed the Star Wars films?",
+      "answer": "George|Lucas"
+    },
+    {
+      "title": "",
+      "question": "Who played the role of a disk jockey in the film Good Morning Vietnam?",
+      "answer": "Robin|Williams"
+    },
+    {
+      "title": "",
+      "question": "Who starred in the 1989 film 'Field of Dreams'?",
+      "answer": "Kevin|Costner"
+    },
+    {
+      "title": "",
+      "question": "Who played James Bond in the film, 'Moonraker'?",
+      "answer": "Roger|Moore"
+    },
+    {
+      "title": "",
+      "question": "Who played Charlie Chaplin in the 1992 film 'Chaplin'?",
+      "answer": "Robert|Downey Jnr"
+    },
+    {
+      "title": "",
+      "question": "Which two actors play the lead roles in the film 'Sleepless in Seattle'?",
+      "answer": "Tom Hanks|Meg Ryan"
+    },
+    {
+      "title": "",
+      "question": "What was the name of the computer in '2001 – A Space Odyssey'?",
+      "answer": "Hal"
+    },
+    {
+      "title": "",
+      "question": "Which make of car was used for the time machine in the Back to the Future trilogy?",
+      "answer": "DeLorian"
+    },
+    {
+      "title": "",
+      "question": "What was the name of the toy spaceman in 'Toy Story'?",
+      "answer": "Buzz|Lightyear"
+    },
+    {
+      "title": "",
+      "question": "Who plays 'Wanda' in the film A Fish Called Wanda?",
+      "answer": "Jamie Lee|Curtis"
+    },
+    {
+      "title": "",
+      "question": "Which movie, directed by Stanley Kubrick and released in 1972, was withdrawn from UK cinemas a year later because of copycat sexual violence?",
+      "answer": "A Clockwork|Orange"
+    },
+    {
+      "title": "",
+      "question": "In the 1997 film 'Titanic', who starred alongside Leonardo DiCaprio?",
+      "answer": "Kate|Winslet"
+    },
+    {
+      "title": "",
+      "question": "Which singer starred with Kevin Costner in the film 'The Bodyguard'?",
+      "answer": "Whitney|Houston"
+    },
+    {
+      "title": "",
+      "question": "Who starred in the 2000 film 'The Patriot'?",
+      "answer": "Mel Gibson"
+    },
+    {
+      "title": "",
+      "question": "Who played the president in the film 'Air Force One'?",
+      "answer": "Harrison|Ford"
+    },
+    {
+      "title": "",
+      "question": "Who played 'Judge Joseph Dread' in the film Judge Dread?",
+      "answer": "Sylvester|Stallone"
+    },
+    {
+      "title": "",
+      "question": "Who played the Irish policeman in the 1987 film 'The Untouchables'?",
+      "answer": "Sean|Connery"
+    },
+    {
+      "title": "",
+      "question": "Tommy Lee Jones and Will Smith starred together in which 1997 film?",
+      "answer": "Men In|Black"
+    },
+    {
+      "title": "",
+      "question": "Which actress co-starred with Mel Gibson in the 1997 film 'Conspiracy Theory'?",
+      "answer": "Julia|Roberts"
+    },
+    {
+      "title": "",
+      "question": "Which 1986 film had the tag-line 'Be afraid. Be very afraid.'?",
+      "answer": "The Fly"
+    },
+    {
+      "title": "",
+      "question": "Which actor starred in the films 'The Big Boss' and 'The Way Of The Dragon'?",
+      "answer": "Bruce Lee"
+    },
+    {
+      "title": "",
+      "question": "Who starred in the film 'Rebel Without A Cause'?",
+      "answer": "James|Dean"
+    },
+    {
+      "title": "",
+      "question": "What were the first names of the characters played by John Travolta and Olivia Newton-John in Grease?",
+      "answer": "Danny and|Sandy"
+    },
+    {
+      "title": "",
+      "question": "Who starred in the film 'The Man in the Iron Mask?",
+      "answer": "Leonardo|DiCaprio"
+    },
+    {
+      "title": "",
+      "question": "Which films featured a spacecraft called the 'Millennium Falcon'?",
+      "answer": "Star Wars"
+    },
+    {
+      "title": "",
+      "question": "The 'Naked Gun' series of films were developed from which TV comedy series?",
+      "answer": "Police|Squad"
+    },
+    {
+      "title": "",
+      "question": "In which move did Clark Gable say 'Frankly, my dear, I don't give a damn.'?",
+      "answer": "Gone with|the Wind"
+    },
+    {
+      "title": "",
+      "question": "'Go ahead, make my day' was spoken by Clint Eastwood in which movie?",
+      "answer": "Sudden|Impact"
+    },
+    {
+      "title": "",
+      "question": "'Housten, we have a problem' is a quote from which film starring Tom Hanks?",
+      "answer": "Apollo 13"
+    },
+    {
+      "title": "",
+      "question": "In which film was the following phrase used: 'You might be thinking to yourself, did he fire five shots or six'?",
+      "answer": "Dirty|Harry"
+    },
+    {
+      "title": "",
+      "question": "In which film did the leading character say, 'Say hello to my little friend'?",
+      "answer": "Scarface"
+    },
+    {
+      "title": "",
+      "question": "The phrase 'Show me the money!' was spoken by Cuba Gooding Jr and Tom Cruise in which movie?",
+      "answer": "Jerry|Maguire"
+    },
+    {
+      "title": "",
+      "question": "The line 'Here's Jonny' was spoken by Jack Nicholson in which film?",
+      "answer": "The Shining"
+    },
+    {
+      "title": "",
+      "question": "The phrase 'May the force be with you' was used many times in which series of films?",
+      "answer": "Star Wars"
+    },
+    {
+      "title": "",
+      "question": "From which film is the following quote taken: 'A census taker once tried to test me. I ate his liver with some fava beans and a nice chianti.'?",
+      "answer": "The Silence|of the Lambs"
+    },
+    {
+      "title": "",
+      "question": "Which actor spoke the line 'The first rule of fight club is - you do not talk about fight club'?",
+      "answer": "Brad Pitt"
+    },
+    {
+      "title": "",
+      "question": "'If you build it, he will come' was said by a voice from above in which film?",
+      "answer": "Field Of|Dreams"
+    },
+    {
+      "title": "",
+      "question": "Which 1979 epic war film featured the quote 'I love the smell of napalm in the morning'?",
+      "answer": "Apocalypse|Now"
+    },
+    {
+      "title": "",
+      "question": "'My mother always said life was like a box of chocolates...you never know what you're gonna get' is a quote spoken by which actor?",
+      "answer": "Tom|Hanks"
+    },
+    {
+      "title": "",
+      "question": "'I'll be back' is a famous quote said by which Austrian actor?",
+      "answer": "Arnold|Schwarzeneggar"
+    },
+    {
+      "title": "",
+      "question": "'Gentlemen, you can't fight in here! This is the War Room!' is a quote used in which movie?",
+      "answer": "Dr.|Strangelove"
+    },
+    {
+      "title": "",
+      "question": "'I'm the king of the world' was spoken by Leonardo DiCaprio in which movie?",
+      "answer": "Titanic"
+    },
+    {
+      "title": "",
+      "question": "What is musician Elton John's middle name?",
+      "answer": "Hercules"
+    },
+    {
+      "title": "",
+      "question": "When Ex American President Bill Clinton stated ''I did not have sexual relations with that woman', who was he referring to?",
+      "answer": "Monica|Lewinski"
+    },
+    {
+      "title": "",
+      "question": "Who did Brad Pitt marry in July, 2000?",
+      "answer": "Jennifer|Aniston"
+    },
+    {
+      "title": "",
+      "question": "Which pop singer married British movie director Guy Ritchie?",
+      "answer": "Madonna"
+    },
+    {
+      "title": "",
+      "question": "Mary's father has five daughters: Jessica, Jane, Jennifer and Jasmine. What is the name of the fifth daughter?",
+      "answer": "Mary"
+    },
+    {
+      "title": "",
+      "question": "Who plays Joey in TV's 'Friends'?",
+      "answer": "Matt|Le Blanc"
+    },
+    {
+      "title": "",
+      "question": "In which TV show is Moe's Tavern Featured?",
+      "answer": "The|Simpsons"
+    },
+    {
+      "title": "",
+      "question": "Top Gear is presented by Jeremy Clarkson, Richard Hammond and who else?",
+      "answer": "James May"
+    },
+    {
+      "title": "",
+      "question": "Who was the leader of the A-Team?",
+      "answer": "Hannibal"
+    },
+    {
+      "title": "",
+      "question": "Hugh Lawrie plays a medical genius in which American tv sitcom?",
+      "answer": "House"
+    },
+    {
+      "title": "",
+      "question": "Which 90's TV series had the slogan 'The truth is out there'?",
+      "answer": "The X|Files"
+    },
+    {
+      "title": "",
+      "question": "What starred in the TV series Knight Rider?",
+      "answer": "David|Hasslehoff"
+    },
+    {
+      "title": "",
+      "question": "In which city is the TV series Grey`s Anatomy set?",
+      "answer": "Seattle,"
+    },
+    {
+      "title": "",
+      "question": "What past advert gave introduction to the phrase 'wassssup!'?",
+      "answer": "Budweiser"
+    },
+    {
+      "title": "",
+      "question": "'Once you pop you can't stop' is a slogan for which product?",
+      "answer": "Pringles"
+    },
+    {
+      "title": "",
+      "question": "Which energy drink 'gives you wings'?",
+      "answer": "Red Bull"
+    },
+    {
+      "title": "",
+      "question": "Complete this advertising slogan. 'There are some things money can't buy. For everything else, there's...'",
+      "answer": "Mastercard"
+    },
+    {
+      "title": "",
+      "question": "The drink Amaretto originates from which country?",
+      "answer": "Italy"
+    },
+    {
+      "title": "",
+      "question": "In the drink, what are the components of a Screwdriver?",
+      "answer": "Vodka and|orange juice"
+    },
+    {
+      "title": "",
+      "question": "'Good things come to those who wait' is used as an advertising slogan for which drink?",
+      "answer": "Guinness"
+    },
+    {
+      "title": "",
+      "question": "What is the main type of alcohol used in Baileys?",
+      "answer": "Whiskey"
+    },
+    {
+      "title": "",
+      "question": "In which city is the beer festival Oktoberfest held in?",
+      "answer": "Munich"
+    },
+    {
+      "title": "",
+      "question": "Tequila is most commonly associated with which county?",
+      "answer": "Mexico"
+    },
+    {
+      "title": "",
+      "question": "Which brand of lager is described as 'Reassuringly Expensive'?",
+      "answer": "Stella|Artois"
+    },
+    {
+      "title": "",
+      "question": "How many pieces are there in a chess game?",
+      "answer": "32"
+    },
+    {
+      "title": "",
+      "question": "In Monopoly, what colour is the set: 'Trafalgar Square, Fleet Street and Strand'?",
+      "answer": "Red"
+    },
+    {
+      "title": "",
+      "question": "In which US state is Hollywood situated?",
+      "answer": "California"
+    },
+    {
+      "title": "",
+      "question": "What is the chemical name for 'laughing gas'?",
+      "answer": "Nitrous|Oxide"
+    },
+    {
+      "title": "",
+      "question": "What is the name of the poker hand containing three of a kind and a pair?",
+      "answer": "Full|House"
+    },
+    {
+      "title": "",
+      "question": "In which month is St George's Day?",
+      "answer": "April"
+    },
+    {
+      "title": "",
+      "question": "Which side of a boat is 'port'?",
+      "answer": "Left"
+    },
+    {
+      "title": "",
+      "question": "In which modern day country would you find the region of Transylvania?",
+      "answer": "Romania"
+    },
+    {
+      "title": "",
+      "question": "Which triangle are ships said to have got lost in and never been seen again?",
+      "answer": "Bermuda|Traingle"
+    },
+    {
+      "title": "",
+      "question": "In which group of islands is Tenerife?",
+      "answer": "The Canary|Islands"
+    },
+    {
+      "title": "",
+      "question": "What is the name of the mountain face in the USA into which the faces of four US presidents have been carved?",
+      "answer": "Mount|Rushmore"
+    },
+    {
+      "title": "",
+      "question": "In which city did gangster Al Capone operate?",
+      "answer": "Chicago"
+    },
+    {
+      "title": "",
+      "question": "What is the largest desert in the world?",
+      "answer": "The Sahara|Desert"
+    },
+    {
+      "title": "",
+      "question": "Which plumber has featured in several popular video games?",
+      "answer": "Mario"
+    },
+    {
+      "title": "",
+      "question": "Which anniversary does a crystal wedding celebrate?",
+      "answer": "Fifteenth"
+    },
+    {
+      "title": "",
+      "question": "Which popular spirit can be made from potatoes?",
+      "answer": "Vodka"
+    },
+    {
+      "title": "",
+      "question": "What is the international radio codeword for the letter R?",
+      "answer": "Romeo"
+    },
+    {
+      "title": "",
+      "question": "What is dry ice?",
+      "answer": "Solid Carbon|Dioxide"
+    },
+    {
+      "title": "",
+      "question": "Which acronym describes the type of sleep associated with dreaming?",
+      "answer": "REM"
+    },
+    {
+      "title": "",
+      "question": "What word comes before the following: Birds eye, Jack sparrow and Hook?",
+      "answer": "Captain"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Who was the legendary Benedictine monk who invented champagne?",
+      "answer": "Dom Perignon"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Name the largest freshwater lake in the world?",
+      "answer": "Lake Superior"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Where would you find the Sea of Tranquility?",
+      "answer": "The Moon"
+    }
+  ,
+    {
+      "title": "",
+      "question": "What is someone who shoes horses called?",
+      "answer": "A farrier"
+    }
+  ,
+    {
+      "title": "",
+      "question": "What item of clothing was named after its Scottish inventor?",
+      "answer": "A Mackintosh"
+    }
+  ,
+    {
+      "title": "",
+      "question": "What kind of weapon is a falchion?",
+      "answer": "A sword"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Which word goes before vest, beans and quartet?",
+      "answer": "String"
+    }
+  ,
+    {
+      "title": "",
+      "question": "What is another word for lexicon?",
+      "answer": "Dictionary"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Name the seventh planet from the sun",
+      "answer": "Uranus"
+    }
+    ,
+    {
+      "title": "",
+      "question": "Who invented the rabies vaccination?",
+      "answer": "Louis Pasteur"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Which is the only American state to begin with the letter 'p'?",
+      "answer": "Pennsylvania"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Name the world's biggest island",
+      "answer": "greenland"
+    }
+    ,
+    {
+      "title": "",
+      "question": "What is the world's longest river?",
+      "answer": "Amazon"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Name the world's largest ocean?",
+      "answer": "Pacific"
+    }
+  ,
+    {
+      "title": "",
+      "question": "What is the diameter of Earth?",
+      "answer": "8000|miles"
+    }
+  ,
+    {
+      "title": "",
+      "question": "What is the capital city of Spain?",
+      "answer": "Madrid"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Which country is Prague in?",
+      "answer": "Czech Republic"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Which fictional city is the home of Batman?",
+      "answer": "Gotham|City"
+    }
+  ,
+    {
+      "title": "",
+      "question": "What is a Geiger Counter used to detect?",
+      "answer": "Radiation"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Which type of dog has breeds called Scottish, Welsh and Irish?",
+      "answer": "Terrier"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Babe Ruth is associated with which sport?",
+      "answer": "Baseball"
+    }
+  ,
+    {
+      "title": "",
+      "question": "In the film Babe, what type of animal was Babe?",
+      "answer": "A pig"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Which Roman emperor supposedly fiddled while Rome burned?",
+      "answer": "Nero"
+    }
+  ,
+    {
+      "title": "",
+      "question": "Which crime-fighting cartoon dog has the initals 'S.D.' on his collar?",
+      "answer": "Scooby|Doo."
     }
   ]
 }
