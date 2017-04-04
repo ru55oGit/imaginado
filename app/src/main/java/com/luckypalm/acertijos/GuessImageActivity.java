@@ -161,7 +161,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.setType("image/*");
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/OufAlF");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/VApk35");
 
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
@@ -184,7 +184,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         labelLevelText.setVisibility(View.VISIBLE);
 
                         String shareText = new String();
-                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
+                        shareText = "Ayudame a resolver este acertijo https://goo.gl/VApk35";
                         Bitmap image = takeScreenshot();
                         SharePhoto photo = new SharePhoto.Builder()
                                 .setBitmap(image)
@@ -216,7 +216,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        shareText = "Ayudame a resolver este acertijo https://goo.gl/OufAlF";
+                        shareText = "Ayudame a resolver este acertijo https://goo.gl/VApk35";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -851,12 +851,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         String sharedDescription =  getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text);
-                        String sharedImage = "https://lh3.googleusercontent.com/q7y5py9M1B8ZgalnVCmR7ZTN54jcMDf8HWhVFQy5iSzsFLa8chBb6HGU6T-oELC4kw=h900-rw";
+                        String sharedImage = "https://lh3.googleusercontent.com/HzWvAHRe3mUevLbA-UZI8a-rY5DWfg3nXKrnyJmZ9KGHIyLI4e6sYNeYqUrQen9sbQ=h900";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle("Descifralo")
                                     .setContentDescription(sharedDescription)
-                                    .setContentUrl(Uri.parse("https://goo.gl/OufAlF"))
+                                    .setContentUrl(Uri.parse("https://goo.gl/VApk35"))
                                     .setImageUrl(Uri.parse(sharedImage))
                                     .build();
                             shareDialog.show(shareLinkContent);
@@ -878,7 +878,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
                         Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.acertijos/drawable/sharetwitterimage");
-                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/OufAlF";
+                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/VApk35";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -906,7 +906,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), com.luckypalm.acertijos.R.drawable.sharetwitterimage);
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/OufAlF";
+                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/VApk35";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
