@@ -3265,7 +3265,7 @@
     {
       "title": "",
       "question": "Name the largest freshwater lake in the world?",
-      "answer": "Lake Superior"
+      "answer": "Lake|Superior"
     }
   ,
     {
@@ -3313,7 +3313,7 @@
     {
       "title": "",
       "question": "Who invented the rabies vaccination?",
-      "answer": "Louis Pasteur"
+      "answer": "Louis|Pasteur"
     }
   ,
     {
@@ -3355,7 +3355,7 @@
     {
       "title": "",
       "question": "Which country is Prague in?",
-      "answer": "Czech Republic"
+      "answer": "Czech|Republic"
     }
   ,
     {
@@ -3397,7 +3397,7 @@
     {
       "title": "",
       "question": "Which crime-fighting cartoon dog has the initals 'S.D.' on his collar?",
-      "answer": "Scooby|Doo."
+      "answer": "Scooby|Doo"
     }
   ]
 }

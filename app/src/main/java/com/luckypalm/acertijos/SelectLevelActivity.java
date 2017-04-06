@@ -12,6 +12,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CompoundButton;
 import android.widget.GridLayout;
 import android.widget.RelativeLayout;
@@ -38,6 +39,9 @@ public class SelectLevelActivity extends AppCompatActivity {
     private ScrollView hsv;
     private Switch mySwitch;
     private RelativeLayout header, footer;
+    private InputMethodManager inputMethodManager;
+    private RelativeLayout frameLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,9 @@ public class SelectLevelActivity extends AppCompatActivity {
         contenedorNiveles = (GridLayout) findViewById(R.id.innerLay);
         hsv = (ScrollView) findViewById(R.id.hsv);
         title = (TextView) findViewById(R.id.title);
+        frameLayout = (RelativeLayout) findViewById(R.id.activity_select_level);
+        inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
 
     }
 
