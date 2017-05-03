@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -114,6 +116,14 @@ public class SelectLevelActivity extends AppCompatActivity {
                 contenedorNiveles.addView(levelCircle);
             }
         }
+
+        ImageView img = (ImageView) findViewById(R.id.SaasBannerIMG);
+        img.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://almundo.com.ar/"));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
