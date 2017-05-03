@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos.util;
+package com.luckypalm.almundo.util;
 
 /**
  * Created by ToledoP on 11/01/2017.

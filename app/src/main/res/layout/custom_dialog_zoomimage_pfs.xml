@@ -11,7 +11,7 @@
         android:id="@+id/imageToGuessZoom"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/adivinanzas1"
+        android:src="@drawable/lugares1"
         android:layout_gravity="center"
         />
 

@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.luckypalm.almundo;
 
 import android.Manifest;
 import android.app.Activity;
@@ -97,7 +97,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private ImageView leftArrow;
     private ImageView rightArrow;
-    private Boolean languageSelected;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -265,17 +264,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         labelLevelText = (TextView) findViewById(R.id.labelLevelText);
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
-        languageSelected = settings.getBoolean("languageSelected", true);
         title = (ImageView) findViewById(R.id.title);
         frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
 
-        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
-            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
-            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title_en));
-        }
-
         // traigo el Nivel
-        level = languageSelected.booleanValue() ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
+        level = settings.getString("levelSpanish","1");
         levelSelected = settings.getString("levelSelected","1");
 
         // Si el numero de nivel seleccionado es mayor al numero de nivel resuelto, no muestro el teclado
@@ -290,11 +283,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
 
-        labelLevelText.setText(languageSelected.booleanValue()? "Level " : "Nivel " + levelSelected);
+        labelLevelText.setText("Nivel " + levelSelected);
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
-        uri = languageSelected.booleanValue() ? "wuzzles" +  levelSelected : "adivinanzas" + levelSelected;
+        uri = "lugares" + levelSelected;
         res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
@@ -313,7 +306,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
         // obtengo la palabra que se va adivinar segun el idioma seleccionado
-        word = languageSelected.booleanValue() ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
+        word = obtenerPalabra("lugares", levelSelected);
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
@@ -623,11 +616,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             View layout = inflater.inflate(R.layout.toast_layout_win, (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            if (languageSelected.booleanValue()) {
-                text.setText(getResources().getString(R.string.toast_win_en));
-            } else {
-                text.setText(getResources().getString(R.string.toast_win_es));
-            }
+            text.setText(getResources().getString(R.string.toast_win_es));
             text.setTypeface(lobsterFont);
 
             toastWin = new Toast(getApplicationContext());
@@ -667,11 +656,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("levelSelected", ((Integer)(Integer.parseInt(levelSelected) - 1)).toString());
         }
         editor.putBoolean("autoclick", true);
-        if (languageSelected.booleanValue()) {
-            editor.putString("levelEnglish", level);
-        } else {
-            editor.putString("levelSpanish", level);
-        }
+
+        editor.putString("levelSpanish", level);
 
         editor.commit();
     }
@@ -680,11 +666,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (Integer.parseInt(levelSelected) == Integer.parseInt(level)) {
             level = ((Integer)(Integer.parseInt(level) + 1)).toString();
         }
-        if (languageSelected.booleanValue()) {
-            editor.putString("levelEnglish", level);
-        } else {
-            editor.putString("levelSpanish", level);
-        }
+
+        editor.putString("levelSpanish", level);
         editor.putString("levelSelected", level);
         editor.commit();
     }
@@ -805,7 +788,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialogCustom.setContentView(com.luckypalm.acertijos.R.layout.custom_dialog_withoutseconds);
+        dialogCustom.setContentView(com.luckypalm.almundo.R.layout.custom_dialog_withoutseconds);
 
         LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle;
         ImageView ganar, comprar, vervideo, shareFace, shareTwit, shareWsap;
@@ -817,12 +800,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareContainer = (LinearLayout) dialogCustom.findViewById(R.id.shareContainer);
         shareContainerTitle = (LinearLayout) dialogCustom.findViewById(R.id.shareContainerTitle);
 
-        ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.ganarSegundos);
-        comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.comprarSegundos);
-        vervideo = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.watchVideo);
-        shareFace = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharefacebookDialog);
-        shareTwit = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharetwitterDialog);
-        shareWsap = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharewsapDialog);
+        ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.almundo.R.id.ganarSegundos);
+        comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.almundo.R.id.comprarSegundos);
+        vervideo = (ImageView) dialogCustom.findViewById(com.luckypalm.almundo.R.id.watchVideo);
+        shareFace = (ImageView) dialogCustom.findViewById(com.luckypalm.almundo.R.id.sharefacebookDialog);
+        shareTwit = (ImageView) dialogCustom.findViewById(com.luckypalm.almundo.R.id.sharetwitterDialog);
+        shareWsap = (ImageView) dialogCustom.findViewById(com.luckypalm.almundo.R.id.sharewsapDialog);
 
         titleText = (TextView) dialogCustom.findViewById(R.id.titleText);
         buyText = (TextView) dialogCustom.findViewById(R.id.buyText);
@@ -830,27 +813,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         watchvideoText = (TextView) dialogCustom.findViewById(R.id.watchvideoText);
         shareText = (TextView) dialogCustom.findViewById(R.id.shareText);
 
-        // Cambio los textos y los colores segun el idioma
-        if (languageSelected.booleanValue()) {
-            buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            shareContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-
-            titleText.setText(getResources().getText(R.string.sin_tiempo_title_en));
-            buyText.setText(getResources().getText(R.string.sin_tiempo_comprar_en));
-            keepplayingText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
-            watchvideoText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
-            shareText.setText(getResources().getText(R.string.sin_tiempo_compartir_en));
-        }
-
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
-                        String sharedDescription =  getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text);
+                        String sharedDescription =  getResources().getString(com.luckypalm.almundo.R.string.generic_share_text);
                         String sharedImage = "https://lh3.googleusercontent.com/HzWvAHRe3mUevLbA-UZI8a-rY5DWfg3nXKrnyJmZ9KGHIyLI4e6sYNeYqUrQen9sbQ=h900";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
@@ -877,8 +845,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.acertijos/drawable/sharetwitterimage");
-                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/VApk35";
+                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.almundo/drawable/sharetwitterimage");
+                        String shareText = getResources().getString(com.luckypalm.almundo.R.string.generic_share_text) + "https://goo.gl/VApk35";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -904,9 +872,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), com.luckypalm.acertijos.R.drawable.sharetwitterimage);
+                        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), com.luckypalm.almundo.R.drawable.sharetwitterimage);
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/VApk35";
+                        String shareText = getResources().getString(com.luckypalm.almundo.R.string.generic_share_text) + "https://goo.gl/VApk35";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -945,7 +913,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.dialogButtonOK);
+        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(com.luckypalm.almundo.R.id.dialogButtonOK);
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

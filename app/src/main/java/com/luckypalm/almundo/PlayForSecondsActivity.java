@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.luckypalm.almundo;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -25,7 +25,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.luckypalm.acertijos.pojo.Question;
+import com.luckypalm.almundo.pojo.Question;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,6 +36,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
+
+;
 
 
 public class PlayForSecondsActivity extends AppCompatActivity implements BackDialog.BackDialogListener {
@@ -81,7 +83,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(com.luckypalm.acertijos.R.layout.activity_play_for_seconds);
+        setContentView(com.luckypalm.almundo.R.layout.activity_play_for_seconds);
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
 
@@ -94,18 +96,14 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
 
-        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
-            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
-        }
-
         pregResp = languageSelected.booleanValue()? getQuestion() : obtenerPreguntas();
         for (int i=0; i<pregResp.size();i++) {
             random.add(i);
         }
         Collections.shuffle(random);
         Collections.shuffle(random);
-        frameLayout = (RelativeLayout) findViewById(com.luckypalm.acertijos.R.id.frameCounter);
-        timeGained = (TextView) findViewById(com.luckypalm.acertijos.R.id.chrono);
+        frameLayout = (RelativeLayout) findViewById(com.luckypalm.almundo.R.id.frameCounter);
+        timeGained = (TextView) findViewById(com.luckypalm.almundo.R.id.chrono);
         questionCircle = (TextView) findViewById(R.id.questionCircle);
         questionCircle.setTypeface(lobsterFont);
         questionCircle.setText(cantPreguntas + "/10");
@@ -116,13 +114,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 return true;
             }
         });
-
-        /*questionCircle.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                onResume();
-            }
-        });*/
 
         timeGained.setText(""+String.format(FORMAT,
                 TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(0)),
@@ -144,8 +135,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         timeGained.setTypeface(digifont);
 
         // Instancio el contenedor de las letras
-        firstLine = (LinearLayout)findViewById(com.luckypalm.acertijos.R.id.wordContainerFirst);
-        secondLine = (LinearLayout) findViewById(com.luckypalm.acertijos.R.id.wordContainerSecond);
+        firstLine = (LinearLayout)findViewById(com.luckypalm.almundo.R.id.wordContainerFirst);
+        secondLine = (LinearLayout) findViewById(com.luckypalm.almundo.R.id.wordContainerSecond);
         // Limpio todas las letras para la proxima pregunta
         firstLine.removeAllViews();
         secondLine.removeAllViews();
@@ -156,8 +147,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         question = pregResp.get(questionNumber);
 
         // Instancio y seteo la pregunta
-        preguntaTitle = (TextView) findViewById(com.luckypalm.acertijos.R.id.title);
-        preguntaView = (TextView) findViewById(com.luckypalm.acertijos.R.id.question);
+        preguntaTitle = (TextView) findViewById(com.luckypalm.almundo.R.id.title);
+        preguntaView = (TextView) findViewById(com.luckypalm.almundo.R.id.question);
         preguntaTitle.setText(question.getTitulo());
 
         imageForPlay = (ImageView) findViewById(R.id.imageForPlay);
@@ -185,8 +176,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         // Border radius para las letras
         gd = new GradientDrawable();
         gd.setColor(Color.WHITE);
-        gd.setCornerRadius((int)getResources().getDimension(com.luckypalm.acertijos.R.dimen.border_radius));
-        gd.setStroke((int)getResources().getDimension(com.luckypalm.acertijos.R.dimen.border_letters_guess), getResources().getColor(com.luckypalm.acertijos.R.color.secondaryColor));
+        gd.setCornerRadius((int)getResources().getDimension(com.luckypalm.almundo.R.dimen.border_radius));
+        gd.setStroke((int)getResources().getDimension(com.luckypalm.almundo.R.dimen.border_letters_guess), getResources().getColor(com.luckypalm.almundo.R.color.secondaryColor));
 
         // dibujo los guiones correspondientes a cada letra de la palabra
         for (int i = 0; i < question.getRespuesta().length(); i++) {
@@ -196,15 +187,15 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             } else {
                 letter.setText("__");
                 letter.setAllCaps(true);
-                letter.setBackgroundResource(com.luckypalm.acertijos.R.color.backLetters);
+                letter.setBackgroundResource(com.luckypalm.almundo.R.color.backLetters);
                 if  (Build.VERSION.SDK_INT > 15 ) {
                     letter.setBackground(gd);
                 }
             }
 
             letter.setGravity(Gravity.CENTER_HORIZONTAL);
-            dim = (int) getResources().getDimension(com.luckypalm.acertijos.R.dimen.bg_letter_size);
-            letter.setTextSize((int)getResources().getDimension(com.luckypalm.acertijos.R.dimen.letter_size));
+            dim = (int) getResources().getDimension(com.luckypalm.almundo.R.dimen.bg_letter_size);
+            letter.setTextSize((int)getResources().getDimension(com.luckypalm.almundo.R.dimen.letter_size));
             LinearLayout.LayoutParams marginLetters = new LinearLayout.LayoutParams(dim, dim);
             marginLetters.setMargins((int)getResources().getDimension(R.dimen.margin_right_play), 0, (int)getResources().getDimension(R.dimen.margin_right_play), 0);
             letter.setLayoutParams(marginLetters);
@@ -293,8 +284,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             return false;
         }
 
-        ll = (LinearLayout)findViewById(com.luckypalm.acertijos.R.id.wordContainerFirst);
-        ll2 = (LinearLayout) findViewById(com.luckypalm.acertijos.R.id.wordContainerSecond);
+        ll = (LinearLayout)findViewById(com.luckypalm.almundo.R.id.wordContainerFirst);
+        ll2 = (LinearLayout) findViewById(com.luckypalm.almundo.R.id.wordContainerSecond);
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < question.getRespuesta().length(); i++) {
             // si viene un pipe, es que las palabras estan divididas en 2 renglones
@@ -304,9 +295,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.acertijos.R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.almundo.R.dimen.letter_size));
                     letter.setGravity(Gravity.CENTER_HORIZONTAL);
-                    letter.setBackgroundResource(com.luckypalm.acertijos.R.color.backLetters);
+                    letter.setBackgroundResource(com.luckypalm.almundo.R.color.backLetters);
                     if  (Build.VERSION.SDK_INT > 15 ) {
                         letter.setBackground(gd);
                     }
@@ -326,9 +317,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     TextView letter = new TextView(this);
                     Character letra = (char) event.getDisplayLabel();
                     letter.setText(letra.toString());
-                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.acertijos.R.dimen.letter_size));
+                    letter.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(com.luckypalm.almundo.R.dimen.letter_size));
                     letter.setGravity(Gravity.CENTER_HORIZONTAL);
-                    letter.setBackgroundResource(com.luckypalm.acertijos.R.color.primaryColor);
+                    letter.setBackgroundResource(com.luckypalm.almundo.R.color.primaryColor);
                     if  (Build.VERSION.SDK_INT > 15 ) {
                         letter.setBackground(gd);
                     }

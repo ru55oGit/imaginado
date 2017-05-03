@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.luckypalm.almundo;
 
 import android.app.Activity;
 import android.app.AlertDialog;

@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos.pojo;
+package com.luckypalm.almundo.pojo;
 
 /**
  * Created by toledop on 13/07/2016.

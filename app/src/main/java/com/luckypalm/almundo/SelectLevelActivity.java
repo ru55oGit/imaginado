@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.luckypalm.almundo;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,11 +13,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.CompoundButton;
 import android.widget.GridLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -34,7 +32,6 @@ public class SelectLevelActivity extends AppCompatActivity {
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
     private String levelSpanish;
-    private String levelEnglish;
     private ScrollView hsv;
     private RelativeLayout header, footer;
     private InputMethodManager inputMethodManager;
@@ -69,7 +66,6 @@ public class SelectLevelActivity extends AppCompatActivity {
 
 
         levelSpanish = settings.getString("levelSpanish","1");
-        levelEnglish = settings.getString("levelEnglish","1");
 
         boolean autoclick = settings.getBoolean("autoclick", false);
 
@@ -83,7 +79,7 @@ public class SelectLevelActivity extends AppCompatActivity {
             Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
             startActivity(intent);
         } else {
-            for (int i = 1;i <= getLevelCount(); i++) {
+            for (int i = 1;i <= 100; i++) {
                 TextView levelCircle = new TextView(this);
                 //levelCircle.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics()));
                 levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 38);

@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.luckypalm.almundo;
 
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -9,7 +9,6 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -24,8 +23,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.vending.billing.IInAppBillingService;
-import com.luckypalm.acertijos.util.IabHelper;
-import com.luckypalm.acertijos.util.IabResult;
+import com.luckypalm.almundo.util.IabHelper;
+import com.luckypalm.almundo.util.IabResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,12 +39,12 @@ public class BuySecondsActivity extends AppCompatActivity {
     private IInAppBillingService mService;
     private ServiceConnection mServiceConn;
 
-    private String inappid_three = "com.luckypalm.acertijos.three_minutes";
-    private String inappid_five = "com.luckypalm.acertijos.five_minutes";
-    private String inappid_seven = "com.luckypalm.acertijos.seven_minutes";
-    private String inappid_ten = "com.luckypalm.acertijos.ten_minutes";
-    private String inappid_fifteen = "com.luckypalm.acertijos.fifteen_minutes";
-    private String inappid_twenty = "com.luckypalm.acertijos.twenty_minutes";
+    private String inappid_three = "com.luckypalm.almundo.three_minutes";
+    private String inappid_five = "com.luckypalm.almundo.five_minutes";
+    private String inappid_seven = "com.luckypalm.almundo.seven_minutes";
+    private String inappid_ten = "com.luckypalm.almundo.ten_minutes";
+    private String inappid_fifteen = "com.luckypalm.almundo.fifteen_minutes";
+    private String inappid_twenty = "com.luckypalm.almundo.twenty_minutes";
     private String purchaseToken = "android.test.purchased";
 
     private Button three_minutesBtn;
@@ -145,11 +144,6 @@ public class BuySecondsActivity extends AppCompatActivity {
         fifteen_minutesTxt.setTypeface(lobsterFont);
         twenty_minutesTxt = (TextView) findViewById(R.id.twentyMinutesTxt);
         twenty_minutesTxt.setTypeface(lobsterFont);
-
-        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
-            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
-            title.setText(getResources().getText(R.string.sin_tiempo_title_en));
-        }
 
         close = (ImageButton) findViewById(R.id.dialogButtonOK);
 

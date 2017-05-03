@@ -5,7 +5,7 @@ android {
     buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "com.luckypalm.acertijos"
+        applicationId "com.luckypalm.almundo"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 8
