@@ -107,6 +107,10 @@ public class SelectLevelActivity extends AppCompatActivity {
                     }
                 });
 
+                if (i > Integer.parseInt(levelSpanish)) {
+                    levelCircle.setAlpha(0.35f);
+                }
+
                 contenedorNiveles.addView(levelCircle);
             }
         }

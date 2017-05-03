@@ -75,7 +75,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     SharedPreferences settings;
     SharedPreferences.Editor editor;
 
-    private Boolean languageSelected;
     private int res;
 
     @Override
@@ -92,11 +91,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         editor = settings.edit();
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         // traigo el lenguaje seleccionado
-        languageSelected = settings.getBoolean("languageSelected", true);
 
         frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
 
-        pregResp = languageSelected.booleanValue()? getQuestion() : obtenerPreguntas();
+        pregResp = obtenerPreguntas();
         for (int i=0; i<pregResp.size();i++) {
             random.add(i);
         }
