@@ -35,9 +35,7 @@ public class SelectLevelActivity extends AppCompatActivity {
     private SharedPreferences.Editor editor;
     private String levelSpanish;
     private String levelEnglish;
-    private Boolean languageSelected;
     private ScrollView hsv;
-    private Switch mySwitch;
     private RelativeLayout header, footer;
     private InputMethodManager inputMethodManager;
     private RelativeLayout frameLayout;
@@ -66,40 +64,12 @@ public class SelectLevelActivity extends AppCompatActivity {
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
 
-        languageSelected = settings.getBoolean("languageSelected", true);
-        mySwitch = (Switch) findViewById(R.id.switchy);
-        mySwitch.setChecked(languageSelected);
         header = (RelativeLayout) findViewById(R.id.headerSelectLevel);
         footer = (RelativeLayout) findViewById(R.id.footerContainer);
-        // por true es English
-        if(!mySwitch.isChecked()){
-            header.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-            footer.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-            title.setText(getResources().getString(R.string.select_level_title_es));
-        }else{
-            header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            title.setText(getResources().getString(R.string.select_level_title_en));
-        }
+
 
         levelSpanish = settings.getString("levelSpanish","1");
         levelEnglish = settings.getString("levelEnglish","1");
-
-        //attach a listener to check for changes in state
-        mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(mySwitch.isChecked()){
-                    editor.putBoolean("languageSelected", true);
-                    editor.commit();
-                    onResume();
-                }else{
-                    editor.putBoolean("languageSelected", false);
-                    editor.commit();
-                    onResume();
-                }
-            }
-        });
 
         boolean autoclick = settings.getBoolean("autoclick", false);
 
@@ -140,16 +110,7 @@ public class SelectLevelActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-                // por true es English
-                if (!mySwitch.isChecked()) {
-                    if (i > Integer.parseInt(levelSpanish)) {
-                        levelCircle.setAlpha(0.35f);
-                    }
-                } else {
-                    if (i > Integer.parseInt(levelEnglish)) {
-                        levelCircle.setAlpha(0.35f);
-                    }
-                }
+
                 contenedorNiveles.addView(levelCircle);
             }
         }
