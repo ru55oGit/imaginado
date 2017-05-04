@@ -22,5 +22,6 @@
     <dimen name="level_guess_fontsize">17dp</dimen>
     <dimen name="buyseconds_letter_size">23dp</dimen>
     <dimen name="margin_right_play">1dp</dimen>
+    <dimen name="redes_icons">65dp</dimen>
 </resources>
 
