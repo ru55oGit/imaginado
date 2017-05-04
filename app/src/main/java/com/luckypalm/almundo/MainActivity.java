@@ -35,19 +35,19 @@ public class MainActivity extends AppCompatActivity {
         timer = new CountDownTimer(3000, 500) {
             public void onTick(long millisUntilFinished) {
                 if (millisUntilFinished < 3100 ) {
-                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader4));
+                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader5));
                 }
                 if (millisUntilFinished < 2600 ) {
-                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader5));
+                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader4));
                 }
                 if (millisUntilFinished < 2100 ) {
                     clover.setImageDrawable(getResources().getDrawable(R.drawable.loader3));
                 }
                 if (millisUntilFinished < 1600 ) {
-                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader2));
+                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader1));
                 }
                 if (millisUntilFinished < 1100 ) {
-                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader1));
+                    clover.setImageDrawable(getResources().getDrawable(R.drawable.loader2));
                 }
             }
             public void onFinish() {
