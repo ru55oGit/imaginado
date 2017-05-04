@@ -91,8 +91,8 @@
 
     <ImageView
         android:id="@+id/sharewsap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/redes_icons"
+        android:layout_height="@dimen/redes_icons"
         android:src="@drawable/whatsappicon"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/imageToGuess"
@@ -101,19 +101,21 @@
 
     <ImageView
         android:id="@+id/sharetwitter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/redes_icons"
+        android:layout_height="@dimen/redes_icons"
         android:src="@drawable/twittericon"
         android:layout_alignTop="@+id/sharewsap"
         android:layout_alignLeft="@+id/imageToGuess"
-        android:layout_alignStart="@+id/imageToGuess" />
+        android:layout_alignStart="@+id/imageToGuess"
+        android:layout_marginRight="@dimen/fab_margin"/>
 
     <ImageView
         android:id="@+id/sharefacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/redes_icons"
+        android:layout_height="@dimen/redes_icons"
         android:src="@drawable/facebookicon"
         android:layout_alignTop="@+id/sharewsap"
+        android:layout_marginRight="@dimen/fab_margin"
         android:layout_centerHorizontal="true" />
 
     <ImageView
