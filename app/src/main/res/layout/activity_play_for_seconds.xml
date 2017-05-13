@@ -6,9 +6,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:id="@+id/frameCounter"
-    tools:context=".PlayForSecondsActivity"
     android:gravity="top"
     android:background="@drawable/tile_es"
+    tools:context=".PlayForSecondsActivity"
     android:textAlignment="center">
 
     <RelativeLayout
