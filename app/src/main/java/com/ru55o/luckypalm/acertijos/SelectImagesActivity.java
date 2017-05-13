@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.ru55o.luckypalm.acertijos;
 
 import android.content.Context;
 import android.content.Intent;
@@ -81,7 +81,7 @@ public class SelectImagesActivity extends AppCompatActivity {
                 TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
 
         statusOfLevel = new StringBuilder(settings.getString("statusLevel","000000"));
-        imagen1.setImageResource(getResources().getIdentifier("acertijos", "drawable", getPackageName()));
+        imagen1.setImageResource(getResources().getIdentifier("com.ru55o.luckypalm.acertijos", "drawable", getPackageName()));
         imagen2.setImageResource(getResources().getIdentifier("escudosfutbol", "drawable", getPackageName()));
         imagen3.setImageResource(getResources().getIdentifier("logos", "drawable", getPackageName()));
         imagen4.setImageResource(getResources().getIdentifier("iconospeliculas", "drawable", getPackageName()));

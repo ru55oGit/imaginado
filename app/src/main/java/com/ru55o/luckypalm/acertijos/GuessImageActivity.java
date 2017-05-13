@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.ru55o.luckypalm.acertijos;
 
 import android.Manifest;
 import android.app.Activity;
@@ -805,7 +805,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // custom dialog
         final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialogCustom.setContentView(com.luckypalm.acertijos.R.layout.custom_dialog_withoutseconds);
+        dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
 
         LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle;
         ImageView ganar, comprar, vervideo, shareFace, shareTwit, shareWsap;
@@ -817,12 +817,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareContainer = (LinearLayout) dialogCustom.findViewById(R.id.shareContainer);
         shareContainerTitle = (LinearLayout) dialogCustom.findViewById(R.id.shareContainerTitle);
 
-        ganar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.ganarSegundos);
-        comprar = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.comprarSegundos);
-        vervideo = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.watchVideo);
-        shareFace = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharefacebookDialog);
-        shareTwit = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharetwitterDialog);
-        shareWsap = (ImageView) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.sharewsapDialog);
+        ganar = (ImageView) dialogCustom.findViewById(R.id.ganarSegundos);
+        comprar = (ImageView) dialogCustom.findViewById(R.id.comprarSegundos);
+        vervideo = (ImageView) dialogCustom.findViewById(R.id.watchVideo);
+        shareFace = (ImageView) dialogCustom.findViewById(R.id.sharefacebookDialog);
+        shareTwit = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
+        shareWsap = (ImageView) dialogCustom.findViewById(R.id.sharewsapDialog);
 
         titleText = (TextView) dialogCustom.findViewById(R.id.titleText);
         buyText = (TextView) dialogCustom.findViewById(R.id.buyText);
@@ -850,7 +850,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
-                        String sharedDescription =  getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text);
+                        String sharedDescription =  getResources().getString(R.string.generic_share_text);
                         String sharedImage = "https://lh3.googleusercontent.com/HzWvAHRe3mUevLbA-UZI8a-rY5DWfg3nXKrnyJmZ9KGHIyLI4e6sYNeYqUrQen9sbQ=h900";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
@@ -877,8 +877,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.acertijos/drawable/sharetwitterimage");
-                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/VApk35";
+                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage");
+                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/VApk35";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -904,9 +904,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), com.luckypalm.acertijos.R.drawable.sharetwitterimage);
+                        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = getResources().getString(com.luckypalm.acertijos.R.string.generic_share_text) + "https://goo.gl/VApk35";
+                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/VApk35";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -945,7 +945,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
 
-        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(com.luckypalm.acertijos.R.id.dialogButtonOK);
+        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(R.id.dialogButtonOK);
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

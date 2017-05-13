@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.ru55o.luckypalm.acertijos;
 
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -24,8 +24,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.vending.billing.IInAppBillingService;
-import com.luckypalm.acertijos.util.IabHelper;
-import com.luckypalm.acertijos.util.IabResult;
+import com.ru55o.luckypalm.acertijos.util.IabHelper;
+import com.ru55o.luckypalm.acertijos.util.IabResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,12 +40,12 @@ public class BuySecondsActivity extends AppCompatActivity {
     private IInAppBillingService mService;
     private ServiceConnection mServiceConn;
 
-    private String inappid_three = "com.luckypalm.acertijos.three_minutes";
-    private String inappid_five = "com.luckypalm.acertijos.five_minutes";
-    private String inappid_seven = "com.luckypalm.acertijos.seven_minutes";
-    private String inappid_ten = "com.luckypalm.acertijos.ten_minutes";
-    private String inappid_fifteen = "com.luckypalm.acertijos.fifteen_minutes";
-    private String inappid_twenty = "com.luckypalm.acertijos.twenty_minutes";
+    private String inappid_three = "com.luckypalm.com.ru55o.luckypalm.acertijos.three_minutes";
+    private String inappid_five = "com.luckypalm.com.ru55o.luckypalm.acertijos.five_minutes";
+    private String inappid_seven = "com.luckypalm.com.ru55o.luckypalm.acertijos.seven_minutes";
+    private String inappid_ten = "com.luckypalm.com.ru55o.luckypalm.acertijos.ten_minutes";
+    private String inappid_fifteen = "com.luckypalm.com.ru55o.luckypalm.acertijos.fifteen_minutes";
+    private String inappid_twenty = "com.luckypalm.com.ru55o.luckypalm.acertijos.twenty_minutes";
     private String purchaseToken = "android.test.purchased";
 
     private Button three_minutesBtn;

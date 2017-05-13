@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos.util;
+package com.ru55o.luckypalm.acertijos.util;
 
 /**
  * Created by ToledoP on 11/01/2017.
@@ -61,27 +61,6 @@ package com.luckypalm.acertijos.util;
      * has not yet completed will result in an exception being thrown.
      *
      */
-    import android.app.Activity;
-    import android.app.PendingIntent;
-    import android.content.ComponentName;
-    import android.content.Context;
-    import android.content.Intent;
-    import android.content.IntentSender.SendIntentException;
-    import android.content.ServiceConnection;
-    import android.content.pm.ResolveInfo;
-    import android.os.Bundle;
-    import android.os.Handler;
-    import android.os.IBinder;
-    import android.os.RemoteException;
-    import android.text.TextUtils;
-    import android.util.Log;
-
-    import com.android.vending.billing.IInAppBillingService;
-
-    import org.json.JSONException;
-
-    import java.util.ArrayList;
-    import java.util.List;
 
 
 /**

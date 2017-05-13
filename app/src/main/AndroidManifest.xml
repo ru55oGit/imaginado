@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.luckypalm.acertijos">
+    package="com.ru55o.luckypalm.acertijos">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
-            android:name=".MainActivity"
+            android:name="com.ru55o.luckypalm.acertijos.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -28,24 +28,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SelectLevelActivity"
+            android:name="com.ru55o.luckypalm.acertijos.SelectLevelActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
         <activity
-            android:name=".GuessImageActivity"
+            android:name="com.ru55o.luckypalm.acertijos.GuessImageActivity"
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".BuySecondsActivity"
+            android:name="com.ru55o.luckypalm.acertijos.BuySecondsActivity"
             android:label="@string/title_activity_buy_seconds"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PlayForSecondsActivity"
+            android:name="com.ru55o.luckypalm.acertijos.PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"

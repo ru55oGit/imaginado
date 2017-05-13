@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos;
+package com.ru55o.luckypalm.acertijos;
 
 import android.content.Context;
 import android.content.Intent;

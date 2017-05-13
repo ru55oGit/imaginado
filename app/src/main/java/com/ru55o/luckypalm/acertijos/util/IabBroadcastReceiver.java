@@ -1,4 +1,4 @@
-package com.luckypalm.acertijos.util;
+package com.ru55o.luckypalm.acertijos.util;
 
 import android.content.BroadcastReceiver;
 
@@ -6,7 +6,6 @@ import android.content.BroadcastReceiver;
  * Created by ToledoP on 11/01/2017.
  */
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
