@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/primaryColor"
     android:id="@+id/selectLayout"
-    tools:context="com.luckypalm.acertijos.SelectImagesActivity">
+    tools:context=".SelectImagesActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
