@@ -45,6 +45,14 @@ import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -99,6 +107,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private ImageView rightArrow;
     private Boolean languageSelected;
 
+    private AdView mAdView;
+    private AdRequest adRequest;
+    private RewardedVideoAd mVideoAd;
+    private InterstitialAd mInterstitialAd;
+
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
@@ -136,12 +149,70 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
 
+        // Traigo el tiempo acumulado para setear el timer
+        settings = getSharedPreferences("Status", 0);
+        editor = settings.edit();
+
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
 
         digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (settings.getBoolean("showAds", true)) {
+            // Use an activity context to get the rewarded video instance.
+            mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+            mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+                @Override
+                public void onRewardedVideoAdLoaded() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoAdOpened() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoStarted() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoAdClosed() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+                    // Preload the next video ad.
+                    loadRewardedVideoAd();
+                }
+                @Override
+                public void onRewarded(RewardItem rewardItem) {
+                    Toast.makeText(GuessImageActivity.this, "Has obtenido" + rewardItem.getAmount() + rewardItem.getType(), Toast.LENGTH_SHORT).show();
+                    milisegundos+= rewardItem.getAmount()*1000;
+                    editor.putInt("time", milisegundos);
+                    editor.commit();
+                }
+                @Override
+                public void onRewardedVideoAdLeftApplication() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onRewardedVideoAdFailedToLoad(int err) {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            loadRewardedVideoAd();
+        } else {
+            showSoftKey = new CountDownTimer(700, 1000) {
+                public void onTick(long millisUntilFinished) {
+
+                }
+                public void onFinish() {
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                }
+            }.start();
+        }
+
+
+
 
         // share wsap
         sharewsap = (ImageView) findViewById(R.id.sharewsap);
@@ -243,16 +314,36 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     @Override
     protected void onResume() {
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.resume(this);
+        }
         super.onResume();
+        // Cargo el banner footer cada vez que se carga la pantalla
+        if (settings.getBoolean("showAds", true)) {
+            // ADS
+            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
+            mAdView = (AdView) findViewById(R.id.adView);
+            adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+            mAdView.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    super.onAdLoaded();
+                    RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
+                    focus.setFocusableInTouchMode(true);
+                    focus.requestFocus();
+                    if (milisegundos > 0) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    }
+                }
+            });
+        }
+
         secondsToSubtract = 0;
 
         if (toastWin != null) {
             toastWin.cancel();
         }
-
-        // Traigo el tiempo acumulado para setear el timer
-        settings = getSharedPreferences("Status", 0);
-        editor = settings.edit();
         timerFlag = true;
 
         // seteo el tiempo que tengo para jugar en el reloj
@@ -278,6 +369,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         level = languageSelected.booleanValue() ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
         levelSelected = settings.getString("levelSelected","1");
 
+        // Interstitial
+        if (settings.getBoolean("showAds", true)) {
+            // ADS
+            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
+
+            if (Integer.parseInt(levelSelected) % 4 == 0){
+                requestNewInterstitial();
+            }
+        }
         // Si el numero de nivel seleccionado es mayor al numero de nivel resuelto, no muestro el teclado
         if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(level)) {
             toggleKeyboardVisible();
@@ -990,4 +1092,34 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             return false;
         }
     }
+
+    @Override
+    public void onPause() {
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.pause(this);
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.destroy(this);
+        }
+        super.onDestroy();
+    }
+
+    private void  loadRewardedVideoAd () {
+        mVideoAd.loadAd(getResources().getString(R.string.banner_ad_unit_video), new AdRequest.Builder().build());
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(getResources().getString(R.string.banner_ad_unit_interstitial))
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
+    }
+
+
 }

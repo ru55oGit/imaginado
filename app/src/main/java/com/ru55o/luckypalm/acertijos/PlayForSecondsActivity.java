@@ -35,6 +35,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.ru55o.luckypalm.acertijos.pojo.Question;
 
 
@@ -75,6 +79,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
     private Boolean languageSelected;
     private int res;
+
+    private AdView mAdView;
+    private AdRequest adRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +140,27 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     @Override
     protected void onResume() {
         super.onResume();
+
+        if (settings.getBoolean("showAds", true)) {
+            // ADS
+            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
+            mAdView = (AdView) findViewById(R.id.adView);
+            adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+            mAdView.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    super.onAdLoaded();
+                    RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
+                    focus.setFocusableInTouchMode(true);
+                    focus.requestFocus();
+                    if (milisegundos > 0) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    }
+                }
+            });
+        }
+
         timerFlag = true;
         aciertos = 0;
         // Instancio el reloj
