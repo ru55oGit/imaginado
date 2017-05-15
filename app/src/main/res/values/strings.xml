@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Descifralo</string>
-    <string name="facebook_app_id">1138149882905959</string>
-    <string name="admob_app_id">ca-app-pub-5537378422935748~4875708115</string>
-    <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/9166306910</string>
-    <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/6873818512</string>
-    <string name="banner_ad_unit_video">ca-app-pub-5537378422935748/6873818512</string>
+    <string name="facebook_app_id">454632721555405</string>
+    <string name="admob_app_id">ca-app-pub-5537378422935748~4014423715</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/5491156910</string>
+    <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/6967890117</string>
+    <string name="banner_ad_unit_video">ca-app-pub-5537378422935748/2398089711</string>
     <string name="inapp_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgV4MwVjUWnLquTOL6Oe9ZnOdD53ukEZnGQ7ILnuoRd/OMeIj+uSyQLgDgfe1h5nKf2qP7xPK4rl86y93XEdkf+K8Rwu3lmH95yQkoy/FI+WGmJsSmIczI8QUvd3SjLbkiUGvRU2TGqhWxMJ5NskJpJdk3xS6GrAkVDCqQvDh5NxXw0w9z30ZF0jPqAGELr3Uir1a9HtgQuFZcJfG7ZmM6br04GGGzCFQAsqUzNnaCwLpckEszHHe8Z5e6Zz/3zX8ek175M8g3xut8Eh2NA2kfNyVhpGsUx9+H3HxxUgAnXxfwkrrL1NTAIF603hV2rUSWeB587NhaWptAH1tfuvE8QIDAQAB</string>
     <string name="title_activity_select_images">SelectImages</string>
     <string name="title_activity_guess_image">GuessImageActivity</string>

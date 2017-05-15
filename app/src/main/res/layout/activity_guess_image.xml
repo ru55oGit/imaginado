@@ -95,10 +95,10 @@
         android:layout_width="@dimen/redes_icons"
         android:layout_height="@dimen/redes_icons"
         android:src="@drawable/whatsappicon"
-        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/adView"
         android:layout_alignRight="@+id/imageToGuess"
-        android:layout_alignEnd="@+id/imageToGuess"
-        android:layout_marginBottom="104dp" />
+        android:layout_alignEnd="@+id/imageToGuess" />
 
     <ImageView
         android:id="@+id/sharetwitter"

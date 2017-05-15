@@ -161,6 +161,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
         if (settings.getBoolean("showAds", true)) {
+            //Toast.makeText(GuessImageActivity.this, "showAds", Toast.LENGTH_LONG).show();
+            // ADS
+            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
             // Use an activity context to get the rewarded video instance.
             mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
             mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
@@ -210,9 +213,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
             }.start();
         }
-
-
-
 
         // share wsap
         sharewsap = (ImageView) findViewById(R.id.sharewsap);
@@ -321,7 +321,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // Cargo el banner footer cada vez que se carga la pantalla
         if (settings.getBoolean("showAds", true)) {
             // ADS
-            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
             mAdView = (AdView) findViewById(R.id.adView);
             adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
