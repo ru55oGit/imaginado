@@ -331,7 +331,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
                     focus.setFocusableInTouchMode(true);
                     focus.requestFocus();
-                    if (milisegundos > 0) {
+                    if (milisegundos > 0 && Integer.parseInt(levelSelected)<= Integer.parseInt(level)) {
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
                 }
@@ -473,16 +473,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // si no hay segundos, abro el popup sin tiempo
         if (milisegundos == 0) {
             customDialog();
-        } else if (Integer.parseInt(levelSelected)<= Integer.parseInt(level)) {
-            // si hay segundos abro el teclado
-            showSoftKey = new CountDownTimer(700, 1000) {
-                public void onTick(long millisUntilFinished) {
-
-                }
-                public void onFinish() {
-                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                }
-            }.start();
         }
 
         leftArrow = (ImageView) findViewById(R.id.leftarrow);
@@ -941,7 +931,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
             titleText.setText(getResources().getText(R.string.sin_tiempo_title_en));
             buyText.setText(getResources().getText(R.string.sin_tiempo_comprar_en));
-            keepplayingText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
+            keepplayingText.setText(getResources().getText(R.string.sin_tiempo_jugar_en));
             watchvideoText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
             shareText.setText(getResources().getText(R.string.sin_tiempo_compartir_en));
         }

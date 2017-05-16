@@ -21,7 +21,7 @@
             android:textColor="@color/thirdColor"
             android:padding="3dp"
             android:layout_gravity="left"
-            android:layout_weight="0.95"/>
+            android:layout_weight="0.90"/>
 
         <ImageButton
             android:id="@+id/dialogButtonOK"

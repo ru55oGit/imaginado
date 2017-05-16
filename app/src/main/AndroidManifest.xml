@@ -48,8 +48,7 @@
             android:name="com.ru55o.luckypalm.acertijos.PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustNothing|stateVisible" />
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

@@ -25,6 +25,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.ru55o.luckypalm.acertijos.pojo.Question;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,12 +40,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.ru55o.luckypalm.acertijos.pojo.Question;
 
 
 public class PlayForSecondsActivity extends AppCompatActivity implements BackDialog.BackDialogListener {
@@ -154,9 +154,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
                     focus.setFocusableInTouchMode(true);
                     focus.requestFocus();
-                    if (milisegundos > 0) {
-                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                    }
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                 }
             });
         }
@@ -383,6 +381,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             timer.cancel();
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
             String tiempo[] = ((String)this.counter.getText()).split(":");
+            inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
             onResume();
             try {
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
@@ -451,6 +450,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 } else {
                     backToPlay(milisegundos);
                 }
+                inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
                 onResume();
             }
         }.start();
