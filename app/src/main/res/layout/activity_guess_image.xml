@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="@dimen/guessimage_size"
         android:layout_height="@dimen/guessimage_size"
-        android:src="@drawable/adivinanzas1"
+        android:src="@drawable/peliculas1"
         android:id="@+id/imageToGuess"
         android:layout_gravity="center"
         android:layout_below="@+id/counterText"
