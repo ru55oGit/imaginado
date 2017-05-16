@@ -232,7 +232,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.setType("image/*");
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Ayudame a resolver este acertijo:  https://goo.gl/VApk35");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store");
 
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
@@ -255,8 +255,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         labelLevelText.setVisibility(View.VISIBLE);
 
                         String shareText = new String();
-                        shareText = "Ayudame a resolver este acertijo https://goo.gl/VApk35";
+                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
                         Bitmap image = takeScreenshot();
+                        image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
                         SharePhoto photo = new SharePhoto.Builder()
                                 .setBitmap(image)
                                 .setCaption(shareText)
@@ -287,7 +288,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        shareText = "Ayudame a resolver este acertijo https://goo.gl/VApk35";
+                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -678,7 +679,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             // obtengo los segundos que habia y le resto 1 segundo
             String tiempo[] = ((String)this.counter.getText()).split(":");
             Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-            Integer segundos = Integer.parseInt(tiempo[1])*1000-secondsToSubtract*1000;
+            Integer segundos = Integer.parseInt(tiempo[1])*1000>=secondsToSubtract*1000? Integer.parseInt(tiempo[1])*1000-secondsToSubtract*1000 : 0;
             milisegundos = minutos + segundos;
             timer(milisegundos);
             LayoutInflater inflater = getLayoutInflater();
@@ -942,19 +943,26 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                        String sharedImage = "https://lh3.googleusercontent.com/HzWvAHRe3mUevLbA-UZI8a-rY5DWfg3nXKrnyJmZ9KGHIyLI4e6sYNeYqUrQen9sbQ=h900";
+                        String sharedImage = "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle("Descifralo")
                                     .setContentDescription(sharedDescription)
-                                    .setContentUrl(Uri.parse("https://goo.gl/VApk35"))
+                                    .setContentUrl(Uri.parse("https://goo.gl/CrnO9M"))
                                     .setImageUrl(Uri.parse(sharedImage))
                                     .build();
                             shareDialog.show(shareLinkContent);
 
-                            milisegundos+= 30000;
-                            editor.putInt("time", milisegundos);
-                            editor.commit();
+                            showSoftKey = new CountDownTimer(3000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+
+                                }
+                                public void onFinish() {
+                                    milisegundos+= 30000;
+                                    editor.putInt("time", milisegundos);
+                                    editor.commit();
+                                }
+                            }.start();
                         }
                     } else {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
@@ -969,19 +977,25 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
                         Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage");
-                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/VApk35";
+                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
                         sharingIntent.setType("image/png");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
-
                         sharingIntent.setPackage("com.twitter.android");
-
                         startActivity(sharingIntent);
-                        milisegundos+= 30000;
-                        editor.putInt("time", milisegundos);
-                        editor.commit();
+
+                        showSoftKey = new CountDownTimer(3000, 1000) {
+                            public void onTick(long millisUntilFinished) {
+
+                            }
+                            public void onFinish() {
+                                milisegundos+= 30000;
+                                editor.putInt("time", milisegundos);
+                                editor.commit();
+                            }
+                        }.start();
                     } else {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                     }
@@ -997,16 +1011,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/VApk35";
+                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/CrnO9M";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
                         sharingIntent.setType("image/*");
                         startActivity(sharingIntent);
 
-                        milisegundos+= 30000;
-                        editor.putInt("time", milisegundos);
-                        editor.commit();
+                        showSoftKey = new CountDownTimer(3000, 1000) {
+                            public void onTick(long millisUntilFinished) {
+
+                            }
+                            public void onFinish() {
+                                milisegundos+= 30000;
+                                editor.putInt("time", milisegundos);
+                                editor.commit();
+                            }
+                        }.start();
                     } else {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
                     }
