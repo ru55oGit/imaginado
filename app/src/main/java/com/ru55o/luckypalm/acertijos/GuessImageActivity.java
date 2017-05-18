@@ -212,7 +212,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
                 }
             });
-
             loadRewardedVideoAd();
         } else {
             showSoftKey = new CountDownTimer(700, 1000) {
@@ -1059,6 +1058,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         vervideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(mVideoAd.isLoaded()) {
+                    mVideoAd.show();
+                }
             }
         });
 

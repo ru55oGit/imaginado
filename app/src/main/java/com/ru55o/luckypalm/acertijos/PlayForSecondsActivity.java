@@ -28,6 +28,7 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.ru55o.luckypalm.acertijos.pojo.Question;
 
@@ -82,6 +83,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
     private AdView mAdView;
     private AdRequest adRequest;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,6 +126,16 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             }
         });
 
+        // Interstitial
+        if (settings.getBoolean("showAds", true)) {
+            // ADS
+            //MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
+
+            requestNewInterstitial();
+        }
+
         /*questionCircle.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -154,7 +166,12 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
                     focus.setFocusableInTouchMode(true);
                     focus.requestFocus();
-                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+
+                    if (cantPreguntas == 5 && mInterstitialAd.isLoaded()){
+                        mInterstitialAd.show();
+                    } else {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    }
                 }
             });
         }
@@ -497,5 +514,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
     }
 }
