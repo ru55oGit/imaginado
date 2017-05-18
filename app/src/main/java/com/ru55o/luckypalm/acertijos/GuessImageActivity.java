@@ -160,6 +160,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
+        // Interstitial
+        if (settings.getBoolean("showAds", true)) {
+            // ADS
+            //MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
+
+            requestNewInterstitial();
+        }
+
+        // Banner footer
         if (settings.getBoolean("showAds", true)) {
             //Toast.makeText(GuessImageActivity.this, "showAds", Toast.LENGTH_LONG).show();
             // ADS
@@ -319,25 +330,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             mVideoAd.resume(this);
         }
         super.onResume();
-        // Cargo el banner footer cada vez que se carga la pantalla
-        if (settings.getBoolean("showAds", true)) {
-            // ADS
-            mAdView = (AdView) findViewById(R.id.adView);
-            adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
-            mAdView.setAdListener(new AdListener() {
-                @Override
-                public void onAdLoaded() {
-                    super.onAdLoaded();
-                    RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
-                    focus.setFocusableInTouchMode(true);
-                    focus.requestFocus();
-                    if (milisegundos > 0 && Integer.parseInt(levelSelected)<= Integer.parseInt(level)) {
-                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                    }
-                }
-            });
-        }
 
         secondsToSubtract = 0;
 
@@ -369,17 +361,26 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         level = languageSelected.booleanValue() ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
         levelSelected = settings.getString("levelSelected","1");
 
-        // Interstitial
+        // Cargo el banner footer cada vez que se carga la pantalla
         if (settings.getBoolean("showAds", true)) {
             // ADS
-            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
-            mInterstitialAd = new InterstitialAd(this);
-            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
-
-            if (Integer.parseInt(levelSelected) % 4 == 0){
-                requestNewInterstitial();
-            }
+            mAdView = (AdView) findViewById(R.id.adView);
+            adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+            mAdView.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    super.onAdLoaded();
+                    RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
+                    focus.setFocusableInTouchMode(true);
+                    focus.requestFocus();
+                    if (milisegundos > 0 && Integer.parseInt(levelSelected)<= Integer.parseInt(level)) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    }
+                }
+            });
         }
+
         // Si el numero de nivel seleccionado es mayor al numero de nivel resuelto, no muestro el teclado
         if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(level)) {
             toggleKeyboardVisible();
@@ -501,6 +502,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         // cancelo el custom toastLose cdo salgo
         if (toastLose != null) {
             toastLose.cancel();
+        }
+
+        if (Integer.parseInt(levelSelected) % 3 == 0 && mInterstitialAd.isLoaded()){
+            mInterstitialAd.show();
         }
         finish();
     }
@@ -1125,7 +1130,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(getResources().getString(R.string.banner_ad_unit_interstitial))
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
 
         mInterstitialAd.loadAd(adRequest);
