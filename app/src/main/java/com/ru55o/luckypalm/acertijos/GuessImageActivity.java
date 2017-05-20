@@ -375,6 +375,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
                     focus.setFocusableInTouchMode(true);
                     focus.requestFocus();
+                    ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
+                    keyboardIcon.setVisibility(View.INVISIBLE);
                     if (milisegundos > 0 && Integer.parseInt(levelSelected)<= Integer.parseInt(level)) {
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
