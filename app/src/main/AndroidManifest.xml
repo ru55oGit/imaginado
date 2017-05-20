@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ru55o.luckypalm.acertijos">
+    package="com.ru55o.luckypalm.peliculas">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.MainActivity"
+            android:name="com.ru55o.luckypalm.peliculas.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -28,24 +28,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.SelectLevelActivity"
+            android:name="com.ru55o.luckypalm.peliculas.SelectLevelActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.GuessImageActivity"
+            android:name="com.ru55o.luckypalm.peliculas.GuessImageActivity"
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.BuySecondsActivity"
+            android:name="com.ru55o.luckypalm.peliculas.BuySecondsActivity"
             android:label="@string/title_activity_buy_seconds"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.PlayForSecondsActivity"
+            android:name="com.ru55o.luckypalm.peliculas.PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -56,7 +56,7 @@
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider454632721555405"
+            android:authorities="com.facebook.app.FacebookContentProvider1234"
             android:exported="true" />
     </application>
 
