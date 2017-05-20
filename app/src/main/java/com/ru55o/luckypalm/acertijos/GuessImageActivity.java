@@ -219,7 +219,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
                 }
                 public void onFinish() {
-                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(level)) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    }
                 }
             }.start();
         }
@@ -242,7 +244,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.setType("image/*");
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Próximamente en Apple Store");
 
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
@@ -503,9 +505,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             toastLose.cancel();
         }
 
-        if (Integer.parseInt(levelSelected) % 3 == 0 && mInterstitialAd.isLoaded()){
+        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 3 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded()){
             mInterstitialAd.show();
         }
+        imageToGuess.setImageDrawable(null);
+
         finish();
     }
 
