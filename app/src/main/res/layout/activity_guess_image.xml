@@ -88,7 +88,7 @@
         android:background="@drawable/acertijos_title_es"
         android:layout_above="@+id/imageToGuess"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="15dp"/>
 
     <ImageView
         android:id="@+id/sharewsap"

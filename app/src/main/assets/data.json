@@ -44,7 +44,7 @@
   },{
     "peliculas": "gladiador"
   },{
-    "peliculas": "se lo que hicieron|el verano pasado"
+    "peliculas": "intensamente"
   },{
     "peliculas": "indiana jones"
   },{
@@ -204,7 +204,7 @@
   },{
     "peliculas": "el regalo|prometido"
   },{
-    "peliculas": "los picapiedras"
+    "peliculas": "los|picapiedras"
   },{
     "peliculas": "los pinguinos|de madagascar"
   },{
@@ -254,21 +254,19 @@
   },{
     "peliculas": "happy feet"
   },{
-    "peliculas": "mi novia"
-  },{
     "peliculas": "mi novia|polly"
   },{
     "peliculas": "malefica"
   },{
-    "peliculas": "el vengador"
+    "peliculas": "el|castigador"
   },{
     "peliculas": "ted"
   },{
-    "peliculas": "el senor|de los anillos"
+    "peliculas": "angry birds|la pelicula"
   },{
     "peliculas": "como entrenar|a mi dragon"
   },{
-    "peliculas": "alicia en el pais|de las maravillas"
+    "peliculas": "los locos adams"
   },{
     "peliculas": "los minions"
   },{
@@ -369,8 +367,6 @@
     "peliculas": "harry|potter"
   },{
     "peliculas": "el santo"
-  },{
-    "peliculas": "los locos adams"
   }
 ]
 }

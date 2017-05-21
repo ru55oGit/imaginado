@@ -400,10 +400,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
-        uri = languageSelected.booleanValue() ? "wuzzles" +  levelSelected : "adivinanzas" + levelSelected;
+        uri = languageSelected.booleanValue() ? "peliculas" +  levelSelected : "peliculas" + levelSelected;
         res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
+        imageToGuess.setImageResource(0);
         imageToGuess.setImageResource(res);
         // Zoom de la imagen a adivinar
         imageToGuess.setOnClickListener(new View.OnClickListener() {
@@ -419,7 +420,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
         // obtengo la palabra que se va adivinar segun el idioma seleccionado
-        word = languageSelected.booleanValue() ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
+        word = languageSelected.booleanValue() ? getWord("words", levelSelected) : obtenerPalabra("peliculas", levelSelected);
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
@@ -508,7 +509,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 3 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded()){
-            mInterstitialAd.show();
+            //mInterstitialAd.show();
         }
         imageToGuess.setImageDrawable(null);
 

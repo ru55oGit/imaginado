@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Descifralo Peliculas</string>
-    <string name="facebook_app_id">1234</string>
+    <string name="facebook_app_id">12345</string>
     <string name="admob_app_id">ca-app-pub-5537378422935748~4014423715</string>
     <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/5491156910</string>
     <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/6967890117</string>
