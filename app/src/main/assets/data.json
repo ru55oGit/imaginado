@@ -36,7 +36,7 @@
   },{
     "peliculas": "ironman"
   },{
-    "peliculas": "los gremlins"
+    "peliculas": "gremlins"
   },{
     "peliculas": "linterna|verde"
   },{
@@ -162,7 +162,7 @@
   },{
     "peliculas": "dia de la|independencia"
   },{
-    "peliculas": "aladin"
+    "peliculas": "aladdin"
   },{
     "peliculas": "toy story"
   },{
@@ -192,7 +192,7 @@
   },{
     "peliculas": "batman"
   },{
-    "peliculas": "hulk"
+    "peliculas": "el increible|hulk"
   },{
     "peliculas": "vecinos|invasores"
   },{
@@ -226,7 +226,7 @@
   },{
     "peliculas": "los sospechosos|de siempre"
   },{
-    "peliculas": "lego movie"
+    "peliculas": "lego|la pelicula"
   },{
     "peliculas": "mary poppins"
   },{
@@ -266,7 +266,7 @@
   },{
     "peliculas": "como entrenar|a mi dragon"
   },{
-    "peliculas": "los locos adams"
+    "peliculas": "zootopia"
   },{
     "peliculas": "los minions"
   },{
@@ -274,7 +274,7 @@
   },{
     "peliculas": "la momia"
   },{
-    "peliculas": "faivel"
+    "peliculas": "faivel un cuento|americano"
   },{
     "peliculas": "milagros|inesperados"
   },{
@@ -290,13 +290,13 @@
   },{
     "peliculas": "la maquina|del tiempo"
   },{
-    "peliculas": "el naufrago"
+    "peliculas": "naufrago"
   },{
     "peliculas": "la familia|de mi novia"
   },{
     "peliculas": "viernes 13"
   },{
-    "peliculas": "hombre de|negro"
+    "peliculas": "hombres de|negro"
   },{
     "peliculas": "los piratas|del caribe"
   },{
@@ -324,7 +324,7 @@
   },{
     "peliculas": "la guerra de|los mundos"
   },{
-    "peliculas": "charly y la fabrica|de chocolate"
+    "peliculas": "atrapame|si puedes"
   },{
     "peliculas": "x men"
   },{
@@ -367,6 +367,8 @@
     "peliculas": "harry|potter"
   },{
     "peliculas": "el santo"
+  },{
+    "peliculas": "los locos|adams"
   }
 ]
 }

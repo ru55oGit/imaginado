@@ -420,7 +420,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
         // obtengo la palabra que se va adivinar segun el idioma seleccionado
-        word = languageSelected.booleanValue() ? getWord("words", levelSelected) : obtenerPalabra("peliculas", levelSelected);
+        word = languageSelected.booleanValue() ? getWord("peliculas", levelSelected) : obtenerPalabra("peliculas", levelSelected);
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
@@ -508,8 +508,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             toastLose.cancel();
         }
 
-        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 3 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded()){
-            //mInterstitialAd.show();
+        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded()){
+            mInterstitialAd.show();
         }
         imageToGuess.setImageDrawable(null);
 
