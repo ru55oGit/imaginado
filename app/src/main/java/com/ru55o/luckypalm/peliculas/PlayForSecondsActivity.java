@@ -167,6 +167,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     focus.setFocusableInTouchMode(true);
                     focus.requestFocus();
 
+                    ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
+                    keyboardIcon.setVisibility(View.INVISIBLE);
+
                     if (cantPreguntas == 5 && mInterstitialAd.isLoaded()){
                         mInterstitialAd.show();
                     } else {
