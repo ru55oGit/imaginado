@@ -18,12 +18,12 @@
     <string name="sin_tiempo_title_es">Te quedaste sin segundos</string>
     <string name="sin_tiempo_title_en">You are out of time</string>
     <string name="sin_tiempo_comprar_es">Puedes conseguir más tiempo comprando aquí...</string>
-    <string name="sin_tiempo_jugar_es">...o sigue jugando para ganar más...</string>
-    <string name="sin_tiempo_vervideo_es">...o mira el vídeo y obtiene 60 segundos...</string>
-    <string name="sin_tiempo_compartir_es">O comparte en redes sociales y consigue 30 segundos.</string>
+    <string name="sin_tiempo_jugar_es">...seguir jugando para ganar más...</string>
+    <string name="sin_tiempo_vervideo_es">...mirar el vídeo y obtener 60 segundos...</string>
+    <string name="sin_tiempo_compartir_es">O compartir en redes sociales y conseguir 30 segundos.</string>
     <string name="sin_tiempo_comprar_en">You can buy more seconds here...</string>
-    <string name="sin_tiempo_jugar_en">...or keep playing to get more...</string>
-    <string name="sin_tiempo_vervideo_en">...or watch this video and obtain 60 seconds...</string>
+    <string name="sin_tiempo_jugar_en">...keep playing to get more...</string>
+    <string name="sin_tiempo_vervideo_en">...watch this video and obtain 60 seconds...</string>
     <string name="sin_tiempo_compartir_en">Or share and obtain 30 secs.</string>
     <string name="generic_share_text">¿Puedes resolver estos acertijos?</string>
     <string name="select_level_title_es">Elige el nivel</string>
