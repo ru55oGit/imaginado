@@ -184,10 +184,21 @@ public class SelectLevelActivity extends AppCompatActivity {
     private int getLevelCount() {
         int count = 0;
         try {
-            String jsonLocation = AssetJSONFile("data.json", getBaseContext());
+            String jsonLocation;
+            JSONArray jarray;
+            if (!mySwitch.isChecked()) {
+                jsonLocation = AssetJSONFile("data.json", getBaseContext());
+            } else {
+                jsonLocation = AssetJSONFile("data_en.json", getBaseContext());
+            }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles
-            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");
+            if (!mySwitch.isChecked()) {
+                jarray = (JSONArray) jsonobject.getJSONArray("palabras");
+            } else {
+                jarray = (JSONArray) jsonobject.getJSONArray("words");
+            }
+
             count = jarray.length();
         } catch (IOException e) {
             e.printStackTrace();

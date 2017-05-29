@@ -8,7 +8,7 @@ android {
         applicationId "com.ru55o.luckypalm.acertijos"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 8
+        versionCode 9
         versionName "1.1"
     }
     buildTypes {

@@ -302,7 +302,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
+                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Próximamente en Apple Store";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -398,7 +398,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
 
-        labelLevelText.setText(languageSelected.booleanValue()? "Level " : "Nivel " + levelSelected);
+        labelLevelText.setText(languageSelected.booleanValue()? "Level " + levelSelected: "Nivel " + levelSelected);
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
@@ -845,7 +845,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
     // retorno la ruta del screenshot
     public String saveBitmap(Bitmap bitmap, Boolean fullImage) {
-        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_sinsegundos.jpg");
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_acertijos_"+ Math.random()*1000 +".jpg");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
