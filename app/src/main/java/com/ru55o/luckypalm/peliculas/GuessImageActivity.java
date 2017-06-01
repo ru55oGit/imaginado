@@ -211,7 +211,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
                 @Override
                 public void onRewardedVideoAdFailedToLoad(int err) {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GuessImageActivity.this, "Fallo la carga del video, igual obtienes 15\"", Toast.LENGTH_SHORT).show();
+                    editor.putInt("time", 1500);
+                    editor.commit();
                 }
             });
             loadRewardedVideoAd();
@@ -246,7 +248,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.setType("image/*");
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Próximamente en Apple Store");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo Películas: https://goo.gl/syvO00. Próximamente en Apple Store");
 
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
@@ -269,7 +271,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         labelLevelText.setVisibility(View.VISIBLE);
 
                         String shareText = new String();
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
+                        shareText = "Play Store: Descifralo https://goo.gl/syvO00. Proximamente en Apple Store";
                         Bitmap image = takeScreenshot();
                         image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
                         SharePhoto photo = new SharePhoto.Builder()
@@ -302,7 +304,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
+                        shareText = "Play Store: Descifralo https://goo.gl/syvO00. Proximamente en Apple Store";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -398,7 +400,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
 
-        labelLevelText.setText(languageSelected.booleanValue()? "Level " : "Nivel " + levelSelected);
+        labelLevelText.setText(languageSelected.booleanValue()? "Level " + levelSelected: "Nivel " + levelSelected);
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
@@ -514,6 +516,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             mInterstitialAd.show();
         }
         imageToGuess.setImageDrawable(null);
+
+        // Por el bug del video que hace crashear la app cdo viene en landscape, le regalo al usuario 30 seg
+        if (GuessImageActivity.this.getResources().getConfiguration().orientation == 2) {
+            editor.putInt("time", 30000);
+            editor.commit();
+        }
 
         finish();
     }
@@ -846,7 +854,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
     // retorno la ruta del screenshot
     public String saveBitmap(Bitmap bitmap, Boolean fullImage) {
-        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_sinsegundos.jpg");
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_peliculas_ " + Math.random()*1000 + ".jpg");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
@@ -990,12 +998,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                        String sharedImage = "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw";
+                        String sharedImage = "https://lh3.googleusercontent.com/5zLHBblzEFvXIpq5W18OUkK_pOwv7dB3iCvKMW6JD8HSk_E9p4RseksFZwbcWn0ATo4=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
-                                    .setContentTitle("Descifralo")
+                                    .setContentTitle("Descifralo Películas")
                                     .setContentDescription(sharedDescription)
-                                    .setContentUrl(Uri.parse("https://goo.gl/CrnO9M"))
+                                    .setContentUrl(Uri.parse("https://goo.gl/syvO00"))
                                     .setImageUrl(Uri.parse(sharedImage))
                                     .build();
                             shareDialog.show(shareLinkContent);
@@ -1023,8 +1031,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.com.ru55o.luckypalm.peliculas/drawable/sharetwitterimage");
-                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/CrnO9M";
+                        Uri screenshotUri = Uri.parse("android.resource://com.ru55o.luckypalm.peliculas/drawable/sharetwitterimage");
+                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/syvO00";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1058,7 +1066,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/CrnO9M";
+                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/syvO00";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
