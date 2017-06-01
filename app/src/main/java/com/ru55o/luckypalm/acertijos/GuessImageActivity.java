@@ -211,7 +211,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
                 @Override
                 public void onRewardedVideoAdFailedToLoad(int err) {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GuessImageActivity.this, "Fallo la carga del video, igual obtiene 15\"" + err, Toast.LENGTH_SHORT).show();
+                    editor.putInt("time", 15000);
+                    editor.commit();
                 }
             });
             loadRewardedVideoAd();
@@ -513,6 +515,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             mInterstitialAd.show();
         }
         imageToGuess.setImageDrawable(null);
+
+        // Por el bug del video que hace crashear la app cdo viene en landscape, le regalo al usuario 30 seg
+        if (GuessImageActivity.this.getResources().getConfiguration().orientation == 2) {
+            editor.putInt("time", 30000);
+            editor.commit();
+        }
 
         finish();
     }
