@@ -517,12 +517,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
         imageToGuess.setImageDrawable(null);
 
-        // Por el bug del video que hace crashear la app cdo viene en landscape, le regalo al usuario 30 seg
-        if (GuessImageActivity.this.getResources().getConfiguration().orientation == 2) {
-            editor.putInt("time", 30000);
-            editor.commit();
-        }
-
         finish();
     }
 

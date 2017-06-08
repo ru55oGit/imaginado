@@ -8,7 +8,7 @@ android {
         applicationId "com.ru55o.luckypalm.peliculas"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 3
+        versionCode 4
         versionName "1.1"
     }
     buildTypes {
@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
