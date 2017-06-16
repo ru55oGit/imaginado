@@ -114,6 +114,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private RewardedVideoAd mVideoAd;
     private InterstitialAd mInterstitialAd;
 
+    private Dialog dialogCustom;
+
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
@@ -200,7 +202,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
                 @Override
                 public void onRewarded(RewardItem rewardItem) {
-                    Toast.makeText(GuessImageActivity.this, "Has obtenido" + rewardItem.getAmount() + rewardItem.getType(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GuessImageActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+rewardItem.getType(), Toast.LENGTH_LONG).show();
                     milisegundos+= rewardItem.getAmount()*1000;
                     editor.putInt("time", milisegundos);
                     editor.commit();
@@ -211,9 +213,17 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
                 @Override
                 public void onRewardedVideoAdFailedToLoad(int err) {
-                    Toast.makeText(GuessImageActivity.this, "Fallo la carga del video, igual obtiene 15\"" + err, Toast.LENGTH_SHORT).show();
-                    editor.putInt("time", 15000);
-                    editor.commit();
+                    if (milisegundos <= 0 ) {
+                        if (!languageSelected.booleanValue()) {
+                            Toast.makeText(GuessImageActivity.this, "Fallo la carga del video, igual obtiene 15\"" , Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(GuessImageActivity.this, "Video load failed, gains 15\" anyway" , Toast.LENGTH_LONG).show();
+                        }
+
+                        editor.putInt("time", 15000);
+                        editor.commit();
+                        finish();
+                    }
                 }
             });
             loadRewardedVideoAd();
@@ -248,7 +258,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.setType("image/*");
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Próximamente en Apple Store");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Próx. en Apple Store");
 
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
@@ -271,7 +281,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         labelLevelText.setVisibility(View.VISIBLE);
 
                         String shareText = new String();
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
+                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Próx. en Apple Store";
                         Bitmap image = takeScreenshot();
                         image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
                         SharePhoto photo = new SharePhoto.Builder()
@@ -304,7 +314,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Próximamente en Apple Store";
+                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Próx. en Apple Store";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -515,12 +525,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             mInterstitialAd.show();
         }
         imageToGuess.setImageDrawable(null);
-
-        // Por el bug del video que hace crashear la app cdo viene en landscape, le regalo al usuario 30 seg
-        if (GuessImageActivity.this.getResources().getConfiguration().orientation == 2) {
-            editor.putInt("time", 30000);
-            editor.commit();
-        }
 
         finish();
     }
@@ -930,7 +934,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private void customDialog(){
         // custom dialog
-        final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
 
@@ -1109,6 +1113,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(mVideoAd.isLoaded()) {
                     mVideoAd.show();
+                } else {
+                    if (!languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(),"El video no se estaria cargando, intentalo nuevamente, por favorcito :) ", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Video upload has failed, try again", Toast.LENGTH_LONG).show();
+                    }
+
+                    loadRewardedVideoAd();
                 }
             }
         });
