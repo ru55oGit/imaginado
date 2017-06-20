@@ -114,6 +114,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private RewardedVideoAd mVideoAd;
     private InterstitialAd mInterstitialAd;
 
+    private Dialog dialogCustom;
+
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
@@ -926,7 +928,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private void customDialog(){
         // custom dialog
-        final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
 
@@ -1105,6 +1107,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(mVideoAd.isLoaded()) {
                     mVideoAd.show();
+                } else {
+                    if (!languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(), "El video no se estaría cargando, intentalo nuevamente, por favorcito :)",Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getBaseContext(), "Video upload has failed, try again",Toast.LENGTH_LONG).show();
+                    }
+                    loadRewardedVideoAd();
                 }
             }
         });
