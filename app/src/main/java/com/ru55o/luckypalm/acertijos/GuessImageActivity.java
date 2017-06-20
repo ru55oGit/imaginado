@@ -1033,7 +1033,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        Uri screenshotUri = Uri.parse("android.resource://com.luckypalm.com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage");
+                        Uri screenshotUri = Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage");
                         String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
