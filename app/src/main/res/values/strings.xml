@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Descifralo Peliculas</string>
-    <string name="facebook_app_id">12345</string>
+    <string name="facebook_app_id">1861997300683896</string>
     <string name="admob_app_id">ca-app-pub-5537378422935748~4014423715</string>
-    <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/5491156910</string>
-    <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/6967890117</string>
-    <string name="banner_ad_unit_video">ca-app-pub-5537378422935748/2398089711</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5537378422935748/7373882514</string>
+    <string name="banner_ad_unit_interstitial">ca-app-pub-5537378422935748/1327348911</string>
+    <string name="banner_ad_unit_video">ca-app-pub-5537378422935748/2804082116</string>
     <string name="inapp_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgV4MwVjUWnLquTOL6Oe9ZnOdD53ukEZnGQ7ILnuoRd/OMeIj+uSyQLgDgfe1h5nKf2qP7xPK4rl86y93XEdkf+K8Rwu3lmH95yQkoy/FI+WGmJsSmIczI8QUvd3SjLbkiUGvRU2TGqhWxMJ5NskJpJdk3xS6GrAkVDCqQvDh5NxXw0w9z30ZF0jPqAGELr3Uir1a9HtgQuFZcJfG7ZmM6br04GGGzCFQAsqUzNnaCwLpckEszHHe8Z5e6Zz/3zX8ek175M8g3xut8Eh2NA2kfNyVhpGsUx9+H3HxxUgAnXxfwkrrL1NTAIF603hV2rUSWeB587NhaWptAH1tfuvE8QIDAQAB</string>
     <string name="title_activity_select_images">SelectImages</string>
     <string name="title_activity_guess_image">GuessImageActivity</string>
@@ -18,12 +18,12 @@
     <string name="sin_tiempo_title_es">Te quedaste sin segundos</string>
     <string name="sin_tiempo_title_en">You are out of time</string>
     <string name="sin_tiempo_comprar_es">Puedes conseguir más tiempo comprando aquí...</string>
-    <string name="sin_tiempo_jugar_es">...o sigue jugando para ganar más...</string>
-    <string name="sin_tiempo_vervideo_es">...o mira el vídeo y obtiene 60 segundos...</string>
-    <string name="sin_tiempo_compartir_es">O comparte en redes sociales y consigue 30 segundos.</string>
+    <string name="sin_tiempo_jugar_es">...seguir jugando para ganar más...</string>
+    <string name="sin_tiempo_vervideo_es">...mirar el vídeo y obtener 60 segundos...</string>
+    <string name="sin_tiempo_compartir_es">O compartir en redes sociales y conseguir 30 segundos.</string>
     <string name="sin_tiempo_comprar_en">You can buy more seconds here...</string>
-    <string name="sin_tiempo_jugar_en">...or keep playing to get more...</string>
-    <string name="sin_tiempo_vervideo_en">...or watch this video and obtain 60 seconds...</string>
+    <string name="sin_tiempo_jugar_en">...keep playing to get more...</string>
+    <string name="sin_tiempo_vervideo_en">...watch this video and obtain 60 seconds...</string>
     <string name="sin_tiempo_compartir_en">Or share and obtain 30 secs.</string>
     <string name="generic_share_text">¿Puedes resolver estos acertijos?</string>
     <string name="select_level_title_es">Elige el nivel</string>

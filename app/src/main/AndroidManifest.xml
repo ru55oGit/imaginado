@@ -39,6 +39,7 @@
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.ru55o.luckypalm.peliculas.BuySecondsActivity"
@@ -58,7 +59,7 @@
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider12345"
+            android:authorities="com.facebook.app.FacebookContentProvider1861997300683896"
             android:exported="true" />
     </application>
 
