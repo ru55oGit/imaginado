@@ -209,7 +209,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
                 @Override
                 public void onRewardedVideoAdFailedToLoad(int err) {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdFailedToLoad" + err, Toast.LENGTH_SHORT).show();
+                    if (milisegundos <= 0) {
+                        if (!languageSelected.booleanValue()) {
+                            Toast.makeText(GuessImageActivity.this, "Falló la carga del video, igual obtiene 15\"", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(GuessImageActivity.this, "Video load failed, gains 15\" anyway", Toast.LENGTH_LONG).show();
+                        }
+                        editor.putInt("time", 15000);
+                        editor.commit();
+                        finish();
+                    }
                 }
             });
             loadRewardedVideoAd();
