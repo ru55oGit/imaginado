@@ -14,6 +14,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -111,6 +113,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private AdRequest adRequest;
     private RewardedVideoAd mVideoAd;
     private InterstitialAd mInterstitialAd;
+
+    private Dialog dialogCustom;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -253,7 +257,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.setType("image/*");
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Próximamente en Apple Store");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo Películas: https://goo.gl/syvO00. Próximamente en Apple Store");
 
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
@@ -276,7 +280,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         labelLevelText.setVisibility(View.VISIBLE);
 
                         String shareText = new String();
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
+                        shareText = "Play Store: Descifralo https://goo.gl/syvO00. Proximamente en Apple Store";
                         Bitmap image = takeScreenshot();
                         image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
                         SharePhoto photo = new SharePhoto.Builder()
@@ -309,7 +313,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Proximamente en Apple Store";
+                        shareText = "Play Store: Descifralo https://goo.gl/syvO00. Proximamente en Apple Store";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -405,7 +409,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
 
-        labelLevelText.setText(languageSelected.booleanValue()? "Level " : "Nivel " + levelSelected);
+        labelLevelText.setText(languageSelected.booleanValue()? "Level " + levelSelected: "Nivel " + levelSelected);
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
@@ -853,7 +857,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
     // retorno la ruta del screenshot
     public String saveBitmap(Bitmap bitmap, Boolean fullImage) {
-        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_sinsegundos.jpg");
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_peliculas_ " + Math.random()*1000 + ".jpg");
         FileOutputStream fos;
         try {
             fos = new FileOutputStream(imagePath);
@@ -913,13 +917,29 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
     }
 
+    private boolean haveNetworkConnection() {
+        boolean haveConnectedWifi = false;
+        boolean haveConnectedMobile = false;
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        for (NetworkInfo ni : netInfo) {
+            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+                if (ni.isConnected())
+                    haveConnectedWifi = true;
+            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (ni.isConnected())
+                    haveConnectedMobile = true;
+        }
+        return haveConnectedWifi || haveConnectedMobile;
+    }
+
     private void customDialog(){
         // custom dialog
-        final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
+        dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
 
-        LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle;
+        LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle, secondSeparator, thirdSeparator;
         ImageView ganar, comprar, vervideo, shareFace, shareTwit, shareWsap;
         TextView titleText, buyText, keepplayingText, watchvideoText, shareText;
 
@@ -957,18 +977,36 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             shareText.setText(getResources().getText(R.string.sin_tiempo_compartir_en));
         }
 
+        if (haveNetworkConnection()) {
+            secondSeparator = (LinearLayout) dialogCustom.findViewById(R.id.secondSeparator);
+            secondSeparator.setVisibility(View.GONE);
+            keepplayingText.setVisibility(View.GONE);
+            ganar.setVisibility(View.GONE);
+            winContainer.setVisibility(View.GONE);
+        } else {
+            thirdSeparator = (LinearLayout) dialogCustom.findViewById(R.id.thirdSeparator);
+            thirdSeparator.setVisibility(View.GONE);
+            watchvideoText.setVisibility(View.GONE);
+            vervideo.setVisibility(View.GONE);
+            watchContainer.setVisibility(View.GONE);
+
+            buyText.setVisibility(View.GONE);
+            comprar.setVisibility(View.GONE);
+            buyContainer.setVisibility(View.GONE);
+        }
+
         shareFace.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                        String sharedImage = "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw";
+                        String sharedImage = "https://lh3.googleusercontent.com/5zLHBblzEFvXIpq5W18OUkK_pOwv7dB3iCvKMW6JD8HSk_E9p4RseksFZwbcWn0ATo4=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
-                                    .setContentTitle("Descifralo")
+                                    .setContentTitle("Descifralo Películas")
                                     .setContentDescription(sharedDescription)
-                                    .setContentUrl(Uri.parse("https://goo.gl/CrnO9M"))
+                                    .setContentUrl(Uri.parse("https://goo.gl/syvO00"))
                                     .setImageUrl(Uri.parse(sharedImage))
                                     .build();
                             shareDialog.show(shareLinkContent);
@@ -1076,6 +1114,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(mVideoAd.isLoaded()) {
                     mVideoAd.show();
+                } else {
+                    if (!languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(), "El video no se estaria cargando, intentalo nuevamente, por favorcito :) ", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getBaseContext(), "Video upload has failed, try again", Toast.LENGTH_LONG).show();
+                    }
+                    loadRewardedVideoAd();
                 }
             }
         });
