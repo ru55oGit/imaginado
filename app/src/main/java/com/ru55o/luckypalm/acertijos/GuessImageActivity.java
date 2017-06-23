@@ -113,6 +113,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private AdRequest adRequest;
     private RewardedVideoAd mVideoAd;
     private InterstitialAd mInterstitialAd;
+    private Boolean avoidInterstitialOnShare;
 
     private Dialog dialogCustom;
 
@@ -164,6 +165,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
+        languageSelected = settings.getBoolean("languageSelected", true);
+        avoidInterstitialOnShare = true;
         // Interstitial
         if (settings.getBoolean("showAds", true)) {
             // ADS
@@ -202,7 +205,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 }
                 @Override
                 public void onRewarded(RewardItem rewardItem) {
-                    Toast.makeText(GuessImageActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+rewardItem.getType(), Toast.LENGTH_LONG).show();
+                    if (languageSelected.booleanValue()) {
+                        Toast.makeText(GuessImageActivity.this, "You have obtained " + rewardItem.getAmount() +" seconds", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(GuessImageActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+ rewardItem.getType(), Toast.LENGTH_LONG).show();
+                    }
                     milisegundos+= rewardItem.getAmount()*1000;
                     editor.putInt("time", milisegundos);
                     editor.commit();
@@ -253,17 +260,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
+                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.setType("image/*");
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Play Store: Descifralo https://goo.gl/CrnO9M. Próx. en Apple Store");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, sharetext);
 
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
                 } else {
-                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    if (languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -277,16 +290,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         if (timer != null) {
                             timer.cancel();
                         }
+                        if (Build.VERSION.SDK_INT > 16) {
+                            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+                        }
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        String shareText = new String();
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Próx. en Apple Store";
                         Bitmap image = takeScreenshot();
                         image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
                         SharePhoto photo = new SharePhoto.Builder()
                                 .setBitmap(image)
-                                .setCaption(shareText)
                                 .build();
                         SharePhotoContent content = new SharePhotoContent.Builder()
                                 .addPhoto(photo)
@@ -297,7 +310,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         }
                     }
                 } else {
-                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    if (languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -308,25 +325,28 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
-                        Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
-                        String shareText = new String();
-
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        shareText = "Play Store: Descifralo https://goo.gl/CrnO9M. Próx. en Apple Store";
+                        Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
+
+                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
                         sharingIntent.setType("image/png");
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, sharetext);
                         sharingIntent.setType("text/plain");
 
                         sharingIntent.setPackage("com.twitter.android");
                         startActivity(sharingIntent);
                     }
                 } else {
-                    Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    if (languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -363,7 +383,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         labelLevelText = (TextView) findViewById(R.id.labelLevelText);
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
-        languageSelected = settings.getBoolean("languageSelected", true);
         title = (ImageView) findViewById(R.id.title);
         frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
 
@@ -521,7 +540,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             toastLose.cancel();
         }
 
-        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 3 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded()){
+        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 3 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded() && avoidInterstitialOnShare){
             mInterstitialAd.show();
         }
         imageToGuess.setImageDrawable(null);
@@ -711,7 +730,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
+            if (languageSelected.booleanValue()) {
+                text.setText("You failed. -"+secondsToSubtract+" Secs");
+            } else {
+                text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
+            }
             text.setTypeface(lobsterFont);
 
             toastLose = new Toast(getApplicationContext());
@@ -999,15 +1022,18 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
-                        String sharedDescription =  getResources().getString(R.string.generic_share_text);
-                        String sharedImage = "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw";
+                        avoidInterstitialOnShare = false;
+                        String sharedDescription = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
+                        String sharedTitle = !languageSelected.booleanValue()? getResources().getString(R.string.title_share_text) : getResources().getString(R.string.title_share_text_en);
+                        String sharedImage = !languageSelected.booleanValue()? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"3.googleusercontent.com/5zLHBblzEFvXIpq5W18OUkK_pOwv7dB3iCvKMW6JD8HSk_E9p4RseksFZwbcWn0ATo4=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
-                                    .setContentTitle("Descifralo")
+                                    .setContentTitle(sharedTitle)
                                     .setContentDescription(sharedDescription)
                                     .setContentUrl(Uri.parse("https://goo.gl/CrnO9M"))
                                     .setImageUrl(Uri.parse(sharedImage))
                                     .build();
+
                             shareDialog.show(shareLinkContent);
 
                             showSoftKey = new CountDownTimer(3000, 1000) {
@@ -1022,7 +1048,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }.start();
                         }
                     } else {
-                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        if (languageSelected.booleanValue()) {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             }
@@ -1033,8 +1063,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        Uri screenshotUri = Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage");
-                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/CrnO9M";
+                        avoidInterstitialOnShare = false;
+                        Uri screenshotUri = !languageSelected.booleanValue()? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
+                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1054,7 +1085,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }
                         }.start();
                     } else {
-                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        if (languageSelected.booleanValue()) {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             }
@@ -1065,10 +1100,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.whatsapp")){
+                        avoidInterstitialOnShare = false;
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
+                        Bitmap largeIcon;
+                        if (!languageSelected.booleanValue()) {
+                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
+                        } else {
+                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimageen);
+                        }
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = getResources().getString(R.string.generic_share_text) + "https://goo.gl/CrnO9M";
+                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M": getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1086,7 +1127,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }
                         }.start();
                     } else {
-                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        if (languageSelected.booleanValue()) {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             }

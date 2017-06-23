@@ -26,6 +26,9 @@
     <string name="sin_tiempo_vervideo_en">...watch this video and obtain 60 seconds...</string>
     <string name="sin_tiempo_compartir_en">Or share and obtain 30 secs.</string>
     <string name="generic_share_text">¿Puedes resolver estos acertijos?</string>
+    <string name="generic_share_text_en">Can you solve this puzzles?</string>
+    <string name="title_share_text">Descifralo</string>
+    <string name="title_share_text_en">Descifralo</string>
     <string name="select_level_title_es">Elige el nivel</string>
     <string name="select_level_title_en">Choose level</string>
     <string name="toast_win_es">¡Ganaste 10 segundos!</string>
