@@ -25,7 +25,10 @@
     <string name="sin_tiempo_jugar_en">...keep playing to get more...</string>
     <string name="sin_tiempo_vervideo_en">...watch this video and obtain 60 seconds...</string>
     <string name="sin_tiempo_compartir_en">Or share and obtain 30 secs.</string>
-    <string name="generic_share_text">¿Puedes resolver estos acertijos?</string>
+    <string name="generic_share_text">¿Recuerdas en que película viste este ícono?</string>
+    <string name="generic_share_text_en">Do you remember what movie you saw on this icon?</string>
+    <string name="title_share_text">Descifralo Peliculas</string>
+    <string name="title_share_text_en">Descifralo Movies</string>
     <string name="select_level_title_es">Elige el nivel</string>
     <string name="select_level_title_en">Choose level</string>
     <string name="toast_win_es">¡Ganaste 10 segundos!</string>
