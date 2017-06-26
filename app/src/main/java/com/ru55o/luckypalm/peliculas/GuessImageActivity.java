@@ -36,6 +36,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -168,16 +169,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         languageSelected = settings.getBoolean("languageSelected", true);
         avoidInterstitialOnShare = true;
 
-        // Interstitial
-        if (settings.getBoolean("showAds", true)) {
-            // ADS
-            //MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
-            mInterstitialAd = new InterstitialAd(this);
-            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
-
-            requestNewInterstitial();
-        }
-
         // Banner footer
         if (settings.getBoolean("showAds", true)) {
             //Toast.makeText(GuessImageActivity.this, "showAds", Toast.LENGTH_LONG).show();
@@ -214,6 +205,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     milisegundos+= rewardItem.getAmount()*1000;
                     editor.putInt("time", milisegundos);
                     editor.commit();
+                    if (dialogCustom != null) {
+                        dialogCustom.dismiss();
+                    }
                 }
                 @Override
                 public void onRewardedVideoAdLeftApplication() {
@@ -233,7 +227,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     }
                 }
             });
-            loadRewardedVideoAd();
         } else {
             showSoftKey = new CountDownTimer(700, 1000) {
                 public void onTick(long millisUntilFinished) {
@@ -254,6 +247,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
+                        avoidInterstitialOnShare = false;
                         if (timer != null) {
                             timer.cancel();
                         }
@@ -287,6 +281,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.facebook.katana")) {
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
+                        avoidInterstitialOnShare = false;
                         if (timer != null) {
                             timer.cancel();
                         }
@@ -325,6 +320,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
+                        avoidInterstitialOnShare = false;
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
@@ -415,6 +411,16 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     }
                 }
             });
+        }
+
+        // Interstitial
+        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0) {
+            // ADS
+            //MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
+
+            requestNewInterstitial();
         }
 
         // Si el numero de nivel seleccionado es mayor al numero de nivel resuelto, no muestro el teclado
@@ -544,7 +550,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded() && avoidInterstitialOnShare){
             mInterstitialAd.show();
         }
-        imageToGuess.setImageDrawable(null);
+        imageToGuess = null;
 
         finish();
     }
@@ -921,23 +927,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     private void showImage(int res) {
-        final Dialog dialogCustom = new Dialog(GuessImageActivity.this);
-        dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialogCustom.setContentView(R.layout.custom_dialog_zoomimage);
+        final Dialog dialogCustomImage = new Dialog(GuessImageActivity.this);
+        dialogCustomImage.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialogCustomImage.setContentView(R.layout.custom_dialog_zoomimage);
 
         inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
 
-        ImageView imgZoom = (ImageView) dialogCustom.findViewById(R.id.imageToGuessZoom);
+        ImageView imgZoom = (ImageView) dialogCustomImage.findViewById(R.id.imageToGuessZoom);
         imgZoom.setImageResource(res);
-        dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
+        dialogCustomImage.setOnDismissListener(new Dialog.OnDismissListener() {
             public void onDismiss(final DialogInterface dialog) {
                 // Abro el teclado cuando me quedo sin tiempo
                 inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
             }
         });
 
-        if (dialogCustom != null) {
-            dialogCustom.show();
+        if (dialogCustomImage != null) {
+            dialogCustomImage.show();
         }
     }
 
@@ -958,6 +964,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     private void customDialog(){
+        loadRewardedVideoAd();
         // custom dialog
         dialogCustom = new Dialog(GuessImageActivity.this);
         dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -1160,12 +1167,25 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if(mVideoAd.isLoaded()) {
                     mVideoAd.show();
                 } else {
-                    if (!languageSelected.booleanValue()) {
-                        Toast.makeText(getBaseContext(), "El video no se estaria cargando, intentalo nuevamente, por favorcito :) ", Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(getBaseContext(), "Video upload has failed, try again", Toast.LENGTH_LONG).show();
-                    }
-                    loadRewardedVideoAd();
+                    ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.VISIBLE);
+                    showSoftKey = new CountDownTimer(10000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                           if (dialogCustom != null) {
+                               dialogCustom.dismiss();
+                           }
+                           if (mVideoAd.isLoaded()) {
+                               showSoftKey.cancel();
+                               mVideoAd.show();
+                               ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.INVISIBLE);
+                           }
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            dialogCustom.show();
+                        }
+                    }.start();
                 }
             }
         });
