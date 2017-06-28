@@ -248,7 +248,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
-                        avoidInterstitialOnShare = true;
+                        avoidInterstitialOnShare = false;
                         if (timer != null) {
                             timer.cancel();
                         }
@@ -282,7 +282,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.facebook.katana")) {
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
-                        avoidInterstitialOnShare = true;
+                        avoidInterstitialOnShare = false;
                         if (timer != null) {
                             timer.cancel();
                         }
@@ -321,7 +321,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
-                        avoidInterstitialOnShare = true;
+                        avoidInterstitialOnShare = false;
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
@@ -1031,7 +1031,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
-                        avoidInterstitialOnShare = true;
+                        avoidInterstitialOnShare = false;
                         String sharedDescription = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
                         String sharedTitle = getResources().getString(R.string.title_share_text_en);
                         String sharedImage = !languageSelected.booleanValue()? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
@@ -1072,7 +1072,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
-                        avoidInterstitialOnShare = true;
+                        avoidInterstitialOnShare = false;
                         Uri screenshotUri = !languageSelected.booleanValue()? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
                         String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
 
@@ -1109,7 +1109,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.whatsapp")){
-                        avoidInterstitialOnShare = true;
+                        avoidInterstitialOnShare = false;
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Bitmap largeIcon;
                         if (!languageSelected.booleanValue()) {
