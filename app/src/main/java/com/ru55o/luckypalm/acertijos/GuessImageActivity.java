@@ -170,64 +170,65 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         languageSelected = settings.getBoolean("languageSelected", true);
         avoidInterstitialOnShare = true;
 
+        // Use an activity context to get the rewarded video instance.
+        mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdOpened() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoStarted() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdClosed() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+                // Preload the next video ad.
+            }
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+                if (languageSelected.booleanValue()) {
+                    Toast.makeText(GuessImageActivity.this, "You have obtained " + rewardItem.getAmount() +" seconds", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(GuessImageActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+ rewardItem.getType(), Toast.LENGTH_LONG).show();
+                }
+                milisegundos+= rewardItem.getAmount()*1000;
+                editor.putInt("time", milisegundos);
+                editor.commit();
+                if (dialogCustom != null) {
+                    dialogCustom.dismiss();
+                }
+            }
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int err) {
+                if (milisegundos <= 0 ) {
+                    if (!languageSelected.booleanValue()) {
+                        Toast.makeText(GuessImageActivity.this, "Fallo la carga del video, igual obtiene 15\"" , Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(GuessImageActivity.this, "Video load failed, gains 15\" anyway" , Toast.LENGTH_LONG).show();
+                    }
+
+                    editor.putInt("time", 15000);
+                    editor.commit();
+                    finish();
+                }
+            }
+        });
+
         // Banner footer
         if (settings.getBoolean("showAds", true)) {
             //Toast.makeText(GuessImageActivity.this, "showAds", Toast.LENGTH_LONG).show();
             // ADS
             MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
-            // Use an activity context to get the rewarded video instance.
-            mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-            mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
-                @Override
-                public void onRewardedVideoAdLoaded() {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
-                }
-                @Override
-                public void onRewardedVideoAdOpened() {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
-                }
-                @Override
-                public void onRewardedVideoStarted() {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
-                }
-                @Override
-                public void onRewardedVideoAdClosed() {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
-                    // Preload the next video ad.
-                }
-                @Override
-                public void onRewarded(RewardItem rewardItem) {
-                    if (languageSelected.booleanValue()) {
-                        Toast.makeText(GuessImageActivity.this, "You have obtained " + rewardItem.getAmount() +" seconds", Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(GuessImageActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+ rewardItem.getType(), Toast.LENGTH_LONG).show();
-                    }
-                    milisegundos+= rewardItem.getAmount()*1000;
-                    editor.putInt("time", milisegundos);
-                    editor.commit();
-                    if (dialogCustom != null) {
-                        dialogCustom.dismiss();
-                    }
-                }
-                @Override
-                public void onRewardedVideoAdLeftApplication() {
-                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
-                }
-                @Override
-                public void onRewardedVideoAdFailedToLoad(int err) {
-                    if (milisegundos <= 0 ) {
-                        if (!languageSelected.booleanValue()) {
-                            Toast.makeText(GuessImageActivity.this, "Fallo la carga del video, igual obtiene 15\"" , Toast.LENGTH_LONG).show();
-                        } else {
-                            Toast.makeText(GuessImageActivity.this, "Video load failed, gains 15\" anyway" , Toast.LENGTH_LONG).show();
-                        }
-
-                        editor.putInt("time", 15000);
-                        editor.commit();
-                        finish();
-                    }
-                }
-            });
         } else {
             showSoftKey = new CountDownTimer(700, 1000) {
                 public void onTick(long millisUntilFinished) {
