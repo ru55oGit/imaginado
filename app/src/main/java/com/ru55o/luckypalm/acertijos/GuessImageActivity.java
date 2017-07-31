@@ -871,9 +871,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 counter.setText("00:00");
                 // Cierro el teclado cuando me quedo sin tiempo
                 inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-
-                SharedPreferences settings = getSharedPreferences("Status", 0);
-                SharedPreferences.Editor editor = settings.edit();
+                milisegundos = 0;
+                settings = getSharedPreferences("Status", 0);
+                editor = settings.edit();
                 editor.putInt("time", 0);
                 editor.commit();
                 customDialog();
@@ -1183,7 +1183,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }
                         }
                         public void onFinish() {
-                            dialogCustom.show();
+                            if(!(GuessImageActivity.this).isFinishing()){
+                                dialogCustom.show();
+                            }
                         }
                     }.start();
                 }
