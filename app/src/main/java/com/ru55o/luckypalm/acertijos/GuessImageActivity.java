@@ -102,6 +102,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private ImageView volver;
     private ImageView title;
     private int res;
+    private TextView sharesTitle;
+    private int sharesCount;
 
     private LinearLayout firstLine;
     private LinearLayout secondLine;
@@ -168,7 +170,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
         languageSelected = settings.getBoolean("languageSelected", true);
+        // evito que se muestre el Interstitial cdo quiero compartir
         avoidInterstitialOnShare = true;
+        // llevo la cuenta de los shares apagar el interstitial
+        sharesCount = settings.getInt("sharesCount", 0);
 
         // Use an activity context to get the rewarded video instance.
         mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
@@ -250,6 +255,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
                         avoidInterstitialOnShare = false;
+                        sharesCount++;
                         if (timer != null) {
                             timer.cancel();
                         }
@@ -284,6 +290,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if(isAppInstalled(getBaseContext(), "com.facebook.katana")) {
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
                         avoidInterstitialOnShare = false;
+                        sharesCount++;
                         if (timer != null) {
                             timer.cancel();
                         }
@@ -323,6 +330,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
                     if (verifyStoragePermissions(GuessImageActivity.this)) {
                         avoidInterstitialOnShare = false;
+                        sharesCount++;
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
@@ -362,6 +370,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (settings.getBoolean("showAds", true) && mVideoAd != null) {
             mVideoAd.resume(this);
         }
+
         super.onResume();
 
         secondsToSubtract = 0;
@@ -415,8 +424,23 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             });
         }
 
+        sharesTitle = (TextView) findViewById(R.id.sharesTitle);
+        if (sharesCount < 10) {
+            if (languageSelected.booleanValue()) {
+                sharesTitle.setText("Share " + (10 - sharesCount) + " time to hide ads");
+            } else {
+                sharesTitle.setText("Comparte " + (10 - sharesCount) + " veces y elimina las publicidades");
+            }
+        } else {
+            if (languageSelected.booleanValue()) {
+                sharesTitle.setText("Ask your friends for help");
+            } else {
+                sharesTitle.setText("Pide ayuda a tus amigos");
+            }
+        }
+
         // Interstitial
-        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0) {
+        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0 && settings.getInt("sharesCount", 0) < 10) {
             // ADS
             //MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
             mInterstitialAd = new InterstitialAd(this);
@@ -548,9 +572,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             toastLose.cancel();
         }
 
-        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded() && avoidInterstitialOnShare){
+        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded() && avoidInterstitialOnShare && settings.getInt("sharesCount", 0) < 10){
             mInterstitialAd.show();
         }
+
+        editor.putInt("sharesCount", sharesCount);
+        editor.commit();
 
         imageToGuess = null;
 

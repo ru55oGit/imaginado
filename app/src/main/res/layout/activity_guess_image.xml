@@ -102,9 +102,11 @@
         android:padding="10dp">
 
         <TextView
+            android:id="@+id/sharesTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:textColorHighlight="@color/backLetters"
             android:text="Comparte 10 veces y elimina las publicidades"/>
 
         <LinearLayout
