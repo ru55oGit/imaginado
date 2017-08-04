@@ -90,34 +90,51 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"/>
 
-    <ImageView
-        android:id="@+id/sharewsap"
-        android:layout_width="@dimen/redes_icons"
-        android:layout_height="@dimen/redes_icons"
-        android:src="@drawable/whatsappicon"
-        android:layout_marginBottom="31dp"
+    <RelativeLayout
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/adView"
-        android:layout_alignRight="@+id/imageToGuess"
-        android:layout_alignEnd="@+id/imageToGuess" />
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/borders_black"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/sharetwitter"
-        android:layout_width="@dimen/redes_icons"
-        android:layout_height="@dimen/redes_icons"
-        android:src="@drawable/twittericon"
-        android:layout_alignTop="@+id/sharewsap"
-        android:layout_alignLeft="@+id/imageToGuess"
-        android:layout_alignStart="@+id/imageToGuess"
-        android:layout_marginRight="@dimen/fab_margin"/>
+        <TextView
+            android:id="@+id/sharesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColorHighlight="@color/backLetters"
+            android:text="Comparte 10 veces y elimina las publicidades"/>
 
-    <ImageView
-        android:id="@+id/sharefacebook"
-        android:layout_width="@dimen/redes_icons"
-        android:layout_height="@dimen/redes_icons"
-        android:src="@drawable/facebookicon"
-        android:layout_alignTop="@+id/sharewsap"
-        android:layout_centerHorizontal="true"
-        android:layout_marginRight="@dimen/fab_margin" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/sharewsap"
+                android:layout_width="@dimen/redes_icons"
+                android:layout_height="@dimen/redes_icons"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:src="@drawable/whatsappicon" />
+
+            <ImageView
+                android:id="@+id/sharetwitter"
+                android:layout_width="@dimen/redes_icons"
+                android:layout_height="@dimen/redes_icons"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:src="@drawable/twittericon" />
+
+            <ImageView
+                android:id="@+id/sharefacebook"
+                android:layout_width="@dimen/redes_icons"
+                android:layout_height="@dimen/redes_icons"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:src="@drawable/facebookicon" />
+        </LinearLayout>
+    </RelativeLayout>
 
     <ImageView
         android:layout_width="60dp"
