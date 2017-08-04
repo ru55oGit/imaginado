@@ -362,6 +362,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+
+        editor.putInt("sharesCount", sharesCount);
+        editor.commit();
+        
         finish();
     }
 
@@ -372,6 +376,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         super.onResume();
+
+        // llevo la cuenta de los shares apagar el interstitial
+        sharesCount = settings.getInt("sharesCount", 0);
 
         secondsToSubtract = 0;
 
