@@ -360,6 +360,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+
+        editor.putInt("sharesCount", sharesCount);
+        editor.commit();
+
         finish();
     }
 
