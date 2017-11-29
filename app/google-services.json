@@ -96,6 +96,94 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993407623963:android:2297399acc1c19e4",
+        "android_client_info": {
+          "package_name": "com.ru55o.luckypalm.peliculas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993407623963-l88blfeissmeu6g072cf4sor546k2qke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ru55o.luckypalm.peliculas",
+            "certificate_hash": "441674992d046971f28bafa733d81310e19c41d6"
+          }
+        },
+        {
+          "client_id": "993407623963-lun2eoc3tg2f3gknhr9ipq9qtqknhggq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJw8zAnxz7oXsjRqejT6LfjIdP47mZB8U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993407623963-lun2eoc3tg2f3gknhr9ipq9qtqknhggq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993407623963:android:6c2d88054872e73d",
+        "android_client_info": {
+          "package_name": "com.ru55o.luckypalm.preguntas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993407623963-pbd0me1uiacqsd35uet5vn4072o2nm5q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ru55o.luckypalm.preguntas",
+            "certificate_hash": "201defdd296771a7a7a558b166d3d0070bb26d5b"
+          }
+        },
+        {
+          "client_id": "993407623963-lun2eoc3tg2f3gknhr9ipq9qtqknhggq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJw8zAnxz7oXsjRqejT6LfjIdP47mZB8U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993407623963-lun2eoc3tg2f3gknhr9ipq9qtqknhggq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
