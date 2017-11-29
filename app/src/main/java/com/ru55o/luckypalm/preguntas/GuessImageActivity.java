@@ -1,4 +1,4 @@
-package com.ru55o.luckypalm.acertijos;
+package com.ru55o.luckypalm.preguntas;
 
 import android.Manifest;
 import android.app.Activity;
@@ -13,7 +13,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;

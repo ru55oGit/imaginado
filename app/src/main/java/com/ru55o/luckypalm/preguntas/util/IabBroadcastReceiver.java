@@ -1,4 +1,4 @@
-package com.ru55o.luckypalm.acertijos.util;
+package com.ru55o.luckypalm.preguntas.util;
 
 import android.content.BroadcastReceiver;
 

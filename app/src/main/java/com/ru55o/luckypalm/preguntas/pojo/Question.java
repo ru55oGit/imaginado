@@ -1,4 +1,4 @@
-package com.ru55o.luckypalm.acertijos.pojo;
+package com.ru55o.luckypalm.preguntas.pojo;
 
 /**
  * Created by toledop on 13/07/2016.

@@ -1,4 +1,4 @@
-package com.ru55o.luckypalm.acertijos;
+package com.ru55o.luckypalm.preguntas;
 
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -24,8 +24,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.vending.billing.IInAppBillingService;
-import com.ru55o.luckypalm.acertijos.util.IabHelper;
-import com.ru55o.luckypalm.acertijos.util.IabResult;
+import com.ru55o.luckypalm.preguntas.util.IabHelper;
+import com.ru55o.luckypalm.preguntas.util.IabResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;

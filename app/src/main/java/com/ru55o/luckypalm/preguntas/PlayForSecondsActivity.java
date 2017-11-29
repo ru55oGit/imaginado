@@ -1,4 +1,4 @@
-package com.ru55o.luckypalm.acertijos;
+package com.ru55o.luckypalm.preguntas;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -30,7 +30,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
-import com.ru55o.luckypalm.acertijos.pojo.Question;
+import com.ru55o.luckypalm.preguntas.pojo.Question;
 
 import org.json.JSONArray;
 import org.json.JSONException;
