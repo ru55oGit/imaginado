@@ -9,46 +9,49 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/launch_app_icon"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true">
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
-            android:name="com.ru55o.luckypalm.preguntas.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ru55o.luckypalm.preguntas.SelectLevelActivity"
-            android:screenOrientation="portrait"
+            android:name=".SelectLevelActivity"
             android:launchMode="singleTask"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ru55o.luckypalm.preguntas.GuessImageActivity"
+            android:name=".GuessImageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ru55o.luckypalm.preguntas.BuySecondsActivity"
+            android:name=".BuySecondsActivity"
             android:label="@string/title_activity_buy_seconds"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ru55o.luckypalm.preguntas.PlayForSecondsActivity"
+            android:name=".PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -59,8 +62,9 @@
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider454632721555405"
+            android:authorities="com.facebook.app.FacebookContentProvider12345"
             android:exported="true" />
+
     </application>
 
 </manifest>
