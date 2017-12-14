@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#0801b3</color>
+    <color name="colorPrimaryDark">#f4e76f</color>
     <color name="colorAccent">#000000</color>
     <color name="backLetters">#e33b3b</color>
     <color name="guessed">#0DE22F</color>
-    <color name="primaryColor">#cd1d15</color>
+    <color name="primaryColor">#fddd3f</color>
     <color name="secondaryColor">#414040</color>
     <color name="thirdColor">#ffffff</color>
     <color name="splahColor">#ffffff</color>
-    <color name="white">#ffffff</color>
-    <color name="numberLevel">#f2ebeb</color>
+    <color name="white">#7b7b79</color>
+    <color name="numberLevel">#7b7b79</color>
 </resources>

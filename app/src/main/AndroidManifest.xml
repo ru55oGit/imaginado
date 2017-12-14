@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ru55o.luckypalm.acertijos">
+    package="com.ru55o.luckypalm.emojis">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,7 +16,7 @@
         android:hardwareAccelerated="false"
         android:largeHeap="true">
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.MainActivity"
+            android:name="com.ru55o.luckypalm.emojis.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -30,25 +30,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.SelectLevelActivity"
+            android:name="com.ru55o.luckypalm.emojis.SelectLevelActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.GuessImageActivity"
+            android:name="com.ru55o.luckypalm.emojis.GuessImageActivity"
             android:label="@string/title_activity_guess_image"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.BuySecondsActivity"
+            android:name="com.ru55o.luckypalm.emojis.BuySecondsActivity"
             android:label="@string/title_activity_buy_seconds"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ru55o.luckypalm.acertijos.PlayForSecondsActivity"
+            android:name="com.ru55o.luckypalm.emojis.PlayForSecondsActivity"
             android:label="@string/title_activity_play_for_seconds"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -59,7 +59,7 @@
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider454632721555405"
+            android:authorities="com.facebook.app.FacebookContentProvider123456"
             android:exported="true" />
     </application>
 

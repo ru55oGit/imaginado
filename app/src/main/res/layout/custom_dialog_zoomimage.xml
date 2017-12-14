@@ -11,6 +11,6 @@
         android:layout_height="350dp"
         android:background="@color/secondaryColor"
         android:padding="15dp"
-        android:src="@drawable/adivinanzas1" />
+        android:src="@drawable/emojis1" />
 
 </LinearLayout>
