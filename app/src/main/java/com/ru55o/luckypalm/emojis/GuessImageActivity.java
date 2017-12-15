@@ -471,7 +471,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
-        uri = languageSelected.booleanValue() ? "wuzzles" +  levelSelected : "emojis" + levelSelected;
+        uri = languageSelected.booleanValue() ? "enojis" +  levelSelected : "emojis" + levelSelected;
         res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
