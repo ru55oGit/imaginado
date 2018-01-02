@@ -11,4 +11,5 @@
     <color name="splahColor">#ffffff</color>
     <color name="white">#7b7b79</color>
     <color name="numberLevel">#7b7b79</color>
+    <color name="backSelectLevel">#f2f2b9</color>
 </resources>

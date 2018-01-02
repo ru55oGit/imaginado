@@ -3,13 +3,19 @@ package com.ru55o.luckypalm.emojis;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -24,6 +30,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -115,19 +122,38 @@ public class SelectLevelActivity extends AppCompatActivity {
         } else {
             for (int i = 1;i <= getLevelCount(); i++) {
                 TextView levelCircle = new TextView(this);
+                Drawable backgroundLevel;
+                // por true es English
+                if (!mySwitch.isChecked()) {
+                    int res = getResources().getIdentifier("emojis"+i, "drawable", getPackageName());
+                    backgroundLevel = getResources().getDrawable(res);
+                    if (i > Integer.parseInt(levelSpanish)) {
+                        levelCircle.setAlpha(0.35f);
+                    }
+                } else {
+                    int res = getResources().getIdentifier("enojis"+i, "drawable", getPackageName());
+                    backgroundLevel = getResources().getDrawable(res);
+                    if (i > Integer.parseInt(levelEnglish)) {
+                        levelCircle.setAlpha(0.35f);
+                    }
+                }
+
                 //levelCircle.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics()));
-                levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 38);
+                levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
                 levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
                 levelCircle.setText(i+"");
                 levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));
+                GridLayout.LayoutParams params = new GridLayout.LayoutParams (contenedorNiveles.getLayoutParams());
+                params.setMargins(1, 1, 1, 1);
+
                 if (Build.VERSION.SDK_INT > 15) {
-                    levelCircle.setBackground(getResources().getDrawable(R.drawable.selectlevelback));
+                    levelCircle.setBackground(scaleImage(backgroundLevel, 0.22f));
                 }
                 if (Build.VERSION.SDK_INT > 17) {
-                    levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    levelCircle.setPadding(0,(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 13, getResources().getDisplayMetrics()),(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, getResources().getDisplayMetrics()),0);
+                    levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
+                    //levelCircle.setPadding(0,(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 13, getResources().getDisplayMetrics()),(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, getResources().getDisplayMetrics()),0);
                 } else {
-                    levelCircle.setPadding(45,30,20,0);
+                    //levelCircle.setPadding(45,30,20,0);
                 }
                 levelCircle.setTypeface(lobsterFont);
                 levelCircle.setOnClickListener(new View.OnClickListener() {
@@ -140,19 +166,34 @@ public class SelectLevelActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-                // por true es English
-                if (!mySwitch.isChecked()) {
-                    if (i > Integer.parseInt(levelSpanish)) {
-                        levelCircle.setAlpha(0.35f);
-                    }
-                } else {
-                    if (i > Integer.parseInt(levelEnglish)) {
-                        levelCircle.setAlpha(0.35f);
-                    }
-                }
+                levelCircle.setLayoutParams(params);
                 contenedorNiveles.addView(levelCircle);
             }
         }
+    }
+
+    public Drawable scaleImage (Drawable image, float scaleFactor) {
+
+        if ((image == null) || !(image instanceof BitmapDrawable)) {
+            return image;
+        }
+
+        Bitmap original = ((BitmapDrawable)image).getBitmap();
+
+        int sizeX = Math.round(image.getIntrinsicWidth() * scaleFactor);
+        int sizeY = Math.round(image.getIntrinsicHeight() * scaleFactor);
+
+        Bitmap bitmapResized = Bitmap.createScaledBitmap(original, sizeX, sizeY, false);
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+
+        bitmapResized.compress(Bitmap.CompressFormat.JPEG, 20, stream);
+        byte[] byteArray = stream.toByteArray();
+        Bitmap compressedBitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
+        image = new BitmapDrawable(getResources(), compressedBitmap);
+
+        return image;
+
     }
 
     @Override
