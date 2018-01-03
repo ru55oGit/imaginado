@@ -8,19 +8,20 @@ import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ScaleDrawable;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CompoundButton;
 import android.widget.GridLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Switch;
@@ -33,6 +34,7 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 
 public class SelectLevelActivity extends AppCompatActivity {
@@ -48,13 +50,16 @@ public class SelectLevelActivity extends AppCompatActivity {
     private RelativeLayout header, footer;
     private InputMethodManager inputMethodManager;
     private RelativeLayout frameLayout;
+    Typeface lobsterFont;
+    boolean autoclick;
+    LoadTask downloadTask;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_select_level);
 
         contenedorNiveles = (GridLayout) findViewById(R.id.innerLay);
@@ -72,132 +77,85 @@ public class SelectLevelActivity extends AppCompatActivity {
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
-
+        ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.VISIBLE);
+        autoclick = settings.getBoolean("autoclick", false);
+        // si hizo siguiente o anterior en la pantalla de guessimage, voy directo al nivel seteado
+        if (autoclick) {
+            Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
+            startActivity(intent);
+        } else {
+            // Creating a new non-ui thread task to download json data
+            downloadTask = new LoadTask();
+            // Starting the download process
+            downloadTask.execute();
+        }
         languageSelected = settings.getBoolean("languageSelected", true);
         mySwitch = (Switch) findViewById(R.id.switchy);
         mySwitch.setChecked(languageSelected);
         header = (RelativeLayout) findViewById(R.id.headerSelectLevel);
         footer = (RelativeLayout) findViewById(R.id.footerContainer);
         // por true es English
-        if(!mySwitch.isChecked()){
+        if (!mySwitch.isChecked()) {
             header.setBackgroundColor(getResources().getColor(R.color.primaryColor));
             footer.setBackgroundColor(getResources().getColor(R.color.primaryColor));
             title.setText(getResources().getString(R.string.select_level_title_es));
-        }else{
+        } else {
             header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             title.setText(getResources().getString(R.string.select_level_title_en));
         }
 
-        levelSpanish = settings.getString("levelSpanish","1");
-        levelEnglish = settings.getString("levelEnglish","1");
+        levelSpanish = settings.getString("levelSpanish", "1");
+        levelEnglish = settings.getString("levelEnglish", "1");
 
         //attach a listener to check for changes in state
         mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(mySwitch.isChecked()){
+                if (mySwitch.isChecked()) {
                     editor.putBoolean("languageSelected", true);
                     editor.commit();
+                    downloadTask.cancel(true);
                     onResume();
-                }else{
+                } else {
                     editor.putBoolean("languageSelected", false);
                     editor.commit();
+                    downloadTask.cancel(true);
                     onResume();
                 }
             }
         });
 
-        boolean autoclick = settings.getBoolean("autoclick", false);
-
         contenedorNiveles.removeAllViews();
 
-        Typeface lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
+        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         title.setTypeface(lobsterFont);
-
-        // si hizo siguiente o anterior en la pantalla de guessimage, voy directo al nivel seteado
-        if (autoclick) {
-            Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
-            startActivity(intent);
-        } else {
-            for (int i = 1;i <= getLevelCount(); i++) {
-                TextView levelCircle = new TextView(this);
-                Drawable backgroundLevel;
-                // por true es English
-                if (!mySwitch.isChecked()) {
-                    int res = getResources().getIdentifier("emojis"+i, "drawable", getPackageName());
-                    backgroundLevel = getResources().getDrawable(res);
-                    if (i > Integer.parseInt(levelSpanish)) {
-                        levelCircle.setAlpha(0.35f);
-                    }
-                } else {
-                    int res = getResources().getIdentifier("enojis"+i, "drawable", getPackageName());
-                    backgroundLevel = getResources().getDrawable(res);
-                    if (i > Integer.parseInt(levelEnglish)) {
-                        levelCircle.setAlpha(0.35f);
-                    }
-                }
-
-                //levelCircle.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics()));
-                levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-                levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
-                levelCircle.setText(i+"");
-                levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));
-                GridLayout.LayoutParams params = new GridLayout.LayoutParams (contenedorNiveles.getLayoutParams());
-                params.setMargins(1, 1, 1, 1);
-
-                if (Build.VERSION.SDK_INT > 15) {
-                    levelCircle.setBackground(scaleImage(backgroundLevel, 0.22f));
-                }
-                if (Build.VERSION.SDK_INT > 17) {
-                    levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
-                    //levelCircle.setPadding(0,(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 13, getResources().getDisplayMetrics()),(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, getResources().getDisplayMetrics()),0);
-                } else {
-                    //levelCircle.setPadding(45,30,20,0);
-                }
-                levelCircle.setTypeface(lobsterFont);
-                levelCircle.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        editor.putString("levelSelected", ((TextView) v).getText().toString());
-                        editor.commit();
-
-                        Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
-                        startActivity(intent);
-                    }
-                });
-                levelCircle.setLayoutParams(params);
-                contenedorNiveles.addView(levelCircle);
-            }
-        }
     }
-
-    public Drawable scaleImage (Drawable image, float scaleFactor) {
-
+    // uso este metodo para escalar y comprimir la imagen grande para mostrar
+    // los thumbnails
+    public Drawable scaleImage(Drawable image, float scaleFactor) {
         if ((image == null) || !(image instanceof BitmapDrawable)) {
             return image;
         }
-
-        Bitmap original = ((BitmapDrawable)image).getBitmap();
+        Bitmap original = ((BitmapDrawable) image).getBitmap();
 
         int sizeX = Math.round(image.getIntrinsicWidth() * scaleFactor);
         int sizeY = Math.round(image.getIntrinsicHeight() * scaleFactor);
-
+        // escalo
         Bitmap bitmapResized = Bitmap.createScaledBitmap(original, sizeX, sizeY, false);
 
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
+        // comprimo
         bitmapResized.compress(Bitmap.CompressFormat.JPEG, 20, stream);
         byte[] byteArray = stream.toByteArray();
-        Bitmap compressedBitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
+        Bitmap compressedBitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
         image = new BitmapDrawable(getResources(), compressedBitmap);
 
         return image;
-
     }
 
     @Override
-    public boolean onKeyDown (int keyCode, KeyEvent event){
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
         // arranco el timer cuando arriesga la primer tecla
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
@@ -213,7 +171,7 @@ public class SelectLevelActivity extends AppCompatActivity {
 
     }
 
-    public String AssetJSONFile (String filename, Context context) throws IOException {
+    public String AssetJSONFile(String filename, Context context) throws IOException {
         InputStream file = getAssets().open(filename);
         byte[] formArray = new byte[file.available()];
         file.read(formArray);
@@ -221,6 +179,7 @@ public class SelectLevelActivity extends AppCompatActivity {
 
         return new String(formArray);
     }
+
     // Retorno la cantidad de niveles que tengo en el juego (es -1 porque la primer posicion es cero)
     private int getLevelCount() {
         int count = 0;
@@ -246,6 +205,73 @@ public class SelectLevelActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return count-1;
+        return count - 1;
+    }
+
+    private class LoadTask extends AsyncTask<String, TextView, Void> {
+        @Override
+        protected Void doInBackground(String... url) {
+            try {
+                for (int i = 1; i <= getLevelCount(); i++) {
+                    TextView levelCircle = new TextView(getBaseContext());
+                    Drawable backgroundLevel;
+                    // por true es English
+                    if (!mySwitch.isChecked()) {
+                        int res = getResources().getIdentifier("emojis" + i, "drawable", getPackageName());
+                        backgroundLevel = getResources().getDrawable(res);
+                        if (i > Integer.parseInt(levelSpanish)) {
+                            levelCircle.setAlpha(0.35f);
+                        }
+                    } else {
+                        int res = getResources().getIdentifier("enojis" + i, "drawable", getPackageName());
+                        backgroundLevel = getResources().getDrawable(res);
+                        if (i > Integer.parseInt(levelEnglish)) {
+                            levelCircle.setAlpha(0.35f);
+                        }
+                    }
+
+                    //levelCircle.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics()));
+                    levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+                    levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
+                    levelCircle.setText(i + "");
+                    levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));
+                    GridLayout.LayoutParams params = new GridLayout.LayoutParams(contenedorNiveles.getLayoutParams());
+                    params.setMargins(1, 1, 1, 1);
+
+                    if (Build.VERSION.SDK_INT > 15) {
+                        levelCircle.setBackground(scaleImage(backgroundLevel, 0.22f));
+                    }
+                    if (Build.VERSION.SDK_INT > 17) {
+                        levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
+                    }
+                    levelCircle.setTypeface(lobsterFont);
+                    levelCircle.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            editor.putString("levelSelected", ((TextView) v).getText().toString());
+                            editor.commit();
+                            downloadTask.cancel(true);
+
+                            Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                    levelCircle.setLayoutParams(params);
+                    publishProgress(levelCircle);
+                }
+            } catch (Exception e) {
+                Log.d("Background Task", e.toString());
+            }
+            return null;
+        }
+        @Override
+        protected void onProgressUpdate(TextView... levelCircle) {
+            contenedorNiveles.addView(levelCircle[0]);
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.GONE);
+        }
     }
 }
