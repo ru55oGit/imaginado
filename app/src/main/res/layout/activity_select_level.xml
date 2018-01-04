@@ -70,6 +70,7 @@
             android:trackTint="@color/white"
             android:textOn="YES"
             android:textOff="SI"
+            android:visibility="invisible"
             android:layout_centerHorizontal="true"/>
 
         <TextView

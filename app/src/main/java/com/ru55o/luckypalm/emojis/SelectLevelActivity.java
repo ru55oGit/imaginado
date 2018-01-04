@@ -112,6 +112,7 @@ public class SelectLevelActivity extends AppCompatActivity {
         mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mySwitch.setVisibility(View.GONE);
                 if (mySwitch.isChecked()) {
                     editor.putBoolean("languageSelected", true);
                     editor.commit();
@@ -221,12 +222,38 @@ public class SelectLevelActivity extends AppCompatActivity {
                         backgroundLevel = getResources().getDrawable(res);
                         if (i > Integer.parseInt(levelSpanish)) {
                             levelCircle.setAlpha(0.35f);
+                        } else {
+                            levelCircle.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    mySwitch.setVisibility(View.GONE);
+                                    editor.putString("levelSelected", ((TextView) v).getText().toString());
+                                    editor.commit();
+                                    downloadTask.cancel(true);
+
+                                    Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
+                                    startActivity(intent);
+                                }
+                            });
                         }
                     } else {
                         int res = getResources().getIdentifier("enojis" + i, "drawable", getPackageName());
                         backgroundLevel = getResources().getDrawable(res);
                         if (i > Integer.parseInt(levelEnglish)) {
                             levelCircle.setAlpha(0.35f);
+                        } else {
+                            levelCircle.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    mySwitch.setVisibility(View.GONE);
+                                    editor.putString("levelSelected", ((TextView) v).getText().toString());
+                                    editor.commit();
+                                    downloadTask.cancel(true);
+
+                                    Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
+                                    startActivity(intent);
+                                }
+                            });
                         }
                     }
 
@@ -245,17 +272,6 @@ public class SelectLevelActivity extends AppCompatActivity {
                         levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
                     }
                     levelCircle.setTypeface(lobsterFont);
-                    levelCircle.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            editor.putString("levelSelected", ((TextView) v).getText().toString());
-                            editor.commit();
-                            downloadTask.cancel(true);
-
-                            Intent intent = new Intent(SelectLevelActivity.this, GuessImageActivity.class);
-                            startActivity(intent);
-                        }
-                    });
                     levelCircle.setLayoutParams(params);
                     publishProgress(levelCircle);
                 }
@@ -272,6 +288,7 @@ public class SelectLevelActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.GONE);
+            mySwitch.setVisibility(View.VISIBLE);
         }
     }
 }
