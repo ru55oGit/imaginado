@@ -10,5 +10,6 @@
     <color name="thirdColor">#ffffff</color>
     <color name="splahColor">#ffffff</color>
     <color name="white">#ffffff</color>
-    <color name="numberLevel">#f2ebeb</color>
+    <color name="numberLevel">#131313</color>
+    <color name="backSelectLevel">#cec9c9</color>
 </resources>
