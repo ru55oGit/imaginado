@@ -184,6 +184,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993407623963:android:bc56296ae7733dfd",
+        "android_client_info": {
+          "package_name": "com.ru55o.luckypalm.emojis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993407623963-d6vmmo1qu6mgeeqaptftj312f6vhtsdc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ru55o.luckypalm.emojis",
+            "certificate_hash": "201defdd296771a7a7a558b166d3d0070bb26d5b"
+          }
+        },
+        {
+          "client_id": "993407623963-lun2eoc3tg2f3gknhr9ipq9qtqknhggq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJw8zAnxz7oXsjRqejT6LfjIdP47mZB8U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993407623963-lun2eoc3tg2f3gknhr9ipq9qtqknhggq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
