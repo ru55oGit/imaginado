@@ -147,7 +147,7 @@ public class SelectLevelActivity extends AppCompatActivity {
 
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         // comprimo
-        bitmapResized.compress(Bitmap.CompressFormat.JPEG, 20, stream);
+        bitmapResized.compress(Bitmap.CompressFormat.JPEG, 50, stream);
         byte[] byteArray = stream.toByteArray();
         Bitmap compressedBitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
         image = new BitmapDrawable(getResources(), compressedBitmap);
@@ -163,6 +163,13 @@ public class SelectLevelActivity extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        downloadTask.cancel(true);
+        contenedorNiveles.removeAllViews();
     }
 
     @Override
