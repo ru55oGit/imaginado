@@ -166,6 +166,13 @@ public class SelectLevelActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onPause(){
+        super.onPause();
+        downloadTask.cancel(true);
+        contenedorNiveles.removeAllViews();
+    }
+
+    @Override
     public void onDestroy() {
         android.os.Process.killProcess(android.os.Process.myPid());
         super.onDestroy();
