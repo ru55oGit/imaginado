@@ -578,17 +578,17 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes21.jpg",
-      "respuesta": "the brain"
+      "respuesta": "cerebro"
     },
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes22.jpg",
-      "respuesta": "Secret|Squirrel"
+      "respuesta": "Inspector|Ardilla"
     },
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes23.jpg",
-      "respuesta": "yogi|bear"
+      "respuesta": "el oso|yogi"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -603,7 +603,7 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes26.jpg",
-      "respuesta": "freeza"
+      "respuesta": "freezer"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -623,7 +623,7 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes30.jpg",
-      "respuesta": "chef|smurf"
+      "respuesta": "pitufo|goloso"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -643,7 +643,7 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes34.jpg",
-      "respuesta": "ricky|rich"
+      "respuesta": "ricky|ricon"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -653,7 +653,7 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes36.jpg",
-      "respuesta": "papa|smurf"
+      "respuesta": "papa|pitufo"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -773,7 +773,7 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes60.jpg",
-      "respuesta": "smurf|fortachon"
+      "respuesta": "pitufo|fortachon"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -873,7 +873,7 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes80.jpg",
-      "respuesta": "smurf|filosofo"
+      "respuesta": "pitufo|filosofo"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -968,7 +968,7 @@
     {
       "titulo": "¿Cómo se llama?",
       "pregunta": "personajes100.jpg",
-      "respuesta": "smurf|vanidoso"
+      "respuesta": "pitufo|vanidoso"
     },
     {
       "titulo": "¿Cómo se llama?",
@@ -5752,7 +5752,7 @@
     },
     {
       "titulo": "",
-      "pregunta": "¿De qué color son los smurfs?",
+      "pregunta": "¿De qué color son los pitufos?",
       "respuesta": "azules"
     },
     {
@@ -6212,8 +6212,8 @@
     },
     {
       "titulo": "",
-      "pregunta": "¿Qué sonido hace el burro?",
-      "respuesta": "Rebuzna"
+      "pregunta": "¿Cómo se llama el sonido que hace el burro?",
+      "respuesta": "Rebuzne"
     },
     {
       "titulo": "",
@@ -7729,6 +7729,2768 @@
       "titulo": "",
       "pregunta": "¿En qué año comenzó la Primera Guerra Mundial?",
       "respuesta": "1914"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas1.jpg",
+      "respuesta": "lunatico"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas2.jpg",
+      "respuesta": "estomago"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas3.jpg",
+      "respuesta": "ingenio"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas4.jpg",
+      "respuesta": "pinocho"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas5.jpg",
+      "respuesta": "quincena"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas6.jpg",
+      "respuesta": "pantalon"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas7.jpg",
+      "respuesta": "enfadado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas8.jpg",
+      "respuesta": "bizcochuelo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas9.jpg",
+      "respuesta": "entretenido"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas10.jpg",
+      "respuesta": "pantano"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas11.jpg",
+      "respuesta": "sombrilla"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas12.jpg",
+      "respuesta": "sorpresa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas13.jpg",
+      "respuesta": "pepino"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas14.jpg",
+      "respuesta": "el gordo|y el flaco"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas15.jpg",
+      "respuesta": "conocimiento"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas16.jpg",
+      "respuesta": "revelar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas17.jpg",
+      "respuesta": "me chupa|un huevo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas18.jpg",
+      "respuesta": "termometro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas19.jpg",
+      "respuesta": "leer entre|lineas"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas20.jpg",
+      "respuesta": "escama"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas21.jpg",
+      "respuesta": "entrenadora"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas22.jpg",
+      "respuesta": "llave|inglesa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas23.jpg",
+      "respuesta": "fe de|erratas"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas24.jpg",
+      "respuesta": "encubierto"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas25.jpg",
+      "respuesta": "colaboracion"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas26.jpg",
+      "respuesta": "confirma"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas27.jpg",
+      "respuesta": "pancarta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas28.jpg",
+      "respuesta": "el canal de|la mancha"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas29.jpg",
+      "respuesta": "maniatico"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas30.jpg",
+      "respuesta": "circulo|vicioso"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas31.jpg",
+      "respuesta": "agua|oxigenada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas32.jpg",
+      "respuesta": "la torre|de pisa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas33.jpg",
+      "respuesta": "leche|cortada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas34.jpg",
+      "respuesta": "emparedado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas35.jpg",
+      "respuesta": "triangulo de|las bermudas"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas36.jpg",
+      "respuesta": "circulo|polar artico"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas37.jpg",
+      "respuesta": "guardar|bajo llave"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas38.jpg",
+      "respuesta": "todo sobre|ruedas"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas39.jpg",
+      "respuesta": "escalpelo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas40.jpg",
+      "respuesta": "limonada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas41.jpg",
+      "respuesta": "florencia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas42.jpg",
+      "respuesta": "aire|comprimido"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas43.jpg",
+      "respuesta": "ascensor"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas44.jpg",
+      "respuesta": "cantero"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas45.jpg",
+      "respuesta": "soldado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas46.jpg",
+      "respuesta": "berenjena"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas47.jpg",
+      "respuesta": "vino blanco"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas48.jpg",
+      "respuesta": "estetoscopio"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas49.jpg",
+      "respuesta": "palometa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas50.jpg",
+      "respuesta": "cucharita"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas51.jpg",
+      "respuesta": "mas vale tarde|que nunca"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas52.jpg",
+      "respuesta": "analfabeta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas53.jpg",
+      "respuesta": "alfa romeo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas54.jpg",
+      "respuesta": "climatizado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas55.jpg",
+      "respuesta": "comida|rapida"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas56.jpg",
+      "respuesta": "camaleon"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas57.jpg",
+      "respuesta": "fuego|cruzado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas58.jpg",
+      "respuesta": "votar en|blanco"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas59.jpg",
+      "respuesta": "caleidoscopio"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas60.jpg",
+      "respuesta": "polenta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas61.jpg",
+      "respuesta": "empanada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas62.jpg",
+      "respuesta": "resfrio"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas63.jpg",
+      "respuesta": "picara"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas64.jpg",
+      "respuesta": "emperador"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas65.jpg",
+      "respuesta": "apila"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas66.jpg",
+      "respuesta": "edad media"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas67.jpg",
+      "respuesta": "canoso"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas68.jpg",
+      "respuesta": "lenteja"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas69.jpg",
+      "respuesta": "bolchevique"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas70.jpg",
+      "respuesta": "paraguas"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas71.jpg",
+      "respuesta": "carajo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas72.jpg",
+      "respuesta": "cantantes"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas73.jpg",
+      "respuesta": "impresa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas74.jpg",
+      "respuesta": "paciente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas75.jpg",
+      "respuesta": "negrita"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas76.jpg",
+      "respuesta": "caracol"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas77.jpg",
+      "respuesta": "coliflor"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas78.jpg",
+      "respuesta": "mejor reir|que llorar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas79.jpg",
+      "respuesta": "dependencia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas80.jpg",
+      "respuesta": "porcelana"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas81.jpg",
+      "respuesta": "sobrevolar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas82.jpg",
+      "respuesta": "verde"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas83.jpg",
+      "respuesta": "viento en|popa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas84.jpg",
+      "respuesta": "sobrevivir"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas85.jpg",
+      "respuesta": "microscopico"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas86.jpg",
+      "respuesta": "corazonada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas87.jpg",
+      "respuesta": "epico"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas88.jpg",
+      "respuesta": "tesoro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas89.jpg",
+      "respuesta": "sintaxis"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas90.jpg",
+      "respuesta": "sin ton|ni son"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas91.jpg",
+      "respuesta": "empezar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas92.jpg",
+      "respuesta": "rueda de|prensa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas93.jpg",
+      "respuesta": "jueves|santo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas94.jpg",
+      "respuesta": "plano|inclinado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas95.jpg",
+      "respuesta": "desencuentro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas96.jpg",
+      "respuesta": "mal educado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas97.jpg",
+      "respuesta": "pariente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas98.jpg",
+      "respuesta": "pentagrama"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas99.jpg",
+      "respuesta": "ni fu ni fa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas100.jpg",
+      "respuesta": "pilates"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas101.jpg",
+      "respuesta": "envido"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas102.jpg",
+      "respuesta": "real|envido"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas103.jpg",
+      "respuesta": "falta|envido"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas104.jpg",
+      "respuesta": "dios|mediante"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas105.jpg",
+      "respuesta": "sincope"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas106.jpg",
+      "respuesta": "singapur"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas107.jpg",
+      "respuesta": "docena"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas108.jpg",
+      "respuesta": "mate|cocido"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas109.jpg",
+      "respuesta": "endosa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas110.jpg",
+      "respuesta": "postres|helados"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas111.jpg",
+      "respuesta": "puente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas112.jpg",
+      "respuesta": "aruba"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas113.jpg",
+      "respuesta": "casino"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas114.jpg",
+      "respuesta": "todo bajo|control"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas115.jpg",
+      "respuesta": "novela"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas116.jpg",
+      "respuesta": "venado"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas117.jpg",
+      "respuesta": "barcelona"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas118.jpg",
+      "respuesta": "rio de|janeiro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas119.jpg",
+      "respuesta": "los angeles"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas120.jpg",
+      "respuesta": "sevilla"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas121.jpg",
+      "respuesta": "estados|unidos"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas122.jpg",
+      "respuesta": "montevideo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas123.jpg",
+      "respuesta": "australia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas124.jpg",
+      "respuesta": "paris"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas125.jpg",
+      "respuesta": "malaga"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas126.jpg",
+      "respuesta": "durazno"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas127.jpg",
+      "respuesta": "venezuela"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas128.jpg",
+      "respuesta": "curitiba"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas129.jpg",
+      "respuesta": "mykonos"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas130.jpg",
+      "respuesta": "monterrey"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas131.jpg",
+      "respuesta": "cartagena"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas132.jpg",
+      "respuesta": "asuncion"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas133.jpg",
+      "respuesta": "rosario"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas134.jpg",
+      "respuesta": "colombia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas135.jpg",
+      "respuesta": "noruega"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas136.jpg",
+      "respuesta": "caracas"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas137.jpg",
+      "respuesta": "san diego"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas138.jpg",
+      "respuesta": "palma de|mallorca"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas139.jpg",
+      "respuesta": "venado|tuerto"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas140.jpg",
+      "respuesta": "capilla|del monte"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas141.jpg",
+      "respuesta": "isla|margarita"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas142.jpg",
+      "respuesta": "san|fernando"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas143.jpg",
+      "respuesta": "arabia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas144.jpg",
+      "respuesta": "damasco"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas145.jpg",
+      "respuesta": "tierra|del fuego"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas146.jpg",
+      "respuesta": "mar del|plata"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas147.jpg",
+      "respuesta": "olavarria"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas148.jpg",
+      "respuesta": "sierra de|la ventana"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas149.jpg",
+      "respuesta": "caleta|olivia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas150.jpg",
+      "respuesta": "lisboa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas151.jpg",
+      "respuesta": "barbados"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas152.jpg",
+      "respuesta": "canada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas153.jpg",
+      "respuesta": "calamar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas154.jpg",
+      "respuesta": "pandemonio"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas155.jpg",
+      "respuesta": "papagayo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas156.jpg",
+      "respuesta": "mayordomo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas157.jpg",
+      "respuesta": "calvario"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas158.jpg",
+      "respuesta": "merienda"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas159.jpg",
+      "respuesta": "monarca"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas160.jpg",
+      "respuesta": "nomina"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas161.jpg",
+      "respuesta": "mariguana"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas162.jpg",
+      "respuesta": "pajaro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas163.jpg",
+      "respuesta": "repollo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas164.jpg",
+      "respuesta": "remora"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas165.jpg",
+      "respuesta": "recien|casados"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas166.jpg",
+      "respuesta": "reglamenta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas167.jpg",
+      "respuesta": "testosterona"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas168.jpg",
+      "respuesta": "pirata"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas169.jpg",
+      "respuesta": "remar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas170.jpg",
+      "respuesta": "portero"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas171.jpg",
+      "respuesta": "sanamente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas172.jpg",
+      "respuesta": "remodela"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas173.jpg",
+      "respuesta": "resaltar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas174.jpg",
+      "respuesta": "arcabuz"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas175.jpg",
+      "respuesta": "petalo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas176.jpg",
+      "respuesta": "postiza"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas177.jpg",
+      "respuesta": "piston"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas178.jpg",
+      "respuesta": "premeditar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas179.jpg",
+      "respuesta": "monoculo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas180.jpg",
+      "respuesta": "resorte"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas181.jpg",
+      "respuesta": "platano"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas182.jpg",
+      "respuesta": "sotana"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas183.jpg",
+      "respuesta": "superfluo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas184.jpg",
+      "respuesta": "tartamudo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas185.jpg",
+      "respuesta": "silaba"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas186.jpg",
+      "respuesta": "recorre"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas187.jpg",
+      "respuesta": "tramposo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas188.jpg",
+      "respuesta": "terremoto"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas189.jpg",
+      "respuesta": "torpedo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas190.jpg",
+      "respuesta": "taladra"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas191.jpg",
+      "respuesta": "salpicadura"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas192.jpg",
+      "respuesta": "aguacate"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas193.jpg",
+      "respuesta": "alarma"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas194.jpg",
+      "respuesta": "arroba"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas195.jpg",
+      "respuesta": "velada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas196.jpg",
+      "respuesta": "solista"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas197.jpg",
+      "respuesta": "viatico"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas198.jpg",
+      "respuesta": "marron"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas199.jpg",
+      "respuesta": "velocimetro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas200.jpg",
+      "respuesta": "tributo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas201.jpg",
+      "respuesta": "barranco"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas202.jpg",
+      "respuesta": "boliviano"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas203.jpg",
+      "respuesta": "batidora"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas204.jpg",
+      "respuesta": "reciente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas205.jpg",
+      "respuesta": "boa vista"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas206.jpg",
+      "respuesta": "cachorro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas207.jpg",
+      "respuesta": "santa rosa"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas208.jpg",
+      "respuesta": "recinto"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas209.jpg",
+      "respuesta": "ampliamente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas210.jpg",
+      "respuesta": "margarita"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas211.jpg",
+      "respuesta": "bastonazo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas212.jpg",
+      "respuesta": "borracha"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas213.jpg",
+      "respuesta": "barbuda"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas214.jpg",
+      "respuesta": "boludo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas215.jpg",
+      "respuesta": "camarada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas216.jpg",
+      "respuesta": "artesanalmente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas217.jpg",
+      "respuesta": "barbara"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas218.jpg",
+      "respuesta": "alaska"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas219.jpg",
+      "respuesta": "marsella"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas220.jpg",
+      "respuesta": "osaka"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas221.jpg",
+      "respuesta": "diametro"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas222.jpg",
+      "respuesta": "acalorada"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas223.jpg",
+      "respuesta": "sotano"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas224.jpg",
+      "respuesta": "batahola"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas225.jpg",
+      "respuesta": "malasia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas226.jpg",
+      "respuesta": "socorre"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas227.jpg",
+      "respuesta": "anatomicamente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas228.jpg",
+      "respuesta": "colmar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas229.jpg",
+      "respuesta": "la paz"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas230.jpg",
+      "respuesta": "ciudad del|cabo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas231.jpg",
+      "respuesta": "cucuta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas232.jpg",
+      "respuesta": "panama"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas233.jpg",
+      "respuesta": "potente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas234.jpg",
+      "respuesta": "margen"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas235.jpg",
+      "respuesta": "pantalla"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas236.jpg",
+      "respuesta": "diacono"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas237.jpg",
+      "respuesta": "calibre"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas238.jpg",
+      "respuesta": "bombacha"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas239.jpg",
+      "respuesta": "tormenta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas240.jpg",
+      "respuesta": "soltero"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas241.jpg",
+      "respuesta": "pupilas"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas242.jpg",
+      "respuesta": "helsinki"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas243.jpg",
+      "respuesta": "marchita"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas244.jpg",
+      "respuesta": "milagroso"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas245.jpg",
+      "respuesta": "varsovia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas246.jpg",
+      "respuesta": "parlamento"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas247.jpg",
+      "respuesta": "calcuta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas248.jpg",
+      "respuesta": "camaron"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas249.jpg",
+      "respuesta": "asfalto"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas250.jpg",
+      "respuesta": "cuba"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas251.jpg",
+      "respuesta": "cancun"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas252.jpg",
+      "respuesta": "sierra leona"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas253.jpg",
+      "respuesta": "osamenta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas254.jpg",
+      "respuesta": "resguardar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas255.jpg",
+      "respuesta": "piojo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas256.jpg",
+      "respuesta": "relata"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas257.jpg",
+      "respuesta": "campera"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas258.jpg",
+      "respuesta": "soledad"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas259.jpg",
+      "respuesta": "vibracion"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas260.jpg",
+      "respuesta": "amorosamente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas261.jpg",
+      "respuesta": "camara"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas262.jpg",
+      "respuesta": "barril"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas263.jpg",
+      "respuesta": "desconcierto"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas264.jpg",
+      "respuesta": "diezmar"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas265.jpg",
+      "respuesta": "cantina"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas266.jpg",
+      "respuesta": "salubre"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas267.jpg",
+      "respuesta": "rebota"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas268.jpg",
+      "respuesta": "receta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas269.jpg",
+      "respuesta": "falacia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas270.jpg",
+      "respuesta": "catarata"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas271.jpg",
+      "respuesta": "la falda"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas272.jpg",
+      "respuesta": "salta"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas273.jpg",
+      "respuesta": "damasco"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas274.jpg",
+      "respuesta": "bolivia"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas275.jpg",
+      "respuesta": "sahara"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas276.jpg",
+      "respuesta": "pino"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas277.jpg",
+      "respuesta": "calculo"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas278.jpg",
+      "respuesta": "picante"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas279.jpg",
+      "respuesta": "armonicamente"
+    },
+    {
+      "titulo":"Acertijo",
+      "pregunta":"adivinanzas280.jpg",
+      "respuesta": "polinesia|francesa"
+    },
+    {
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas1.jpg",
+      "respuesta": "volver al|futuro"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas2.jpg",
+      "respuesta": "beethoven"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas3.jpg",
+      "respuesta": "beetlejuice"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas4.jpg",
+      "respuesta": "capitan|america"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas5.jpg",
+      "respuesta": "chucky"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas6.jpg",
+      "respuesta": "click"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas7.jpg",
+      "respuesta": "jamaica|bajo cero"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas8.jpg",
+      "respuesta": "tonto y|retonto"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas9.jpg",
+      "respuesta": "el silencio de|los inocentes"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas10.jpg",
+      "respuesta": "el joven manos|de tijera"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas11.jpg",
+      "respuesta": "rescate en la|antartida"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas12.jpg",
+      "respuesta": "el laberinto|del fauno"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas13.jpg",
+      "respuesta": "et"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas14.jpg",
+      "respuesta": "fantasia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas15.jpg",
+      "respuesta": "bee movie"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas16.jpg",
+      "respuesta": "quisiera|ser grande"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas17.jpg",
+      "respuesta": "ironman"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas18.jpg",
+      "respuesta": "gremlins"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas19.jpg",
+      "respuesta": "linterna|verde"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas20.jpg",
+      "respuesta": "guardianes de|la galaxia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas21.jpg",
+      "respuesta": "gladiador"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas22.jpg",
+      "respuesta": "intensamente"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas23.jpg",
+      "respuesta": "indiana jones"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas24.jpg",
+      "respuesta": "kill bill"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas25.jpg",
+      "respuesta": "una aventura|extraordinaria"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas26.jpg",
+      "respuesta": "superman"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas27.jpg",
+      "respuesta": "meteoro"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas28.jpg",
+      "respuesta": "madagascar"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas29.jpg",
+      "respuesta": "ouija"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas30.jpg",
+      "respuesta": "up"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas31.jpg",
+      "respuesta": "rocky"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas32.jpg",
+      "respuesta": "cars"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas33.jpg",
+      "respuesta": "twister"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas34.jpg",
+      "respuesta": "transformers"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas35.jpg",
+      "respuesta": "milagro en|la calle 8"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas36.jpg",
+      "respuesta": "jerry|maguire"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas37.jpg",
+      "respuesta": "timon y|pumba"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas38.jpg",
+      "respuesta": "anaconda"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas39.jpg",
+      "respuesta": "la bella y|la bestia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas40.jpg",
+      "respuesta": "austin|powers"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas41.jpg",
+      "respuesta": "christine"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas42.jpg",
+      "respuesta": "el avispon|verde"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas43.jpg",
+      "respuesta": "godzilla"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas44.jpg",
+      "respuesta": "hellboy"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas45.jpg",
+      "respuesta": "monstruos|vs aliens"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas46.jpg",
+      "respuesta": "matrix"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas47.jpg",
+      "respuesta": "stuart|little"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas48.jpg",
+      "respuesta": "rapido|y furioso"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas49.jpg",
+      "respuesta": "una noche en|el museo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas50.jpg",
+      "respuesta": "mad max"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas51.jpg",
+      "respuesta": "troya"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas52.jpg",
+      "respuesta": "rio"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas53.jpg",
+      "respuesta": "memento"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas54.jpg",
+      "respuesta": "cupido|motorizado"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas55.jpg",
+      "respuesta": "las cronicas|de narnia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas56.jpg",
+      "respuesta": "el origen"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas57.jpg",
+      "respuesta": "garfield"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas58.jpg",
+      "respuesta": "buscando|a nemo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas59.jpg",
+      "respuesta": "starsky|y hutch"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas60.jpg",
+      "respuesta": "porkys"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas61.jpg",
+      "respuesta": "little miss|sunshine"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas62.jpg",
+      "respuesta": "spiderman"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas63.jpg",
+      "respuesta": "el gran|torino"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas64.jpg",
+      "respuesta": "la dama y|el vagabundo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas65.jpg",
+      "respuesta": "101 dalmatas"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas66.jpg",
+      "respuesta": "los juegos|del hambre"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas67.jpg",
+      "respuesta": "kung fu|panda"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas68.jpg",
+      "respuesta": "pinocho"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas69.jpg",
+      "respuesta": "zathura"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas70.jpg",
+      "respuesta": "depredador"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas71.jpg",
+      "respuesta": "space jam"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas72.jpg",
+      "respuesta": "la sirenita"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas73.jpg",
+      "respuesta": "dumbo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas74.jpg",
+      "respuesta": "king kong"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas75.jpg",
+      "respuesta": "300"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas76.jpg",
+      "respuesta": "el llanero|solitario"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas77.jpg",
+      "respuesta": "tiburon"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas78.jpg",
+      "respuesta": "los increibles"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas79.jpg",
+      "respuesta": "las pesadillas|de freddie"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas80.jpg",
+      "respuesta": "dia de la|independencia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas81.jpg",
+      "respuesta": "aladdin"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas82.jpg",
+      "respuesta": "toy story"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas83.jpg",
+      "respuesta": "v de vendetta"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas84.jpg",
+      "respuesta": "el padrino"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas85.jpg",
+      "respuesta": "megamente"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas86.jpg",
+      "respuesta": "monster inc"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas87.jpg",
+      "respuesta": "la guerra de|las galaxias"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas88.jpg",
+      "respuesta": "dias de|trueno"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas89.jpg",
+      "respuesta": "daniel el|travieso"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas90.jpg",
+      "respuesta": "los cuatro|fantasticos"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas91.jpg",
+      "respuesta": "la estafa|maestra"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas92.jpg",
+      "respuesta": "babe"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas93.jpg",
+      "respuesta": "ratatouille"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas94.jpg",
+      "respuesta": "lassie"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas95.jpg",
+      "respuesta": "batman"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas96.jpg",
+      "respuesta": "el increible|hulk"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas97.jpg",
+      "respuesta": "vecinos|invasores"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas98.jpg",
+      "respuesta": "las tortugas|ninjas"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas99.jpg",
+      "respuesta": "sherlock|holmes"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas100.jpg",
+      "respuesta": "marcianos|al ataque"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas101.jpg",
+      "respuesta": "el regalo|prometido"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas102.jpg",
+      "respuesta": "los|picapiedras"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas103.jpg",
+      "respuesta": "los pinguinos|de madagascar"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas104.jpg",
+      "respuesta": "frozen"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas105.jpg",
+      "respuesta": "el planeta|de los simios"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas106.jpg",
+      "respuesta": "james bond"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas107.jpg",
+      "respuesta": "el rey leon"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas108.jpg",
+      "respuesta": "scooby doo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas109.jpg",
+      "respuesta": "top secret"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas110.jpg",
+      "respuesta": "alien"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas111.jpg",
+      "respuesta": "los duques|de hazzard"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas112.jpg",
+      "respuesta": "los sospechosos|de siempre"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas113.jpg",
+      "respuesta": "lego|la pelicula"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas114.jpg",
+      "respuesta": "mary poppins"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas115.jpg",
+      "respuesta": "los pitufos"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas116.jpg",
+      "respuesta": "ghost rider"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas117.jpg",
+      "respuesta": "bambi"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas118.jpg",
+      "respuesta": "van helsing"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas119.jpg",
+      "respuesta": "robocop"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas120.jpg",
+      "respuesta": "la era|del hielo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas121.jpg",
+      "respuesta": "zoolander"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas122.jpg",
+      "respuesta": "el oso yogi"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas123.jpg",
+      "respuesta": "tron"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas124.jpg",
+      "respuesta": "red social"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas125.jpg",
+      "respuesta": "la mascara"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas126.jpg",
+      "respuesta": "happy feet"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas127.jpg",
+      "respuesta": "mi novia|polly"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas128.jpg",
+      "respuesta": "malefica"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas129.jpg",
+      "respuesta": "el|castigador"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas130.jpg",
+      "respuesta": "ted"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas131.jpg",
+      "respuesta": "angry birds|la pelicula"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas132.jpg",
+      "respuesta": "como entrenar|a mi dragon"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas133.jpg",
+      "respuesta": "zootopia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas134.jpg",
+      "respuesta": "los minions"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas135.jpg",
+      "respuesta": "jumanji"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas136.jpg",
+      "respuesta": "la momia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas137.jpg",
+      "respuesta": "faivel un cuento|americano"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas138.jpg",
+      "respuesta": "milagros|inesperados"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas139.jpg",
+      "respuesta": "la llamada"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas140.jpg",
+      "respuesta": "60 segundos"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas141.jpg",
+      "respuesta": "rambo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas142.jpg",
+      "respuesta": "karate|kid"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas143.jpg",
+      "respuesta": "wall e"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas144.jpg",
+      "respuesta": "la maquina|del tiempo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas145.jpg",
+      "respuesta": "naufrago"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas146.jpg",
+      "respuesta": "la familia|de mi novia"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas147.jpg",
+      "respuesta": "viernes 13"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas148.jpg",
+      "respuesta": "hombres de|negro"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas149.jpg",
+      "respuesta": "los piratas|del caribe"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas150.jpg",
+      "respuesta": "brigada a"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas151.jpg",
+      "respuesta": "el juego|del miedo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas152.jpg",
+      "respuesta": "pajaros"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas153.jpg",
+      "respuesta": "cortocircuito"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas154.jpg",
+      "respuesta": "yo robot"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas155.jpg",
+      "respuesta": "los muppets"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas156.jpg",
+      "respuesta": "titanic"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas157.jpg",
+      "respuesta": "avatar"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas158.jpg",
+      "respuesta": "scream"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas159.jpg",
+      "respuesta": "grandes|heroes"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas160.jpg",
+      "respuesta": "terminator"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas161.jpg",
+      "respuesta": "la guerra de|los mundos"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas162.jpg",
+      "respuesta": "atrapame|si puedes"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas163.jpg",
+      "respuesta": "x men"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas164.jpg",
+      "respuesta": "la mascara|del zorro"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas165.jpg",
+      "respuesta": "liberen|a willy"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas166.jpg",
+      "respuesta": "forrest|gump"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas167.jpg",
+      "respuesta": "los|cazafantasmas"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas168.jpg",
+      "respuesta": "top gun"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas169.jpg",
+      "respuesta": "el fantasma|de la opera"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas170.jpg",
+      "respuesta": "maxima|velocidad"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas171.jpg",
+      "respuesta": "star trek"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas172.jpg",
+      "respuesta": "borat"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas173.jpg",
+      "respuesta": "shrek"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas174.jpg",
+      "respuesta": "el vuelo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas175.jpg",
+      "respuesta": "resident evil"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas176.jpg",
+      "respuesta": "la masacre|de texas"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas177.jpg",
+      "respuesta": "jurasic|park"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas178.jpg",
+      "respuesta": "thor"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas179.jpg",
+      "respuesta": "el grinch"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas180.jpg",
+      "respuesta": "psicosis"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas181.jpg",
+      "respuesta": "casper"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas182.jpg",
+      "respuesta": "harry|potter"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas183.jpg",
+      "respuesta": "el santo"
+    },{
+      "titulo":"¿Qué película es?",
+      "pregunta":"peliculas184.jpg",
+      "respuesta": "los locos|adams"
+    },  {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis1.jpg",
+      "respuesta": "una aventura|extraordinaria"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis2.jpg",
+      "respuesta": "dr dolittle"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis3.jpg",
+      "respuesta": "psicosis"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis4.jpg",
+      "respuesta": "apolo 13"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis5.jpg",
+      "respuesta": "kung fu|panda"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis6.jpg",
+      "respuesta": "comer rezar|amar"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis7.jpg",
+      "respuesta": "diamantes|de sangre"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis8.jpg",
+      "respuesta": "et"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis9.jpg",
+      "respuesta": "american pie"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis10.jpg",
+      "respuesta": "hombres|de negro"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis11.jpg",
+      "respuesta": "liberen|a willy"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis12.jpg",
+      "respuesta": "up"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis13.jpg",
+      "respuesta": "el planeta|de los simios"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis14.jpg",
+      "respuesta": "belleza|americana"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis15.jpg",
+      "respuesta": "el rey leon"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis16.jpg",
+      "respuesta": "gorilas en|la niebla"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis17.jpg",
+      "respuesta": "el diablo|viste a la moda"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis18.jpg",
+      "respuesta": "x men"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis19.jpg",
+      "respuesta": "harry potter"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis20.jpg",
+      "respuesta": "spiderman"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis21.jpg",
+      "respuesta": "buscando|a nemo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis22.jpg",
+      "respuesta": "mary poppins"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis23.jpg",
+      "respuesta": "los juegos|del hambre"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis24.jpg",
+      "respuesta": "rapido y|furioso"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis25.jpg",
+      "respuesta": "cars"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis26.jpg",
+      "respuesta": "el discurso|del rey"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis27.jpg",
+      "respuesta": "500 dias|con ella"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis28.jpg",
+      "respuesta": "angeles|y demonios"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis29.jpg",
+      "respuesta": "cocodrilo|dundee"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis30.jpg",
+      "respuesta": "tiburon"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis31.jpg",
+      "respuesta": "sharknado"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis32.jpg",
+      "respuesta": "la dama y|el vagabundo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis33.jpg",
+      "respuesta": "mi pobre|angelito"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis34.jpg",
+      "respuesta": "rambo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis35.jpg",
+      "respuesta": "maxima|velocidad"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis36.jpg",
+      "respuesta": "el gato|con botas"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis37.jpg",
+      "respuesta": "indiana|jones"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis38.jpg",
+      "respuesta": "pinocho"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis39.jpg",
+      "respuesta": "caza|fantasmas"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis40.jpg",
+      "respuesta": "la era|de hielo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis41.jpg",
+      "respuesta": "scary|movie"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis42.jpg",
+      "respuesta": "pearl|harbor"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis43.jpg",
+      "respuesta": "el efecto|mariposa"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis44.jpg",
+      "respuesta": "forrest|gump"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis45.jpg",
+      "respuesta": "diario de|motocicleta"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis46.jpg",
+      "respuesta": "volcano"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis47.jpg",
+      "respuesta": "armagedon"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis48.jpg",
+      "respuesta": "el rey|escorpion"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis49.jpg",
+      "respuesta": "la llamada"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis50.jpg",
+      "respuesta": "gravedad"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis51.jpg",
+      "respuesta": "12 monos"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis52.jpg",
+      "respuesta": "ratatouille"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis53.jpg",
+      "respuesta": "127 horas"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis54.jpg",
+      "respuesta": "crepusculo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis55.jpg",
+      "respuesta": "batman"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis56.jpg",
+      "respuesta": "king kong"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis57.jpg",
+      "respuesta": "bee movie"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis58.jpg",
+      "respuesta": "cuenta|conmigo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis59.jpg",
+      "respuesta": "titanic"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis60.jpg",
+      "respuesta": "it"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis61.jpg",
+      "respuesta": "babe"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis62.jpg",
+      "respuesta": "snatch cerdos|y diamantes"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis63.jpg",
+      "respuesta": "expreso|polar"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis64.jpg",
+      "respuesta": "el vuelo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis65.jpg",
+      "respuesta": "una noche|en el museo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis66.jpg",
+      "respuesta": "sex and|the city"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis67.jpg",
+      "respuesta": "turbo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis68.jpg",
+      "respuesta": "zootopia"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis69.jpg",
+      "respuesta": "el padrino"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis70.jpg",
+      "respuesta": "las tortugas|ninja"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis71.jpg",
+      "respuesta": "rocky"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis72.jpg",
+      "respuesta": "creed"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis73.jpg",
+      "respuesta": "el joven manos|de tijera"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis74.jpg",
+      "respuesta": "volver al|futuro"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis75.jpg",
+      "respuesta": "corazon|valiente"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis76.jpg",
+      "respuesta": "los expedientes|secretos x"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis77.jpg",
+      "respuesta": "dumbo"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis78.jpg",
+      "respuesta": "la gran|estafa"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis79.jpg",
+      "respuesta": "Siempre a|tu lado"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis80.jpg",
+      "respuesta": "bichos"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis81.jpg",
+      "respuesta": "nueve reinas"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis82.jpg",
+      "respuesta": "que paso ayer"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis83.jpg",
+      "respuesta": "101 dalmatas"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis84.jpg",
+      "respuesta": "happy feet"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis85.jpg",
+      "respuesta": "space jam"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis86.jpg",
+      "respuesta": "medianoche|en paris"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis87.jpg",
+      "respuesta": "los 33"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis88.jpg",
+      "respuesta": "scream"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis89.jpg",
+      "respuesta": "cantando|bajo la lluvia"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis90.jpg",
+      "respuesta": "ted"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis91.jpg",
+      "respuesta": "sexto|sentido"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis92.jpg",
+      "respuesta": "el curioso caso|Benjamin Button"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis93.jpg",
+      "respuesta": "top gun"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis94.jpg",
+      "respuesta": "tienes un email"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis95.jpg",
+      "respuesta": "invictus"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis96.jpg",
+      "respuesta": "wimbledon"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis97.jpg",
+      "respuesta": "la caida del|halcon negro"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis98.jpg",
+      "respuesta": "el codigo|da vinci"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis99.jpg",
+      "respuesta": "la naranja|mecanica"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis100.jpg",
+      "respuesta": "thor"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis101.jpg",
+      "respuesta": "avion|presidencial"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis102.jpg",
+      "respuesta": "el fantasma|de la opera"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis103.jpg",
+      "respuesta": "novia|fugitiva"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis104.jpg",
+      "respuesta": "alicia en el pais|de las maravillas"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis105.jpg",
+      "respuesta": "frozen"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis106.jpg",
+      "respuesta": "el libro|de la selva"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis107.jpg",
+      "respuesta": "karate|kid"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis108.jpg",
+      "respuesta": "actividad|paranormal"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis109.jpg",
+      "respuesta": "el exorcista"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis110.jpg",
+      "respuesta": "los pitufos"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis111.jpg",
+      "respuesta": "cobra"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis112.jpg",
+      "respuesta": "matrix"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis113.jpg",
+      "respuesta": "twister"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis114.jpg",
+      "respuesta": "La leyenda del|tesoro perdido"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis115.jpg",
+      "respuesta": "diario de|una pasion"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis116.jpg",
+      "respuesta": "60 segundos"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis117.jpg",
+      "respuesta": "super 8"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis118.jpg",
+      "respuesta": "jamaica|bajo cero"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis119.jpg",
+      "respuesta": "la sirenita"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis120.jpg",
+      "respuesta": "guerra mundial z"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis121.jpg",
+      "respuesta": "dracula"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis122.jpg",
+      "respuesta": "aladdin"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis123.jpg",
+      "respuesta": "toy story"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis124.jpg",
+      "respuesta": "jurasic park"
+    },
+    {
+      "titulo":"Películas con Emojis",
+      "pregunta":"emojis125.jpg",
+      "respuesta": "super size me"
     }
+
   ]
 }

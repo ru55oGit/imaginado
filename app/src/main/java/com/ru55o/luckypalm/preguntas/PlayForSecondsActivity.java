@@ -1,17 +1,26 @@
 package com.ru55o.luckypalm.preguntas;
 
+import android.*;
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -25,17 +34,30 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.ru55o.luckypalm.preguntas.pojo.Question;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -50,6 +72,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private ImageView imageForPlay;
     private TextView transition;
     private Boolean timerFlag;
+    private CountDownTimer showSoftKey;
     private int dim;
     private CountDownTimer timer;
     private TextView counter;
@@ -74,16 +97,54 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private Typeface  digifont;
     InputMethodManager inputMethodManager;
     private RelativeLayout frameCounter;
+    private String level;
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
 
     private Boolean languageSelected;
+    private ImageView sharewsap;
+    private ImageView shareTwitter;
+    private ImageView shareFacebook;
+    private ImageView title;
     private int res;
+    private TextView sharesTitle;
+    private int sharesCount;
 
     private AdView mAdView;
     private AdRequest adRequest;
+    private RewardedVideoAd mVideoAd;
     private InterstitialAd mInterstitialAd;
+    private Boolean avoidInterstitialOnShare;
+
+    private Dialog dialogCustom;
+
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
+
+    // Storage Permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            android.Manifest.permission.READ_EXTERNAL_STORAGE,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+
+    public static Boolean verifyStoragePermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+
+        return permission == PackageManager.PERMISSION_GRANTED;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,22 +152,110 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_play_for_seconds);
-        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
-        digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
 
         // Traigo el tiempo acumulado para setear el timer
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
+
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+
+        digifont = Typeface.createFromAsset(getAssets(), "fonts/ds-digi.ttf");
+        lobsterFont = Typeface.createFromAsset(getAssets(), "fonts/lobster-two.italic.ttf");
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        // traigo el lenguaje seleccionado
+
         languageSelected = settings.getBoolean("languageSelected", true);
 
-        frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
+        /**
+         *  COMIENZA LA CARGA DE LOS BANNERS
+         */
+        // evito que se muestre el Interstitial cdo quiero compartir
+        avoidInterstitialOnShare = true;
+        // llevo la cuenta de los shares apagar el interstitial
+        sharesCount = settings.getInt("sharesCount", 0);
 
-        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
-            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
+        // Use an activity context to get the rewarded video instance.
+        mVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdOpened() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoStarted() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdClosed() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+                // Preload the next video ad.
+            }
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+                if (languageSelected.booleanValue()) {
+                    Toast.makeText(PlayForSecondsActivity.this, "You have obtained " + rewardItem.getAmount() +" seconds", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(PlayForSecondsActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+ rewardItem.getType(), Toast.LENGTH_LONG).show();
+                }
+                milisegundos+= rewardItem.getAmount()*1000;
+                editor.putInt("time", milisegundos);
+                editor.commit();
+                if (dialogCustom != null) {
+                    dialogCustom.dismiss();
+                }
+            }
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int err) {
+                if (milisegundos <= 0 ) {
+                    if (!languageSelected.booleanValue()) {
+                        Toast.makeText(PlayForSecondsActivity.this, "Fallo la carga del video, igual obtiene 15\"" , Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(PlayForSecondsActivity.this, "Video load failed, gains 15\" anyway" , Toast.LENGTH_LONG).show();
+                    }
+
+                    editor.putInt("time", 15000);
+                    editor.commit();
+                    finish();
+                }
+            }
+        });
+
+        // Banner footer
+        if (settings.getBoolean("showAds", true)) {
+            //Toast.makeText(GuessImageActivity.this, "showAds", Toast.LENGTH_LONG).show();
+            // ADS
+            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
+        } else {
+            showSoftKey = new CountDownTimer(700, 1000) {
+                public void onTick(long millisUntilFinished) {
+
+                }
+                public void onFinish() {
+                    if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(level)) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    }
+                }
+            }.start();
         }
 
+        /**
+         *  TERMINA LA CARGA DE LOS BANNERS
+         * */
+
+        /**
+         * COMIENZA LA CARGA DE LAS PREGUNTAS
+         * */
         pregResp = languageSelected.booleanValue()? getQuestion() : obtenerPreguntas();
         for (int i=0; i<pregResp.size();i++) {
             random.add(i);
@@ -125,27 +274,117 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 return true;
             }
         });
+        /**
+         * TERMINA LA CARGA DE LAS PREGUNTAS
+         * */
 
-        // Interstitial
-        if (settings.getBoolean("showAds", true)) {
-            // ADS
-            //MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
-            mInterstitialAd = new InterstitialAd(this);
-            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
-
-            requestNewInterstitial();
-        }
-
-        /*questionCircle.setOnClickListener(new View.OnClickListener(){
+        /**
+         *  SHARES
+         */
+        // share wsap
+        sharewsap = (ImageView) findViewById(R.id.sharewsap);
+        sharewsap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onResume();
-            }
-        });*/
+                if(isAppInstalled(getBaseContext(), "com.whatsapp")){
+                    if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                        avoidInterstitialOnShare = false;
+                        sharesCount++;
+                        if (timer != null) {
+                            timer.cancel();
+                        }
 
-        timeGained.setText(""+String.format(FORMAT,
-                TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(0)),
-                TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(0))));
+                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
+                        sharingIntent.setPackage("com.whatsapp");
+                        sharingIntent.setType("image/*");
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, sharetext);
+
+                        startActivity(Intent.createChooser(sharingIntent, "Share image using"));
+                    }
+                } else {
+                    if (languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+        shareFacebook = (ImageView) findViewById(R.id.sharefacebook);
+        shareFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isAppInstalled(getBaseContext(), "com.facebook.katana")) {
+                    if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                        avoidInterstitialOnShare = false;
+                        sharesCount++;
+                        if (timer != null) {
+                            timer.cancel();
+                        }
+                        if (Build.VERSION.SDK_INT > 16) {
+                            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+                        }
+
+                        Bitmap image = takeScreenshot();
+                        image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
+                        SharePhoto photo = new SharePhoto.Builder()
+                                .setBitmap(image)
+                                .build();
+                        SharePhotoContent content = new SharePhotoContent.Builder()
+                                .addPhoto(photo)
+                                .build();
+
+                        if (ShareDialog.canShow(ShareLinkContent.class)) {
+                            shareDialog.show(content);
+                        }
+                    }
+                } else {
+                    if (languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+        shareTwitter = (ImageView) findViewById(R.id.sharetwitter);
+        shareTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
+                    if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                        avoidInterstitialOnShare = false;
+                        sharesCount++;
+
+                        Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
+
+                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.setType("image/png");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, sharetext);
+                        sharingIntent.setType("text/plain");
+
+                        sharingIntent.setPackage("com.twitter.android");
+                        startActivity(sharingIntent);
+                    }
+                } else {
+                    if (languageSelected.booleanValue()) {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
         toggleKeyboardVisible();
     }
 
@@ -153,9 +392,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     protected void onResume() {
         super.onResume();
 
+        // Cargo el banner footer cada vez que se carga la pantalla
         if (settings.getBoolean("showAds", true)) {
             // ADS
-            MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
             mAdView = (AdView) findViewById(R.id.adView);
             adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
@@ -166,24 +405,41 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     RelativeLayout focus = (RelativeLayout) findViewById(R.id.frameCounter);
                     focus.setFocusableInTouchMode(true);
                     focus.requestFocus();
-
-                    if (cantPreguntas == 5 && mInterstitialAd.isLoaded()){
-                        mInterstitialAd.show();
-                    } else {
+                    ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
+                    if (milisegundos > 0) {
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
                 }
             });
         }
 
+        sharesTitle = (TextView) findViewById(R.id.sharesTitle);
+        if (sharesCount < 10) {
+            if (languageSelected.booleanValue()) {
+                sharesTitle.setText("Share " + (10 - sharesCount) + " time to hide ads");
+            } else {
+                sharesTitle.setText("Comparte " + (10 - sharesCount) + " veces y elimina las publicidades");
+            }
+        } else {
+            if (languageSelected.booleanValue()) {
+                sharesTitle.setText("Ask your friends for help");
+            } else {
+                sharesTitle.setText("Pide ayuda a tus amigos");
+            }
+        }
+
+        // Interstitial
+        if (settings.getBoolean("showAds", true) && cantPreguntas % 4 == 0 && settings.getInt("sharesCount", 0) < 10) {
+            // ADS
+            //MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_interstitial));
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getResources().getString(R.string.banner_ad_unit_interstitial));
+
+            requestNewInterstitial();
+        }
+
         timerFlag = true;
         aciertos = 0;
-        // Instancio el reloj
-        counter = (TextView) findViewById(R.id.counterText);
-
-        counter.setTypeface(digifont);
-        counter.setText("00:15");
-
         timeGained.setTypeface(digifont);
 
         // Instancio el contenedor de las letras
@@ -397,10 +653,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             // paro el reloj
             timer.cancel();
             // obtengo la cantidad de segundos restantes y los convierto en milisegundos
-            String tiempo[] = ((String)this.counter.getText()).split(":");
+            //String tiempo[] = ((String)this.counter.getText()).split(":");
             inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
             onResume();
-            try {
+            /*try {
                 Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
                 Integer segundos = Integer.parseInt(tiempo[1])*1000;
                 milisegundos+= segundos;
@@ -412,14 +668,14 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-            }
-            timeGained.setText(""+String.format(FORMAT,
+            }*/
+            /*timeGained.setText(""+String.format(FORMAT,
                     TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
-                    TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
+                    TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));*/
 
             // Cuando el reloj llega a cero, se cambia el mensaje
             if (cantPreguntas == 11) {
-                counter.setVisibility(View.INVISIBLE);
+                /*counter.setVisibility(View.INVISIBLE);*/
                 backToPlay(milisegundos);
             }
 
@@ -452,10 +708,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private void timer(final int milliseconds) {
         timer = new CountDownTimer(milliseconds, 1000) {
             public void onTick(long millisUntilFinished) {
-                counter.setText(""+String.format(FORMAT,
+                /*counter.setText(""+String.format(FORMAT,
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
                         TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
-                counter.setVisibility(View.VISIBLE);
+                counter.setVisibility(View.VISIBLE);*/
             }
             public void onFinish() {
                 cantPreguntas++;
@@ -473,11 +729,20 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         }.start();
     }
 
+    public static boolean isAppInstalled(Context context, String packageName) {
+        try {
+            context.getPackageManager().getApplicationInfo(packageName, 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
     private void showImage(int res){
         // custom dialog
         final Dialog dialogCustom = new Dialog(PlayForSecondsActivity.this);
         dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialogCustom.setContentView(R.layout.custom_dialog_zoomimage_pfs);
+        dialogCustom.setContentView(R.layout.custom_dialog_zoomimage);
 
         inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
 
@@ -494,6 +759,34 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             dialogCustom.show();
         }
     }
+    // Devuelvo un Bitmap con un screenshot
+    public Bitmap takeScreenshot() {
+        View rootView = findViewById(android.R.id.content).getRootView();
+        rootView.setDrawingCacheEnabled(true);
+        return rootView.getDrawingCache();
+    }
+    // retorno la ruta del screenshot
+    public String saveBitmap(Bitmap bitmap, Boolean fullImage) {
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/_acertijos_"+ Math.random()*1000 +".jpg");
+        FileOutputStream fos;
+        try {
+            fos = new FileOutputStream(imagePath);
+            if (fullImage) {
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight());
+            } else {
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1100);
+            }
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+            fos.close();
+
+        } catch (FileNotFoundException e) {
+            Log.e("GREC", e.getMessage(), e);
+        } catch (IOException e) {
+            Log.e("GREC", e.getMessage(), e);
+        }
+        return imagePath.toString();
+    }
 
     // en el back abro un popup, en el aceptar termino el activity
     @Override
@@ -503,17 +796,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     // en el back abro un popup, en el cancelar sigo con el timer
     @Override
     public void onDialogNegativeClick(DialogFragment dialog) {
-        // obtengo la cantidad de segundos restantes y los convierto en milisegundos
-        String tiempo[] = ((String)this.counter.getText()).split(":");
 
-        try {
-            Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-            Integer segundos = (Integer.parseInt(tiempo[1]) + 1) * 1000;
-            milisegundos = minutos + segundos;
-            timer(milisegundos);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     private void requestNewInterstitial() {

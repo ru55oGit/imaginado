@@ -13,90 +13,94 @@
     android:textAlignment="center">
 
     <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:id="@+id/header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/counterText"
-            android:text="00:15"
-            android:background="@drawable/borders"
-            android:textStyle="bold"
-            android:textSize="@dimen/clock_size"
+            android:id="@+id/title"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:lineSpacingMultiplier="0.8"
+            android:shadowColor="@color/com_facebook_button_background_color_focused"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="Equipos de fútbol"
+            android:textAlignment="center"
             android:textColor="@color/secondaryColor"
-            android:paddingBottom="3dp"
-            android:paddingTop="3dp"
-            android:paddingLeft="6dp"
-            android:paddingRight="6dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:textSize="@dimen/pfs_title"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/chrono"
             android:layout_width="75dp"
             android:layout_height="77dp"
-            android:background="@drawable/chrono"
-            android:id="@+id/chrono"
-            android:textAlignment="center"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:textSize="25sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/chrono"
+            android:paddingTop="28dp"
             android:rotation="20"
-            android:paddingTop="28dp" />
+            android:textAlignment="center"
+            android:textSize="25sp" />
 
         <TextView
+            android:id="@+id/questionCircle"
             android:layout_width="70dp"
             android:layout_height="72dp"
-            android:background="@drawable/camelcircle"
-            android:id="@+id/questionCircle"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:rotation="-20"
-            android:paddingTop="19dp"
-            android:textColor="@color/white"
             android:layout_alignBottom="@+id/chrono"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:background="@drawable/camelcircle"
+            android:paddingTop="19dp"
+            android:rotation="-20"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/imageForPlay"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_above="@+id/wordContainerFirst"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@color/secondaryColor"
+        android:padding="7dp" />
+
     <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/borders"
-        android:foregroundGravity="center|center_horizontal"
         android:id="@+id/frameLayout"
-        android:minHeight="200dp"
-        android:minWidth="180dp"
-        android:foreground="#dfd5d5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/header"
-        android:layout_alignParentStart="true"
-        android:padding="5dp">
+        android:layout_centerHorizontal="true"
+        android:animationCache="false"
+        android:foreground="#dfd5d5"
+        android:foregroundGravity="center|center"
+        android:padding="8dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/title"
-            android:textAlignment="center"
-            android:textSize="@dimen/question_title_size"
-            android:layout_gravity="center_horizontal|top"/>
-
-        <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:id="@+id/imageForPlay"
-            android:layout_gravity="center_horizontal|bottom" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/question"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
             android:layout_below="@+id/counterText"
+            android:layout_gravity="center"
+            android:background="@drawable/borders_black"
+            android:gravity="center"
+            android:text="hola"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textAlignment="center"
-            android:textSize="@dimen/question_letter_size"
-            android:layout_gravity="center" />
+            android:textSize="@dimen/question_letter_size" />
     </FrameLayout>
 
     <LinearLayout
@@ -119,7 +123,50 @@
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_below="@+id/wordContainerFirst">
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/borders_black"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
 
+        <TextView
+            android:id="@+id/sharesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColorHighlight="@color/backLetters"
+            android:text="Comparte 10 veces y elimina las publicidades"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/sharewsap"
+            android:layout_width="@dimen/redes_icons"
+            android:layout_height="@dimen/redes_icons"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/whatsappicon" />
+
+        <ImageView
+            android:id="@+id/sharetwitter"
+            android:layout_width="@dimen/redes_icons"
+            android:layout_height="@dimen/redes_icons"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/twittericon" />
+
+        <ImageView
+            android:id="@+id/sharefacebook"
+            android:layout_width="@dimen/redes_icons"
+            android:layout_height="@dimen/redes_icons"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/facebookicon" />
+    </LinearLayout>
+    </RelativeLayout>
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"

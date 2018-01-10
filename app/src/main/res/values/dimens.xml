@@ -23,5 +23,6 @@
     <dimen name="buyseconds_letter_size">23dp</dimen>
     <dimen name="margin_right_play">1dp</dimen>
     <dimen name="redes_icons">65dp</dimen>
+    <dimen name="pfs_title">36dp</dimen>
 </resources>
 

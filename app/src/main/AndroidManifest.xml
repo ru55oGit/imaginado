@@ -65,6 +65,9 @@
             android:authorities="com.facebook.app.FacebookContentProvider12345"
             android:exported="true" />
 
+        <activity
+            android:name=".PlayActivity"
+            android:label="@string/title_activity_play"></activity>
     </application>
 
 </manifest>

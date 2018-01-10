@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timer.cancel();
-                Intent intent = new Intent(MainActivity.this, SelectLevelActivity.class);
+                Intent intent = new Intent(MainActivity.this, PlayActivity.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             public void onFinish() {
-                Intent intent = new Intent(MainActivity.this, SelectLevelActivity.class);
+                Intent intent = new Intent(MainActivity.this, PlayActivity.class);
                 startActivity(intent);
             }
         }.start();
