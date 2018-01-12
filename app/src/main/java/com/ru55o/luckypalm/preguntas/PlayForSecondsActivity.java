@@ -10,9 +10,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -28,8 +31,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -182,19 +187,19 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         mVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PlayForSecondsActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onRewardedVideoAdOpened() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PlayForSecondsActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onRewardedVideoStarted() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PlayForSecondsActivity.this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onRewardedVideoAdClosed() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PlayForSecondsActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
                 // Preload the next video ad.
             }
             @Override
@@ -213,7 +218,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             }
             @Override
             public void onRewardedVideoAdLeftApplication() {
-                //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PlayForSecondsActivity.this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onRewardedVideoAdFailedToLoad(int err) {
@@ -233,7 +238,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         // Banner footer
         if (settings.getBoolean("showAds", true)) {
-            //Toast.makeText(GuessImageActivity.this, "showAds", Toast.LENGTH_LONG).show();
+            //Toast.makeText(PlayForSecondsActivity.this, "showAds", Toast.LENGTH_LONG).show();
             // ADS
             MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.banner_ad_unit_id));
         } else {
@@ -729,6 +734,269 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         }.start();
     }
 
+    private boolean haveNetworkConnection() {
+        boolean haveConnectedWifi = false;
+        boolean haveConnectedMobile = false;
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        for (NetworkInfo ni : netInfo) {
+            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+                if (ni.isConnected()) haveConnectedWifi = true;
+            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (ni.isConnected()) haveConnectedMobile = true;
+        }
+        return haveConnectedWifi || haveConnectedMobile;
+    }
+
+
+    private void customDialog() {
+        loadRewardedVideoAd();
+        // custom dialog
+        dialogCustom = new Dialog(PlayForSecondsActivity.this);
+        dialogCustom.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialogCustom.setContentView(R.layout.custom_dialog_withoutseconds);
+
+        LinearLayout buyContainer, winContainer, watchContainer, shareContainer, shareContainerTitle, secondSeparator, thirdSeparator;
+        ImageView ganar, comprar, vervideo, shareFace, shareTwit, shareWsap;
+        TextView titleText, buyText, keepplayingText, watchvideoText, shareText;
+
+        buyContainer = (LinearLayout) dialogCustom.findViewById(R.id.buyContainer);
+        winContainer = (LinearLayout) dialogCustom.findViewById(R.id.winContainer);
+        watchContainer = (LinearLayout) dialogCustom.findViewById(R.id.watchContainer);
+        shareContainer = (LinearLayout) dialogCustom.findViewById(R.id.shareContainer);
+        shareContainerTitle = (LinearLayout) dialogCustom.findViewById(R.id.shareContainerTitle);
+
+        ganar = (ImageView) dialogCustom.findViewById(R.id.ganarSegundos);
+        comprar = (ImageView) dialogCustom.findViewById(R.id.comprarSegundos);
+        vervideo = (ImageView) dialogCustom.findViewById(R.id.watchVideo);
+        shareFace = (ImageView) dialogCustom.findViewById(R.id.sharefacebookDialog);
+        shareTwit = (ImageView) dialogCustom.findViewById(R.id.sharetwitterDialog);
+        shareWsap = (ImageView) dialogCustom.findViewById(R.id.sharewsapDialog);
+
+        titleText = (TextView) dialogCustom.findViewById(R.id.titleText);
+        buyText = (TextView) dialogCustom.findViewById(R.id.buyText);
+        keepplayingText = (TextView) dialogCustom.findViewById(R.id.keepplayingText);
+        watchvideoText = (TextView) dialogCustom.findViewById(R.id.watchvideoText);
+        shareText = (TextView) dialogCustom.findViewById(R.id.shareText);
+
+        // Cambio los textos y los colores segun el idioma
+        if (languageSelected.booleanValue()) {
+            buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            shareContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+
+            titleText.setText(getResources().getText(R.string.sin_tiempo_title_en));
+            buyText.setText(getResources().getText(R.string.sin_tiempo_comprar_en));
+            keepplayingText.setText(getResources().getText(R.string.sin_tiempo_jugar_en));
+            watchvideoText.setText(getResources().getText(R.string.sin_tiempo_vervideo_en));
+            shareText.setText(getResources().getText(R.string.sin_tiempo_compartir_en));
+        }
+
+        if (haveNetworkConnection()) {
+            secondSeparator = (LinearLayout) dialogCustom.findViewById(R.id.secondSeparator);
+            secondSeparator.setVisibility(View.GONE);
+            keepplayingText.setVisibility(View.GONE);
+            ganar.setVisibility(View.GONE);
+            winContainer.setVisibility(View.GONE);
+        } else {
+            thirdSeparator = (LinearLayout) dialogCustom.findViewById(R.id.thirdSeparator);
+            thirdSeparator.setVisibility(View.GONE);
+            watchvideoText.setVisibility(View.GONE);
+            vervideo.setVisibility(View.GONE);
+            watchContainer.setVisibility(View.GONE);
+
+            buyText.setVisibility(View.GONE);
+            comprar.setVisibility(View.GONE);
+            buyContainer.setVisibility(View.GONE);
+        }
+
+        shareFace.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                    if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
+                        avoidInterstitialOnShare = false;
+                        String sharedDescription = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
+                        String sharedTitle = getResources().getString(R.string.title_share_text_en);
+                        String sharedImage = !languageSelected.booleanValue()? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
+                        if (ShareDialog.canShow(ShareLinkContent.class)) {
+                            ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
+                                    .setContentTitle(sharedTitle)
+                                    .setContentDescription(sharedDescription)
+                                    .setContentUrl(Uri.parse("https://goo.gl/CrnO9M"))
+                                    .setImageUrl(Uri.parse(sharedImage))
+                                    .build();
+
+                            shareDialog.show(shareLinkContent);
+
+                            showSoftKey = new CountDownTimer(3000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+
+                                }
+                                public void onFinish() {
+                                    milisegundos+= 30000;
+                                    editor.putInt("time", milisegundos);
+                                    editor.commit();
+                                }
+                            }.start();
+                        }
+                    } else {
+                        if (languageSelected.booleanValue()) {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        });
+
+        shareTwit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                    if(isAppInstalled(getBaseContext(), "com.twitter.android")){
+                        avoidInterstitialOnShare = false;
+                        Uri screenshotUri = !languageSelected.booleanValue()? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
+                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.setType("image/png");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                        sharingIntent.setPackage("com.twitter.android");
+                        startActivity(sharingIntent);
+
+                        showSoftKey = new CountDownTimer(3000, 1000) {
+                            public void onTick(long millisUntilFinished) {
+
+                            }
+                            public void onFinish() {
+                                milisegundos+= 30000;
+                                editor.putInt("time", milisegundos);
+                                editor.commit();
+                            }
+                        }.start();
+                    } else {
+                        if (languageSelected.booleanValue()) {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        });
+
+        shareWsap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                    if(isAppInstalled(getBaseContext(), "com.whatsapp")){
+                        avoidInterstitialOnShare = false;
+                        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                        Bitmap largeIcon;
+                        if (!languageSelected.booleanValue()) {
+                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
+                        } else {
+                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimageen);
+                        }
+                        Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
+                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M": getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        sharingIntent.setPackage("com.whatsapp");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                        sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
+                        sharingIntent.setType("image/*");
+                        startActivity(sharingIntent);
+
+                        showSoftKey = new CountDownTimer(3000, 1000) {
+                            public void onTick(long millisUntilFinished) {
+
+                            }
+                            public void onFinish() {
+                                milisegundos+= 30000;
+                                editor.putInt("time", milisegundos);
+                                editor.commit();
+                            }
+                        }.start();
+                    } else {
+                        if (languageSelected.booleanValue()) {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        });
+
+        ganar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PlayForSecondsActivity.this, PlayForSecondsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        comprar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PlayForSecondsActivity.this, BuySecondsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        vervideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // sino se cargo el video lanzo un timer hasta que se cargue
+                if(mVideoAd.isLoaded()) {
+                    mVideoAd.show();
+                } else {
+                    ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.VISIBLE);
+                    showSoftKey =  new CountDownTimer(10000, 1000) {
+                        public void onTick(long millisUntilFinished) {
+                            if (dialogCustom != null) {
+                                dialogCustom.dismiss();
+                            }
+                            if (mVideoAd.isLoaded()) {
+                                showSoftKey.cancel();
+                                mVideoAd.show();
+                                ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.INVISIBLE);
+                            }
+                        }
+                        public void onFinish() {
+                            if(!(PlayForSecondsActivity.this).isFinishing()){
+                                dialogCustom.show();
+                            }
+                        }
+                    }.start();
+                }
+            }
+        });
+
+        ImageButton dialogButton = (ImageButton) dialogCustom.findViewById(R.id.dialogButtonOK);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogCustom.dismiss();
+            }
+        });
+
+        dialogCustom.setOnDismissListener(new Dialog.OnDismissListener() {
+            public void onDismiss(final DialogInterface dialog) {
+                // Cierro el teclado cuando me quedo sin tiempo
+                inputMethodManager.hideSoftInputFromWindow(frameLayout.getWindowToken(), 0);
+            }
+        });
+
+        if (dialogCustom != null) {
+            dialogCustom.show();
+        }
+    }
+
     public static boolean isAppInstalled(Context context, String packageName) {
         try {
             context.getPackageManager().getApplicationInfo(packageName, 0);
@@ -797,6 +1065,26 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     @Override
     public void onDialogNegativeClick(DialogFragment dialog) {
 
+    }
+
+    @Override
+    public void onPause() {
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.pause(this);
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (settings.getBoolean("showAds", true) && mVideoAd != null) {
+            mVideoAd.destroy(this);
+        }
+        super.onDestroy();
+    }
+
+    private void  loadRewardedVideoAd () {
+        mVideoAd.loadAd(getResources().getString(R.string.banner_ad_unit_video), new AdRequest.Builder().build());
     }
 
     private void requestNewInterstitial() {
