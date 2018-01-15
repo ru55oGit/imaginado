@@ -66,40 +66,19 @@ public class SelectLevelActivity extends AppCompatActivity {
         settings = getSharedPreferences("Status", 0);
         editor = settings.edit();
 
-        languageSelected = settings.getBoolean("languageSelected", true);
-        mySwitch = (Switch) findViewById(R.id.switchy);
-        mySwitch.setChecked(languageSelected);
         header = (RelativeLayout) findViewById(R.id.headerSelectLevel);
-        footer = (RelativeLayout) findViewById(R.id.footerContainer);
+        languageSelected = settings.getBoolean("languageSelected", true);
         // por true es English
-        if(!mySwitch.isChecked()){
+        if(languageSelected){
             header.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-            footer.setBackgroundColor(getResources().getColor(R.color.primaryColor));
             title.setText(getResources().getString(R.string.select_level_title_es));
         }else{
             header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             title.setText(getResources().getString(R.string.select_level_title_en));
         }
 
         levelSpanish = settings.getString("levelSpanish","1");
         levelEnglish = settings.getString("levelEnglish","1");
-
-        //attach a listener to check for changes in state
-        mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(mySwitch.isChecked()){
-                    editor.putBoolean("languageSelected", true);
-                    editor.commit();
-                    onResume();
-                }else{
-                    editor.putBoolean("languageSelected", false);
-                    editor.commit();
-                    onResume();
-                }
-            }
-        });
 
         boolean autoclick = settings.getBoolean("autoclick", false);
 

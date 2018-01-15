@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backColorPlay"
-    tools:context="com.ru55o.luckypalm.preguntas.PlayActivity">
+    tools:context=".PlayActivity">
 
     <Button
         android:id="@+id/jugar"
@@ -17,4 +16,46 @@
         android:text="Jugar"
         tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="271dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/primaryColor"
+        android:id="@+id/footerContainer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Español"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bg_letter_size"
+            android:layout_alignParentLeft="true"/>
+
+        <Switch
+            android:id="@+id/languageSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/backLetters"
+            android:trackTint="@color/backLetters"
+            android:textOn="YES"
+            android:textOff="SI"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bg_letter_size"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+
 </RelativeLayout>
