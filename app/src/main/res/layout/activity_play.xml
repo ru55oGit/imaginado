@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:thumbTint="@color/backLetters"
-            android:trackTint="@color/backLetters"
+            android:trackTint="@color/white"
             android:textOn="YES"
             android:textOff="SI"
             android:textSize="25sp"
