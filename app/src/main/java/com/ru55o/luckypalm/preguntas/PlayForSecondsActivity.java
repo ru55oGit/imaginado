@@ -1,6 +1,5 @@
 package com.ru55o.luckypalm.preguntas;
 
-import android.*;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -27,7 +26,9 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -81,8 +82,6 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private int dim;
     private CountDownTimer timer;
     private TextView counter;
-    private TextView timeGained;
-    private TextView questionCircle;
     private static final String FORMAT = "%02d:%02d";
     private static final String FORMAT_TRANSITION = "%02d";
     private int milisegundos = 0;
@@ -103,6 +102,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     InputMethodManager inputMethodManager;
     private RelativeLayout frameCounter;
     private String level;
+    private ImageView volver;
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
@@ -115,6 +115,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private int res;
     private TextView sharesTitle;
     private int sharesCount;
+    private Toast toastLose;
+    private Toast toastWin;
+    private int secondsToSubtract;
 
     private AdView mAdView;
     private AdRequest adRequest;
@@ -173,6 +176,16 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
         languageSelected = settings.getBoolean("languageSelected", true);
+
+        // volver
+        volver = (ImageView) findViewById(R.id.volver);
+        volver.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
+                closeAndSave();
+            }
+        });
 
         /**
          *  COMIENZA LA CARGA DE LOS BANNERS
@@ -268,17 +281,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         Collections.shuffle(random);
         Collections.shuffle(random);
         frameLayout = (RelativeLayout) findViewById(R.id.frameCounter);
-        timeGained = (TextView) findViewById(R.id.chrono);
-        questionCircle = (TextView) findViewById(R.id.questionCircle);
-        questionCircle.setTypeface(lobsterFont);
-        questionCircle.setText(cantPreguntas + "/10");
-        questionCircle.setOnLongClickListener(new View.OnLongClickListener(){
-            @Override
-            public boolean onLongClick(View v) {
-                onResume();
-                return true;
-            }
-        });
+
         /**
          * TERMINA LA CARGA DE LAS PREGUNTAS
          * */
@@ -298,7 +301,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         if (timer != null) {
                             timer.cancel();
                         }
-
+                        volver.setVisibility(View.INVISIBLE);
                         String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
@@ -334,7 +337,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         if (Build.VERSION.SDK_INT > 16) {
                             title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
                         }
-
+                        volver.setVisibility(View.INVISIBLE);
                         Bitmap image = takeScreenshot();
                         image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
                         SharePhoto photo = new SharePhoto.Builder()
@@ -366,7 +369,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
                         avoidInterstitialOnShare = false;
                         sharesCount++;
-
+                        volver.setVisibility(View.INVISIBLE);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
 
                         String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
@@ -394,8 +397,33 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     }
 
     @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+
+        editor.putInt("sharesCount", sharesCount);
+        editor.commit();
+
+        finish();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+
+        milisegundos = settings.getInt("time", 120000);
+        counter = (TextView) findViewById(R.id.chrono);
+        counter.setTypeface(digifont);
+        counter.setText(""+String.format(FORMAT,
+                TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
+                TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
+        counter.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v) {
+                onResume();
+                return true;
+            }
+        });
 
         // Cargo el banner footer cada vez que se carga la pantalla
         if (settings.getBoolean("showAds", true)) {
@@ -411,6 +439,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     focus.setFocusableInTouchMode(true);
                     focus.requestFocus();
                     ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
+                    keyboardIcon.setVisibility(View.INVISIBLE);
                     if (milisegundos > 0) {
                         inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                     }
@@ -444,8 +473,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         }
 
         timerFlag = true;
+        secondsToSubtract = 0;
         aciertos = 0;
-        timeGained.setTypeface(digifont);
+        counter.setTypeface(digifont);
 
         // Instancio el contenedor de las letras
         firstLine = (LinearLayout)findViewById(R.id.wordContainerFirst);
@@ -525,6 +555,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 firstLine.addView(letter);
             }
         }
+
+        // si no hay segundos, abro el popup sin tiempo
+        if (milisegundos == 0) {
+            customDialog();
+        }
     }
 
     public String AssetJSONFile (String filename, Context context) throws IOException {
@@ -585,20 +620,25 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     // maneja la presion de las teclas
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event){
+        // arranco el timer cuando arriesga la primer tecla
         if (timerFlag) {
-            timer(15000);
+            milisegundos = settings.getInt("time", 120000);
+            timer(milisegundos);
             timerFlag = false;
         }
-
+        // si estaba activo el Toast de miss lo cierro
+        if (toastLose != null){
+            toastLose.cancel();
+        }
+        // si toca el back cierro y salvo
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            BackDialog bd = new BackDialog();
-            bd.show(getFragmentManager(), "finnish");
-            timer.cancel();
+            closeAndSave();
             return false;
         }
 
         ll = (LinearLayout)findViewById(R.id.wordContainerFirst);
         ll2 = (LinearLayout) findViewById(R.id.wordContainerSecond);
+
         // por cada letra ingresada, evaluo en toda la palabra
         for (int i = 0; i < question.getRespuesta().length(); i++) {
             // si viene un pipe, es que las palabras estan divididas en 2 renglones
@@ -651,39 +691,83 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 }
             }
         }
-        // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
-        if (aciertos == question.getRespuesta().replaceAll(" ", "").replaceAll("\\|","").length()) {
-            // incremento el numero de preguntas
-            cantPreguntas++;
+        int errores = 0;
+        for (int i = 0;i < question.getRespuesta().length(); i++) {
+            if (Character.toUpperCase(question.getRespuesta().charAt(i))!=event.getDisplayLabel()) {
+                errores++;
+            }
+        }
+        // si ingreso un caracter que no esta en la/s palabra/s
+        if (errores == question.getRespuesta().length()) {
             // paro el reloj
             timer.cancel();
-            // obtengo la cantidad de segundos restantes y los convierto en milisegundos
-            //String tiempo[] = ((String)this.counter.getText()).split(":");
-            inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
-            onResume();
-            /*try {
-                Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
-                Integer segundos = Integer.parseInt(tiempo[1])*1000;
-                milisegundos+= segundos;
-                if (cantPreguntas<11) {
-                    Toast showSecondsGained = Toast.makeText(getBaseContext(),"+"+segundos/1000+"seg.",Toast.LENGTH_SHORT);
-                    showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
-                    showSecondsGained.show();
-                    questionCircle.setText(cantPreguntas + "/10");
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }*/
-            /*timeGained.setText(""+String.format(FORMAT,
-                    TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
-                    TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));*/
+            // en el primer error le descuento 1 segundo, por cada error subsiguiente le descuento cantidad de errores x 1 seg
+            secondsToSubtract++;
+            // obtengo los segundos que habia y le resto 1 segundo
+            String tiempo[] = ((String) this.counter.getText()).split(":");
+            Integer minutos = Integer.parseInt(tiempo[0]) * 60 * 1000;
+            Integer segundos = Integer.parseInt(tiempo[1]) * 1000 >= secondsToSubtract * 1000 ? Integer.parseInt(tiempo[1]) * 1000 - secondsToSubtract * 1000 : 0;
+            milisegundos = minutos + segundos;
+            timer(milisegundos);
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.toast_layout_lose,
+                    (ViewGroup) findViewById(R.id.toast_layout_root));
 
-            // Cuando el reloj llega a cero, se cambia el mensaje
-            if (cantPreguntas == 11) {
-                /*counter.setVisibility(View.INVISIBLE);*/
-                backToPlay(milisegundos);
+            TextView text = (TextView) layout.findViewById(R.id.text);
+            if (languageSelected.booleanValue()) {
+                text.setText("You failed. -" + secondsToSubtract + " Secs");
+            } else {
+                text.setText("Fallaste. -" + secondsToSubtract + " Segundos");
             }
+            text.setTypeface(lobsterFont);
 
+            toastLose = new Toast(getApplicationContext());
+            toastLose.setGravity(Gravity.TOP, 0, (int) getResources().getDimension(R.dimen.top_toast));
+            toastLose.setDuration(Toast.LENGTH_SHORT);
+            toastLose.setView(layout);
+            toastLose.show();
+        }
+        // si la cantidad de aciertos es igual a la cantidad de letras de la palabra
+        if (aciertos == question.getRespuesta().replaceAll(" ", "").replaceAll("\\|","").length()) {
+            // paro el reloj
+            timer.cancel();
+            // Cierro el teclado
+            inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+            // obtengo la cantidad de segundos restantes y los convierto en milisegundos
+            String tiempo[] = ((String)this.counter.getText()).split(":");
+            Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+            Integer segundos = Integer.parseInt(tiempo[1])*1000;
+            milisegundos = minutos + segundos;
+            // a los segundos restantes, por haber acertado la palabra, le sumo tantos segundos como letras tenga la misma como bonus
+            milisegundos+= 10000;
+            // muestro la cantidad de segundos obtenidos
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.toast_layout_win, (ViewGroup) findViewById(R.id.toast_layout_root));
+
+            TextView text = (TextView) layout.findViewById(R.id.text);
+            if (languageSelected.booleanValue()) {
+                text.setText(getResources().getString(R.string.toast_win_en));
+            } else {
+                text.setText(getResources().getString(R.string.toast_win_es));
+            }
+            text.setTypeface(lobsterFont);
+
+            toastWin = new Toast(getApplicationContext());
+            toastWin.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
+            toastWin.setDuration(Toast.LENGTH_SHORT);
+            toastWin.setView(layout);
+            toastWin.show();
+
+            // guardo los segundos totales para ser usados en la proxima palabra
+            settings = getSharedPreferences("Status", 0);
+
+            editor.putInt("time", milisegundos);
+
+            editor.commit();
+            counter.setText(""+String.format(FORMAT,
+                    TimeUnit.MILLISECONDS.toMinutes(milisegundos) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milisegundos)),
+                    TimeUnit.MILLISECONDS.toSeconds(milisegundos) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milisegundos))));
+            this.onResume();
         }
         return true;
     }
@@ -713,23 +797,22 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
     private void timer(final int milliseconds) {
         timer = new CountDownTimer(milliseconds, 1000) {
             public void onTick(long millisUntilFinished) {
-                /*counter.setText(""+String.format(FORMAT,
+                counter.setText(""+String.format(FORMAT,
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
                         TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
-                counter.setVisibility(View.VISIBLE);*/
+                counter.setVisibility(View.VISIBLE);
             }
             public void onFinish() {
-                cantPreguntas++;
-                if (cantPreguntas<11) {
-                    Toast showSecondsGained = Toast.makeText(getBaseContext(),"No sumaste segundos",Toast.LENGTH_SHORT);
-                    showSecondsGained.setGravity(Gravity.TOP,Gravity.CENTER, 0);
-                    showSecondsGained.show();
-                    questionCircle.setText(cantPreguntas + "/10");
-                } else {
-                    backToPlay(milisegundos);
-                }
-                inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
-                onResume();
+                // Cuando el reloj llega a cero, se cambia el mensaje
+                counter.setText("00:00");
+                // Cierro el teclado cuando me quedo sin tiempo
+                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                milisegundos = 0;
+                settings = getSharedPreferences("Status", 0);
+                editor = settings.edit();
+                editor.putInt("time", 0);
+                editor.commit();
+                customDialog();
             }
         }.start();
     }
@@ -1081,6 +1164,35 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             mVideoAd.destroy(this);
         }
         super.onDestroy();
+    }
+
+    private void closeAndSave() {
+        if (timer != null) {
+            timer.cancel();
+        }
+        editor.putBoolean("autoclick", false);
+        if (aciertos != question.getRespuesta().replaceAll(" ", "").replaceAll("\\|","").length() && !"00:00".equalsIgnoreCase(this.counter.getText().toString())) {
+            // obtengo la cantidad de segundos restantes y los convierto en milisegundos
+            String tiempo[] = ((String)this.counter.getText()).split(":");
+            try {
+                Integer minutos = Integer.parseInt(tiempo[0])*60*1000;
+                Integer segundos = Integer.parseInt(tiempo[1]) * 1000;
+                milisegundos = minutos + segundos;
+                // guardo los segundos totales para ser usados en la proxima palabra
+                settings = getSharedPreferences("Status", 0);
+                editor.putInt("time", milisegundos);
+
+                if (editor.commit()) {
+                    finish();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            if (editor.commit()) {
+                finish();
+            }
+        }
     }
 
     private void  loadRewardedVideoAd () {

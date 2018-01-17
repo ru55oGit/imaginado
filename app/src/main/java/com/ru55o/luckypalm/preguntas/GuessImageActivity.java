@@ -686,11 +686,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             timer(milisegundos);
             timerFlag = false;
         }
-
+        // si estaba activo el Toast de miss lo cierro
         if (toastLose != null){
             toastLose.cancel();
         }
-
+        // si toca el back cierro y salvo
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             closeAndSave();
             return false;

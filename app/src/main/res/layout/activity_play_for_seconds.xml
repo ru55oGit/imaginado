@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -52,19 +53,16 @@
             android:textAlignment="center"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/questionCircle"
-            android:layout_width="70dp"
-            android:layout_height="72dp"
-            android:layout_alignBottom="@+id/chrono"
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/cerrar_shadow"
+            android:id="@+id/volver"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="@drawable/camelcircle"
-            android:paddingTop="19dp"
-            android:rotation="-20"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
     <ImageView
@@ -177,4 +175,21 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp">
     </com.google.android.gms.ads.AdView>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:id="@+id/keyboardIcon"
+        android:src="@drawable/keyboardicon"
+        android:layout_alignBottom="@+id/adView"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:visibility="gone"/>
 </RelativeLayout>
