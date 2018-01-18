@@ -1130,7 +1130,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             fos.flush();
             fos.close();
-
+            volver.setVisibility(View.VISIBLE);
         } catch (FileNotFoundException e) {
             Log.e("GREC", e.getMessage(), e);
         } catch (IOException e) {

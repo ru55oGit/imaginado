@@ -196,7 +196,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
             @Override
             public void onRewarded(RewardItem rewardItem) {
-                if (languageSelected.booleanValue()) {
+                if (!languageSelected) {
                     Toast.makeText(GuessImageActivity.this, "You have obtained " + rewardItem.getAmount() +" seconds", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(GuessImageActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+ rewardItem.getType(), Toast.LENGTH_LONG).show();
@@ -215,7 +215,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onRewardedVideoAdFailedToLoad(int err) {
                 if (milisegundos <= 0 ) {
-                    if (!languageSelected.booleanValue()) {
+                    if (!languageSelected) {
                         Toast.makeText(GuessImageActivity.this, "Fallo la carga del video, igual obtiene 15\"" , Toast.LENGTH_LONG).show();
                     } else {
                         Toast.makeText(GuessImageActivity.this, "Video load failed, gains 15\" anyway" , Toast.LENGTH_LONG).show();
@@ -261,7 +261,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+                        String sharetext = !languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
@@ -273,7 +273,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
                 } else {
-                    if (languageSelected.booleanValue()) {
+                    if (!languageSelected) {
                         Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
@@ -313,7 +313,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         }
                     }
                 } else {
-                    if (languageSelected.booleanValue()) {
+                    if (!languageSelected) {
                         Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
@@ -335,7 +335,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
 
-                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+                        String sharetext = !languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -347,7 +347,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         startActivity(sharingIntent);
                     }
                 } else {
-                    if (languageSelected.booleanValue()) {
+                    if (!languageSelected) {
                         Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
@@ -399,13 +399,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         title = (ImageView) findViewById(R.id.title);
         frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
 
-        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
+        if (!languageSelected && Build.VERSION.SDK_INT > 16) {
             frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
             title.setBackground(getResources().getDrawable(R.drawable.acertijos_title_en));
         }
 
         // traigo el Nivel
-        level = languageSelected.booleanValue() ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
+        level = !languageSelected ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
         levelSelected = settings.getString("levelSelected","1");
 
         // Cargo el banner footer cada vez que se carga la pantalla
@@ -432,13 +432,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         sharesTitle = (TextView) findViewById(R.id.sharesTitle);
         if (sharesCount < 10) {
-            if (languageSelected.booleanValue()) {
+            if (!languageSelected) {
                 sharesTitle.setText("Share " + (10 - sharesCount) + " time to hide ads");
             } else {
                 sharesTitle.setText("Comparte " + (10 - sharesCount) + " veces y elimina las publicidades");
             }
         } else {
-            if (languageSelected.booleanValue()) {
+            if (!languageSelected) {
                 sharesTitle.setText("Ask your friends for help");
             } else {
                 sharesTitle.setText("Pide ayuda a tus amigos");
@@ -467,11 +467,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         gd.setStroke((int)getResources().getDimension(R.dimen.border_letters_guess), getResources().getColor(R.color.secondaryColor));
 
 
-        labelLevelText.setText(languageSelected.booleanValue()? "Level " + levelSelected: "Nivel " + levelSelected);
+        labelLevelText.setText(!languageSelected? "Level " + levelSelected: "Nivel " + levelSelected);
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
-        uri = languageSelected.booleanValue() ? "wuzzles" +  levelSelected : "adivinanzas" + levelSelected;
+        uri = !languageSelected ? "wuzzles" +  levelSelected : "adivinanzas" + levelSelected;
         res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
@@ -490,7 +490,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             }
         });
         // obtengo la palabra que se va adivinar segun el idioma seleccionado
-        word = languageSelected.booleanValue() ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
+        word = !languageSelected ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
@@ -772,7 +772,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            if (languageSelected.booleanValue()) {
+            if (!languageSelected) {
                 text.setText("You failed. -"+secondsToSubtract+" Secs");
             } else {
                 text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
@@ -804,7 +804,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             View layout = inflater.inflate(R.layout.toast_layout_win, (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            if (languageSelected.booleanValue()) {
+            if (!languageSelected) {
                 text.setText(getResources().getString(R.string.toast_win_en));
             } else {
                 text.setText(getResources().getString(R.string.toast_win_es));
@@ -848,7 +848,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("levelSelected", ((Integer)(Integer.parseInt(levelSelected) - 1)).toString());
         }
         editor.putBoolean("autoclick", true);
-        if (languageSelected.booleanValue()) {
+        if (!languageSelected) {
             editor.putString("levelEnglish", level);
         } else {
             editor.putString("levelSpanish", level);
@@ -861,7 +861,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (Integer.parseInt(levelSelected) == Integer.parseInt(level)) {
             level = ((Integer)(Integer.parseInt(level) + 1)).toString();
         }
-        if (languageSelected.booleanValue()) {
+        if (!languageSelected) {
             editor.putString("levelEnglish", level);
         } else {
             editor.putString("levelSpanish", level);
@@ -1028,7 +1028,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         shareText = (TextView) dialogCustom.findViewById(R.id.shareText);
 
         // Cambio los textos y los colores segun el idioma
-        if (languageSelected.booleanValue()) {
+        if (!languageSelected) {
             buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
@@ -1066,9 +1066,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         avoidInterstitialOnShare = false;
-                        String sharedDescription = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
+                        String sharedDescription = !languageSelected? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
                         String sharedTitle = getResources().getString(R.string.title_share_text_en);
-                        String sharedImage = !languageSelected.booleanValue()? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
+                        String sharedImage = !languageSelected? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle(sharedTitle)
@@ -1091,7 +1091,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }.start();
                         }
                     } else {
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
@@ -1107,8 +1107,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
                         avoidInterstitialOnShare = false;
-                        Uri screenshotUri = !languageSelected.booleanValue()? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
-                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        Uri screenshotUri = !languageSelected? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
+                        String shareText = !languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1128,7 +1128,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }
                         }.start();
                     } else {
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
@@ -1146,13 +1146,13 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         avoidInterstitialOnShare = false;
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Bitmap largeIcon;
-                        if (!languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
                         } else {
                             largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimageen);
                         }
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M": getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        String shareText = !languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M": getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1170,7 +1170,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }
                         }.start();
                     } else {
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();

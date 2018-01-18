@@ -6,16 +6,67 @@
     android:background="@color/backColorPlay"
     tools:context=".PlayActivity">
 
-    <Button
-        android:id="@+id/jugar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="209dp"
-        android:text="Jugar"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="271dp" />
+        <Button
+            android:id="@+id/aleatorio"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/whiteback"
+            android:shadowColor="@color/colorAccent"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:textColor="@color/primaryColor"
+            android:text="Aleatorio"
+            android:textSize="32dp" />
+
+        <Button
+            android:id="@+id/emojis"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/emojis1"
+            android:textSize="32dp"
+            android:shadowColor="@color/colorAccent"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:textColor="@color/primaryColor"
+            android:text="" />
+
+        <Button
+            android:id="@+id/acertijos"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/aleatorio"
+            android:background="@drawable/adivinanzas1"
+            android:shadowColor="@color/colorAccent"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:textColor="@color/primaryColor"
+            android:textSize="32dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/peliculas"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/emojis"
+            android:background="@drawable/peliculas1"
+            android:shadowColor="@color/colorAccent"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:textColor="@color/primaryColor"
+            android:textSize="32dp"
+            android:text="" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -55,7 +106,4 @@
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
-
-
-
 </RelativeLayout>

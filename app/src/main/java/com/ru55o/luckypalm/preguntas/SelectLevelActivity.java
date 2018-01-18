@@ -37,7 +37,6 @@ public class SelectLevelActivity extends AppCompatActivity {
     private String levelEnglish;
     private Boolean languageSelected;
     private ScrollView hsv;
-    private Switch mySwitch;
     private RelativeLayout header, footer;
     private InputMethodManager inputMethodManager;
     private RelativeLayout frameLayout;
@@ -119,8 +118,7 @@ public class SelectLevelActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-                // por true es English
-                if (!mySwitch.isChecked()) {
+                if (languageSelected) {
                     if (i > Integer.parseInt(levelSpanish)) {
                         levelCircle.setAlpha(0.35f);
                     }
@@ -146,9 +144,8 @@ public class SelectLevelActivity extends AppCompatActivity {
 
     @Override
     public void onDestroy() {
-        android.os.Process.killProcess(android.os.Process.myPid());
+        //android.os.Process.killProcess(android.os.Process.myPid());
         super.onDestroy();
-
     }
 
     public String AssetJSONFile (String filename, Context context) throws IOException {
@@ -165,14 +162,14 @@ public class SelectLevelActivity extends AppCompatActivity {
         try {
             String jsonLocation;
             JSONArray jarray;
-            if (!mySwitch.isChecked()) {
+            if (languageSelected) {
                 jsonLocation = AssetJSONFile("data.json", getBaseContext());
             } else {
                 jsonLocation = AssetJSONFile("data_en.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles
-            if (!mySwitch.isChecked()) {
+            if (languageSelected) {
                 jarray = (JSONArray) jsonobject.getJSONArray("palabras");
             } else {
                 jarray = (JSONArray) jsonobject.getJSONArray("words");
