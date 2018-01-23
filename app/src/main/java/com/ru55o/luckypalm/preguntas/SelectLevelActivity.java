@@ -39,7 +39,7 @@ public class SelectLevelActivity extends AppCompatActivity {
     private GridLayout contenedorNiveles;
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
-    private String levelSelected;
+    private String levelByCategory;
     private String categorySelected;
     private Boolean languageSelected;
     private ScrollView hsv;
@@ -84,9 +84,6 @@ public class SelectLevelActivity extends AppCompatActivity {
             title.setText(getResources().getString(R.string.select_level_title_en));
         }
 
-
-        levelSelected = getLevelByCategory(categorySelected);
-
         ((ProgressBar) findViewById(R.id.loader)).setVisibility(View.VISIBLE);
         autoclick = settings.getBoolean("autoclick", false);
         // si hizo siguiente o anterior en la pantalla de guessimage, voy directo al nivel seteado
@@ -99,6 +96,8 @@ public class SelectLevelActivity extends AppCompatActivity {
             // Starting the download process
             downloadTask.execute();
         }
+
+        levelByCategory = getLevelByCategory(categorySelected);
 
         contenedorNiveles.removeAllViews();
 
@@ -213,7 +212,7 @@ public class SelectLevelActivity extends AppCompatActivity {
 
                     int res = getResources().getIdentifier(categorySelected + i, "drawable", getPackageName());
                     backgroundLevel = getResources().getDrawable(res);
-                    if (i > Integer.parseInt(levelSelected)) {
+                    if (i > Integer.parseInt(levelByCategory)) {
                         levelCircle.setAlpha(0.35f);
                     } else {
                         levelCircle.setOnClickListener(new View.OnClickListener() {

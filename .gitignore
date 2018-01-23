@@ -7,3 +7,5 @@
 /build
 /captures
 *misc
+**/.idea/workspace.xml
+**/.idea/tasks.xml

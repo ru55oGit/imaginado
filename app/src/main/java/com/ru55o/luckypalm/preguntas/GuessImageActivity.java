@@ -832,7 +832,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             //obtengo el array de niveles
             JSONArray jarray = (JSONArray) jsonobject.getJSONArray("listado");
             //obtengo el nivel
-            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
+            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(levelSelected));
             //obtengo la palabra del nivel correspondiente, segun la categoria elegida
             respuesta = nivel.getString(categorySelected);
 
