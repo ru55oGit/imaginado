@@ -286,7 +286,7 @@ public class SelectImagesActivity extends AppCompatActivity {
         String word = "";
         try {
             //obtengo el archivo
-            String jsonLocation = AssetJSONFile("data.json", getBaseContext());
+            String jsonLocation = AssetJSONFile("adivinanzas.json", getBaseContext());
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles
             JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");

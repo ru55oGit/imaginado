@@ -85,8 +85,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private int dim;
     private int aciertos = 0;
     private String uri;
-    private String level;
+    private String categorySelected;
     private String levelSelected;
+    private String level;
     private GradientDrawable gd;
     private Typeface digifont;
     private Typeface lobsterFont;
@@ -239,9 +240,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
                 }
                 public void onFinish() {
-                    if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(level)) {
-                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                    }
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                 }
             }.start();
         }
@@ -405,8 +404,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         // traigo el Nivel
-        level = !languageSelected ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
+        //level = !languageSelected ? settings.getString("levelEnglish","1") : settings.getString("levelSpanish","1");
+        categorySelected = settings.getString("categorySelected","emojis");
         levelSelected = settings.getString("levelSelected","1");
+        level = getLevelByCategory(categorySelected);
 
         // Cargo el banner footer cada vez que se carga la pantalla
         if (settings.getBoolean("showAds", true)) {
@@ -423,9 +424,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     focus.requestFocus();
                     ImageView keyboardIcon = (ImageView) findViewById(R.id.keyboardIcon);
                     keyboardIcon.setVisibility(View.INVISIBLE);
-                    if (milisegundos > 0 && Integer.parseInt(levelSelected)<= Integer.parseInt(level)) {
-                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
-                    }
+                    inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
                 }
             });
         }
@@ -455,10 +454,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             requestNewInterstitial();
         }
 
-        // Si el numero de nivel seleccionado es mayor al numero de nivel resuelto, no muestro el teclado
-        if (Integer.parseInt(settings.getString("levelSelected", "1"))<= Integer.parseInt(level)) {
-            toggleKeyboardVisible();
-        }
+        toggleKeyboardVisible();
+
 
         // border radius
         gd = new GradientDrawable();
@@ -471,7 +468,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         labelLevelText.setTypeface(lobsterFont);
         Bundle extras = getIntent().getExtras();
         // Traigo la imagen que se eligio para adivinar
-        uri = !languageSelected ? "wuzzles" +  levelSelected : "adivinanzas" + levelSelected;
+        uri = categorySelected + levelSelected;
         res = getResources().getIdentifier(uri, "drawable", getPackageName());
         // seteo la imagen en el imageview
         imageToGuess = (ImageView) findViewById(R.id.imageToGuess);
@@ -482,15 +479,12 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             public void onClick(View v) {
                 // no se abre si no hay tiempo o si el nivel seleccionado es mayor al nivel jugado
                 if (!("00:00").equals(counter.getText())) {
-                    if (Integer.parseInt(levelSelected) <= Integer.parseInt(level)) {
-                        showImage(res);
-                    }
+                    showImage(res);
                 }
-
             }
         });
         // obtengo la palabra que se va adivinar segun el idioma seleccionado
-        word = !languageSelected ? getWord("wuzzles", levelSelected) : obtenerPalabra("adivinanzas", levelSelected);
+        word = getWordByCategory();
 
         // volver
         volver = (ImageView) findViewById(R.id.volver);
@@ -570,6 +564,25 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         });
     }
 
+    public String getLevelByCategory(String cat){
+        String result = "";
+        if ("adivinanzas".equals(cat)) {
+            result = settings.getString("levelAdivinanzas","1");
+        } else if ("wuzzles".equals(cat)) {
+            result = settings.getString("levelWuzzles","1");
+        } else if ("emojis".equals(cat)) {
+            result = settings.getString("levelEmojis","1");
+        } else if ("enojis".equals(cat)) {
+            result = settings.getString("levelEnojis","1");
+        } else if ("peliculas".equals(cat)) {
+            result = settings.getString("levelPeliculas","1");
+        } else if ("movies".equals(cat)) {
+            result = settings.getString("levelMovies","1");
+        }
+
+        return result;
+    }
+
     @Override
     protected void onStop() {
         super.onStop();
@@ -633,49 +646,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         return new String(formArray);
     }
-
-    private String getWord (String categoria, String level) {
-        String word = "";
-        try {
-            //obtengo el archivo
-            String jsonLocation = AssetJSONFile("data_en.json", getBaseContext());
-            JSONObject jsonobject = new JSONObject(jsonLocation);
-            //obtengo el array de niveles
-            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("words");
-            //obtengo el nivel
-            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
-            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
-            word = nivel.getString(categoria);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return word;
-    }
-
-    private String obtenerPalabra (String categoria, String level) {
-        String word = "";
-        try {
-            //obtengo el archivo
-            String jsonLocation = AssetJSONFile("data.json", getBaseContext());
-            JSONObject jsonobject = new JSONObject(jsonLocation);
-            //obtengo el array de niveles
-            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");
-            //obtengo el nivel
-            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
-            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
-            word = nivel.getString(categoria);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return word;
-    }
-
 
     // maneja la presion de las teclas
     @Override
@@ -819,7 +789,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
             // guardo los segundos totales para ser usados en la proxima palabra
             settings = getSharedPreferences("Status", 0);
-
             editor.putInt("time", milisegundos);
             if (Integer.parseInt(level) == Integer.parseInt(levelSelected)){
                 saveStateOfLevel();
@@ -840,6 +809,41 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         return true;
     }
 
+    private String getWordByCategory() {
+        String respuesta = "";
+        try {
+            //obtengo el archivo
+            String jsonLocation = null;
+            if ("adivinanzas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("adivinanzas.json", getBaseContext());
+            } else if("wuzzles".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("wuzzles.json", getBaseContext());
+            } else if("emojis".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("emojis.json", getBaseContext());
+            } else if("enojis".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("enojis.json", getBaseContext());
+            } else if("peliculas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("peliculas.json", getBaseContext());
+            } else if("movies".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("movies.json", getBaseContext());
+            }
+
+            JSONObject jsonobject = new JSONObject(jsonLocation);
+            //obtengo el array de niveles
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("listado");
+            //obtengo el nivel
+            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(level));
+            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
+            respuesta = nivel.getString(categorySelected);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return respuesta;
+    }
+
     private void moveToNextOrPrevious(String moveTo) {
         if ("next".equals(moveTo)) {
             editor.putString("levelSelected", ((Integer)(Integer.parseInt(levelSelected) + 1)).toString());
@@ -848,12 +852,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("levelSelected", ((Integer)(Integer.parseInt(levelSelected) - 1)).toString());
         }
         editor.putBoolean("autoclick", true);
-        if (!languageSelected) {
-            editor.putString("levelEnglish", level);
-        } else {
-            editor.putString("levelSpanish", level);
-        }
 
+        saveStateOfLevel();
         editor.commit();
     }
 
@@ -861,12 +861,20 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         if (Integer.parseInt(levelSelected) == Integer.parseInt(level)) {
             level = ((Integer)(Integer.parseInt(level) + 1)).toString();
         }
-        if (!languageSelected) {
-            editor.putString("levelEnglish", level);
-        } else {
-            editor.putString("levelSpanish", level);
+        if ("adivinanzas".equals(categorySelected)) {
+            editor.putString("levelAdivinanzas", level);
+        } else if("wuzzles".equals(categorySelected)) {
+            editor.putString("levelWuzzles", level);
+        } else if("emojis".equals(categorySelected)) {
+            editor.putString("levelEmojis", level);
+        } else if("enojis".equals(categorySelected)) {
+            editor.putString("levelEnojis", level);
+        } else if("peliculas".equals(categorySelected)) {
+            editor.putString("levelPeliculas", level);
+        } else if("movies".equals(categorySelected)) {
+            editor.putString("levelMovies", level);
         }
-        editor.putString("levelSelected", level);
+        //editor.putString("levelSelected", level);
         editor.commit();
     }
 
@@ -1249,10 +1257,24 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     private int getLevelCount() {
         int count = 0;
         try {
-            String jsonLocation = AssetJSONFile("data.json", getBaseContext());
+            //obtengo el archivo
+            String jsonLocation = null;
+            if ("adivinanzas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("adivinanzas.json", getBaseContext());
+            } else if("wuzzles".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("wuzzles.json", getBaseContext());
+            } else if("emojis".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("emojis.json", getBaseContext());
+            } else if("enojis".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("enojis.json", getBaseContext());
+            } else if("peliculas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("peliculas.json", getBaseContext());
+            } else if("movies".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("movies.json", getBaseContext());
+            }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles
-            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("palabras");
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("listado");
             count = jarray.length();
         } catch (IOException e) {
             e.printStackTrace();

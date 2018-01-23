@@ -43,9 +43,7 @@ public class PlayActivity extends AppCompatActivity {
 
         languageSelected = settings.getBoolean("languageSelected", true);
         languageSwitch = (Switch) findViewById(R.id.languageSwitch);
-        languageSwitch.setChecked(languageSelected);
-
-
+        languageSwitch.setChecked(!languageSelected);
 
         //attach a listener to check for changes in state
         languageSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -73,11 +71,45 @@ public class PlayActivity extends AppCompatActivity {
         emojis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","emojis");
+                } else {
+                    editor.putString("categorySelected","enojis");
+                }                editor.commit();
                 Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
                 startActivity(intent);
             }
         });
-        emojis.setTypeface(lobsterFont);
+
+        acertijos = (Button) findViewById(R.id.acertijos);
+        acertijos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","adivinanzas");
+                } else {
+                    editor.putString("categorySelected","wuzzles");
+                }
+                editor.commit();
+                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        peliculas = (Button) findViewById(R.id.peliculas);
+        peliculas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","peliculas");
+                } else {
+                    editor.putString("categorySelected","movies");
+                }
+                editor.commit();
+                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

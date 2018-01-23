@@ -217,10 +217,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             }
             @Override
             public void onRewarded(RewardItem rewardItem) {
-                if (languageSelected.booleanValue()) {
-                    Toast.makeText(PlayForSecondsActivity.this, "You have obtained " + rewardItem.getAmount() +" seconds", Toast.LENGTH_LONG).show();
-                } else {
+                if (languageSelected) {
                     Toast.makeText(PlayForSecondsActivity.this, "Has obtenido " + rewardItem.getAmount() +" "+ rewardItem.getType(), Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(PlayForSecondsActivity.this, "You have obtained " + rewardItem.getAmount() +" seconds", Toast.LENGTH_LONG).show();
                 }
                 milisegundos+= rewardItem.getAmount()*1000;
                 editor.putInt("time", milisegundos);
@@ -236,7 +236,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             @Override
             public void onRewardedVideoAdFailedToLoad(int err) {
                 if (milisegundos <= 0 ) {
-                    if (!languageSelected.booleanValue()) {
+                    if (languageSelected) {
                         Toast.makeText(PlayForSecondsActivity.this, "Fallo la carga del video, igual obtiene 15\"" , Toast.LENGTH_LONG).show();
                     } else {
                         Toast.makeText(PlayForSecondsActivity.this, "Video load failed, gains 15\" anyway" , Toast.LENGTH_LONG).show();
@@ -274,7 +274,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         /**
          * COMIENZA LA CARGA DE LAS PREGUNTAS
          * */
-        pregResp = languageSelected.booleanValue()? getQuestion() : obtenerPreguntas();
+        pregResp = !languageSelected? getQuestion() : obtenerPreguntas();
         for (int i=0; i<pregResp.size();i++) {
             random.add(i);
         }
@@ -302,7 +302,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                             timer.cancel();
                         }
                         volver.setVisibility(View.INVISIBLE);
-                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+                        String sharetext = languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
@@ -314,10 +314,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         startActivity(Intent.createChooser(sharingIntent, "Share image using"));
                     }
                 } else {
-                    if (languageSelected.booleanValue()) {
-                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
-                    } else {
+                    if (languageSelected) {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -352,10 +352,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         }
                     }
                 } else {
-                    if (languageSelected.booleanValue()) {
-                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
-                    } else {
+                    if (languageSelected) {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -372,7 +372,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         volver.setVisibility(View.INVISIBLE);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
 
-                        String sharetext = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+                        String sharetext = languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -384,10 +384,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         startActivity(sharingIntent);
                     }
                 } else {
-                    if (languageSelected.booleanValue()) {
-                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
-                    } else {
+                    if (languageSelected) {
                         Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -449,16 +449,16 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         sharesTitle = (TextView) findViewById(R.id.sharesTitle);
         if (sharesCount < 10) {
-            if (languageSelected.booleanValue()) {
-                sharesTitle.setText("Share " + (10 - sharesCount) + " time to hide ads");
-            } else {
+            if (languageSelected) {
                 sharesTitle.setText("Comparte " + (10 - sharesCount) + " veces y elimina las publicidades");
+            } else {
+                sharesTitle.setText("Share " + (10 - sharesCount) + " time to hide ads");
             }
         } else {
-            if (languageSelected.booleanValue()) {
-                sharesTitle.setText("Ask your friends for help");
-            } else {
+            if (languageSelected) {
                 sharesTitle.setText("Pide ayuda a tus amigos");
+            } else {
+                sharesTitle.setText("Ask your friends for help");
             }
         }
 
@@ -714,10 +714,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            if (languageSelected.booleanValue()) {
-                text.setText("You failed. -" + secondsToSubtract + " Secs");
-            } else {
+            if (languageSelected) {
                 text.setText("Fallaste. -" + secondsToSubtract + " Segundos");
+            } else {
+                text.setText("You failed. -" + secondsToSubtract + " Secs");
             }
             text.setTypeface(lobsterFont);
 
@@ -745,10 +745,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             View layout = inflater.inflate(R.layout.toast_layout_win, (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
-            if (languageSelected.booleanValue()) {
-                text.setText(getResources().getString(R.string.toast_win_en));
-            } else {
+            if (languageSelected) {
                 text.setText(getResources().getString(R.string.toast_win_es));
+            } else {
+                text.setText(getResources().getString(R.string.toast_win_en));
             }
             text.setTypeface(lobsterFont);
 
@@ -863,7 +863,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         shareText = (TextView) dialogCustom.findViewById(R.id.shareText);
 
         // Cambio los textos y los colores segun el idioma
-        if (languageSelected.booleanValue()) {
+        if (!languageSelected) {
             buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
@@ -901,9 +901,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         avoidInterstitialOnShare = false;
-                        String sharedDescription = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
+                        String sharedDescription = languageSelected? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
                         String sharedTitle = getResources().getString(R.string.title_share_text_en);
-                        String sharedImage = !languageSelected.booleanValue()? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
+                        String sharedImage = languageSelected? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle(sharedTitle)
@@ -926,10 +926,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                             }.start();
                         }
                     } else {
-                        if (languageSelected.booleanValue()) {
-                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
-                        } else {
+                        if (languageSelected) {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -942,8 +942,8 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                 if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
                         avoidInterstitialOnShare = false;
-                        Uri screenshotUri = !languageSelected.booleanValue()? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
-                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        Uri screenshotUri = languageSelected? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
+                        String shareText = languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -963,10 +963,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                             }
                         }.start();
                     } else {
-                        if (languageSelected.booleanValue()) {
-                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
-                        } else {
+                        if (languageSelected) {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -981,13 +981,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         avoidInterstitialOnShare = false;
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Bitmap largeIcon;
-                        if (!languageSelected.booleanValue()) {
-                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
-                        } else {
+                        if (languageSelected) {
                             largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimageen);
+                        } else {
+                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
                         }
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = !languageSelected.booleanValue()? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M": getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        String shareText = languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M": getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1005,10 +1005,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                             }
                         }.start();
                     } else {
-                        if (languageSelected.booleanValue()) {
-                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
-                        } else {
+                        if (languageSelected) {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
