@@ -578,6 +578,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             result = settings.getString("levelPeliculas","1");
         } else if ("movies".equals(cat)) {
             result = settings.getString("levelMovies","1");
+        } else if ("escudos".equals(cat)) {
+            result = settings.getString("levelEscudos","1");
         }
 
         return result;
@@ -826,6 +828,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 jsonLocation = AssetJSONFile("peliculas.json", getBaseContext());
             } else if("movies".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("movies.json", getBaseContext());
+            } else if("escudos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
             }
 
             JSONObject jsonobject = new JSONObject(jsonLocation);
@@ -873,6 +877,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("levelPeliculas", level);
         } else if("movies".equals(categorySelected)) {
             editor.putString("levelMovies", level);
+        } else if("escudos".equals(categorySelected)) {
+            editor.putString("levelEscudos", level);
         }
         //editor.putString("levelSelected", level);
         editor.commit();
@@ -1271,6 +1277,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 jsonLocation = AssetJSONFile("peliculas.json", getBaseContext());
             } else if("movies".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("movies.json", getBaseContext());
+            } else if("escudos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
+            } else if("marcas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles

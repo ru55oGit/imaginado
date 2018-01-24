@@ -20,6 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -49,6 +50,7 @@ public class SelectLevelActivity extends AppCompatActivity {
     boolean autoclick;
     LoadTask downloadTask;
     Typeface lobsterFont;
+    private ImageView volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,16 @@ public class SelectLevelActivity extends AppCompatActivity {
         frameLayout = (RelativeLayout) findViewById(R.id.activity_select_level);
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
+
+        // volver
+        volver = (ImageView) findViewById(R.id.volver);
+        volver.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                downloadTask.cancel(true);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -119,6 +131,10 @@ public class SelectLevelActivity extends AppCompatActivity {
             result = settings.getString("levelPeliculas","1");
         } else if ("movies".equals(cat)) {
             result = settings.getString("levelMovies","1");
+        } else if ("escudos".equals(cat)) {
+            result = settings.getString("levelEscudos","1");
+        } else if ("marcas".equals(cat)) {
+            result = settings.getString("levelMarcas","1");
         }
 
         return result;
@@ -189,6 +205,10 @@ public class SelectLevelActivity extends AppCompatActivity {
                 jsonLocation = AssetJSONFile("peliculas.json", getBaseContext());
             } else if("movies".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("movies.json", getBaseContext());
+            } else if ("escudos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
+            } else if ("marcas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles

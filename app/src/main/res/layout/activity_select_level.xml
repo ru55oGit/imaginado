@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_select_level"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -15,10 +16,19 @@
         android:background="@color/primaryColor"
         android:id="@+id/headerSelectLevel">
 
+        <ImageView
+            android:id="@+id/volver"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/arrowback" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/select_level_title_es"
+            android:text="@string/select_category_title_es"
             android:gravity="center_horizontal"
             android:id="@+id/title"
             android:textSize="@dimen/clock_size"

@@ -31,7 +31,11 @@
     <string name="title_share_text_en">Descifralo</string>
     <string name="select_level_title_es">Elige el nivel</string>
     <string name="select_level_title_en">Choose level</string>
+    <string name="select_category_title_es">Elige la categoría</string>
+    <string name="select_category_title_en">Choose category</string>
     <string name="toast_win_es">¡Ganaste 10 segundos!</string>
     <string name="toast_win_en">Won 10 seconds</string>
+    <string name="random_text_es">Aleatorio</string>
+    <string name="random_text_en">Random</string>
     <string name="title_activity_play">Elija una categoría</string>
 </resources>
