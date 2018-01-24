@@ -135,6 +135,8 @@ public class SelectLevelActivity extends AppCompatActivity {
             result = settings.getString("levelEscudos","1");
         } else if ("marcas".equals(cat)) {
             result = settings.getString("levelMarcas","1");
+        } else if ("banderas".equals(cat)) {
+            result = settings.getString("levelBanderas","1");
         }
 
         return result;
@@ -209,6 +211,8 @@ public class SelectLevelActivity extends AppCompatActivity {
                 jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
             } else if ("marcas".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
+            } else if ("banderas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles

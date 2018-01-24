@@ -24,5 +24,7 @@
     <dimen name="margin_right_play">1dp</dimen>
     <dimen name="redes_icons">65dp</dimen>
     <dimen name="pfs_title">36dp</dimen>
+    <dimen name="margin_categories">5dp</dimen>
+    <dimen name="textsize_categories">25dp</dimen>
 </resources>
 

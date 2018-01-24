@@ -56,7 +56,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:srcCompat="@drawable/cerrar_shadow"
+            app:srcCompat="@drawable/cerrar"
             android:id="@+id/volver"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"

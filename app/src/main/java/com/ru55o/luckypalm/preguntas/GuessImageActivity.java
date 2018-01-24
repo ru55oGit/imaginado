@@ -580,6 +580,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             result = settings.getString("levelMovies","1");
         } else if ("escudos".equals(cat)) {
             result = settings.getString("levelEscudos","1");
+        } else if ("banderas".equals(cat)) {
+            result = settings.getString("levelBanderas","1");
         }
 
         return result;
@@ -830,6 +832,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 jsonLocation = AssetJSONFile("movies.json", getBaseContext());
             } else if("escudos".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
+            } else if("banderas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
             }
 
             JSONObject jsonobject = new JSONObject(jsonLocation);
@@ -879,6 +883,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("levelMovies", level);
         } else if("escudos".equals(categorySelected)) {
             editor.putString("levelEscudos", level);
+        } else if("banderas".equals(categorySelected)) {
+            editor.putString("levelBanderas", level);
         }
         //editor.putString("levelSelected", level);
         editor.commit();
@@ -1281,6 +1287,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
             } else if("marcas".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
+            } else if("banderas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles

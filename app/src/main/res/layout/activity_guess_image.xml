@@ -8,14 +8,61 @@
     android:id="@+id/frameCounter"
     android:background="@drawable/tile_es"
     tools:context=".GuessImageActivity">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/cerrar"
+            android:id="@+id/volver"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
+        <TextView
+            android:id="@+id/labelLevelText"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/camelcircle"
+            android:paddingTop="19dp"
+            android:rotation="-20"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/level_guess_fontsize"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/counterText"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/chrono"
+            android:paddingTop="22dp"
+            android:rotation="25"
+            android:text="00:00"
+            android:textAlignment="center"
+            android:textSize="23sp" />
+    </RelativeLayout>
     <ImageView
         android:layout_width="@dimen/guessimage_size"
         android:layout_height="@dimen/guessimage_size"
         android:src="@drawable/adivinanzas1"
         android:id="@+id/imageToGuess"
         android:layout_gravity="center"
-        android:layout_below="@+id/counterText"
+        android:layout_below="@+id/header"
         android:layout_centerHorizontal="true"
         android:background="@color/secondaryColor"
         android:padding="7dp" />
@@ -68,20 +115,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:visibility="invisible"/>
-
-    <TextView
-        android:id="@+id/counterText"
-        android:text="00:00"
-        android:layout_width="75dp"
-        android:layout_height="77dp"
-        android:background="@drawable/chrono"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:rotation="20"
-        android:paddingTop="28dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:id="@+id/title"
@@ -137,33 +170,6 @@
                 android:src="@drawable/facebookicon" />
         </LinearLayout>
     </RelativeLayout>
-
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:srcCompat="@drawable/cerrar_shadow"
-        android:id="@+id/volver"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:id="@+id/labelLevelText"
-        android:textStyle="bold"
-        android:textSize="@dimen/level_guess_fontsize"
-        android:background="@drawable/camelcircle"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:rotation="-20"
-        android:paddingTop="19dp"
-        android:layout_alignBottom="@+id/title"
-        android:layout_alignLeft="@+id/volver"
-        android:layout_alignStart="@+id/volver"
-        android:visibility="invisible"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

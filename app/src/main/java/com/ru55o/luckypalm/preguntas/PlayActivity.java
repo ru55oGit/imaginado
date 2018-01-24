@@ -19,12 +19,8 @@ import android.widget.TextView;
 
 public class PlayActivity extends AppCompatActivity {
 
-    private Button aleatorio;
-    private Button emojis;
-    private Button acertijos;
-    private Button peliculas;
-    private Button escudos;
-    private Button marcas;
+    private Button aleatorio, emojis, acertijos,
+    peliculas, escudos, marcas, banderas;
 
     private TextView title;
     private SharedPreferences settings;
@@ -153,6 +149,21 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
+        banderas = (Button) findViewById(R.id.banderas);
+        banderas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","banderas");
+                } else {
+                    editor.putString("categorySelected","banderas");
+                }
+                editor.commit();
+                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //attach a listener to check for changes in state
         languageSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -215,6 +226,11 @@ public class PlayActivity extends AppCompatActivity {
             } else {
                 marcas.setBackground(getImage("marcas", Integer.parseInt(getLevelByCategory("marcas"))));
             }
+            if (!languageSwitch.isChecked()) {
+                banderas.setBackground(getImage("banderas", Integer.parseInt(getLevelByCategory("banderas"))));
+            } else {
+                banderas.setBackground(getImage("banderas", Integer.parseInt(getLevelByCategory("banderas"))));
+            }
         }
     }
 
@@ -234,12 +250,10 @@ public class PlayActivity extends AppCompatActivity {
             result = settings.getString("levelMovies","1");
         } else if ("escudos".equals(cat)) {
             result = settings.getString("levelEscudos","1");
-        } else if ("escudos".equals(cat)) {
-            result = settings.getString("levelEscudos","1");
         } else if ("marcas".equals(cat)) {
             result = settings.getString("levelMarcas","1");
-        } else if ("marcas".equals(cat)) {
-            result = settings.getString("levelMarcas","1");
+        } else if ("banderas".equals(cat)) {
+            result = settings.getString("levelBanderas","1");
         }
 
         return result;
