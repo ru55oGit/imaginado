@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -144,14 +146,18 @@ public class SelectLevelActivity extends AppCompatActivity {
 
     // uso este metodo para escalar y comprimir la imagen grande para mostrar
     // los thumbnails
-    public Drawable scaleImage(Drawable image, float scaleFactor) {
+    public Drawable scaleImage(Drawable image) {
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
         if ((image == null) || !(image instanceof BitmapDrawable)) {
             return image;
         }
         Bitmap original = ((BitmapDrawable) image).getBitmap();
 
-        int sizeX = Math.round(image.getIntrinsicWidth() * scaleFactor);
-        int sizeY = Math.round(image.getIntrinsicHeight() * scaleFactor);
+        int sizeX = Math.round(width/4);
+        int sizeY = Math.round(width/4);
         // escalo
         Bitmap bitmapResized = Bitmap.createScaledBitmap(original, sizeX, sizeY, false);
 
@@ -261,7 +267,7 @@ public class SelectLevelActivity extends AppCompatActivity {
                     params.setMargins(1, 1, 1, 1);
 
                     if (Build.VERSION.SDK_INT > 15) {
-                        levelCircle.setBackground(scaleImage(backgroundLevel, 0.22f));
+                        levelCircle.setBackground(scaleImage(backgroundLevel));
                     }
                     if (Build.VERSION.SDK_INT > 17) {
                         levelCircle.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);

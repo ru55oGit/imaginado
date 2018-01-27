@@ -3,12 +3,14 @@ package com.ru55o.luckypalm.preguntas;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -260,14 +262,18 @@ public class PlayActivity extends AppCompatActivity {
     }
     public Drawable getImage(String categorySelected, int i) {
         Drawable backgroundLevel;
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
 
         int res = "whiteback".equals(categorySelected)? getResources().getIdentifier("whiteback", "drawable", getPackageName()) : getResources().getIdentifier(categorySelected + i, "drawable", getPackageName());
         backgroundLevel = getResources().getDrawable(res);
 
         Bitmap original = ((BitmapDrawable) backgroundLevel).getBitmap();
 
-        int sizeX = Math.round(backgroundLevel.getIntrinsicWidth() * 0.43f);
-        int sizeY = Math.round(backgroundLevel.getIntrinsicHeight() * 0.43f);
+        int sizeX = Math.round(width/2);
+        int sizeY = Math.round(width/2);
         // escalo
         Bitmap bitmapResized = Bitmap.createScaledBitmap(original, sizeX, sizeY, false);
 

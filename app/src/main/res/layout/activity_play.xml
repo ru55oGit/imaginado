@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PlayActivity">
+
     <RelativeLayout
+        android:id="@+id/headerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
         android:background="@color/primaryColor"
-        android:id="@+id/headerCategory">
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/select_category_title_es"
-            android:gravity="center_horizontal"
-            android:id="@+id/title"
-            android:textSize="@dimen/clock_size"
-            android:textColor="@color/white"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal"
+            android:text="@string/select_category_title_es"
+            android:textColor="@color/white"
+            android:textSize="@dimen/clock_size" />
     </RelativeLayout>
 
     <ScrollView
@@ -31,163 +33,183 @@
         android:layout_above="@+id/footerCategory"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
-        android:background="@color/cardview_shadow_start_color"
+        android:background="@color/primaryColor"
         android:scrollbars="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="top">
 
-            <Button
-                android:id="@+id/aleatorio"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/fila1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="@dimen/margin_categories"
-                android:layout_marginTop="@dimen/margin_categories"
-                android:background="@drawable/whiteback"
-                android:shadowColor="@color/colorAccent"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="5"
-                android:text="Aleatorio"
-                android:textColor="@color/primaryColor"
-                android:textSize="@dimen/textsize_categories" />
+                android:layout_weight="1"
+                android:gravity="top"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/emojis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginLeft="@dimen/margin_categories"
-                android:layout_marginRight="@dimen/margin_categories"
-                android:layout_marginTop="@dimen/margin_categories"
-                android:background="@drawable/emojis1"
-                android:shadowColor="@color/colorAccent"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="5"
-                android:textColor="@color/primaryColor"
-                android:textSize="32dp" />
+                <Button
+                    android:id="@+id/aleatorio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/whiteback"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:text="Aleatorio"
+                    android:textColor="@color/primaryColor"
+                    android:layout_margin="1dp"
+                    android:textSize="@dimen/textsize_categories" />
 
-            <Button
-                android:id="@+id/acertijos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/aleatorio"
-                android:layout_marginLeft="@dimen/margin_categories"
-                android:layout_marginRight="@dimen/margin_categories"
-                android:layout_marginTop="@dimen/margin_categories"
-                android:background="@drawable/adivinanzas1"
-                android:shadowColor="@color/colorAccent"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="5"
-                android:textColor="@color/primaryColor" />
+                <Button
+                    android:id="@+id/emojis"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/emojis1"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:textColor="@color/primaryColor"
+                    android:layout_margin="1dp"
+                    android:textSize="32dp" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/peliculas"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/fila2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/emojis"
-                android:layout_marginLeft="@dimen/margin_categories"
-                android:layout_marginRight="@dimen/margin_categories"
-                android:layout_marginTop="@dimen/margin_categories"
-                android:background="@drawable/peliculas1"
-                android:shadowColor="@color/colorAccent"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="5"
-                android:textColor="@color/primaryColor" />
+                android:layout_weight="1"
+                android:layout_below="@+id/fila1"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/escudos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/acertijos"
-                android:layout_marginLeft="@dimen/margin_categories"
-                android:layout_marginRight="@dimen/margin_categories"
-                android:layout_marginTop="@dimen/margin_categories"
-                android:background="@drawable/escudos1"
-                android:shadowColor="@color/colorAccent"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="5"
-                android:textColor="@color/primaryColor" />
+                <Button
+                    android:id="@+id/acertijos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/adivinanzas1"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/primaryColor" />
 
-            <Button
-                android:id="@+id/marcas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/peliculas"
-                android:layout_marginLeft="@dimen/margin_categories"
-                android:layout_marginRight="@dimen/margin_categories"
-                android:layout_marginTop="@dimen/margin_categories"
-                android:background="@drawable/marcas1"
-                android:shadowColor="@color/colorAccent"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="5"
-                android:textColor="@color/primaryColor" />
+                <Button
+                    android:id="@+id/peliculas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/primaryColor" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/banderas"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/fila3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/escudos"
-                android:layout_marginLeft="@dimen/margin_categories"
-                android:layout_marginRight="@dimen/margin_categories"
-                android:layout_marginTop="@dimen/margin_categories"
-                android:background="@drawable/banderas1"
-                android:shadowColor="@color/colorAccent"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="5"
-                android:textColor="@color/primaryColor" />
+                android:layout_weight="1"
+                android:layout_below="@+id/fila2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/escudos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/escudos1"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/primaryColor" />
+
+                <Button
+                    android:id="@+id/marcas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/marcas1"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/primaryColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/fila4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_below="@+id/fila3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/banderas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/banderas1"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/primaryColor" />
+            </LinearLayout>
+
         </RelativeLayout>
     </ScrollView>
 
     <RelativeLayout
+        android:id="@+id/footerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@color/primaryColor"
-        android:id="@+id/footerCategory"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:background="@color/primaryColor"
+        android:padding="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:text="Español"
             android:textColor="@color/white"
-            android:textSize="@dimen/bg_letter_size"
-            android:layout_alignParentLeft="true"/>
+            android:textSize="@dimen/bg_letter_size" />
 
         <Switch
             android:id="@+id/languageSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:thumbTint="@color/white"
-            android:trackTint="@color/white"
-            android:textOn="YES"
+            android:layout_centerHorizontal="true"
             android:textOff="SI"
+            android:textOn="YES"
             android:textSize="25sp"
-            android:layout_centerHorizontal="true"/>
+            android:thumbTint="@color/white"
+            android:trackTint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:text="English"
             android:textColor="@color/white"
-            android:textSize="@dimen/bg_letter_size"
-            android:layout_alignParentRight="true"/>
+            android:textSize="@dimen/bg_letter_size" />
 
     </RelativeLayout>
 </RelativeLayout>

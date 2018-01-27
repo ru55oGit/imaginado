@@ -25,6 +25,6 @@
     <dimen name="redes_icons">65dp</dimen>
     <dimen name="pfs_title">36dp</dimen>
     <dimen name="margin_categories">5dp</dimen>
-    <dimen name="textsize_categories">25dp</dimen>
+    <dimen name="textsize_categories">25sp</dimen>
 </resources>
 
