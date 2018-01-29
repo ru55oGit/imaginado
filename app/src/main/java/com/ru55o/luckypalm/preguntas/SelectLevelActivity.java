@@ -135,10 +135,20 @@ public class SelectLevelActivity extends AppCompatActivity {
             result = settings.getString("levelMovies","1");
         } else if ("escudos".equals(cat)) {
             result = settings.getString("levelEscudos","1");
+        } else if ("teams".equals(cat)) {
+            result = settings.getString("levelTeams","1");
         } else if ("marcas".equals(cat)) {
             result = settings.getString("levelMarcas","1");
+        } else if ("logos".equals(cat)) {
+            result = settings.getString("levelLogos","1");
         } else if ("banderas".equals(cat)) {
             result = settings.getString("levelBanderas","1");
+        } else if ("flags".equals(cat)) {
+            result = settings.getString("levelFlags","1");
+        } else if ("famosos".equals(cat)) {
+            result = settings.getString("levelFamosos","1");
+        } else if ("celebrities".equals(cat)) {
+            result = settings.getString("levelCelebrities","1");
         }
 
         return result;
@@ -195,6 +205,40 @@ public class SelectLevelActivity extends AppCompatActivity {
 
         return new String(formArray);
     }
+
+    private String getImagePath () {
+        String path="";
+        if ("adivinanzas".equals(categorySelected)) {
+            path = "adivinanzas";
+        } else if("wuzzles".equals(categorySelected)) {
+            path = "wuzzles";
+        } else if("emojis".equals(categorySelected)) {
+            path = "emojis";
+        } else if("enojis".equals(categorySelected)) {
+            path = "enojis";
+        } else if("peliculas".equals(categorySelected)) {
+            path = "peliculas";
+        } else if("movies".equals(categorySelected)) {
+            path = "movies";
+        } else if ("escudos".equals(categorySelected)) {
+            path = "escudos";
+        } else if ("teams".equals(categorySelected)) {
+            path = "escudos";
+        } else if ("banderas".equals(categorySelected)) {
+            path = "banderas";
+        } else if ("flags".equals(categorySelected)) {
+            path = "banderas";
+        } else if ("marcas".equals(categorySelected)) {
+            path = "marcas";
+        } else if ("logos".equals(categorySelected)) {
+            path = "marcas";
+        } else if ("famosos".equals(categorySelected)) {
+            path = "comosellama";
+        } else if ("celebrities".equals(categorySelected)) {
+            path = "comosellama";
+        }
+        return path;
+    }
     // Retorno la cantidad de niveles que tengo en el juego (es -1 porque la primer posicion es cero)
     private int getLevelCount() {
         int count = 0;
@@ -215,10 +259,20 @@ public class SelectLevelActivity extends AppCompatActivity {
                 jsonLocation = AssetJSONFile("movies.json", getBaseContext());
             } else if ("escudos".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
-            } else if ("marcas".equals(categorySelected)) {
-                jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
+            } else if ("teams".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
             } else if ("banderas".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
+            } else if ("flags".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("flags.json", getBaseContext());
+            } else if ("marcas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
+            } else if ("logos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
+            } else if ("famosos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("famosos.json", getBaseContext());
+            } else if ("celebrities".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("celebrities.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles
@@ -240,7 +294,7 @@ public class SelectLevelActivity extends AppCompatActivity {
                     TextView levelCircle = new TextView(getBaseContext());
                     Drawable backgroundLevel;
 
-                    int res = getResources().getIdentifier(categorySelected + i, "drawable", getPackageName());
+                    int res = getResources().getIdentifier(getImagePath () + i, "drawable", getPackageName());
                     backgroundLevel = getResources().getDrawable(res);
                     if (i > Integer.parseInt(levelByCategory)) {
                         levelCircle.setAlpha(0.35f);

@@ -785,7 +785,13 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                if (aciertos != question.getRespuesta().replaceAll(" ", "").replaceAll("\\|","").length()) {
+                    if (!("00:00").equals(counter.getText())) {
+                        inputMethodManager.toggleSoftInputFromWindow(frameLayout.getApplicationWindowToken(), InputMethodManager.SHOW_FORCED, 0);
+                    } else {
+                        customDialog();
+                    }
+                }
             }
         });
     }

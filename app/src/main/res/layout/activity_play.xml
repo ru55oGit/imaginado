@@ -122,11 +122,11 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/escudos"
+                    android:id="@+id/famosos"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
-                    android:background="@drawable/escudos1"
+                    android:background="@drawable/comosellama1"
                     android:shadowColor="@color/colorAccent"
                     android:shadowDx="3"
                     android:shadowDy="3"
@@ -149,13 +149,24 @@
             </LinearLayout>
 
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/fila4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
+                android:layout_weight="1"
                 android:layout_below="@+id/fila3"
                 android:orientation="horizontal">
+                <Button
+                    android:id="@+id/escudos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/escudos1"
+                    android:shadowColor="@color/colorAccent"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/primaryColor" />
 
                 <Button
                     android:id="@+id/banderas"

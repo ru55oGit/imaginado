@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imaginado.iml" filepath="$PROJECT_DIR$/imaginado.iml" />
+      <module fileurl="file://C:\imaginados\imaginado.iml" filepath="C:\imaginados\imaginado.iml" />
+      <module fileurl="file://C:\imaginado\imaginados.iml" filepath="C:\imaginado\imaginados.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,22 +1,35 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toast_layout_root"
     android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="8dp"
-    android:background="@drawable/borders">
-    <ImageView android:src="@drawable/lose"
-        android:layout_width="50dp"
-        android:layout_height="40dp"/>
-    <TextView android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:gravity="top|center"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="top|center"
+        android:src="@drawable/lose" />
+
+    <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:textSize="@dimen/bg_letter_size"
-        android:paddingTop="5dp"
-        android:textColor="@color/secondaryColor"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/borders_black"
+        android:gravity="center"
+        android:padding="15dp"
         android:shadowColor="@color/thirdColor"
         android:shadowDx="10"
         android:shadowDy="10"
-        android:shadowRadius="10"/>
-</LinearLayout>
+        android:shadowRadius="10"
+        android:textColor="@color/secondaryColor"
+        android:textSize="@dimen/bg_letter_size" />
+</RelativeLayout>
