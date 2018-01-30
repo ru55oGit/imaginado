@@ -22,8 +22,9 @@ import android.widget.TextView;
 public class PlayActivity extends AppCompatActivity {
 
     private Button aleatorio, emojis, acertijos,
-    peliculas, escudos, marcas, banderas, famosos;
-
+    peliculas, escudos, marcas, banderas, famosos,
+    cat_aleatorio, cat_acertijos, cat_logos, cat_peliculas,
+    cat_comosellama,cat_emojis, cat_logosdeportes, cat_paises;
     private TextView title;
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
@@ -55,6 +56,17 @@ public class PlayActivity extends AppCompatActivity {
         languageSwitch = (Switch) findViewById(R.id.languageSwitch);
         languageSwitch.setChecked(!languageSelected);
 
+
+        if (languageSelected) {
+            header.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            footer.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        } else {
+            header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+        }
+
+        // Fila aleatorio
+        cat_aleatorio = (Button) findViewById(R.id.cat_aleatorio);
         aleatorio = (Button) findViewById(R.id.aleatorio);
         aleatorio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,35 +75,8 @@ public class PlayActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        aleatorio.setTypeface(lobsterFont);
-        if (languageSelected) {
-            aleatorio.setText(getResources().getString(R.string.random_text_es));
-            aleatorio.setTextColor(getResources().getColor(R.color.primaryColor));
-            title.setText(getResources().getString(R.string.select_category_title_es));
-            header.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-            footer.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-        } else {
-            aleatorio.setText(getResources().getString(R.string.random_text_en));
-            aleatorio.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-            title.setText(getResources().getString(R.string.select_category_title_en));
-            header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-        }
-        emojis = (Button) findViewById(R.id.emojis);
-        emojis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!languageSwitch.isChecked()){
-                    editor.putString("categorySelected","emojis");
-                } else {
-                    editor.putString("categorySelected","enojis");
-                }
-                editor.commit();
-                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        // Fila acertijos
+        cat_acertijos = (Button) findViewById(R.id.cat_acertijos);
         acertijos = (Button) findViewById(R.id.acertijos);
         acertijos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +91,24 @@ public class PlayActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //Fila logos
+        cat_logos = (Button) findViewById(R.id.cat_logos);
+        marcas = (Button) findViewById(R.id.marcas);
+        marcas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","marcas");
+                } else {
+                    editor.putString("categorySelected","logos");
+                }
+                editor.commit();
+                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
+            }
+        });
+        //Fila peliculas
+        cat_peliculas = (Button) findViewById(R.id.cat_peliculas);
         peliculas = (Button) findViewById(R.id.peliculas);
         peliculas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +123,40 @@ public class PlayActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //Fila comosellama
+        cat_comosellama = (Button) findViewById(R.id.cat_comosellama);
+        famosos = (Button) findViewById(R.id.famosos);
+        famosos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","famosos");
+                } else {
+                    editor.putString("categorySelected","celebrities");
+                }
+                editor.commit();
+                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
+            }
+        });
+        //Fila emojis
+        cat_emojis = (Button) findViewById(R.id.cat_emojis);
+        emojis = (Button) findViewById(R.id.emojis);
+        emojis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","emojis");
+                } else {
+                    editor.putString("categorySelected","enojis");
+                }
+                editor.commit();
+                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
+            }
+        });
+        //Fila escudos
+        cat_logosdeportes = (Button) findViewById(R.id.cat_logosdeportes);
         escudos = (Button) findViewById(R.id.escudos);
         escudos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,21 +172,8 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
-        marcas = (Button) findViewById(R.id.marcas);
-        marcas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!languageSwitch.isChecked()){
-                    editor.putString("categorySelected","marcas");
-                } else {
-                    editor.putString("categorySelected","logos");
-                }
-                editor.commit();
-                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        //Fila paises
+        cat_paises = (Button) findViewById(R.id.cat_paises);
         banderas = (Button) findViewById(R.id.banderas);
         banderas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,38 +189,17 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
-        famosos = (Button) findViewById(R.id.famosos);
-        famosos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!languageSwitch.isChecked()){
-                    editor.putString("categorySelected","famosos");
-                } else {
-                    editor.putString("categorySelected","celebrities");
-                }
-                editor.commit();
-                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
-                startActivity(intent);
-            }
-        });
-
         //attach a listener to check for changes in state
         languageSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(languageSwitch.isChecked()){
-                    title.setText(getResources().getString(R.string.select_category_title_en));
-                    aleatorio.setText(getResources().getString(R.string.random_text_en));
                     header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                     footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                    aleatorio.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                     editor.putBoolean("languageSelected", false);
                 }else{
-                    title.setText(getResources().getString(R.string.select_category_title_es));
-                    aleatorio.setText(getResources().getString(R.string.random_text_es));
-                    header.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-                    footer.setBackgroundColor(getResources().getColor(R.color.primaryColor));
-                    aleatorio.setTextColor(getResources().getColor(R.color.primaryColor));
+                    header.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    footer.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                     editor.putBoolean("languageSelected", true);
                 }
                 editor.commit();
@@ -210,49 +212,78 @@ public class PlayActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         if (Build.VERSION.SDK_INT > 16) {
-            aleatorio.setBackground(getImage("whiteback",0));
             if (!languageSwitch.isChecked()) {
-                emojis.setBackground(getImage("emojis", Integer.parseInt(getLevelByCategory("emojis"))));
+                aleatorio.setBackground(resizeImageByCategory("aleatorio",((int)(Math.random() * ((10 - 1) + 1)) + 1)));
+                cat_aleatorio.setBackground(resizeImageByName("cat_aleatorio"));
             } else {
-                emojis.setBackground(getImage("enojis", Integer.parseInt(getLevelByCategory("enojis"))));
+                aleatorio.setBackground(resizeImageByCategory("aleatorio",((int)(Math.random() * ((10 - 1) + 1)) + 1)));
+                cat_aleatorio.setBackground(resizeImageByName("cat_aleatorio"));
             }
 
             if (!languageSwitch.isChecked()) {
-                acertijos.setBackground(getImage("adivinanzas", Integer.parseInt(getLevelByCategory("adivinanzas"))));
+                acertijos.setBackground(resizeImageByCategory("adivinanzas", Integer.parseInt(getLevelByCategory("adivinanzas"))));
+                cat_acertijos.setBackground(resizeImageByName("cat_acertijos"));
             } else {
-                acertijos.setBackground(getImage("wuzzles", Integer.parseInt(getLevelByCategory("wuzzles"))));
+                acertijos.setBackground(resizeImageByCategory("wuzzles", Integer.parseInt(getLevelByCategory("wuzzles"))));
+                cat_acertijos.setBackground(resizeImageByName("cat_acertijos"));
             }
 
             if (!languageSwitch.isChecked()) {
-                peliculas.setBackground(getImage("peliculas", Integer.parseInt(getLevelByCategory("peliculas"))));
+                marcas.setBackground(resizeImageByCategory("marcas", Integer.parseInt(getLevelByCategory("marcas"))));
+                cat_logos.setBackground(resizeImageByName("cat_logos"));
             } else {
-                peliculas.setBackground(getImage("movies", Integer.parseInt(getLevelByCategory("movies"))));
+                marcas.setBackground(resizeImageByCategory("logos", Integer.parseInt(getLevelByCategory("logos"))));
+                cat_logos.setBackground(resizeImageByName("cat_logos"));
             }
+
             if (!languageSwitch.isChecked()) {
-                peliculas.setBackground(getImage("peliculas", Integer.parseInt(getLevelByCategory("peliculas"))));
+                peliculas.setBackground(resizeImageByCategory("peliculas", Integer.parseInt(getLevelByCategory("peliculas"))));
+                cat_peliculas.setBackground(resizeImageByName("cat_peliculas"));
             } else {
-                peliculas.setBackground(getImage("movies", Integer.parseInt(getLevelByCategory("movies"))));
+                peliculas.setBackground(resizeImageByCategory("movies", Integer.parseInt(getLevelByCategory("movies"))));
+                cat_peliculas.setBackground(resizeImageByName("cat_peliculas"));
             }
+
             if (!languageSwitch.isChecked()) {
-                escudos.setBackground(getImage("escudos", Integer.parseInt(getLevelByCategory("escudos"))));
+                famosos.setBackground(resizeImageByCategory("famosos", Integer.parseInt(getLevelByCategory("famosos"))));
+                cat_comosellama.setBackground(resizeImageByName("cat_comosellama"));
             } else {
-                escudos.setBackground(getImage("teams", Integer.parseInt(getLevelByCategory("teams"))));
+                famosos.setBackground(resizeImageByCategory("celebrities", Integer.parseInt(getLevelByCategory("celebrities"))));
+                cat_comosellama.setBackground(resizeImageByName("cat_comosellama"));
             }
+
             if (!languageSwitch.isChecked()) {
-                marcas.setBackground(getImage("marcas", Integer.parseInt(getLevelByCategory("marcas"))));
+                emojis.setBackground(resizeImageByCategory("emojis", Integer.parseInt(getLevelByCategory("emojis"))));
+                cat_emojis.setBackground(resizeImageByName("cat_emojis"));
             } else {
-                marcas.setBackground(getImage("logos", Integer.parseInt(getLevelByCategory("logos"))));
+                emojis.setBackground(resizeImageByCategory("enojis", Integer.parseInt(getLevelByCategory("enojis"))));
+                cat_emojis.setBackground(resizeImageByName("cat_emojis"));
             }
+
             if (!languageSwitch.isChecked()) {
-                banderas.setBackground(getImage("banderas", Integer.parseInt(getLevelByCategory("banderas"))));
+                peliculas.setBackground(resizeImageByCategory("peliculas", Integer.parseInt(getLevelByCategory("peliculas"))));
+                cat_peliculas.setBackground(resizeImageByName("cat_peliculas"));
             } else {
-                banderas.setBackground(getImage("flags", Integer.parseInt(getLevelByCategory("flags"))));
+                peliculas.setBackground(resizeImageByCategory("movies", Integer.parseInt(getLevelByCategory("movies"))));
+                cat_peliculas.setBackground(resizeImageByName("cat_peliculas"));
             }
+
             if (!languageSwitch.isChecked()) {
-                famosos.setBackground(getImage("famosos", Integer.parseInt(getLevelByCategory("famosos"))));
+                escudos.setBackground(resizeImageByCategory("escudos", Integer.parseInt(getLevelByCategory("escudos"))));
+                cat_logosdeportes.setBackground(resizeImageByName("cat_logosdeportes"));
             } else {
-                famosos.setBackground(getImage("celebrities", Integer.parseInt(getLevelByCategory("celebrities"))));
+                escudos.setBackground(resizeImageByCategory("teams", Integer.parseInt(getLevelByCategory("teams"))));
+                cat_logosdeportes.setBackground(resizeImageByName("cat_logosdeportes"));
             }
+
+            if (!languageSwitch.isChecked()) {
+                banderas.setBackground(resizeImageByCategory("banderas", Integer.parseInt(getLevelByCategory("banderas"))));
+                cat_paises.setBackground(resizeImageByName("cat_paises"));
+            } else {
+                banderas.setBackground(resizeImageByCategory("flags", Integer.parseInt(getLevelByCategory("flags"))));
+                cat_paises.setBackground(resizeImageByName("cat_paises"));
+            }
+
         }
     }
 
@@ -291,7 +322,7 @@ public class PlayActivity extends AppCompatActivity {
         return result;
     }
     private String getImagePath (String categorySelected) {
-        String path="";
+        String path;
         if ("adivinanzas".equals(categorySelected)) {
             path = "adivinanzas";
         } else if("wuzzles".equals(categorySelected)) {
@@ -320,18 +351,42 @@ public class PlayActivity extends AppCompatActivity {
             path = "comosellama";
         } else if ("celebrities".equals(categorySelected)) {
             path = "comosellama";
+        } else {
+            path = "aleatorio";
         }
         return path;
     }
 
-    public Drawable getImage(String categorySelected, int i) {
+    public Drawable resizeImageByCategory(String categorySelected, int i) {
         Drawable backgroundLevel;
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         int width = size.x;
 
-        int res = "whiteback".equals(categorySelected)? getResources().getIdentifier("whiteback", "drawable", getPackageName()) : getResources().getIdentifier(getImagePath(categorySelected) + i, "drawable", getPackageName());
+        int res = getResources().getIdentifier(getImagePath(categorySelected) + i, "drawable", getPackageName());
+        backgroundLevel = getResources().getDrawable(res);
+
+        Bitmap original = ((BitmapDrawable) backgroundLevel).getBitmap();
+
+        int sizeX = Math.round(width/2);
+        int sizeY = Math.round(width/2);
+        // escalo
+        Bitmap bitmapResized = Bitmap.createScaledBitmap(original, sizeX, sizeY, false);
+
+        backgroundLevel = new BitmapDrawable(getResources(), bitmapResized);
+
+        return backgroundLevel;
+    }
+
+    public Drawable resizeImageByName(String name) {
+        Drawable backgroundLevel;
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+
+        int res = getResources().getIdentifier(name, "drawable", getPackageName());
         backgroundLevel = getResources().getDrawable(res);
 
         Bitmap original = ((BitmapDrawable) backgroundLevel).getBitmap();

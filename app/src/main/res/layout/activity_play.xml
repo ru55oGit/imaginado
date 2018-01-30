@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PlayActivity">
@@ -10,7 +9,7 @@
         android:id="@+id/headerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primaryColor"
+        android:background="@color/colorAccent"
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
@@ -54,29 +53,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
-                    android:background="@drawable/whiteback"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:text="Aleatorio"
-                    android:textColor="@color/primaryColor"
-                    android:layout_margin="1dp"
-                    android:textSize="@dimen/textsize_categories" />
+                    android:autoSizeMaxTextSize="@dimen/textsize_categories"
+                    android:background="@drawable/aleatorio1"
+                    />
 
                 <Button
-                    android:id="@+id/emojis"
+                    android:id="@+id/cat_aleatorio"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
-                    android:background="@drawable/emojis1"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:textColor="@color/primaryColor"
-                    android:layout_margin="1dp"
-                    android:textSize="32dp" />
+                    android:background="@drawable/cat_aleatorio"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -88,28 +75,19 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/cat_acertijos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_acertijos"
+                    />
+
+                <Button
                     android:id="@+id/acertijos"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
                     android:background="@drawable/adivinanzas1"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:layout_margin="1dp"
-                    android:textColor="@color/primaryColor" />
-
-                <Button
-                    android:id="@+id/peliculas"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".5"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:layout_margin="1dp"
                     android:textColor="@color/primaryColor" />
             </LinearLayout>
 
@@ -122,30 +100,20 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/famosos"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".5"
-                    android:background="@drawable/comosellama1"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:layout_margin="1dp"
-                    android:textColor="@color/primaryColor" />
-
-                <Button
                     android:id="@+id/marcas"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
                     android:background="@drawable/marcas1"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:layout_margin="1dp"
                     android:textColor="@color/primaryColor" />
+
+                <Button
+                    android:id="@+id/cat_logos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_logos"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -156,30 +124,121 @@
                 android:layout_below="@+id/fila3"
                 android:orientation="horizontal">
                 <Button
+                    android:id="@+id/cat_peliculas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_peliculas"
+                    />
+
+                <Button
+                    android:id="@+id/peliculas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/peliculas1"
+                    android:textColor="@color/primaryColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fila5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@+id/fila4"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/famosos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/comosellama1"
+                    android:textColor="@color/primaryColor" />
+
+                <Button
+                    android:id="@+id/cat_comosellama"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_comosellama"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fila6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@+id/fila5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cat_emojis"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_emojis"
+                    />
+
+                <Button
+                    android:id="@+id/emojis"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/emojis1"
+                    android:textColor="@color/primaryColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fila7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@+id/fila6"
+                android:orientation="horizontal">
+
+                <Button
                     android:id="@+id/escudos"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
                     android:background="@drawable/escudos1"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:layout_margin="1dp"
                     android:textColor="@color/primaryColor" />
+                <Button
+                    android:id="@+id/cat_logosdeportes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_logosdeportes"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fila8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@+id/fila7"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cat_paises"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_paises"/>
 
                 <Button
                     android:id="@+id/banderas"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
-                    android:background="@drawable/banderas1"
-                    android:shadowColor="@color/colorAccent"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="5"
-                    android:layout_margin="1dp"
+                    android:background="@drawable/escudos1"
                     android:textColor="@color/primaryColor" />
+
             </LinearLayout>
 
         </RelativeLayout>
@@ -192,7 +251,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/primaryColor"
+        android:background="@color/colorAccent"
         android:padding="10dp">
 
         <TextView

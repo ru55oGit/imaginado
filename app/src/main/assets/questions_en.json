@@ -1,501 +1,6 @@
 {
   "questions": [
     {
-      "title": "Cartoon Character",
-      "question": "personajes1.jpg",
-      "answer": "atom|ant"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes2.jpg",
-      "answer": "vegeta"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes3.jpg",
-      "answer": "pikachu"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes4.jpg",
-      "answer": "seiya"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes5.jpg",
-      "answer": "jem"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes6.jpg",
-      "answer": "the pink|panther"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes7.jpg",
-      "answer": "inspector|gadget"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes8.jpg",
-      "answer": "the Aardvark"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes9.jpg",
-      "answer": "gargamel"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes10.jpg",
-      "answer": "Foghorn|Leghorn"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes11.jpg",
-      "answer": "Quicksilver"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes12.jpg",
-      "answer": "top cat"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes13.jpg",
-      "answer": "babar"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes14.jpg",
-      "answer": "astroboy"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes15.jpg",
-      "answer": "aquaman"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes16.jpg",
-      "answer": "battle cat"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes17.jpg",
-      "answer": "benji|price"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes18.jpg",
-      "answer": "birdman"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes19.jpg",
-      "answer": "bobby"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes20.jpg",
-      "answer": "bugs bunny"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes21.jpg",
-      "answer": "the brain"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes22.jpg",
-      "answer": "secret|squirrel"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes23.jpg",
-      "answer": "yogi bear"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes24.jpg",
-      "answer": "heidi"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes25.jpg",
-      "answer": "garfield"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes26.jpg",
-      "answer": "freeza"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes27.jpg",
-      "answer": "flash"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes28.jpg",
-      "answer": "son goku"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes29.jpg",
-      "answer": "ikki"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes30.jpg",
-      "answer": "chef|smurf"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes31.jpg",
-      "answer": "scooby|doo"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes32.jpg",
-      "answer": "bart|simpson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes33.jpg",
-      "answer": "prince|adam"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes34.jpg",
-      "answer": "ricky|rich"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes35.jpg",
-      "answer": "pepe|le pew"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes36.jpg",
-      "answer": "papa|smurf"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes37.jpg",
-      "answer": "oliver|atom"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes38.jpg",
-      "answer": "odie"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes39.jpg",
-      "answer": "Oficial|Charlie Dibble"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes40.jpg",
-      "answer": "jabberjaw"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes41.jpg",
-      "answer": "orson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes42.jpg",
-      "answer": "daffy duck"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes43.jpg",
-      "answer": "wonder|woman"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes44.jpg",
-      "answer": "piccolo"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes45.jpg",
-      "answer": "hyoga"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes46.jpg",
-      "answer": "son gohan"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes47.jpg",
-      "answer": "Henery|Hawk"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes48.jpg",
-      "answer": "the coyote"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes49.jpg",
-      "answer": "benny|the ball"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes50.jpg",
-      "answer": "baloo"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes51.jpg",
-      "answer": "Penny"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes52.jpg",
-      "answer": "marvin|the martian"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes53.jpg",
-      "answer": "Judy|Jetson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes54.jpg",
-      "answer": "chief|Quimby"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes55.jpg",
-      "answer": "majin boo"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes56.jpg",
-      "answer": "bruce|harper"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes57.jpg",
-      "answer": "dennis|the menace"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes58.jpg",
-      "answer": "azrael"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes59.jpg",
-      "answer": "astro"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes60.jpg",
-      "answer": "Hefty|smurf"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes61.jpg",
-      "answer": "porky pig"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes62.jpg",
-      "answer": "yosemite|sam"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes63.jpg",
-      "answer": "Shaggy"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes64.jpg",
-      "answer": "shiryu"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes65.jpg",
-      "answer": "sylvester"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes66.jpg",
-      "answer": "marge|simpson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes67.jpg",
-      "answer": "steve|Hyuga"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes68.jpg",
-      "answer": "mighty|mouse"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes69.jpg",
-      "answer": "squirtle"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes70.jpg",
-      "answer": "milhouse"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes71.jpg",
-      "answer": "shun"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes72.jpg",
-      "answer": "lisa|simpson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes74.jpg",
-      "answer": "jane|jetson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes75.jpg",
-      "answer": "Quick Draw|mcgraw"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes76.jpg",
-      "answer": "speedy|gonzales"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes77.jpg",
-      "answer": "trunks"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes78.jpg",
-      "answer": "pinky"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes79.jpg",
-      "answer": "tweety"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes80.jpg",
-      "answer": "brainy|smurf"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes81.jpg",
-      "answer": "riff|raff"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes82.jpg",
-      "answer": "rosie"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes83.jpg",
-      "answer": "brain"
-    },
-    {
-      "title": "¿Cómo se llama?",
-      "question": "personajes84.jpg",
-      "answer": "maggie|simpson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes85.jpg",
-      "answer": "George|jetson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes86.jpg",
-      "answer": "tazmania"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes87.jpg",
-      "answer": "Elroy|jetson"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes88.jpg",
-      "answer": "Touche|Turtle"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes89.jpg",
-      "answer": "deux deux"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes90.jpg",
-      "answer": "heathcliff"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes91.jpg",
-      "answer": "huckleberry|hound"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes92.jpg",
-      "answer": "krilin"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes93.jpg",
-      "answer": "the ant"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes94.jpg",
-      "answer": "patty"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes95.jpg",
-      "answer": "the inspector"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes96.jpg",
-      "answer": "space|ghost"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes98.jpg",
-      "answer": "Gleek"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes99.jpg",
-      "answer": "wonder|twins"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes100.jpg",
-      "answer": "vanity|smurf"
-    },
-    {
-      "title": "Cartoon Character",
-      "question": "personajes101.jpg",
-      "answer": "master|roshi"
-    },
-    {
       "title": "Logos",
       "question": "marcas1.jpg",
       "answer": "chrome"
@@ -1346,1001 +851,6 @@
       "answer": "akira"
     },
     {
-      "title": "Simpson's character",
-      "question": "alcaldediamante.jpg",
-      "answer": "diamond|joe"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "apu.jpg",
-      "answer": "apu"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "artieziff.jpg",
-      "answer": "artie|ziff"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "ayudantedesanta.jpg",
-      "answer": "Santas|Little Helper"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "blinky.jpg",
-      "answer": "blinky"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "barney.jpg",
-      "answer": "Barney|Gumble"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "carlcarlson.jpg",
-      "answer": "carl|carlson"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "cletus.jpg",
-      "answer": "Cletus|Spuckler"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "daly.jpg",
-      "answer": "Itchy"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "discostu.jpg",
-      "answer": "disco|stu"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "drhibbert.jpg",
-      "answer": "dr hibbert"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "drmarvinmonroe.jpg",
-      "answer": "dr marvin|monroe"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "drnick.jpg",
-      "answer": "dr nick"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "duffman.jpg",
-      "answer": "duffman"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "ednakrabappel.jpg",
-      "answer": "edna|krabappel"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "enrique.jpg",
-      "answer": "kearny"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "flanders.jpg",
-      "answer": "ned flanders"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "frankgrimes.jpg",
-      "answer": "frank|grimes"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "funzo.jpg",
-      "answer": "funzo"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "gaspar.jpg",
-      "answer": "jasper"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "gil.jpg",
-      "answer": "gil"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "hankscorpio.jpg",
-      "answer": "hank|scorpio"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "helenaalegria.jpg",
-      "answer": "helen|lovejoy"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "herbertpowell.jpg",
-      "answer": "herbert|powell"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "hombreabejorro.jpg",
-      "answer": "Bumblebee|Man"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "inocenciadonoso.jpg",
-      "answer": "Luann"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "jardinerowillie.jpg",
-      "answer": "Groundskeeper|Willie"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "jefegorgor.jpg",
-      "answer": "Chief|Clancy Wiggum"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "jeremias.jpg",
-      "answer": "Jebediah|Springfield"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "jimbojones.jpg",
-      "answer": "jimbo|jones"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "juantopo.jpg",
-      "answer": "Hans|Moleman"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "kang.jpg",
-      "answer": "kang"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "kentbrockman.jpg",
-      "answer": "kent|brockman"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "kirkvanhouten.jpg",
-      "answer": "kirk|van houten"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "krusty.jpg",
-      "answer": "krusty"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "larryburns.jpg",
-      "answer": "larry|burns"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "lenny.jpg",
-      "answer": "lenny|leonard"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "lionelhutz.jpg",
-      "answer": "lionel|hutz"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "lou.jpg",
-      "answer": "lou"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "luiggi.jpg",
-      "answer": "luigi"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "manjula.jpg",
-      "answer": "manjula"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "martinprince.jpg",
-      "answer": "martin|prince"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "mcbain.jpg",
-      "answer": "mcbain"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "milhouse.jpg",
-      "answer": "milhouse"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "moe.jpg",
-      "answer": "moe Szyslak"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "mojo.jpg",
-      "answer": "mojo"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "mrburns.jpg",
-      "answer": "montgomery|burns"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "mrchispa.jpg",
-      "answer": "mr sparkle"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "nelson.jpg",
-      "answer": "nelson muntz"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "otto.jpg",
-      "answer": "otto mann"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "patty.jpg",
-      "answer": "patty"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "poochie.jpg",
-      "answer": "poochie"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "proffrink.jpg",
-      "answer": "professor|frink"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "rafagorgory.jpg",
-      "answer": "Ralph|Wiggum"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "selma.jpg",
-      "answer": "selma"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "skinner.jpg",
-      "answer": "seymour|skinner"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "sherryterry.jpg",
-      "answer": "sherri|y terri"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "stampy.jpg",
-      "answer": "stampy"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "tenazas.jpg",
-      "answer": "pinchy"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "tomy.jpg",
-      "answer": "scratchy"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "tonyelgordo.jpg",
-      "answer": "fat|tony"
-    },
-    {
-      "title": "Simpson's character",
-      "question": "troymclure.jpg",
-      "answer": "troy|mclure"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "agentecoulson.jpg",
-      "answer": "agent|coulson"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "antman.jpg",
-      "answer": "antman"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "antorchahumana.jpg",
-      "answer": "human|torch"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "bestia.jpg",
-      "answer": "beast"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "bishop.jpg",
-      "answer": "bishop"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "blackpanther.jpg",
-      "answer": "black|panther"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "blackwidow.jpg",
-      "answer": "black|widow"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "bucky.jpg",
-      "answer": "winter|soldier"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "capitanamerica.jpg",
-      "answer": "captain|america"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "charlesxavier.jpg",
-      "answer": "proffesor x"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "coloso.jpg",
-      "answer": "colossus"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "cyclops.jpg",
-      "answer": "cyclops"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "daredevil.jpg",
-      "answer": "daredevil"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "deadpool.jpg",
-      "answer": "deadpool"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "electro.jpg",
-      "answer": "electro"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "falcon.jpg",
-      "answer": "falcon"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "groot.jpg",
-      "answer": "groot"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "hulk.jpg",
-      "answer": "hulk"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "iceman.jpg",
-      "answer": "iceman"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "ironman.jpg",
-      "answer": "ironman"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "loki.jpg",
-      "answer": "loki"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "magneto.jpg",
-      "answer": "magneto"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "mystique.jpg",
-      "answer": "mystique"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "nickfury.jpg",
-      "answer": "nick|fury"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "nightcrawler.jpg",
-      "answer": "nightcrawler"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "quicksilver.jpg",
-      "answer": "quicksilver"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "rocketracoon.jpg",
-      "answer": "rocket|racoon"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "silversurfer.jpg",
-      "answer": "silver|surfer"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "spiderman.jpg",
-      "answer": "spiderman"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "starlord.jpg",
-      "answer": "star|lord"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "storm.jpg",
-      "answer": "storm"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "thor.jpg",
-      "answer": "thor"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "ultron.jpg",
-      "answer": "ultron"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "vision.jpg",
-      "answer": "vision"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "wolverine.jpg",
-      "answer": "wolverine"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "drstrange.jpg",
-      "answer": "dr strange"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "thething.jpg",
-      "answer": "the thing"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "redskull.jpg",
-      "answer": "red skull"
-    },
-    {
-      "title": "Marvel's Character",
-      "question": "hawkeye.jpg",
-      "answer": "hawkeye"
-    },
-    {
-      "title": "Celebrities",
-      "question": "damon.jpg",
-      "answer": "matt|damon"
-    },
-    {
-      "title": "Celebrities",
-      "question": "gibson.jpg",
-      "answer": "mel|gibson"
-    },
-    {
-      "title": "Celebrities",
-      "question": "blakelively.jpg",
-      "answer": "blake|lively"
-    },
-    {
-      "title": "Celebrities",
-      "question": "scarlet.jpg",
-      "answer": "scarlet|johansson"
-    },
-    {
-      "title": "Celebrities",
-      "question": "statham.jpg",
-      "answer": "jason|statham"
-    },
-    {
-      "title": "Celebrities",
-      "question": "blunt.jpg",
-      "answer": "emily|blunt"
-    },
-    {
-      "title": "Celebrities",
-      "question": "tarantino.jpg",
-      "answer": "quentin|tarantino"
-    },
-    {
-      "title": "Celebrities",
-      "question": "denzel.jpg",
-      "answer": "denzel|washington"
-    },
-    {
-      "title": "Celebrities",
-      "question": "zacefron.jpg",
-      "answer": "zac|efron"
-    },
-    {
-      "title": "Celebrities",
-      "question": "stallone.jpg",
-      "answer": "sylvester|stallone"
-    },
-    {
-      "title": "Celebrities",
-      "question": "gere.jpg",
-      "answer": "richard|gere"
-    },
-    {
-      "title": "Celebrities",
-      "question": "willis.jpg",
-      "answer": "bruce|willis"
-    },
-    {
-      "title": "Celebrities",
-      "question": "jagger.jpg",
-      "answer": "mick|jagger"
-    },
-    {
-      "title": "Celebrities",
-      "question": "shakira.jpg",
-      "answer": "shakira"
-    },
-    {
-      "title": "Celebrities",
-      "question": "presley.jpg",
-      "answer": "elvis|presley"
-    },
-    {
-      "title": "Celebrities",
-      "question": "rickymartin.jpg",
-      "answer": "ricky|martin"
-    },
-    {
-      "title": "Celebrities",
-      "question": "fredymercury.jpg",
-      "answer": "freddie|mercury"
-    },
-    {
-      "title": "Celebrities",
-      "question": "amy.jpg",
-      "answer": "amy|winehouse"
-    },
-    {
-      "title": "Celebrities",
-      "question": "billgates.jpg",
-      "answer": "bill|gates"
-    },
-    {
-      "title": "Celebrities",
-      "question": "muhammadali.jpg",
-      "answer": "muhammad|ali"
-    },
-    {
-      "title": "Celebrities",
-      "question": "einstein.jpg",
-      "answer": "albert|einstein"
-    },
-    {
-      "title": "Celebrities",
-      "question": "franciscoi.jpg",
-      "answer": "pope|francis"
-    },
-    {
-      "title": "Celebrities",
-      "question": "cristiano.jpg",
-      "answer": "cristiano|ronaldo"
-    },
-    {
-      "title": "Celebrities",
-      "question": "dicaprio.jpg",
-      "answer": "leonardo|dicaprio"
-    },
-    {
-      "title": "Celebrities",
-      "question": "messi.jpg",
-      "answer": "lionel|messi"
-    },
-    {
-      "title": "Celebrities",
-      "question": "angelina.jpg",
-      "answer": "angelina|jolie"
-    },
-    {
-      "title": "Celebrities",
-      "question": "sandler.jpg",
-      "answer": "adam|sandler"
-    },
-    {
-      "title": "Celebrities",
-      "question": "jlopez.jpg",
-      "answer": "jennifer|lopez"
-    },
-    {
-      "title": "Celebrities",
-      "question": "perry.jpg",
-      "answer": "katy|perry"
-    },
-    {
-      "title": "Celebrities",
-      "question": "gaga.jpg",
-      "answer": "lady|gaga"
-    },
-    {
-      "title": "Celebrities",
-      "question": "rihanna.jpg",
-      "answer": "rihanna"
-    },
-    {
-      "title": "Celebrities",
-      "question": "downeyjr.jpg",
-      "answer": "robert|downey jr"
-    },
-    {
-      "title": "Celebrities",
-      "question": "wsmith.jpg",
-      "answer": "will|smith"
-    },
-    {
-      "title": "Celebrities",
-      "question": "dwayne.jpg",
-      "answer": "Dwayne|Johnson"
-    },
-    {
-      "title": "Celebrities",
-      "question": "nadal.jpg",
-      "answer": "rafa|nadal"
-    },
-    {
-      "title": "Celebrities",
-      "question": "anniston.jpg",
-      "answer": "jennifer|aniston"
-    },
-    {
-      "title": "Celebrities",
-      "question": "stewart.jpg",
-      "answer": "kristen|stewart"
-    },
-    {
-      "title": "Celebrities",
-      "question": "bullock.jpg",
-      "answer": "sandra|bullock"
-    },
-    {
-      "title": "Celebrities",
-      "question": "jackman.jpg",
-      "answer": "hugh|jackman"
-    },
-    {
-      "title": "Celebrities",
-      "question": "cruise.jpg",
-      "answer": "tom|cruise"
-    },
-    {
-      "title": "Celebrities",
-      "question": "affleck.jpg",
-      "answer": "ben|affleck"
-    },
-    {
-      "title": "Celebrities",
-      "question": "mperry.jpg",
-      "answer": "matthew|perry"
-    },
-    {
-      "title": "Celebrities",
-      "question": "sheen.jpg",
-      "answer": "charlie|sheen"
-    },
-    {
-      "title": "Celebrities",
-      "question": "kutcher.jpg",
-      "answer": "ashton|kutcher"
-    },
-    {
-      "title": "Celebrities",
-      "question": "theron.jpg",
-      "answer": "Charlize|Theron"
-    },
-    {
-      "title": "Celebrities",
-      "question": "cooper.jpg",
-      "answer": "bradley|cooper"
-    },
-    {
-      "title": "Celebrities",
-      "question": "wahlberg.jpg",
-      "answer": "mark|wahlberg"
-    },
-    {
-      "title": "Celebrities",
-      "question": "hemsworth.jpg",
-      "answer": "chris|hemsworth"
-    },
-    {
-      "title": "Celebrities",
-      "question": "lennon.jpg",
-      "answer": "john|lennon"
-    },
-    {
-      "title": "Celebrities",
-      "question": "maradona.jpg",
-      "answer": "diego|maradona"
-    },
-    {
-      "title": "Celebrities",
-      "question": "djokovic.jpg",
-      "answer": "novak|djokovic"
-    },
-    {
-      "title": "Celebrities",
-      "question": "federer.jpg",
-      "answer": "roger|federer"
-    },
-    {
-      "title": "Celebrities",
-      "question": "delpo.jpg",
-      "answer": "juan martin|del potro"
-    },
-    {
-      "title": "Celebrities",
-      "question": "neymar.jpg",
-      "answer": "neymar jr"
-    },
-    {
-      "title": "Celebrities",
-      "question": "gibson.jpg",
-      "answer": "mel|gibson"
-    },
-    {
-      "title": "Celebrities",
-      "question": "steventyler.jpg",
-      "answer": "steven|tyler"
-    },
-    {
-      "title": "Celebrities",
-      "question": "livtyler.jpg",
-      "answer": "liv|tyler"
-    },
-    {
-      "title": "Celebrities",
-      "question": "salmahayek.jpg",
-      "answer": "salma|hayek"
-    },
-    {
-      "title": "Celebrities",
-      "question": "reeves.jpg",
-      "answer": "keanu|reeves"
-    },
-    {
-      "title": "Celebrities",
-      "question": "emmawatson.jpg",
-      "answer": "emma|watson"
-    },
-    {
-      "title": "Celebrities",
-      "question": "deep.jpg",
-      "answer": "johnny|deep"
-    },
-    {
-      "title": "Celebrities",
-      "question": "cdiaz.jpg",
-      "answer": "cameron|diaz"
-    },
-    {
-      "title": "Celebrities",
-      "question": "hanks.jpg",
-      "answer": "tom|hanks"
-    },
-    {
-      "title": "Celebrities",
-      "question": "mcadams.jpg",
-      "answer": "rachel|mcadams"
-    },
-    {
-      "title": "Celebrities",
-      "question": "pitt.jpg",
-      "answer": "brad|pitt"
-    },
-    {
-      "title": "Celebrities",
-      "question": "allen.jpg",
-      "answer": "woody|allen"
-    },
-    {
-      "title": "Celebrities",
-      "question": "tyson.jpg",
-      "answer": "mike|tyson"
-    },
-    {
-      "title": "Celebrities",
-      "question": "cage.jpg",
-      "answer": "nicolas|cage"
-    },
-    {
-      "title": "Celebrities",
-      "question": "aaronpaul.jpg",
-      "answer": "aaron|paul"
-    },
-    {
-      "title": "Celebrities",
-      "question": "ryangosling.jpg",
-      "answer": "ryan|gosling"
-    },
-    {
-      "title": "Celebrities",
-      "question": "christianbale.jpg",
-      "answer": "christian|bale"
-    },
-    {
-      "title": "Celebrities",
-      "question": "reynolds.jpg",
-      "answer": "ryan|reynolds"
-    },
-    {
-      "title": "Celebrities",
-      "question": "deniro.jpg",
-      "answer": "robert|de niro"
-    },
-    {
-      "title": "Celebrities",
-      "question": "denzel.jpg",
-      "answer": "denzel|washington"
-    },
-    {
-      "title": "Celebrities",
-      "question": "stallone.jpg",
-      "answer": "sylvester|stallone"
-    },
-    {
-      "title": "Celebrities",
-      "question": "gere.jpg",
-      "answer": "richard|gere"
-    },
-    {
-      "title": "Celebrities",
-      "question": "axlrose.jpg",
-      "answer": "axl|rose"
-    },
-    {
-      "title": "Celebrities",
-      "question": "jagger.jpg",
-      "answer": "mick|jagger"
-    },
-    {
-      "title": "Celebrities",
-      "question": "shakira.jpg",
-      "answer": "shakira"
-    },
-    {
-      "title": "Celebrities",
-      "question": "presley.jpg",
-      "answer": "elvis|presley"
-    },
-    {
-      "title": "Celebrities",
-      "question": "bowie.jpg",
-      "answer": "david|bowie"
-    },
-    {
-      "title": "Celebrities",
-      "question": "rickymartin.jpg",
-      "answer": "ricky|martin"
-    },
-    {
-      "title": "Celebrities",
-      "question": "fredymercury.jpg",
-      "answer": "freddie|mercury"
-    },
-    {
-      "title": "Celebrities",
-      "question": "amy.jpg",
-      "answer": "amy|winehouse"
-    },
-    {
-      "title": "Celebrities",
-      "question": "billgates.jpg",
-      "answer": "bill|gates"
-    },
-    {
-      "title": "Celebrities",
-      "question": "muhammadali.jpg",
-      "answer": "muhammad|ali"
-    },
-    {
-      "title": "Celebrities",
-      "question": "gandi.jpg",
-      "answer": "mahatma|gandhi"
-    },
-    {
-      "title": "Celebrities",
-      "question": "evita.jpg",
-      "answer": "evita"
-    },
-    {
-      "title": "Celebrities",
-      "question": "jordan.jpg",
-      "answer": "michael|jordan"
-    },
-    {
-      "title": "Celebrities",
-      "question": "marilin.jpg",
-      "answer": "marilyn|monroe"
-    },
-    {
-      "title": "Celebrities",
-      "question": "kravitz.jpg",
-      "answer": "lenny|kravitz"
-    },
-    {
-      "title": "Celebrities",
-      "question": "jobs.jpg",
-      "answer": "steve|jobs"
-    },
-    {
-      "title": "Celebrities",
-      "question": "darin.jpg",
-      "answer": "ricardo|darin"
-    },
-    {
-      "title": "Celebrities",
-      "question": "bardem.jpg",
-      "answer": "javier|bardem"
-    },
-    {
-      "title": "Celebrities",
-      "question": "pcruz.jpg",
-      "answer": "penelope|cruz"
-    },
-    {
-      "title": "Celebrities",
-      "question": "sabina.jpg",
-      "answer": "joaquin|sabina"
-    },
-    {
-      "title": "Celebrities",
-      "question": "serrat.jpg",
-      "answer": "joan manuel|serrat"
-    },
-    {
-      "title": "Celebrities",
-      "question": "selena.jpg",
-      "answer": "selena|gomez"
-    },
-    {
       "title": "",
       "question": "Carl and the Passions changed band name to what?",
       "answer": "Beach|Boys"
@@ -3042,7 +1552,7 @@
     },
     {
       "title": "",
-      "question": "When Ex American President Bill Clinton stated ''I did not have sexual relations with that woman', who was he referring to?",
+      "question": "When Ex American President Bill Clinton stated 'I did not have sexual relations with that woman', who was he referring to?",
       "answer": "Monica|Lewinski"
     },
     {
@@ -3309,7 +1819,7 @@
       "question": "Name the seventh planet from the sun",
       "answer": "Uranus"
     }
-    ,
+  ,
     {
       "title": "",
       "question": "Who invented the rabies vaccination?",
@@ -3327,7 +1837,7 @@
       "question": "Name the world's biggest island",
       "answer": "greenland"
     }
-    ,
+  ,
     {
       "title": "",
       "question": "What is the world's longest river?",
@@ -3399,5 +1909,1537 @@
       "question": "Which crime-fighting cartoon dog has the initals 'S.D.' on his collar?",
       "answer": "Scooby|Doo"
     }
+  ,
+    {
+      "title":"Who is this?",
+      "question":"comosellama1.jpg",
+      "answer": "jennifer|aniston"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama2.jpg",
+      "answer": "garfield"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama3.jpg",
+      "answer": "Cyclops"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama4.jpg",
+      "answer": "Lionel|Messi"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama5.jpg",
+      "answer": "axl rose"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama6.jpg",
+      "answer": "blinky"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama7.jpg",
+      "answer": "wonder|woman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama8.jpg",
+      "answer": "shakira"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama9.jpg",
+      "answer": "gargamel"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama10.jpg",
+      "answer": "bill gates"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama11.jpg",
+      "answer": "bradley|cooper"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama12.jpg",
+      "answer": "evita"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama13.jpg",
+      "answer": "babar"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama14.jpg",
+      "answer": "emma|watson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama15.jpg",
+      "answer": "disco|stu"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama16.jpg",
+      "answer": "aquaman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama17.jpg",
+      "answer": "javier|bardem"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama18.jpg",
+      "answer": "john|lennon"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama19.jpg",
+      "answer": "deadpool"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama20.jpg",
+      "answer": "gal gadot"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama21.jpg",
+      "answer": "roger|federer"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama22.jpg",
+      "answer": "Secret|Squirrel"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama23.jpg",
+      "answer": "blake|lively"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama24.jpg",
+      "answer": "apu"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama25.jpg",
+      "answer": "albert|einstein"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama26.jpg",
+      "answer": "Freeza"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama27.jpg",
+      "answer": "flash"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama28.jpg",
+      "answer": "ricardo|darin"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama29.jpg",
+      "answer": "lady gaga"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama30.jpg",
+      "answer": "Chef|smurf"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama31.jpg",
+      "answer": "ben|affleck"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama32.jpg",
+      "answer": "micheal|jordan"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama33.jpg",
+      "answer": "prince|adam"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama34.jpg",
+      "answer": "angelina|jolie"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama35.jpg",
+      "answer": "woody|allen"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama36.jpg",
+      "answer": "david|bowie"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama37.jpg",
+      "answer": "Ozora|Tsubasa"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama38.jpg",
+      "answer": "daredevil"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama39.jpg",
+      "answer": "robert|downey jr"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama40.jpg",
+      "answer": "arnold|schwarzenegger"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama41.jpg",
+      "answer": "orson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama42.jpg",
+      "answer": "emily|blunt"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama43.jpg",
+      "answer": "mahatma|gandhi"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama44.jpg",
+      "answer": "batman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama45.jpg",
+      "answer": "hyoga"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama46.jpg",
+      "answer": "son gohan"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama47.jpg",
+      "answer": "Henery|Hawk"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama48.jpg",
+      "answer": "tom cruise"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama49.jpg",
+      "answer": "novak|djokovic"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama50.jpg",
+      "answer": "lenny|kravitz"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama51.jpg",
+      "answer": "Kearney|Zzyzwicz"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama52.jpg",
+      "answer": "diego|maradona"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama53.jpg",
+      "answer": "leonardo|dicaprio"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama54.jpg",
+      "answer": "chief|Quimby"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama55.jpg",
+      "answer": "majin boo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama56.jpg",
+      "answer": "robert|de niro"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama57.jpg",
+      "answer": "amy|winehouse"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama58.jpg",
+      "answer": "black|widow"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama59.jpg",
+      "answer": "astro"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama60.jpg",
+      "answer": "Hefty|Smurf"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama61.jpg",
+      "answer": "Porky|Pig"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama62.jpg",
+      "answer": "juan martin|del potro"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama63.jpg",
+      "answer": "Julius|hibbert"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama64.jpg",
+      "answer": "shiryu"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama65.jpg",
+      "answer": "dr strange"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama66.jpg",
+      "answer": "matt|damon"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama67.jpg",
+      "answer": "Kojiro|Hyuga"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama68.jpg",
+      "answer": "cameron|diaz"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama69.jpg",
+      "answer": "agent|coulson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama70.jpg",
+      "answer": "milhouse"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama71.jpg",
+      "answer": "shun"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama72.jpg",
+      "answer": "lisa|simpson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama73.jpg",
+      "answer": "denzel|washington"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama74.jpg",
+      "answer": "Dwayne|Johnson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama75.jpg",
+      "answer": "pope|francisco"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama76.jpg",
+      "answer": "Quick Draw|McGraw"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama77.jpg",
+      "answer": "anne|hathaway"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama78.jpg",
+      "answer": "akira"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama79.jpg",
+      "answer": "antman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama80.jpg",
+      "answer": "sandra|bullock"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama81.jpg",
+      "answer": "captain|america"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama82.jpg",
+      "answer": "Rosie the|Robot Maid"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama83.jpg",
+      "answer": "brain"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama84.jpg",
+      "answer": "maggie|simpson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama85.jpg",
+      "answer": "George|Jetson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama86.jpg",
+      "answer": "johnny|deep"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama87.jpg",
+      "answer": "aaron|paul"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama88.jpg",
+      "answer": "Human|Torch"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama89.jpg",
+      "answer": "Joe|Quimby"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama90.jpg",
+      "answer": "heathcliff"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama91.jpg",
+      "answer": "huckleberry|hound"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama92.jpg",
+      "answer": "elvis|presley"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama93.jpg",
+      "answer": "the ant"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama94.jpg",
+      "answer": "patty"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama95.jpg",
+      "answer": "the inspector"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama96.jpg",
+      "answer": "space|ghost"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama97.jpg",
+      "answer": "wolverine"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama98.jpg",
+      "answer": "nicolas|cage"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama99.jpg",
+      "answer": "bishop"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama100.jpg",
+      "answer": "Vanity|Smurf"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama101.jpg",
+      "answer": "cristiano|ronaldo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama102.jpg",
+      "answer": "Wonder|Twins"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama103.jpg",
+      "answer": "electro"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama104.jpg",
+      "answer": "mark|wahlberg"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama105.jpg",
+      "answer": "artie|ziff"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama106.jpg",
+      "answer": "Santas Little|Helper"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama107.jpg",
+      "answer": "christian|bale"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama108.jpg",
+      "answer": "freddie|mercury"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama109.jpg",
+      "answer": "carl|carlson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama110.jpg",
+      "answer": "cletus"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama111.jpg",
+      "answer": "charles|xavier"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama112.jpg",
+      "answer": "spiderman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama113.jpg",
+      "answer": "jason|statham"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama114.jpg",
+      "answer": "mike|tyson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama115.jpg",
+      "answer": "dr marvin|monroe"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama116.jpg",
+      "answer": "gaston|gaudio"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama117.jpg",
+      "answer": "edna|krabappel"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama118.jpg",
+      "answer": "ironman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama119.jpg",
+      "answer": "mel|gibson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama120.jpg",
+      "answer": "richard|gere"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama121.jpg",
+      "answer": "winter|soldier"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama122.jpg",
+      "answer": "barney"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama123.jpg",
+      "answer": "black|panther"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama124.jpg",
+      "answer": "Colossus"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama125.jpg",
+      "answer": "hank|scorpio"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama126.jpg",
+      "answer": "Helen|Lovejoy"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama127.jpg",
+      "answer": "joan manuel|serrat"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama128.jpg",
+      "answer": "falcon"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama129.jpg",
+      "answer": "tom|hanks"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama130.jpg",
+      "answer": "hawkeye"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama131.jpg",
+      "answer": "beast"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama132.jpg",
+      "answer": "jebediah|springfield"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama133.jpg",
+      "answer": "jessica|lovejoy"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama134.jpg",
+      "answer": "groot"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama135.jpg",
+      "answer": "jennifer|lawrence"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama136.jpg",
+      "answer": "bruce|willis"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama137.jpg",
+      "answer": "kent|brockman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama138.jpg",
+      "answer": "kirk|van houten"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama139.jpg",
+      "answer": "will|smith"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama140.jpg",
+      "answer": "rachel|mcadams"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama141.jpg",
+      "answer": "michael|jackson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama142.jpg",
+      "answer": "nightcrawler"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama143.jpg",
+      "answer": "brad|pitt"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama144.jpg",
+      "answer": "loki"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama145.jpg",
+      "answer": "muhammad|ali"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama146.jpg",
+      "answer": "margo|zavala"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama147.jpg",
+      "answer": "neymar jr"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama148.jpg",
+      "answer": "hugh|jackman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama149.jpg",
+      "answer": "magneto"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama150.jpg",
+      "answer": "steve|jobs"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama151.jpg",
+      "answer": "rafa|nadal"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama152.jpg",
+      "answer": "montgomery|burns"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama153.jpg",
+      "answer": "matthew|perry"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama154.jpg",
+      "answer": "marilyn|monroe"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama155.jpg",
+      "answer": "wonder|woman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama156.jpg",
+      "answer": "superman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama157.jpg",
+      "answer": "penelope|cruz"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama158.jpg",
+      "answer": "professor|frink"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama159.jpg",
+      "answer": "rafa|wiggum"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama160.jpg",
+      "answer": "hulk"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama161.jpg",
+      "answer": "mick|jagger"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama162.jpg",
+      "answer": "jennifer|lopez"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama163.jpg",
+      "answer": "elroy|jetson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama164.jpg",
+      "answer": "Yosemite|Sam"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama165.jpg",
+      "answer": "seiya"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama166.jpg",
+      "answer": "iceman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama167.jpg",
+      "answer": "ashton|kutcher"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama168.jpg",
+      "answer": "paul|mccartney"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama169.jpg",
+      "answer": "astro boy"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama170.jpg",
+      "answer": "Atom Ant"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama171.jpg",
+      "answer": "mystique"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama172.jpg",
+      "answer": "nick|fury"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama173.jpg",
+      "answer": "katy|perry"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama174.jpg",
+      "answer": "liv|tyler"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama175.jpg",
+      "answer": "yogi|bear"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama176.jpg",
+      "answer": "jem"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama177.jpg",
+      "answer": "Charlize|Theron"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama178.jpg",
+      "answer": "herbert|powell"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama179.jpg",
+      "answer": "Benny|the Ball"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama180.jpg",
+      "answer": "the pink|panther"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama181.jpg",
+      "answer": "funzo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama182.jpg",
+      "answer": "ricky|rich"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama183.jpg",
+      "answer": "keanu|reeves"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama184.jpg",
+      "answer": "quicksilver"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama185.jpg",
+      "answer": "duffman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama186.jpg",
+      "answer": "pikachu"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama187.jpg",
+      "answer": "Judy Angela|Jetson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama188.jpg",
+      "answer": "ricky|martin"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama189.jpg",
+      "answer": "jasper"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama190.jpg",
+      "answer": "battle cat"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama191.jpg",
+      "answer": "Clancy|Wiggum"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama192.jpg",
+      "answer": "Mighty|Mouse"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama193.jpg",
+      "answer": "ryan|reynolds"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama194.jpg",
+      "answer": "jimbo|jones"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama195.jpg",
+      "answer": "Hans|Moleman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama196.jpg",
+      "answer": "red|skull"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama197.jpg",
+      "answer": "star|lord"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama198.jpg",
+      "answer": "frank|grimes"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama199.jpg",
+      "answer": "top cat"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama200.jpg",
+      "answer": "ultron"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama201.jpg",
+      "answer": "vision"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama202.jpg",
+      "answer": "Brainy|Smurf"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama203.jpg",
+      "answer": "dr nick"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama204.jpg",
+      "answer": "birdman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama205.jpg",
+      "answer": "vegetta"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama206.jpg",
+      "answer": "larry|burns"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama207.jpg",
+      "answer": "Luann|Van Houten"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama208.jpg",
+      "answer": "Quicksilver"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama209.jpg",
+      "answer": "lionel|hutz"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama210.jpg",
+      "answer": "rihanna"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama211.jpg",
+      "answer": "kang"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama212.jpg",
+      "answer": "krusty"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama213.jpg",
+      "answer": "Foghorn|Leghorn"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama214.jpg",
+      "answer": "heidi"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama215.jpg",
+      "answer": "Groundskeeper|Willie"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama216.jpg",
+      "answer": "papa|smurf"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama217.jpg",
+      "answer": "Jane|Jetson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama218.jpg",
+      "answer": "mr Sparkle"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama219.jpg",
+      "answer": "inspector|gadget"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama220.jpg",
+      "answer": "zac|efron"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama221.jpg",
+      "answer": "martin|prince"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama222.jpg",
+      "answer": "Bumblebee|Man"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama223.jpg",
+      "answer": "the aardvark"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama224.jpg",
+      "answer": "sylvester|stallone"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama225.jpg",
+      "answer": "silver|surfer"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama226.jpg",
+      "answer": "aquaman"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama227.jpg",
+      "answer": "mcbain"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama228.jpg",
+      "answer": "manjula"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama229.jpg",
+      "answer": "Itchy"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama230.jpg",
+      "answer": "luigi"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama231.jpg",
+      "answer": "bugs|bunny"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama232.jpg",
+      "answer": "Daffy|Duck"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama233.jpg",
+      "answer": "Gil|Gunderson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama234.jpg",
+      "answer": "bart|simpson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama235.jpg",
+      "answer": "Piccolo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama236.jpg",
+      "answer": "steven|tyler"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama237.jpg",
+      "answer": "Maude|Flanders"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama238.jpg",
+      "answer": "milhouse"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama239.jpg",
+      "answer": "Genzo|Wakabayashi"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama240.jpg",
+      "answer": "Officer|Dibble"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama241.jpg",
+      "answer": "marge|simpson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama242.jpg",
+      "answer": "riff|raff"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama243.jpg",
+      "answer": "otto"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama244.jpg",
+      "answer": "rocket|racoon"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama245.jpg",
+      "answer": "charly|sheen"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama246.jpg",
+      "answer": "the brain"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama247.jpg",
+      "answer": "homer|simpson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama248.jpg",
+      "answer": "flash"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama249.jpg",
+      "answer": "pepe le pew"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama250.jpg",
+      "answer": "ryan|gosling"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama251.jpg",
+      "answer": "son goku"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama252.jpg",
+      "answer": "ned|flanders"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama253.jpg",
+      "answer": "scooby|doo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama254.jpg",
+      "answer": "moe"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama255.jpg",
+      "answer": "pinky"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama256.jpg",
+      "answer": "ikki"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama257.jpg",
+      "answer": "scarlet|johansson"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama258.jpg",
+      "answer": "Jabberjaw"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama259.jpg",
+      "answer": "The Coyote"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama260.jpg",
+      "answer": "sylvester"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama261.jpg",
+      "answer": "Scratchy"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama262.jpg",
+      "answer": "chris|hemsworth"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama263.jpg",
+      "answer": "mojo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama264.jpg",
+      "answer": "master|roshi"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama265.jpg",
+      "answer": "bobby"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama266.jpg",
+      "answer": "oddie"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama267.jpg",
+      "answer": "squirtle"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama268.jpg",
+      "answer": "baloo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama269.jpg",
+      "answer": "patty"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama270.jpg",
+      "answer": "Ryo|Ishizaki"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama271.jpg",
+      "answer": "joaquin|sabina"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama272.jpg",
+      "answer": "penny"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama273.jpg",
+      "answer": "salma|hayek"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama274.jpg",
+      "answer": "shaggy"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama275.jpg",
+      "answer": "Marvin|the Martian"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama276.jpg",
+      "answer": "Nelson|Muntz"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama277.jpg",
+      "answer": "toribio"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama278.jpg",
+      "answer": "Lenny|Leonard"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama279.jpg",
+      "answer": "selena|gomez"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama280.jpg",
+      "answer": "Touche|Turtle"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama281.jpg",
+      "answer": "speedy|gonzalez"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama282.jpg",
+      "answer": "lou"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama283.jpg",
+      "answer": "azrael"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama284.jpg",
+      "answer": "kristen|stewart"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama285.jpg",
+      "answer": "dennis|the menace"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama286.jpg",
+      "answer": "trunks"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama287.jpg",
+      "answer": "tweety"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama288.jpg",
+      "answer": "taz mania"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama289.jpg",
+      "answer": "dodo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama290.jpg",
+      "answer": "krilin"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama291.jpg",
+      "answer": "adam|sandler"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama292.jpg",
+      "answer": "gleek"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama293.jpg",
+      "answer": "poochie"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama294.jpg",
+      "answer": "terri y|sherri"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama295.jpg",
+      "answer": "tormenta"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama296.jpg",
+      "answer": "stampy"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama297.jpg",
+      "answer": "seymour|skinner"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama298.jpg",
+      "answer": "thor"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama299.jpg",
+      "answer": "slash"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama300.jpg",
+      "answer": "superintendente|chalmers"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama301.jpg",
+      "answer": "troy|mcclure"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama302.jpg",
+      "answer": "la mole"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama303.jpg",
+      "answer": "tony|el gordo"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama304.jpg",
+      "answer": "selma"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama305.jpg",
+      "answer": "tenazas"
+    },
+    {
+      "title":"Who is this?",
+      "question":"comosellama306.jpg",
+      "answer": "quentin|tarantino"
+    }
+
   ]
 }
