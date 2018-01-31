@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
-        android:background="@color/primaryColor"
+        android:background="@color/backgroundSpanish"
         android:id="@+id/headerSelectLevel">
 
         <ImageView
@@ -42,7 +42,7 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="71dp"
-        android:background="@color/primaryColor"
+        android:background="@color/backgroundSpanish"
         android:scrollbars="none">
 
         <GridLayout
@@ -62,5 +62,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:indeterminate="true"
+        android:indeterminateTint="#000"
         android:visibility="visible"/>
 </RelativeLayout>

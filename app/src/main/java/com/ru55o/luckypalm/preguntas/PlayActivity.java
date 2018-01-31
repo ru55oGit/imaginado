@@ -59,12 +59,12 @@ public class PlayActivity extends AppCompatActivity {
 
         if (languageSelected) {
             title.setText(getResources().getText(R.string.select_category_title_es));
-            header.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            footer.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            header.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
+            footer.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
         } else {
             title.setText(getResources().getText(R.string.select_category_title_en));
-            header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            header.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            footer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
         }
 
         // Fila aleatorio
@@ -197,13 +197,13 @@ public class PlayActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(languageSwitch.isChecked()){
                     title.setText(getResources().getText(R.string.select_category_title_en));
-                    header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                    footer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                    header.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+                    footer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
                     editor.putBoolean("languageSelected", false);
                 }else{
                     title.setText(getResources().getText(R.string.select_category_title_es));
-                    header.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    footer.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    header.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
+                    footer.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
                     editor.putBoolean("languageSelected", true);
                 }
                 editor.commit();
@@ -398,6 +398,12 @@ public class PlayActivity extends AppCompatActivity {
         backgroundLevel = new BitmapDrawable(getResources(), bitmapResized);
 
         return backgroundLevel;
+    }
+
+    @Override
+    public void onDestroy() {
+        android.os.Process.killProcess(android.os.Process.myPid());
+        super.onDestroy();
     }
 
 }

@@ -870,11 +870,11 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         // Cambio los textos y los colores segun el idioma
         if (!languageSelected) {
-            buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            shareContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            buyContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            winContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            watchContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            shareContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
 
             titleText.setText(getResources().getText(R.string.sin_tiempo_title_en));
             buyText.setText(getResources().getText(R.string.sin_tiempo_comprar_en));

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frameCounter"
-    android:background="@drawable/tile_es"
+    android:background="@color/backgroundSpanish"
     tools:context=".GuessImageActivity">
     <RelativeLayout
         android:id="@+id/header"
@@ -120,10 +120,10 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/acertijos_title_es"
         android:layout_above="@+id/imageToGuess"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/acertijos_title" />
 
     <RelativeLayout
         android:layout_width="321dp"
@@ -197,6 +197,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:indeterminate="true"
+        android:indeterminateTint="#000"
         android:visibility="gone"/>
 
 </RelativeLayout>

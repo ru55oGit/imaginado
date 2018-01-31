@@ -87,14 +87,17 @@ public class SelectLevelActivity extends AppCompatActivity {
         editor = settings.edit();
 
         header = (RelativeLayout) findViewById(R.id.headerSelectLevel);
+        hsv = (ScrollView) findViewById(R.id.hsv);
         languageSelected = settings.getBoolean("languageSelected", true);
         categorySelected = settings.getString("categorySelected", "emojis");
         // por true es English
         if(languageSelected){
-            header.setBackgroundColor(getResources().getColor(R.color.primaryColor));
+            header.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            hsv.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
             title.setText(getResources().getString(R.string.select_level_title_es));
         }else{
-            header.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            header.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
+            hsv.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
             title.setText(getResources().getString(R.string.select_level_title_en));
         }
 
@@ -313,7 +316,7 @@ public class SelectLevelActivity extends AppCompatActivity {
                     }
 
                     //levelCircle.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics()));
-                    levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+                    levelCircle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
                     levelCircle.setBackgroundColor(getResources().getColor(R.color.secondaryColor));
                     levelCircle.setText(i + "");
                     levelCircle.setTextColor(getResources().getColor(R.color.numberLevel));

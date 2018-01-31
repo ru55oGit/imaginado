@@ -399,8 +399,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         frameCounter = (RelativeLayout) findViewById(R.id.frameCounter);
 
         if (!languageSelected && Build.VERSION.SDK_INT > 16) {
-            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
-            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title_en));
+            frameCounter.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
         }
 
         // traigo el Nivel
@@ -1119,11 +1118,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
         // Cambio los textos y los colores segun el idioma
         if (!languageSelected) {
-            buyContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            winContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            watchContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            shareContainer.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            buyContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            winContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            watchContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            shareContainer.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
+            shareContainerTitle.setBackgroundColor(getResources().getColor(R.color.backgroundSpanish));
 
             titleText.setText(getResources().getText(R.string.sin_tiempo_title_en));
             buyText.setText(getResources().getText(R.string.sin_tiempo_comprar_en));

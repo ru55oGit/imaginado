@@ -147,7 +147,7 @@ public class BuySecondsActivity extends AppCompatActivity {
         twenty_minutesTxt.setTypeface(lobsterFont);
 
         if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
-            frameCounter.setBackground(getResources().getDrawable(R.drawable.tile_en));
+            frameCounter.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
             title.setText(getResources().getText(R.string.sin_tiempo_title_en));
         }
 

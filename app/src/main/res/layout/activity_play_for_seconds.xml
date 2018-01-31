@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/frameCounter"
     android:gravity="top"
-    android:background="@drawable/tile_es"
+    android:background="@color/backgroundSpanish"
     tools:context=".PlayForSecondsActivity"
     android:textAlignment="center">
 

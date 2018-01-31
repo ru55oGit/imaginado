@@ -9,7 +9,7 @@
         android:id="@+id/headerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        android:background="@color/backgroundEnglish"
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
@@ -251,7 +251,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
+        android:background="@color/backgroundEnglish"
         android:padding="10dp">
 
         <TextView
