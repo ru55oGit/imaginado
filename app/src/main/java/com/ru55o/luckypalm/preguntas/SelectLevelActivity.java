@@ -152,6 +152,10 @@ public class SelectLevelActivity extends AppCompatActivity {
             result = settings.getString("levelFamosos","1");
         } else if ("celebrities".equals(cat)) {
             result = settings.getString("levelCelebrities","1");
+        } else if ("sombras".equals(cat)) {
+            result = settings.getString("levelSombras","1");
+        } else if ("shadows".equals(cat)) {
+            result = settings.getString("levelShadows","1");
         }
 
         return result;
@@ -239,6 +243,10 @@ public class SelectLevelActivity extends AppCompatActivity {
             path = "comosellama";
         } else if ("celebrities".equals(categorySelected)) {
             path = "comosellama";
+        } else if ("sombras".equals(categorySelected)) {
+            path = "shadows";
+        } else if ("shadows".equals(categorySelected)) {
+            path = "shadows";
         }
         return path;
     }
@@ -276,6 +284,10 @@ public class SelectLevelActivity extends AppCompatActivity {
                 jsonLocation = AssetJSONFile("famosos.json", getBaseContext());
             } else if ("celebrities".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("celebrities.json", getBaseContext());
+            } else if ("sombras".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("sombras.json", getBaseContext());
+            } else if ("shadows".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("shadows.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles

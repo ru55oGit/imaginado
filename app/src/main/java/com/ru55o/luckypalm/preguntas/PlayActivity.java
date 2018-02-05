@@ -22,9 +22,9 @@ import android.widget.TextView;
 public class PlayActivity extends AppCompatActivity {
 
     private Button aleatorio, emojis, acertijos,
-    peliculas, escudos, marcas, banderas, famosos,
+    peliculas, escudos, marcas, banderas, famosos, shadows,
     cat_aleatorio, cat_acertijos, cat_logos, cat_peliculas,
-    cat_comosellama,cat_emojis, cat_logosdeportes, cat_paises;
+    cat_comosellama,cat_emojis, cat_logosdeportes, cat_paises, cat_shadows;
     private TextView title;
     private SharedPreferences settings;
     private SharedPreferences.Editor editor;
@@ -191,6 +191,23 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
+        //Fila shadows
+        cat_shadows = (Button) findViewById(R.id.cat_shadows);
+        shadows = (Button) findViewById(R.id.shadows);
+        shadows.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!languageSwitch.isChecked()){
+                    editor.putString("categorySelected","sombras");
+                } else {
+                    editor.putString("categorySelected","shadows");
+                }
+                editor.commit();
+                Intent intent = new Intent(PlayActivity.this, SelectLevelActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //attach a listener to check for changes in state
         languageSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -280,6 +297,14 @@ public class PlayActivity extends AppCompatActivity {
                 cat_paises.setBackground(resizeImageByName("cat_paises_en"));
             }
 
+            if (!languageSwitch.isChecked()) {
+                shadows.setBackground(resizeImageByCategory("sombras", Integer.parseInt(getLevelByCategory("sombras"))));
+                cat_shadows.setBackground(resizeImageByName("cat_shadows"));
+            } else {
+                shadows.setBackground(resizeImageByCategory("shadows", Integer.parseInt(getLevelByCategory("shadows"))));
+                cat_shadows.setBackground(resizeImageByName("cat_shadows_en"));
+            }
+
         }
     }
 
@@ -313,6 +338,10 @@ public class PlayActivity extends AppCompatActivity {
             result = settings.getString("levelFamosos","1");
         } else if ("celebrities".equals(cat)) {
             result = settings.getString("levelCelebrities","1");
+        } else if ("sombras".equals(cat)) {
+            result = settings.getString("levelSombras","1");
+        } else if ("shadows".equals(cat)) {
+            result = settings.getString("levelShadows","1");
         }
 
         return result;
@@ -351,6 +380,10 @@ public class PlayActivity extends AppCompatActivity {
             path = "aleatorio";
         } else if ("aleatorio_en".equals(categorySelected)) {
             path = "aleatorio_en";
+        } else if ("sombras".equals(categorySelected)) {
+            path = "shadows";
+        } else if ("shadows".equals(categorySelected)) {
+            path = "shadows";
         }
 
         return path;
@@ -364,6 +397,10 @@ public class PlayActivity extends AppCompatActivity {
         int width = size.x;
 
         int res = getResources().getIdentifier(getImagePath(categorySelected) + i, "drawable", getPackageName());
+        // cuando llega a la ultima imagen, se pasa el contador y no encuentra la imagen
+        if (res ==0) {
+            res = getResources().getIdentifier(getImagePath(categorySelected) + (i-1), "drawable", getPackageName());
+        }
         backgroundLevel = getResources().getDrawable(res);
 
         Bitmap original = ((BitmapDrawable) backgroundLevel).getBitmap();

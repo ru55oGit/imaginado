@@ -236,8 +236,33 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
-                    android:background="@drawable/escudos1"
+                    android:background="@drawable/banderas1"
                     android:textColor="@color/primaryColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fila9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@+id/fila8"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/shadows"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/shadows1"
+                    android:textColor="@color/primaryColor" />
+
+                <Button
+                    android:id="@+id/cat_shadows"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/cat_paises"/>
 
             </LinearLayout>
 

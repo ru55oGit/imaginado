@@ -593,6 +593,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             path = "comosellama";
         } else if ("celebrities".equals(categorySelected)) {
             path = "comosellama";
+        } else if ("sombras".equals(categorySelected)) {
+            path = "shadows";
+        } else if ("shadows".equals(categorySelected)) {
+            path = "shadows";
         }
         return path;
     }
@@ -627,6 +631,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             result = settings.getString("levelFamosos","1");
         } else if ("celebrities".equals(cat)) {
             result = settings.getString("levelCelebrities","1");
+        } else if ("sombras".equals(cat)) {
+            result = settings.getString("levelSombras","1");
+        } else if ("shadows".equals(cat)) {
+            result = settings.getString("levelShadows","1");
         }
 
         return result;
@@ -648,6 +656,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         editor.commit();
 
         imageToGuess = null;
+        closeAndSave();
 
         finish();
     }
@@ -891,6 +900,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 jsonLocation = AssetJSONFile("famosos.json", getBaseContext());
             } else if("celebrities".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("celebrities.json", getBaseContext());
+            } else if("sombras".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("sombras.json", getBaseContext());
+            } else if("shadows".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("shadows.json", getBaseContext());
             }
 
             JSONObject jsonobject = new JSONObject(jsonLocation);
@@ -954,8 +967,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             editor.putString("levelFamosos", level);
         } else if("celebrities".equals(categorySelected)) {
             editor.putString("levelCelebrities", level);
+        } else if("sombras".equals(categorySelected)) {
+            editor.putString("levelSombras", level);
+        } else if("shadows".equals(categorySelected)) {
+            editor.putString("levelShadows", level);
         }
-        //editor.putString("levelSelected", level);
         editor.commit();
     }
 
@@ -1368,6 +1384,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 jsonLocation = AssetJSONFile("famosos.json", getBaseContext());
             } else if("celebrities".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("celebrities.json", getBaseContext());
+            } else if("sombras".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("sombras.json", getBaseContext());
+            } else if("shadows".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("shadows.json", getBaseContext());
             }
             JSONObject jsonobject = new JSONObject(jsonLocation);
             //obtengo el array de niveles
