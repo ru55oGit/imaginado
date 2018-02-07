@@ -355,11 +355,11 @@ public class PlayActivity extends AppCompatActivity {
         } else if("emojis".equals(categorySelected)) {
             path = "emojis";
         } else if("enojis".equals(categorySelected)) {
-            path = "enojis";
+            path = "emojis";
         } else if("peliculas".equals(categorySelected)) {
             path = "peliculas";
         } else if("movies".equals(categorySelected)) {
-            path = "movies";
+            path = "peliculas";
         } else if ("escudos".equals(categorySelected)) {
             path = "escudos";
         } else if ("teams".equals(categorySelected)) {

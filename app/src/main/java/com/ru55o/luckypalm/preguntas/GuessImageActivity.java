@@ -572,11 +572,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         } else if("emojis".equals(categorySelected)) {
             path = "emojis";
         } else if("enojis".equals(categorySelected)) {
-            path = "enojis";
+            path = "emojis";
         } else if("peliculas".equals(categorySelected)) {
             path = "peliculas";
         } else if("movies".equals(categorySelected)) {
-            path = "movies";
+            path = "peliculas";
         } else if ("escudos".equals(categorySelected)) {
             path = "escudos";
         } else if ("teams".equals(categorySelected)) {
@@ -1171,9 +1171,9 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         avoidInterstitialOnShare = false;
-                        String sharedDescription = !languageSelected? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
+                        String sharedDescription = languageSelected? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
                         String sharedTitle = getResources().getString(R.string.title_share_text_en);
-                        String sharedImage = !languageSelected? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
+                        String sharedImage = languageSelected? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle(sharedTitle)
@@ -1212,8 +1212,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
                         avoidInterstitialOnShare = false;
-                        Uri screenshotUri = !languageSelected? Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.acertijos/drawable/sharetwitterimageen");
-                        String shareText = !languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        Uri screenshotUri = languageSelected? Uri.parse("android.resource://com.ru55o.luckypalm.preguntas/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.preguntas/drawable/sharetwitterimageen");
+                        String shareText = languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1233,7 +1233,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }
                         }.start();
                     } else {
-                        if (!languageSelected) {
+                        if (languageSelected) {
                             Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();

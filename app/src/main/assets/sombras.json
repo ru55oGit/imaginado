@@ -93,7 +93,7 @@
     "respuesta": "robotina"
   },
   {
-    "respuesta": "masha y oso"
+    "respuesta": "masha|y oso"
   },
   {
     "respuesta": "maggie|simpson"
@@ -105,7 +105,7 @@
     "respuesta": "alcalde|diamante"
   },
   {
-    "respuesta": "pluto"
+    "respuesta": "goofy"
   },
   {
     "respuesta": "huckleberry|hound"
@@ -300,6 +300,9 @@
     "respuesta": "el inspector|gadget"
   },
   {
+    "respuesta": "martin|prince"
+  },
+  {
     "respuesta": "hombre|abejorro"
   },
   {
@@ -486,7 +489,7 @@
     "respuesta": "seymour|skinner"
   },
   {
-    "respuesta": "superintendent|chalmers"
+    "respuesta": "superintendente|chalmers"
   },
   {
     "respuesta": "malefica"
@@ -508,6 +511,12 @@
   },
   {
     "respuesta": "Simba"
+  },
+  {
+    "respuesta": "Bob|esponja"
+  },
+  {
+    "respuesta": "Pinocho"
   }
 ]
 }

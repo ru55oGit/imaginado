@@ -45,13 +45,13 @@
     "respuesta": "son gohan"
   },
   {
-    "respuesta": "el gavilan|pollero"
-  },
-  {
-    "respuesta": "enrique"
-  },
-  {
     "respuesta": "henery|hawk"
+  },
+  {
+    "respuesta": "Kearney|Zzyzwicz"
+  },
+  {
+    "respuesta": "Chief|Quimby"
   },
   {
     "respuesta": "majin boo"
@@ -93,7 +93,7 @@
     "respuesta": "Rosie"
   },
   {
-    "respuesta": "Masha and The Bear"
+    "respuesta": "Masha and|The Bear"
   },
   {
     "respuesta": "maggie|simpson"
@@ -105,7 +105,7 @@
     "respuesta": "Joe Quimby"
   },
   {
-    "respuesta": "pluto"
+    "respuesta": "goofy"
   },
   {
     "respuesta": "huckleberry|hound"
@@ -126,7 +126,7 @@
     "respuesta": "Vanity|Smurf"
   },
   {
-    "respuesta": "Wonder Twins"
+    "respuesta": "Wonder|Twins"
   },
   {
     "respuesta": "artie|ziff"
@@ -300,6 +300,9 @@
     "respuesta": "the inspector|gadget"
   },
   {
+    "respuesta": "martin|prince"
+  },
+  {
     "respuesta": "Bumblebee|Man"
   },
   {
@@ -441,7 +444,7 @@
     "respuesta": "lenny"
   },
   {
-    "respuesta": "Touche Turtle"
+    "respuesta": "Touche|Turtle"
   },
   {
     "respuesta": "speedy|gonzalez"
@@ -465,7 +468,7 @@
     "respuesta": "tom"
   },
   {
-    "respuesta": "winnie pooh"
+    "respuesta": "winnie|pooh"
   },
   {
     "respuesta": "krilin"
@@ -505,6 +508,12 @@
   },
   {
     "respuesta": "Peter|Pan"
+  },
+  {
+    "respuesta": "Simba"
+  },
+  {
+    "respuesta": "SpongeBob|SquarePants"
   },
   {
     "respuesta": "Simba"
