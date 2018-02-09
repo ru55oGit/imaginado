@@ -7,29 +7,16 @@
     android:gravity="top|center"
     android:background="@android:color/transparent">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="top|center"
-        android:src="@drawable/lose" />
-
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/borders_black"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/globo"
         android:gravity="center"
         android:padding="15dp"
-        android:shadowColor="@color/thirdColor"
-        android:shadowDx="10"
-        android:shadowDy="10"
-        android:shadowRadius="10"
-        android:textColor="@color/secondaryColor"
+        android:text="-10 segundos"
+        android:textColor="@color/white"
         android:textSize="@dimen/bg_letter_size" />
 </RelativeLayout>

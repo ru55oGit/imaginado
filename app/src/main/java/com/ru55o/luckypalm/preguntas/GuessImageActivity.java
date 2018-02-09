@@ -841,7 +841,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
             toastWin = new Toast(getApplicationContext());
             toastWin.setGravity(Gravity.TOP, 0, (int)getResources().getDimension(R.dimen.top_toast));
-            toastWin.setDuration(Toast.LENGTH_SHORT);
+            toastWin.setDuration(Toast.LENGTH_LONG);
             toastWin.setView(layout);
             toastWin.show();
 
