@@ -230,7 +230,7 @@ public class SelectLevelActivity extends AppCompatActivity {
         } else if ("escudos".equals(categorySelected)) {
             path = "escudos";
         } else if ("teams".equals(categorySelected)) {
-            path = "escudos";
+            path = "sportslogos";
         } else if ("banderas".equals(categorySelected)) {
             path = "banderas";
         } else if ("flags".equals(categorySelected)) {
@@ -271,7 +271,7 @@ public class SelectLevelActivity extends AppCompatActivity {
             } else if ("escudos".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
             } else if ("teams".equals(categorySelected)) {
-                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
+                jsonLocation = AssetJSONFile("sportslogos.json", getBaseContext());
             } else if ("banderas".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
             } else if ("flags".equals(categorySelected)) {

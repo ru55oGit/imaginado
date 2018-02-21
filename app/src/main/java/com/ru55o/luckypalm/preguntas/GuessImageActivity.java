@@ -580,7 +580,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         } else if ("escudos".equals(categorySelected)) {
             path = "escudos";
         } else if ("teams".equals(categorySelected)) {
-            path = "escudos";
+            path = "sportslogos";
         } else if ("banderas".equals(categorySelected)) {
             path = "banderas";
         } else if ("flags".equals(categorySelected)) {
@@ -638,27 +638,6 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         }
 
         return result;
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        // cancelo el custom toastLose cdo salgo
-        if (toastLose != null) {
-            toastLose.cancel();
-        }
-
-        if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded() && avoidInterstitialOnShare && settings.getInt("sharesCount", 0) < 10){
-            mInterstitialAd.show();
-        }
-
-        editor.putInt("sharesCount", sharesCount);
-        editor.commit();
-
-        imageToGuess = null;
-        closeAndSave();
-
-        finish();
     }
 
     private void closeAndSave() {
@@ -800,10 +779,11 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     (ViewGroup) findViewById(R.id.toast_layout_root));
 
             TextView text = (TextView) layout.findViewById(R.id.text);
+            text.setSingleLine(false);
             if (!languageSelected) {
-                text.setText("You failed. -"+secondsToSubtract+" Secs");
+                text.setText("You failed!\n-"+secondsToSubtract+" Secs");
             } else {
-                text.setText("Fallaste. -"+secondsToSubtract+" Segundos");
+                text.setText("¡Fallaste!\n-"+secondsToSubtract+" Segundos");
             }
             text.setTypeface(lobsterFont);
 
@@ -887,7 +867,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } else if("escudos".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
             } else if("teams".equals(categorySelected)) {
-                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
+                jsonLocation = AssetJSONFile("sportslogos.json", getBaseContext());
             } else if("banderas".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
             } else if("flags".equals(categorySelected)) {
@@ -1304,6 +1284,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         vervideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                aciertos = 0;
                 // sino se cargo el video lanzo un timer hasta que se cargue
                 if(mVideoAd.isLoaded()) {
                     mVideoAd.show();
@@ -1371,7 +1352,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             } else if("escudos".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
             } else if("teams".equals(categorySelected)) {
-                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
+                jsonLocation = AssetJSONFile("sportslogos.json", getBaseContext());
             } else if("banderas".equals(categorySelected)) {
                 jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
             } else if("flags".equals(categorySelected)) {
@@ -1411,11 +1392,35 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        // cancelo el custom toastLose cdo salgo
+        if (toastLose != null) {
+            toastLose.cancel();
+        }
+
+        /*if (settings.getBoolean("showAds", true) && Integer.parseInt(levelSelected) % 4 == 0 && mInterstitialAd != null && mInterstitialAd.isLoaded() && avoidInterstitialOnShare && settings.getInt("sharesCount", 0) < 10){
+            mInterstitialAd.show();
+        }*/
+
+        editor.putInt("sharesCount", sharesCount);
+        editor.commit();
+
+        imageToGuess = null;
+        closeAndSave();
+
+        finish();
+    }
+
+    @Override
     public void onPause() {
         if (settings.getBoolean("showAds", true) && mVideoAd != null) {
             mVideoAd.pause(this);
         }
         super.onPause();
+        if (timer != null) {
+            timer.cancel();
+        }
     }
 
     @Override

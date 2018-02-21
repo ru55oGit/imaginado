@@ -363,7 +363,7 @@ public class PlayActivity extends AppCompatActivity {
         } else if ("escudos".equals(categorySelected)) {
             path = "escudos";
         } else if ("teams".equals(categorySelected)) {
-            path = "escudos";
+            path = "sportslogos";
         } else if ("banderas".equals(categorySelected)) {
             path = "banderas";
         } else if ("flags".equals(categorySelected)) {

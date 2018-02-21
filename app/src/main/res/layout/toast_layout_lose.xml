@@ -12,10 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/martop_toast_losewin"
         android:background="@drawable/globo"
         android:gravity="center"
-        android:padding="15dp"
         android:text="-10 segundos"
         android:textColor="@color/white"
         android:textSize="@dimen/bg_letter_size" />

@@ -272,6 +272,9 @@
     "respuesta": "Espanyol de|Barcelona"
   },
   {
+    "respuesta": "Hellas|Verona"
+  },
+  {
     "respuesta": "Union"
   },
   {
@@ -284,7 +287,19 @@
     "respuesta": "leicester"
   },
   {
-    "respuesta": "Hellas|Verona"
+    "respuesta": "Boca Juniors"
+  },
+  {
+    "respuesta": "Hannover 96"
+  },
+  {
+    "respuesta": "Celta de Vigo"
+  },
+  {
+    "respuesta": "Watford"
+  },
+  {
+    "respuesta": "Cagliari"
   }
 ]
 }
