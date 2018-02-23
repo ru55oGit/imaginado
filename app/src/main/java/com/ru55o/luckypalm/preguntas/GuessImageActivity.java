@@ -260,7 +260,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
 
-                        String sharetext = !languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+                        String sharetext = "#Descifralo: https://goo.gl/HhhMxu";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
@@ -293,7 +293,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             timer.cancel();
                         }
                         if (Build.VERSION.SDK_INT > 16) {
-                            title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
+                            //title.setBackground(getResources().getDrawable(R.drawable.acertijos_title));
                         }
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
@@ -334,7 +334,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
 
-                        String sharetext = !languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/CrnO9M":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/CrnO9M";
+                        String sharetext = "#Descifralo: https://goo.gl/HhhMxu";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1151,14 +1151,14 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.facebook.katana")){
                         avoidInterstitialOnShare = false;
-                        String sharedDescription = languageSelected? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
-                        String sharedTitle = getResources().getString(R.string.title_share_text_en);
-                        String sharedImage = languageSelected? "https://lh3.googleusercontent.com/WjHSbuxdCfYAIjrvq3aZI9LxSeysMZ6oQPBCnJ6I2WpjCQdBn2iiiPo0u7moJrAEYCc=h900-rw":"https://lh3.googleusercontent.com/pPkfzgA9TVDFEUnZ9qfdkiTI1WVqNeZdgG1-nG2ZB1WnBcwXFDEUAiw1j4ODR7nujmw=h900-rw";
+                        String sharedDescription = !languageSelected? getResources().getString(R.string.generic_share_text) : getResources().getString(R.string.generic_share_text_en);
+                        String sharedTitle = "#Descifralo";
+                        String sharedImage = "https://lh3.googleusercontent.com/dZ71_EPgyuCvBep9n1v3Vi6yXfHlp8MX9b2sSdbbOtpChWWyJSFeyzfuwYZmYuI3XkQ=w300-rw";
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             ShareLinkContent shareLinkContent = new ShareLinkContent.Builder()
                                     .setContentTitle(sharedTitle)
                                     .setContentDescription(sharedDescription)
-                                    .setContentUrl(Uri.parse("https://goo.gl/CrnO9M"))
+                                    .setContentUrl(Uri.parse("https://goo.gl/HhhMxu"))
                                     .setImageUrl(Uri.parse(sharedImage))
                                     .build();
 
@@ -1192,8 +1192,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                 if (verifyStoragePermissions(GuessImageActivity.this)) {
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
                         avoidInterstitialOnShare = false;
-                        Uri screenshotUri = languageSelected? Uri.parse("android.resource://com.ru55o.luckypalm.preguntas/drawable/sharetwitterimage"):Uri.parse("android.resource://com.ru55o.luckypalm.preguntas/drawable/sharetwitterimageen");
-                        String shareText = languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        Uri screenshotUri = Uri.parse("android.resource://com.ru55o.luckypalm.preguntas/drawable/sharetwitterimage");
+                        String shareText = "#Descifralo https://goo.gl/HhhMxu";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -1213,7 +1213,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                             }
                         }.start();
                     } else {
-                        if (languageSelected) {
+                        if (!languageSelected) {
                             Toast.makeText(getBaseContext(),"App not installed", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getBaseContext(),"Aplicación no instalada", Toast.LENGTH_SHORT).show();
@@ -1230,14 +1230,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                         avoidInterstitialOnShare = false;
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                        Bitmap largeIcon;
-                        if (!languageSelected) {
-                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
-                        } else {
-                            largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimageen);
-                        }
+                        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.sharetwitterimage);
+
                         Uri screenshotUri = Uri.parse(saveBitmap(largeIcon, true));
-                        String shareText = !languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/CrnO9M": getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/CrnO9M";
+                        String shareText = "#Descifralo https://goo.gl/HhhMxu";
                         sharingIntent.setPackage("com.whatsapp");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);

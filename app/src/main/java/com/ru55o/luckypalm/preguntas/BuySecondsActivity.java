@@ -40,12 +40,12 @@ public class BuySecondsActivity extends AppCompatActivity {
     private IInAppBillingService mService;
     private ServiceConnection mServiceConn;
 
-    private String inappid_three = "com.ru55o.luckypalm.acertijos.three_minutes";
-    private String inappid_five = "com.ru55o.luckypalm.acertijos.five_minutes";
-    private String inappid_seven = "com.ru55o.luckypalm.acertijos.seven_minutes";
-    private String inappid_ten = "com.ru55o.luckypalm.acertijos.ten_minutes";
-    private String inappid_fifteen = "com.ru55o.luckypalm.acertijos.fifteen_minutes";
-    private String inappid_twenty = "com.ru55o.luckypalm.acertijos.twenty_minutes";
+    private String inappid_three = "com.ru55o.luckypalm.preguntas.three_minutes";
+    private String inappid_five = "com.ru55o.luckypalm.preguntas.five_minutes";
+    private String inappid_seven = "com.ru55o.luckypalm.preguntas.seven_minutes";
+    private String inappid_ten = "com.ru55o.luckypalm.preguntas.ten_minutes";
+    private String inappid_fifteen = "com.ru55o.luckypalm.preguntas.fifteen_minutes";
+    private String inappid_twenty = "com.ru55o.luckypalm.preguntas.twenty_minutes";
     private String purchaseToken = "android.test.purchased";
 
     private Button three_minutesBtn;
@@ -146,7 +146,7 @@ public class BuySecondsActivity extends AppCompatActivity {
         twenty_minutesTxt = (TextView) findViewById(R.id.twentyMinutesTxt);
         twenty_minutesTxt.setTypeface(lobsterFont);
 
-        if (languageSelected.booleanValue() && Build.VERSION.SDK_INT > 16) {
+        if (!languageSelected && Build.VERSION.SDK_INT > 16) {
             frameCounter.setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
             title.setText(getResources().getText(R.string.sin_tiempo_title_en));
         }
@@ -265,7 +265,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_three, description);
                             }
                         });
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             three_minutesTxt.setText(three_minutesTxt.getText().toString().replace("minutos","minutes"));
                         }
                     }
@@ -278,7 +278,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_five, description);
                             }
                         });
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             five_minutesTxt.setText(five_minutesTxt.getText().toString().replace("minutos","minutes"));
                         }
                     }
@@ -291,7 +291,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_seven, description);
                             }
                         });
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             seven_minutesTxt.setText(seven_minutesTxt.getText().toString().replace("minutos","minutes"));
                         }
                     }
@@ -304,7 +304,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_ten, description);
                             }
                         });
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             ten_minutesTxt.setText(ten_minutesTxt.getText().toString().replace("minutos","minutes"));
                         }
                     }
@@ -317,7 +317,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_fifteen, description);
                             }
                         });
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             fifteen_minutesTxt.setText(fifteen_minutesTxt.getText().toString().replace("minutos","minutes"));
                         }
                     }
@@ -330,7 +330,7 @@ public class BuySecondsActivity extends AppCompatActivity {
                                 buy(inappid_twenty, description);
                             }
                         });
-                        if (languageSelected.booleanValue()) {
+                        if (!languageSelected) {
                             twenty_minutesTxt.setText(twenty_minutesTxt.getText().toString().replace("minutos","minutes"));
                         }
                     }
