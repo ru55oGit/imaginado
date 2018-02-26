@@ -296,6 +296,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.whatsapp")){
                     if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                        if (timer !=null) {
+                            timer.cancel();
+                        }
                         avoidInterstitialOnShare = false;
                         sharesCount++;
                         if (timer != null) {
@@ -329,6 +332,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.facebook.katana")) {
                     if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                        if (timer !=null) {
+                            timer.cancel();
+                        }
                         avoidInterstitialOnShare = false;
                         sharesCount++;
                         if (timer != null) {
@@ -339,7 +345,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         }
                         volver.setVisibility(View.INVISIBLE);
                         Bitmap image = takeScreenshot();
-                        image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
+                        image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1200);
                         SharePhoto photo = new SharePhoto.Builder()
                                 .setBitmap(image)
                                 .build();
@@ -367,6 +373,9 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             public void onClick(View v) {
                 if(isAppInstalled(getBaseContext(), "com.twitter.android")) {
                     if (verifyStoragePermissions(PlayForSecondsActivity.this)) {
+                        if (timer !=null) {
+                            timer.cancel();
+                        }
                         avoidInterstitialOnShare = false;
                         sharesCount++;
                         volver.setVisibility(View.INVISIBLE);
@@ -1126,7 +1135,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
             if (fullImage) {
                 bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight());
             } else {
-                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1100);
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), 1200);
             }
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             fos.flush();
