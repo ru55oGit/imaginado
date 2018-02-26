@@ -259,6 +259,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         }
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
+                        leftArrow.setVisibility(View.INVISIBLE);
+                        rightArrow.setVisibility(View.INVISIBLE);
 
                         String sharetext = "#Descifralo: https://goo.gl/HhhMxu";
 
@@ -297,6 +299,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         }
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
+                        leftArrow.setVisibility(View.INVISIBLE);
+                        rightArrow.setVisibility(View.INVISIBLE);
 
                         Bitmap image = takeScreenshot();
                         image = Bitmap.createBitmap(image, 0, 0, image.getWidth(), 1100);
@@ -331,6 +335,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                         sharesCount++;
                         volver.setVisibility(View.INVISIBLE);
                         labelLevelText.setVisibility(View.VISIBLE);
+                        leftArrow.setVisibility(View.INVISIBLE);
+                        rightArrow.setVisibility(View.INVISIBLE);
 
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
 

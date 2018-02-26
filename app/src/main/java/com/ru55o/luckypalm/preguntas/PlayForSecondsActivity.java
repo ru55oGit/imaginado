@@ -302,7 +302,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                             timer.cancel();
                         }
                         volver.setVisibility(View.INVISIBLE);
-                        String sharetext = languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/HhhMxu":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/HhhMxu";
+                        String sharetext = "#Descifralo: https://goo.gl/HhhMxu";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
@@ -372,7 +372,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                         volver.setVisibility(View.INVISIBLE);
                         Uri screenshotUri = Uri.parse(saveBitmap(takeScreenshot(), false));
 
-                        String sharetext = languageSelected? getResources().getString(R.string.generic_share_text) + " Descifralo: https://goo.gl/HhhMxu":getResources().getString(R.string.generic_share_text_en) + " Descifralo: https://goo.gl/HhhMxu";
+                        String sharetext = "#Descifralo: https://goo.gl/HhhMxu";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
@@ -949,7 +949,7 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
                     if(isAppInstalled(getBaseContext(), "com.twitter.android")){
                         avoidInterstitialOnShare = false;
                         Uri screenshotUri = Uri.parse("android.resource://com.ru55o.luckypalm.preguntas/drawable/sharetwitterimage");
-                        String shareText = !languageSelected? getResources().getString(R.string.generic_share_text) + " https://goo.gl/HhhMxu" : getResources().getString(R.string.generic_share_text_en) + " https://goo.gl/HhhMxu";
+                        String shareText = "#Descifralo https://goo.gl/HhhMxu";
 
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
