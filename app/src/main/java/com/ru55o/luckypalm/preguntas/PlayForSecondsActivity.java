@@ -177,6 +177,10 @@ public class PlayForSecondsActivity extends AppCompatActivity implements BackDia
 
         languageSelected = settings.getBoolean("languageSelected", true);
 
+        if (!languageSelected && Build.VERSION.SDK_INT > 16) {
+            ((RelativeLayout) findViewById(R.id.frameCounter)).setBackgroundColor(getResources().getColor(R.color.backgroundEnglish));
+        }
+
         // volver
         volver = (ImageView) findViewById(R.id.volver);
         volver.setOnClickListener(new View.OnClickListener(){
