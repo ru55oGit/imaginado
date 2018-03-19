@@ -3866,11 +3866,6 @@
       "respuesta": "negativa"
     },
     {
-      "titulo": "Definición",
-      "pregunta": "Instrumento óptico para ampliar la imagen de objetos o seres, o de detalles de estos, tan pequeños que no se pueden ver a simple vista",
-      "respuesta": "microscopio"
-    },
-    {
       "titulo": "#Descifralo",
       "pregunta": "¿En qué se transforma el oxígeno luego de ser quemado?",
       "respuesta": "dioxido de|carbono"
@@ -5849,6 +5844,16 @@
       "titulo": "#Descifralo",
       "pregunta": "¿Cómo se denomina la palabra que acompaña al sustantivo y expresa una cualidad de éste?",
       "respuesta": "adjetivo"
+    },
+    {
+      "titulo": "Definición",
+      "pregunta": "Instrumento óptico para ampliar la imagen de objetos o seres, o de detalles de estos, tan pequeños que no se pueden ver a simple vista",
+      "respuesta": "microscopio"
+    },
+    {
+      "titulo": "#Descifralo",
+      "pregunta": "¿La hinchada de que equipo de fútbol argentino popularizo el hit 'Mauricio Macri la p... que te pario'?",
+      "respuesta": "San Lorenzo"
     },
     {
       "titulo": "#Descifralo",
@@ -8739,7 +8744,7 @@
     {
       "titulo":"Películas con Emojis",
       "pregunta":"emojis94.jpg",
-      "respuesta": "tienes un email"
+      "respuesta": "tienes|un email"
     },
     {
       "titulo":"Películas con Emojis",
@@ -8869,7 +8874,7 @@
     {
       "titulo":"Películas con Emojis",
       "pregunta":"emojis120.jpg",
-      "respuesta": "guerra mundial z"
+      "respuesta": "guerra|mundial z"
     },
     {
       "titulo":"Películas con Emojis",
