@@ -1,267 +1,522 @@
-{"listado": [
-  {
-
-  },{
-    "respuesta": "una aventura|extraordinaria"
-  },{
-    "respuesta": "dr dolittle"
-  },{
-    "respuesta": "psicosis"
-  },{
-    "respuesta": "apolo 13"
-  },{
-    "respuesta": "kung fu|panda"
-  },{
-    "respuesta": "comer rezar|amar"
-  },{
-    "respuesta": "diamantes|de sangre"
-  },{
-    "respuesta": "et"
-  },{
-    "respuesta": "american pie"
-  },{
-    "respuesta": "hombres|de negro"
-  },{
-    "respuesta": "liberen|a willy"
-  },{
-    "respuesta": "up"
-  },{
-    "respuesta": "el planeta|de los simios"
-  },{
-    "respuesta": "belleza|americana"
-  },{
-    "respuesta": "el rey leon"
-  },{
-    "respuesta": "gorilas en|la niebla"
-  },{
-    "respuesta": "el diablo|viste a la moda"
-  },{
-    "respuesta": "x men"
-  },{
-    "respuesta": "harry potter"
-  },{
-    "respuesta": "spiderman"
-  },{
-    "respuesta": "buscando|a nemo"
-  },{
-    "respuesta": "mary poppins"
-  },{
-    "respuesta": "los juegos|del hambre"
-  },{
-    "respuesta": "rapido y|furioso"
-  },{
-    "respuesta": "cars"
-  },{
-    "respuesta": "el discurso|del rey"
-  },{
-    "respuesta": "500 dias|con ella"
-  },{
-    "respuesta": "angeles|y demonios"
-  },{
-    "respuesta": "cocodrilo|dundee"
-  },{
-    "respuesta": "tiburon"
-  },{
-    "respuesta": "sharknado"
-  },{
-    "respuesta": "la dama y|el vagabundo"
-  },{
-    "respuesta": "mi pobre|angelito"
-  },{
-    "respuesta": "rambo"
-  },{
-    "respuesta": "maxima|velocidad"
-  },{
-    "respuesta": "el gato|con botas"
-  },{
-    "respuesta": "indiana|jones"
-  },{
-    "respuesta": "pinocho"
-  },{
-    "respuesta": "caza|fantasmas"
-  },{
-    "respuesta": "la era|de hielo"
-  },{
-    "respuesta": "scary|movie"
-  },{
-    "respuesta": "pearl|harbor"
-  },{
-    "respuesta": "el efecto|mariposa"
-  },{
-    "respuesta": "forrest|gump"
-  },{
-    "respuesta": "diario de|motocicleta"
-  },{
-    "respuesta": "volcano"
-  },{
-    "respuesta": "armagedon"
-  },{
-    "respuesta": "el rey|escorpion"
-  },{
-    "respuesta": "la llamada"
-  },{
-    "respuesta": "gravedad"
-  },{
-    "respuesta": "12 monos"
-  },{
-    "respuesta": "ratatouille"
-  },{
-    "respuesta": "127 horas"
-  },{
-    "respuesta": "crepusculo"
-  },{
-    "respuesta": "batman"
-  },{
-    "respuesta": "king kong"
-  },{
-    "respuesta": "bee movie"
-  },{
-    "respuesta": "cuenta|conmigo"
-  },{
-    "respuesta": "titanic"
-  },{
-    "respuesta": "it"
-  },{
-    "respuesta": "babe"
-  },{
-    "respuesta": "snatch cerdos|y diamantes"
-  },{
-    "respuesta": "expreso|polar"
-  },{
-    "respuesta": "el vuelo"
-  },{
-    "respuesta": "una noche|en el museo"
-  },{
-    "respuesta": "sex and|the city"
-  },{
-    "respuesta": "turbo"
-  },{
-    "respuesta": "zootopia"
-  },{
-    "respuesta": "el padrino"
-  },{
-    "respuesta": "las tortugas|ninja"
-  },{
-    "respuesta": "rocky"
-  },{
-    "respuesta": "creed"
-  },{
-    "respuesta": "el joven manos|de tijera"
-  },{
-    "respuesta": "volver al|futuro"
-  },{
-    "respuesta": "corazon|valiente"
-  },{
-    "respuesta": "los expedientes|secretos x"
-  },{
-    "respuesta": "dumbo"
-  },{
-    "respuesta": "la gran|estafa"
-  },{
-    "respuesta": "Siempre a|tu lado"
-  },{
-    "respuesta": "bichos"
-  },{
-    "respuesta": "nueve reinas"
-  },{
-    "respuesta": "que paso ayer"
-  },{
-    "respuesta": "101 dalmatas"
-  },{
-    "respuesta": "happy feet"
-  },{
-    "respuesta": "space jam"
-  },{
-    "respuesta": "medianoche|en paris"
-  },{
-    "respuesta": "los 33"
-  },{
-    "respuesta": "scream"
-  },{
-    "respuesta": "cantando|bajo la lluvia"
-  },{
-    "respuesta": "ted"
-  },{
-    "respuesta": "sexto|sentido"
-  },{
-    "respuesta": "el curioso caso|Benjamin Button"
-  },{
-    "respuesta": "top gun"
-  },{
-    "respuesta": "tienes un email"
-  },{
-    "respuesta": "invictus"
-  },{
-    "respuesta": "wimbledon"
-  },{
-    "respuesta": "la caida del|halcon negro"
-  },{
-    "respuesta": "el codigo|da vinci"
-  },{
-    "respuesta": "la naranja|mecanica"
-  },{
-    "respuesta": "thor"
-  },{
-    "respuesta": "avion|presidencial"
-  },{
-    "respuesta": "el fantasma|de la opera"
-  },{
-    "respuesta": "novia|fugitiva"
-  },{
-    "respuesta": "alicia en el pais|de las maravillas"
-  },{
-    "respuesta": "frozen"
-  },{
-    "respuesta": "el libro|de la selva"
-  },{
-    "respuesta": "karate|kid"
-  },{
-    "respuesta": "actividad|paranormal"
-  },{
-    "respuesta": "el exorcista"
-  },{
-    "respuesta": "los pitufos"
-  },{
-    "respuesta": "cobra"
-  },{
-    "respuesta": "matrix"
-  },{
-    "respuesta": "twister"
-  },{
-    "respuesta": "La leyenda del|tesoro perdido"
-  },{
-    "respuesta": "diario de|una pasion"
-  },{
-    "respuesta": "60 segundos"
-  },{
-    "respuesta": "super 8"
-  },{
-    "respuesta": "jamaica|bajo cero"
-  },{
-    "respuesta": "la sirenita"
-  },{
-    "respuesta": "guerra mundial z"
-  },{
-    "respuesta": "dracula"
-  },{
-    "respuesta": "aladdin"
-  },{
-    "respuesta": "toy story"
-  },{
-    "respuesta": "jurasic park"
-  },{
-    "respuesta": "super size me"
-  },{
-    "respuesta": "dia del|atentado"
-  },
-  {
-    "respuesta": "naufrago"
-  },
-  {
-    "respuesta": "godzilla"
-  },
-  {
-    "respuesta": "la casa|del lago"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "una aventura|extraordinaria",
+      "solucion":""
+    },
+    {
+      "respuesta": "dr dolittle",
+      "solucion":""
+    },
+    {
+      "respuesta": "psicosis",
+      "solucion":""
+    },
+    {
+      "respuesta": "apolo 13",
+      "solucion":""
+    },
+    {
+      "respuesta": "kung fu|panda",
+      "solucion":""
+    },
+    {
+      "respuesta": "comer rezar|amar",
+      "solucion":""
+    },
+    {
+      "respuesta": "diamantes|de sangre",
+      "solucion":""
+    },
+    {
+      "respuesta": "et",
+      "solucion":""
+    },
+    {
+      "respuesta": "american pie",
+      "solucion":""
+    },
+    {
+      "respuesta": "hombres|de negro",
+      "solucion":""
+    },
+    {
+      "respuesta": "liberen|a willy",
+      "solucion":""
+    },
+    {
+      "respuesta": "up",
+      "solucion":""
+    },
+    {
+      "respuesta": "el planeta|de los simios",
+      "solucion":""
+    },
+    {
+      "respuesta": "belleza|americana",
+      "solucion":""
+    },
+    {
+      "respuesta": "el rey leon",
+      "solucion":""
+    },
+    {
+      "respuesta": "gorilas en|la niebla",
+      "solucion":""
+    },
+    {
+      "respuesta": "el diablo|viste a la moda",
+      "solucion":""
+    },
+    {
+      "respuesta": "x men",
+      "solucion":""
+    },
+    {
+      "respuesta": "harry potter",
+      "solucion":""
+    },
+    {
+      "respuesta": "spiderman",
+      "solucion":""
+    },
+    {
+      "respuesta": "buscando|a nemo",
+      "solucion":""
+    },
+    {
+      "respuesta": "mary poppins",
+      "solucion":""
+    },
+    {
+      "respuesta": "los juegos|del hambre",
+      "solucion":""
+    },
+    {
+      "respuesta": "rapido y|furioso",
+      "solucion":""
+    },
+    {
+      "respuesta": "cars",
+      "solucion":""
+    },
+    {
+      "respuesta": "el discurso|del rey",
+      "solucion":""
+    },
+    {
+      "respuesta": "500 dias|con ella",
+      "solucion":""
+    },
+    {
+      "respuesta": "angeles|y demonios",
+      "solucion":""
+    },
+    {
+      "respuesta": "cocodrilo|dundee",
+      "solucion":""
+    },
+    {
+      "respuesta": "tiburon",
+      "solucion":""
+    },
+    {
+      "respuesta": "sharknado",
+      "solucion":""
+    },
+    {
+      "respuesta": "la dama y|el vagabundo",
+      "solucion":""
+    },
+    {
+      "respuesta": "mi pobre|angelito",
+      "solucion":""
+    },
+    {
+      "respuesta": "rambo",
+      "solucion":""
+    },
+    {
+      "respuesta": "maxima|velocidad",
+      "solucion":""
+    },
+    {
+      "respuesta": "el gato|con botas",
+      "solucion":""
+    },
+    {
+      "respuesta": "indiana|jones",
+      "solucion":""
+    },
+    {
+      "respuesta": "pinocho",
+      "solucion":""
+    },
+    {
+      "respuesta": "caza|fantasmas",
+      "solucion":""
+    },
+    {
+      "respuesta": "la era|de hielo",
+      "solucion":""
+    },
+    {
+      "respuesta": "scary|movie",
+      "solucion":""
+    },
+    {
+      "respuesta": "pearl|harbor",
+      "solucion":""
+    },
+    {
+      "respuesta": "el efecto|mariposa",
+      "solucion":""
+    },
+    {
+      "respuesta": "forrest|gump",
+      "solucion":""
+    },
+    {
+      "respuesta": "diario de|motocicleta",
+      "solucion":""
+    },
+    {
+      "respuesta": "volcano",
+      "solucion":""
+    },
+    {
+      "respuesta": "armagedon",
+      "solucion":""
+    },
+    {
+      "respuesta": "el rey|escorpion",
+      "solucion":""
+    },
+    {
+      "respuesta": "la llamada",
+      "solucion":""
+    },
+    {
+      "respuesta": "gravedad",
+      "solucion":""
+    },
+    {
+      "respuesta": "12 monos",
+      "solucion":""
+    },
+    {
+      "respuesta": "ratatouille",
+      "solucion":""
+    },
+    {
+      "respuesta": "127 horas",
+      "solucion":""
+    },
+    {
+      "respuesta": "crepusculo",
+      "solucion":""
+    },
+    {
+      "respuesta": "batman",
+      "solucion":""
+    },
+    {
+      "respuesta": "king kong",
+      "solucion":""
+    },
+    {
+      "respuesta": "bee movie",
+      "solucion":""
+    },
+    {
+      "respuesta": "cuenta|conmigo",
+      "solucion":""
+    },
+    {
+      "respuesta": "titanic",
+      "solucion":""
+    },
+    {
+      "respuesta": "it",
+      "solucion":""
+    },
+    {
+      "respuesta": "babe",
+      "solucion":""
+    },
+    {
+      "respuesta": "snatch cerdos|y diamantes",
+      "solucion":""
+    },
+    {
+      "respuesta": "expreso|polar",
+      "solucion":""
+    },
+    {
+      "respuesta": "el vuelo",
+      "solucion":""
+    },
+    {
+      "respuesta": "una noche|en el museo",
+      "solucion":""
+    },
+    {
+      "respuesta": "sex and|the city",
+      "solucion":""
+    },
+    {
+      "respuesta": "turbo",
+      "solucion":""
+    },
+    {
+      "respuesta": "zootopia",
+      "solucion":""
+    },
+    {
+      "respuesta": "el padrino",
+      "solucion":""
+    },
+    {
+      "respuesta": "las tortugas|ninja",
+      "solucion":""
+    },
+    {
+      "respuesta": "rocky",
+      "solucion":""
+    },
+    {
+      "respuesta": "creed",
+      "solucion":""
+    },
+    {
+      "respuesta": "el joven manos|de tijera",
+      "solucion":""
+    },
+    {
+      "respuesta": "volver al|futuro",
+      "solucion":""
+    },
+    {
+      "respuesta": "corazon|valiente",
+      "solucion":""
+    },
+    {
+      "respuesta": "los expedientes|secretos x",
+      "solucion":""
+    },
+    {
+      "respuesta": "dumbo",
+      "solucion":""
+    },
+    {
+      "respuesta": "la gran|estafa",
+      "solucion":""
+    },
+    {
+      "respuesta": "Siempre a|tu lado",
+      "solucion":""
+    },
+    {
+      "respuesta": "bichos",
+      "solucion":""
+    },
+    {
+      "respuesta": "nueve reinas",
+      "solucion":""
+    },
+    {
+      "respuesta": "que paso ayer",
+      "solucion":""
+    },
+    {
+      "respuesta": "101 dalmatas",
+      "solucion":""
+    },
+    {
+      "respuesta": "happy feet",
+      "solucion":""
+    },
+    {
+      "respuesta": "space jam",
+      "solucion":""
+    },
+    {
+      "respuesta": "medianoche|en paris",
+      "solucion":""
+    },
+    {
+      "respuesta": "los 33",
+      "solucion":""
+    },
+    {
+      "respuesta": "scream",
+      "solucion":""
+    },
+    {
+      "respuesta": "cantando|bajo la lluvia",
+      "solucion":""
+    },
+    {
+      "respuesta": "ted",
+      "solucion":""
+    },
+    {
+      "respuesta": "sexto|sentido",
+      "solucion":""
+    },
+    {
+      "respuesta": "el curioso caso|Benjamin Button",
+      "solucion":""
+    },
+    {
+      "respuesta": "top gun",
+      "solucion":""
+    },
+    {
+      "respuesta": "tienes un email",
+      "solucion":""
+    },
+    {
+      "respuesta": "invictus",
+      "solucion":""
+    },
+    {
+      "respuesta": "wimbledon",
+      "solucion":""
+    },
+    {
+      "respuesta": "la caida del|halcon negro",
+      "solucion":""
+    },
+    {
+      "respuesta": "el codigo|da vinci",
+      "solucion":""
+    },
+    {
+      "respuesta": "la naranja|mecanica",
+      "solucion":""
+    },
+    {
+      "respuesta": "thor",
+      "solucion":""
+    },
+    {
+      "respuesta": "avion|presidencial",
+      "solucion":""
+    },
+    {
+      "respuesta": "el fantasma|de la opera",
+      "solucion":""
+    },
+    {
+      "respuesta": "novia|fugitiva",
+      "solucion":""
+    },
+    {
+      "respuesta": "alicia en el pais|de las maravillas",
+      "solucion":""
+    },
+    {
+      "respuesta": "frozen",
+      "solucion":""
+    },
+    {
+      "respuesta": "el libro|de la selva",
+      "solucion":""
+    },
+    {
+      "respuesta": "karate|kid",
+      "solucion":""
+    },
+    {
+      "respuesta": "actividad|paranormal",
+      "solucion":""
+    },
+    {
+      "respuesta": "el exorcista",
+      "solucion":""
+    },
+    {
+      "respuesta": "los pitufos",
+      "solucion":""
+    },
+    {
+      "respuesta": "cobra",
+      "solucion":""
+    },
+    {
+      "respuesta": "matrix",
+      "solucion":""
+    },
+    {
+      "respuesta": "twister",
+      "solucion":""
+    },
+    {
+      "respuesta": "La leyenda del|tesoro perdido",
+      "solucion":""
+    },
+    {
+      "respuesta": "diario de|una pasion",
+      "solucion":""
+    },
+    {
+      "respuesta": "60 segundos",
+      "solucion":""
+    },
+    {
+      "respuesta": "super 8",
+      "solucion":""
+    },
+    {
+      "respuesta": "jamaica|bajo cero",
+      "solucion":""
+    },
+    {
+      "respuesta": "la sirenita",
+      "solucion":""
+    },
+    {
+      "respuesta": "guerra mundial z",
+      "solucion":""
+    },
+    {
+      "respuesta": "dracula",
+      "solucion":""
+    },
+    {
+      "respuesta": "aladdin",
+      "solucion":""
+    },
+    {
+      "respuesta": "toy story",
+      "solucion":""
+    },
+    {
+      "respuesta": "jurasic park",
+      "solucion":""
+    },
+    {
+      "respuesta": "super size me",
+      "solucion":""
+    },
+    {
+      "respuesta": "dia del|atentado",
+      "solucion":""
+    },
+    {
+      "respuesta": "naufrago",
+      "solucion":""
+    },
+    {
+      "respuesta": "godzilla",
+      "solucion":""
+    },
+    {
+      "respuesta": "la casa|del lago",
+      "solucion":""
+    }
+  ]
 }

@@ -2,205 +2,305 @@
   {
 
   },{
-    "respuesta": "argentina"
+    "respuesta": "argentina",
+    "solucion":""
   },{
-    "respuesta": "estados|unidos"
+    "respuesta": "estados|unidos",
+    "solucion":""
   },{
-    "respuesta": "china"
+    "respuesta": "china",
+    "solucion":""
   },{
-    "respuesta": "rusia"
+    "respuesta": "rusia",
+    "solucion":""
   },{
-    "respuesta": "alemania"
+    "respuesta": "alemania",
+    "solucion":""
   },{
-    "respuesta": "italia"
+    "respuesta": "italia",
+    "solucion":""
   },{
-    "respuesta": "francia"
+    "respuesta": "francia",
+    "solucion":""
   },{
-    "respuesta": "japon"
+    "respuesta": "japon",
+    "solucion":""
   },{
-    "respuesta": "australia"
+    "respuesta": "australia",
+    "solucion":""
   },{
-    "respuesta": "corea|del sur"
+    "respuesta": "corea|del sur",
+    "solucion":""
   },{
-    "respuesta": "hungria"
+    "respuesta": "hungria",
+    "solucion":""
   },{
-    "respuesta": "holanda"
+    "respuesta": "holanda",
+    "solucion":""
   },{
-    "respuesta": "uruguay"
+    "respuesta": "uruguay",
+    "solucion":""
   },{
-    "respuesta": "nueva|zelanda"
+    "respuesta": "nueva|zelanda",
+    "solucion":""
   },{
-    "respuesta": "brasil"
+    "respuesta": "brasil",
+    "solucion":""
   },{
-    "respuesta": "Kazajistan"
+    "respuesta": "Kazajistan",
+    "solucion":""
   },{
-    "respuesta": "Corea|del Norte"
+    "respuesta": "Corea|del Norte",
+    "solucion":""
   },{
-    "respuesta": "kenia"
+    "respuesta": "kenia",
+    "solucion":""
   },{
-    "respuesta": "canada"
+    "respuesta": "canada",
+    "solucion":""
   },{
-    "respuesta": "polonia"
+    "respuesta": "polonia",
+    "solucion":""
   },{
-    "respuesta": "colombia"
+    "respuesta": "colombia",
+    "solucion":""
   },{
-    "respuesta": "cuba"
+    "respuesta": "cuba",
+    "solucion":""
   },{
-    "respuesta": "suiza"
+    "respuesta": "suiza",
+    "solucion":""
   },{
-    "respuesta": "belgica"
+    "respuesta": "belgica",
+    "solucion":""
   },{
-    "respuesta": "grecia"
+    "respuesta": "grecia",
+    "solucion":""
   },{
-    "respuesta": "tailandia"
+    "respuesta": "tailandia",
+    "solucion":""
   },{
-    "respuesta": "uzbekistan"
+    "respuesta": "uzbekistan",
+    "solucion":""
   },{
-    "respuesta": "jamaica"
+    "respuesta": "jamaica",
+    "solucion":""
   },{
-    "respuesta": "iran"
+    "respuesta": "iran",
+    "solucion":""
   },{
-    "respuesta": "sudafrica"
+    "respuesta": "sudafrica",
+    "solucion":""
   },{
-    "respuesta": "suecia"
+    "respuesta": "suecia",
+    "solucion":""
   },{
-    "respuesta": "ucrania"
+    "respuesta": "ucrania",
+    "solucion":""
   },{
-    "respuesta": "dinamarca"
+    "respuesta": "dinamarca",
+    "solucion":""
   },{
-    "respuesta": "bielorrusia"
+    "respuesta": "bielorrusia",
+    "solucion":""
   },{
-    "respuesta": "eslovenia"
+    "respuesta": "eslovenia",
+    "solucion":""
   },{
-    "respuesta": "republica|checa"
+    "respuesta": "republica|checa",
+    "solucion":""
   },{
-    "respuesta": "rumania"
+    "respuesta": "rumania",
+    "solucion":""
   },{
-    "respuesta": "barein"
+    "respuesta": "barein",
+    "solucion":""
   },{
-    "respuesta": "eslovaquia"
+    "respuesta": "eslovaquia",
+    "solucion":""
   },{
-    "respuesta": "vietnam"
+    "respuesta": "vietnam",
+    "solucion":""
   },{
-    "respuesta": "etiopia"
+    "respuesta": "etiopia",
+    "solucion":""
   },{
-    "respuesta": "bahamas"
+    "respuesta": "bahamas",
+    "solucion":""
   },{
-    "respuesta": "fiyi"
+    "respuesta": "fiyi",
+    "solucion":""
   },{
-    "respuesta": "kosovo"
+    "respuesta": "kosovo",
+    "solucion":""
   },{
-    "respuesta": "singapur"
+    "respuesta": "singapur",
+    "solucion":""
   },{
-    "respuesta": "marruecos"
+    "respuesta": "marruecos",
+    "solucion":""
   },{
-    "respuesta": "camerun"
+    "respuesta": "camerun",
+    "solucion":""
   },{
-    "respuesta": "escocia"
+    "respuesta": "escocia",
+    "solucion":""
   },{
-    "respuesta": "chipre"
+    "respuesta": "chipre",
+    "solucion":""
   },{
-    "respuesta": "india"
+    "respuesta": "india",
+    "solucion":""
   },{
-    "respuesta": "panama"
+    "respuesta": "panama",
+    "solucion":""
   },{
-    "respuesta": "argelia"
+    "respuesta": "argelia",
+    "solucion":""
   },{
-    "respuesta": "paraguay"
+    "respuesta": "paraguay",
+    "solucion":""
   },{
-    "respuesta": "egipto"
+    "respuesta": "egipto",
+    "solucion":""
   },{
-    "respuesta": "costa rica"
+    "respuesta": "costa rica",
+    "solucion":""
   },{
-    "respuesta": "portugal"
+    "respuesta": "portugal",
+    "solucion":""
   },{
-    "respuesta": "bolivia"
+    "respuesta": "bolivia",
+    "solucion":""
   },{
-    "respuesta": "el salvador"
+    "respuesta": "el salvador",
+    "solucion":""
   },{
-    "respuesta": "croacia"
+    "respuesta": "croacia",
+    "solucion":""
   },{
-    "respuesta": "peru"
+    "respuesta": "peru",
+    "solucion":""
   },{
-    "respuesta": "mexico"
+    "respuesta": "mexico",
+    "solucion":""
   },{
-    "respuesta": "ecuador"
+    "respuesta": "ecuador",
+    "solucion":""
   },{
-    "respuesta": "guatemala"
+    "respuesta": "guatemala",
+    "solucion":""
   },{
-    "respuesta": "arabia|saudita"
+    "respuesta": "arabia|saudita",
+    "solucion":""
   },{
-    "respuesta": "serbia"
+    "respuesta": "serbia",
+    "solucion":""
   },{
-    "respuesta": "ghana"
+    "respuesta": "ghana",
+    "solucion":""
   },{
-    "respuesta": "nigeria"
+    "respuesta": "nigeria",
+    "solucion":""
   },{
-    "respuesta": "austria"
+    "respuesta": "austria",
+    "solucion":""
   },{
-    "respuesta": "honduras"
+    "respuesta": "honduras",
+    "solucion":""
   },{
-    "respuesta": "turquia"
+    "respuesta": "turquia",
+    "solucion":""
   },{
-    "respuesta": "chile"
+    "respuesta": "chile",
+    "solucion":""
   },{
-    "respuesta": "irlanda"
+    "respuesta": "irlanda",
+    "solucion":""
   },{
-    "respuesta": "noruega"
+    "respuesta": "noruega",
+    "solucion":""
   },{
-    "respuesta": "israel"
+    "respuesta": "israel",
+    "solucion":""
   },{
-    "respuesta": "bulgaria"
+    "respuesta": "bulgaria",
+    "solucion":""
   },{
-    "respuesta": "republica|dominicana"
+    "respuesta": "republica|dominicana",
+    "solucion":""
   },{
-    "respuesta": "finlandia"
+    "respuesta": "finlandia",
+    "solucion":""
   },{
-    "respuesta": "ruanda"
+    "respuesta": "ruanda",
+    "solucion":""
   },{
-    "respuesta": "gabon"
+    "respuesta": "gabon",
+    "solucion":""
   },{
-    "respuesta": "islandia"
+    "respuesta": "islandia",
+    "solucion":""
   },{
-    "respuesta": "jordania"
+    "respuesta": "jordania",
+    "solucion":""
   },{
-    "respuesta": "libano"
+    "respuesta": "libano",
+    "solucion":""
   },{
-    "respuesta": "tanzania"
+    "respuesta": "tanzania",
+    "solucion":""
   },{
-    "respuesta": "liberia"
+    "respuesta": "liberia",
+    "solucion":""
   },{
-    "respuesta": "malasia"
+    "respuesta": "malasia",
+    "solucion":""
   },{
-    "respuesta": "madagascar"
+    "respuesta": "madagascar",
+    "solucion":""
   },{
-    "respuesta": "estonia"
+    "respuesta": "estonia",
+    "solucion":""
   },{
-    "respuesta": "filipinas"
+    "respuesta": "filipinas",
+    "solucion":""
   },{
-    "respuesta": "oman"
+    "respuesta": "oman",
+    "solucion":""
   },{
-    "respuesta": "somalia"
+    "respuesta": "somalia",
+    "solucion":""
   },{
-    "respuesta": "Bosnia|Herzegovina"
+    "respuesta": "Bosnia|Herzegovina",
+    "solucion":""
   },{
-    "respuesta": "Tibet"
+    "respuesta": "Tibet",
+    "solucion":""
   },{
-    "respuesta": "tunez"
+    "respuesta": "tunez",
+    "solucion":""
   },{
-    "respuesta": "Trinidad|y Tobago"
+    "respuesta": "Trinidad|y Tobago",
+    "solucion":""
   },{
-    "respuesta": "Tonga"
+    "respuesta": "Tonga",
+    "solucion":""
   },{
-    "respuesta": "pakistan"
+    "respuesta": "pakistan",
+    "solucion":""
   },{
-    "respuesta": "nepal"
+    "respuesta": "nepal",
+    "solucion":""
   },{
-    "respuesta": "Mongolia"
+    "respuesta": "Mongolia",
+    "solucion":""
   },{
-    "respuesta": "monaco"
+    "respuesta": "monaco",
+    "solucion":""
   },{
-    "respuesta": "Mozambique"
+    "respuesta": "Mozambique",
+    "solucion":""
   }
 ]
 }

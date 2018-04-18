@@ -1,374 +1,742 @@
-{"listado": [
-  {
-
-  },{
-    "respuesta": "volver al|futuro"
-  },{
-    "respuesta": "beethoven"
-  },{
-    "respuesta": "beetlejuice"
-  },{
-    "respuesta": "capitan|america"
-  },{
-    "respuesta": "chucky"
-  },{
-    "respuesta": "click"
-  },{
-    "respuesta": "jamaica|bajo cero"
-  },{
-    "respuesta": "tonto y|retonto"
-  },{
-    "respuesta": "el silencio de|los inocentes"
-  },{
-    "respuesta": "el joven manos|de tijera"
-  },{
-    "respuesta": "rescate en la|antartida"
-  },{
-    "respuesta": "el laberinto|del fauno"
-  },{
-    "respuesta": "et"
-  },{
-    "respuesta": "fantasia"
-  },{
-    "respuesta": "bee movie"
-  },{
-    "respuesta": "quisiera|ser grande"
-  },{
-    "respuesta": "ironman"
-  },{
-    "respuesta": "gremlins"
-  },{
-    "respuesta": "linterna|verde"
-  },{
-    "respuesta": "guardianes de|la galaxia"
-  },{
-    "respuesta": "gladiador"
-  },{
-    "respuesta": "intensamente"
-  },{
-    "respuesta": "indiana jones"
-  },{
-    "respuesta": "kill bill"
-  },{
-    "respuesta": "una aventura|extraordinaria"
-  },{
-    "respuesta": "superman"
-  },{
-    "respuesta": "meteoro"
-  },{
-    "respuesta": "madagascar"
-  },{
-    "respuesta": "ouija"
-  },{
-    "respuesta": "up"
-  },{
-    "respuesta": "rocky"
-  },{
-    "respuesta": "cars"
-  },{
-    "respuesta": "twister"
-  },{
-    "respuesta": "transformers"
-  },{
-    "respuesta": "milagro en|la calle 8"
-  },{
-    "respuesta": "jerry|maguire"
-  },{
-    "respuesta": "timon y|pumba"
-  },{
-    "respuesta": "anaconda"
-  },{
-    "respuesta": "la bella y|la bestia"
-  },{
-    "respuesta": "austin|powers"
-  },{
-    "respuesta": "christine"
-  },{
-    "respuesta": "el avispon|verde"
-  },{
-    "respuesta": "godzilla"
-  },{
-    "respuesta": "hellboy"
-  },{
-    "respuesta": "monstruos|vs aliens"
-  },{
-    "respuesta": "matrix"
-  },{
-    "respuesta": "stuart|little"
-  },{
-    "respuesta": "rapido|y furioso"
-  },{
-    "respuesta": "una noche en|el museo"
-  },{
-    "respuesta": "mad max"
-  },{
-    "respuesta": "troya"
-  },{
-    "respuesta": "rio"
-  },{
-    "respuesta": "memento"
-  },{
-    "respuesta": "cupido|motorizado"
-  },{
-    "respuesta": "las cronicas|de narnia"
-  },{
-    "respuesta": "el origen"
-  },{
-    "respuesta": "garfield"
-  },{
-    "respuesta": "buscando|a nemo"
-  },{
-    "respuesta": "starsky|y hutch"
-  },{
-    "respuesta": "porkys"
-  },{
-    "respuesta": "little miss|sunshine"
-  },{
-    "respuesta": "spiderman"
-  },{
-    "respuesta": "el gran|torino"
-  },{
-    "respuesta": "la dama y|el vagabundo"
-  },{
-    "respuesta": "101 dalmatas"
-  },{
-    "respuesta": "los juegos|del hambre"
-  },{
-    "respuesta": "kung fu|panda"
-  },{
-    "respuesta": "pinocho"
-  },{
-    "respuesta": "zathura"
-  },{
-    "respuesta": "depredador"
-  },{
-    "respuesta": "space jam"
-  },{
-    "respuesta": "la sirenita"
-  },{
-    "respuesta": "dumbo"
-  },{
-    "respuesta": "king kong"
-  },{
-    "respuesta": "300"
-  },{
-    "respuesta": "el llanero|solitario"
-  },{
-    "respuesta": "tiburon"
-  },{
-    "respuesta": "los increibles"
-  },{
-    "respuesta": "las pesadillas|de freddie"
-  },{
-    "respuesta": "dia de la|independencia"
-  },{
-    "respuesta": "aladdin"
-  },{
-    "respuesta": "toy story"
-  },{
-    "respuesta": "v de vendetta"
-  },{
-    "respuesta": "el padrino"
-  },{
-    "respuesta": "megamente"
-  },{
-    "respuesta": "monster inc"
-  },{
-    "respuesta": "la guerra de|las galaxias"
-  },{
-    "respuesta": "dias de|trueno"
-  },{
-    "respuesta": "daniel el|travieso"
-  },{
-    "respuesta": "los cuatro|fantasticos"
-  },{
-    "respuesta": "la estafa|maestra"
-  },{
-    "respuesta": "babe"
-  },{
-    "respuesta": "ratatouille"
-  },{
-    "respuesta": "lassie"
-  },{
-    "respuesta": "batman"
-  },{
-    "respuesta": "el increible|hulk"
-  },{
-    "respuesta": "vecinos|invasores"
-  },{
-    "respuesta": "las tortugas|ninjas"
-  },{
-    "respuesta": "sherlock|holmes"
-  },{
-    "respuesta": "marcianos|al ataque"
-  },{
-    "respuesta": "el regalo|prometido"
-  },{
-    "respuesta": "los|picapiedras"
-  },{
-    "respuesta": "los pinguinos|de madagascar"
-  },{
-    "respuesta": "frozen"
-  },{
-    "respuesta": "el planeta|de los simios"
-  },{
-    "respuesta": "james bond"
-  },{
-    "respuesta": "el rey leon"
-  },{
-    "respuesta": "scooby doo"
-  },{
-    "respuesta": "top secret"
-  },{
-    "respuesta": "alien"
-  },{
-    "respuesta": "los duques|de hazzard"
-  },{
-    "respuesta": "los sospechosos|de siempre"
-  },{
-    "respuesta": "lego|la pelicula"
-  },{
-    "respuesta": "mary poppins"
-  },{
-    "respuesta": "los pitufos"
-  },{
-    "respuesta": "ghost rider"
-  },{
-    "respuesta": "bambi"
-  },{
-    "respuesta": "van helsing"
-  },{
-    "respuesta": "robocop"
-  },{
-    "respuesta": "la era|del hielo"
-  },{
-    "respuesta": "zoolander"
-  },{
-    "respuesta": "el oso yogi"
-  },{
-    "respuesta": "tron"
-  },{
-    "respuesta": "red social"
-  },{
-    "respuesta": "la mascara"
-  },{
-    "respuesta": "happy feet"
-  },{
-    "respuesta": "mi novia|polly"
-  },{
-    "respuesta": "malefica"
-  },{
-    "respuesta": "el|castigador"
-  },{
-    "respuesta": "ted"
-  },{
-    "respuesta": "angry birds|la pelicula"
-  },{
-    "respuesta": "como entrenar|a mi dragon"
-  },{
-    "respuesta": "zootopia"
-  },{
-    "respuesta": "los minions"
-  },{
-    "respuesta": "jumanji"
-  },{
-    "respuesta": "la momia"
-  },{
-    "respuesta": "faivel un cuento|americano"
-  },{
-    "respuesta": "milagros|inesperados"
-  },{
-    "respuesta": "la llamada"
-  },{
-    "respuesta": "60 segundos"
-  },{
-    "respuesta": "rambo"
-  },{
-    "respuesta": "karate|kid"
-  },{
-    "respuesta": "wall e"
-  },{
-    "respuesta": "la maquina|del tiempo"
-  },{
-    "respuesta": "naufrago"
-  },{
-    "respuesta": "la familia|de mi novia"
-  },{
-    "respuesta": "viernes 13"
-  },{
-    "respuesta": "hombres de|negro"
-  },{
-    "respuesta": "los piratas|del caribe"
-  },{
-    "respuesta": "brigada a"
-  },{
-    "respuesta": "el juego|del miedo"
-  },{
-    "respuesta": "pajaros"
-  },{
-    "respuesta": "cortocircuito"
-  },{
-    "respuesta": "yo robot"
-  },{
-    "respuesta": "los muppets"
-  },{
-    "respuesta": "titanic"
-  },{
-    "respuesta": "avatar"
-  },{
-    "respuesta": "scream"
-  },{
-    "respuesta": "grandes|heroes"
-  },{
-    "respuesta": "terminator"
-  },{
-    "respuesta": "la guerra de|los mundos"
-  },{
-    "respuesta": "atrapame|si puedes"
-  },{
-    "respuesta": "x men"
-  },{
-    "respuesta": "la mascara|del zorro"
-  },{
-    "respuesta": "liberen|a willy"
-  },{
-    "respuesta": "forrest|gump"
-  },{
-    "respuesta": "los|cazafantasmas"
-  },{
-    "respuesta": "top gun"
-  },{
-    "respuesta": "el fantasma|de la opera"
-  },{
-    "respuesta": "maxima|velocidad"
-  },{
-    "respuesta": "star trek"
-  },{
-    "respuesta": "borat"
-  },{
-    "respuesta": "shrek"
-  },{
-    "respuesta": "el vuelo"
-  },{
-    "respuesta": "resident evil"
-  },{
-    "respuesta": "la masacre|de texas"
-  },{
-    "respuesta": "jurasic|park"
-  },{
-    "respuesta": "thor"
-  },{
-    "respuesta": "el grinch"
-  },{
-    "respuesta": "psicosis"
-  },{
-    "respuesta": "casper"
-  },{
-    "respuesta": "harry|potter"
-  },{
-    "respuesta": "el santo"
-  },{
-    "respuesta": "los locos|adams"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "volver al|futuro",
+      "solucion":""
+    },
+    {
+      "respuesta": "beethoven",
+      "solucion":""
+    },
+    {
+      "respuesta": "beetlejuice",
+      "solucion":""
+    },
+    {
+      "respuesta": "capitan|america",
+      "solucion":""
+    },
+    {
+      "respuesta": "chucky",
+      "solucion":""
+    },
+    {
+      "respuesta": "click",
+      "solucion":""
+    },
+    {
+      "respuesta": "jamaica|bajo cero",
+      "solucion":""
+    },
+    {
+      "respuesta": "tonto y|retonto",
+      "solucion":""
+    },
+    {
+      "respuesta": "el silencio de|los inocentes",
+      "solucion":""
+    },
+    {
+      "respuesta": "el joven manos|de tijera",
+      "solucion":""
+    },
+    {
+      "respuesta": "rescate en la|antartida",
+      "solucion":""
+    },
+    {
+      "respuesta": "el laberinto|del fauno",
+      "solucion":""
+    },
+    {
+      "respuesta": "et",
+      "solucion":""
+    },
+    {
+      "respuesta": "fantasia",
+      "solucion":""
+    },
+    {
+      "respuesta": "bee movie",
+      "solucion":""
+    },
+    {
+      "respuesta": "quisiera|ser grande",
+      "solucion":""
+    },
+    {
+      "respuesta": "ironman",
+      "solucion":""
+    },
+    {
+      "respuesta": "gremlins",
+      "solucion":""
+    },
+    {
+      "respuesta": "linterna|verde",
+      "solucion":""
+    },
+    {
+      "respuesta": "guardianes de|la galaxia",
+      "solucion":""
+    },
+    {
+      "respuesta": "gladiador",
+      "solucion":""
+    },
+    {
+      "respuesta": "intensamente",
+      "solucion":""
+    },
+    {
+      "respuesta": "indiana jones",
+      "solucion":""
+    },
+    {
+      "respuesta": "kill bill",
+      "solucion":""
+    },
+    {
+      "respuesta": "una aventura|extraordinaria",
+      "solucion":""
+    },
+    {
+      "respuesta": "superman",
+      "solucion":""
+    },
+    {
+      "respuesta": "meteoro",
+      "solucion":""
+    },
+    {
+      "respuesta": "madagascar",
+      "solucion":""
+    },
+    {
+      "respuesta": "ouija",
+      "solucion":""
+    },
+    {
+      "respuesta": "up",
+      "solucion":""
+    },
+    {
+      "respuesta": "rocky",
+      "solucion":""
+    },
+    {
+      "respuesta": "cars",
+      "solucion":""
+    },
+    {
+      "respuesta": "twister",
+      "solucion":""
+    },
+    {
+      "respuesta": "transformers",
+      "solucion":""
+    },
+    {
+      "respuesta": "milagro en|la calle 8",
+      "solucion":""
+    },
+    {
+      "respuesta": "jerry|maguire",
+      "solucion":""
+    },
+    {
+      "respuesta": "timon y|pumba",
+      "solucion":""
+    },
+    {
+      "respuesta": "anaconda",
+      "solucion":""
+    },
+    {
+      "respuesta": "la bella y|la bestia",
+      "solucion":""
+    },
+    {
+      "respuesta": "austin|powers",
+      "solucion":""
+    },
+    {
+      "respuesta": "christine",
+      "solucion":""
+    },
+    {
+      "respuesta": "el avispon|verde",
+      "solucion":""
+    },
+    {
+      "respuesta": "godzilla",
+      "solucion":""
+    },
+    {
+      "respuesta": "hellboy",
+      "solucion":""
+    },
+    {
+      "respuesta": "monstruos|vs aliens",
+      "solucion":""
+    },
+    {
+      "respuesta": "matrix",
+      "solucion":""
+    },
+    {
+      "respuesta": "stuart|little",
+      "solucion":""
+    },
+    {
+      "respuesta": "rapido|y furioso",
+      "solucion":""
+    },
+    {
+      "respuesta": "una noche en|el museo",
+      "solucion":""
+    },
+    {
+      "respuesta": "mad max",
+      "solucion":""
+    },
+    {
+      "respuesta": "troya",
+      "solucion":""
+    },
+    {
+      "respuesta": "rio",
+      "solucion":""
+    },
+    {
+      "respuesta": "memento",
+      "solucion":""
+    },
+    {
+      "respuesta": "cupido|motorizado",
+      "solucion":""
+    },
+    {
+      "respuesta": "las cronicas|de narnia",
+      "solucion":""
+    },
+    {
+      "respuesta": "el origen",
+      "solucion":""
+    },
+    {
+      "respuesta": "garfield",
+      "solucion":""
+    },
+    {
+      "respuesta": "buscando|a nemo",
+      "solucion":""
+    },
+    {
+      "respuesta": "starsky|y hutch",
+      "solucion":""
+    },
+    {
+      "respuesta": "porkys",
+      "solucion":""
+    },
+    {
+      "respuesta": "little miss|sunshine",
+      "solucion":""
+    },
+    {
+      "respuesta": "spiderman",
+      "solucion":""
+    },
+    {
+      "respuesta": "el gran|torino",
+      "solucion":""
+    },
+    {
+      "respuesta": "la dama y|el vagabundo",
+      "solucion":""
+    },
+    {
+      "respuesta": "101 dalmatas",
+      "solucion":""
+    },
+    {
+      "respuesta": "los juegos|del hambre",
+      "solucion":""
+    },
+    {
+      "respuesta": "kung fu|panda",
+      "solucion":""
+    },
+    {
+      "respuesta": "pinocho",
+      "solucion":""
+    },
+    {
+      "respuesta": "zathura",
+      "solucion":""
+    },
+    {
+      "respuesta": "depredador",
+      "solucion":""
+    },
+    {
+      "respuesta": "space jam",
+      "solucion":""
+    },
+    {
+      "respuesta": "la sirenita",
+      "solucion":""
+    },
+    {
+      "respuesta": "dumbo",
+      "solucion":""
+    },
+    {
+      "respuesta": "king kong",
+      "solucion":""
+    },
+    {
+      "respuesta": "300",
+      "solucion":""
+    },
+    {
+      "respuesta": "el llanero|solitario",
+      "solucion":""
+    },
+    {
+      "respuesta": "tiburon",
+      "solucion":""
+    },
+    {
+      "respuesta": "los increibles",
+      "solucion":""
+    },
+    {
+      "respuesta": "las pesadillas|de freddie",
+      "solucion":""
+    },
+    {
+      "respuesta": "dia de la|independencia",
+      "solucion":""
+    },
+    {
+      "respuesta": "aladdin",
+      "solucion":""
+    },
+    {
+      "respuesta": "toy story",
+      "solucion":""
+    },
+    {
+      "respuesta": "v de vendetta",
+      "solucion":""
+    },
+    {
+      "respuesta": "el padrino",
+      "solucion":""
+    },
+    {
+      "respuesta": "megamente",
+      "solucion":""
+    },
+    {
+      "respuesta": "monster inc",
+      "solucion":""
+    },
+    {
+      "respuesta": "la guerra de|las galaxias",
+      "solucion":""
+    },
+    {
+      "respuesta": "dias de|trueno",
+      "solucion":""
+    },
+    {
+      "respuesta": "daniel el|travieso",
+      "solucion":""
+    },
+    {
+      "respuesta": "los cuatro|fantasticos",
+      "solucion":""
+    },
+    {
+      "respuesta": "la estafa|maestra",
+      "solucion":""
+    },
+    {
+      "respuesta": "babe",
+      "solucion":""
+    },
+    {
+      "respuesta": "ratatouille",
+      "solucion":""
+    },
+    {
+      "respuesta": "lassie",
+      "solucion":""
+    },
+    {
+      "respuesta": "batman",
+      "solucion":""
+    },
+    {
+      "respuesta": "el increible|hulk",
+      "solucion":""
+    },
+    {
+      "respuesta": "vecinos|invasores",
+      "solucion":""
+    },
+    {
+      "respuesta": "las tortugas|ninjas",
+      "solucion":""
+    },
+    {
+      "respuesta": "sherlock|holmes",
+      "solucion":""
+    },
+    {
+      "respuesta": "marcianos|al ataque",
+      "solucion":""
+    },
+    {
+      "respuesta": "el regalo|prometido",
+      "solucion":""
+    },
+    {
+      "respuesta": "los|picapiedras",
+      "solucion":""
+    },
+    {
+      "respuesta": "los pinguinos|de madagascar",
+      "solucion":""
+    },
+    {
+      "respuesta": "frozen",
+      "solucion":""
+    },
+    {
+      "respuesta": "el planeta|de los simios",
+      "solucion":""
+    },
+    {
+      "respuesta": "james bond",
+      "solucion":""
+    },
+    {
+      "respuesta": "el rey leon",
+      "solucion":""
+    },
+    {
+      "respuesta": "scooby doo",
+      "solucion":""
+    },
+    {
+      "respuesta": "top secret",
+      "solucion":""
+    },
+    {
+      "respuesta": "alien",
+      "solucion":""
+    },
+    {
+      "respuesta": "los duques|de hazzard",
+      "solucion":""
+    },
+    {
+      "respuesta": "los sospechosos|de siempre",
+      "solucion":""
+    },
+    {
+      "respuesta": "lego|la pelicula",
+      "solucion":""
+    },
+    {
+      "respuesta": "mary poppins",
+      "solucion":""
+    },
+    {
+      "respuesta": "los pitufos",
+      "solucion":""
+    },
+    {
+      "respuesta": "ghost rider",
+      "solucion":""
+    },
+    {
+      "respuesta": "bambi",
+      "solucion":""
+    },
+    {
+      "respuesta": "van helsing",
+      "solucion":""
+    },
+    {
+      "respuesta": "robocop",
+      "solucion":""
+    },
+    {
+      "respuesta": "la era|del hielo",
+      "solucion":""
+    },
+    {
+      "respuesta": "zoolander",
+      "solucion":""
+    },
+    {
+      "respuesta": "el oso yogi",
+      "solucion":""
+    },
+    {
+      "respuesta": "tron",
+      "solucion":""
+    },
+    {
+      "respuesta": "red social",
+      "solucion":""
+    },
+    {
+      "respuesta": "la mascara",
+      "solucion":""
+    },
+    {
+      "respuesta": "happy feet",
+      "solucion":""
+    },
+    {
+      "respuesta": "mi novia|polly",
+      "solucion":""
+    },
+    {
+      "respuesta": "malefica",
+      "solucion":""
+    },
+    {
+      "respuesta": "el|castigador",
+      "solucion":""
+    },
+    {
+      "respuesta": "ted",
+      "solucion":""
+    },
+    {
+      "respuesta": "angry birds|la pelicula",
+      "solucion":""
+    },
+    {
+      "respuesta": "como entrenar|a mi dragon",
+      "solucion":""
+    },
+    {
+      "respuesta": "zootopia",
+      "solucion":""
+    },
+    {
+      "respuesta": "los minions",
+      "solucion":""
+    },
+    {
+      "respuesta": "jumanji",
+      "solucion":""
+    },
+    {
+      "respuesta": "la momia",
+      "solucion":""
+    },
+    {
+      "respuesta": "faivel un cuento|americano",
+      "solucion":""
+    },
+    {
+      "respuesta": "milagros|inesperados",
+      "solucion":""
+    },
+    {
+      "respuesta": "la llamada",
+      "solucion":""
+    },
+    {
+      "respuesta": "60 segundos",
+      "solucion":""
+    },
+    {
+      "respuesta": "rambo",
+      "solucion":""
+    },
+    {
+      "respuesta": "karate|kid",
+      "solucion":""
+    },
+    {
+      "respuesta": "wall e",
+      "solucion":""
+    },
+    {
+      "respuesta": "la maquina|del tiempo",
+      "solucion":""
+    },
+    {
+      "respuesta": "naufrago",
+      "solucion":""
+    },
+    {
+      "respuesta": "la familia|de mi novia",
+      "solucion":""
+    },
+    {
+      "respuesta": "viernes 13",
+      "solucion":""
+    },
+    {
+      "respuesta": "hombres de|negro",
+      "solucion":""
+    },
+    {
+      "respuesta": "los piratas|del caribe",
+      "solucion":""
+    },
+    {
+      "respuesta": "brigada a",
+      "solucion":""
+    },
+    {
+      "respuesta": "el juego|del miedo",
+      "solucion":""
+    },
+    {
+      "respuesta": "pajaros",
+      "solucion":""
+    },
+    {
+      "respuesta": "cortocircuito",
+      "solucion":""
+    },
+    {
+      "respuesta": "yo robot",
+      "solucion":""
+    },
+    {
+      "respuesta": "los muppets",
+      "solucion":""
+    },
+    {
+      "respuesta": "titanic",
+      "solucion":""
+    },
+    {
+      "respuesta": "avatar",
+      "solucion":""
+    },
+    {
+      "respuesta": "scream",
+      "solucion":""
+    },
+    {
+      "respuesta": "grandes|heroes",
+      "solucion":""
+    },
+    {
+      "respuesta": "terminator",
+      "solucion":""
+    },
+    {
+      "respuesta": "la guerra de|los mundos",
+      "solucion":""
+    },
+    {
+      "respuesta": "atrapame|si puedes",
+      "solucion":""
+    },
+    {
+      "respuesta": "x men",
+      "solucion":""
+    },
+    {
+      "respuesta": "la mascara|del zorro",
+      "solucion":""
+    },
+    {
+      "respuesta": "liberen|a willy",
+      "solucion":""
+    },
+    {
+      "respuesta": "forrest|gump",
+      "solucion":""
+    },
+    {
+      "respuesta": "los|cazafantasmas",
+      "solucion":""
+    },
+    {
+      "respuesta": "top gun",
+      "solucion":""
+    },
+    {
+      "respuesta": "el fantasma|de la opera",
+      "solucion":""
+    },
+    {
+      "respuesta": "maxima|velocidad",
+      "solucion":""
+    },
+    {
+      "respuesta": "star trek",
+      "solucion":""
+    },
+    {
+      "respuesta": "borat",
+      "solucion":""
+    },
+    {
+      "respuesta": "shrek",
+      "solucion":""
+    },
+    {
+      "respuesta": "el vuelo",
+      "solucion":""
+    },
+    {
+      "respuesta": "resident evil",
+      "solucion":""
+    },
+    {
+      "respuesta": "la masacre|de texas",
+      "solucion":""
+    },
+    {
+      "respuesta": "jurasic|park",
+      "solucion":""
+    },
+    {
+      "respuesta": "thor",
+      "solucion":""
+    },
+    {
+      "respuesta": "el grinch",
+      "solucion":""
+    },
+    {
+      "respuesta": "psicosis",
+      "solucion":""
+    },
+    {
+      "respuesta": "casper",
+      "solucion":""
+    },
+    {
+      "respuesta": "harry|potter",
+      "solucion":""
+    },
+    {
+      "respuesta": "el santo",
+      "solucion":""
+    },
+    {
+      "respuesta": "los locos|adams",
+      "solucion":""
+    }
+  ]
 }

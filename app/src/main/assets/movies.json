@@ -1,374 +1,742 @@
-{"listado": [
-  {
-
-  },{
-    "respuesta": "back to|the future"
-  },{
-    "respuesta": "beethoven"
-  },{
-    "respuesta": "beetlejuice"
-  },{
-    "respuesta": "captain|america"
-  },{
-    "respuesta": "childs play"
-  },{
-    "respuesta": "click"
-  },{
-    "respuesta": "cool|runnings"
-  },{
-    "respuesta": "dumb and|dumber"
-  },{
-    "respuesta": "the silence|of the lambs"
-  },{
-    "respuesta": "edward|scissorhands"
-  },{
-    "respuesta": "eight|below"
-  },{
-    "respuesta": "el laberinto|del fauno"
-  },{
-    "respuesta": "et"
-  },{
-    "respuesta": "fantasia"
-  },{
-    "respuesta": "bee movie"
-  },{
-    "respuesta": "big"
-  },{
-    "respuesta": "ironman"
-  },{
-    "respuesta": "gremlins"
-  },{
-    "respuesta": "green|lantern"
-  },{
-    "respuesta": "guardians of|the galaxy"
-  },{
-    "respuesta": "gladiator"
-  },{
-    "respuesta": "inside out"
-  },{
-    "respuesta": "indiana jones"
-  },{
-    "respuesta": "kill bill"
-  },{
-    "respuesta": "life of pi"
-  },{
-    "respuesta": "superman"
-  },{
-    "respuesta": "speed racer"
-  },{
-    "respuesta": "madagascar"
-  },{
-    "respuesta": "ouija"
-  },{
-    "respuesta": "up"
-  },{
-    "respuesta": "rocky"
-  },{
-    "respuesta": "cars"
-  },{
-    "respuesta": "twister"
-  },{
-    "respuesta": "transformers"
-  },{
-    "respuesta": "batteries|not included"
-  },{
-    "respuesta": "jerry|maguire"
-  },{
-    "respuesta": "timon and|pumba"
-  },{
-    "respuesta": "anaconda"
-  },{
-    "respuesta": "beauty and|the beast"
-  },{
-    "respuesta": "austin|powers"
-  },{
-    "respuesta": "christine"
-  },{
-    "respuesta": "the green|hornet"
-  },{
-    "respuesta": "godzilla"
-  },{
-    "respuesta": "hellboy"
-  },{
-    "respuesta": "monsters|vs aliens"
-  },{
-    "respuesta": "the matrix"
-  },{
-    "respuesta": "stuart|little"
-  },{
-    "respuesta": "fast and|furious"
-  },{
-    "respuesta": "night at|the museum"
-  },{
-    "respuesta": "mad max"
-  },{
-    "respuesta": "troy"
-  },{
-    "respuesta": "rio"
-  },{
-    "respuesta": "memento"
-  },{
-    "respuesta": "herbie"
-  },{
-    "respuesta": "the chronicles|of narnia"
-  },{
-    "respuesta": "inception"
-  },{
-    "respuesta": "garfield|gets real"
-  },{
-    "respuesta": "finding|nemo"
-  },{
-    "respuesta": "starsky|and hutch"
-  },{
-    "respuesta": "porkys"
-  },{
-    "respuesta": "little miss|sunshine"
-  },{
-    "respuesta": "spiderman"
-  },{
-    "respuesta": "gran|torino"
-  },{
-    "respuesta": "lady and|the tramp"
-  },{
-    "respuesta": "101|dalmatians"
-  },{
-    "respuesta": "the hunger|games"
-  },{
-    "respuesta": "kung fu|panda"
-  },{
-    "respuesta": "pinocchio"
-  },{
-    "respuesta": "zathura"
-  },{
-    "respuesta": "predator"
-  },{
-    "respuesta": "space jam"
-  },{
-    "respuesta": "the little|mermaid"
-  },{
-    "respuesta": "dumbo"
-  },{
-    "respuesta": "king kong"
-  },{
-    "respuesta": "300"
-  },{
-    "respuesta": "the lone|ranger"
-  },{
-    "respuesta": "jaws"
-  },{
-    "respuesta": "the|incredibles"
-  },{
-    "respuesta": "A Nightmare|on Elm Street"
-  },{
-    "respuesta": "independence|day"
-  },{
-    "respuesta": "aladdin"
-  },{
-    "respuesta": "toy story"
-  },{
-    "respuesta": "v for vendetta"
-  },{
-    "respuesta": "the godfather"
-  },{
-    "respuesta": "megamind"
-  },{
-    "respuesta": "monster inc"
-  },{
-    "respuesta": "star wars"
-  },{
-    "respuesta": "days of|thunder"
-  },{
-    "respuesta": "dennis the|menace"
-  },{
-    "respuesta": "fantastic|four"
-  },{
-    "respuesta": "the italian|job"
-  },{
-    "respuesta": "babe"
-  },{
-    "respuesta": "ratatouille"
-  },{
-    "respuesta": "lassie"
-  },{
-    "respuesta": "batman"
-  },{
-    "respuesta": "the incredible|hulk"
-  },{
-    "respuesta": "over the|hedge"
-  },{
-    "respuesta": "teenage mutant|ninja turtles"
-  },{
-    "respuesta": "sherlock|holmes"
-  },{
-    "respuesta": "mars|attacks"
-  },{
-    "respuesta": "jingle all|the way"
-  },{
-    "respuesta": "the|flintstones"
-  },{
-    "respuesta": "penguins|of madagascar"
-  },{
-    "respuesta": "frozen"
-  },{
-    "respuesta": "planet|of the ape"
-  },{
-    "respuesta": "james bond"
-  },{
-    "respuesta": "the lion|king"
-  },{
-    "respuesta": "scooby doo"
-  },{
-    "respuesta": "top secret"
-  },{
-    "respuesta": "alien"
-  },{
-    "respuesta": "the dukes|of hazzard"
-  },{
-    "respuesta": "the usual|suspects"
-  },{
-    "respuesta": "the lego|movie"
-  },{
-    "respuesta": "mary poppins"
-  },{
-    "respuesta": "the smurfs"
-  },{
-    "respuesta": "ghost rider"
-  },{
-    "respuesta": "bambi"
-  },{
-    "respuesta": "van helsing"
-  },{
-    "respuesta": "robocop"
-  },{
-    "respuesta": "ice|age"
-  },{
-    "respuesta": "zoolander"
-  },{
-    "respuesta": "yogi|bear"
-  },{
-    "respuesta": "tron"
-  },{
-    "respuesta": "the social|network"
-  },{
-    "respuesta": "the mask"
-  },{
-    "respuesta": "happy feet"
-  },{
-    "respuesta": "along came|polly"
-  },{
-    "respuesta": "maleficent"
-  },{
-    "respuesta": "the|punisher"
-  },{
-    "respuesta": "ted"
-  },{
-    "respuesta": "the angry birds|movie"
-  },{
-    "respuesta": "how to train|your dragon"
-  },{
-    "respuesta": "zootopia"
-  },{
-    "respuesta": "minions"
-  },{
-    "respuesta": "jumanji"
-  },{
-    "respuesta": "the mummy"
-  },{
-    "respuesta": "An american|tail"
-  },{
-    "respuesta": "the green|mile"
-  },{
-    "respuesta": "the ring"
-  },{
-    "respuesta": "gone in|60 seconds"
-  },{
-    "respuesta": "rambo"
-  },{
-    "respuesta": "the karate|kid"
-  },{
-    "respuesta": "wall e"
-  },{
-    "respuesta": "the time|machine"
-  },{
-    "respuesta": "cast away"
-  },{
-    "respuesta": "meet|the parents"
-  },{
-    "respuesta": "friday the|13th"
-  },{
-    "respuesta": "men in|black"
-  },{
-    "respuesta": "pirates of|the caribbean"
-  },{
-    "respuesta": "the a team"
-  },{
-    "respuesta": "saw"
-  },{
-    "respuesta": "birds"
-  },{
-    "respuesta": "short|circuit"
-  },{
-    "respuesta": "i robot"
-  },{
-    "respuesta": "the muppets"
-  },{
-    "respuesta": "titanic"
-  },{
-    "respuesta": "avatar"
-  },{
-    "respuesta": "scream"
-  },{
-    "respuesta": "big|hero 6"
-  },{
-    "respuesta": "terminator"
-  },{
-    "respuesta": "war of|the worlds"
-  },{
-    "respuesta": "catch me|if you can"
-  },{
-    "respuesta": "x men"
-  },{
-    "respuesta": "the mask|of zorro"
-  },{
-    "respuesta": "free|willy"
-  },{
-    "respuesta": "forrest|gump"
-  },{
-    "respuesta": "ghostbusters"
-  },{
-    "respuesta": "top gun"
-  },{
-    "respuesta": "the phantom|of the opera"
-  },{
-    "respuesta": "speed"
-  },{
-    "respuesta": "star trek"
-  },{
-    "respuesta": "borat"
-  },{
-    "respuesta": "shrek"
-  },{
-    "respuesta": "flight"
-  },{
-    "respuesta": "resident evil"
-  },{
-    "respuesta": "The Texas Chain|Saw Massacre"
-  },{
-    "respuesta": "jurasic|park"
-  },{
-    "respuesta": "thor"
-  },{
-    "respuesta": "How the Grinch|Stole Christmas"
-  },{
-    "respuesta": "psycho"
-  },{
-    "respuesta": "casper"
-  },{
-    "respuesta": "harry|potter"
-  },{
-    "respuesta": "the saint"
-  },{
-    "respuesta": "the addams|family"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "back to|the future",
+      "solucion":""
+    },
+    {
+      "respuesta": "beethoven",
+      "solucion":""
+    },
+    {
+      "respuesta": "beetlejuice",
+      "solucion":""
+    },
+    {
+      "respuesta": "captain|america",
+      "solucion":""
+    },
+    {
+      "respuesta": "childs play",
+      "solucion":""
+    },
+    {
+      "respuesta": "click",
+      "solucion":""
+    },
+    {
+      "respuesta": "cool|runnings",
+      "solucion":""
+    },
+    {
+      "respuesta": "dumb and|dumber",
+      "solucion":""
+    },
+    {
+      "respuesta": "the silence|of the lambs",
+      "solucion":""
+    },
+    {
+      "respuesta": "edward|scissorhands",
+      "solucion":""
+    },
+    {
+      "respuesta": "eight|below",
+      "solucion":""
+    },
+    {
+      "respuesta": "el laberinto|del fauno",
+      "solucion":""
+    },
+    {
+      "respuesta": "et",
+      "solucion":""
+    },
+    {
+      "respuesta": "fantasia",
+      "solucion":""
+    },
+    {
+      "respuesta": "bee movie",
+      "solucion":""
+    },
+    {
+      "respuesta": "big",
+      "solucion":""
+    },
+    {
+      "respuesta": "ironman",
+      "solucion":""
+    },
+    {
+      "respuesta": "gremlins",
+      "solucion":""
+    },
+    {
+      "respuesta": "green|lantern",
+      "solucion":""
+    },
+    {
+      "respuesta": "guardians of|the galaxy",
+      "solucion":""
+    },
+    {
+      "respuesta": "gladiator",
+      "solucion":""
+    },
+    {
+      "respuesta": "inside out",
+      "solucion":""
+    },
+    {
+      "respuesta": "indiana jones",
+      "solucion":""
+    },
+    {
+      "respuesta": "kill bill",
+      "solucion":""
+    },
+    {
+      "respuesta": "life of pi",
+      "solucion":""
+    },
+    {
+      "respuesta": "superman",
+      "solucion":""
+    },
+    {
+      "respuesta": "speed racer",
+      "solucion":""
+    },
+    {
+      "respuesta": "madagascar",
+      "solucion":""
+    },
+    {
+      "respuesta": "ouija",
+      "solucion":""
+    },
+    {
+      "respuesta": "up",
+      "solucion":""
+    },
+    {
+      "respuesta": "rocky",
+      "solucion":""
+    },
+    {
+      "respuesta": "cars",
+      "solucion":""
+    },
+    {
+      "respuesta": "twister",
+      "solucion":""
+    },
+    {
+      "respuesta": "transformers",
+      "solucion":""
+    },
+    {
+      "respuesta": "batteries|not included",
+      "solucion":""
+    },
+    {
+      "respuesta": "jerry|maguire",
+      "solucion":""
+    },
+    {
+      "respuesta": "timon and|pumba",
+      "solucion":""
+    },
+    {
+      "respuesta": "anaconda",
+      "solucion":""
+    },
+    {
+      "respuesta": "beauty and|the beast",
+      "solucion":""
+    },
+    {
+      "respuesta": "austin|powers",
+      "solucion":""
+    },
+    {
+      "respuesta": "christine",
+      "solucion":""
+    },
+    {
+      "respuesta": "the green|hornet",
+      "solucion":""
+    },
+    {
+      "respuesta": "godzilla",
+      "solucion":""
+    },
+    {
+      "respuesta": "hellboy",
+      "solucion":""
+    },
+    {
+      "respuesta": "monsters|vs aliens",
+      "solucion":""
+    },
+    {
+      "respuesta": "the matrix",
+      "solucion":""
+    },
+    {
+      "respuesta": "stuart|little",
+      "solucion":""
+    },
+    {
+      "respuesta": "fast and|furious",
+      "solucion":""
+    },
+    {
+      "respuesta": "night at|the museum",
+      "solucion":""
+    },
+    {
+      "respuesta": "mad max",
+      "solucion":""
+    },
+    {
+      "respuesta": "troy",
+      "solucion":""
+    },
+    {
+      "respuesta": "rio",
+      "solucion":""
+    },
+    {
+      "respuesta": "memento",
+      "solucion":""
+    },
+    {
+      "respuesta": "herbie",
+      "solucion":""
+    },
+    {
+      "respuesta": "the chronicles|of narnia",
+      "solucion":""
+    },
+    {
+      "respuesta": "inception",
+      "solucion":""
+    },
+    {
+      "respuesta": "garfield|gets real",
+      "solucion":""
+    },
+    {
+      "respuesta": "finding|nemo",
+      "solucion":""
+    },
+    {
+      "respuesta": "starsky|and hutch",
+      "solucion":""
+    },
+    {
+      "respuesta": "porkys",
+      "solucion":""
+    },
+    {
+      "respuesta": "little miss|sunshine",
+      "solucion":""
+    },
+    {
+      "respuesta": "spiderman",
+      "solucion":""
+    },
+    {
+      "respuesta": "gran|torino",
+      "solucion":""
+    },
+    {
+      "respuesta": "lady and|the tramp",
+      "solucion":""
+    },
+    {
+      "respuesta": "101|dalmatians",
+      "solucion":""
+    },
+    {
+      "respuesta": "the hunger|games",
+      "solucion":""
+    },
+    {
+      "respuesta": "kung fu|panda",
+      "solucion":""
+    },
+    {
+      "respuesta": "pinocchio",
+      "solucion":""
+    },
+    {
+      "respuesta": "zathura",
+      "solucion":""
+    },
+    {
+      "respuesta": "predator",
+      "solucion":""
+    },
+    {
+      "respuesta": "space jam",
+      "solucion":""
+    },
+    {
+      "respuesta": "the little|mermaid",
+      "solucion":""
+    },
+    {
+      "respuesta": "dumbo",
+      "solucion":""
+    },
+    {
+      "respuesta": "king kong",
+      "solucion":""
+    },
+    {
+      "respuesta": "300",
+      "solucion":""
+    },
+    {
+      "respuesta": "the lone|ranger",
+      "solucion":""
+    },
+    {
+      "respuesta": "jaws",
+      "solucion":""
+    },
+    {
+      "respuesta": "the|incredibles",
+      "solucion":""
+    },
+    {
+      "respuesta": "A Nightmare|on Elm Street",
+      "solucion":""
+    },
+    {
+      "respuesta": "independence|day",
+      "solucion":""
+    },
+    {
+      "respuesta": "aladdin",
+      "solucion":""
+    },
+    {
+      "respuesta": "toy story",
+      "solucion":""
+    },
+    {
+      "respuesta": "v for vendetta",
+      "solucion":""
+    },
+    {
+      "respuesta": "the godfather",
+      "solucion":""
+    },
+    {
+      "respuesta": "megamind",
+      "solucion":""
+    },
+    {
+      "respuesta": "monster inc",
+      "solucion":""
+    },
+    {
+      "respuesta": "star wars",
+      "solucion":""
+    },
+    {
+      "respuesta": "days of|thunder",
+      "solucion":""
+    },
+    {
+      "respuesta": "dennis the|menace",
+      "solucion":""
+    },
+    {
+      "respuesta": "fantastic|four",
+      "solucion":""
+    },
+    {
+      "respuesta": "the italian|job",
+      "solucion":""
+    },
+    {
+      "respuesta": "babe",
+      "solucion":""
+    },
+    {
+      "respuesta": "ratatouille",
+      "solucion":""
+    },
+    {
+      "respuesta": "lassie",
+      "solucion":""
+    },
+    {
+      "respuesta": "batman",
+      "solucion":""
+    },
+    {
+      "respuesta": "the incredible|hulk",
+      "solucion":""
+    },
+    {
+      "respuesta": "over the|hedge",
+      "solucion":""
+    },
+    {
+      "respuesta": "teenage mutant|ninja turtles",
+      "solucion":""
+    },
+    {
+      "respuesta": "sherlock|holmes",
+      "solucion":""
+    },
+    {
+      "respuesta": "mars|attacks",
+      "solucion":""
+    },
+    {
+      "respuesta": "jingle all|the way",
+      "solucion":""
+    },
+    {
+      "respuesta": "the|flintstones",
+      "solucion":""
+    },
+    {
+      "respuesta": "penguins|of madagascar",
+      "solucion":""
+    },
+    {
+      "respuesta": "frozen",
+      "solucion":""
+    },
+    {
+      "respuesta": "planet|of the ape",
+      "solucion":""
+    },
+    {
+      "respuesta": "james bond",
+      "solucion":""
+    },
+    {
+      "respuesta": "the lion|king",
+      "solucion":""
+    },
+    {
+      "respuesta": "scooby doo",
+      "solucion":""
+    },
+    {
+      "respuesta": "top secret",
+      "solucion":""
+    },
+    {
+      "respuesta": "alien",
+      "solucion":""
+    },
+    {
+      "respuesta": "the dukes|of hazzard",
+      "solucion":""
+    },
+    {
+      "respuesta": "the usual|suspects",
+      "solucion":""
+    },
+    {
+      "respuesta": "the lego|movie",
+      "solucion":""
+    },
+    {
+      "respuesta": "mary poppins",
+      "solucion":""
+    },
+    {
+      "respuesta": "the smurfs",
+      "solucion":""
+    },
+    {
+      "respuesta": "ghost rider",
+      "solucion":""
+    },
+    {
+      "respuesta": "bambi",
+      "solucion":""
+    },
+    {
+      "respuesta": "van helsing",
+      "solucion":""
+    },
+    {
+      "respuesta": "robocop",
+      "solucion":""
+    },
+    {
+      "respuesta": "ice|age",
+      "solucion":""
+    },
+    {
+      "respuesta": "zoolander",
+      "solucion":""
+    },
+    {
+      "respuesta": "yogi|bear",
+      "solucion":""
+    },
+    {
+      "respuesta": "tron",
+      "solucion":""
+    },
+    {
+      "respuesta": "the social|network",
+      "solucion":""
+    },
+    {
+      "respuesta": "the mask",
+      "solucion":""
+    },
+    {
+      "respuesta": "happy feet",
+      "solucion":""
+    },
+    {
+      "respuesta": "along came|polly",
+      "solucion":""
+    },
+    {
+      "respuesta": "maleficent",
+      "solucion":""
+    },
+    {
+      "respuesta": "the|punisher",
+      "solucion":""
+    },
+    {
+      "respuesta": "ted",
+      "solucion":""
+    },
+    {
+      "respuesta": "the angry birds|movie",
+      "solucion":""
+    },
+    {
+      "respuesta": "how to train|your dragon",
+      "solucion":""
+    },
+    {
+      "respuesta": "zootopia",
+      "solucion":""
+    },
+    {
+      "respuesta": "minions",
+      "solucion":""
+    },
+    {
+      "respuesta": "jumanji",
+      "solucion":""
+    },
+    {
+      "respuesta": "the mummy",
+      "solucion":""
+    },
+    {
+      "respuesta": "An american|tail",
+      "solucion":""
+    },
+    {
+      "respuesta": "the green|mile",
+      "solucion":""
+    },
+    {
+      "respuesta": "the ring",
+      "solucion":""
+    },
+    {
+      "respuesta": "gone in|60 seconds",
+      "solucion":""
+    },
+    {
+      "respuesta": "rambo",
+      "solucion":""
+    },
+    {
+      "respuesta": "the karate|kid",
+      "solucion":""
+    },
+    {
+      "respuesta": "wall e",
+      "solucion":""
+    },
+    {
+      "respuesta": "the time|machine",
+      "solucion":""
+    },
+    {
+      "respuesta": "cast away",
+      "solucion":""
+    },
+    {
+      "respuesta": "meet|the parents",
+      "solucion":""
+    },
+    {
+      "respuesta": "friday the|13th",
+      "solucion":""
+    },
+    {
+      "respuesta": "men in|black",
+      "solucion":""
+    },
+    {
+      "respuesta": "pirates of|the caribbean",
+      "solucion":""
+    },
+    {
+      "respuesta": "the a team",
+      "solucion":""
+    },
+    {
+      "respuesta": "saw",
+      "solucion":""
+    },
+    {
+      "respuesta": "birds",
+      "solucion":""
+    },
+    {
+      "respuesta": "short|circuit",
+      "solucion":""
+    },
+    {
+      "respuesta": "i robot",
+      "solucion":""
+    },
+    {
+      "respuesta": "the muppets",
+      "solucion":""
+    },
+    {
+      "respuesta": "titanic",
+      "solucion":""
+    },
+    {
+      "respuesta": "avatar",
+      "solucion":""
+    },
+    {
+      "respuesta": "scream",
+      "solucion":""
+    },
+    {
+      "respuesta": "big|hero 6",
+      "solucion":""
+    },
+    {
+      "respuesta": "terminator",
+      "solucion":""
+    },
+    {
+      "respuesta": "war of|the worlds",
+      "solucion":""
+    },
+    {
+      "respuesta": "catch me|if you can",
+      "solucion":""
+    },
+    {
+      "respuesta": "x men",
+      "solucion":""
+    },
+    {
+      "respuesta": "the mask|of zorro",
+      "solucion":""
+    },
+    {
+      "respuesta": "free|willy",
+      "solucion":""
+    },
+    {
+      "respuesta": "forrest|gump",
+      "solucion":""
+    },
+    {
+      "respuesta": "ghostbusters",
+      "solucion":""
+    },
+    {
+      "respuesta": "top gun",
+      "solucion":""
+    },
+    {
+      "respuesta": "the phantom|of the opera",
+      "solucion":""
+    },
+    {
+      "respuesta": "speed",
+      "solucion":""
+    },
+    {
+      "respuesta": "star trek",
+      "solucion":""
+    },
+    {
+      "respuesta": "borat",
+      "solucion":""
+    },
+    {
+      "respuesta": "shrek",
+      "solucion":""
+    },
+    {
+      "respuesta": "flight",
+      "solucion":""
+    },
+    {
+      "respuesta": "resident evil",
+      "solucion":""
+    },
+    {
+      "respuesta": "The Texas Chain|Saw Massacre",
+      "solucion":""
+    },
+    {
+      "respuesta": "jurasic|park",
+      "solucion":""
+    },
+    {
+      "respuesta": "thor",
+      "solucion":""
+    },
+    {
+      "respuesta": "How the Grinch|Stole Christmas",
+      "solucion":""
+    },
+    {
+      "respuesta": "psycho",
+      "solucion":""
+    },
+    {
+      "respuesta": "casper",
+      "solucion":""
+    },
+    {
+      "respuesta": "harry|potter",
+      "solucion":""
+    },
+    {
+      "respuesta": "the saint",
+      "solucion":""
+    },
+    {
+      "respuesta": "the addams|family",
+      "solucion":""
+    }
+  ]
 }

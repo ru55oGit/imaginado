@@ -1,305 +1,406 @@
-{"listado": [
-  {
-
-  },{
-    "respuesta": "River|Plate"
-  },
-  {
-    "respuesta": "Napoli"
-  },
-  {
-    "respuesta": "Barcelona"
-  },
-  {
-    "respuesta": "Valencia"
-  },
-  {
-    "respuesta": "Bayer|Munich"
-  },
-  {
-    "respuesta": "Roma"
-  },
-  {
-    "respuesta": "Cruz|Azul"
-  },
-  {
-    "respuesta": "Real|Madrid"
-  },
-  {
-    "respuesta": "Racing|Club"
-  },
-  {
-    "respuesta": "San Pablo"
-  },
-  {
-    "respuesta": "Gremio"
-  },
-  {
-    "respuesta": "Atletico|Madrid"
-  },
-  {
-    "respuesta": "Borussia|Dortmund"
-  },
-  {
-    "respuesta": "Milan"
-  },
-  {
-    "respuesta": "Manchester|City"
-  },
-  {
-    "respuesta": "Colo Colo"
-  },
-  {
-    "respuesta": "Inter de|Porto Alegre"
-  },
-  {
-    "respuesta": "Once|Caldas"
-  },
-  {
-    "respuesta": "Manchester|United"
-  },
-  {
-    "respuesta": "Cruzeiro"
-  },
-  {
-    "respuesta": "Atletico|Nacional"
-  },
-  {
-    "respuesta": "Lazio"
-  },
-  {
-    "respuesta": "Chelsea"
-  },
-  {
-    "respuesta": "Wolfsburgo"
-  },
-  {
-    "respuesta": "San Lorenzo"
-  },
-  {
-    "respuesta": "Flamengo"
-  },
-  {
-    "respuesta": "Hamburgo"
-  },
-  {
-    "respuesta": "Sevilla"
-  },
-  {
-    "respuesta": "Juventus"
-  },
-  {
-    "respuesta": "Arsenal"
-  },
-  {
-    "respuesta": "Bayer|Leverkusen"
-  },
-  {
-    "respuesta": "Lanus"
-  },
-  {
-    "respuesta": "Osasuna"
-  },
-  {
-    "respuesta": "America"
-  },
-  {
-    "respuesta": "Inter de|Milan"
-  },
-  {
-    "respuesta": "Malaga"
-  },
-  {
-    "respuesta": "Liverpool"
-  },
-  {
-    "respuesta": "Schalke 04"
-  },
-  {
-    "respuesta": "Torino"
-  },
-  {
-    "respuesta": "Everton"
-  },
-  {
-    "respuesta": "Universidad|de chile"
-  },
-  {
-    "respuesta": "Estudiantes|de la plata"
-  },
-  {
-    "respuesta": "Sampdoria"
-  },
-  {
-    "respuesta": "Velez|Sarsfield"
-  },
-  {
-    "respuesta": "Betis"
-  },
-  {
-    "respuesta": "Siena"
-  },
-  {
-    "respuesta": "Necaxa"
-  },
-  {
-    "respuesta": "West|Bromwich"
-  },
-  {
-    "respuesta": "Perugia"
-  },
-  {
-    "respuesta": "Villareal"
-  },
-  {
-    "respuesta": "Herta|Berlin"
-  },
-  {
-    "respuesta": "Rosario|Central"
-  },
-  {
-    "respuesta": "Santos"
-  },
-  {
-    "respuesta": "Millonarios"
-  },
-  {
-    "respuesta": "Universidad|Catolica"
-  },
-  {
-    "respuesta": "Fiorentina"
-  },
-  {
-    "respuesta": "Atlas"
-  },
-  {
-    "respuesta": "Tottenham|Hotspur"
-  },
-  {
-    "respuesta": "Palmeiras"
-  },
-  {
-    "respuesta": "Werder|Bremen"
-  },
-  {
-    "respuesta": "Bologna"
-  },
-  {
-    "respuesta": "Newcastle"
-  },
-  {
-    "respuesta": "Levante"
-  },
-  {
-    "respuesta": "Palermo"
-  },
-  {
-    "respuesta": "Tigre"
-  },
-  {
-    "respuesta": "Junior de|Barranquilla"
-  },
-  {
-    "respuesta": "corinthians"
-  },
-  {
-    "respuesta": "Fluminense"
-  },
-  {
-    "respuesta": "Newells|Old Boys"
-  },
-  {
-    "respuesta": "Deportivo|Cali"
-  },
-  {
-    "respuesta": "West|Ham"
-  },
-  {
-    "respuesta": "Monterrey"
-  },
-  {
-    "respuesta": "chievo|verona"
-  },
-  {
-    "respuesta": "Aston|Villa"
-  },
-  {
-    "respuesta": "Empoli"
-  },
-  {
-    "respuesta": "Vasco da|Gama"
-  },
-  {
-    "respuesta": "America|de Cali"
-  },
-  {
-    "respuesta": "Colon"
-  },
-  {
-    "respuesta": "Gimnasia|de la plata"
-  },
-  {
-    "respuesta": "Parma"
-  },
-  {
-    "respuesta": "Banfield"
-  },
-  {
-    "respuesta": "Rayo|Vallecano"
-  },
-  {
-    "respuesta": "olympique|de marsella"
-  },
-  {
-    "respuesta": "Genoa"
-  },
-  {
-    "respuesta": "Independiente|santa fe"
-  },
-  {
-    "respuesta": "Real|Sociedad"
-  },
-  {
-    "respuesta": "Fulham"
-  },
-  {
-    "respuesta": "Independiente|de avellaneda"
-  },
-  {
-    "respuesta": "Stuttgart"
-  },
-  {
-    "respuesta": "Espanyol de|Barcelona"
-  },
-  {
-    "respuesta": "Hellas|Verona"
-  },
-  {
-    "respuesta": "Union"
-  },
-  {
-    "respuesta": "Paris|Saint Germain"
-  },
-  {
-    "respuesta": "Southampton"
-  },
-  {
-    "respuesta": "leicester"
-  },
-  {
-    "respuesta": "Boca Juniors"
-  },
-  {
-    "respuesta": "Hannover 96"
-  },
-  {
-    "respuesta": "Celta de Vigo"
-  },
-  {
-    "respuesta": "Watford"
-  },
-  {
-    "respuesta": "Cagliari"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "River|Plate",
+      "solucion":""
+    },
+    {
+      "respuesta": "Napoli",
+      "solucion":""
+    },
+    {
+      "respuesta": "Barcelona",
+      "solucion":""
+    },
+    {
+      "respuesta": "Valencia",
+      "solucion":""
+    },
+    {
+      "respuesta": "Bayer|Munich",
+      "solucion":""
+    },
+    {
+      "respuesta": "Roma",
+      "solucion":""
+    },
+    {
+      "respuesta": "Cruz|Azul",
+      "solucion":""
+    },
+    {
+      "respuesta": "Real|Madrid",
+      "solucion":""
+    },
+    {
+      "respuesta": "Racing|Club",
+      "solucion":""
+    },
+    {
+      "respuesta": "San Pablo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Gremio",
+      "solucion":""
+    },
+    {
+      "respuesta": "Atletico|Madrid",
+      "solucion":""
+    },
+    {
+      "respuesta": "Borussia|Dortmund",
+      "solucion":""
+    },
+    {
+      "respuesta": "Milan",
+      "solucion":""
+    },
+    {
+      "respuesta": "Manchester|City",
+      "solucion":""
+    },
+    {
+      "respuesta": "Colo Colo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Inter de|Porto Alegre",
+      "solucion":""
+    },
+    {
+      "respuesta": "Once|Caldas",
+      "solucion":""
+    },
+    {
+      "respuesta": "Manchester|United",
+      "solucion":""
+    },
+    {
+      "respuesta": "Cruzeiro",
+      "solucion":""
+    },
+    {
+      "respuesta": "Atletico|Nacional",
+      "solucion":""
+    },
+    {
+      "respuesta": "Lazio",
+      "solucion":""
+    },
+    {
+      "respuesta": "Chelsea",
+      "solucion":""
+    },
+    {
+      "respuesta": "Wolfsburgo",
+      "solucion":""
+    },
+    {
+      "respuesta": "San Lorenzo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Flamengo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Hamburgo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Sevilla",
+      "solucion":""
+    },
+    {
+      "respuesta": "Juventus",
+      "solucion":""
+    },
+    {
+      "respuesta": "Arsenal",
+      "solucion":""
+    },
+    {
+      "respuesta": "Bayer|Leverkusen",
+      "solucion":""
+    },
+    {
+      "respuesta": "Lanus",
+      "solucion":""
+    },
+    {
+      "respuesta": "Osasuna",
+      "solucion":""
+    },
+    {
+      "respuesta": "America",
+      "solucion":""
+    },
+    {
+      "respuesta": "Inter de|Milan",
+      "solucion":""
+    },
+    {
+      "respuesta": "Malaga",
+      "solucion":""
+    },
+    {
+      "respuesta": "Liverpool",
+      "solucion":""
+    },
+    {
+      "respuesta": "Schalke 04",
+      "solucion":""
+    },
+    {
+      "respuesta": "Torino",
+      "solucion":""
+    },
+    {
+      "respuesta": "Everton",
+      "solucion":""
+    },
+    {
+      "respuesta": "Universidad|de chile",
+      "solucion":""
+    },
+    {
+      "respuesta": "Estudiantes|de la plata",
+      "solucion":""
+    },
+    {
+      "respuesta": "Sampdoria",
+      "solucion":""
+    },
+    {
+      "respuesta": "Velez|Sarsfield",
+      "solucion":""
+    },
+    {
+      "respuesta": "Betis",
+      "solucion":""
+    },
+    {
+      "respuesta": "Siena",
+      "solucion":""
+    },
+    {
+      "respuesta": "Necaxa",
+      "solucion":""
+    },
+    {
+      "respuesta": "West|Bromwich",
+      "solucion":""
+    },
+    {
+      "respuesta": "Perugia",
+      "solucion":""
+    },
+    {
+      "respuesta": "Villareal",
+      "solucion":""
+    },
+    {
+      "respuesta": "Herta|Berlin",
+      "solucion":""
+    },
+    {
+      "respuesta": "Rosario|Central",
+      "solucion":""
+    },
+    {
+      "respuesta": "Santos",
+      "solucion":""
+    },
+    {
+      "respuesta": "Millonarios",
+      "solucion":""
+    },
+    {
+      "respuesta": "Universidad|Catolica",
+      "solucion":""
+    },
+    {
+      "respuesta": "Fiorentina",
+      "solucion":""
+    },
+    {
+      "respuesta": "Atlas",
+      "solucion":""
+    },
+    {
+      "respuesta": "Tottenham|Hotspur",
+      "solucion":""
+    },
+    {
+      "respuesta": "Palmeiras",
+      "solucion":""
+    },
+    {
+      "respuesta": "Werder|Bremen",
+      "solucion":""
+    },
+    {
+      "respuesta": "Bologna",
+      "solucion":""
+    },
+    {
+      "respuesta": "Newcastle",
+      "solucion":""
+    },
+    {
+      "respuesta": "Levante",
+      "solucion":""
+    },
+    {
+      "respuesta": "Palermo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Tigre",
+      "solucion":""
+    },
+    {
+      "respuesta": "Junior de|Barranquilla",
+      "solucion":""
+    },
+    {
+      "respuesta": "corinthians",
+      "solucion":""
+    },
+    {
+      "respuesta": "Fluminense",
+      "solucion":""
+    },
+    {
+      "respuesta": "Newells|Old Boys",
+      "solucion":""
+    },
+    {
+      "respuesta": "Deportivo|Cali",
+      "solucion":""
+    },
+    {
+      "respuesta": "West|Ham",
+      "solucion":""
+    },
+    {
+      "respuesta": "Monterrey",
+      "solucion":""
+    },
+    {
+      "respuesta": "chievo|verona",
+      "solucion":""
+    },
+    {
+      "respuesta": "Aston|Villa",
+      "solucion":""
+    },
+    {
+      "respuesta": "Empoli",
+      "solucion":""
+    },
+    {
+      "respuesta": "Vasco da|Gama",
+      "solucion":""
+    },
+    {
+      "respuesta": "America|de Cali",
+      "solucion":""
+    },
+    {
+      "respuesta": "Colon",
+      "solucion":""
+    },
+    {
+      "respuesta": "Gimnasia|de la plata",
+      "solucion":""
+    },
+    {
+      "respuesta": "Parma",
+      "solucion":""
+    },
+    {
+      "respuesta": "Banfield",
+      "solucion":""
+    },
+    {
+      "respuesta": "Rayo|Vallecano",
+      "solucion":""
+    },
+    {
+      "respuesta": "olympique|de marsella",
+      "solucion":""
+    },
+    {
+      "respuesta": "Genoa",
+      "solucion":""
+    },
+    {
+      "respuesta": "Independiente|santa fe",
+      "solucion":""
+    },
+    {
+      "respuesta": "Real|Sociedad",
+      "solucion":""
+    },
+    {
+      "respuesta": "Fulham",
+      "solucion":""
+    },
+    {
+      "respuesta": "Independiente|de avellaneda",
+      "solucion":""
+    },
+    {
+      "respuesta": "Stuttgart",
+      "solucion":""
+    },
+    {
+      "respuesta": "Espanyol de|Barcelona",
+      "solucion":""
+    },
+    {
+      "respuesta": "Hellas|Verona",
+      "solucion":""
+    },
+    {
+      "respuesta": "Union",
+      "solucion":""
+    },
+    {
+      "respuesta": "Paris|Saint Germain",
+      "solucion":""
+    },
+    {
+      "respuesta": "Southampton",
+      "solucion":""
+    },
+    {
+      "respuesta": "leicester",
+      "solucion":""
+    },
+    {
+      "respuesta": "Boca Juniors",
+      "solucion":""
+    },
+    {
+      "respuesta": "Hannover 96",
+      "solucion":""
+    },
+    {
+      "respuesta": "Celta de Vigo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Watford",
+      "solucion":""
+    },
+    {
+      "respuesta": "Cagliari",
+      "solucion":""
+    }
+  ]
 }

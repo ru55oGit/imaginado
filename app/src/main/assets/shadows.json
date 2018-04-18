@@ -1,522 +1,694 @@
-{"listado": [
-  {
-
-  },
-  {
-    "respuesta": "garfield"
-  },
-  {
-    "respuesta": "blinky"
-  },
-  {
-    "respuesta": "gargamel"
-  },
-  {
-    "respuesta": "babar"
-  },
-  {
-    "respuesta": "disco|stu"
-  },
-  {
-    "respuesta": "Secret|Squirrel"
-  },
-  {
-    "respuesta": "apu"
-  },
-  {
-    "respuesta": "frieza"
-  },
-  {
-    "respuesta": "Greedy|Smurf"
-  },
-  {
-    "respuesta": "he man"
-  },
-  {
-    "respuesta": "captain|tsubasa"
-  },
-  {
-    "respuesta": "mickey|mouse"
-  },
-  {
-    "respuesta": "mario bros"
-  },
-  {
-    "respuesta": "son gohan"
-  },
-  {
-    "respuesta": "henery|hawk"
-  },
-  {
-    "respuesta": "Kearney|Zzyzwicz"
-  },
-  {
-    "respuesta": "Chief|Quimby"
-  },
-  {
-    "respuesta": "majin boo"
-  },
-  {
-    "respuesta": "astro"
-  },
-  {
-    "respuesta": "Hefty|Smurf"
-  },
-  {
-    "respuesta": "porky pig"
-  },
-  {
-    "respuesta": "dr hibbert"
-  },
-  {
-    "respuesta": "donald"
-  },
-  {
-    "respuesta": "Kojiro|Hyuga"
-  },
-  {
-    "respuesta": "milhouse"
-  },
-  {
-    "respuesta": "pluto"
-  },
-  {
-    "respuesta": "lisa|simpson"
-  },
-  {
-    "respuesta": "quick draw|mcgraw"
-  },
-  {
-    "respuesta": "akira"
-  },
-  {
-    "respuesta": "Rosie"
-  },
-  {
-    "respuesta": "Masha and|The Bear"
-  },
-  {
-    "respuesta": "maggie|simpson"
-  },
-  {
-    "respuesta": "George|Jetson"
-  },
-  {
-    "respuesta": "Joe Quimby"
-  },
-  {
-    "respuesta": "goofy"
-  },
-  {
-    "respuesta": "huckleberry|hound"
-  },
-  {
-    "respuesta": "the ant"
-  },
-  {
-    "respuesta": "woody|woodpecker"
-  },
-  {
-    "respuesta": "the inspector"
-  },
-  {
-    "respuesta": "Space|Ghost"
-  },
-  {
-    "respuesta": "Vanity|Smurf"
-  },
-  {
-    "respuesta": "Wonder|Twins"
-  },
-  {
-    "respuesta": "artie|ziff"
-  },
-  {
-    "respuesta": "Santas Little|Helper"
-  },
-  {
-    "respuesta": "carl|carlson"
-  },
-  {
-    "respuesta": "cletus"
-  },
-  {
-    "respuesta": "uter"
-  },
-  {
-    "respuesta": "edna|krabappel"
-  },
-  {
-    "respuesta": "barney"
-  },
-  {
-    "respuesta": "Muttley"
-  },
-  {
-    "respuesta": "jebediah|springfield"
-  },
-  {
-    "respuesta": "jessica|lovejoy"
-  },
-  {
-    "respuesta": "kent|brockman"
-  },
-  {
-    "respuesta": "kirk|van houten"
-  },
-  {
-    "respuesta": "Mindy|Simmons"
-  },
-  {
-    "respuesta": "montgomery|burns"
-  },
-  {
-    "respuesta": "wonder|woman"
-  },
-  {
-    "respuesta": "professor|frink"
-  },
-  {
-    "respuesta": "Ralph|Wiggum"
-  },
-  {
-    "respuesta": "Elroy|Jetson"
-  },
-  {
-    "respuesta": "Yosemite|Sam"
-  },
-  {
-    "respuesta": "lion o"
-  },
-  {
-    "respuesta": "astro boy"
-  },
-  {
-    "respuesta": "atom|ant"
-  },
-  {
-    "respuesta": "yogi|bear"
-  },
-  {
-    "respuesta": "jem"
-  },
-  {
-    "respuesta": "herbert|powell"
-  },
-  {
-    "respuesta": "Benny|the Ball"
-  },
-  {
-    "respuesta": "the pink|panther"
-  },
-  {
-    "respuesta": "funzo"
-  },
-  {
-    "respuesta": "ricky|rich"
-  },
-  {
-    "respuesta": "duffman"
-  },
-  {
-    "respuesta": "pikachu"
-  },
-  {
-    "respuesta": "Judy|Jetson"
-  },
-  {
-    "respuesta": "Jasper|Beardly"
-  },
-  {
-    "respuesta": "battle cat"
-  },
-  {
-    "respuesta": "Clancy|Wiggum"
-  },
-  {
-    "respuesta": "mighty|mouse"
-  },
-  {
-    "respuesta": "jimbo|jones"
-  },
-  {
-    "respuesta": "Hans|Moleman"
-  },
-  {
-    "respuesta": "frank|grimes"
-  },
-  {
-    "respuesta": "top cat"
-  },
-  {
-    "respuesta": "brainy|smurf"
-  },
-  {
-    "respuesta": "dr nick|Riviera"
-  },
-  {
-    "respuesta": "birdman"
-  },
-  {
-    "respuesta": "vegetta"
-  },
-  {
-    "respuesta": "larry|burns"
-  },
-  {
-    "respuesta": "Luann|Van Houten"
-  },
-  {
-    "respuesta": "quicksilver"
-  },
-  {
-    "respuesta": "lionel|hutz"
-  },
-  {
-    "respuesta": "kang"
-  },
-  {
-    "respuesta": "krusty"
-  },
-  {
-    "respuesta": "Foghorn|Leghorn"
-  },
-  {
-    "respuesta": "heidi"
-  },
-  {
-    "respuesta": "Groundskeeper|Willie"
-  },
-  {
-    "respuesta": "papa|smurf"
-  },
-  {
-    "respuesta": "Jane|Jetson"
-  },
-  {
-    "respuesta": "mr sparkle"
-  },
-  {
-    "respuesta": "the inspector|gadget"
-  },
-  {
-    "respuesta": "martin|prince"
-  },
-  {
-    "respuesta": "Bumblebee|Man"
-  },
-  {
-    "respuesta": "the aardvark"
-  },
-  {
-    "respuesta": "orko"
-  },
-  {
-    "respuesta": "mc bain"
-  },
-  {
-    "respuesta": "Lightning|McQueen"
-  },
-  {
-    "respuesta": "itchy"
-  },
-  {
-    "respuesta": "luiggi"
-  },
-  {
-    "respuesta": "bugs|bunny"
-  },
-  {
-    "respuesta": "daffy|duck"
-  },
-  {
-    "respuesta": "Gil|Gunderson"
-  },
-  {
-    "respuesta": "bart|simpson"
-  },
-  {
-    "respuesta": "piccolo"
-  },
-  {
-    "respuesta": "Maude|Flanders"
-  },
-  {
-    "respuesta": "buzz|lightyear"
-  },
-  {
-    "respuesta": "Genzo|Wakabayashi"
-  },
-  {
-    "respuesta": "Officer|Charlie Dibble"
-  },
-  {
-    "respuesta": "marge|simpson"
-  },
-  {
-    "respuesta": "mater"
-  },
-  {
-    "respuesta": "otto"
-  },
-  {
-    "respuesta": "the brain"
-  },
-  {
-    "respuesta": "homer|simpson"
-  },
-  {
-    "respuesta": "flash"
-  },
-  {
-    "respuesta": "pepe le pew"
-  },
-  {
-    "respuesta": "son goku"
-  },
-  {
-    "respuesta": "ned|flanders"
-  },
-  {
-    "respuesta": "scooby|doo"
-  },
-  {
-    "respuesta": "moe"
-  },
-  {
-    "respuesta": "pinky"
-  },
-  {
-    "respuesta": "superman"
-  },
-  {
-    "respuesta": "Jabberjaw"
-  },
-  {
-    "respuesta": "the coyote"
-  },
-  {
-    "respuesta": "sylvester"
-  },
-  {
-    "respuesta": "Scratchy"
-  },
-  {
-    "respuesta": "mojo"
-  },
-  {
-    "respuesta": "Barney|Rubble"
-  },
-  {
-    "respuesta": "bobby"
-  },
-  {
-    "respuesta": "oddie"
-  },
-  {
-    "respuesta": "taz"
-  },
-  {
-    "respuesta": "baloo"
-  },
-  {
-    "respuesta": "patty"
-  },
-  {
-    "respuesta": "Ishizaki|Ryo"
-  },
-  {
-    "respuesta": "Johnny|Bravo"
-  },
-  {
-    "respuesta": "shaggy"
-  },
-  {
-    "respuesta": "marvin"
-  },
-  {
-    "respuesta": "Nelson|Muntz"
-  },
-  {
-    "respuesta": "popeye"
-  },
-  {
-    "respuesta": "lenny"
-  },
-  {
-    "respuesta": "Touche|Turtle"
-  },
-  {
-    "respuesta": "speedy|gonzalez"
-  },
-  {
-    "respuesta": "lou"
-  },
-  {
-    "respuesta": "Betty|Rubble"
-  },
-  {
-    "respuesta": "Fred|Flintstone"
-  },
-  {
-    "respuesta": "Peter|Griffin"
-  },
-  {
-    "respuesta": "tweety"
-  },
-  {
-    "respuesta": "jerry"
-  },
-  {
-    "respuesta": "winnie|pooh"
-  },
-  {
-    "respuesta": "krilin"
-  },
-  {
-    "respuesta": "dumbo"
-  },
-  {
-    "respuesta": "poochie"
-  },
-  {
-    "respuesta": "terri y|sherri"
-  },
-  {
-    "respuesta": "droopy"
-  },
-  {
-    "respuesta": "seymour|skinner"
-  },
-  {
-    "respuesta": "gary|chalmers"
-  },
-  {
-    "respuesta": "maleficent"
-  },
-  {
-    "respuesta": "fat|tony"
-  },
-  {
-    "respuesta": "selma"
-  },
-  {
-    "respuesta": "Ariel"
-  },
-  {
-    "respuesta": "Helen|Lovejoy"
-  },
-  {
-    "respuesta": "Peter|Pan"
-  },
-  {
-    "respuesta": "Simba"
-  },
-  {
-    "respuesta": "SpongeBob|SquarePants"
-  },
-  {
-    "respuesta": "Simba"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "garfield",
+      "solucion":""
+    },
+    {
+      "respuesta": "blinky",
+      "solucion":""
+    },
+    {
+      "respuesta": "gargamel",
+      "solucion":""
+    },
+    {
+      "respuesta": "babar",
+      "solucion":""
+    },
+    {
+      "respuesta": "disco|stu",
+      "solucion":""
+    },
+    {
+      "respuesta": "Secret|Squirrel",
+      "solucion":""
+    },
+    {
+      "respuesta": "apu",
+      "solucion":""
+    },
+    {
+      "respuesta": "frieza",
+      "solucion":""
+    },
+    {
+      "respuesta": "Greedy|Smurf",
+      "solucion":""
+    },
+    {
+      "respuesta": "he man",
+      "solucion":""
+    },
+    {
+      "respuesta": "captain|tsubasa",
+      "solucion":""
+    },
+    {
+      "respuesta": "mickey|mouse",
+      "solucion":""
+    },
+    {
+      "respuesta": "mario bros",
+      "solucion":""
+    },
+    {
+      "respuesta": "son gohan",
+      "solucion":""
+    },
+    {
+      "respuesta": "henery|hawk",
+      "solucion":""
+    },
+    {
+      "respuesta": "Kearney|Zzyzwicz",
+      "solucion":""
+    },
+    {
+      "respuesta": "Chief|Quimby",
+      "solucion":""
+    },
+    {
+      "respuesta": "majin boo",
+      "solucion":""
+    },
+    {
+      "respuesta": "astro",
+      "solucion":""
+    },
+    {
+      "respuesta": "Hefty|Smurf",
+      "solucion":""
+    },
+    {
+      "respuesta": "porky pig",
+      "solucion":""
+    },
+    {
+      "respuesta": "dr hibbert",
+      "solucion":""
+    },
+    {
+      "respuesta": "donald",
+      "solucion":""
+    },
+    {
+      "respuesta": "Kojiro|Hyuga",
+      "solucion":""
+    },
+    {
+      "respuesta": "milhouse",
+      "solucion":""
+    },
+    {
+      "respuesta": "pluto",
+      "solucion":""
+    },
+    {
+      "respuesta": "lisa|simpson",
+      "solucion":""
+    },
+    {
+      "respuesta": "quick draw|mcgraw",
+      "solucion":""
+    },
+    {
+      "respuesta": "akira",
+      "solucion":""
+    },
+    {
+      "respuesta": "Rosie",
+      "solucion":""
+    },
+    {
+      "respuesta": "Masha and|The Bear",
+      "solucion":""
+    },
+    {
+      "respuesta": "maggie|simpson",
+      "solucion":""
+    },
+    {
+      "respuesta": "George|Jetson",
+      "solucion":""
+    },
+    {
+      "respuesta": "Joe Quimby",
+      "solucion":""
+    },
+    {
+      "respuesta": "goofy",
+      "solucion":""
+    },
+    {
+      "respuesta": "huckleberry|hound",
+      "solucion":""
+    },
+    {
+      "respuesta": "the ant",
+      "solucion":""
+    },
+    {
+      "respuesta": "woody|woodpecker",
+      "solucion":""
+    },
+    {
+      "respuesta": "the inspector",
+      "solucion":""
+    },
+    {
+      "respuesta": "Space|Ghost",
+      "solucion":""
+    },
+    {
+      "respuesta": "Vanity|Smurf",
+      "solucion":""
+    },
+    {
+      "respuesta": "Wonder|Twins",
+      "solucion":""
+    },
+    {
+      "respuesta": "artie|ziff",
+      "solucion":""
+    },
+    {
+      "respuesta": "Santas Little|Helper",
+      "solucion":""
+    },
+    {
+      "respuesta": "carl|carlson",
+      "solucion":""
+    },
+    {
+      "respuesta": "cletus",
+      "solucion":""
+    },
+    {
+      "respuesta": "uter",
+      "solucion":""
+    },
+    {
+      "respuesta": "edna|krabappel",
+      "solucion":""
+    },
+    {
+      "respuesta": "barney",
+      "solucion":""
+    },
+    {
+      "respuesta": "Muttley",
+      "solucion":""
+    },
+    {
+      "respuesta": "jebediah|springfield",
+      "solucion":""
+    },
+    {
+      "respuesta": "jessica|lovejoy",
+      "solucion":""
+    },
+    {
+      "respuesta": "kent|brockman",
+      "solucion":""
+    },
+    {
+      "respuesta": "kirk|van houten",
+      "solucion":""
+    },
+    {
+      "respuesta": "Mindy|Simmons",
+      "solucion":""
+    },
+    {
+      "respuesta": "montgomery|burns",
+      "solucion":""
+    },
+    {
+      "respuesta": "wonder|woman",
+      "solucion":""
+    },
+    {
+      "respuesta": "professor|frink",
+      "solucion":""
+    },
+    {
+      "respuesta": "Ralph|Wiggum",
+      "solucion":""
+    },
+    {
+      "respuesta": "Elroy|Jetson",
+      "solucion":""
+    },
+    {
+      "respuesta": "Yosemite|Sam",
+      "solucion":""
+    },
+    {
+      "respuesta": "lion o",
+      "solucion":""
+    },
+    {
+      "respuesta": "astro boy",
+      "solucion":""
+    },
+    {
+      "respuesta": "atom|ant",
+      "solucion":""
+    },
+    {
+      "respuesta": "yogi|bear",
+      "solucion":""
+    },
+    {
+      "respuesta": "jem",
+      "solucion":""
+    },
+    {
+      "respuesta": "herbert|powell",
+      "solucion":""
+    },
+    {
+      "respuesta": "Benny|the Ball",
+      "solucion":""
+    },
+    {
+      "respuesta": "the pink|panther",
+      "solucion":""
+    },
+    {
+      "respuesta": "funzo",
+      "solucion":""
+    },
+    {
+      "respuesta": "ricky|rich",
+      "solucion":""
+    },
+    {
+      "respuesta": "duffman",
+      "solucion":""
+    },
+    {
+      "respuesta": "pikachu",
+      "solucion":""
+    },
+    {
+      "respuesta": "Judy|Jetson",
+      "solucion":""
+    },
+    {
+      "respuesta": "Jasper|Beardly",
+      "solucion":""
+    },
+    {
+      "respuesta": "battle cat",
+      "solucion":""
+    },
+    {
+      "respuesta": "Clancy|Wiggum",
+      "solucion":""
+    },
+    {
+      "respuesta": "mighty|mouse",
+      "solucion":""
+    },
+    {
+      "respuesta": "jimbo|jones",
+      "solucion":""
+    },
+    {
+      "respuesta": "Hans|Moleman",
+      "solucion":""
+    },
+    {
+      "respuesta": "frank|grimes",
+      "solucion":""
+    },
+    {
+      "respuesta": "top cat",
+      "solucion":""
+    },
+    {
+      "respuesta": "brainy|smurf",
+      "solucion":""
+    },
+    {
+      "respuesta": "dr nick|Riviera",
+      "solucion":""
+    },
+    {
+      "respuesta": "birdman",
+      "solucion":""
+    },
+    {
+      "respuesta": "vegetta",
+      "solucion":""
+    },
+    {
+      "respuesta": "larry|burns",
+      "solucion":""
+    },
+    {
+      "respuesta": "Luann|Van Houten",
+      "solucion":""
+    },
+    {
+      "respuesta": "quicksilver",
+      "solucion":""
+    },
+    {
+      "respuesta": "lionel|hutz",
+      "solucion":""
+    },
+    {
+      "respuesta": "kang",
+      "solucion":""
+    },
+    {
+      "respuesta": "krusty",
+      "solucion":""
+    },
+    {
+      "respuesta": "Foghorn|Leghorn",
+      "solucion":""
+    },
+    {
+      "respuesta": "heidi",
+      "solucion":""
+    },
+    {
+      "respuesta": "Groundskeeper|Willie",
+      "solucion":""
+    },
+    {
+      "respuesta": "papa|smurf",
+      "solucion":""
+    },
+    {
+      "respuesta": "Jane|Jetson",
+      "solucion":""
+    },
+    {
+      "respuesta": "mr sparkle",
+      "solucion":""
+    },
+    {
+      "respuesta": "the inspector|gadget",
+      "solucion":""
+    },
+    {
+      "respuesta": "martin|prince",
+      "solucion":""
+    },
+    {
+      "respuesta": "Bumblebee|Man",
+      "solucion":""
+    },
+    {
+      "respuesta": "the aardvark",
+      "solucion":""
+    },
+    {
+      "respuesta": "orko",
+      "solucion":""
+    },
+    {
+      "respuesta": "mc bain",
+      "solucion":""
+    },
+    {
+      "respuesta": "Lightning|McQueen",
+      "solucion":""
+    },
+    {
+      "respuesta": "itchy",
+      "solucion":""
+    },
+    {
+      "respuesta": "luiggi",
+      "solucion":""
+    },
+    {
+      "respuesta": "bugs|bunny",
+      "solucion":""
+    },
+    {
+      "respuesta": "daffy|duck",
+      "solucion":""
+    },
+    {
+      "respuesta": "Gil|Gunderson",
+      "solucion":""
+    },
+    {
+      "respuesta": "bart|simpson",
+      "solucion":""
+    },
+    {
+      "respuesta": "piccolo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Maude|Flanders",
+      "solucion":""
+    },
+    {
+      "respuesta": "buzz|lightyear",
+      "solucion":""
+    },
+    {
+      "respuesta": "Genzo|Wakabayashi",
+      "solucion":""
+    },
+    {
+      "respuesta": "Officer|Charlie Dibble",
+      "solucion":""
+    },
+    {
+      "respuesta": "marge|simpson",
+      "solucion":""
+    },
+    {
+      "respuesta": "mater",
+      "solucion":""
+    },
+    {
+      "respuesta": "otto",
+      "solucion":""
+    },
+    {
+      "respuesta": "the brain",
+      "solucion":""
+    },
+    {
+      "respuesta": "homer|simpson",
+      "solucion":""
+    },
+    {
+      "respuesta": "flash",
+      "solucion":""
+    },
+    {
+      "respuesta": "pepe le pew",
+      "solucion":""
+    },
+    {
+      "respuesta": "son goku",
+      "solucion":""
+    },
+    {
+      "respuesta": "ned|flanders",
+      "solucion":""
+    },
+    {
+      "respuesta": "scooby|doo",
+      "solucion":""
+    },
+    {
+      "respuesta": "moe",
+      "solucion":""
+    },
+    {
+      "respuesta": "pinky",
+      "solucion":""
+    },
+    {
+      "respuesta": "superman",
+      "solucion":""
+    },
+    {
+      "respuesta": "Jabberjaw",
+      "solucion":""
+    },
+    {
+      "respuesta": "the coyote",
+      "solucion":""
+    },
+    {
+      "respuesta": "sylvester",
+      "solucion":""
+    },
+    {
+      "respuesta": "Scratchy",
+      "solucion":""
+    },
+    {
+      "respuesta": "mojo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Barney|Rubble",
+      "solucion":""
+    },
+    {
+      "respuesta": "bobby",
+      "solucion":""
+    },
+    {
+      "respuesta": "oddie",
+      "solucion":""
+    },
+    {
+      "respuesta": "taz",
+      "solucion":""
+    },
+    {
+      "respuesta": "baloo",
+      "solucion":""
+    },
+    {
+      "respuesta": "patty",
+      "solucion":""
+    },
+    {
+      "respuesta": "Ishizaki|Ryo",
+      "solucion":""
+    },
+    {
+      "respuesta": "Johnny|Bravo",
+      "solucion":""
+    },
+    {
+      "respuesta": "shaggy",
+      "solucion":""
+    },
+    {
+      "respuesta": "marvin",
+      "solucion":""
+    },
+    {
+      "respuesta": "Nelson|Muntz",
+      "solucion":""
+    },
+    {
+      "respuesta": "popeye",
+      "solucion":""
+    },
+    {
+      "respuesta": "lenny",
+      "solucion":""
+    },
+    {
+      "respuesta": "Touche|Turtle",
+      "solucion":""
+    },
+    {
+      "respuesta": "speedy|gonzalez",
+      "solucion":""
+    },
+    {
+      "respuesta": "lou",
+      "solucion":""
+    },
+    {
+      "respuesta": "Betty|Rubble",
+      "solucion":""
+    },
+    {
+      "respuesta": "Fred|Flintstone",
+      "solucion":""
+    },
+    {
+      "respuesta": "Peter|Griffin",
+      "solucion":""
+    },
+    {
+      "respuesta": "tweety",
+      "solucion":""
+    },
+    {
+      "respuesta": "jerry",
+      "solucion":""
+    },
+    {
+      "respuesta": "winnie|pooh",
+      "solucion":""
+    },
+    {
+      "respuesta": "krilin",
+      "solucion":""
+    },
+    {
+      "respuesta": "dumbo",
+      "solucion":""
+    },
+    {
+      "respuesta": "poochie",
+      "solucion":""
+    },
+    {
+      "respuesta": "terri y|sherri",
+      "solucion":""
+    },
+    {
+      "respuesta": "droopy",
+      "solucion":""
+    },
+    {
+      "respuesta": "seymour|skinner",
+      "solucion":""
+    },
+    {
+      "respuesta": "gary|chalmers",
+      "solucion":""
+    },
+    {
+      "respuesta": "maleficent",
+      "solucion":""
+    },
+    {
+      "respuesta": "fat|tony",
+      "solucion":""
+    },
+    {
+      "respuesta": "selma",
+      "solucion":""
+    },
+    {
+      "respuesta": "Ariel",
+      "solucion":""
+    },
+    {
+      "respuesta": "Helen|Lovejoy",
+      "solucion":""
+    },
+    {
+      "respuesta": "Peter|Pan",
+      "solucion":""
+    },
+    {
+      "respuesta": "Simba",
+      "solucion":""
+    },
+    {
+      "respuesta": "SpongeBob|SquarePants",
+      "solucion":""
+    },
+    {
+      "respuesta": "Simba",
+      "solucion":""
+    }
+  ]
 }

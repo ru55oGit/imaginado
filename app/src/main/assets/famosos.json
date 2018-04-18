@@ -1,420 +1,558 @@
-{"listado": [
-  {
-
-  },
-  {
-    "respuesta": "jennifer|aniston"
-  },
-  {
-    "respuesta": "ciclope"
-  },
-  {
-    "respuesta": "Lionel|Messi"
-  },
-  {
-    "respuesta": "axl rose"
-  },
-  {
-    "respuesta": "la mujer|maravilla"
-  },
-  {
-    "respuesta": "shakira"
-  },
-  {
-    "respuesta": "bill gates"
-  },
-  {
-    "respuesta": "bradley|cooper"
-  },
-  {
-    "respuesta": "evita"
-  },
-  {
-    "respuesta": "emma|watson"
-  },
-  {
-    "respuesta": "aquaman"
-  },
-  {
-    "respuesta": "javier|bardem"
-  },
-  {
-    "respuesta": "john|lennon"
-  },
-  {
-    "respuesta": "deadpool"
-  },
-  {
-    "respuesta": "gal gadot"
-  },
-  {
-    "respuesta": "roger|federer"
-  },
-  {
-    "respuesta": "blake|lively"
-  },
-  {
-    "respuesta": "albert|einstein"
-  },
-  {
-    "respuesta": "flash"
-  },
-  {
-    "respuesta": "ricardo|darin"
-  },
-  {
-    "respuesta": "lady gaga"
-  },
-  {
-    "respuesta": "ben|affleck"
-  },
-  {
-    "respuesta": "micheal|jordan"
-  },
-  {
-    "respuesta": "angelina|jolie"
-  },
-  {
-    "respuesta": "woody|allen"
-  },
-  {
-    "respuesta": "david|bowie"
-  },
-  {
-    "respuesta": "daredevil"
-  },
-  {
-    "respuesta": "robert|downey jr"
-  },
-  {
-    "respuesta": "arnold|schwarzenegger"
-  },
-  {
-    "respuesta": "emily|blunt"
-  },
-  {
-    "respuesta": "mahatma|gandhi"
-  },
-  {
-    "respuesta": "batman"
-  },
-  {
-    "respuesta": "tom cruise"
-  },
-  {
-    "respuesta": "novak|djokovic"
-  },
-  {
-    "respuesta": "lenny|kravitz"
-  },
-  {
-    "respuesta": "diego|maradona"
-  },
-  {
-    "respuesta": "leonardo|dicaprio"
-  },
-  {
-    "respuesta": "robert|de niro"
-  },
-  {
-    "respuesta": "amy|winehouse"
-  },
-  {
-    "respuesta": "black|widow"
-  },
-  {
-    "respuesta": "juan martin|del potro"
-  },
-  {
-    "respuesta": "dr strange"
-  },
-  {
-    "respuesta": "matt|damon"
-  },
-  {
-    "respuesta": "cameron|diaz"
-  },
-  {
-    "respuesta": "agente|coulson"
-  },
-  {
-    "respuesta": "denzel|washington"
-  },
-  {
-    "respuesta": "Dwayne|Johnson"
-  },
-  {
-    "respuesta": "papa|francisco"
-  },
-  {
-    "respuesta": "anne|hathaway"
-  },
-  {
-    "respuesta": "antman"
-  },
-  {
-    "respuesta": "sandra|bullock"
-  },
-  {
-    "respuesta": "capitan|america"
-  },
-  {
-    "respuesta": "johnny|deep"
-  },
-  {
-    "respuesta": "aaron|paul"
-  },
-  {
-    "respuesta": "antorcha|humana"
-  },
-  {
-    "respuesta": "elvis|presley"
-  },
-  {
-    "respuesta": "wolverine"
-  },
-  {
-    "respuesta": "nicolas|cage"
-  },
-  {
-    "respuesta": "bishop"
-  },
-  {
-    "respuesta": "cristiano|ronaldo"
-  },
-  {
-    "respuesta": "electro"
-  },
-  {
-    "respuesta": "mark|wahlberg"
-  },
-  {
-    "respuesta": "christian|bale"
-  },
-  {
-    "respuesta": "freddie|mercury"
-  },
-  {
-    "respuesta": "charles|xavier"
-  },
-  {
-    "respuesta": "spiderman"
-  },
-  {
-    "respuesta": "jason|statham"
-  },
-  {
-    "respuesta": "mike|tyson"
-  },
-  {
-    "respuesta": "gaston|gaudio"
-  },
-  {
-    "respuesta": "ironman"
-  },
-  {
-    "respuesta": "mel|gibson"
-  },
-  {
-    "respuesta": "richard|gere"
-  },
-  {
-    "respuesta": "el soldado|del invierno"
-  },
-  {
-    "respuesta": "black|panther"
-  },
-  {
-    "respuesta": "coloso"
-  },
-  {
-    "respuesta": "joan manuel|serrat"
-  },
-  {
-    "respuesta": "falcon"
-  },
-  {
-    "respuesta": "tom|hanks"
-  },
-  {
-    "respuesta": "hawkeye"
-  },
-  {
-    "respuesta": "bestia"
-  },
-  {
-    "respuesta": "groot"
-  },
-  {
-    "respuesta": "jennifer|lawrence"
-  },
-  {
-    "respuesta": "bruce|willis"
-  },
-  {
-    "respuesta": "will|smith"
-  },
-  {
-    "respuesta": "rachel|mcadams"
-  },
-  {
-    "respuesta": "michael|jackson"
-  },
-  {
-    "respuesta": "nightcrawler"
-  },
-  {
-    "respuesta": "brad|pitt"
-  },
-  {
-    "respuesta": "loki"
-  },
-  {
-    "respuesta": "muhammad|ali"
-  },
-  {
-    "respuesta": "neymar jr"
-  },
-  {
-    "respuesta": "hugh|jackman"
-  },
-  {
-    "respuesta": "magneto"
-  },
-  {
-    "respuesta": "steve|jobs"
-  },
-  {
-    "respuesta": "rafa|nadal"
-  },
-  {
-    "respuesta": "matthew|perry"
-  },
-  {
-    "respuesta": "marilyn|monroe"
-  },
-  {
-    "respuesta": "superman"
-  },
-  {
-    "respuesta": "penelope|cruz"
-  },
-  {
-    "respuesta": "hulk"
-  },
-  {
-    "respuesta": "mick|jagger"
-  },
-  {
-    "respuesta": "jennifer|lopez"
-  },
-  {
-    "respuesta": "iceman"
-  },
-  {
-    "respuesta": "ashton|kutcher"
-  },
-  {
-    "respuesta": "paul|mccartney"
-  },
-  {
-    "respuesta": "mystique"
-  },
-  {
-    "respuesta": "nick|fury"
-  },
-  {
-    "respuesta": "katy|perry"
-  },
-  {
-    "respuesta": "liv|tyler"
-  },
-  {
-    "respuesta": "Charlize|Theron"
-  },
-  {
-    "respuesta": "keanu|reeves"
-  },
-  {
-    "respuesta": "quicksilver"
-  },
-  {
-    "respuesta": "ricky|martin"
-  },
-  {
-    "respuesta": "ryan|reynolds"
-  },
-  {
-    "respuesta": "craneo|rojo"
-  },
-  {
-    "respuesta": "star|lord"
-  },
-  {
-    "respuesta": "ultron"
-  },
-  {
-    "respuesta": "vision"
-  },
-  {
-    "respuesta": "rihanna"
-  },
-  {
-    "respuesta": "zac|efron"
-  },
-  {
-    "respuesta": "sylvester|stallone"
-  },
-  {
-    "respuesta": "silver|surfer"
-  },
-  {
-    "respuesta": "steven|tyler"
-  },
-  {
-    "respuesta": "rocket|racoon"
-  },
-  {
-    "respuesta": "charly|sheen"
-  },
-  {
-    "respuesta": "ryan|gosling"
-  },
-  {
-    "respuesta": "scarlet|johansson"
-  },
-  {
-    "respuesta": "chris|hemsworth"
-  },
-  {
-    "respuesta": "joaquin|sabina"
-  },
-  {
-    "respuesta": "salma|hayek"
-  },
-  {
-    "respuesta": "selena|gomez"
-  },
-  {
-    "respuesta": "kristen|stewart"
-  },
-  {
-    "respuesta": "adam|sandler"
-  },
-  {
-    "respuesta": "tormenta"
-  },
-  {
-    "respuesta": "thor"
-  },
-  {
-    "respuesta": "slash"
-  },
-  {
-    "respuesta": "la mole"
-  },
-  {
-    "respuesta": "quentin|tarantino"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "jennifer|aniston",
+      "solucion":""
+    },
+    {
+      "respuesta": "ciclope",
+      "solucion":""
+    },
+    {
+      "respuesta": "Lionel|Messi",
+      "solucion":""
+    },
+    {
+      "respuesta": "axl rose",
+      "solucion":""
+    },
+    {
+      "respuesta": "la mujer|maravilla",
+      "solucion":""
+    },
+    {
+      "respuesta": "shakira",
+      "solucion":""
+    },
+    {
+      "respuesta": "bill gates",
+      "solucion":""
+    },
+    {
+      "respuesta": "bradley|cooper",
+      "solucion":""
+    },
+    {
+      "respuesta": "evita",
+      "solucion":""
+    },
+    {
+      "respuesta": "emma|watson",
+      "solucion":""
+    },
+    {
+      "respuesta": "aquaman",
+      "solucion":""
+    },
+    {
+      "respuesta": "javier|bardem",
+      "solucion":""
+    },
+    {
+      "respuesta": "john|lennon",
+      "solucion":""
+    },
+    {
+      "respuesta": "deadpool",
+      "solucion":""
+    },
+    {
+      "respuesta": "gal gadot",
+      "solucion":""
+    },
+    {
+      "respuesta": "roger|federer",
+      "solucion":""
+    },
+    {
+      "respuesta": "blake|lively",
+      "solucion":""
+    },
+    {
+      "respuesta": "albert|einstein",
+      "solucion":""
+    },
+    {
+      "respuesta": "flash",
+      "solucion":""
+    },
+    {
+      "respuesta": "ricardo|darin",
+      "solucion":""
+    },
+    {
+      "respuesta": "lady gaga",
+      "solucion":""
+    },
+    {
+      "respuesta": "ben|affleck",
+      "solucion":""
+    },
+    {
+      "respuesta": "micheal|jordan",
+      "solucion":""
+    },
+    {
+      "respuesta": "angelina|jolie",
+      "solucion":""
+    },
+    {
+      "respuesta": "woody|allen",
+      "solucion":""
+    },
+    {
+      "respuesta": "david|bowie",
+      "solucion":""
+    },
+    {
+      "respuesta": "daredevil",
+      "solucion":""
+    },
+    {
+      "respuesta": "robert|downey jr",
+      "solucion":""
+    },
+    {
+      "respuesta": "arnold|schwarzenegger",
+      "solucion":""
+    },
+    {
+      "respuesta": "emily|blunt",
+      "solucion":""
+    },
+    {
+      "respuesta": "mahatma|gandhi",
+      "solucion":""
+    },
+    {
+      "respuesta": "batman",
+      "solucion":""
+    },
+    {
+      "respuesta": "tom cruise",
+      "solucion":""
+    },
+    {
+      "respuesta": "novak|djokovic",
+      "solucion":""
+    },
+    {
+      "respuesta": "lenny|kravitz",
+      "solucion":""
+    },
+    {
+      "respuesta": "diego|maradona",
+      "solucion":""
+    },
+    {
+      "respuesta": "leonardo|dicaprio",
+      "solucion":""
+    },
+    {
+      "respuesta": "robert|de niro",
+      "solucion":""
+    },
+    {
+      "respuesta": "amy|winehouse",
+      "solucion":""
+    },
+    {
+      "respuesta": "black|widow",
+      "solucion":""
+    },
+    {
+      "respuesta": "juan martin|del potro",
+      "solucion":""
+    },
+    {
+      "respuesta": "dr strange",
+      "solucion":""
+    },
+    {
+      "respuesta": "matt|damon",
+      "solucion":""
+    },
+    {
+      "respuesta": "cameron|diaz",
+      "solucion":""
+    },
+    {
+      "respuesta": "agente|coulson",
+      "solucion":""
+    },
+    {
+      "respuesta": "denzel|washington",
+      "solucion":""
+    },
+    {
+      "respuesta": "Dwayne|Johnson",
+      "solucion":""
+    },
+    {
+      "respuesta": "papa|francisco",
+      "solucion":""
+    },
+    {
+      "respuesta": "anne|hathaway",
+      "solucion":""
+    },
+    {
+      "respuesta": "antman",
+      "solucion":""
+    },
+    {
+      "respuesta": "sandra|bullock",
+      "solucion":""
+    },
+    {
+      "respuesta": "capitan|america",
+      "solucion":""
+    },
+    {
+      "respuesta": "johnny|deep",
+      "solucion":""
+    },
+    {
+      "respuesta": "aaron|paul",
+      "solucion":""
+    },
+    {
+      "respuesta": "antorcha|humana",
+      "solucion":""
+    },
+    {
+      "respuesta": "elvis|presley",
+      "solucion":""
+    },
+    {
+      "respuesta": "wolverine",
+      "solucion":""
+    },
+    {
+      "respuesta": "nicolas|cage",
+      "solucion":""
+    },
+    {
+      "respuesta": "bishop",
+      "solucion":""
+    },
+    {
+      "respuesta": "cristiano|ronaldo",
+      "solucion":""
+    },
+    {
+      "respuesta": "electro",
+      "solucion":""
+    },
+    {
+      "respuesta": "mark|wahlberg",
+      "solucion":""
+    },
+    {
+      "respuesta": "christian|bale",
+      "solucion":""
+    },
+    {
+      "respuesta": "freddie|mercury",
+      "solucion":""
+    },
+    {
+      "respuesta": "charles|xavier",
+      "solucion":""
+    },
+    {
+      "respuesta": "spiderman",
+      "solucion":""
+    },
+    {
+      "respuesta": "jason|statham",
+      "solucion":""
+    },
+    {
+      "respuesta": "mike|tyson",
+      "solucion":""
+    },
+    {
+      "respuesta": "gaston|gaudio",
+      "solucion":""
+    },
+    {
+      "respuesta": "ironman",
+      "solucion":""
+    },
+    {
+      "respuesta": "mel|gibson",
+      "solucion":""
+    },
+    {
+      "respuesta": "richard|gere",
+      "solucion":""
+    },
+    {
+      "respuesta": "el soldado|del invierno",
+      "solucion":""
+    },
+    {
+      "respuesta": "black|panther",
+      "solucion":""
+    },
+    {
+      "respuesta": "coloso",
+      "solucion":""
+    },
+    {
+      "respuesta": "joan manuel|serrat",
+      "solucion":""
+    },
+    {
+      "respuesta": "falcon",
+      "solucion":""
+    },
+    {
+      "respuesta": "tom|hanks",
+      "solucion":""
+    },
+    {
+      "respuesta": "hawkeye",
+      "solucion":""
+    },
+    {
+      "respuesta": "bestia",
+      "solucion":""
+    },
+    {
+      "respuesta": "groot",
+      "solucion":""
+    },
+    {
+      "respuesta": "jennifer|lawrence",
+      "solucion":""
+    },
+    {
+      "respuesta": "bruce|willis",
+      "solucion":""
+    },
+    {
+      "respuesta": "will|smith",
+      "solucion":""
+    },
+    {
+      "respuesta": "rachel|mcadams",
+      "solucion":""
+    },
+    {
+      "respuesta": "michael|jackson",
+      "solucion":""
+    },
+    {
+      "respuesta": "nightcrawler",
+      "solucion":""
+    },
+    {
+      "respuesta": "brad|pitt",
+      "solucion":""
+    },
+    {
+      "respuesta": "loki",
+      "solucion":""
+    },
+    {
+      "respuesta": "muhammad|ali",
+      "solucion":""
+    },
+    {
+      "respuesta": "neymar jr",
+      "solucion":""
+    },
+    {
+      "respuesta": "hugh|jackman",
+      "solucion":""
+    },
+    {
+      "respuesta": "magneto",
+      "solucion":""
+    },
+    {
+      "respuesta": "steve|jobs",
+      "solucion":""
+    },
+    {
+      "respuesta": "rafa|nadal",
+      "solucion":""
+    },
+    {
+      "respuesta": "matthew|perry",
+      "solucion":""
+    },
+    {
+      "respuesta": "marilyn|monroe",
+      "solucion":""
+    },
+    {
+      "respuesta": "superman",
+      "solucion":""
+    },
+    {
+      "respuesta": "penelope|cruz",
+      "solucion":""
+    },
+    {
+      "respuesta": "hulk",
+      "solucion":""
+    },
+    {
+      "respuesta": "mick|jagger",
+      "solucion":""
+    },
+    {
+      "respuesta": "jennifer|lopez",
+      "solucion":""
+    },
+    {
+      "respuesta": "iceman",
+      "solucion":""
+    },
+    {
+      "respuesta": "ashton|kutcher",
+      "solucion":""
+    },
+    {
+      "respuesta": "paul|mccartney",
+      "solucion":""
+    },
+    {
+      "respuesta": "mystique",
+      "solucion":""
+    },
+    {
+      "respuesta": "nick|fury",
+      "solucion":""
+    },
+    {
+      "respuesta": "katy|perry",
+      "solucion":""
+    },
+    {
+      "respuesta": "liv|tyler",
+      "solucion":""
+    },
+    {
+      "respuesta": "Charlize|Theron",
+      "solucion":""
+    },
+    {
+      "respuesta": "keanu|reeves",
+      "solucion":""
+    },
+    {
+      "respuesta": "quicksilver",
+      "solucion":""
+    },
+    {
+      "respuesta": "ricky|martin",
+      "solucion":""
+    },
+    {
+      "respuesta": "ryan|reynolds",
+      "solucion":""
+    },
+    {
+      "respuesta": "craneo|rojo",
+      "solucion":""
+    },
+    {
+      "respuesta": "star|lord",
+      "solucion":""
+    },
+    {
+      "respuesta": "ultron",
+      "solucion":""
+    },
+    {
+      "respuesta": "vision",
+      "solucion":""
+    },
+    {
+      "respuesta": "rihanna",
+      "solucion":""
+    },
+    {
+      "respuesta": "zac|efron",
+      "solucion":""
+    },
+    {
+      "respuesta": "sylvester|stallone",
+      "solucion":""
+    },
+    {
+      "respuesta": "silver|surfer",
+      "solucion":""
+    },
+    {
+      "respuesta": "steven|tyler",
+      "solucion":""
+    },
+    {
+      "respuesta": "rocket|racoon",
+      "solucion":""
+    },
+    {
+      "respuesta": "charly|sheen",
+      "solucion":""
+    },
+    {
+      "respuesta": "ryan|gosling",
+      "solucion":""
+    },
+    {
+      "respuesta": "scarlet|johansson",
+      "solucion":""
+    },
+    {
+      "respuesta": "chris|hemsworth",
+      "solucion":""
+    },
+    {
+      "respuesta": "joaquin|sabina",
+      "solucion":""
+    },
+    {
+      "respuesta": "salma|hayek",
+      "solucion":""
+    },
+    {
+      "respuesta": "selena|gomez",
+      "solucion":""
+    },
+    {
+      "respuesta": "kristen|stewart",
+      "solucion":""
+    },
+    {
+      "respuesta": "adam|sandler",
+      "solucion":""
+    },
+    {
+      "respuesta": "tormenta",
+      "solucion":""
+    },
+    {
+      "respuesta": "thor",
+      "solucion":""
+    },
+    {
+      "respuesta": "slash",
+      "solucion":""
+    },
+    {
+      "respuesta": "la mole",
+      "solucion":""
+    },
+    {
+      "respuesta": "quentin|tarantino",
+      "solucion":""
+    }
+  ]
 }

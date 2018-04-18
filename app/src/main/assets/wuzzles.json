@@ -1,246 +1,486 @@
-{"listado": [
-  {
-
-  },{
-    "respuesta": "headcount"
-  },{
-    "respuesta": "blind date"
-  },{
-    "respuesta": "the last|straw"
-  },{
-    "respuesta": "minimize"
-  },{
-    "respuesta": "datebook"
-  },{
-    "respuesta": "headquarters"
-  },{
-    "respuesta": "candidate"
-  },{
-    "respuesta": "pineapple"
-  },{
-    "respuesta": "toothpaste"
-  },{
-    "respuesta": "toothbrush"
-  },{
-    "respuesta": "beanbag"
-  },{
-    "respuesta": "campfire"
-  },{
-    "respuesta": "buttercup"
-  },{
-    "respuesta": "brainwave"
-  },{
-    "respuesta": "snowman"
-  },{
-    "respuesta": "keyboard"
-  },{
-    "respuesta": "shoplifter"
-  },{
-    "respuesta": "airline"
-  },{
-    "respuesta": "rainbow"
-  },{
-    "respuesta": "pancake"
-  },{
-    "respuesta": "airport"
-  },{
-    "respuesta": "banknote"
-  },{
-    "respuesta": "freebie"
-  },{
-    "respuesta": "eyelid"
-  },{
-    "respuesta": "cowhide"
-  },{
-    "respuesta": "popstar"
-  },{
-    "respuesta": "earphones"
-  },{
-    "respuesta": "season"
-  },{
-    "respuesta": "manpower"
-  },{
-    "respuesta": "farmland"
-  },{
-    "respuesta": "pickpocket"
-  },{
-    "respuesta": "armband"
-  },{
-    "respuesta": "lighthouse"
-  },{
-    "respuesta": "homesick"
-  },{
-    "respuesta": "cashbox"
-  },{
-    "respuesta": "reading between|the lines"
-  },{
-    "respuesta": "pretty|please"
-  },{
-    "respuesta": "fast|food"
-  },{
-    "respuesta": "nice to|meet you"
-  },{
-    "respuesta": "make up|for lost time"
-  },{
-    "respuesta": "apple pie"
-  },{
-    "respuesta": "crossroads"
-  },{
-    "respuesta": "all over|again"
-  },{
-    "respuesta": "hit below|the belt"
-  },{
-    "respuesta": "reduction"
-  },{
-    "respuesta": "scent"
-  },{
-    "respuesta": "flat tire"
-  },{
-    "respuesta": "storm|in a teacup"
-  },{
-    "respuesta": "couch|potato"
-  },{
-    "respuesta": "rat|race"
-  },{
-    "respuesta": "forgive and|forget"
-  },{
-    "respuesta": "up for grabs"
-  },{
-    "respuesta": "credibility|gap"
-  },{
-    "respuesta": "skate on|thin ice"
-  },{
-    "respuesta": "trip around|the world"
-  },{
-    "respuesta": "head over|heels"
-  },{
-    "respuesta": "middle aged"
-  },{
-    "respuesta": "go up|in smoke"
-  },{
-    "respuesta": "safety|in numbers"
-  },{
-    "respuesta": "a friend|in need"
-  },{
-    "respuesta": "what goes up|must come down"
-  },{
-    "respuesta": "broken|promise"
-  },{
-    "respuesta": "green|with envy"
-  },{
-    "respuesta": "foreign|movie"
-  },{
-    "respuesta": "turn the|other cheek"
-  },{
-    "respuesta": "see|for yourself"
-  },{
-    "respuesta": "small talk"
-  },{
-    "respuesta": "tickled pink"
-  },{
-    "respuesta": "side show"
-  },{
-    "respuesta": "the wrong end|of the stick"
-  },{
-    "respuesta": "back to|square one"
-  },{
-    "respuesta": "too funny|for words"
-  },{
-    "respuesta": "for instance"
-  },{
-    "respuesta": "bewitch"
-  },{
-    "respuesta": "way|overpriced"
-  },{
-    "respuesta": "address"
-  },{
-    "respuesta": "too little|too late"
-  },{
-    "respuesta": "stretching|the truth"
-  },{
-    "respuesta": "spaceship"
-  },{
-    "respuesta": "keeping you|out of trouble"
-  },{
-    "respuesta": "to sum|it up"
-  },{
-    "respuesta": "sixth|sense"
-  },{
-    "respuesta": "better safe|than sorry"
-  },{
-    "respuesta": "one life|to live"
-  },{
-    "respuesta": "back in|five minutes"
-  },{
-    "respuesta": "a shot|in the dark"
-  },{
-    "respuesta": "working|over time"
-  },{
-    "respuesta": "cry all the|way to the bank"
-  },{
-    "respuesta": "barking up|the wrong tree"
-  },{
-    "respuesta": "the stakes|are high"
-  },{
-    "respuesta": "tulips"
-  },{
-    "respuesta": "no one|to blame"
-  },{
-    "respuesta": "leftovers"
-  },{
-    "respuesta": "jack in|the box"
-  },{
-    "respuesta": "down payment"
-  },{
-    "respuesta": "once in|a blue moon"
-  },{
-    "respuesta": "asleep at|the wheel"
-  },{
-    "respuesta": "coffee break"
-  },{
-    "respuesta": "quarterback"
-  },{
-    "respuesta": "back up"
-  },{
-    "respuesta": "fooling|around"
-  },{
-    "respuesta": "dr house"
-  },{
-    "respuesta": "dr dolittle"
-  },{
-    "respuesta": "a monkey|on your back"
-  },{
-    "respuesta": "a play|on words"
-  },{
-    "respuesta": "get in shape"
-  },{
-    "respuesta": "a kick|in the butt"
-  },{
-    "respuesta": "high seas"
-  },{
-    "respuesta": "put two and|two together"
-  },{
-    "respuesta": "somewhere over|the rainbow"
-  },{
-    "respuesta": "home is where|the heart is"
-  },{
-    "respuesta": "see eye|to eye"
-  },{
-    "respuesta": "look out|for number one"
-  },{
-    "respuesta": "right under|the nose"
-  },{
-    "respuesta": "over my|dead body"
-  },{
-    "respuesta": "hot under|the collar"
-  },{
-    "respuesta": "broken heart"
-  },{
-    "respuesta": "fat chance"
-  },{
-    "respuesta": "falling|temperature"
-  },{
-    "respuesta": "head in|the sand"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "headcount",
+      "solucion":""
+    },
+    {
+      "respuesta": "blind date",
+      "solucion":""
+    },
+    {
+      "respuesta": "the last|straw",
+      "solucion":""
+    },
+    {
+      "respuesta": "minimize",
+      "solucion":""
+    },
+    {
+      "respuesta": "datebook",
+      "solucion":""
+    },
+    {
+      "respuesta": "headquarters",
+      "solucion":""
+    },
+    {
+      "respuesta": "candidate",
+      "solucion":""
+    },
+    {
+      "respuesta": "pineapple",
+      "solucion":""
+    },
+    {
+      "respuesta": "toothpaste",
+      "solucion":""
+    },
+    {
+      "respuesta": "toothbrush",
+      "solucion":""
+    },
+    {
+      "respuesta": "beanbag",
+      "solucion":""
+    },
+    {
+      "respuesta": "campfire",
+      "solucion":""
+    },
+    {
+      "respuesta": "buttercup",
+      "solucion":""
+    },
+    {
+      "respuesta": "brainwave",
+      "solucion":""
+    },
+    {
+      "respuesta": "snowman",
+      "solucion":""
+    },
+    {
+      "respuesta": "keyboard",
+      "solucion":""
+    },
+    {
+      "respuesta": "shoplifter",
+      "solucion":""
+    },
+    {
+      "respuesta": "airline",
+      "solucion":""
+    },
+    {
+      "respuesta": "rainbow",
+      "solucion":""
+    },
+    {
+      "respuesta": "pancake",
+      "solucion":""
+    },
+    {
+      "respuesta": "airport",
+      "solucion":""
+    },
+    {
+      "respuesta": "banknote",
+      "solucion":""
+    },
+    {
+      "respuesta": "freebie",
+      "solucion":""
+    },
+    {
+      "respuesta": "eyelid",
+      "solucion":""
+    },
+    {
+      "respuesta": "cowhide",
+      "solucion":""
+    },
+    {
+      "respuesta": "popstar",
+      "solucion":""
+    },
+    {
+      "respuesta": "earphones",
+      "solucion":""
+    },
+    {
+      "respuesta": "season",
+      "solucion":""
+    },
+    {
+      "respuesta": "manpower",
+      "solucion":""
+    },
+    {
+      "respuesta": "farmland",
+      "solucion":""
+    },
+    {
+      "respuesta": "pickpocket",
+      "solucion":""
+    },
+    {
+      "respuesta": "armband",
+      "solucion":""
+    },
+    {
+      "respuesta": "lighthouse",
+      "solucion":""
+    },
+    {
+      "respuesta": "homesick",
+      "solucion":""
+    },
+    {
+      "respuesta": "cashbox",
+      "solucion":""
+    },
+    {
+      "respuesta": "reading between|the lines",
+      "solucion":""
+    },
+    {
+      "respuesta": "pretty|please",
+      "solucion":""
+    },
+    {
+      "respuesta": "fast|food",
+      "solucion":""
+    },
+    {
+      "respuesta": "nice to|meet you",
+      "solucion":""
+    },
+    {
+      "respuesta": "make up|for lost time",
+      "solucion":""
+    },
+    {
+      "respuesta": "apple pie",
+      "solucion":""
+    },
+    {
+      "respuesta": "crossroads",
+      "solucion":""
+    },
+    {
+      "respuesta": "all over|again",
+      "solucion":""
+    },
+    {
+      "respuesta": "hit below|the belt",
+      "solucion":""
+    },
+    {
+      "respuesta": "reduction",
+      "solucion":""
+    },
+    {
+      "respuesta": "scent",
+      "solucion":""
+    },
+    {
+      "respuesta": "flat tire",
+      "solucion":""
+    },
+    {
+      "respuesta": "storm|in a teacup",
+      "solucion":""
+    },
+    {
+      "respuesta": "couch|potato",
+      "solucion":""
+    },
+    {
+      "respuesta": "rat|race",
+      "solucion":""
+    },
+    {
+      "respuesta": "forgive and|forget",
+      "solucion":""
+    },
+    {
+      "respuesta": "up for grabs",
+      "solucion":""
+    },
+    {
+      "respuesta": "credibility|gap",
+      "solucion":""
+    },
+    {
+      "respuesta": "skate on|thin ice",
+      "solucion":""
+    },
+    {
+      "respuesta": "trip around|the world",
+      "solucion":""
+    },
+    {
+      "respuesta": "head over|heels",
+      "solucion":""
+    },
+    {
+      "respuesta": "middle aged",
+      "solucion":""
+    },
+    {
+      "respuesta": "go up|in smoke",
+      "solucion":""
+    },
+    {
+      "respuesta": "safety|in numbers",
+      "solucion":""
+    },
+    {
+      "respuesta": "a friend|in need",
+      "solucion":""
+    },
+    {
+      "respuesta": "what goes up|must come down",
+      "solucion":""
+    },
+    {
+      "respuesta": "broken|promise",
+      "solucion":""
+    },
+    {
+      "respuesta": "green|with envy",
+      "solucion":""
+    },
+    {
+      "respuesta": "foreign|movie",
+      "solucion":""
+    },
+    {
+      "respuesta": "turn the|other cheek",
+      "solucion":""
+    },
+    {
+      "respuesta": "see|for yourself",
+      "solucion":""
+    },
+    {
+      "respuesta": "small talk",
+      "solucion":""
+    },
+    {
+      "respuesta": "tickled pink",
+      "solucion":""
+    },
+    {
+      "respuesta": "side show",
+      "solucion":""
+    },
+    {
+      "respuesta": "the wrong end|of the stick",
+      "solucion":""
+    },
+    {
+      "respuesta": "back to|square one",
+      "solucion":""
+    },
+    {
+      "respuesta": "too funny|for words",
+      "solucion":""
+    },
+    {
+      "respuesta": "for instance",
+      "solucion":""
+    },
+    {
+      "respuesta": "bewitch",
+      "solucion":""
+    },
+    {
+      "respuesta": "way|overpriced",
+      "solucion":""
+    },
+    {
+      "respuesta": "address",
+      "solucion":""
+    },
+    {
+      "respuesta": "too little|too late",
+      "solucion":""
+    },
+    {
+      "respuesta": "stretching|the truth",
+      "solucion":""
+    },
+    {
+      "respuesta": "spaceship",
+      "solucion":""
+    },
+    {
+      "respuesta": "keeping you|out of trouble",
+      "solucion":""
+    },
+    {
+      "respuesta": "to sum|it up",
+      "solucion":""
+    },
+    {
+      "respuesta": "sixth|sense",
+      "solucion":""
+    },
+    {
+      "respuesta": "better safe|than sorry",
+      "solucion":""
+    },
+    {
+      "respuesta": "one life|to live",
+      "solucion":""
+    },
+    {
+      "respuesta": "back in|five minutes",
+      "solucion":""
+    },
+    {
+      "respuesta": "a shot|in the dark",
+      "solucion":""
+    },
+    {
+      "respuesta": "working|over time",
+      "solucion":""
+    },
+    {
+      "respuesta": "cry all the|way to the bank",
+      "solucion":""
+    },
+    {
+      "respuesta": "barking up|the wrong tree",
+      "solucion":""
+    },
+    {
+      "respuesta": "the stakes|are high",
+      "solucion":""
+    },
+    {
+      "respuesta": "tulips",
+      "solucion":""
+    },
+    {
+      "respuesta": "no one|to blame",
+      "solucion":""
+    },
+    {
+      "respuesta": "leftovers",
+      "solucion":""
+    },
+    {
+      "respuesta": "jack in|the box",
+      "solucion":""
+    },
+    {
+      "respuesta": "down payment",
+      "solucion":""
+    },
+    {
+      "respuesta": "once in|a blue moon",
+      "solucion":""
+    },
+    {
+      "respuesta": "asleep at|the wheel",
+      "solucion":""
+    },
+    {
+      "respuesta": "coffee break",
+      "solucion":""
+    },
+    {
+      "respuesta": "quarterback",
+      "solucion":""
+    },
+    {
+      "respuesta": "back up",
+      "solucion":""
+    },
+    {
+      "respuesta": "fooling|around",
+      "solucion":""
+    },
+    {
+      "respuesta": "dr house",
+      "solucion":""
+    },
+    {
+      "respuesta": "dr dolittle",
+      "solucion":""
+    },
+    {
+      "respuesta": "a monkey|on your back",
+      "solucion":""
+    },
+    {
+      "respuesta": "a play|on words",
+      "solucion":""
+    },
+    {
+      "respuesta": "get in shape",
+      "solucion":""
+    },
+    {
+      "respuesta": "a kick|in the butt",
+      "solucion":""
+    },
+    {
+      "respuesta": "high seas",
+      "solucion":""
+    },
+    {
+      "respuesta": "put two and|two together",
+      "solucion":""
+    },
+    {
+      "respuesta": "somewhere over|the rainbow",
+      "solucion":""
+    },
+    {
+      "respuesta": "home is where|the heart is",
+      "solucion":""
+    },
+    {
+      "respuesta": "see eye|to eye",
+      "solucion":""
+    },
+    {
+      "respuesta": "look out|for number one",
+      "solucion":""
+    },
+    {
+      "respuesta": "right under|the nose",
+      "solucion":""
+    },
+    {
+      "respuesta": "over my|dead body",
+      "solucion":""
+    },
+    {
+      "respuesta": "hot under|the collar",
+      "solucion":""
+    },
+    {
+      "respuesta": "broken heart",
+      "solucion":""
+    },
+    {
+      "respuesta": "fat chance",
+      "solucion":""
+    },
+    {
+      "respuesta": "falling|temperature",
+      "solucion":""
+    },
+    {
+      "respuesta": "head in|the sand",
+      "solucion":""
+    }
+  ]
 }

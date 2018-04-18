@@ -1,305 +1,406 @@
-{"listado": [
-  {
-
-  },{
-    "respuesta": "chrome"
-  },
-  {
-    "respuesta": "facebook"
-  },
-  {
-    "respuesta": "wordpress"
-  },
-  {
-    "respuesta": "twitter"
-  },
-  {
-    "respuesta": "radio|metro"
-  },
-  {
-    "respuesta": "cartoon|network"
-  },
-  {
-    "respuesta": "nickelodeon"
-  },
-  {
-    "respuesta": "apple"
-  },
-  {
-    "respuesta": "amazon"
-  },
-  {
-    "respuesta": "whatsapp"
-  },
-  {
-    "respuesta": "mini cooper"
-  },
-  {
-    "respuesta": "claro"
-  },
-  {
-    "respuesta": "chevrolet"
-  },
-  {
-    "respuesta": "ford"
-  },
-  {
-    "respuesta": "kodak"
-  },
-  {
-    "respuesta": "lacoste"
-  },
-  {
-    "respuesta": "play|station"
-  },
-  {
-    "respuesta": "peugeot"
-  },
-  {
-    "respuesta": "mercedes|benz"
-  },
-  {
-    "respuesta": "pepsi"
-  },
-  {
-    "respuesta": "adidas"
-  },
-  {
-    "respuesta": "fisher|price"
-  },
-  {
-    "respuesta": "ferrari"
-  },
-  {
-    "respuesta": "firefox"
-  },
-  {
-    "respuesta": "nike"
-  },
-  {
-    "respuesta": "levis"
-  },
-  {
-    "respuesta": "volskwagen"
-  },
-  {
-    "respuesta": "umbro"
-  },
-  {
-    "respuesta": "coca cola"
-  },
-  {
-    "respuesta": "bacardi"
-  },
-  {
-    "respuesta": "motorola"
-  },
-  {
-    "respuesta": "suzuki"
-  },
-  {
-    "respuesta": "stella|artois"
-  },
-  {
-    "respuesta": "shell"
-  },
-  {
-    "respuesta": "seat"
-  },
-  {
-    "respuesta": "samsung"
-  },
-  {
-    "respuesta": "reebok"
-  },
-  {
-    "respuesta": "quilmes"
-  },
-  {
-    "respuesta": "gucci"
-  },
-  {
-    "respuesta": "converse"
-  },
-  {
-    "respuesta": "fanta"
-  },
-  {
-    "respuesta": "puma"
-  },
-  {
-    "respuesta": "pritt"
-  },
-  {
-    "respuesta": "audi"
-  },
-  {
-    "respuesta": "mcdonalds"
-  },
-  {
-    "respuesta": "chanel"
-  },
-  {
-    "respuesta": "bridgestone"
-  },
-  {
-    "respuesta": "bic"
-  },
-  {
-    "respuesta": "carolina|herrera"
-  },
-  {
-    "respuesta": "direct tv"
-  },
-  {
-    "respuesta": "citroen"
-  },
-  {
-    "respuesta": "instagram"
-  },
-  {
-    "respuesta": "dodge"
-  },
-  {
-    "respuesta": "speed"
-  },
-  {
-    "respuesta": "yves saint|laurent"
-  },
-  {
-    "respuesta": "gatorade"
-  },
-  {
-    "respuesta": "firestone"
-  },
-  {
-    "respuesta": "quiksilver"
-  },
-  {
-    "respuesta": "unilever"
-  },
-  {
-    "respuesta": "dove"
-  },
-  {
-    "respuesta": "carrefour"
-  },
-  {
-    "respuesta": "mitsubishi"
-  },
-  {
-    "respuesta": "le coq|sportif"
-  },
-  {
-    "respuesta": "opel"
-  },
-  {
-    "respuesta": "movistar"
-  },
-  {
-    "respuesta": "nestle"
-  },
-  {
-    "respuesta": "wilson"
-  },
-  {
-    "respuesta": "pringles"
-  },
-  {
-    "respuesta": "red bull"
-  },
-  {
-    "respuesta": "lego"
-  },
-  {
-    "respuesta": "honda"
-  },
-  {
-    "respuesta": "minolta"
-  },
-  {
-    "respuesta": "rip curl"
-  },
-  {
-    "respuesta": "mizuno"
-  },
-  {
-    "respuesta": "hewlett|packard"
-  },
-  {
-    "respuesta": "starbucks"
-  },
-  {
-    "respuesta": "giorgio|armani"
-  },
-  {
-    "respuesta": "lotto"
-  },
-  {
-    "respuesta": "new balance"
-  },
-  {
-    "respuesta": "kappa"
-  },
-  {
-    "respuesta": "rolex"
-  },
-  {
-    "respuesta": "dropbox"
-  },
-  {
-    "respuesta": "drive"
-  },
-  {
-    "respuesta": "burger king"
-  },
-  {
-    "respuesta": "timberland"
-  },
-  {
-    "respuesta": "visa"
-  },
-  {
-    "respuesta": "rayban"
-  },
-  {
-    "respuesta": "opera"
-  },
-  {
-    "respuesta": "vans"
-  },
-  {
-    "respuesta": "intel"
-  },
-  {
-    "respuesta": "wikipedia"
-  },
-  {
-    "respuesta": "mercado libre"
-  },
-  {
-    "respuesta": "ebay"
-  },
-  {
-    "respuesta": "nbc"
-  },
-  {
-    "respuesta": "pizza hut"
-  },
-  {
-    "respuesta": "toyota"
-  },
-  {
-    "respuesta": "bmw"
-  },
-  {
-    "respuesta": "lg"
-  },
-  {
-    "respuesta": "texaco"
-  },
-  {
-    "respuesta": "national|geographic"
-  }
-]
+{
+  "listado": [
+    {
+    },
+    {
+      "respuesta": "chrome",
+      "solucion":""
+    },
+    {
+      "respuesta": "facebook",
+      "solucion":""
+    },
+    {
+      "respuesta": "wordpress",
+      "solucion":""
+    },
+    {
+      "respuesta": "twitter",
+      "solucion":""
+    },
+    {
+      "respuesta": "radio|metro",
+      "solucion":""
+    },
+    {
+      "respuesta": "cartoon|network",
+      "solucion":""
+    },
+    {
+      "respuesta": "nickelodeon",
+      "solucion":""
+    },
+    {
+      "respuesta": "apple",
+      "solucion":""
+    },
+    {
+      "respuesta": "amazon",
+      "solucion":""
+    },
+    {
+      "respuesta": "whatsapp",
+      "solucion":""
+    },
+    {
+      "respuesta": "mini cooper",
+      "solucion":""
+    },
+    {
+      "respuesta": "claro",
+      "solucion":""
+    },
+    {
+      "respuesta": "chevrolet",
+      "solucion":""
+    },
+    {
+      "respuesta": "ford",
+      "solucion":""
+    },
+    {
+      "respuesta": "kodak",
+      "solucion":""
+    },
+    {
+      "respuesta": "lacoste",
+      "solucion":""
+    },
+    {
+      "respuesta": "play|station",
+      "solucion":""
+    },
+    {
+      "respuesta": "peugeot",
+      "solucion":""
+    },
+    {
+      "respuesta": "mercedes|benz",
+      "solucion":""
+    },
+    {
+      "respuesta": "pepsi",
+      "solucion":""
+    },
+    {
+      "respuesta": "adidas",
+      "solucion":""
+    },
+    {
+      "respuesta": "fisher|price",
+      "solucion":""
+    },
+    {
+      "respuesta": "ferrari",
+      "solucion":""
+    },
+    {
+      "respuesta": "firefox",
+      "solucion":""
+    },
+    {
+      "respuesta": "nike",
+      "solucion":""
+    },
+    {
+      "respuesta": "levis",
+      "solucion":""
+    },
+    {
+      "respuesta": "volskwagen",
+      "solucion":""
+    },
+    {
+      "respuesta": "umbro",
+      "solucion":""
+    },
+    {
+      "respuesta": "coca cola",
+      "solucion":""
+    },
+    {
+      "respuesta": "bacardi",
+      "solucion":""
+    },
+    {
+      "respuesta": "motorola",
+      "solucion":""
+    },
+    {
+      "respuesta": "suzuki",
+      "solucion":""
+    },
+    {
+      "respuesta": "stella|artois",
+      "solucion":""
+    },
+    {
+      "respuesta": "shell",
+      "solucion":""
+    },
+    {
+      "respuesta": "seat",
+      "solucion":""
+    },
+    {
+      "respuesta": "samsung",
+      "solucion":""
+    },
+    {
+      "respuesta": "reebok",
+      "solucion":""
+    },
+    {
+      "respuesta": "quilmes",
+      "solucion":""
+    },
+    {
+      "respuesta": "gucci",
+      "solucion":""
+    },
+    {
+      "respuesta": "converse",
+      "solucion":""
+    },
+    {
+      "respuesta": "fanta",
+      "solucion":""
+    },
+    {
+      "respuesta": "puma",
+      "solucion":""
+    },
+    {
+      "respuesta": "pritt",
+      "solucion":""
+    },
+    {
+      "respuesta": "audi",
+      "solucion":""
+    },
+    {
+      "respuesta": "mcdonalds",
+      "solucion":""
+    },
+    {
+      "respuesta": "chanel",
+      "solucion":""
+    },
+    {
+      "respuesta": "bridgestone",
+      "solucion":""
+    },
+    {
+      "respuesta": "bic",
+      "solucion":""
+    },
+    {
+      "respuesta": "carolina|herrera",
+      "solucion":""
+    },
+    {
+      "respuesta": "direct tv",
+      "solucion":""
+    },
+    {
+      "respuesta": "citroen",
+      "solucion":""
+    },
+    {
+      "respuesta": "instagram",
+      "solucion":""
+    },
+    {
+      "respuesta": "dodge",
+      "solucion":""
+    },
+    {
+      "respuesta": "speed",
+      "solucion":""
+    },
+    {
+      "respuesta": "yves saint|laurent",
+      "solucion":""
+    },
+    {
+      "respuesta": "gatorade",
+      "solucion":""
+    },
+    {
+      "respuesta": "firestone",
+      "solucion":""
+    },
+    {
+      "respuesta": "quiksilver",
+      "solucion":""
+    },
+    {
+      "respuesta": "unilever",
+      "solucion":""
+    },
+    {
+      "respuesta": "dove",
+      "solucion":""
+    },
+    {
+      "respuesta": "carrefour",
+      "solucion":""
+    },
+    {
+      "respuesta": "mitsubishi",
+      "solucion":""
+    },
+    {
+      "respuesta": "le coq|sportif",
+      "solucion":""
+    },
+    {
+      "respuesta": "opel",
+      "solucion":""
+    },
+    {
+      "respuesta": "movistar",
+      "solucion":""
+    },
+    {
+      "respuesta": "nestle",
+      "solucion":""
+    },
+    {
+      "respuesta": "wilson",
+      "solucion":""
+    },
+    {
+      "respuesta": "pringles",
+      "solucion":""
+    },
+    {
+      "respuesta": "red bull",
+      "solucion":""
+    },
+    {
+      "respuesta": "lego",
+      "solucion":""
+    },
+    {
+      "respuesta": "honda",
+      "solucion":""
+    },
+    {
+      "respuesta": "minolta",
+      "solucion":""
+    },
+    {
+      "respuesta": "rip curl",
+      "solucion":""
+    },
+    {
+      "respuesta": "mizuno",
+      "solucion":""
+    },
+    {
+      "respuesta": "hewlett|packard",
+      "solucion":""
+    },
+    {
+      "respuesta": "starbucks",
+      "solucion":""
+    },
+    {
+      "respuesta": "giorgio|armani",
+      "solucion":""
+    },
+    {
+      "respuesta": "lotto",
+      "solucion":""
+    },
+    {
+      "respuesta": "new balance",
+      "solucion":""
+    },
+    {
+      "respuesta": "kappa",
+      "solucion":""
+    },
+    {
+      "respuesta": "rolex",
+      "solucion":""
+    },
+    {
+      "respuesta": "dropbox",
+      "solucion":""
+    },
+    {
+      "respuesta": "drive",
+      "solucion":""
+    },
+    {
+      "respuesta": "burger king",
+      "solucion":""
+    },
+    {
+      "respuesta": "timberland",
+      "solucion":""
+    },
+    {
+      "respuesta": "visa",
+      "solucion":""
+    },
+    {
+      "respuesta": "rayban",
+      "solucion":""
+    },
+    {
+      "respuesta": "opera",
+      "solucion":""
+    },
+    {
+      "respuesta": "vans",
+      "solucion":""
+    },
+    {
+      "respuesta": "intel",
+      "solucion":""
+    },
+    {
+      "respuesta": "wikipedia",
+      "solucion":""
+    },
+    {
+      "respuesta": "mercado libre",
+      "solucion":""
+    },
+    {
+      "respuesta": "ebay",
+      "solucion":""
+    },
+    {
+      "respuesta": "nbc",
+      "solucion":""
+    },
+    {
+      "respuesta": "pizza hut",
+      "solucion":""
+    },
+    {
+      "respuesta": "toyota",
+      "solucion":""
+    },
+    {
+      "respuesta": "bmw",
+      "solucion":""
+    },
+    {
+      "respuesta": "lg",
+      "solucion":""
+    },
+    {
+      "respuesta": "texaco",
+      "solucion":""
+    },
+    {
+      "respuesta": "national|geographic",
+      "solucion":""
+    }
+  ]
 }

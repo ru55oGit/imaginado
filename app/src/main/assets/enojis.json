@@ -1,264 +1,522 @@
 {"listado": [
   {
 
-  },{
-    "respuesta": "life of pi"
-  },{
-    "respuesta": "dr dolittle"
-  },{
-    "respuesta": "psycho"
-  },{
-    "respuesta": "apollo 13"
-  },{
-    "respuesta": "kung fu|panda"
-  },{
-    "respuesta": "eat pray love"
-  },{
-    "respuesta": "blood|diamond"
-  },{
-    "respuesta": "et"
-  },{
-    "respuesta": "american pie"
-  },{
-    "respuesta": "men in black"
-  },{
-    "respuesta": "free willy"
-  },{
-    "respuesta": "up"
-  },{
-    "respuesta": "the Planet|of the Apes"
-  },{
-    "respuesta": "american|beauty"
-  },{
-    "respuesta": "the lion|king"
-  },{
-    "respuesta": "Gorillas|in the Mist"
-  },{
-    "respuesta": "The Devil|Wears Prada"
-  },{
-    "respuesta": "x men"
-  },{
-    "respuesta": "harry potter"
-  },{
-    "respuesta": "spiderman"
-  },{
-    "respuesta": "finding nemo"
-  },{
-    "respuesta": "mary poppins"
-  },{
-    "respuesta": "the hunger|games"
-  },{
-    "respuesta": "the fast and|the furious"
-  },{
-    "respuesta": "cars"
-  },{
-    "respuesta": "the kings|speech"
-  },{
-    "respuesta": "500 Days|of Summer"
-  },{
-    "respuesta": "angels and|demons"
-  },{
-    "respuesta": "Crocodile|dundee"
-  },{
-    "respuesta": "jaws"
-  },{
-    "respuesta": "sharknado"
-  },{
-    "respuesta": "Lady and|the Tramp"
-  },{
-    "respuesta": "home|alone"
-  },{
-    "respuesta": "rambo"
-  },{
-    "respuesta": "speed"
-  },{
-    "respuesta": "Puss in|Boots"
-  },{
-    "respuesta": "indiana|jones"
-  },{
-    "respuesta": "Pinocchio"
-  },{
-    "respuesta": "Ghostbusters"
-  },{
-    "respuesta": "ice age"
-  },{
-    "respuesta": "scary|movie"
-  },{
-    "respuesta": "pearl|harbor"
-  },{
-    "respuesta": "The Butterfly|Effect"
-  },{
-    "respuesta": "forrest|gump"
-  },{
-    "respuesta": "Diarios de|motocicleta"
-  },{
-    "respuesta": "volcano"
-  },{
-    "respuesta": "Armageddon"
-  },{
-    "respuesta": "The Scorpion|King"
-  },{
-    "respuesta": "the ring"
-  },{
-    "respuesta": "Gravity"
-  },{
-    "respuesta": "12 Monkeys"
-  },{
-    "respuesta": "ratatouille"
-  },{
-    "respuesta": "127 hours"
-  },{
-    "respuesta": "Twilight"
-  },{
-    "respuesta": "batman"
-  },{
-    "respuesta": "king kong"
-  },{
-    "respuesta": "bee movie"
-  },{
-    "respuesta": "Stand by Me"
-  },{
-    "respuesta": "titanic"
-  },{
-    "respuesta": "it"
-  },{
-    "respuesta": "babe"
-  },{
-    "respuesta": "snatch"
-  },{
-    "respuesta": "The Polar|Express"
-  },{
-    "respuesta": "Flight"
-  },{
-    "respuesta": "Night at|the Museum"
-  },{
-    "respuesta": "sex and|the city"
-  },{
-    "respuesta": "turbo"
-  },{
-    "respuesta": "zootopia"
-  },{
-    "respuesta": "the godfather"
-  },{
-    "respuesta": "Teenage Mutant|Ninja Turtles"
-  },{
-    "respuesta": "rocky"
-  },{
-    "respuesta": "creed"
-  },{
-    "respuesta": "Edward|Scissorhands"
-  },{
-    "respuesta": "back to|the future"
-  },{
-    "respuesta": "Braveheart"
-  },{
-    "respuesta": "The X Files"
-  },{
-    "respuesta": "dumbo"
-  },{
-    "respuesta": "The Italian|Job"
-  },{
-    "respuesta": "Hachi"
-  },{
-    "respuesta": "A Bugs Life"
-  },{
-    "respuesta": "Brokeback|Mountain"
-  },{
-    "respuesta": "The Hangover"
-  },{
-    "respuesta": "101 dalmatians"
-  },{
-    "respuesta": "happy feet"
-  },{
-    "respuesta": "space jam"
-  },{
-    "respuesta": "Midnight|in Paris"
-  },{
-    "respuesta": "the 33"
-  },{
-    "respuesta": "scream"
-  },{
-    "respuesta": "Singing in|the Rain"
-  },{
-    "respuesta": "ted"
-  },{
-    "respuesta": "the sixth|sense"
-  },{
-    "respuesta": "The Curious Case|Benjamin Button"
-  },{
-    "respuesta": "top gun"
-  },{
-    "respuesta": "You have|Got Mail"
-  },{
-    "respuesta": "invictus"
-  },{
-    "respuesta": "wimbledon"
-  },{
-    "respuesta": "Black Hawk|Down"
-  },{
-    "respuesta": "The Da Vinci|Code"
-  },{
-    "respuesta": "A Clockwork|Orange"
-  },{
-    "respuesta": "thor"
-  },{
-    "respuesta": "Air Force|One"
-  },{
-    "respuesta": "The Phantom|of the Opera"
-  },{
-    "respuesta": "Runaway|Bride"
-  },{
-    "respuesta": "Alice in|Wonderland"
-  },{
-    "respuesta": "frozen"
-  },{
-    "respuesta": "The Jungle|Book"
-  },{
-    "respuesta": "the karate|kid"
-  },{
-    "respuesta": "Paranormal|Activity"
-  },{
-    "respuesta": "The Exorcist"
-  },{
-    "respuesta": "Smurfs"
-  },{
-    "respuesta": "cobra"
-  },{
-    "respuesta": "The Matrix"
-  },{
-    "respuesta": "twister"
-  },{
-    "respuesta": "National|Treasure"
-  },{
-    "respuesta": "the notebook"
-  },{
-    "respuesta": "gone in|60 seconds"
-  },{
-    "respuesta": "super 8"
-  },{
-    "respuesta": "cool runnings"
-  },{
-    "respuesta": "the little|mermaid"
-  },{
-    "respuesta": "world war z"
-  },{
-    "respuesta": "dracula"
-  },{
-    "respuesta": "aladdin"
-  },{
-    "respuesta": "toy story"
-  },{
-    "respuesta": "jurasic park"
-  },{
-    "respuesta": "super size me"
-  },{
-    "respuesta": "Patriots|Day"
-  },{
-    "respuesta": "Cast Away"
-  },{
-    "respuesta": "godzilla"
-  },{
-    "respuesta": "The Lake|House"
+  },
+  {
+    "respuesta": "life of pi",
+    "solucion":""
+  },
+  {
+    "respuesta": "dr dolittle",
+    "solucion":""
+  },
+  {
+    "respuesta": "psycho",
+    "solucion":""
+  },
+  {
+    "respuesta": "apollo 13",
+    "solucion":""
+  },
+  {
+    "respuesta": "kung fu|panda",
+    "solucion":""
+  },
+  {
+    "respuesta": "eat pray love",
+    "solucion":""
+  },
+  {
+    "respuesta": "blood|diamond",
+    "solucion":""
+  },
+  {
+    "respuesta": "et",
+    "solucion":""
+  },
+  {
+    "respuesta": "american pie",
+    "solucion":""
+  },
+  {
+    "respuesta": "men in black",
+    "solucion":""
+  },
+  {
+    "respuesta": "free willy",
+    "solucion":""
+  },
+  {
+    "respuesta": "up",
+    "solucion":""
+  },
+  {
+    "respuesta": "the Planet|of the Apes",
+    "solucion":""
+  },
+  {
+    "respuesta": "american|beauty",
+    "solucion":""
+  },
+  {
+    "respuesta": "the lion|king",
+    "solucion":""
+  },
+  {
+    "respuesta": "Gorillas|in the Mist",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Devil|Wears Prada",
+    "solucion":""
+  },
+  {
+    "respuesta": "x men",
+    "solucion":""
+  },
+  {
+    "respuesta": "harry potter",
+    "solucion":""
+  },
+  {
+    "respuesta": "spiderman",
+    "solucion":""
+  },
+  {
+    "respuesta": "finding nemo",
+    "solucion":""
+  },
+  {
+    "respuesta": "mary poppins",
+    "solucion":""
+  },
+  {
+    "respuesta": "the hunger|games",
+    "solucion":""
+  },
+  {
+    "respuesta": "the fast and|the furious",
+    "solucion":""
+  },
+  {
+    "respuesta": "cars",
+    "solucion":""
+  },
+  {
+    "respuesta": "the kings|speech",
+    "solucion":""
+  },
+  {
+    "respuesta": "500 Days|of Summer",
+    "solucion":""
+  },
+  {
+    "respuesta": "angels and|demons",
+    "solucion":""
+  },
+  {
+    "respuesta": "Crocodile|dundee",
+    "solucion":""
+  },
+  {
+    "respuesta": "jaws",
+    "solucion":""
+  },
+  {
+    "respuesta": "sharknado",
+    "solucion":""
+  },
+  {
+    "respuesta": "Lady and|the Tramp",
+    "solucion":""
+  },
+  {
+    "respuesta": "home|alone",
+    "solucion":""
+  },
+  {
+    "respuesta": "rambo",
+    "solucion":""
+  },
+  {
+    "respuesta": "speed",
+    "solucion":""
+  },
+  {
+    "respuesta": "Puss in|Boots",
+    "solucion":""
+  },
+  {
+    "respuesta": "indiana|jones",
+    "solucion":""
+  },
+  {
+    "respuesta": "Pinocchio",
+    "solucion":""
+  },
+  {
+    "respuesta": "Ghostbusters",
+    "solucion":""
+  },
+  {
+    "respuesta": "ice age",
+    "solucion":""
+  },
+  {
+    "respuesta": "scary|movie",
+    "solucion":""
+  },
+  {
+    "respuesta": "pearl|harbor",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Butterfly|Effect",
+    "solucion":""
+  },
+  {
+    "respuesta": "forrest|gump",
+    "solucion":""
+  },
+  {
+    "respuesta": "Diarios de|motocicleta",
+    "solucion":""
+  },
+  {
+    "respuesta": "volcano",
+    "solucion":""
+  },
+  {
+    "respuesta": "Armageddon",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Scorpion|King",
+    "solucion":""
+  },
+  {
+    "respuesta": "the ring",
+    "solucion":""
+  },
+  {
+    "respuesta": "Gravity",
+    "solucion":""
+  },
+  {
+    "respuesta": "12 Monkeys",
+    "solucion":""
+  },
+  {
+    "respuesta": "ratatouille",
+    "solucion":""
+  },
+  {
+    "respuesta": "127 hours",
+    "solucion":""
+  },
+  {
+    "respuesta": "Twilight",
+    "solucion":""
+  },
+  {
+    "respuesta": "batman",
+    "solucion":""
+  },
+  {
+    "respuesta": "king kong",
+    "solucion":""
+  },
+  {
+    "respuesta": "bee movie",
+    "solucion":""
+  },
+  {
+    "respuesta": "Stand by Me",
+    "solucion":""
+  },
+  {
+    "respuesta": "titanic",
+    "solucion":""
+  },
+  {
+    "respuesta": "it",
+    "solucion":""
+  },
+  {
+    "respuesta": "babe",
+    "solucion":""
+  },
+  {
+    "respuesta": "snatch",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Polar|Express",
+    "solucion":""
+  },
+  {
+    "respuesta": "Flight",
+    "solucion":""
+  },
+  {
+    "respuesta": "Night at|the Museum",
+    "solucion":""
+  },
+  {
+    "respuesta": "sex and|the city",
+    "solucion":""
+  },
+  {
+    "respuesta": "turbo",
+    "solucion":""
+  },
+  {
+    "respuesta": "zootopia",
+    "solucion":""
+  },
+  {
+    "respuesta": "the godfather",
+    "solucion":""
+  },
+  {
+    "respuesta": "Teenage Mutant|Ninja Turtles",
+    "solucion":""
+  },
+  {
+    "respuesta": "rocky",
+    "solucion":""
+  },
+  {
+    "respuesta": "creed",
+    "solucion":""
+  },
+  {
+    "respuesta": "Edward|Scissorhands",
+    "solucion":""
+  },
+  {
+    "respuesta": "back to|the future",
+    "solucion":""
+  },
+  {
+    "respuesta": "Braveheart",
+    "solucion":""
+  },
+  {
+    "respuesta": "The X Files",
+    "solucion":""
+  },
+  {
+    "respuesta": "dumbo",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Italian|Job",
+    "solucion":""
+  },
+  {
+    "respuesta": "Hachi",
+    "solucion":""
+  },
+  {
+    "respuesta": "A Bugs Life",
+    "solucion":""
+  },
+  {
+    "respuesta": "Brokeback|Mountain",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Hangover",
+    "solucion":""
+  },
+  {
+    "respuesta": "101 dalmatians",
+    "solucion":""
+  },
+  {
+    "respuesta": "happy feet",
+    "solucion":""
+  },
+  {
+    "respuesta": "space jam",
+    "solucion":""
+  },
+  {
+    "respuesta": "Midnight|in Paris",
+    "solucion":""
+  },
+  {
+    "respuesta": "the 33",
+    "solucion":""
+  },
+  {
+    "respuesta": "scream",
+    "solucion":""
+  },
+  {
+    "respuesta": "Singing in|the Rain",
+    "solucion":""
+  },
+  {
+    "respuesta": "ted",
+    "solucion":""
+  },
+  {
+    "respuesta": "the sixth|sense",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Curious Case|Benjamin Button",
+    "solucion":""
+  },
+  {
+    "respuesta": "top gun",
+    "solucion":""
+  },
+  {
+    "respuesta": "You have|Got Mail",
+    "solucion":""
+  },
+  {
+    "respuesta": "invictus",
+    "solucion":""
+  },
+  {
+    "respuesta": "wimbledon",
+    "solucion":""
+  },
+  {
+    "respuesta": "Black Hawk|Down",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Da Vinci|Code",
+    "solucion":""
+  },
+  {
+    "respuesta": "A Clockwork|Orange",
+    "solucion":""
+  },
+  {
+    "respuesta": "thor",
+    "solucion":""
+  },
+  {
+    "respuesta": "Air Force|One",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Phantom|of the Opera",
+    "solucion":""
+  },
+  {
+    "respuesta": "Runaway|Bride",
+    "solucion":""
+  },
+  {
+    "respuesta": "Alice in|Wonderland",
+    "solucion":""
+  },
+  {
+    "respuesta": "frozen",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Jungle|Book",
+    "solucion":""
+  },
+  {
+    "respuesta": "the karate|kid",
+    "solucion":""
+  },
+  {
+    "respuesta": "Paranormal|Activity",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Exorcist",
+    "solucion":""
+  },
+  {
+    "respuesta": "Smurfs",
+    "solucion":""
+  },
+  {
+    "respuesta": "cobra",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Matrix",
+    "solucion":""
+  },
+  {
+    "respuesta": "twister",
+    "solucion":""
+  },
+  {
+    "respuesta": "National|Treasure",
+    "solucion":""
+  },
+  {
+    "respuesta": "the notebook",
+    "solucion":""
+  },
+  {
+    "respuesta": "gone in|60 seconds",
+    "solucion":""
+  },
+  {
+    "respuesta": "super 8",
+    "solucion":""
+  },
+  {
+    "respuesta": "cool runnings",
+    "solucion":""
+  },
+  {
+    "respuesta": "the little|mermaid",
+    "solucion":""
+  },
+  {
+    "respuesta": "world war z",
+    "solucion":""
+  },
+  {
+    "respuesta": "dracula",
+    "solucion":""
+  },
+  {
+    "respuesta": "aladdin",
+    "solucion":""
+  },
+  {
+    "respuesta": "toy story",
+    "solucion":""
+  },
+  {
+    "respuesta": "jurasic park",
+    "solucion":""
+  },
+  {
+    "respuesta": "super size me",
+    "solucion":""
+  },
+  {
+    "respuesta": "Patriots|Day",
+    "solucion":""
+  },
+  {
+    "respuesta": "Cast Away",
+    "solucion":""
+  },
+  {
+    "respuesta": "godzilla",
+    "solucion":""
+  },
+  {
+    "respuesta": "The Lake|House",
+    "solucion":""
   }
 ]
 }

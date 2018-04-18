@@ -37,4 +37,5 @@
     <string name="toast_win_en">Won 10 seconds</string>
     <string name="random_text_es">Aleatorio</string>
     <string name="random_text_en">Random</string>
+    <string name="title_activity_video">VideoActivity</string>
 </resources>

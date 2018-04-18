@@ -111,6 +111,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
 
     private ImageView leftArrow;
     private ImageView rightArrow;
+    private ImageView linkToYoutube;
     private Boolean languageSelected;
 
     private AdView mAdView;
@@ -413,6 +414,24 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         categorySelected = settings.getString("categorySelected","emojis");
         levelSelected = settings.getString("levelSelected","1");
         level = getLevelByCategory(categorySelected);
+
+        linkToYoutube = (ImageView) findViewById(R.id.linkToYoutube);
+        if ("".equals(getLinkToYoutube())){
+            linkToYoutube.setVisibility(View.GONE);
+        }
+        if (!languageSelected && Build.VERSION.SDK_INT > 16) {
+            linkToYoutube.setBackground(getResources().getDrawable(R.drawable.logosolucionesen));
+        }
+
+        linkToYoutube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getLinkToYoutube()));
+                startActivity(intent);
+                closeAndSave();
+            }
+        });
 
         // Cargo el banner footer cada vez que se carga la pantalla
         if (settings.getBoolean("showAds", true)) {
@@ -899,6 +918,61 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(levelSelected));
             //obtengo la palabra del nivel correspondiente, segun la categoria elegida
             respuesta = nivel.getString("respuesta");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return respuesta;
+    }
+
+    private String getLinkToYoutube() {
+        String respuesta = "";
+        try {
+            //obtengo el archivo
+            String jsonLocation = null;
+            if ("adivinanzas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("adivinanzas.json", getBaseContext());
+            } else if("wuzzles".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("wuzzles.json", getBaseContext());
+            } else if("emojis".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("emojis.json", getBaseContext());
+            } else if("enojis".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("enojis.json", getBaseContext());
+            } else if("peliculas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("peliculas.json", getBaseContext());
+            } else if("movies".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("movies.json", getBaseContext());
+            } else if("escudos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("escudos.json", getBaseContext());
+            } else if("teams".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("sportslogos.json", getBaseContext());
+            } else if("banderas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("banderas.json", getBaseContext());
+            } else if("flags".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("flags.json", getBaseContext());
+            } else if("marcas".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
+            } else if("logos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("marcas.json", getBaseContext());
+            } else if("famosos".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("famosos.json", getBaseContext());
+            } else if("celebrities".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("celebrities.json", getBaseContext());
+            } else if("sombras".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("sombras.json", getBaseContext());
+            } else if("shadows".equals(categorySelected)) {
+                jsonLocation = AssetJSONFile("shadows.json", getBaseContext());
+            }
+
+            JSONObject jsonobject = new JSONObject(jsonLocation);
+            //obtengo el array de niveles
+            JSONArray jarray = (JSONArray) jsonobject.getJSONArray("listado");
+            //obtengo el nivel
+            JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(levelSelected));
+            //obtengo la palabra del nivel correspondiente, segun la categoria elegida
+            respuesta = nivel.getString("solucion");
 
         } catch (IOException e) {
             e.printStackTrace();
