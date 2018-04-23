@@ -1,6 +1,16 @@
 {
   "preguntas": [
     {
+      "titulo": "Encuentra la palabra",
+      "pregunta": "16165L650494126156E341562341562315662465O5123564123564S62N51462531465231356231645213456123654123564156231456234256214652387",
+      "respuesta": "LEON"
+    },
+    {
+      "titulo": "Encuentra la palabra",
+      "pregunta": "1616516564P412615623415E234156231566246R45123564123564S62R51462531465231O56231645213456123654123564156231456234256214652367",
+      "respuesta": "PERRO"
+    },
+    {
       "titulo": "Equipos de fútbol",
       "pregunta": "escudos1.jpg",
       "respuesta": "River|Plate"
