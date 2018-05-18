@@ -4,403 +4,503 @@
     },
     {
       "respuesta": "chrome",
-      "solucion":"https://youtu.be/vvnVXZMaWyI?t=73"
+      "solucion":"https://youtu.be/vvnVXZMaWyI?t=73",
+      "nivel":"1"
     },
     {
       "respuesta": "facebook",
-      "solucion":"https://youtu.be/oQWvQAi7Xu0?t=72"
+      "solucion":"https://youtu.be/oQWvQAi7Xu0?t=72",
+      "nivel":"2"
     },
     {
       "respuesta": "wordpress",
-      "solucion":"https://youtu.be/JizsMU7B_OM?t=72"
+      "solucion":"https://youtu.be/JizsMU7B_OM?t=72",
+      "nivel":"3"
     },
     {
       "respuesta": "twitter",
-      "solucion":"https://youtu.be/A-JzUW1zOoA?t=72"
+      "solucion":"https://youtu.be/A-JzUW1zOoA?t=72",
+      "nivel":"4"
     },
     {
       "respuesta": "radio|metro",
-      "solucion":"https://youtu.be/SNEvM-27UP8?t=72"
+      "solucion":"https://youtu.be/SNEvM-27UP8?t=72",
+      "nivel":"5"
     },
     {
       "respuesta": "cartoon|network",
-      "solucion":""
+      "solucion":"https://youtu.be/eJ5XPaBHkO0?t=72",
+      "nivel":"6"
     },
     {
       "respuesta": "nickelodeon",
-      "solucion":""
+      "solucion":"https://youtu.be/zIXf7bknqLU?t=72",
+      "nivel":"7"
     },
     {
       "respuesta": "apple",
-      "solucion":""
+      "solucion":"https://youtu.be/I7FYYJYqZCg?t=72",
+      "nivel":"8"
     },
     {
       "respuesta": "amazon",
-      "solucion":""
+      "solucion":"https://youtu.be/mTuP1JPu0ZA?t=72",
+      "nivel":"9"
     },
     {
       "respuesta": "whatsapp",
-      "solucion":""
+      "solucion":"https://youtu.be/AG4iTXDF5n0?t=72",
+      "nivel":"10"
     },
     {
-      "respuesta": "mini cooper",
-      "solucion":""
+      "respuesta": "mini",
+      "solucion":"https://youtu.be/632BnneIx_E?t=72",
+      "nivel":"11"
     },
     {
       "respuesta": "claro",
-      "solucion":""
+      "solucion":"https://youtu.be/MpW7cZu2BpA?t=72",
+      "nivel":"12"
     },
     {
       "respuesta": "chevrolet",
-      "solucion":""
+      "solucion":"https://youtu.be/b72Jspj-gaI?t=72",
+      "nivel":"13"
     },
     {
       "respuesta": "ford",
-      "solucion":""
+      "solucion":"https://youtu.be/o_FlIF_ugZY?t=72",
+      "nivel":"14"
     },
     {
       "respuesta": "kodak",
-      "solucion":""
+      "solucion":"https://youtu.be/IkKOhJRVuVI?t=72",
+      "nivel":"15"
     },
     {
       "respuesta": "lacoste",
-      "solucion":""
+      "solucion":"https://youtu.be/Yo3qyLk8t8k?t=72",
+      "nivel":"16"
     },
     {
       "respuesta": "play|station",
-      "solucion":""
+      "solucion":"https://youtu.be/Zvcb6Wr5e-k?t=72",
+      "nivel":"17"
     },
     {
       "respuesta": "peugeot",
-      "solucion":""
+      "solucion":"https://youtu.be/C5F2dQ_ARFI?t=72",
+      "nivel":"18"
     },
     {
       "respuesta": "mercedes|benz",
-      "solucion":""
+      "solucion":"https://youtu.be/9syozBlt4LY?t=72",
+      "nivel":"19"
     },
     {
       "respuesta": "pepsi",
-      "solucion":""
+      "solucion":"https://youtu.be/TDsy23r3olk?t=72",
+      "nivel":"20"
     },
     {
       "respuesta": "adidas",
-      "solucion":""
+      "solucion":"https://youtu.be/5jjxkKnGIAk?t=72",
+      "nivel":"21"
     },
     {
       "respuesta": "fisher|price",
-      "solucion":""
+      "solucion":"https://youtu.be/GkQKdlQXf8E?t=72",
+      "nivel":"22"
     },
     {
       "respuesta": "ferrari",
-      "solucion":""
+      "solucion":"https://youtu.be/aV6YKtJWr3I?t=72",
+      "nivel":"23"
     },
     {
       "respuesta": "firefox",
-      "solucion":""
+      "solucion":"https://youtu.be/jmHXFhXxeLc?t=72",
+      "nivel":"24"
     },
     {
       "respuesta": "nike",
-      "solucion":""
+      "solucion":"https://youtu.be/9sRaYTvlqSU?t=72",
+      "nivel":"25"
     },
     {
       "respuesta": "levis",
-      "solucion":""
+      "solucion":"https://youtu.be/Yz3EXH4uqgc?t=72",
+      "nivel":""
     },
     {
       "respuesta": "volskwagen",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "umbro",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "coca cola",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "bacardi",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "motorola",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "suzuki",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "stella|artois",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "shell",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "seat",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "samsung",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "reebok",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "quilmes",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "gucci",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "converse",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "fanta",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "puma",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "pritt",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "audi",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "mcdonalds",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "chanel",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "bridgestone",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "bic",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "carolina|herrera",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "direct tv",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "citroen",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "instagram",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "dodge",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "speed",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "yves saint|laurent",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "gatorade",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "firestone",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "quiksilver",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "unilever",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "dove",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "carrefour",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "mitsubishi",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "le coq|sportif",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "opel",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "movistar",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "nestle",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "wilson",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "pringles",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "red bull",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "lego",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "honda",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "minolta",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "rip curl",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "mizuno",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "hewlett|packard",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "starbucks",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "giorgio|armani",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "lotto",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "new balance",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "kappa",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "rolex",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "dropbox",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "drive",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "burger king",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "timberland",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "visa",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "rayban",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "opera",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "vans",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "intel",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "wikipedia",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "mercado libre",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "ebay",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "nbc",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "pizza hut",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "toyota",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "bmw",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "lg",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "texaco",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     },
     {
       "respuesta": "national|geographic",
-      "solucion":""
+      "solucion":"?t=72",
+      "nivel":""
     }
   ]
 }

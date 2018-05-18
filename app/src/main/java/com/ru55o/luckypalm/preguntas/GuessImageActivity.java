@@ -56,6 +56,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.ru55o.luckypalm.preguntas.pojo.Answer;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -416,7 +417,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         level = getLevelByCategory(categorySelected);
 
         linkToYoutube = (ImageView) findViewById(R.id.linkToYoutube);
-        if ("".equals(getLinkToYoutube())){
+        if ("".equals(getLinkToYoutube().getNivel())){
             linkToYoutube.setVisibility(View.GONE);
         }
         if (!languageSelected && Build.VERSION.SDK_INT > 16) {
@@ -427,7 +428,7 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             @Override
             public void onClick(View v) {
                 inputMethodManager.hideSoftInputFromWindow(frameLayout.getApplicationWindowToken(), 0);
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getLinkToYoutube()));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getLinkToYoutube().getSolucion()));
                 startActivity(intent);
                 closeAndSave();
             }
@@ -927,8 +928,8 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
         return respuesta;
     }
 
-    private String getLinkToYoutube() {
-        String respuesta = "";
+    private Answer getLinkToYoutube() {
+        Answer question = new Answer();
         try {
             //obtengo el archivo
             String jsonLocation = null;
@@ -972,14 +973,15 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
             //obtengo el nivel
             JSONObject nivel = (JSONObject)jarray.get(Integer.parseInt(levelSelected));
             //obtengo la palabra del nivel correspondiente, segun la categoria elegida
-            respuesta = nivel.getString("solucion");
+            question.setSolucion(nivel.getString("solucion"));
+            question.setNivel(nivel.getString("nivel"));
 
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return respuesta;
+        return question;
     }
 
     private void moveToNextOrPrevious(String moveTo) {

@@ -3,304 +3,404 @@
 
   },{
     "respuesta": "argentina",
-    "solucion":"https://youtu.be/vvnVXZMaWyI?t=405"
+    "solucion":"https://youtu.be/vvnVXZMaWyI?t=405",
+    "nivel":"1"
   },{
     "respuesta": "estados|unidos",
-    "solucion":"https://youtu.be/oQWvQAi7Xu0?t=405"
+    "solucion":"https://youtu.be/oQWvQAi7Xu0?t=405",
+    "nivel":"2"
   },{
     "respuesta": "china",
-    "solucion":"https://youtu.be/JizsMU7B_OM?t=405"
+    "solucion":"https://youtu.be/JizsMU7B_OM?t=405",
+    "nivel":"3"
   },{
     "respuesta": "rusia",
-    "solucion":"https://youtu.be/A-JzUW1zOoA?t=405"
+    "solucion":"https://youtu.be/A-JzUW1zOoA?t=405",
+    "nivel":"4"
   },{
     "respuesta": "alemania",
-    "solucion":"https://youtu.be/SNEvM-27UP8?t=405"
+    "solucion":"https://youtu.be/SNEvM-27UP8?t=405",
+    "nivel":"5"
   },{
     "respuesta": "italia",
-    "solucion":""
+    "solucion":"https://youtu.be/eJ5XPaBHkO0?t=405",
+    "nivel":"6"
   },{
     "respuesta": "francia",
-    "solucion":""
+    "solucion":"https://youtu.be/zIXf7bknqLU?t=405",
+    "nivel":"7"
   },{
     "respuesta": "japon",
-    "solucion":""
+    "solucion":"https://youtu.be/I7FYYJYqZCg?t=405",
+    "nivel":"8"
   },{
     "respuesta": "australia",
-    "solucion":""
+    "solucion":"https://youtu.be/mTuP1JPu0ZA?t=405",
+    "nivel":"9"
   },{
     "respuesta": "corea|del sur",
-    "solucion":""
+    "solucion":"https://youtu.be/AG4iTXDF5n0?t=405",
+    "nivel":"10"
   },{
     "respuesta": "hungria",
-    "solucion":""
+    "solucion":"https://youtu.be/632BnneIx_E?t=405",
+    "nivel":"11"
   },{
     "respuesta": "holanda",
-    "solucion":""
+    "solucion":"https://youtu.be/MpW7cZu2BpA?t=405",
+    "nivel":"12"
   },{
     "respuesta": "uruguay",
-    "solucion":""
+    "solucion":"https://youtu.be/b72Jspj-gaI?t=405",
+    "nivel":"13"
   },{
     "respuesta": "nueva|zelanda",
-    "solucion":""
+    "solucion":"https://youtu.be/o_FlIF_ugZY?t=405",
+    "nivel":"14"
   },{
     "respuesta": "brasil",
-    "solucion":""
+    "solucion":"https://youtu.be/IkKOhJRVuVI?t=405",
+    "nivel":"15"
   },{
     "respuesta": "Kazajistan",
-    "solucion":""
+    "solucion":"https://youtu.be/Yo3qyLk8t8k?t=405",
+    "nivel":"16"
   },{
     "respuesta": "Corea|del Norte",
-    "solucion":""
+    "solucion":"https://youtu.be/Zvcb6Wr5e-k?t=405",
+    "nivel":"17"
   },{
     "respuesta": "kenia",
-    "solucion":""
+    "solucion":"https://youtu.be/C5F2dQ_ARFI?t=405",
+    "nivel":"18"
   },{
     "respuesta": "canada",
-    "solucion":""
+    "solucion":"https://youtu.be/9syozBlt4LY?t=405",
+    "nivel":"19"
   },{
     "respuesta": "polonia",
-    "solucion":""
+    "solucion":"https://youtu.be/TDsy23r3olk?t=405",
+    "nivel":"20"
   },{
     "respuesta": "colombia",
-    "solucion":""
+    "solucion":"https://youtu.be/5jjxkKnGIAk?t=405",
+    "nivel":"21"
   },{
     "respuesta": "cuba",
-    "solucion":""
+    "solucion":"https://youtu.be/GkQKdlQXf8E?t=405",
+    "nivel":"22"
   },{
     "respuesta": "suiza",
-    "solucion":""
+    "solucion":"https://youtu.be/aV6YKtJWr3I?t=405",
+    "nivel":"23"
   },{
     "respuesta": "belgica",
-    "solucion":""
+    "solucion":"https://youtu.be/jmHXFhXxeLc?t=405",
+    "nivel":"24"
   },{
     "respuesta": "grecia",
-    "solucion":""
+    "solucion":"https://youtu.be/9sRaYTvlqSU?t=405",
+    "nivel":"25"
   },{
     "respuesta": "tailandia",
-    "solucion":""
+    "solucion":"https://youtu.be/Yz3EXH4uqgc?t=405",
+    "nivel":"26"
   },{
     "respuesta": "uzbekistan",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "jamaica",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "iran",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "sudafrica",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "suecia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "ucrania",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "dinamarca",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "bielorrusia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "eslovenia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "republica|checa",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "rumania",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "barein",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "eslovaquia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "vietnam",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "etiopia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "bahamas",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "fiyi",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "kosovo",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "singapur",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "marruecos",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "camerun",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "escocia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "chipre",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "india",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "panama",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "argelia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "paraguay",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "egipto",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "costa rica",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "portugal",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "bolivia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "el salvador",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "croacia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "peru",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "mexico",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "ecuador",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "guatemala",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "arabia|saudita",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "serbia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "ghana",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "nigeria",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "austria",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "honduras",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "turquia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "chile",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "irlanda",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "noruega",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "israel",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "bulgaria",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "republica|dominicana",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "finlandia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "ruanda",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "gabon",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "islandia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "jordania",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "libano",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "tanzania",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "liberia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "malasia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "madagascar",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "estonia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "filipinas",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "oman",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "somalia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "Bosnia|Herzegovina",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "Tibet",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "tunez",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "Trinidad|y Tobago",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "Tonga",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "pakistan",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "nepal",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "Mongolia",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "monaco",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   },{
     "respuesta": "Mozambique",
-    "solucion":""
+    "solucion":"?t=405",
+    "nivel":""
   }
 ]
 }

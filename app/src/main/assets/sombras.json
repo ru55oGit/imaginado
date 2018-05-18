@@ -4,691 +4,863 @@
     },
     {
       "respuesta": "garfield",
-      "solucion":"https://youtu.be/vvnVXZMaWyI?t=472"
+      "solucion":"https://youtu.be/vvnVXZMaWyI?t=472",
+      "nivel":"1"
     },
     {
       "respuesta": "blinky",
-      "solucion":"https://youtu.be/oQWvQAi7Xu0?t=472"
+      "solucion":"https://youtu.be/oQWvQAi7Xu0?t=472",
+      "nivel":"2"
     },
     {
       "respuesta": "gargamel",
-      "solucion":"https://youtu.be/JizsMU7B_OM?t=472"
+      "solucion":"https://youtu.be/JizsMU7B_OM?t=472",
+      "nivel":"3"
     },
     {
       "respuesta": "babar",
-      "solucion":"https://youtu.be/A-JzUW1zOoA?t=472"
+      "solucion":"https://youtu.be/A-JzUW1zOoA?t=472",
+      "nivel":"4"
     },
     {
       "respuesta": "disco|stu",
-      "solucion":"https://youtu.be/SNEvM-27UP8?t=472"
+      "solucion":"https://youtu.be/SNEvM-27UP8?t=472",
+      "nivel":"5"
     },
     {
       "respuesta": "Inspector|Ardilla",
-      "solucion":""
+      "solucion":"https://youtu.be/eJ5XPaBHkO0?t=472",
+      "nivel":"6"
     },
     {
       "respuesta": "apu",
-      "solucion":""
+      "solucion":"https://youtu.be/zIXf7bknqLU?t=472",
+      "nivel":"7"
     },
     {
       "respuesta": "freezer",
-      "solucion":""
+      "solucion":"https://youtu.be/I7FYYJYqZCg?t=472",
+      "nivel":"8"
     },
     {
       "respuesta": "pitufo|goloso",
-      "solucion":""
+      "solucion":"https://youtu.be/mTuP1JPu0ZA?t=472",
+      "nivel":"9"
     },
     {
       "respuesta": "he man",
-      "solucion":""
+      "solucion":"https://youtu.be/AG4iTXDF5n0?t=472",
+      "nivel":"10"
     },
     {
       "respuesta": "oliver|atom",
-      "solucion":""
+      "solucion":"https://youtu.be/632BnneIx_E?t=472",
+      "nivel":"11"
     },
     {
       "respuesta": "mickey|mouse",
-      "solucion":""
+      "solucion":"https://youtu.be/MpW7cZu2BpA?t=472",
+      "nivel":"12"
     },
     {
       "respuesta": "mario bros",
-      "solucion":""
+      "solucion":"https://youtu.be/b72Jspj-gaI?t=472",
+      "nivel":"13"
     },
     {
       "respuesta": "gohan",
-      "solucion":""
+      "solucion":"https://youtu.be/o_FlIF_ugZY?t=472",
+      "nivel":"14"
     },
     {
       "respuesta": "el gavilan|pollero",
-      "solucion":""
+      "solucion":"https://youtu.be/IkKOhJRVuVI?t=472",
+      "nivel":"15"
     },
     {
-      "respuesta": "enrique",
-      "solucion":""
+      "respuesta": "Kearney",
+      "solucion":"https://youtu.be/Yo3qyLk8t8k?t=472",
+      "nivel":"16"
     },
     {
       "respuesta": "jefe|Quimby",
-      "solucion":""
+      "solucion":"https://youtu.be/Zvcb6Wr5e-k?t=472",
+      "nivel":"17"
     },
     {
       "respuesta": "majin boo",
-      "solucion":""
+      "solucion":"https://youtu.be/C5F2dQ_ARFI?t=472",
+      "nivel":"18"
     },
     {
       "respuesta": "astro",
-      "solucion":""
+      "solucion":"https://youtu.be/9syozBlt4LY?t=472",
+      "nivel":"19"
     },
     {
       "respuesta": "pitufo|fortachon",
-      "solucion":""
+      "solucion":"https://youtu.be/TDsy23r3olk?t=472",
+      "nivel":"20"
     },
     {
       "respuesta": "porky",
-      "solucion":""
+      "solucion":"https://youtu.be/5jjxkKnGIAk?t=472",
+      "nivel":"21"
     },
     {
       "respuesta": "dr hibbert",
-      "solucion":""
+      "solucion":"https://youtu.be/GkQKdlQXf8E?t=472",
+      "nivel":"22"
     },
     {
       "respuesta": "donald",
-      "solucion":""
+      "solucion":"https://youtu.be/aV6YKtJWr3I?t=472",
+      "nivel":"23"
     },
     {
       "respuesta": "steve|Hyuga",
-      "solucion":""
+      "solucion":"https://youtu.be/jmHXFhXxeLc?t=472",
+      "nivel":"24"
     },
     {
       "respuesta": "milhouse",
-      "solucion":""
+      "solucion":"https://youtu.be/9sRaYTvlqSU?t=472",
+      "nivel":"25"
     },
     {
       "respuesta": "pluto",
-      "solucion":""
+      "solucion":"https://youtu.be/Yz3EXH4uqgc?t=472",
+      "nivel":"26"
     },
     {
       "respuesta": "lisa|simpson",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "tiro loco|mcgraw",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "akira",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "robotina",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "masha|y oso",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "maggie|simpson",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "super|sonico",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "alcalde|diamante",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "goofy",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "huckleberry|hound",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "la hormiga",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el pajaro|loco",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el inspector",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el fantasma|del espacio",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "pitufo|vanidoso",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "los gemelos|fantasticos",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "artie|ziff",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "ayudante|de santa",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "carl|carlson",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "cleto",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "uter",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "edna|krabappel",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "barney",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "patan",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "jeremias|springfield",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "jessica|alegria",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "kent|brockman",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "kirk|van houten",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "margo|zavala",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "montgomery|burns",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "la mujer|maravilla",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "profesor|frink",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "rafa|gorgory",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "cometin|sonico",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "sam|bigotes",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "leon o",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "astroboy",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "la hormiga|atomica",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el oso|yogi",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "jem",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "herbert|powell",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "benito",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "la pantera|rosa",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "funzo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "ricky|ricon",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "duffman",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "pikachu",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "lucero|sonico",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "gaspar",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "battle cat",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "jefe|gorgory",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "super|raton",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "jimbo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "juan|topo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "frank|grimes",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "don gato",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "pitufo|filosofo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "dr nick",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "birdman",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "vegetta",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "larry|burns",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "inocencia|donoso",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "rayo de|plata",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "lionel|hutz",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "kang",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "krusty",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el gallo|claudio",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "heidi",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el jardinero|willy",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "papa|pitufo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Ultra|sonico",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "mr chispa",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el inspector|gadget",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "martin|prince",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "hombre|abejorro",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el oso|hormiguero",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "orco",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "mc bain",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "rayo mcqueen",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "daly",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "luiggi",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "bugs|bunny",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el pato|lucas",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "gil",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "bart|simpson",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "picoro",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "magda",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "buzz|lightyear",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "benji|price",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "oficial|matute",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "marge|simpson",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "mate",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "otto",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "cerebro",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "homero|simpson",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "flash",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "pepe le pew",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "goku",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "ned|flanders",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "scooby|doo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "moe",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "pinky",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "superman",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "mandibulin",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el coyote",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "silvestre",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "tomy",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "mojo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "pablo|marmol",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "bobby",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "oddie",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "taz",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "baloo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "patty",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "bruce|harper",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Johnny|Bravo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "shaggy",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "marvin",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "nelson",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "popeye",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "lenny",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "dartagnan",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "speedy|gonzalez",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "lou",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Betty|Marmol",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Pedro|Picapiedras",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Peter|Griffin",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "tweety",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "jerry",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "winnie pooh",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "krilin",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "dumbo",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "poochie",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "terri y|sherri",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "droopy",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "seymour|skinner",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "superintendente|chalmers",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "malefica",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "el gordo|tony",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "selma",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Ariel",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Helena|Alegria",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Peter|Pan",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Simba",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Bob|esponja",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     },
     {
       "respuesta": "Pinocho",
-      "solucion":""
+      "solucion":"?t=472",
+      "nivel":""
     }
   ]
 }

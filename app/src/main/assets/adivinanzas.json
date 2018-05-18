@@ -3,844 +3,1124 @@
 
   },{
     "respuesta": "lunatico",
-    "solucion" : "https://www.youtube.com/watch?v=vvnVXZMaWyI"
+    "solucion" : "https://www.youtube.com/watch?v=vvnVXZMaWyI",
+    "nivel":"1"
   },{
     "respuesta": "estomago",
-    "solucion" : "https://www.youtube.com/watch?v=oQWvQAi7Xu0"
+    "solucion" : "https://www.youtube.com/watch?v=oQWvQAi7Xu0",
+    "nivel":"2"
   },{
     "respuesta": "ingenio",
-    "solucion": "https://www.youtube.com/watch?v=JizsMU7B_OM"
+    "solucion": "https://www.youtube.com/watch?v=JizsMU7B_OM",
+    "nivel":"3"
   },{
     "respuesta": "pinocho",
-    "solucion":"https://www.youtube.com/watch?v=A-JzUW1zOoA"
+    "solucion":"https://www.youtube.com/watch?v=A-JzUW1zOoA",
+    "nivel":"4"
   },{
     "respuesta": "quincena",
-    "solucion":"https://www.youtube.com/watch?v=SNEvM-27UP8"
+    "solucion":"https://www.youtube.com/watch?v=SNEvM-27UP8",
+    "nivel":"5"
   },{
     "respuesta": "pantalon",
-    "solucion":""
+    "solucion":"https://www.youtube.com/watch?v=eJ5XPaBHkO0",
+    "nivel":"6"
   },{
     "respuesta": "enfadado",
-    "solucion":""
+    "solucion":"https://www.youtube.com/watch?v=zIXf7bknqLU",
+    "nivel":"7"
   },{
     "respuesta": "bizcochuelo",
-    "solucion":""
+    "solucion":"https://www.youtube.com/watch?v=I7FYYJYqZCg",
+    "nivel":"8"
   },{
     "respuesta": "entretenido",
-    "solucion":""
+    "solucion":"https://www.youtube.com/watch?v=mTuP1JPu0ZA",
+    "nivel":"9"
   },{
     "respuesta": "pantano",
-    "solucion":""
+    "solucion":"https://www.youtube.com/watch?v=AG4iTXDF5n0",
+    "nivel":"10"
   },{
     "respuesta": "sombrilla",
-    "solucion":""
+    "solucion":"https://www.youtube.com/watch?v=632BnneIx_E",
+    "nivel":"11"
   },{
     "respuesta": "sorpresa",
-    "solucion":""
+    "solucion":"https://www.youtube.com/watch?v=MpW7cZu2BpA",
+    "nivel":"12"
   },{
     "respuesta": "pepino",
-    "solucion":""
+    "solucion":"https://youtu.be/b72Jspj-gaI",
+    "nivel":"13"
   },{
     "respuesta": "el gordo|y el flaco",
-    "solucion":""
+    "solucion":"https://youtu.be/o_FlIF_ugZY",
+    "nivel":"14"
   },{
     "respuesta": "conocimiento",
-    "solucion":""
+    "solucion":"https://youtu.be/IkKOhJRVuVI",
+    "nivel":"15"
   },{
     "respuesta": "revelar",
-    "solucion":""
+    "solucion":"https://youtu.be/Yo3qyLk8t8k",
+    "nivel":"16"
   },{
     "respuesta": "me chupa|un huevo",
-    "solucion":""
+    "solucion":"https://youtu.be/Zvcb6Wr5e-k",
+    "nivel":"17"
   },{
     "respuesta": "termometro",
-    "solucion":""
+    "solucion":"https://youtu.be/C5F2dQ_ARFI",
+    "nivel":"18"
   },{
     "respuesta": "leer entre|lineas",
-    "solucion":""
+    "solucion":"https://youtu.be/9syozBlt4LY",
+    "nivel":"19"
   },{
     "respuesta": "escama",
-    "solucion":""
+    "solucion":"https://youtu.be/TDsy23r3olk",
+    "nivel":"20"
   },{
     "respuesta": "entrenadora",
-    "solucion":""
+    "solucion":"https://youtu.be/5jjxkKnGIAk",
+    "nivel":"21"
   },{
-    "respuesta": "llave|inglesa",
-    "solucion":""
+    "respuesta": "llave|francesa",
+    "solucion":"https://youtu.be/GkQKdlQXf8E",
+    "nivel":"22"
   },{
     "respuesta": "fe de|erratas",
-    "solucion":""
+    "solucion":"https://youtu.be/aV6YKtJWr3I",
+    "nivel":"23"
   },{
     "respuesta": "encubierto",
-    "solucion":""
+    "solucion":"https://youtu.be/jmHXFhXxeLc",
+    "nivel":"24"
   },{
     "respuesta": "colaboracion",
-    "solucion":""
+    "solucion":"https://youtu.be/9sRaYTvlqSU",
+    "nivel":"25"
   },{
     "respuesta": "confirma",
-    "solucion":""
+    "solucion":"https://youtu.be/Yz3EXH4uqgc",
+    "nivel":"26"
   },{
     "respuesta": "pancarta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "el canal de|la mancha",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "maniatico",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "circulo|vicioso",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "agua|oxigenada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "la torre|de pisa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "leche|cortada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "emparedado",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "triangulo de|las bermudas",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "circulo|polar artico",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "guardar|bajo llave",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "todo sobre|ruedas",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "escalpelo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "limonada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "florencia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "aire|comprimido",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "ascensor",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cantero",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "soldado",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "berenjena",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "vino blanco",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "estetoscopio",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "palometa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cucharita",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mas vale tarde|que nunca",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "analfabeta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "alfa romeo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "climatizado",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "comida|rapida",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "camaleon",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "fuego|cruzado",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "votar en|blanco",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "caleidoscopio",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "polenta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "empanada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "resfrio",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "picara",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "emperador",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "apila",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "edad media",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "canoso",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "lenteja",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "bolchevique",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "paraguas",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "carajo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cantantes",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "impresa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "paciente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "negrita",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "caracol",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "coliflor",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mejor reir|que llorar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "dependencia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "porcelana",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sobrevolar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "verde",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "viento en|popa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sobrevivir",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "microscopico",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "corazonada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "epico",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "tesoro",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sintaxis",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sin ton|ni son",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "empezar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "rueda de|prensa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "jueves|santo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "plano|inclinado",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "desencuentro",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mal educado",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pariente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pentagrama",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "ni fu ni fa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pilates",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "envido",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "real|envido",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "falta|envido",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "dios|mediante",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sincope",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "singapur",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "docena",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mate|cocido",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "endosa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "postres|helados",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "puente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "aruba",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "casino",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "todo bajo|control",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "novela",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "venado",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "barcelona",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "rio de|janeiro",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "los angeles",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sevilla",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "estados|unidos",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "montevideo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "australia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "paris",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "malaga",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "durazno",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "venezuela",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "curitiba",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mykonos",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "monterrey",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cartagena",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "asuncion",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "rosario",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "colombia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "noruega",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "caracas",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "san diego",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "palma de|mallorca",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "venado|tuerto",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "capilla|del monte",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "isla|margarita",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "san|fernando",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "arabia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "damasco",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "tierra|del fuego",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mar del|plata",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "olavarria",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sierra de|la ventana",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "caleta|olivia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "lisboa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "barbados",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "canada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "calamar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pandemonio",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "papagayo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mayordomo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "calvario",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "merienda",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "monarca",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "nomina",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "mariguana",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pajaro",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "repollo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "remora",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "recien|casados",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "reglamenta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "testosterona",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pirata",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "remar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "portero",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sanamente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "remodela",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "resaltar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "arcabuz",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "petalo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "postiza",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "piston",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "premeditar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "monoculo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "resorte",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "platano",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sotana",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "superfluo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "tartamudo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "silaba",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "recorre",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "tramposo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "terremoto",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "torpedo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "taladra",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "salpicadura",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "aguacate",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "alarma",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "arroba",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "velada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "solista",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "viatico",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "marron",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "velocimetro",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "tributo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "barranco",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "boliviano",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "batidora",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "reciente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "boa vista",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cachorro",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "santa rosa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "recinto",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "ampliamente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "margarita",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "bastonazo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "borracha",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "barbuda",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "boludo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "camarada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "artesanalmente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "barbara",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "alaska",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "marsella",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "osaka",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "diametro",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "acalorada",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sotano",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "batahola",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "malasia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "socorre",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "anatomicamente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "colmar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "la paz",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "ciudad del|cabo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cucuta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "panama",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "potente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "margen",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pantalla",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "diacono",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "calibre",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "bombacha",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "tormenta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "soltero",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pupilas",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "helsinki",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "marchita",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "milagroso",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "varsovia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "parlamento",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "calcuta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "camaron",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "asfalto",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cuba",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cancun",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sierra leona",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "osamenta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "resguardar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "piojo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "relata",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "campera",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "soledad",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "vibracion",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "amorosamente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "camara",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "barril",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "desconcierto",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "diezmar",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "cantina",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "salubre",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "rebota",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "receta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "falacia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "catarata",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "la falda",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "salta",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "damasco",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "bolivia",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "sahara",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "pino",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "calculo",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "picante",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "armonicamente",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   },{
     "respuesta": "polinesia|francesa",
-    "solucion":""
+    "solucion":"",
+    "nivel":""
   }
 ]
 }

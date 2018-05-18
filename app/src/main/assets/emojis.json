@@ -4,519 +4,648 @@
     },
     {
       "respuesta": "una aventura|extraordinaria",
-      "solucion":"https://youtu.be/vvnVXZMaWyI?t=273"
+      "solucion":"https://youtu.be/vvnVXZMaWyI?t=273",
+      "nivel":"1"
     },
     {
       "respuesta": "dr dolittle",
-      "solucion":"https://youtu.be/oQWvQAi7Xu0?t=272"
+      "solucion":"https://youtu.be/oQWvQAi7Xu0?t=272",
+      "nivel":"2"
     },
     {
       "respuesta": "psicosis",
-      "solucion":"https://youtu.be/JizsMU7B_OM?t=272"
+      "solucion":"https://youtu.be/JizsMU7B_OM?t=272",
+      "nivel":"3"
     },
     {
       "respuesta": "apolo 13",
-      "solucion":"https://youtu.be/A-JzUW1zOoA?t=272"
+      "solucion":"https://youtu.be/A-JzUW1zOoA?t=272",
+      "nivel":"4"
     },
     {
       "respuesta": "kung fu|panda",
-      "solucion":"https://youtu.be/SNEvM-27UP8?t=272"
+      "solucion":"https://youtu.be/SNEvM-27UP8?t=272",
+      "nivel":"5"
     },
     {
       "respuesta": "comer rezar|amar",
-      "solucion":""
+      "solucion":"https://youtu.be/eJ5XPaBHkO0?t=272",
+      "nivel":"6"
     },
     {
       "respuesta": "diamantes|de sangre",
-      "solucion":""
+      "solucion":"https://youtu.be/zIXf7bknqLU?t=273",
+      "nivel":"7"
     },
     {
       "respuesta": "et",
-      "solucion":""
+      "solucion":"https://youtu.be/I7FYYJYqZCg?t=273",
+      "nivel":"8"
     },
     {
       "respuesta": "american pie",
-      "solucion":""
+      "solucion":"https://youtu.be/mTuP1JPu0ZA?t=273",
+      "nivel":"9"
     },
     {
       "respuesta": "hombres|de negro",
-      "solucion":""
+      "solucion":"https://youtu.be/AG4iTXDF5n0?t=273",
+      "nivel":"10"
     },
     {
       "respuesta": "liberen|a willy",
-      "solucion":""
+      "solucion":"https://youtu.be/632BnneIx_E?t=273",
+      "nivel":"11"
     },
     {
       "respuesta": "up",
-      "solucion":""
+      "solucion":"https://youtu.be/MpW7cZu2BpA?t=273",
+      "nivel":"12"
     },
     {
       "respuesta": "el planeta|de los simios",
-      "solucion":""
+      "solucion":"https://youtu.be/b72Jspj-gaI?t=273",
+      "nivel":"13"
     },
     {
       "respuesta": "belleza|americana",
-      "solucion":""
+      "solucion":"https://youtu.be/o_FlIF_ugZY?t=273",
+      "nivel":"14"
     },
     {
       "respuesta": "el rey leon",
-      "solucion":""
+      "solucion":"https://youtu.be/IkKOhJRVuVI?t=273",
+      "nivel":"15"
     },
     {
       "respuesta": "gorilas en|la niebla",
-      "solucion":""
+      "solucion":"https://youtu.be/Yo3qyLk8t8k?t=273",
+      "nivel":"16"
     },
     {
       "respuesta": "el diablo|viste a la moda",
-      "solucion":""
+      "solucion":"https://youtu.be/Zvcb6Wr5e-k?t=273",
+      "nivel":"17"
     },
     {
       "respuesta": "x men",
-      "solucion":""
+      "solucion":"https://youtu.be/C5F2dQ_ARFI?t=273",
+      "nivel":"18"
     },
     {
       "respuesta": "harry potter",
-      "solucion":""
+      "solucion":"https://youtu.be/9syozBlt4LY?t=273",
+      "nivel":"19"
     },
     {
       "respuesta": "spiderman",
-      "solucion":""
+      "solucion":"https://youtu.be/TDsy23r3olk?t=273",
+      "nivel":"20"
     },
     {
       "respuesta": "buscando|a nemo",
-      "solucion":""
+      "solucion":"https://youtu.be/5jjxkKnGIAk?t=273",
+      "nivel":"21"
     },
     {
       "respuesta": "mary poppins",
-      "solucion":""
+      "solucion":"https://youtu.be/GkQKdlQXf8E?t=273",
+      "nivel":"22"
     },
     {
       "respuesta": "los juegos|del hambre",
-      "solucion":""
+      "solucion":"https://youtu.be/aV6YKtJWr3I?t=273",
+      "nivel":"23"
     },
     {
       "respuesta": "rapido y|furioso",
-      "solucion":""
+      "solucion":"https://youtu.be/jmHXFhXxeLc?t=273",
+      "nivel":"24"
     },
     {
       "respuesta": "cars",
-      "solucion":""
+      "solucion":"https://youtu.be/9sRaYTvlqSU?t=273",
+      "nivel":"25"
     },
     {
       "respuesta": "el discurso|del rey",
-      "solucion":""
+      "solucion":"https://youtu.be/Yz3EXH4uqgc?t=273",
+      "nivel":"26"
     },
     {
       "respuesta": "500 dias|con ella",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "angeles|y demonios",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "cocodrilo|dundee",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "tiburon",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "sharknado",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la dama y|el vagabundo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "mi pobre|angelito",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "rambo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "maxima|velocidad",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el gato|con botas",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "indiana|jones",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "pinocho",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "caza|fantasmas",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la era|de hielo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "scary|movie",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "pearl|harbor",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el efecto|mariposa",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "forrest|gump",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "diario de|motocicleta",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "volcano",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "armagedon",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el rey|escorpion",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la llamada",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "gravedad",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "12 monos",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "ratatouille",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "127 horas",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "crepusculo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "batman",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "king kong",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "bee movie",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "cuenta|conmigo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "titanic",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "it",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "babe",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "snatch cerdos|y diamantes",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "expreso|polar",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el vuelo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "una noche|en el museo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "sex and|the city",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "turbo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "zootopia",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el padrino",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "las tortugas|ninja",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "rocky",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "creed",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el joven manos|de tijera",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "volver al|futuro",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "corazon|valiente",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "los expedientes|secretos x",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "dumbo",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la gran|estafa",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "Siempre a|tu lado",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "bichos",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "nueve reinas",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "que paso ayer",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "101 dalmatas",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "happy feet",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "space jam",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "medianoche|en paris",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "los 33",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "scream",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "cantando|bajo la lluvia",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "ted",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "sexto|sentido",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el curioso caso|Benjamin Button",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "top gun",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "tienes un email",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "invictus",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "wimbledon",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la caida del|halcon negro",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el codigo|da vinci",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la naranja|mecanica",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "thor",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "avion|presidencial",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el fantasma|de la opera",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "novia|fugitiva",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "alicia en el pais|de las maravillas",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "frozen",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el libro|de la selva",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "karate|kid",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "actividad|paranormal",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "el exorcista",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "los pitufos",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "cobra",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "matrix",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "twister",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "La leyenda del|tesoro perdido",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "diario de|una pasion",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "60 segundos",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "super 8",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "jamaica|bajo cero",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la sirenita",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "guerra mundial z",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "dracula",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "aladdin",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "toy story",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "jurasic park",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "super size me",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "dia del|atentado",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "naufrago",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "godzilla",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     },
     {
       "respuesta": "la casa|del lago",
-      "solucion":""
+      "solucion":"",
+      "nivel":""
     }
   ]
 }
