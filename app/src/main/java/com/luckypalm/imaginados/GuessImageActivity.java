@@ -171,6 +171,10 @@ public class GuessImageActivity extends AppCompatActivity implements BackDialog.
                     //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
                 }
                 @Override
+                public void onRewardedVideoCompleted() {
+                    //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+                }
+                @Override
                 public void onRewardedVideoAdOpened() {
                     //Toast.makeText(GuessImageActivity.this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
                 }
